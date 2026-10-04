@@ -1,0 +1,6 @@
+[project]
+name = "dispatcher-core"
+version = "0.1.0"
+description = "Dispatcher Protocol v1 pure core and deterministic in-memory adapters"
+requires-python = ">=3.12"
+dependencies = []
