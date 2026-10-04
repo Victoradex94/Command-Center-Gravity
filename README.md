@@ -187,3 +187,39 @@ Fake `activity` and `attention` destinations are logical names, not live IDs.
 Recommendation only; not assigned: build an offline 17-column aggregate codec
 and restart/recovery contract tests using fixtures, preserving execution and
 delivery identities without live connections. No follow-on job is created.
+
+## AJ-0009 — exclusive Sheets Writer v1 candidate
+
+AJ-0009 ImplementationRevision 3 adds an **optional local, journaled writer** behind the accepted
+`JobRepository` interface. The original in-memory engine and its 58 tests remain
+unchanged. Its historical acceptance documents above describe AJ-0007 only.
+No live Sheets or Slack adapter is included, and the default dispatcher store
+has not been replaced automatically.
+
+`SheetsWriter` exposes deterministic create/update, exact 17-cell readback,
+explicit SUCCESS/FAILED/UNCERTAIN, restart reconciliation, retirement/handoff,
+and one shared changed-condition retry/fallback budget. `WriterJournal` uses
+SQLite and a POSIX advisory lock on one shared local path. `SheetsRepository`
+bridges the existing dispatcher with a closed JSON codec for local aggregate
+state; it does not claim to import a complete aggregate from existing live cells.
+
+Run all existing and new tests with external I/O blocked:
+
+```sh
+python3 -m tests.offline_suite
+python3 -m tests.simulate
+python3 -m compileall -q dispatcher tests
+```
+
+See [current writer interface and limits](docs/AJ-0009-sheets-writer.md),
+[ImplementationRevision 3 corrections and test map](docs/AJ-0009-implementation-revision-3.md),
+and [current component results](docs/AJ-0009-ir3-results.json). Revision 1 passed
+its original suite but **failed independent permission-boundary probes**; its
+[original verification](docs/AJ-0009-verification.md),
+[original results](docs/AJ-0009-results.json), complete candidate archive and
+failed-review evidence remain preserved. Revision 2 passed 131 tests but failed
+the independent F2 renewal-scope probe; its complete candidate and failed review
+are also retained under `docs/history`. Revision 3 binds renewal applicability
+to exact job, sources, intended values and original authority at every mutation
+gate; it does not change the shared recovery budget. These are local/mock results, not live
+integration or unattended-operation acceptance.

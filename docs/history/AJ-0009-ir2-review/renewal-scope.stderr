@@ -1,0 +1,14 @@
+test_unrelated_renewal_cannot_replace_revoked_original_recovery_authority (__main__.RenewalScopeReview.test_unrelated_renewal_cannot_replace_revoked_original_recovery_authority) ... FAIL
+
+======================================================================
+FAIL: test_unrelated_renewal_cannot_replace_revoked_original_recovery_authority (__main__.RenewalScopeReview.test_unrelated_renewal_cannot_replace_revoked_original_recovery_authority)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/aj0009-ir2-independent-review/test_renewal_scope.py", line 44, in test_unrelated_renewal_cannot_replace_revoked_original_recovery_authority
+    self.assertEqual(len(self.mock.calls),1,'A renewal for another job replaced revoked original authority and authorized a second provider call')
+AssertionError: 2 != 1 : A renewal for another job replaced revoked original authority and authorized a second provider call
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+FAILED (failures=1)

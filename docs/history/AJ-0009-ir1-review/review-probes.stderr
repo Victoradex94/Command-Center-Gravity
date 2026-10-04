@@ -1,0 +1,25 @@
+test_authenticated_initial_denial_cannot_be_erased_by_fresh_operation_context (__main__.ReviewChecks.test_authenticated_initial_denial_cannot_be_erased_by_fresh_operation_context) ... FAIL
+test_authenticated_revocation_during_final_recovery_preflight_survives_restart (__main__.ReviewChecks.test_authenticated_revocation_during_final_recovery_preflight_survives_restart) ... FAIL
+test_two_processes_race_to_claim_single_shared_journal (__main__.ReviewChecks.test_two_processes_race_to_claim_single_shared_journal) ... ok
+test_expected_spec_epoch_attempt_are_compared_at_current_record_revision (__main__.BridgeChecks.test_expected_spec_epoch_attempt_are_compared_at_current_record_revision) ... ok
+
+======================================================================
+FAIL: test_authenticated_initial_denial_cannot_be_erased_by_fresh_operation_context (__main__.ReviewChecks.test_authenticated_initial_denial_cannot_be_erased_by_fresh_operation_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/aj0009-independent-review/test_review_probes.py", line 66, in test_authenticated_initial_denial_cannot_be_erased_by_fresh_operation_context
+    self.assertEqual(len(self.mock.calls),0,'Authenticated denial was forgotten across a fresh operation context')
+AssertionError: 1 != 0 : Authenticated denial was forgotten across a fresh operation context
+
+======================================================================
+FAIL: test_authenticated_revocation_during_final_recovery_preflight_survives_restart (__main__.ReviewChecks.test_authenticated_revocation_during_final_recovery_preflight_survives_restart)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/aj0009-independent-review/test_review_probes.py", line 59, in test_authenticated_revocation_during_final_recovery_preflight_survives_restart
+    self.assertEqual(len(self.mock.calls),1,'Genuine revocation was forgotten: replacement submitted a recovery without renewed authority')
+AssertionError: 2 != 1 : Genuine revocation was forgotten: replacement submitted a recovery without renewed authority
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.047s
+
+FAILED (failures=2)

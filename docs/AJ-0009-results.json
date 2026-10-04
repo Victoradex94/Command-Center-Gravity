@@ -1,0 +1,161 @@
+{
+  "lineage": {
+    "JobID": "AJ-0009",
+    "SpecRevision": 1,
+    "RunEpoch": 1,
+    "Attempt": 1,
+    "Nonce": "VA-SHEETS-0009-01"
+  },
+  "observed_at": "2026-10-04T10:26:34.728389+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "base_sha": "1057b5575f7cecb0da67295b6d0ea9308dc76c9c",
+  "current_sha": "1057b5575f7cecb0da67295b6d0ea9308dc76c9c",
+  "branch": "aj-0009-sheets-writer-v1",
+  "candidate": "UNCOMMITTED; coordinator acceptance and explicit continuation required before commit/push",
+  "components": [
+    {
+      "name": "original_tests",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "tests.test_protocol",
+        "tests.test_review_regressions",
+        "-q"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.686,
+      "stdout_bytes": 0,
+      "stderr_bytes": 98,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e9d04db61a14570e9796969ed6e70cbc5a4bf3b1139bd3da3fd57c86c12ac035",
+      "tests_run": 58,
+      "runner_seconds": 0.584,
+      "passed": 58,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "offline_all_tests",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "tests.offline_suite"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.566,
+      "stdout_bytes": 133,
+      "stderr_bytes": 17809,
+      "stdout_sha256": "7b02d5acf985d064d0312657d91ca4a1b8966eb300579ab387fad21084ee14bb",
+      "stderr_sha256": "7490b1b67ff0cdf59055a1ba199f998b9776243fbcdc845015fcf26daeff500b",
+      "tests_run": 109,
+      "runner_seconds": 1.378,
+      "passed": 109,
+      "failures": 0,
+      "errors": 0,
+      "guard_self_check": "synthetic audit event blocked; no network syscall made",
+      "child_component_exits": {
+        "application_crash": 77,
+        "ownership_collision": 0
+      }
+    },
+    {
+      "name": "original_simulation",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "tests.simulate"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.687,
+      "stdout_bytes": 2533,
+      "stderr_bytes": 0,
+      "stdout_sha256": "ebe574290646c73ff9371208efc4bf97989b56f1cc61210e1177bad9158487de",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "json_type": "dict",
+      "top_level_keys": [
+        "synthetic",
+        "live_integration_proof",
+        "scenarios",
+        "tests"
+      ],
+      "scope": "Unchanged AJ-0007 simulation, executed now; stored historical output not modified",
+      "scenario_groups": 11,
+      "passed_groups": 11,
+      "tests_run": 58,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "compileall",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "compileall",
+        "-q",
+        "dispatcher",
+        "tests"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.039,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "tracked_diff_check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.006,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "staged_empty",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.003,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "live_calls": "None. Entire suite guarded against network/executable launches; mock providers only.",
+  "base_preservation": {
+    "checked_files": 14,
+    "changed": [],
+    "includes": "All base-tracked files except README.md, including original 58 tests and AJ-0007 history"
+  },
+  "untracked_whitespace_check": {
+    "files_checked": 10,
+    "failures": [],
+    "exit_code": 0
+  },
+  "scope_notes": [
+    "No staging/commit/push.",
+    "Ordinary git diff excludes all added untracked files; final path inventory includes them.",
+    "Only ignored Python __pycache__ bytecode generated by test/compile commands is excluded from candidate scope.",
+    "Simulation is local only; no live Sheets/Slack/executor integration or provider exactly-once guarantee."
+  ],
+  "verification_exit_code": 0,
+  "test_summary": {
+    "total_passed": 109,
+    "original_passed": 58,
+    "new_passed": 51,
+    "failures": 0,
+    "errors": 0
+  }
+}

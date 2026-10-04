@@ -1,0 +1,65 @@
+{
+  "before_sha256": "22687525a527b8f5075bf2ab988edfbacee3619c3a98ba4fd46706c350ce510b",
+  "after_sha256": "22687525a527b8f5075bf2ab988edfbacee3619c3a98ba4fd46706c350ce510b",
+  "same_manifest": true,
+  "same_bytes": true,
+  "candidate_paths": 12,
+  "original_test_and_core_retention": [
+    {
+      "path": "tests/test_protocol.py",
+      "unchanged_from_base": true,
+      "sha256": "f045a99902f12a490b6f38c175017acaff0b5f5668657e66df742c339729d880"
+    },
+    {
+      "path": "tests/test_review_regressions.py",
+      "unchanged_from_base": true,
+      "sha256": "e596277bc074288bd6e0e3ec22636abdd631fa64372fbff4184b4c52849ed053"
+    },
+    {
+      "path": "tests/support.py",
+      "unchanged_from_base": true,
+      "sha256": "5a32d4188f8ad966d3bc62ac5632157441f076356cdb35bdd88100f2fb4b34f2"
+    },
+    {
+      "path": "tests/simulate.py",
+      "unchanged_from_base": true,
+      "sha256": "e6da853f536265bb55b08cba6150ec8930ba3b5b8e3eadc9e17ae96a2b9387f8"
+    },
+    {
+      "path": "dispatcher/model.py",
+      "unchanged_from_base": true,
+      "sha256": "0bc0ce7721b67f54da491a4c2c41845ba250d83a291d7903ffc73579a5f2860e"
+    },
+    {
+      "path": "dispatcher/engine.py",
+      "unchanged_from_base": true,
+      "sha256": "f0b0b92255bba306d675307f4a6e7dc6315a20c2679bd19689ab8e526e0931ba"
+    },
+    {
+      "path": "dispatcher/store.py",
+      "unchanged_from_base": true,
+      "sha256": "d290261f31f00b222862109137e3ca44c8ed9e3fc223113bc567794ef51b0e42"
+    },
+    {
+      "path": "dispatcher/adapters.py",
+      "unchanged_from_base": true,
+      "sha256": "2fa206e00ef022c7ffbd28b7a03486e482a8e217f10cdfdcd3df9118c5a7e5c3"
+    }
+  ],
+  "status": " M README.md\n?? dispatcher/mock_sheets.py\n?? dispatcher/record_codec.py\n?? dispatcher/sheets_repository.py\n?? dispatcher/sheets_writer.py\n?? dispatcher/writer_journal.py\n?? docs/AJ-0009-results.json\n?? docs/AJ-0009-sheets-writer.md\n?? docs/AJ-0009-verification.md\n?? tests/offline_suite.py\n?? tests/test_offline_boundary.py\n?? tests/test_sheets_writer.py\n",
+  "review_probe_tests": {
+    "run": 4,
+    "passed": 2,
+    "failed": 2,
+    "errors": 0,
+    "exit": 1,
+    "two_process_claim_race_child_exits": [
+      0,
+      0
+    ]
+  },
+  "author_suite_child_exits_asserted": {
+    "application_crash": 77,
+    "ownership_collision": 0
+  }
+}

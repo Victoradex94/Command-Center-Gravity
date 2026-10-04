@@ -1,0 +1,341 @@
+{
+  "lineage": {
+    "JobID": "AJ-0009",
+    "SpecRevision": 1,
+    "RunEpoch": 1,
+    "Attempt": 1,
+    "Nonce": "VA-SHEETS-0009-01"
+  },
+  "ImplementationRevision": 3,
+  "observed_at": "2026-10-04T11:16:34.228166+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "base_sha": "1057b5575f7cecb0da67295b6d0ea9308dc76c9c",
+  "current_sha": "1057b5575f7cecb0da67295b6d0ea9308dc76c9c",
+  "branch": "aj-0009-sheets-writer-v1",
+  "candidate": "UNCOMMITTED; same-reviewer recheck/root acceptance pending; no commit/push",
+  "components": [
+    {
+      "name": "offline_all",
+      "command": [
+        "python3",
+        "-m",
+        "tests.offline_suite"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.436,
+      "stdout_bytes": 133,
+      "stdout_sha256": "40136c4f9871370fa5824920b7971fe6f162f8f1976104b655299fc35470776e",
+      "stderr_bytes": 25865,
+      "stderr_sha256": "3abbaeadda29c55cfa78c9876ecc81e3c9e247075e1c37ed04724845a3bf03d2",
+      "tests": 152,
+      "runner_seconds": 4.0,
+      "passed": 152,
+      "failures": 0,
+      "errors": 0,
+      "expected_child_exits": {
+        "application_crash": 77,
+        "denial_crash": 79,
+        "ownership_collision": 0
+      }
+    },
+    {
+      "name": "original_tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "tests.test_protocol",
+        "tests.test_review_regressions",
+        "-q"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.085,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 98,
+      "stderr_sha256": "1675a18eac7a85325d21f5e4a7ef0815f46fc135b310491677589f9d560e1235",
+      "tests": 58,
+      "runner_seconds": 0.844,
+      "passed": 58,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "ir2_corrections",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "tests.test_writer_revision2",
+        "-q"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.576,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 98,
+      "stderr_sha256": "b0f232f883f6fd71d7c03f5c9478bb5d73a1826c2407d1bf67404976546373be",
+      "tests": 22,
+      "runner_seconds": 2.151,
+      "passed": 22,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "ir3_corrections",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "tests.test_writer_revision3",
+        "-q"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.488,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 98,
+      "stderr_sha256": "9a113d6f772fe0fdc6a6bfea5442f5187488ae9fc8819148cd87190f53fd2184",
+      "tests": 21,
+      "runner_seconds": 0.136,
+      "passed": 21,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "retained_F1_probes",
+      "command": [
+        "python3",
+        "docs/history/AJ-0009-ir1-review/test_review_probes.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.562,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 792,
+      "stderr_sha256": "917c4a63961701e6ca659e0f67f6a3557f3dd437eebab27201316e058fa23c4f",
+      "tests": 4,
+      "runner_seconds": 0.069,
+      "passed": 4,
+      "failures": 0,
+      "errors": 0,
+      "expected_concurrent_claim_child_exits": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "adapted_F2_probe",
+      "command": [
+        "python3",
+        "tests/probe_writer_f2.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.254,
+      "stdout_bytes": 302,
+      "stdout_sha256": "5e3336828d39b26c49feefe95d7eecd3877e101b7a198d48bba76c64ed6d916c",
+      "stderr_bytes": 282,
+      "stderr_sha256": "5179f54f010df61f4123c4bfb29b57c696ff96f0cff30b0ffcb4e7c0e1a3df55",
+      "tests": 1,
+      "runner_seconds": 0.01,
+      "passed": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "simulation",
+      "command": [
+        "python3",
+        "-m",
+        "tests.simulate"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.763,
+      "stdout_bytes": 2533,
+      "stdout_sha256": "ebe574290646c73ff9371208efc4bf97989b56f1cc61210e1177bad9158487de",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "simulation": {
+        "synthetic": true,
+        "live_integration_proof": false,
+        "scenarios": [
+          {
+            "id": "01",
+            "scenario": "Intake, authentic acknowledgement, FYI and duplicates",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 6,
+            "failures": [],
+            "errors": []
+          },
+          {
+            "id": "02",
+            "scenario": "Capability routing and Victor's explicit worker override",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 3,
+            "failures": [],
+            "errors": []
+          },
+          {
+            "id": "03",
+            "scenario": "Gates, fast path, exclusive writer and uncertain writes",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 8,
+            "failures": [],
+            "errors": []
+          },
+          {
+            "id": "04",
+            "scenario": "Substantive start, stale execution and transition rejection",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 5,
+            "failures": [],
+            "errors": []
+          },
+          {
+            "id": "05",
+            "scenario": "Full return, attribution and verification before Done",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 6,
+            "failures": [],
+            "errors": []
+          },
+          {
+            "id": "06",
+            "scenario": "Partial/Blocked returns and authorized corrective attempts",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 3,
+            "failures": [],
+            "errors": []
+          },
+          {
+            "id": "07",
+            "scenario": "Cancellation, pause, reassignment, revisions and late returns",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 7,
+            "failures": [],
+            "errors": []
+          },
+          {
+            "id": "08",
+            "scenario": "Missing, failed and uncertain acknowledgement/return delivery",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 5,
+            "failures": [],
+            "errors": []
+          },
+          {
+            "id": "09",
+            "scenario": "Attention escalation, parent reconciliation and permission limits",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 3,
+            "failures": [],
+            "errors": []
+          },
+          {
+            "id": "AJ-0006",
+            "scenario": "Wrong path then explicitly approved corrected attempt (fixture only)",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 1,
+            "failures": [],
+            "errors": []
+          },
+          {
+            "id": "review",
+            "scenario": "Independent review regression cases",
+            "expected": "PASS",
+            "observed": "PASS",
+            "tests": 11,
+            "failures": [],
+            "errors": []
+          }
+        ],
+        "tests": 58
+      }
+    },
+    {
+      "name": "compile",
+      "command": [
+        "python3",
+        "-m",
+        "compileall",
+        "-q",
+        "dispatcher",
+        "tests"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.066,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "diff_check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.007,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "staged_empty",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.004,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "preservation": {
+    "ir1_archive_files_verified": 12,
+    "ir2_archive_files_verified": 24,
+    "base_files_unchanged_excluding_README": 14,
+    "previous_results_and_review_documents_unchanged": true,
+    "exit_code": 0
+  },
+  "untracked_and_tracked_whitespace": {
+    "failures": [],
+    "exit_code": 0
+  },
+  "test_summary": {
+    "total": 152,
+    "original": 58,
+    "prior_candidate": 51,
+    "ir2_corrections": 22,
+    "ir3_corrections": 21,
+    "retained_F1_probes": 4,
+    "adapted_F2_probe": 1
+  },
+  "probe_adaptation": "F2 original scenario/assertion retained; only path and new required attestation fields changed. Historical original probe bytes/failure remain preserved.",
+  "limits": [
+    "Local/mock only; no live adapter, connector, credential, permission or installation action.",
+    "Current authority classification and scoped renewal attestations are trusted adapter inputs, not cryptographic authentication.",
+    "Old unbound renewals fail closed; no automatic schema migration or legacy aggregate import.",
+    "No distributed lock, provider exactly-once/CAS, physical power-loss or real Sheets metadata guarantees.",
+    "IR1 and IR2 independent failures remain preserved; current author tests are not root acceptance."
+  ],
+  "verification_exit_code": 0
+}

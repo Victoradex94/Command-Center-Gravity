@@ -1,0 +1,84 @@
+{
+  "branch": "aj-0009-sheets-writer-v1",
+  "base": "1057b5575f7cecb0da67295b6d0ea9308dc76c9c",
+  "head": "1057b5575f7cecb0da67295b6d0ea9308dc76c9c",
+  "files": 24,
+  "manifest_before_sha256": "7989f4379efad0acc34c470f5b48ce5d4e61a59d9de4cbe3682523167d5969b6",
+  "manifest_after_sha256": "7989f4379efad0acc34c470f5b48ce5d4e61a59d9de4cbe3682523167d5969b6",
+  "candidate_unchanged": true,
+  "archive_checks": [
+    {
+      "path": "README.md",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "dispatcher/mock_sheets.py",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "dispatcher/record_codec.py",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "dispatcher/sheets_repository.py",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "dispatcher/sheets_writer.py",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "dispatcher/writer_journal.py",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "docs/AJ-0009-results.json",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "docs/AJ-0009-sheets-writer.md",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "docs/AJ-0009-verification.md",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "tests/offline_suite.py",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "tests/test_offline_boundary.py",
+      "matches_reviewed_ir1": true
+    },
+    {
+      "path": "tests/test_sheets_writer.py",
+      "matches_reviewed_ir1": true
+    }
+  ],
+  "base_files_checked_excluding_README": 14,
+  "base_changes": [],
+  "review_findings": [
+    {
+      "id": "F2",
+      "severity": "High",
+      "probe_command": "python3 /tmp/aj0009-ir2-independent-review/test_renewal_scope.py",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "exit": 1,
+      "stdout_sha256": "213574644812e55ee077362d631e774267fb4a0f0e32ab022ac21a03fed9dded",
+      "stderr_sha256": "2272e4c64d7b89ff095709197f3802b90eee3f189447e3680cfc3589350a4230"
+    }
+  ],
+  "child_exits_asserted_by_passing_tests": {
+    "original_provider_apply_crash": 77,
+    "denial_commit_crash": 79,
+    "owner_collision": 0,
+    "simultaneous_claim_racers": [
+      0,
+      0
+    ]
+  },
+  "recommendation": "WITHHOLD_ACCEPTANCE_PENDING_COORDINATOR_DISPOSITION; no corrections performed"
+}

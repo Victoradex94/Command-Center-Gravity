@@ -1,0 +1,37 @@
+[
+  {
+    "case": "unknown_cancellation_provenance",
+    "outcome": "SUCCESS",
+    "submissions": 2,
+    "permission_stop": false,
+    "expected": "recovery blocked until cancellation provenance resolved"
+  },
+  {
+    "case": "revocation_during_recovery_preflight",
+    "after_denial": {
+      "permission_stop": false,
+      "budget_used": 0,
+      "submissions": 1,
+      "error": "current authenticated coordinator authority required",
+      "authority_reads": 3
+    },
+    "later_outcome": "SUCCESS",
+    "submissions": 2,
+    "expected": "observed authenticated revocation permanently fences incident absent explicit reviewed renewal"
+  },
+  {
+    "case": "initial_denial_then_fresh_context",
+    "first": "FAILED",
+    "permission_stop": false,
+    "second": "SUCCESS",
+    "submissions": 1,
+    "expected": "genuine denial survives fresh operation context without explicit renewal"
+  },
+  {
+    "case": "low_level_lineage_regression",
+    "outcome": "SUCCESS",
+    "current_q": "SpecRevision=1; RunEpoch=1; Attempt=1; RecordRevision=2",
+    "submissions": 2,
+    "note": "evaluate scope: accepted engine checks expected lineage, low-level API checks RecordRevision only"
+  }
+]
