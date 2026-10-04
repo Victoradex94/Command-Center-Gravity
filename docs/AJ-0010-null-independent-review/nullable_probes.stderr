@@ -1,0 +1,8 @@
+test_null_is_not_an_ack_when_outer_error_is_true (__main__.NullableProbes.test_null_is_not_an_ack_when_outer_error_is_true) ... ok
+test_null_positive_ack_still_requires_complete_permissions_and_values (__main__.NullableProbes.test_null_positive_ack_still_requires_complete_permissions_and_values) ... ok
+test_saved_seven_reply_setup_response_is_not_a_row_ack (__main__.NullableProbes.test_saved_seven_reply_setup_response_is_not_a_row_ack) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.018s
+
+OK

@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "initial_precision_check": "exit1: exact requested .9 did not equal Google normalized 0.8980392 RGB; original request/response preserved, no setup retry",
+  "actual_header_rgb": 0.8980392,
+  "comparison_for_logical_writes": "exact actual baseline, no tolerance",
+  "checks": [
+    "owner-only file and My Drive root",
+    "complete6x18",
+    "exact17headers",
+    "empty data rows",
+    "all R sentinels",
+    "seven statuses and YesNo",
+    "TEXT and WRAP",
+    "bold light gray header"
+  ]
+}

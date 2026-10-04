@@ -1,0 +1,152 @@
+{
+  "lineage": {
+    "job": "AJ-0010",
+    "specRevision": 1,
+    "runEpoch": 1,
+    "attempt": 1,
+    "nonce": "VA-LIVE-SHEETS-0010-01",
+    "approval": "1791113671.468969"
+  },
+  "observed_at": "2026-10-04T11:52:15Z",
+  "repository": {
+    "origin": "https://github.com/Victoradex94/Command-Center-Gravity.git",
+    "initial_branch": "work",
+    "initial_head": "dea8cddc0bb6e7ab20479d8aca25121590749a3b",
+    "base": "78928bc29fe920143891061307d5ed44308b4c97",
+    "branch": "aj-0010-google-sheets-sandbox",
+    "existing_same_named_branch": false,
+    "targeted_fetch": true,
+    "main_unchanged": true
+  },
+  "profile": {
+    "route": "mcp__codex_apps__google_drive_get_profile",
+    "result": {
+      "id": "118217609254113054328",
+      "name": "Adetimilehin VicAdex Inioluwa",
+      "email": "vicadtorex@gmail.com"
+    },
+    "oauth_scopes": "not exposed",
+    "credentials_accessed": false
+  },
+  "exact_title_search": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "results": []
+    },
+    "isError": false
+  },
+  "root_metadata": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "id": "0AD1r1m5bkvJYUk9PVA",
+      "title": "My Drive",
+      "mime_type": "application/vnd.google-apps.folder",
+      "size": null,
+      "url": null,
+      "file_or_folder": "folder",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": null,
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": false,
+      "permissions": [
+        {
+          "type": "user",
+          "role": "owner",
+          "emailAddress": "vicadtorex@gmail.com",
+          "domain": null,
+          "displayName": "Adetimilehin VicAdex Inioluwa",
+          "allowFileDiscovery": null
+        }
+      ],
+      "source_visibility_status": "permission_metadata_available"
+    },
+    "isError": false
+  },
+  "bridge_read": {
+    "request": {
+      "session": "bffc7f77-19bb-495b-9cc3-6c686b104106",
+      "sequence": 1,
+      "tool": "mcp__codex_apps__google_drive_get_file_metadata",
+      "arguments": {
+        "fileId": "root",
+        "fields": "id,name,mimeType,trashed,shared,ownedByMe,driveId,parents,owners,permissions,capabilities(canEdit)"
+      },
+      "binding": "5ff6bc7f36bc52ae523de3d8031c73695360b546cdeec39a09c69fb3a17c3fdc"
+    },
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "id": "0AD1r1m5bkvJYUk9PVA",
+        "title": "My Drive",
+        "mime_type": "application/vnd.google-apps.folder",
+        "size": null,
+        "url": null,
+        "file_or_folder": "folder",
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": null,
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": false,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "vicadtorex@gmail.com",
+            "domain": null,
+            "displayName": "Adetimilehin VicAdex Inioluwa",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "isError": false
+    }
+  },
+  "read_mapping": {
+    "spreadsheet_metadata": "Actual read of supplied production reference metadata only; successful native spreadsheetId/properties/sheets shape.",
+    "cells": "Actual read only of Agent Jobs!A1:B1; native CellData shape with default offsets omitted.",
+    "batch_update": "Not called; mapping based on supported tool schema and official Google API reference, simulated only."
+  },
+  "coordination": {
+    "single_owner_confirmation": "pending; request sent through in-task coordination, not external messaging",
+    "proposed_owner": "AJ-0010 executor; no mutation until confirmed"
+  },
+  "live": {
+    "workbook_creates": 0,
+    "fixture_setup_batches": 0,
+    "logical_creates": 0,
+    "logical_updates": 0,
+    "recovery_submissions": 0,
+    "production_writes": 0,
+    "sandbox_id": null,
+    "private_sandbox_evidence": null,
+    "restart_zero_replay_live_proof": null
+  },
+  "limitations": [
+    "Agent-mediated MCP bridge; not direct or unattended Python authentication.",
+    "Connector exposes no pending-retry/queue terminality or operation-status API; adapter cannot prove settled/effects_resolved.",
+    "Read-before-write is not CAS or distributed exclusion.",
+    "No sandbox private-access claim from root-only permissions.",
+    "No workbook creation or live data mutation attempted."
+  ]
+}

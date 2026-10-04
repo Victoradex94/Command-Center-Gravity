@@ -1,0 +1,12 @@
+{
+  "original_job": "AJ-0010",
+  "original_authority_state": "revoked",
+  "renewal_job": "AJ-0020",
+  "renewal_sources": [
+    "unrelated-source"
+  ],
+  "observed_result": "blocked",
+  "checked_authority_references": [],
+  "provider_calls": 1,
+  "recovery_effective_authority": "review://original-A"
+}

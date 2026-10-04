@@ -1,0 +1,15 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "fileId": "1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE",
+    "mimeType": "application/vnd.google-apps.spreadsheet",
+    "title": "Command Centre — Ledger Writer Sandbox",
+    "url": "https://docs.google.com/spreadsheets/d/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/edit?usp=drivesdk"
+  },
+  "isError": false
+}

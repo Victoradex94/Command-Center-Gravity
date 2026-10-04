@@ -1,0 +1,546 @@
+{
+  "audit": [
+    {
+      "at": "2026-10-04T12:35:39.434456+00:00",
+      "authority": "slack:1791113671.468969/AJ-0010/sandbox",
+      "kind": "writer_claimed",
+      "sequence": 1,
+      "token": {
+        "actor": "AJ-0010 executor sole sandbox proxy",
+        "epoch": 1
+      }
+    },
+    {
+      "at": "2026-10-04T12:35:50.677651+00:00",
+      "authority": "slack:1791113671.468969/AJ-0010/sandbox",
+      "context": "AJ-0010/SpecRevision1/RunEpoch1/Attempt1/VA-LIVE-SHEETS-0010-01",
+      "kind": "write_attempted",
+      "operation": "AJ-0010/sandbox/create-v1",
+      "original_authority": "slack:1791113671.468969/AJ-0010/sandbox",
+      "sequence": 2,
+      "submission": {
+        "attempt_id": "AJ-0010/sandbox/create-v1/0",
+        "authority_ref": "slack:1791113671.468969/AJ-0010/sandbox",
+        "before": null,
+        "cells": [
+          "AJ-0010",
+          "",
+          "Synthetic ledger transport fixture",
+          "Codex sandbox fixture",
+          "Intake",
+          "Normal",
+          "2026-10-04T11:59:08.299571+00:00",
+          "2026-10-04",
+          "Synthetic standalone; no Master task",
+          "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+          "=literal RAW text; Vic’Adex",
+          "Synthetic verification pending",
+          "Synthetic create; not production AJ-0010 state",
+          "No",
+          "Sandbox approved; not a new decision",
+          "2026-10-04T11:59:08.299571+00:00",
+          "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=1; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+        ],
+        "digest": "e3275293fb3d688a0b7e5f7b1f2301c78a86ca6191d76ad12379069bc4a96dcb",
+        "operation_id": "AJ-0010/sandbox/create-v1",
+        "position": 2,
+        "route": "existing-google-drive-mcp-agent-bridge",
+        "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+        "source_keys": [
+          "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+        ]
+      },
+      "token": {
+        "actor": "AJ-0010 executor sole sandbox proxy",
+        "epoch": 1
+      }
+    },
+    {
+      "at": "2026-10-04T12:36:50.278859+00:00",
+      "kind": "operation_observed",
+      "observation": {
+        "attempt_id": "AJ-0010/sandbox/create-v1/0",
+        "authoritative": true,
+        "cancellation": "none",
+        "cancellation_authenticated": false,
+        "digest": "e3275293fb3d688a0b7e5f7b1f2301c78a86ca6191d76ad12379069bc4a96dcb",
+        "effect": "applied",
+        "effects_resolved": true,
+        "evidence": "Synchronous batchUpdate response and exact 17-cell/source/position readback; exposed structure/neighbours unchanged; receipt sha256=b6f0526f4743d23d2b168ff95d5e86b312b20a7609c48c8b5917455f25a20e37; readback sha256=60cad2b653a3f43b3871524e84fc18dceac83e242c522dc1a2c1c5e89a6c3e3a. Original acknowledged invocation complete under Google batchUpdate contract; not physical exactly-once, hidden-retry transparency, distributed exclusion or CAS.",
+        "failure_class": "verification-evidence",
+        "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+        "settled": true,
+        "signal": "provider-unknown"
+      },
+      "operation": "AJ-0010/sandbox/create-v1",
+      "sequence": 3
+    },
+    {
+      "at": "2026-10-04T12:36:55.753059+00:00",
+      "kind": "authoritative_reconciliation",
+      "observation": {
+        "attempt_id": "AJ-0010/sandbox/create-v1/0",
+        "authoritative": true,
+        "cancellation": "none",
+        "cancellation_authenticated": false,
+        "digest": "e3275293fb3d688a0b7e5f7b1f2301c78a86ca6191d76ad12379069bc4a96dcb",
+        "effect": "applied",
+        "effects_resolved": true,
+        "evidence": "Synchronous batchUpdate response and exact 17-cell/source/position readback; exposed structure/neighbours unchanged; receipt sha256=b6f0526f4743d23d2b168ff95d5e86b312b20a7609c48c8b5917455f25a20e37; readback sha256=60cad2b653a3f43b3871524e84fc18dceac83e242c522dc1a2c1c5e89a6c3e3a. Original acknowledged invocation complete under Google batchUpdate contract; not physical exactly-once, hidden-retry transparency, distributed exclusion or CAS.",
+        "failure_class": "verification-evidence",
+        "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+        "settled": true,
+        "signal": "provider-unknown"
+      },
+      "operation": "AJ-0010/sandbox/create-v1",
+      "outcome": "SUCCESS",
+      "sequence": 4,
+      "snapshot": {
+        "authoritative": true,
+        "columns": [
+          "Job ID",
+          "Parent Workplan ID",
+          "Job / Deliverable",
+          "Assigned Worker",
+          "Status",
+          "Priority",
+          "Assigned At",
+          "Control Date",
+          "Dependency",
+          "Source / Brief",
+          "Output",
+          "Verification",
+          "Return Summary",
+          "Needs Victor",
+          "Victor Decision",
+          "Last Update",
+          "Run / Revision ID"
+        ],
+        "complete": true,
+        "evidence": "MCP complete bounded grid; sha256=60cad2b653a3f43b3871524e84fc18dceac83e242c522dc1a2c1c5e89a6c3e3a",
+        "rows": [
+          {
+            "cells": [
+              "AJ-0010",
+              "",
+              "Synthetic ledger transport fixture",
+              "Codex sandbox fixture",
+              "Intake",
+              "Normal",
+              "2026-10-04T11:59:08.299571+00:00",
+              "2026-10-04",
+              "Synthetic standalone; no Master task",
+              "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+              "=literal RAW text; Vic’Adex",
+              "Synthetic verification pending",
+              "Synthetic create; not production AJ-0010 state",
+              "No",
+              "Sandbox approved; not a new decision",
+              "2026-10-04T11:59:08.299571+00:00",
+              "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=1; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+            ],
+            "position": 2,
+            "source_keys": [
+              "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+            ]
+          }
+        ],
+        "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183"
+      }
+    },
+    {
+      "at": "2026-10-04T12:36:55.753079+00:00",
+      "kind": "verified_outcome",
+      "operation": "AJ-0010/sandbox/create-v1",
+      "outcome": "SUCCESS",
+      "reason": "settled application and exact 17-cell/source readback verified",
+      "sequence": 5
+    },
+    {
+      "at": "2026-10-04T12:37:01.241506+00:00",
+      "authority": "slack:1791113671.468969/AJ-0010/sandbox",
+      "context": "AJ-0010/SpecRevision1/RunEpoch1/Attempt1/VA-LIVE-SHEETS-0010-01",
+      "kind": "write_attempted",
+      "operation": "AJ-0010/sandbox/update-v1",
+      "original_authority": "slack:1791113671.468969/AJ-0010/sandbox",
+      "sequence": 6,
+      "submission": {
+        "attempt_id": "AJ-0010/sandbox/update-v1/0",
+        "authority_ref": "slack:1791113671.468969/AJ-0010/sandbox",
+        "before": {
+          "cells": [
+            "AJ-0010",
+            "",
+            "Synthetic ledger transport fixture",
+            "Codex sandbox fixture",
+            "Intake",
+            "Normal",
+            "2026-10-04T11:59:08.299571+00:00",
+            "2026-10-04",
+            "Synthetic standalone; no Master task",
+            "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+            "=literal RAW text; Vic’Adex",
+            "Synthetic verification pending",
+            "Synthetic create; not production AJ-0010 state",
+            "No",
+            "Sandbox approved; not a new decision",
+            "2026-10-04T11:59:08.299571+00:00",
+            "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=1; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+          ],
+          "position": 2,
+          "source_keys": [
+            "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+          ]
+        },
+        "cells": [
+          "AJ-0010",
+          "",
+          "Synthetic ledger transport fixture",
+          "Codex sandbox fixture",
+          "Ready",
+          "Normal",
+          "2026-10-04T11:59:08.299571+00:00",
+          "2026-10-04",
+          "Synthetic standalone; no Master task",
+          "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+          "Synthetic update verified literally",
+          "Synthetic update readback pending",
+          "Synthetic update; not production AJ-0010 state",
+          "No",
+          "Sandbox approved; not a new decision",
+          "2026-10-04T11:59:08.299571+00:00",
+          "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=2; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+        ],
+        "digest": "afce033102610b840793a99f941e0c675f940677b8efd8b460e9dfe08e46f0e6",
+        "operation_id": "AJ-0010/sandbox/update-v1",
+        "position": 2,
+        "route": "existing-google-drive-mcp-agent-bridge",
+        "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+        "source_keys": [
+          "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+        ]
+      },
+      "token": {
+        "actor": "AJ-0010 executor sole sandbox proxy",
+        "epoch": 1
+      }
+    },
+    {
+      "at": "2026-10-04T12:38:00.803559+00:00",
+      "kind": "operation_observed",
+      "observation": {
+        "attempt_id": "AJ-0010/sandbox/update-v1/0",
+        "authoritative": true,
+        "cancellation": "none",
+        "cancellation_authenticated": false,
+        "digest": "afce033102610b840793a99f941e0c675f940677b8efd8b460e9dfe08e46f0e6",
+        "effect": "applied",
+        "effects_resolved": true,
+        "evidence": "Synchronous batchUpdate response and exact 17-cell/source/position readback; exposed structure/neighbours unchanged; receipt sha256=9c7835055f8f02413416bb2bf39bdbf3758dc1794866d10a456f79d936cfcbbb; readback sha256=fbafc3f64e57118d0769c52af7b431df661f011b1ed6c0c6a904eba00d4c5e30. Original acknowledged invocation complete under Google batchUpdate contract; not physical exactly-once, hidden-retry transparency, distributed exclusion or CAS.",
+        "failure_class": "verification-evidence",
+        "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+        "settled": true,
+        "signal": "provider-unknown"
+      },
+      "operation": "AJ-0010/sandbox/update-v1",
+      "sequence": 7
+    },
+    {
+      "at": "2026-10-04T12:38:06.357242+00:00",
+      "kind": "authoritative_reconciliation",
+      "observation": {
+        "attempt_id": "AJ-0010/sandbox/update-v1/0",
+        "authoritative": true,
+        "cancellation": "none",
+        "cancellation_authenticated": false,
+        "digest": "afce033102610b840793a99f941e0c675f940677b8efd8b460e9dfe08e46f0e6",
+        "effect": "applied",
+        "effects_resolved": true,
+        "evidence": "Synchronous batchUpdate response and exact 17-cell/source/position readback; exposed structure/neighbours unchanged; receipt sha256=9c7835055f8f02413416bb2bf39bdbf3758dc1794866d10a456f79d936cfcbbb; readback sha256=fbafc3f64e57118d0769c52af7b431df661f011b1ed6c0c6a904eba00d4c5e30. Original acknowledged invocation complete under Google batchUpdate contract; not physical exactly-once, hidden-retry transparency, distributed exclusion or CAS.",
+        "failure_class": "verification-evidence",
+        "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+        "settled": true,
+        "signal": "provider-unknown"
+      },
+      "operation": "AJ-0010/sandbox/update-v1",
+      "outcome": "SUCCESS",
+      "sequence": 8,
+      "snapshot": {
+        "authoritative": true,
+        "columns": [
+          "Job ID",
+          "Parent Workplan ID",
+          "Job / Deliverable",
+          "Assigned Worker",
+          "Status",
+          "Priority",
+          "Assigned At",
+          "Control Date",
+          "Dependency",
+          "Source / Brief",
+          "Output",
+          "Verification",
+          "Return Summary",
+          "Needs Victor",
+          "Victor Decision",
+          "Last Update",
+          "Run / Revision ID"
+        ],
+        "complete": true,
+        "evidence": "MCP complete bounded grid; sha256=fbafc3f64e57118d0769c52af7b431df661f011b1ed6c0c6a904eba00d4c5e30",
+        "rows": [
+          {
+            "cells": [
+              "AJ-0010",
+              "",
+              "Synthetic ledger transport fixture",
+              "Codex sandbox fixture",
+              "Ready",
+              "Normal",
+              "2026-10-04T11:59:08.299571+00:00",
+              "2026-10-04",
+              "Synthetic standalone; no Master task",
+              "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+              "Synthetic update verified literally",
+              "Synthetic update readback pending",
+              "Synthetic update; not production AJ-0010 state",
+              "No",
+              "Sandbox approved; not a new decision",
+              "2026-10-04T11:59:08.299571+00:00",
+              "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=2; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+            ],
+            "position": 2,
+            "source_keys": [
+              "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+            ]
+          }
+        ],
+        "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183"
+      }
+    },
+    {
+      "at": "2026-10-04T12:38:06.357263+00:00",
+      "kind": "verified_outcome",
+      "operation": "AJ-0010/sandbox/update-v1",
+      "outcome": "SUCCESS",
+      "reason": "settled application and exact 17-cell/source readback verified",
+      "sequence": 9
+    }
+  ],
+  "circuits": {},
+  "coordinator": "Dẹkun",
+  "epoch": 1,
+  "operations": {
+    "AJ-0010/sandbox/create-v1": {
+      "circuit_open": false,
+      "digest": "e3275293fb3d688a0b7e5f7b1f2301c78a86ca6191d76ad12379069bc4a96dcb",
+      "failure_occurrences": [],
+      "fingerprint": "",
+      "fingerprint_components": {},
+      "outcome": "SUCCESS",
+      "permission_stop": false,
+      "reason": "settled application and exact 17-cell/source readback verified",
+      "recovery_used": 0,
+      "recurrence_count": 0,
+      "request": {
+        "aggregate": "",
+        "authority_ref": "slack:1791113671.468969/AJ-0010/sandbox",
+        "cells": [
+          "AJ-0010",
+          "",
+          "Synthetic ledger transport fixture",
+          "Codex sandbox fixture",
+          "Intake",
+          "Normal",
+          "2026-10-04T11:59:08.299571+00:00",
+          "2026-10-04",
+          "Synthetic standalone; no Master task",
+          "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+          "=literal RAW text; Vic’Adex",
+          "Synthetic verification pending",
+          "Synthetic create; not production AJ-0010 state",
+          "No",
+          "Sandbox approved; not a new decision",
+          "2026-10-04T11:59:08.299571+00:00",
+          "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=1; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+        ],
+        "condition": "private-isolated-single-owner-sandbox",
+        "context_ref": "AJ-0010/SpecRevision1/RunEpoch1/Attempt1/VA-LIVE-SHEETS-0010-01",
+        "expected_lineage": null,
+        "expected_revision": null,
+        "intended_lineage": {
+          "attempt": 1,
+          "job_id": "AJ-0010",
+          "run_epoch": 1,
+          "spec_revision": 1
+        },
+        "job_id": "AJ-0010",
+        "lineage_change_ref": "",
+        "operation_id": "AJ-0010/sandbox/create-v1",
+        "original_authority_ref": "",
+        "route": "existing-google-drive-mcp-agent-bridge",
+        "source_keys": [
+          "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+        ]
+      },
+      "submissions": [
+        {
+          "attempt_id": "AJ-0010/sandbox/create-v1/0",
+          "authority_ref": "slack:1791113671.468969/AJ-0010/sandbox",
+          "before": null,
+          "cells": [
+            "AJ-0010",
+            "",
+            "Synthetic ledger transport fixture",
+            "Codex sandbox fixture",
+            "Intake",
+            "Normal",
+            "2026-10-04T11:59:08.299571+00:00",
+            "2026-10-04",
+            "Synthetic standalone; no Master task",
+            "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+            "=literal RAW text; Vic’Adex",
+            "Synthetic verification pending",
+            "Synthetic create; not production AJ-0010 state",
+            "No",
+            "Sandbox approved; not a new decision",
+            "2026-10-04T11:59:08.299571+00:00",
+            "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=1; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+          ],
+          "digest": "e3275293fb3d688a0b7e5f7b1f2301c78a86ca6191d76ad12379069bc4a96dcb",
+          "operation_id": "AJ-0010/sandbox/create-v1",
+          "position": 2,
+          "route": "existing-google-drive-mcp-agent-bridge",
+          "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+          "source_keys": [
+            "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+          ]
+        }
+      ]
+    },
+    "AJ-0010/sandbox/update-v1": {
+      "circuit_open": false,
+      "digest": "afce033102610b840793a99f941e0c675f940677b8efd8b460e9dfe08e46f0e6",
+      "failure_occurrences": [],
+      "fingerprint": "",
+      "fingerprint_components": {},
+      "outcome": "SUCCESS",
+      "permission_stop": false,
+      "reason": "settled application and exact 17-cell/source readback verified",
+      "recovery_used": 0,
+      "recurrence_count": 0,
+      "request": {
+        "aggregate": "",
+        "authority_ref": "slack:1791113671.468969/AJ-0010/sandbox",
+        "cells": [
+          "AJ-0010",
+          "",
+          "Synthetic ledger transport fixture",
+          "Codex sandbox fixture",
+          "Ready",
+          "Normal",
+          "2026-10-04T11:59:08.299571+00:00",
+          "2026-10-04",
+          "Synthetic standalone; no Master task",
+          "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+          "Synthetic update verified literally",
+          "Synthetic update readback pending",
+          "Synthetic update; not production AJ-0010 state",
+          "No",
+          "Sandbox approved; not a new decision",
+          "2026-10-04T11:59:08.299571+00:00",
+          "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=2; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+        ],
+        "condition": "private-isolated-single-owner-sandbox",
+        "context_ref": "AJ-0010/SpecRevision1/RunEpoch1/Attempt1/VA-LIVE-SHEETS-0010-01",
+        "expected_lineage": {
+          "attempt": 1,
+          "job_id": "AJ-0010",
+          "run_epoch": 1,
+          "spec_revision": 1
+        },
+        "expected_revision": 1,
+        "intended_lineage": {
+          "attempt": 1,
+          "job_id": "AJ-0010",
+          "run_epoch": 1,
+          "spec_revision": 1
+        },
+        "job_id": "AJ-0010",
+        "lineage_change_ref": "",
+        "operation_id": "AJ-0010/sandbox/update-v1",
+        "original_authority_ref": "",
+        "route": "existing-google-drive-mcp-agent-bridge",
+        "source_keys": [
+          "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+        ]
+      },
+      "submissions": [
+        {
+          "attempt_id": "AJ-0010/sandbox/update-v1/0",
+          "authority_ref": "slack:1791113671.468969/AJ-0010/sandbox",
+          "before": {
+            "cells": [
+              "AJ-0010",
+              "",
+              "Synthetic ledger transport fixture",
+              "Codex sandbox fixture",
+              "Intake",
+              "Normal",
+              "2026-10-04T11:59:08.299571+00:00",
+              "2026-10-04",
+              "Synthetic standalone; no Master task",
+              "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+              "=literal RAW text; Vic’Adex",
+              "Synthetic verification pending",
+              "Synthetic create; not production AJ-0010 state",
+              "No",
+              "Sandbox approved; not a new decision",
+              "2026-10-04T11:59:08.299571+00:00",
+              "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=1; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+            ],
+            "position": 2,
+            "source_keys": [
+              "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+            ]
+          },
+          "cells": [
+            "AJ-0010",
+            "",
+            "Synthetic ledger transport fixture",
+            "Codex sandbox fixture",
+            "Ready",
+            "Normal",
+            "2026-10-04T11:59:08.299571+00:00",
+            "2026-10-04",
+            "Synthetic standalone; no Master task",
+            "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+            "Synthetic update verified literally",
+            "Synthetic update readback pending",
+            "Synthetic update; not production AJ-0010 state",
+            "No",
+            "Sandbox approved; not a new decision",
+            "2026-10-04T11:59:08.299571+00:00",
+            "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=2; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+          ],
+          "digest": "afce033102610b840793a99f941e0c675f940677b8efd8b460e9dfe08e46f0e6",
+          "operation_id": "AJ-0010/sandbox/update-v1",
+          "position": 2,
+          "route": "existing-google-drive-mcp-agent-bridge",
+          "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+          "source_keys": [
+            "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+          ]
+        }
+      ]
+    }
+  },
+  "owner": {
+    "actor": "AJ-0010 executor sole sandbox proxy",
+    "epoch": 1
+  },
+  "permission_stops": {},
+  "renewals": {},
+  "schema": 2,
+  "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183"
+}

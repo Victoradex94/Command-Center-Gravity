@@ -1,0 +1,304 @@
+{
+  "operation_id": "AJ-0010/sandbox/setup-v1",
+  "request": {
+    "spreadsheet_id": "1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE",
+    "requests": [
+      {
+        "updateSheetProperties": {
+          "properties": {
+            "sheetId": 1505506183,
+            "title": "Agent Jobs Sandbox",
+            "gridProperties": {
+              "rowCount": 6,
+              "columnCount": 18,
+              "frozenRowCount": 1
+            }
+          },
+          "fields": "title,gridProperties"
+        }
+      },
+      {
+        "updateCells": {
+          "range": {
+            "sheetId": 1505506183,
+            "startRowIndex": 0,
+            "endRowIndex": 1,
+            "startColumnIndex": 0,
+            "endColumnIndex": 17
+          },
+          "fields": "userEnteredValue",
+          "rows": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Job ID"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Parent Workplan ID"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Job / Deliverable"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Assigned Worker"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Status"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Priority"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Assigned At"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Control Date"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Dependency"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Source / Brief"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Output"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Verification"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Return Summary"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Needs Victor"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Victor Decision"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Last Update"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Run / Revision ID"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "updateCells": {
+          "range": {
+            "sheetId": 1505506183,
+            "startRowIndex": 0,
+            "endRowIndex": 6,
+            "startColumnIndex": 17,
+            "endColumnIndex": 18
+          },
+          "fields": "userEnteredValue",
+          "rows": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "AJ-0010 sentinel R1"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "AJ-0010 sentinel R2"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "AJ-0010 sentinel R3"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "AJ-0010 sentinel R4"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "AJ-0010 sentinel R5"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "AJ-0010 sentinel R6"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "repeatCell": {
+          "range": {
+            "sheetId": 1505506183,
+            "startRowIndex": 0,
+            "endRowIndex": 6,
+            "startColumnIndex": 0,
+            "endColumnIndex": 18
+          },
+          "cell": {
+            "userEnteredFormat": {
+              "numberFormat": {
+                "type": "TEXT"
+              },
+              "wrapStrategy": "WRAP"
+            }
+          },
+          "fields": "userEnteredFormat"
+        }
+      },
+      {
+        "repeatCell": {
+          "range": {
+            "sheetId": 1505506183,
+            "startRowIndex": 0,
+            "endRowIndex": 1,
+            "startColumnIndex": 0,
+            "endColumnIndex": 17
+          },
+          "cell": {
+            "userEnteredFormat": {
+              "textFormat": {
+                "bold": true
+              },
+              "backgroundColor": {
+                "red": 0.9,
+                "green": 0.9,
+                "blue": 0.9
+              }
+            }
+          },
+          "fields": "userEnteredFormat.textFormat,userEnteredFormat.backgroundColor"
+        }
+      },
+      {
+        "setDataValidation": {
+          "range": {
+            "sheetId": 1505506183,
+            "startRowIndex": 1,
+            "endRowIndex": 6,
+            "startColumnIndex": 4,
+            "endColumnIndex": 5
+          },
+          "rule": {
+            "condition": {
+              "type": "ONE_OF_LIST",
+              "values": [
+                {
+                  "userEnteredValue": "Intake"
+                },
+                {
+                  "userEnteredValue": "Ready"
+                },
+                {
+                  "userEnteredValue": "Working"
+                },
+                {
+                  "userEnteredValue": "Review"
+                },
+                {
+                  "userEnteredValue": "Blocked"
+                },
+                {
+                  "userEnteredValue": "Done"
+                },
+                {
+                  "userEnteredValue": "Cancelled"
+                }
+              ]
+            },
+            "strict": true,
+            "showCustomUi": true
+          }
+        }
+      },
+      {
+        "setDataValidation": {
+          "range": {
+            "sheetId": 1505506183,
+            "startRowIndex": 1,
+            "endRowIndex": 6,
+            "startColumnIndex": 13,
+            "endColumnIndex": 14
+          },
+          "rule": {
+            "condition": {
+              "type": "ONE_OF_LIST",
+              "values": [
+                {
+                  "userEnteredValue": "Yes"
+                },
+                {
+                  "userEnteredValue": "No"
+                }
+              ]
+            },
+            "strict": true,
+            "showCustomUi": true
+          }
+        }
+      }
+    ]
+  }
+}

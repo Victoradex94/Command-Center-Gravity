@@ -1,0 +1,82 @@
+{
+  "reviewer": "/root/aj0010_independent_review",
+  "observed_at": "2026-10-04T12:44:36.427806+00:00",
+  "disposition": "PASS for bounded live sandbox milestone on retained actual evidence; no defects or unreconciled effects observed.",
+  "workbook": {
+    "id": "1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE",
+    "title": "Command Centre — Ledger Writer Sandbox",
+    "sheet_id": 1505506183,
+    "tab": "Agent Jobs Sandbox",
+    "owner_email": "vicadtorex@gmail.com",
+    "scope": "agent-mediated existing authorised Google Drive MCP; authenticated My Drive root owner-only metadata, no shared drive"
+  },
+  "private_access": "File and its directly containing My Drive root both expose shared=false, drive_id=null, permission_metadata_available and exactly one owner-user permission matching the configured authenticated identity. All recorded intermediate and final ACL/Drive metadata responses equal the original verified baseline.",
+  "observed_mutation_counts": {
+    "workbook_create": 1,
+    "setup_batch": 1,
+    "setup_subrequests": 7,
+    "logical_create": 1,
+    "logical_update": 1,
+    "logical_recovery": 0,
+    "reconcile_replay": 0
+  },
+  "exact_operations": [
+    {
+      "id": "AJ-0010/sandbox/create-v1",
+      "attempt": "AJ-0010/sandbox/create-v1/0",
+      "call_sequence": 17,
+      "range": "A2:Q2",
+      "status": "Intake",
+      "record_revision": 1,
+      "result": "SUCCESS"
+    },
+    {
+      "id": "AJ-0010/sandbox/update-v1",
+      "attempt": "AJ-0010/sandbox/update-v1/0",
+      "call_sequence": 34,
+      "range": "A2:Q2",
+      "status": "Ready",
+      "record_revision": 2,
+      "result": "SUCCESS"
+    }
+  ],
+  "values": "All17 cells compared exactly against the unchanged saved fixture in both original requests, each immediate readback, every phase-appropriate grid read, both results and SQLite journals. Source/nonce/spec/run/attempt/protocol/catalogue remain exact. Only E,K,L,M,Q change between create/update.",
+  "structure": "Entire exposed6x18 CellData, metadata, Drive/root metadata and ACLs compared exactly after masking only A2:Q2 userEnteredValue. Neighbours, R sentinels, empty rows3to6,17 headers, seven-status and Yes/No validations, TEXT/WRAP and bold/light-grey header preserved. All intermediate recorded metadata/ACL responses also match.",
+  "acknowledgements": "Each original supervisor response equals the corresponding bridge response and retained SQLite receipt: isError=false, exact sandbox spreadsheetId, replies=[{}], updatedSpreadsheet=null. Request/response/readback digests bind the same original attempt. No exception/cancel/unknown receipt; recovery budget0.",
+  "restart": "Saved terminal-tool records show distinct execution sessions83514 and19163, both actual commands exit0. Reconcile has8 original read pairs, no batch call; writer DB and execute/reconcile exported states match exactly; receipts remain two. Historical successful outcomes are cached; fresh current readbacks independently verify exact revision2 and unchanged entire capture.",
+  "call_counts": {
+    "execute": 46,
+    "execute_reads": 44,
+    "execute_mutations": 2,
+    "reconcile_reads": 8,
+    "reconcile_mutations": 0
+  },
+  "verification": {
+    "command": "python -B /tmp/aj0010-live-review/verify_live.py",
+    "exit": 0,
+    "assertions": 1228,
+    "sqlite_access": "mode=ro&immutable=1; integrity_check=ok for both; no WAL or hot journal; all inspected live-file hashes preserved"
+  },
+  "setup_precision_history": "Requested RGB0.9 was stored by Google as0.8980392. Initial precision mismatch remains disclosed in setup-verification.json; original request/response retained. No repeated setup call evidenced. Logical operation comparisons use exact actual baseline without tolerance.",
+  "limits": [
+    "Local retained evidence independently reviewed; reviewer made no connector calls.",
+    "Exactly2 logical submissions and zero replay visible in retained call logs/journals; hidden provider retries are not observable.",
+    "Synchronous success and full readback are scoped completion evidence, not CAS/distributed exclusion/exactly-once.",
+    "Reconcile returned cached historical SUCCESS for prior operations and separately performed fresh current readbacks; no live crash/fault injection.",
+    "Setup requested RGB .9 was normalized to0.8980392; initial precision failure preserved, no setup retry evidenced; logical-write structure comparisons use exact actual baseline.",
+    "No live crash/fault injection performed; simulated crash tests remain separate.",
+    "Count proof covers retained tool calls and local submissions; it cannot reveal undocumented connector/provider retries or prove physical exactly-once.",
+    "Reviewer used only retained evidence and read-only SQLite, with no connector calls, repository edits, commits, pushes or external actions.",
+    "Coordinator acceptance and feature-only preservation remain separate from this independent review."
+  ],
+  "reviewer_probe_history": "Initial audit expectation incorrectly used uppercase APPLIED; actual Effect serializes applied. Corrected review assertion; initial-verification.stderr retained. Candidate/evidence required no modification.",
+  "artifacts": {
+    "results": "verification-results.json",
+    "checks": "checks.json",
+    "evidence_manifest": "evidence-manifest.json",
+    "verification_script": "verify_live.py",
+    "stdout": "verification.stdout",
+    "stderr": "verification.stderr"
+  },
+  "findings": []
+}

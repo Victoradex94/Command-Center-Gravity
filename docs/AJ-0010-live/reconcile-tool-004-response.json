@@ -1,0 +1,1524 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "spreadsheetId": "1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/edit",
+    "properties": {
+      "title": "Command Centre — Ledger Writer Sandbox",
+      "locale": "en_US",
+      "timeZone": "Etc/GMT"
+    },
+    "sheets": [
+      {
+        "properties": {
+          "sheetId": 1505506183,
+          "title": "Agent Jobs Sandbox",
+          "index": 0,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 6,
+            "columnCount": 18,
+            "frozenRowCount": 1
+          }
+        },
+        "data": [
+          {
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Job ID"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Parent Workplan ID"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Job / Deliverable"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Assigned Worker"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Status"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Priority"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Assigned At"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Control Date"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Dependency"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Source / Brief"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Output"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Verification"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Return Summary"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Needs Victor"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Victor Decision"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Last Update"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Run / Revision ID"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "backgroundColor": {
+                        "red": 0.8980392,
+                        "green": 0.8980392,
+                        "blue": 0.8980392
+                      },
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "bold": true
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 0.8980392,
+                          "green": 0.8980392,
+                          "blue": 0.8980392
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AJ-0010 sentinel R1"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AJ-0010"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Synthetic ledger transport fixture"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Codex sandbox fixture"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Ready"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "Intake"
+                          },
+                          {
+                            "userEnteredValue": "Ready"
+                          },
+                          {
+                            "userEnteredValue": "Working"
+                          },
+                          {
+                            "userEnteredValue": "Review"
+                          },
+                          {
+                            "userEnteredValue": "Blocked"
+                          },
+                          {
+                            "userEnteredValue": "Done"
+                          },
+                          {
+                            "userEnteredValue": "Cancelled"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Normal"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "2026-10-04T11:59:08.299571+00:00"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "2026-10-04"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Synthetic standalone; no Master task"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Synthetic update verified literally"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Synthetic update readback pending"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Synthetic update; not production AJ-0010 state"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "No"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "Yes"
+                          },
+                          {
+                            "userEnteredValue": "No"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Sandbox approved; not a new decision"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "2026-10-04T11:59:08.299571+00:00"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=2; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AJ-0010 sentinel R2"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "Intake"
+                          },
+                          {
+                            "userEnteredValue": "Ready"
+                          },
+                          {
+                            "userEnteredValue": "Working"
+                          },
+                          {
+                            "userEnteredValue": "Review"
+                          },
+                          {
+                            "userEnteredValue": "Blocked"
+                          },
+                          {
+                            "userEnteredValue": "Done"
+                          },
+                          {
+                            "userEnteredValue": "Cancelled"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "Yes"
+                          },
+                          {
+                            "userEnteredValue": "No"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AJ-0010 sentinel R3"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "Intake"
+                          },
+                          {
+                            "userEnteredValue": "Ready"
+                          },
+                          {
+                            "userEnteredValue": "Working"
+                          },
+                          {
+                            "userEnteredValue": "Review"
+                          },
+                          {
+                            "userEnteredValue": "Blocked"
+                          },
+                          {
+                            "userEnteredValue": "Done"
+                          },
+                          {
+                            "userEnteredValue": "Cancelled"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "Yes"
+                          },
+                          {
+                            "userEnteredValue": "No"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AJ-0010 sentinel R4"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "Intake"
+                          },
+                          {
+                            "userEnteredValue": "Ready"
+                          },
+                          {
+                            "userEnteredValue": "Working"
+                          },
+                          {
+                            "userEnteredValue": "Review"
+                          },
+                          {
+                            "userEnteredValue": "Blocked"
+                          },
+                          {
+                            "userEnteredValue": "Done"
+                          },
+                          {
+                            "userEnteredValue": "Cancelled"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "Yes"
+                          },
+                          {
+                            "userEnteredValue": "No"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AJ-0010 sentinel R5"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "Intake"
+                          },
+                          {
+                            "userEnteredValue": "Ready"
+                          },
+                          {
+                            "userEnteredValue": "Working"
+                          },
+                          {
+                            "userEnteredValue": "Review"
+                          },
+                          {
+                            "userEnteredValue": "Blocked"
+                          },
+                          {
+                            "userEnteredValue": "Done"
+                          },
+                          {
+                            "userEnteredValue": "Cancelled"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "Yes"
+                          },
+                          {
+                            "userEnteredValue": "No"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AJ-0010 sentinel R6"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "TEXT"
+                      },
+                      "wrapStrategy": "WRAP"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "isError": false
+}

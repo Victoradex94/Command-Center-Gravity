@@ -1,0 +1,46 @@
+{
+  "dispatcher/google_sheets.py": {
+    "bytes": 19909,
+    "sha256": "6260a938a5fc0b92b62f1dcf186ac22442e9390a2adf05bd819ff2fa980a306b"
+  },
+  "dispatcher/sheets_tool_bridge.py": {
+    "bytes": 1783,
+    "sha256": "a400c9e3c7960f2b9f07cdb2b2d908c1578ada6ea48f3838da3a97b31ad30345"
+  },
+  "dispatcher/sheets_sandbox.py": {
+    "bytes": 5631,
+    "sha256": "8d1a266b8073470b062b9e93caa4c9c67f12a93c4b0118603187d4279052e921"
+  },
+  "dispatcher/sheets_writer.py": {
+    "bytes": 38174,
+    "sha256": "cf656f22d562d56d510956b1a33c6a08fd521d571479ea8a8e18c83b1f41c5f2"
+  },
+  "dispatcher/writer_journal.py": {
+    "bytes": 2665,
+    "sha256": "b371dcc0a1f5b86b1078be3ca623dc981b99febe39b2caa9005f9ab67d61e928"
+  },
+  "dispatcher/model.py": {
+    "bytes": 13149,
+    "sha256": "0bc0ce7721b67f54da491a4c2c41845ba250d83a291d7903ffc73579a5f2860e"
+  },
+  "tools/aj0010_sandbox_session.py": {
+    "bytes": 6191,
+    "sha256": "65fd8bdfcea305ae75cd42868000b59d11f017bbea61b77de7c4fd3878ac3171"
+  },
+  "tests/test_google_sheets.py": {
+    "bytes": 30693,
+    "sha256": "f03f077e917cbbc0b48f52d8b23bae24e66987dd4053249a9e71a4ba88683b1a"
+  },
+  "tests/test_sandbox_session.py": {
+    "bytes": 4580,
+    "sha256": "719f46ee1929ee614a21579efe3f7570609f6fa4351b67c7b39018fa4418ede7"
+  },
+  "tests/offline_suite.py": {
+    "bytes": 1536,
+    "sha256": "7cacf7d564987ef9cefb806c03788678e1664ff89e3577b79627c021a6e41d5c"
+  },
+  "docs/AJ-0010-fixture-plan.json": {
+    "bytes": 11527,
+    "sha256": "c448dd13a66e038f1bc9bd554dba124002a05b5ff80780cc6a1a0c4edf746e48"
+  }
+}

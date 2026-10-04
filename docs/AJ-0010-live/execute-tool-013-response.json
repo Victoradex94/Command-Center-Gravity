@@ -1,0 +1,37 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "id": "1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE",
+    "title": "Command Centre — Ledger Writer Sandbox",
+    "mime_type": "application/vnd.google-apps.spreadsheet",
+    "size": null,
+    "url": null,
+    "file_or_folder": "file",
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "0AD1r1m5bkvJYUk9PVA"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": false,
+    "permissions": [
+      {
+        "type": "user",
+        "role": "owner",
+        "emailAddress": "vicadtorex@gmail.com",
+        "domain": null,
+        "displayName": "Adetimilehin VicAdex Inioluwa",
+        "allowFileDiscovery": null
+      }
+    ],
+    "source_visibility_status": "permission_metadata_available"
+  },
+  "isError": false
+}

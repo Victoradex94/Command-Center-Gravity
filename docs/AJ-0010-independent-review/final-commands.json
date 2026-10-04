@@ -1,0 +1,25 @@
+[
+  {
+    "name": "final_complete_offline",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-m",
+      "tests.offline_suite"
+    ],
+    "exit": 0,
+    "stdout_sha256": "8dbccb66d4fce3d8c8d9f93d1f1bf8bca8e7aabbde4e22112c58acd6f7adafda",
+    "stderr_sha256": "ecfe3da3bd9540fded4302689ed8bb3ea087fd84274bbb2b105e19d129a3b1e3"
+  },
+  {
+    "name": "final_probes",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "/tmp/aj0010-review/test_review_probes.py"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e474848b17b50fe53b86c773fd70e28dd779461aabe7b809deacb5ea1d7711ba"
+  }
+]

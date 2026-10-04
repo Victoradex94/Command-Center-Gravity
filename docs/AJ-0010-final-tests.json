@@ -1,0 +1,171 @@
+{
+  "scope": "OFFLINE simulation only; final nullable connector mapping",
+  "counts": {
+    "full": 193,
+    "preserved_baseline": 152,
+    "adapter": 37,
+    "driver": 4,
+    "F1": 4,
+    "F2": 1,
+    "simulation_groups": 11,
+    "simulation_tests": 58,
+    "counts_overlap": true
+  },
+  "in_memory_compile": "PASS; no bytecode",
+  "components": [
+    {
+      "label": "full-offline",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "tests.offline_suite"
+      ],
+      "started_at": "2026-10-04T12:35:17.391814+00:00",
+      "elapsed_seconds": 3.009,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-final-test-evidence/full-offline.stdout",
+        "bytes": 155,
+        "sha256": "b385aeb2071708be66deccf6fa0a8a405280c70752ffdfa58df1b9542f84621b"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-final-test-evidence/full-offline.stderr",
+        "bytes": 32291,
+        "sha256": "484960a2b57a3132f709e702db272c094347d535a073ac5521c92301c0c610bc"
+      }
+    },
+    {
+      "label": "focused",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_google_sheets",
+        "tests.test_sandbox_session",
+        "-q"
+      ],
+      "started_at": "2026-10-04T12:35:20.401247+00:00",
+      "elapsed_seconds": 0.511,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-final-test-evidence/focused.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-final-test-evidence/focused.stderr",
+        "bytes": 98,
+        "sha256": "c24d31062b07acbdb5f8f5a07af4a11b64c298abe8eb9e43dfc1de2e9f615d74"
+      }
+    },
+    {
+      "label": "F1",
+      "command": [
+        "python3",
+        "-B",
+        "docs/history/AJ-0009-ir1-review/test_review_probes.py"
+      ],
+      "started_at": "2026-10-04T12:35:20.912347+00:00",
+      "elapsed_seconds": 0.23,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-final-test-evidence/F1.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-final-test-evidence/F1.stderr",
+        "bytes": 792,
+        "sha256": "4254632d57dacdd752bdc2e8171d555dc7f0753ab533b2b15742ca840856ddad"
+      }
+    },
+    {
+      "label": "F2",
+      "command": [
+        "python3",
+        "-B",
+        "tests/probe_writer_f2.py"
+      ],
+      "started_at": "2026-10-04T12:35:21.142457+00:00",
+      "elapsed_seconds": 0.177,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-final-test-evidence/F2.stdout",
+        "bytes": 302,
+        "sha256": "5e3336828d39b26c49feefe95d7eecd3877e101b7a198d48bba76c64ed6d916c"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-final-test-evidence/F2.stderr",
+        "bytes": 282,
+        "sha256": "ee9de5b61d2a4ddcf61f82736a5e05454c339794e5335f66b62551e40bbbc24b"
+      }
+    },
+    {
+      "label": "simulation",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "tests.simulate"
+      ],
+      "started_at": "2026-10-04T12:35:21.319321+00:00",
+      "elapsed_seconds": 0.614,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-final-test-evidence/simulation.stdout",
+        "bytes": 2533,
+        "sha256": "ebe574290646c73ff9371208efc4bf97989b56f1cc61210e1177bad9158487de"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-final-test-evidence/simulation.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-04T12:35:21.933829+00:00",
+      "elapsed_seconds": 0.004,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-final-test-evidence/diff-check.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-final-test-evidence/diff-check.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "staging-empty",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code"
+      ],
+      "started_at": "2026-10-04T12:35:21.937808+00:00",
+      "elapsed_seconds": 0.003,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-final-test-evidence/staging-empty.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-final-test-evidence/staging-empty.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ]
+}

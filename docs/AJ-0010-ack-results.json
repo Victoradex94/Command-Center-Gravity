@@ -1,0 +1,171 @@
+{
+  "scope": "OFFLINE simulation only; acknowledgement correction",
+  "counts": {
+    "full": 192,
+    "original_baseline": 152,
+    "adapter": 36,
+    "driver": 4,
+    "F1": 4,
+    "F2": 1,
+    "simulation_groups": 11,
+    "simulation_tests": 58,
+    "counts_overlap": true
+  },
+  "in_memory_compile": "pass; no bytecode written",
+  "components": [
+    {
+      "label": "full-offline",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "tests.offline_suite"
+      ],
+      "started_at": "2026-10-04T12:28:17.295705+00:00",
+      "elapsed_seconds": 3.359,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-ack-evidence/full-offline.stdout",
+        "bytes": 155,
+        "sha256": "229035ed87ba5982297991de99bdb88d5070fd4b92766601f4b27556b35b570d"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-ack-evidence/full-offline.stderr",
+        "bytes": 32116,
+        "sha256": "78c9c23b2d65c657674eacd6562b51e1efbb1ed51921130915e1675ee131e230"
+      }
+    },
+    {
+      "label": "focused-adapter-driver",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_google_sheets",
+        "tests.test_sandbox_session",
+        "-q"
+      ],
+      "started_at": "2026-10-04T12:28:20.655170+00:00",
+      "elapsed_seconds": 0.46,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-ack-evidence/focused-adapter-driver.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-ack-evidence/focused-adapter-driver.stderr",
+        "bytes": 98,
+        "sha256": "c8c9d30cf327651d58ed66e593fc7d3237cbb6b773c8de53996633d1eed06c73"
+      }
+    },
+    {
+      "label": "historical-f1",
+      "command": [
+        "python3",
+        "-B",
+        "docs/history/AJ-0009-ir1-review/test_review_probes.py"
+      ],
+      "started_at": "2026-10-04T12:28:21.115395+00:00",
+      "elapsed_seconds": 0.224,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-ack-evidence/historical-f1.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-ack-evidence/historical-f1.stderr",
+        "bytes": 792,
+        "sha256": "e906bb6cd8af44451543c196f7ca384b596ebca82956618ebe095d1e7434e367"
+      }
+    },
+    {
+      "label": "historical-f2",
+      "command": [
+        "python3",
+        "-B",
+        "tests/probe_writer_f2.py"
+      ],
+      "started_at": "2026-10-04T12:28:21.339930+00:00",
+      "elapsed_seconds": 0.18,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-ack-evidence/historical-f2.stdout",
+        "bytes": 302,
+        "sha256": "5e3336828d39b26c49feefe95d7eecd3877e101b7a198d48bba76c64ed6d916c"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-ack-evidence/historical-f2.stderr",
+        "bytes": 282,
+        "sha256": "072908ecece24967afd595bc276186f35632ef99f486967a23cdcb5195a2d96b"
+      }
+    },
+    {
+      "label": "simulation",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "tests.simulate"
+      ],
+      "started_at": "2026-10-04T12:28:21.520858+00:00",
+      "elapsed_seconds": 0.673,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-ack-evidence/simulation.stdout",
+        "bytes": 2533,
+        "sha256": "ebe574290646c73ff9371208efc4bf97989b56f1cc61210e1177bad9158487de"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-ack-evidence/simulation.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-04T12:28:22.194056+00:00",
+      "elapsed_seconds": 0.01,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-ack-evidence/diff-check.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-ack-evidence/diff-check.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "staging-empty",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code"
+      ],
+      "started_at": "2026-10-04T12:28:22.204887+00:00",
+      "elapsed_seconds": 0.003,
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/AJ-0010-ack-evidence/staging-empty.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/AJ-0010-ack-evidence/staging-empty.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ]
+}

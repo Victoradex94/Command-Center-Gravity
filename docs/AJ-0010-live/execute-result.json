@@ -1,0 +1,115 @@
+{
+  "mode": "execute",
+  "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+  "outcomes": {
+    "create": {
+      "operation_id": "AJ-0010/sandbox/create-v1",
+      "outcome": "SUCCESS",
+      "reason": "settled application and exact 17-cell/source readback verified",
+      "cells": [
+        "AJ-0010",
+        "",
+        "Synthetic ledger transport fixture",
+        "Codex sandbox fixture",
+        "Intake",
+        "Normal",
+        "2026-10-04T11:59:08.299571+00:00",
+        "2026-10-04",
+        "Synthetic standalone; no Master task",
+        "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+        "=literal RAW text; Vic’Adex",
+        "Synthetic verification pending",
+        "Synthetic create; not production AJ-0010 state",
+        "No",
+        "Sandbox approved; not a new decision",
+        "2026-10-04T11:59:08.299571+00:00",
+        "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=1; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+      ],
+      "recovery_used": 0,
+      "circuit_open": false,
+      "fingerprint": ""
+    },
+    "update": {
+      "operation_id": "AJ-0010/sandbox/update-v1",
+      "outcome": "SUCCESS",
+      "reason": "settled application and exact 17-cell/source readback verified",
+      "cells": [
+        "AJ-0010",
+        "",
+        "Synthetic ledger transport fixture",
+        "Codex sandbox fixture",
+        "Ready",
+        "Normal",
+        "2026-10-04T11:59:08.299571+00:00",
+        "2026-10-04",
+        "Synthetic standalone; no Master task",
+        "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+        "Synthetic update verified literally",
+        "Synthetic update readback pending",
+        "Synthetic update; not production AJ-0010 state",
+        "No",
+        "Sandbox approved; not a new decision",
+        "2026-10-04T11:59:08.299571+00:00",
+        "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=2; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+      ],
+      "recovery_used": 0,
+      "circuit_open": false,
+      "fingerprint": ""
+    },
+    "hold": ""
+  },
+  "current_snapshot": {
+    "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+    "columns": [
+      "Job ID",
+      "Parent Workplan ID",
+      "Job / Deliverable",
+      "Assigned Worker",
+      "Status",
+      "Priority",
+      "Assigned At",
+      "Control Date",
+      "Dependency",
+      "Source / Brief",
+      "Output",
+      "Verification",
+      "Return Summary",
+      "Needs Victor",
+      "Victor Decision",
+      "Last Update",
+      "Run / Revision ID"
+    ],
+    "rows": [
+      {
+        "position": 2,
+        "cells": [
+          "AJ-0010",
+          "",
+          "Synthetic ledger transport fixture",
+          "Codex sandbox fixture",
+          "Ready",
+          "Normal",
+          "2026-10-04T11:59:08.299571+00:00",
+          "2026-10-04",
+          "Synthetic standalone; no Master task",
+          "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+          "Synthetic update verified literally",
+          "Synthetic update readback pending",
+          "Synthetic update; not production AJ-0010 state",
+          "No",
+          "Sandbox approved; not a new decision",
+          "2026-10-04T11:59:08.299571+00:00",
+          "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=2; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+        ],
+        "source_keys": [
+          "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+        ]
+      }
+    ],
+    "authoritative": true,
+    "complete": true,
+    "evidence": "MCP complete bounded grid; sha256=fbafc3f64e57118d0769c52af7b431df661f011b1ed6c0c6a904eba00d4c5e30"
+  },
+  "submissions": 2,
+  "recovery_used": 0
+}

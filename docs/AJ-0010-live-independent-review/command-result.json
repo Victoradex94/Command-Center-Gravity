@@ -1,0 +1,10 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "/tmp/aj0010-live-review/verify_live.py"
+  ],
+  "exit": 0,
+  "stdout_sha256": "a694a7e17b4c6a057930cf29e41e37c3237bf617a05b644778ff0f5a308ebe8d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

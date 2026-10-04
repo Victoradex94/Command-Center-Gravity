@@ -1,0 +1,33 @@
+test_absent_receipt_empty_row_does_not_prove_noop (tests.test_google_sheets.AdapterTests.test_absent_receipt_empty_row_does_not_prove_noop) ... ok
+test_actual_normalized_metadata_shape_private_root_and_file (tests.test_google_sheets.AdapterTests.test_actual_normalized_metadata_shape_private_root_and_file) ... ok
+test_crash_after_prepare_before_send_is_unknown_not_noop (tests.test_google_sheets.AdapterTests.test_crash_after_prepare_before_send_is_unknown_not_noop) ... ok
+test_duplicate_submit_blocked_after_restart (tests.test_google_sheets.AdapterTests.test_duplicate_submit_blocked_after_restart) ... ok
+test_exact_narrow_literal_request_and_structural_readback (tests.test_google_sheets.AdapterTests.test_exact_narrow_literal_request_and_structural_readback) ... ok
+test_formula_chips_and_rich_text_rejected_before_write (tests.test_google_sheets.AdapterTests.test_formula_chips_and_rich_text_rejected_before_write) ... ok
+test_generic_cancel_timeout_malformed_and_applied_timeout_remain_unknown (tests.test_google_sheets.AdapterTests.test_generic_cancel_timeout_malformed_and_applied_timeout_remain_unknown) ... ok
+test_header_or_sentinel_damage_rejected (tests.test_google_sheets.AdapterTests.test_header_or_sentinel_damage_rejected) ... ok
+test_journal_identity_not_retargetable (tests.test_google_sheets.AdapterTests.test_journal_identity_not_retargetable) ... ok
+test_malformed_outer_success_is_not_provider_success (tests.test_google_sheets.AdapterTests.test_malformed_outer_success_is_not_provider_success) ... ok
+test_metadata_or_neighbour_drift_blocks_observed_application (tests.test_google_sheets.AdapterTests.test_metadata_or_neighbour_drift_blocks_observed_application) ... ok
+test_privacy_missing_shared_inherited_other_owner_or_shared_drive_rejected (tests.test_google_sheets.AdapterTests.test_privacy_missing_shared_inherited_other_owner_or_shared_drive_rejected) ... ok
+test_row_move_or_conflict_between_preflight_and_submit_blocks_call (tests.test_google_sheets.AdapterTests.test_row_move_or_conflict_between_preflight_and_submit_blocks_call) ... ok
+test_scope_and_production_target_rejected (tests.test_google_sheets.AdapterTests.test_scope_and_production_target_rejected) ... ok
+test_shared_root_rejected (tests.test_google_sheets.AdapterTests.test_shared_root_rejected) ... ok
+test_source_sidecar_cannot_override_j (tests.test_google_sheets.AdapterTests.test_source_sidecar_cannot_override_j) ... ok
+test_truncated_missing_wrong_offset_and_wrong_id_reads_rejected (tests.test_google_sheets.AdapterTests.test_truncated_missing_wrong_offset_and_wrong_id_reads_rejected) ... ok
+test_unknown_or_legacy_j_rejected (tests.test_google_sheets.AdapterTests.test_unknown_or_legacy_j_rejected) ... ok
+test_update_maps_exact_revision_two_without_touching_other_cells (tests.test_google_sheets.AdapterTests.test_update_maps_exact_revision_two_without_touching_other_cells) ... ok
+test_validation_options_cannot_be_removed_or_widened (tests.test_google_sheets.AdapterTests.test_validation_options_cannot_be_removed_or_widened) ... ok
+test_writer_freezes_update_restarts_reconciles_without_replay_or_budget_reset (tests.test_google_sheets.AdapterTests.test_writer_freezes_update_restarts_reconciles_without_replay_or_budget_reset) ... ok
+test_wrong_dimensions_or_expansion_rejected (tests.test_google_sheets.AdapterTests.test_wrong_dimensions_or_expansion_rejected) ... ok
+test_eof_or_wrong_response_never_retries (tests.test_google_sheets.BridgeTests.test_eof_or_wrong_response_never_retries) ... ok
+test_exact_request_response_binding_and_no_retry (tests.test_google_sheets.BridgeTests.test_exact_request_response_binding_and_no_retry) ... ok
+test_independent_review_old_bridge_reply_rejected_after_restart (tests.test_google_sheets.BridgeTests.test_independent_review_old_bridge_reply_rejected_after_restart) ... ok
+test_driver_stops_at_uncertain_then_same_journal_readonly_restart (tests.test_google_sheets.SandboxTests.test_driver_stops_at_uncertain_then_same_journal_readonly_restart) ... ok
+test_fixture_has_exact_headers_seven_statuses_and_no_job_seed (tests.test_google_sheets.SandboxTests.test_fixture_has_exact_headers_seven_statuses_and_no_job_seed) ... ok
+test_plan_has_exact_ids_lineage_sources_values_and_only_one_revision_advance (tests.test_google_sheets.SandboxTests.test_plan_has_exact_ids_lineage_sources_values_and_only_one_revision_advance) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.124s
+
+OK

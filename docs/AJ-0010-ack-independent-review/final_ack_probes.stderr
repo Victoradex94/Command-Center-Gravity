@@ -1,0 +1,13 @@
+test_applied_crash_before_response_retention_never_settles_or_replays (__main__.AckProbes.test_applied_crash_before_response_retention_never_settles_or_replays) ... ok
+test_applied_timeout_stays_fenced_after_route_returns_to_normal (__main__.AckProbes.test_applied_timeout_stays_fenced_after_route_returns_to_normal) ... ok
+test_exact_saved_fixture_two_writes_restart_zero_replay (__main__.AckProbes.test_exact_saved_fixture_two_writes_restart_zero_replay) ... ok
+test_pending_retry_metadata_blocks_positive_native_shaped_payload (__main__.AckProbes.test_pending_retry_metadata_blocks_positive_native_shaped_payload) ... ok
+test_permissions_drift_after_ack_does_not_settle (__main__.AckProbes.test_permissions_drift_after_ack_does_not_settle) ... ok
+test_retained_ack_crash_before_marker_adopts_using_fresh_objects (__main__.AckProbes.test_retained_ack_crash_before_marker_adopts_using_fresh_objects) ... ok
+test_success_payload_cannot_overrule_recorded_exception (__main__.AckProbes.test_success_payload_cannot_overrule_recorded_exception) ... ok
+test_success_payload_cannot_settle_different_stored_request (__main__.AckProbes.test_success_payload_cannot_settle_different_stored_request) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.081s
+
+OK

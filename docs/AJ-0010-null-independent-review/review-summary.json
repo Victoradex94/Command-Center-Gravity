@@ -1,0 +1,51 @@
+{
+  "reviewer": "/root/aj0010_independent_review",
+  "observed_at": "2026-10-04T12:35:40.647144+00:00",
+  "disposition": "PASS for narrow nullable updatedSpreadsheet mapping correction; no logical live write outcome reviewed.",
+  "observed_saved_response": {
+    "path": "docs/AJ-0010-live/setup-original-response.json",
+    "isError": false,
+    "spreadsheetId": "1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE",
+    "replies": 7,
+    "updatedSpreadsheet": null
+  },
+  "reasoning": "Optional updatedSpreadsheet=None is treated like an omitted optional resource. Every supplied non-null resource still requires a dict with the exact target identity. Exact stored request, clean native acknowledgement, single empty reply, bound submission, complete unique17-cell/source/position readback and unchanged exposed structure/ACL checks remain required.",
+  "results": {
+    "full_offline": {
+      "tests": 193,
+      "failures": 0,
+      "errors": 0,
+      "exit": 0
+    },
+    "independent_nullable": {
+      "tests": 3,
+      "exit": 0
+    },
+    "independent_ack": {
+      "tests": 8,
+      "exit": 0
+    },
+    "independent_driver": {
+      "tests": 4,
+      "exit": 0
+    }
+  },
+  "new_probe_claims": [
+    "Null optional resource plus genuine simulated one-reply acknowledgement and full readback can settle; privacy drift still blocks settlement.",
+    "Saved seven-reply setup response shape cannot settle a single-row submission, even when synthetic target identity is made to match.",
+    "Null optional resource cannot override outer isError=true."
+  ],
+  "unchanged": "Accepted writer, journal, model, driver and exact saved fixture retain reviewed hashes; git diff against preserved base for writer/journal/model is empty, exit0.",
+  "limitations": [
+    "Reviewer read the saved setup response, not a new connector response; no connector or mutation call performed.",
+    "Setup response is not evidence of either logical row operation. Those remain separately subject to actual original response and full readback verification.",
+    "No claim of physical exactly-once, opaque retry absence, CAS or distributed exclusion.",
+    "All reviewer-generated evidence stays in /tmp/aj0010-null-review; earlier review histories remain untouched."
+  ],
+  "findings": [],
+  "artifacts": {
+    "commands": "commands.json",
+    "hashes": "manifest.json",
+    "new_probes": "test_nullable_probes.py"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "dispatcher/google_sheets.py": {
+    "bytes": 20160,
+    "sha256": "b923263a64e3fed76b46b27e0339b17bc328fa82a074e4eeace6b216a7d2e617"
+  },
+  "tests/test_google_sheets.py": {
+    "bytes": 31592,
+    "sha256": "cc5700fd85f88a0b263170bb2c62379b9b245346d57ae0bd7f89489df6344219"
+  },
+  "tools/aj0010_sandbox_session.py": {
+    "bytes": 6191,
+    "sha256": "65fd8bdfcea305ae75cd42868000b59d11f017bbea61b77de7c4fd3878ac3171"
+  },
+  "dispatcher/sheets_writer.py": {
+    "bytes": 38174,
+    "sha256": "cf656f22d562d56d510956b1a33c6a08fd521d571479ea8a8e18c83b1f41c5f2"
+  },
+  "dispatcher/writer_journal.py": {
+    "bytes": 2665,
+    "sha256": "b371dcc0a1f5b86b1078be3ca623dc981b99febe39b2caa9005f9ab67d61e928"
+  },
+  "dispatcher/model.py": {
+    "bytes": 13149,
+    "sha256": "0bc0ce7721b67f54da491a4c2c41845ba250d83a291d7903ffc73579a5f2860e"
+  },
+  "docs/AJ-0010-fixture-plan.json": {
+    "bytes": 11527,
+    "sha256": "c448dd13a66e038f1bc9bd554dba124002a05b5ff80780cc6a1a0c4edf746e48"
+  },
+  "docs/AJ-0010-live/setup-original-response.json": {
+    "bytes": 334,
+    "sha256": "006227693415acabb60530e3685d63d57768a1755045a2c2d6f65b0d0475a3b2"
+  }
+}

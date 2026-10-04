@@ -1,0 +1,19 @@
+test_crash_after_provider_apply_before_receipt_finish_is_frozen (__main__.IndependentProbes.test_crash_after_provider_apply_before_receipt_finish_is_frozen) ... ok
+test_stale_receipt_intent_cannot_be_rebound (__main__.IndependentProbes.test_stale_receipt_intent_cannot_be_rebound) ... ok
+test_mismatched_batch_response_applied_cells_remain_unknown (__main__.IndependentProbes.test_mismatched_batch_response_applied_cells_remain_unknown) ... ok
+test_finality_stays_false_after_repeated_observations (__main__.IndependentProbes.test_finality_stays_false_after_repeated_observations) ... ok
+test_prior_instance_reply_must_not_bind_to_restart (__main__.IndependentBridgeProbe.test_prior_instance_reply_must_not_bind_to_restart) ... FAIL
+
+======================================================================
+FAIL: test_prior_instance_reply_must_not_bind_to_restart (__main__.IndependentBridgeProbe.test_prior_instance_reply_must_not_bind_to_restart)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/aj0010-review/test_review_probes.py", line 84, in test_prior_instance_reply_must_not_bind_to_restart
+    with self.assertRaises(ProtocolError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProtocolError not raised
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.058s
+
+FAILED (failures=1)

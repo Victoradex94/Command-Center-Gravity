@@ -1,0 +1,6 @@
+test_unrelated_renewal_cannot_replace_revoked_original_recovery_authority (__main__.RenewalScopeReview.test_unrelated_renewal_cannot_replace_revoked_original_recovery_authority) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.006s
+
+OK

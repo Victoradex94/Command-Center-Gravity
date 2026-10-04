@@ -1,0 +1,47 @@
+[
+  {
+    "name": "final_full_offline",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-m",
+      "tests.offline_suite"
+    ],
+    "exit": 0,
+    "stdout_sha256": "229035ed87ba5982297991de99bdb88d5070fd4b92766601f4b27556b35b570d",
+    "stderr_sha256": "2a79b58862ce2b8c2ed046f810fe6173dc59f6d3b3f8ff4744daa26608ffc270"
+  },
+  {
+    "name": "final_ack_probes",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "/tmp/aj0010-ack-review/test_ack_probes.py"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "14433bea88fefceea2ff8cab40ea32750c8d7eaf2d773dbadc5a46cb407a312e"
+  },
+  {
+    "name": "final_driver_probes",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "/tmp/aj0010-ack-review/test_driver_probes.py"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "68d6a7e22286ca0cfeea4470e6380521f535cb613d5ad75ec14deae921a58619"
+  },
+  {
+    "name": "diff_check",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

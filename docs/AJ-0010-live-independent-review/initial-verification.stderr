@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/aj0010-live-review/verify_live.py", line 141, in <module>
+    check(len(observations)==1 and observations[0]['effect']=='APPLIED' and observations[0]['settled'] is True and observations[0]['effects_resolved'] is True,'one exact positive settled observation')
+  File "/tmp/aj0010-live-review/verify_live.py", line 10, in check
+    assert condition,label
+           ^^^^^^^^^
+AssertionError: one exact positive settled observation

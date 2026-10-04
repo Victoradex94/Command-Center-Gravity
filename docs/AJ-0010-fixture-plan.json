@@ -1,0 +1,447 @@
+{
+  "status": "PROPOSED ONLY — NO LIVE WORKBOOK OR MUTATIONS",
+  "planned_at": "2026-10-04T11:59:08.299571+00:00",
+  "workbook_title": "Command Centre — Ledger Writer Sandbox",
+  "sandbox_id": null,
+  "sheet_title": "Agent Jobs Sandbox",
+  "grid": {
+    "rows": 6,
+    "columns": 18
+  },
+  "header_A1_Q1": [
+    "Job ID",
+    "Parent Workplan ID",
+    "Job / Deliverable",
+    "Assigned Worker",
+    "Status",
+    "Priority",
+    "Assigned At",
+    "Control Date",
+    "Dependency",
+    "Source / Brief",
+    "Output",
+    "Verification",
+    "Return Summary",
+    "Needs Victor",
+    "Victor Decision",
+    "Last Update",
+    "Run / Revision ID"
+  ],
+  "before_A2_Q2": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "create": {
+    "operation_id": "AJ-0010/sandbox/create-v1",
+    "job_id": "AJ-0010",
+    "expected_revision": null,
+    "cells": [
+      "AJ-0010",
+      "",
+      "Synthetic ledger transport fixture",
+      "Codex sandbox fixture",
+      "Intake",
+      "Normal",
+      "2026-10-04T11:59:08.299571+00:00",
+      "2026-10-04",
+      "Synthetic standalone; no Master task",
+      "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+      "=literal RAW text; Vic’Adex",
+      "Synthetic verification pending",
+      "Synthetic create; not production AJ-0010 state",
+      "No",
+      "Sandbox approved; not a new decision",
+      "2026-10-04T11:59:08.299571+00:00",
+      "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=1; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+    ],
+    "source_keys": [
+      "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+    ],
+    "authority_ref": "slack:1791113671.468969/AJ-0010/sandbox",
+    "context_ref": "AJ-0010/SpecRevision1/RunEpoch1/Attempt1/VA-LIVE-SHEETS-0010-01",
+    "condition": "private-isolated-single-owner-sandbox",
+    "route": "existing-google-drive-mcp-agent-bridge",
+    "aggregate": "",
+    "expected_lineage": null,
+    "intended_lineage": {
+      "job_id": "AJ-0010",
+      "spec_revision": 1,
+      "run_epoch": 1,
+      "attempt": 1
+    },
+    "lineage_change_ref": "",
+    "original_authority_ref": ""
+  },
+  "update": {
+    "operation_id": "AJ-0010/sandbox/update-v1",
+    "job_id": "AJ-0010",
+    "expected_revision": 1,
+    "cells": [
+      "AJ-0010",
+      "",
+      "Synthetic ledger transport fixture",
+      "Codex sandbox fixture",
+      "Ready",
+      "Normal",
+      "2026-10-04T11:59:08.299571+00:00",
+      "2026-10-04",
+      "Synthetic standalone; no Master task",
+      "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}",
+      "Synthetic update verified literally",
+      "Synthetic update readback pending",
+      "Synthetic update; not production AJ-0010 state",
+      "No",
+      "Sandbox approved; not a new decision",
+      "2026-10-04T11:59:08.299571+00:00",
+      "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=2; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+    ],
+    "source_keys": [
+      "synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01"
+    ],
+    "authority_ref": "slack:1791113671.468969/AJ-0010/sandbox",
+    "context_ref": "AJ-0010/SpecRevision1/RunEpoch1/Attempt1/VA-LIVE-SHEETS-0010-01",
+    "condition": "private-isolated-single-owner-sandbox",
+    "route": "existing-google-drive-mcp-agent-bridge",
+    "aggregate": "",
+    "expected_lineage": {
+      "job_id": "AJ-0010",
+      "spec_revision": 1,
+      "run_epoch": 1,
+      "attempt": 1
+    },
+    "intended_lineage": {
+      "job_id": "AJ-0010",
+      "spec_revision": 1,
+      "run_epoch": 1,
+      "attempt": 1
+    },
+    "lineage_change_ref": "",
+    "original_authority_ref": ""
+  },
+  "setup_requests_with_example_sheet_id_0": [
+    {
+      "updateSheetProperties": {
+        "properties": {
+          "sheetId": 0,
+          "title": "Agent Jobs Sandbox",
+          "gridProperties": {
+            "rowCount": 6,
+            "columnCount": 18,
+            "frozenRowCount": 1
+          }
+        },
+        "fields": "title,gridProperties"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 0,
+          "startRowIndex": 0,
+          "endRowIndex": 1,
+          "startColumnIndex": 0,
+          "endColumnIndex": 17
+        },
+        "fields": "userEnteredValue",
+        "rows": [
+          {
+            "values": [
+              {
+                "userEnteredValue": {
+                  "stringValue": "Job ID"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Parent Workplan ID"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Job / Deliverable"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Assigned Worker"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Status"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Priority"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Assigned At"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Control Date"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Dependency"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Source / Brief"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Output"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Verification"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Return Summary"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Needs Victor"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Victor Decision"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Last Update"
+                }
+              },
+              {
+                "userEnteredValue": {
+                  "stringValue": "Run / Revision ID"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 0,
+          "startRowIndex": 0,
+          "endRowIndex": 6,
+          "startColumnIndex": 17,
+          "endColumnIndex": 18
+        },
+        "fields": "userEnteredValue",
+        "rows": [
+          {
+            "values": [
+              {
+                "userEnteredValue": {
+                  "stringValue": "AJ-0010 sentinel R1"
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredValue": {
+                  "stringValue": "AJ-0010 sentinel R2"
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredValue": {
+                  "stringValue": "AJ-0010 sentinel R3"
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredValue": {
+                  "stringValue": "AJ-0010 sentinel R4"
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredValue": {
+                  "stringValue": "AJ-0010 sentinel R5"
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredValue": {
+                  "stringValue": "AJ-0010 sentinel R6"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repeatCell": {
+        "range": {
+          "sheetId": 0,
+          "startRowIndex": 0,
+          "endRowIndex": 6,
+          "startColumnIndex": 0,
+          "endColumnIndex": 18
+        },
+        "cell": {
+          "userEnteredFormat": {
+            "numberFormat": {
+              "type": "TEXT"
+            },
+            "wrapStrategy": "WRAP"
+          }
+        },
+        "fields": "userEnteredFormat"
+      }
+    },
+    {
+      "repeatCell": {
+        "range": {
+          "sheetId": 0,
+          "startRowIndex": 0,
+          "endRowIndex": 1,
+          "startColumnIndex": 0,
+          "endColumnIndex": 17
+        },
+        "cell": {
+          "userEnteredFormat": {
+            "textFormat": {
+              "bold": true
+            },
+            "backgroundColor": {
+              "red": 0.9,
+              "green": 0.9,
+              "blue": 0.9
+            }
+          }
+        },
+        "fields": "userEnteredFormat.textFormat,userEnteredFormat.backgroundColor"
+      }
+    },
+    {
+      "setDataValidation": {
+        "range": {
+          "sheetId": 0,
+          "startRowIndex": 1,
+          "endRowIndex": 6,
+          "startColumnIndex": 4,
+          "endColumnIndex": 5
+        },
+        "rule": {
+          "condition": {
+            "type": "ONE_OF_LIST",
+            "values": [
+              {
+                "userEnteredValue": "Intake"
+              },
+              {
+                "userEnteredValue": "Ready"
+              },
+              {
+                "userEnteredValue": "Working"
+              },
+              {
+                "userEnteredValue": "Review"
+              },
+              {
+                "userEnteredValue": "Blocked"
+              },
+              {
+                "userEnteredValue": "Done"
+              },
+              {
+                "userEnteredValue": "Cancelled"
+              }
+            ]
+          },
+          "strict": true,
+          "showCustomUi": true
+        }
+      }
+    },
+    {
+      "setDataValidation": {
+        "range": {
+          "sheetId": 0,
+          "startRowIndex": 1,
+          "endRowIndex": 6,
+          "startColumnIndex": 13,
+          "endColumnIndex": 14
+        },
+        "rule": {
+          "condition": {
+            "type": "ONE_OF_LIST",
+            "values": [
+              {
+                "userEnteredValue": "Yes"
+              },
+              {
+                "userEnteredValue": "No"
+              }
+            ]
+          },
+          "strict": true,
+          "showCustomUi": true
+        }
+      }
+    }
+  ],
+  "sheet_id_notice": "0 is only a planner example; use actual created workbook metadata before setup",
+  "writes_proposed": {
+    "workbook_create": 1,
+    "setup_batch": 1,
+    "logical_create": 1,
+    "logical_update": 1
+  },
+  "writes_actual": 0,
+  "gates": [
+    "root sole-owner coordination",
+    "private file and root permission/parent readback",
+    "supported settlement evidence; currently unavailable"
+  ]
+}

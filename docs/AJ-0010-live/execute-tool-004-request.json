@@ -1,0 +1,12 @@
+{
+  "tool": "mcp__codex_apps__google_drive_get_spreadsheet_cells",
+  "arguments": {
+    "spreadsheet_id": "1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE",
+    "ranges": [
+      "'Agent Jobs Sandbox'!A1:R6"
+    ],
+    "cell_fields": "userEnteredValue,userEnteredFormat,dataValidation,note,chipRuns,textFormatRuns"
+  },
+  "bridge_session": "97ff1d51b9f89ada8a9bec9e6b81a14b",
+  "sequence": 4
+}

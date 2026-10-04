@@ -1,0 +1,47 @@
+[
+  {
+    "name": "full_offline",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-m",
+      "tests.offline_suite"
+    ],
+    "exit": 0,
+    "stdout_sha256": "b385aeb2071708be66deccf6fa0a8a405280c70752ffdfa58df1b9542f84621b",
+    "stderr_sha256": "86b16732fa7ed4f2d226d8c1e2726825832a8c6095de9ba7385ec47bfb7dca4d"
+  },
+  {
+    "name": "nullable_probes",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "/tmp/aj0010-null-review/test_nullable_probes.py"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "4c65380668256a43fade321d4f62fb88aefa377bd2f8ffdb1cb5a59abed65b37"
+  },
+  {
+    "name": "ack_probes",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "/tmp/aj0010-ack-review/test_ack_probes.py"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "58e9c6e045e4c8a1aea3d4cf113eb72eb2637aa1a8f89ae3fe625abf31681f8a"
+  },
+  {
+    "name": "driver_probes",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "/tmp/aj0010-ack-review/test_driver_probes.py"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "02f7203851e2a6aa651f2d8bb90d2b7ea55bc838bd6706b156041835897897b0"
+  }
+]

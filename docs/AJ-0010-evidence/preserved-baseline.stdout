@@ -1,0 +1,2 @@
+OFFLINE GUARD: active; synthetic audit probe blocked
+OFFLINE RESULT: tests=152 failures=0 errors=0; no production adapter is present

@@ -1,0 +1,31 @@
+test_ambiguous_create_blocks_update_and_reconcile_never_replays (__main__.DriverProbes.test_ambiguous_create_blocks_update_and_reconcile_never_replays) ... FAIL
+test_execute_existing_journals_cannot_submit_again (__main__.DriverProbes.test_execute_existing_journals_cannot_submit_again) ... ok
+test_execute_then_restart_reconcile_exact_fixture_two_total_writes (__main__.DriverProbes.test_execute_then_restart_reconcile_exact_fixture_two_total_writes) ... FAIL
+test_tampered_fixture_and_production_config_fail_before_any_tool_call (__main__.DriverProbes.test_tampered_fixture_and_production_config_fail_before_any_tool_call) ... ok
+
+======================================================================
+FAIL: test_ambiguous_create_blocks_update_and_reconcile_never_replays (__main__.DriverProbes.test_ambiguous_create_blocks_update_and_reconcile_never_replays)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/aj0010-ack-review/test_driver_probes.py", line 57, in test_ambiguous_create_blocks_update_and_reconcile_never_replays
+    self.assertEqual(result["outcomes"]["create"]["outcome"],"uncertain")
+AssertionError: 'UNCERTAIN' != 'uncertain'
+- UNCERTAIN
++ uncertain
+
+
+======================================================================
+FAIL: test_execute_then_restart_reconcile_exact_fixture_two_total_writes (__main__.DriverProbes.test_execute_then_restart_reconcile_exact_fixture_two_total_writes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/aj0010-ack-review/test_driver_probes.py", line 43, in test_execute_then_restart_reconcile_exact_fixture_two_total_writes
+    self.assertEqual(result["outcomes"]["create"]["outcome"],"success")
+AssertionError: 'SUCCESS' != 'success'
+- SUCCESS
++ success
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.180s
+
+FAILED (failures=2)

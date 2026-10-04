@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "assertions": 1228,
+  "scope": "google-sheets/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/1505506183",
+  "owner_email": "vicadtorex@gmail.com",
+  "fixture_sha256": "c448dd13a66e038f1bc9bd554dba124002a05b5ff80780cc6a1a0c4edf746e48",
+  "execute_calls": 46,
+  "execute_reads": 44,
+  "logical_mutations": [
+    17,
+    34
+  ],
+  "reconcile_reads": 8,
+  "replay_mutations": 0,
+  "journal_operations": [
+    "AJ-0010/sandbox/create-v1",
+    "AJ-0010/sandbox/update-v1"
+  ],
+  "attempts": [
+    "AJ-0010/sandbox/create-v1/0",
+    "AJ-0010/sandbox/update-v1/0"
+  ],
+  "recovery_used": 0,
+  "cell_readbacks": [
+    {
+      "mode": "execute",
+      "sequence": 4,
+      "revision": 0
+    },
+    {
+      "mode": "execute",
+      "sequence": 8,
+      "revision": 0
+    },
+    {
+      "mode": "execute",
+      "sequence": 12,
+      "revision": 0
+    },
+    {
+      "mode": "execute",
+      "sequence": 16,
+      "revision": 0
+    },
+    {
+      "mode": "execute",
+      "sequence": 21,
+      "revision": 1
+    },
+    {
+      "mode": "execute",
+      "sequence": 25,
+      "revision": 1
+    },
+    {
+      "mode": "execute",
+      "sequence": 29,
+      "revision": 1
+    },
+    {
+      "mode": "execute",
+      "sequence": 33,
+      "revision": 1
+    },
+    {
+      "mode": "execute",
+      "sequence": 38,
+      "revision": 2
+    },
+    {
+      "mode": "execute",
+      "sequence": 42,
+      "revision": 2
+    },
+    {
+      "mode": "execute",
+      "sequence": 46,
+      "revision": 2
+    },
+    {
+      "mode": "reconcile",
+      "sequence": 4,
+      "revision": 2
+    },
+    {
+      "mode": "reconcile",
+      "sequence": 8,
+      "revision": 2
+    }
+  ],
+  "process_sessions": [
+    83514,
+    19163
+  ],
+  "before_capture_sha256": "34c2b9607f3922990ad8ad309eb22096af32851cba89ba485da3af8c840c80ac",
+  "after_capture_sha256": "fbafc3f64e57118d0769c52af7b431df661f011b1ed6c0c6a904eba00d4c5e30",
+  "writer_db_sha256": "05fb48391664352e299a400ba2cfe1e3ad617f77ddf780fcea4393e7ccd653d5",
+  "receipt_db_sha256": "ad1b777a5c20359f465191001c0edce0a3f38a2cdf4159262d32290d15bf681f",
+  "limits": [
+    "Local retained evidence independently reviewed; reviewer made no connector calls.",
+    "Exactly2 logical submissions and zero replay visible in retained call logs/journals; hidden provider retries are not observable.",
+    "Synchronous success and full readback are scoped completion evidence, not CAS/distributed exclusion/exactly-once.",
+    "Reconcile returned cached historical SUCCESS for prior operations and separately performed fresh current readbacks; no live crash/fault injection.",
+    "Setup requested RGB .9 was normalized to0.8980392; initial precision failure preserved, no setup retry evidenced; logical-write structure comparisons use exact actual baseline."
+  ]
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "name": "complete_offline",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-m",
+      "tests.offline_suite"
+    ],
+    "exit": 1,
+    "stdout_sha256": "9e4cb71edf9f8e77f8bc3df80ae92c2cbf4db38dd0cfec9126ee9f3dbd1251f2",
+    "stderr_sha256": "edec325727b3e1fb7b0ee1e2f6d67332cb3efefae0cb1464038c4393997cfd9f"
+  },
+  {
+    "name": "focused_offline",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-c",
+      "import sys,unittest; from tests.offline_suite import reject_external; sys.addaudithook(reject_external); result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"tests.test_google_sheets\")); raise SystemExit(not result.wasSuccessful())"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "0f3128fcc22ae607b3bdbe56442973a23f39ba9fe3b972f157f8eb87afee179a"
+  },
+  {
+    "name": "retained_f1_offline",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-c",
+      "import sys,runpy; from tests.offline_suite import reject_external; sys.addaudithook(reject_external); runpy.run_path(\"docs/history/AJ-0009-ir1-review/test_review_probes.py\",run_name=\"__main__\")"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "8fecae15394ac19e84ba078bce539dfe631b8dd1486ec1845b1e990ec563a3b4"
+  },
+  {
+    "name": "retained_f2_offline",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-c",
+      "import sys,runpy; from tests.offline_suite import reject_external; sys.addaudithook(reject_external); runpy.run_path(\"tests/probe_writer_f2.py\",run_name=\"__main__\")"
+    ],
+    "exit": 0,
+    "stdout_sha256": "5e3336828d39b26c49feefe95d7eecd3877e101b7a198d48bba76c64ed6d916c",
+    "stderr_sha256": "3a148e44755fb644f7410b29f57fd3c8d4e707713108920316a4810f44bae380"
+  },
+  {
+    "name": "diff_check",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

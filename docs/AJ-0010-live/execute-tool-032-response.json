@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "spreadsheetId": "1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE/edit",
+    "properties": {
+      "title": "Command Centre — Ledger Writer Sandbox",
+      "locale": "en_US",
+      "timeZone": "Etc/GMT"
+    },
+    "sheets": [
+      {
+        "properties": {
+          "sheetId": 1505506183,
+          "title": "Agent Jobs Sandbox",
+          "index": 0,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 6,
+            "columnCount": 18,
+            "frozenRowCount": 1
+          }
+        }
+      }
+    ]
+  },
+  "isError": false
+}

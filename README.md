@@ -223,3 +223,28 @@ are also retained under `docs/history`. Revision 3 binds renewal applicability
 to exact job, sources, intended values and original authority at every mutation
 gate; it does not change the shared recovery budget. These are local/mock results, not live
 integration or unattended-operation acceptance.
+
+## AJ-0010 — bounded Google Sheets transport candidate
+
+AJ-0010 adds a native Google Drive MCP request/response adapter, a session-bound
+agent tool bridge, durable exact-call receipts, and an isolated sandbox fixture
+planner. It requires the existing authorised connector; it contains no network
+client, credentials or authentication installer. The accepted writer and F1/F2
+authority/recovery controls are unchanged.
+
+The existing connector was exercised through the Python bridge in one private
+sandbox. One synthetic create and one update each retained their original native
+acknowledgement and passed exact 17-cell, neighbour, formatting, validation and
+permission readback. A separate process reconciled the same journals with zero
+additional writes. The positive path settles the acknowledged invocation;
+missing/ambiguous acknowledgements remain UNCERTAIN even when cells match.
+This bounded, agent-mediated result does not establish CAS, physical exactly-once,
+direct Python authentication, production readiness or unattended operation.
+
+See [AJ-0010 scope, evidence and limitations](docs/AJ-0010-google-sheets-sandbox.md),
+[actual connection evidence](docs/AJ-0010-connection-evidence.json),
+[exact saved fixture](docs/AJ-0010-fixture-plan.json),
+[live verification](docs/AJ-0010-live/verification-result.json), and
+[final offline results](docs/AJ-0010-final-tests.json). Run `python3 -B -m tests.offline_suite`
+for all 193 tests, including the unchanged 152-test baseline and 41 new tests.
+Commit/push remains gated on root acceptance of the final code/test/live evidence.

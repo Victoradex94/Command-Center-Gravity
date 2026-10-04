@@ -1,0 +1,9 @@
+test_authenticated_initial_denial_cannot_be_erased_by_fresh_operation_context (__main__.ReviewChecks.test_authenticated_initial_denial_cannot_be_erased_by_fresh_operation_context) ... ok
+test_authenticated_revocation_during_final_recovery_preflight_survives_restart (__main__.ReviewChecks.test_authenticated_revocation_during_final_recovery_preflight_survives_restart) ... ok
+test_two_processes_race_to_claim_single_shared_journal (__main__.ReviewChecks.test_two_processes_race_to_claim_single_shared_journal) ... ok
+test_expected_spec_epoch_attempt_are_compared_at_current_record_revision (__main__.BridgeChecks.test_expected_spec_epoch_attempt_are_compared_at_current_record_revision) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.039s
+
+OK

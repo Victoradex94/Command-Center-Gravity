@@ -1,0 +1,9 @@
+{
+  "tool": "mcp__codex_apps__google_drive_get_file_metadata",
+  "arguments": {
+    "fileId": "1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE",
+    "fields": "id,name,mimeType,trashed,shared,ownedByMe,driveId,parents,owners,permissions,capabilities(canEdit)"
+  },
+  "bridge_session": "97ff1d51b9f89ada8a9bec9e6b81a14b",
+  "sequence": 22
+}

@@ -1,0 +1,23 @@
+{
+  "result": "PASS",
+  "scope": "retained actual live evidence; no new API calls",
+  "counts": {
+    "execute": {
+      "requests": 46,
+      "mutations": 2
+    },
+    "reconcile": {
+      "requests": 8,
+      "mutations": 0
+    }
+  },
+  "logical_create": 1,
+  "logical_update": 1,
+  "replay_writes": 0,
+  "workbook_creates": 1,
+  "setup_batches": 1,
+  "exact17cells_create_and_update": true,
+  "entire_exposed_structure_preserved": true,
+  "private_owner_only_before_after": true,
+  "separate_process_restart": true
+}

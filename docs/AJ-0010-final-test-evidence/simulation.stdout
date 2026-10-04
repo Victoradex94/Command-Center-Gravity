@@ -1,0 +1,106 @@
+{
+  "synthetic": true,
+  "live_integration_proof": false,
+  "scenarios": [
+    {
+      "id": "01",
+      "scenario": "Intake, authentic acknowledgement, FYI and duplicates",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 6,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "id": "02",
+      "scenario": "Capability routing and Victor's explicit worker override",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 3,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "id": "03",
+      "scenario": "Gates, fast path, exclusive writer and uncertain writes",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 8,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "id": "04",
+      "scenario": "Substantive start, stale execution and transition rejection",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 5,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "id": "05",
+      "scenario": "Full return, attribution and verification before Done",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 6,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "id": "06",
+      "scenario": "Partial/Blocked returns and authorized corrective attempts",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 3,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "id": "07",
+      "scenario": "Cancellation, pause, reassignment, revisions and late returns",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 7,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "id": "08",
+      "scenario": "Missing, failed and uncertain acknowledgement/return delivery",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 5,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "id": "09",
+      "scenario": "Attention escalation, parent reconciliation and permission limits",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 3,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "id": "AJ-0006",
+      "scenario": "Wrong path then explicitly approved corrected attempt (fixture only)",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 1,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "id": "review",
+      "scenario": "Independent review regression cases",
+      "expected": "PASS",
+      "observed": "PASS",
+      "tests": 11,
+      "failures": [],
+      "errors": []
+    }
+  ],
+  "tests": 58
+}

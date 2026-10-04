@@ -1,0 +1,34 @@
+{
+  "dispatcher/google_sheets.py": {
+    "bytes": 18604,
+    "sha256": "2838021e9a434f33d52e0d985bc691ab313c28d8002a4e0693abf1193a9a0a7d"
+  },
+  "dispatcher/sheets_tool_bridge.py": {
+    "bytes": 1783,
+    "sha256": "a400c9e3c7960f2b9f07cdb2b2d908c1578ada6ea48f3838da3a97b31ad30345"
+  },
+  "dispatcher/sheets_sandbox.py": {
+    "bytes": 5631,
+    "sha256": "8d1a266b8073470b062b9e93caa4c9c67f12a93c4b0118603187d4279052e921"
+  },
+  "tests/test_google_sheets.py": {
+    "bytes": 23379,
+    "sha256": "c2fba9cf33cc1be3372b924a30b3bf9b9ab2986a3dfc4212b08335d44aaa344a"
+  },
+  "tests/offline_suite.py": {
+    "bytes": 1536,
+    "sha256": "7cacf7d564987ef9cefb806c03788678e1664ff89e3577b79627c021a6e41d5c"
+  },
+  "dispatcher/sheets_writer.py": {
+    "bytes": 38174,
+    "sha256": "cf656f22d562d56d510956b1a33c6a08fd521d571479ea8a8e18c83b1f41c5f2"
+  },
+  "dispatcher/writer_journal.py": {
+    "bytes": 2665,
+    "sha256": "b371dcc0a1f5b86b1078be3ca623dc981b99febe39b2caa9005f9ab67d61e928"
+  },
+  "dispatcher/model.py": {
+    "bytes": 13149,
+    "sha256": "0bc0ce7721b67f54da491a4c2c41845ba250d83a291d7903ffc73579a5f2860e"
+  }
+}

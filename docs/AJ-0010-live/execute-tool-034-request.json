@@ -1,0 +1,113 @@
+{
+  "tool": "mcp__codex_apps__google_drive_batch_update_spreadsheet",
+  "arguments": {
+    "spreadsheet_id": "1yk-mBJf4RQhRC7M7QK0cHRMQhqHWStC-yQpbB2KxksE",
+    "requests": [
+      {
+        "updateCells": {
+          "range": {
+            "sheetId": 1505506183,
+            "startRowIndex": 1,
+            "endRowIndex": 2,
+            "startColumnIndex": 0,
+            "endColumnIndex": 17
+          },
+          "rows": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "AJ-0010"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": ""
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Synthetic ledger transport fixture"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Codex sandbox fixture"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Ready"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Normal"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "2026-10-04T11:59:08.299571+00:00"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "2026-10-04"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Synthetic standalone; no Master task"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "{\"brief\": \"Synthetic isolated sandbox only; no production job.\", \"codec\": \"vicadex.sandbox.source.v1\", \"source_keys\": [\"synthetic:AJ-0010:VA-LIVE-SHEETS-0010-01\"]}"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Synthetic update verified literally"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Synthetic update readback pending"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Synthetic update; not production AJ-0010 state"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "No"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Sandbox approved; not a new decision"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "2026-10-04T11:59:08.299571+00:00"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "SpecRevision=1; RunEpoch=1; Attempt=1; Nonce=VA-LIVE-SHEETS-0010-01; RecordRevision=2; ProtocolVersion=v1.1.0; CatalogueVersion=1.0.0"
+                  }
+                }
+              ]
+            }
+          ],
+          "fields": "userEnteredValue"
+        }
+      }
+    ]
+  },
+  "bridge_session": "97ff1d51b9f89ada8a9bec9e6b81a14b",
+  "sequence": 34
+}

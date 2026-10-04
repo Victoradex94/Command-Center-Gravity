@@ -1,0 +1,38 @@
+[
+  {
+    "name": "full_offline",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-m",
+      "tests.offline_suite"
+    ],
+    "exit": 0,
+    "stdout_sha256": "d045558205199d1e77f2abc37405fea98605db66c2f75f029c706ccb38cfd7ee",
+    "stderr_sha256": "dfc6e8abd79bfe9c6edceddd5558320650049496a6c317925db568db83ce549d"
+  },
+  {
+    "name": "retained_f1",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-c",
+      "import sys,runpy; from tests.offline_suite import reject_external; sys.addaudithook(reject_external); runpy.run_path(\"docs/history/AJ-0009-ir1-review/test_review_probes.py\",run_name=\"__main__\")"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "d1553d2c6647ad35a5ede11cf025c578a061d089ac4e7599b33146b6ee00602b"
+  },
+  {
+    "name": "retained_f2",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-c",
+      "import sys,runpy; from tests.offline_suite import reject_external; sys.addaudithook(reject_external); runpy.run_path(\"tests/probe_writer_f2.py\",run_name=\"__main__\")"
+    ],
+    "exit": 0,
+    "stdout_sha256": "5e3336828d39b26c49feefe95d7eecd3877e101b7a198d48bba76c64ed6d916c",
+    "stderr_sha256": "ad5d185910a2c484057478bf259b408d6fe40aab495ae35ef0235ff25d12b28c"
+  }
+]

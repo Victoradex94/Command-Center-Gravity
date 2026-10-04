@@ -31,7 +31,7 @@ def main():
     suite = unittest.defaultTestLoader.discover("tests")
     result = unittest.TextTestRunner(verbosity=2).run(suite)
     print(f"OFFLINE RESULT: tests={result.testsRun} failures={len(result.failures)} "
-          f"errors={len(result.errors)}; no production adapter is present", flush=True)
+          f"errors={len(result.errors)}; external I/O blocked; transport fixtures are simulated", flush=True)
     return 0 if result.wasSuccessful() else 1
 
 
