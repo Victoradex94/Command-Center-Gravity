@@ -1,0 +1,40 @@
+test_blocked_return_is_complete_but_not_accepted (tests.test_codex_worker.WorkerTests.test_blocked_return_is_complete_but_not_accepted) ... ok
+test_cancelled_reassigned_superseded_returns_fenced (tests.test_codex_worker.WorkerTests.test_cancelled_reassigned_superseded_returns_fenced) ... ok
+test_changed_payload_rejected (tests.test_codex_worker.WorkerTests.test_changed_payload_rejected) ... ok
+test_concurrent_wrappers_one_submit (tests.test_codex_worker.WorkerTests.test_concurrent_wrappers_one_submit) ... ok
+test_crash_after_acceptance_recovers (tests.test_codex_worker.WorkerTests.test_crash_after_acceptance_recovers) ... ok
+test_crash_after_receipt_is_idempotent (tests.test_codex_worker.WorkerTests.test_crash_after_receipt_is_idempotent) ... ok
+test_crash_before_submit_freezes (tests.test_codex_worker.WorkerTests.test_crash_before_submit_freezes) ... ok
+test_crash_stop_intent_and_lost_ack_fence_without_termination (tests.test_codex_worker.WorkerTests.test_crash_stop_intent_and_lost_ack_fence_without_termination) ... ok
+test_duplicate_restart_one_submission (tests.test_codex_worker.WorkerTests.test_duplicate_restart_one_submission) ... ok
+test_engine_admission_start_return_independent_review (tests.test_codex_worker.WorkerTests.test_engine_admission_start_return_independent_review) ... ok
+test_exact_handles_no_rebinding (tests.test_codex_worker.WorkerTests.test_exact_handles_no_rebinding) ... ok
+test_full_return_duplicate_and_conflict (tests.test_codex_worker.WorkerTests.test_full_return_duplicate_and_conflict) ... ok
+test_gates_explicit_worker_readiness_dependency (tests.test_codex_worker.WorkerTests.test_gates_explicit_worker_readiness_dependency) ... ok
+test_incomplete_conflicting_truncated_attribution (tests.test_codex_worker.WorkerTests.test_incomplete_conflicting_truncated_attribution) ... ok
+test_partial_blocked_returns_do_not_accept (tests.test_codex_worker.WorkerTests.test_partial_blocked_returns_do_not_accept) ... ok
+test_permission_stop_survives_restart (tests.test_codex_worker.WorkerTests.test_permission_stop_survives_restart) ... ok
+test_production_transport_rejected (tests.test_codex_worker.WorkerTests.test_production_transport_rejected) ... ok
+test_revoked_authority_cannot_adopt (tests.test_codex_worker.WorkerTests.test_revoked_authority_cannot_adopt) ... ok
+test_shared_budget_and_recurrence (tests.test_codex_worker.WorkerTests.test_shared_budget_and_recurrence) ... ok
+test_stale_authority_and_route_are_rejected (tests.test_codex_worker.WorkerTests.test_stale_authority_and_route_are_rejected) ... ok
+test_stop_ack_is_not_termination (tests.test_codex_worker.WorkerTests.test_stop_ack_is_not_termination) ... ok
+test_substantive_start_only_with_attributed_evidence (tests.test_codex_worker.WorkerTests.test_substantive_start_only_with_attributed_evidence) ... ok
+test_timeout_after_acceptance_reconciles (tests.test_codex_worker.WorkerTests.test_timeout_after_acceptance_reconciles) ... ok
+test_timeout_missing_handle_never_replaced (tests.test_codex_worker.WorkerTests.test_timeout_missing_handle_never_replaced) ... ok
+test_unsupported_stop_fences_return (tests.test_codex_worker.WorkerTests.test_unsupported_stop_fences_return) ... ok
+test_conflicting_lookup_retains_raw_evidence (tests.test_codex_worker_review.IndependentProbes.test_conflicting_lookup_retains_raw_evidence) ... ok
+test_execution_failure_observations_idempotent_and_recurrence_opens_circuit (tests.test_codex_worker_review.IndependentProbes.test_execution_failure_observations_idempotent_and_recurrence_opens_circuit) ... ok
+test_failed_return_enters_budget_once (tests.test_codex_worker_review.IndependentProbes.test_failed_return_enters_budget_once) ... ok
+test_false_string_envelope_authentication_rejected (tests.test_codex_worker_review.IndependentProbes.test_false_string_envelope_authentication_rejected) ... ok
+test_permission_failure_on_lookup_persists_stop (tests.test_codex_worker_review.IndependentProbes.test_permission_failure_on_lookup_persists_stop) ... ok
+test_permission_lookup_fences_return_after_restart (tests.test_codex_worker_review.IndependentProbes.test_permission_lookup_fences_return_after_restart) ... ok
+test_provider_failure_requires_changed_condition_recovery (tests.test_codex_worker_review.IndependentProbes.test_provider_failure_requires_changed_condition_recovery) ... ok
+test_terminal_cannot_regress_to_attributed_running (tests.test_codex_worker_review.IndependentProbes.test_terminal_cannot_regress_to_attributed_running) ... ok
+test_terminal_conflict_cannot_authorize_replacement (tests.test_codex_worker_review.IndependentProbes.test_terminal_conflict_cannot_authorize_replacement) ... ok
+test_terminal_return_blocks_later_running_observation (tests.test_codex_worker_review.IndependentProbes.test_terminal_return_blocks_later_running_observation) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.200s
+
+OK

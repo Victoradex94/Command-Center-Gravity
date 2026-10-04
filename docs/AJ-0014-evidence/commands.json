@@ -1,0 +1,93 @@
+{
+  "synthetic": true,
+  "commands": [
+    {
+      "name": "focused",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_codex_worker",
+        "tests.test_codex_worker_review",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "docs/AJ-0014-evidence/focused.stdout",
+      "stderr": "docs/AJ-0014-evidence/focused.stderr"
+    },
+    {
+      "name": "full-offline",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "tests.offline_suite"
+      ],
+      "exit_code": 0,
+      "stdout": "docs/AJ-0014-evidence/full-offline.stdout",
+      "stderr": "docs/AJ-0014-evidence/full-offline.stderr"
+    },
+    {
+      "name": "simulation",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "tests.simulate"
+      ],
+      "exit_code": 0,
+      "stdout": "docs/AJ-0014-evidence/simulation.stdout",
+      "stderr": "docs/AJ-0014-evidence/simulation.stderr"
+    },
+    {
+      "name": "compile",
+      "command": [
+        "python3",
+        "-m",
+        "compileall",
+        "-q",
+        "dispatcher",
+        "tests"
+      ],
+      "exit_code": 0,
+      "stdout": "docs/AJ-0014-evidence/compile.stdout",
+      "stderr": "docs/AJ-0014-evidence/compile.stderr"
+    },
+    {
+      "name": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "docs/AJ-0014-evidence/diff-check.stdout",
+      "stderr": "docs/AJ-0014-evidence/diff-check.stderr"
+    },
+    {
+      "name": "staging-empty",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code"
+      ],
+      "exit_code": 0,
+      "stdout": "docs/AJ-0014-evidence/staging-empty.stdout",
+      "stderr": "docs/AJ-0014-evidence/staging-empty.stderr"
+    },
+    {
+      "name": "baseline-unchanged",
+      "command": [
+        "git",
+        "diff",
+        "a845dd7dc36edaaa029f4d73147a3d4a4bc197b1",
+        "--exit-code"
+      ],
+      "exit_code": 0,
+      "stdout": "docs/AJ-0014-evidence/baseline-unchanged.stdout",
+      "stderr": "docs/AJ-0014-evidence/baseline-unchanged.stderr"
+    }
+  ]
+}

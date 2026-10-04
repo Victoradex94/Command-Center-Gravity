@@ -1,0 +1,52 @@
+test_false_string_envelope_authentication_rejected (test_independent_probes.IndependentProbes.test_false_string_envelope_authentication_rejected) ... FAIL
+test_permission_failure_on_lookup_persists_stop (test_independent_probes.IndependentProbes.test_permission_failure_on_lookup_persists_stop) ... FAIL
+test_provider_failure_requires_changed_condition_recovery (test_independent_probes.IndependentProbes.test_provider_failure_requires_changed_condition_recovery) ... FAIL
+test_terminal_cannot_regress_to_attributed_running (test_independent_probes.IndependentProbes.test_terminal_cannot_regress_to_attributed_running) ... FAIL
+test_terminal_conflict_cannot_authorize_replacement (test_independent_probes.IndependentProbes.test_terminal_conflict_cannot_authorize_replacement) ... FAIL
+
+======================================================================
+FAIL: test_false_string_envelope_authentication_rejected (test_independent_probes.IndependentProbes.test_false_string_envelope_authentication_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/docs/AJ-0014-review/test_independent_probes.py", line 38, in test_false_string_envelope_authentication_rejected
+    self.assertIsNone(h.adapter.normalize_return(h.request, receipt))
+AssertionError: ReturnEnvelope(lineage=Lineage(job_id='AJ-0014', spec_revision=1, run_epoch=1, attempt=1), nonce='VA-CODEX-ROUTE-0014-01', worker='Codex', worker_run='["synthetic-task-2cdb3ee8c191fae935418fcd","synthetic-turn-1"]', return_id='result-1', observed_at='2026-10-04T06:00:00+00:00', attempted='implemented core', output='synthetic://artifact/core-v1', evidence='synthetic inspected artifact', remaining='Not applicable', blockers='Not applicable', side_effects='Not applicable', recommendation='Recommendation only; not assigned', claimed_class=<ReturnClass.FULL: 'Full'>, authenticated='false', criteria_met=('engine', 'tests'), criteria_unmet=(), next_owner='Dẹkun', failed_gate='Not applicable', execution_state='Completed', control_point='2026-10-04T07:00:00+00:00; review control, not deadline') is not None
+
+======================================================================
+FAIL: test_permission_failure_on_lookup_persists_stop (test_independent_probes.IndependentProbes.test_permission_failure_on_lookup_persists_stop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/docs/AJ-0014-review/test_independent_probes.py", line 61, in test_permission_failure_on_lookup_persists_stop
+    self.assertTrue(incident.get('permission_stop'), 'lookup permission denial not persisted as stop')
+AssertionError: None is not true : lookup permission denial not persisted as stop
+
+======================================================================
+FAIL: test_provider_failure_requires_changed_condition_recovery (test_independent_probes.IndependentProbes.test_provider_failure_requires_changed_condition_recovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/docs/AJ-0014-review/test_independent_probes.py", line 31, in test_provider_failure_requires_changed_condition_recovery
+    with self.assertRaises(ProtocolError, msg='execution failure bypassed recovery budget'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProtocolError not raised : execution failure bypassed recovery budget
+
+======================================================================
+FAIL: test_terminal_cannot_regress_to_attributed_running (test_independent_probes.IndependentProbes.test_terminal_cannot_regress_to_attributed_running)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/docs/AJ-0014-review/test_independent_probes.py", line 20, in test_terminal_cannot_regress_to_attributed_running
+    self.assertFalse(run.authenticated and run.substantive,
+AssertionError: True is not false : terminal task/turn was re-exposed as substantive running
+
+======================================================================
+FAIL: test_terminal_conflict_cannot_authorize_replacement (test_independent_probes.IndependentProbes.test_terminal_conflict_cannot_authorize_replacement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/docs/AJ-0014-review/test_independent_probes.py", line 49, in test_terminal_conflict_cannot_authorize_replacement
+    with self.assertRaises(ProtocolError, msg='sticky terminal allowed replacement of observed running work'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProtocolError not raised : sticky terminal allowed replacement of observed running work
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.018s
+
+FAILED (failures=5)

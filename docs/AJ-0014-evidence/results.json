@@ -1,0 +1,61 @@
+{
+  "synthetic": true,
+  "job_id": "AJ-0014",
+  "spec_revision": 1,
+  "run_epoch": 1,
+  "attempt": 1,
+  "nonce": "VA-CODEX-ROUTE-0014-01",
+  "branch": "codex-worker-route-v1",
+  "base": "a845dd7dc36edaaa029f4d73147a3d4a4bc197b1",
+  "baseline_tests": 215,
+  "final_offline_tests": 250,
+  "primary_adapter_tests": 25,
+  "independent_regression_tests": 10,
+  "focused_tests": 35,
+  "simulation_tests": 58,
+  "failures": 0,
+  "errors": 0,
+  "checks": {
+    "compileall": "PASS",
+    "diff_check": "PASS",
+    "index_empty": true,
+    "tracked_baseline_unchanged": true
+  },
+  "review": {
+    "findings": 5,
+    "corrected": 5,
+    "remaining_blockers": 0,
+    "history": "docs/AJ-0014-review/review-history.md"
+  },
+  "test_history": [
+    "baseline offline: 215 PASS",
+    "initial adapter: 22 PASS",
+    "initial full offline: 237 PASS",
+    "independent initial 5 probes: 5 expected failures, R1-R4",
+    "intermediate owner suite: 1 test errored when new execution-failure accounting correctly counted timeout plus execution failure; fixture changed to completed terminal to isolate recovery recurrence",
+    "round 2: 7 independent PASS; full offline 244 PASS",
+    "R5 raw rejected receipt retention probe failed, corrected and regression retained",
+    "owner pre-final: focused 33 PASS, offline 248 PASS",
+    "final owner and reviewer offline: 250 PASS; focused 35 PASS; independent subset 10 PASS"
+  ],
+  "commands": "docs/AJ-0014-evidence/commands.json",
+  "repository_setup": [
+    "Initial checkout was work at dea8cdd, clean, main-only remote tracking.",
+    "git ls-remote --heads origin confirmed target branch absent and preserved feature SHA.",
+    "git fetch origin aj-0011-slack-adapter",
+    "git switch -c codex-worker-route-v1 a845dd7dc36edaaa029f4d73147a3d4a4bc197b1"
+  ],
+  "remaining_gates": [
+    "Root acceptance of actual candidate",
+    "Separate preservation approval before staging/commit/push"
+  ],
+  "limitations": [
+    "LOCAL/MOCK ONLY",
+    "Dedicated shared journal required across wrappers on one POSIX host",
+    "Trusted current authority callback and JSON-serializable fixture evidence",
+    "Ambiguous pre-submit intent may remain permanently frozen",
+    "No reset API for permission stops/circuits/terminal conflicts",
+    "No live Codex transport, distributed exactly-once guarantee or physical stop guarantee"
+  ],
+  "prohibited_actions_performed": false
+}

@@ -1,0 +1,14 @@
+test_conflicting_lookup_retains_raw_evidence (tests.test_codex_worker_review.IndependentProbes.test_conflicting_lookup_retains_raw_evidence) ... FAIL
+
+======================================================================
+FAIL: test_conflicting_lookup_retains_raw_evidence (tests.test_codex_worker_review.IndependentProbes.test_conflicting_lookup_retains_raw_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/tests/test_codex_worker_review.py", line 102, in test_conflicting_lookup_retains_raw_evidence
+    self.assertEqual(rejected.get('raw'), receipt)
+AssertionError: None != {'authenticated': True, 'evidence': 'synt[447 chars]dex'}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (failures=1)

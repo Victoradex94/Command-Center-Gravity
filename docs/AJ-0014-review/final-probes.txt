@@ -1,0 +1,15 @@
+test_conflicting_lookup_retains_raw_evidence (test_independent_probes.IndependentProbes.test_conflicting_lookup_retains_raw_evidence) ... ok
+test_execution_failure_observations_idempotent_and_recurrence_opens_circuit (test_independent_probes.IndependentProbes.test_execution_failure_observations_idempotent_and_recurrence_opens_circuit) ... ok
+test_failed_return_enters_budget_once (test_independent_probes.IndependentProbes.test_failed_return_enters_budget_once) ... ok
+test_false_string_envelope_authentication_rejected (test_independent_probes.IndependentProbes.test_false_string_envelope_authentication_rejected) ... ok
+test_permission_failure_on_lookup_persists_stop (test_independent_probes.IndependentProbes.test_permission_failure_on_lookup_persists_stop) ... ok
+test_permission_lookup_fences_return_after_restart (test_independent_probes.IndependentProbes.test_permission_lookup_fences_return_after_restart) ... ok
+test_provider_failure_requires_changed_condition_recovery (test_independent_probes.IndependentProbes.test_provider_failure_requires_changed_condition_recovery) ... ok
+test_terminal_cannot_regress_to_attributed_running (test_independent_probes.IndependentProbes.test_terminal_cannot_regress_to_attributed_running) ... ok
+test_terminal_conflict_cannot_authorize_replacement (test_independent_probes.IndependentProbes.test_terminal_conflict_cannot_authorize_replacement) ... ok
+test_terminal_return_blocks_later_running_observation (test_independent_probes.IndependentProbes.test_terminal_return_blocks_later_running_observation) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.053s
+
+OK
