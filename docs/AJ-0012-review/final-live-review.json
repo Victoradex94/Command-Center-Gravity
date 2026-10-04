@@ -1,0 +1,102 @@
+{
+  "disposition": "PASS bounded root-mediated live delivery evidence and separate-process restart with zero additional sends; ready for root acceptance before feature preservation",
+  "lineage": "AJ-0012 / SpecRevision 1 / RunEpoch 1 / Attempt 1 / Nonce VA-LIVE-SLACK-0012-01",
+  "route": "Approved agent-mediated user_message.send_message(channel=slack), trusted root executes; no unattended/direct executor credentials claimed",
+  "evidence_audit": {
+    "result": "PASS",
+    "journal_sha256": "bf3b00c1f119b6e4500efe89ebf071064fdc17b3af4b156a2de9e2a0721a1fbf",
+    "messages": [
+      {
+        "label": "activity",
+        "destination": "C0C7CRRJDLY",
+        "message_id": "slack:C0C7CRRJDLY::1791139471.957359",
+        "request_sha256": "230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f"
+      },
+      {
+        "label": "attention",
+        "destination": "C0C6N5H1QCU",
+        "message_id": "slack:C0C6N5H1QCU::1791139693.278939",
+        "request_sha256": "881d023b609325e9e4dd630a8ce8d7cdf6d976c94a92a7369ad9d3954b4272bf"
+      },
+      {
+        "label": "owner",
+        "destination": "D0C6J9ZKF4J",
+        "message_id": "slack:D0C6J9ZKF4J::1791139894.566079",
+        "request_sha256": "fcf4f1f06cd20c3816ac26f925e7737ede038a51252fe2dbb25c494bf83e5547"
+      }
+    ],
+    "reservation_count": 3,
+    "accepted_receipt_count": 3,
+    "destination_readback_count": 3,
+    "human_read": "unknown",
+    "separate_restart_send_calls": 0,
+    "separate_restart_new_requests": 0,
+    "reviewer_sends": 0,
+    "reviewer_journal_mutations": 0
+  },
+  "restart_review": {
+    "reconciliation_pid": 1463,
+    "restart_pid": 1472,
+    "same_actual_journal": true,
+    "send_callback_forbidden": true,
+    "boundary_deliver_all_three": "verified",
+    "prepare_next": null,
+    "new_requests": 0,
+    "send_calls": 0,
+    "byte_hash_unchanged": true,
+    "network_blocked": true,
+    "source": "Original real readbacks retained in durable journal, not fresh network read inside restart"
+  },
+  "fresh_post_restart_search": {
+    "retained_response_cross_checked": true,
+    "exact_three_matching_results": true,
+    "end_of_results": true,
+    "bot_sender_matches_all": true,
+    "owner_dm_participants_confirmed": true,
+    "permalinks": [
+      {
+        "label": "activity",
+        "message_ts": "1791139471.957359",
+        "permalink": "https://vicadexcommandcenter.slack.com/archives/C0C7CRRJDLY/p1791139471957359"
+      },
+      {
+        "label": "attention",
+        "message_ts": "1791139693.278939",
+        "permalink": "https://vicadexcommandcenter.slack.com/archives/C0C6N5H1QCU/p1791139693278939"
+      },
+      {
+        "label": "owner",
+        "message_ts": "1791139894.566079",
+        "permalink": "https://vicadexcommandcenter.slack.com/archives/D0C6J9ZKF4J/p1791139894566079"
+      }
+    ]
+  },
+  "validation": {
+    "full_offline_tests": 236,
+    "original_independent_probes": 8,
+    "controlled_probes": 6,
+    "bridge_probes": 7,
+    "failures": 0,
+    "errors": 0,
+    "latest_logs_inspected": true,
+    "no_suite_repetition_for_unchanged_code": true
+  },
+  "preservation": "Accepted tracked adapter/core/recovery files unchanged at a845dd7dc36edaaa029f4d73147a3d4a4bc197b1. No commit/push by reviewer.",
+  "limitations": [
+    "Actual live sends and raw response provenance supplied by trusted root; reviewer independently parsed originals and read-only SQLite, without issuing sends.",
+    "Restart verified local durable replay protection using retained actual receipts; separate fresh post-restart search confirms positive presence.",
+    "Exactly three matches and end-of-results are query-scoped. Search indexing/access/retention do not establish absolute global duplicate absence or an exactly-once Slack guarantee.",
+    "Root route authority and sender identity attestation are trusted; readbacks and fresh search corroborate expected bot.",
+    "Acceptance thread_id null establishes top-level provenance; rendered readbacks do not independently expose thread metadata.",
+    "Human reading remains unknown.",
+    "No ledger/production rollout/main merge/unattended service/successor or additional send authorised."
+  ],
+  "reviewer_external_sends": 0,
+  "reviewer_journal_mutations": 0,
+  "remaining_gate": "Root acceptance before feature-only commit/push; no additional test sends.",
+  "final_report_audit": {
+    "path": "docs/AJ-0012-final-live-result.md",
+    "sha256": "dcc4518c0f0fbd6006b7f7f5f662834ffaabf35ad3d51a375b594ff0f8526fcc",
+    "disposition": "PASS claims match audited evidence; accurate root-mediated provenance, retained-readback restart, fresh search, query-limited duplicate caveat, unknown human reading and pending root acceptance."
+  }
+}

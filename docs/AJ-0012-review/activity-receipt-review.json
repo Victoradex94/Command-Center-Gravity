@@ -1,0 +1,46 @@
+{
+  "disposition": "PASS first root-supplied accepted send and exact destination presence; second attention request durable reservation only",
+  "request_sha256": "881d023b609325e9e4dd630a8ce8d7cdf6d976c94a92a7369ad9d3954b4272bf",
+  "journal_sha256": "7ea068c8529ea44c9a048e413635cc1079655b29173f3b19f563f407fa7ec0fa",
+  "activity": {
+    "message_id": "slack:C0C7CRRJDLY::1791139471.957359",
+    "destination": "C0C7CRRJDLY",
+    "bot_sender_observed": "U0C6C7V10P5",
+    "exact_content": true,
+    "top_level_evidence": "Acceptance thread_id null; readback omits reply thread. Normalization explicitly derives thread from acceptance.",
+    "original_receipts_retained_exactly": true,
+    "accepted": true,
+    "destination_presence_verified": true,
+    "human_read": "unknown",
+    "permalink": "Not supplied in original response"
+  },
+  "attention": {
+    "state": "reserved",
+    "adapter_state": "sending",
+    "attempts": 1,
+    "destination": "C0C6N5H1QCU",
+    "thread": "",
+    "exact_original_content": true,
+    "receipt_evidence": false
+  },
+  "owner": {
+    "state": "pending",
+    "attempts": 0,
+    "unchanged": true
+  },
+  "counts": {
+    "durable_reservations": 2,
+    "actual_sends_reported_by_root": 1,
+    "accepted_receipts": 1,
+    "verified_destination_messages": 1
+  },
+  "original_binding_preserved": true,
+  "limitations": [
+    "Reviewer independently audited files and read-only SQLite; actual external tool execution/original provenance supplied by trusted root.",
+    "Workspace readback and acceptance sender use explicitly documented approved-route provenance; positive readback directly corroborates bot user ID.",
+    "Pagination does not invalidate positive presence but proves neither complete absence nor workspace-wide duplicate absence.",
+    "Second reservation is not a second accepted send; live restart not yet audited."
+  ],
+  "reviewer_slack_sends": 0,
+  "journal_mutations": 0
+}

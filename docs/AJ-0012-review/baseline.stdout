@@ -1,0 +1,2 @@
+OFFLINE GUARD: active; synthetic audit probe blocked
+OFFLINE RESULT: tests=215 failures=0 errors=0; external I/O blocked; transport fixtures are simulated

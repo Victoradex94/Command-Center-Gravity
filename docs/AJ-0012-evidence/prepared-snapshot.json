@@ -1,0 +1,66 @@
+{
+  "commands": {},
+  "controlled_slack": {
+    "binding": {
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity": {
+        "destination": "C0C7CRRJDLY",
+        "group": "AJ-0012",
+        "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+        "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+        "thread": ""
+      },
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention": {
+        "destination": "C0C6N5H1QCU",
+        "group": "AJ-0012",
+        "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+        "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+        "thread": ""
+      },
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner": {
+        "destination": "D0C6J9ZKF4J",
+        "group": "AJ-0012",
+        "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+        "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+        "thread": ""
+      }
+    },
+    "fingerprint": "be9def73448d3aed229ab458a1b54891645a4dccccb40a40f153d6eb3ce5a58c",
+    "operations": {}
+  },
+  "incidents": {},
+  "messages": {
+    "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity": {
+      "attempts": 0,
+      "destination": "C0C7CRRJDLY",
+      "group": "AJ-0012",
+      "human_read": "unknown",
+      "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+      "reference": "",
+      "state": "pending",
+      "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+      "thread": ""
+    },
+    "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention": {
+      "attempts": 0,
+      "destination": "C0C6N5H1QCU",
+      "group": "AJ-0012",
+      "human_read": "unknown",
+      "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+      "reference": "",
+      "state": "pending",
+      "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+      "thread": ""
+    },
+    "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner": {
+      "attempts": 0,
+      "destination": "D0C6J9ZKF4J",
+      "group": "AJ-0012",
+      "human_read": "unknown",
+      "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+      "reference": "",
+      "state": "pending",
+      "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+      "thread": ""
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Separate process opened the same prepared journal: 3 pending, 0 attempts, 0 transport reservations, 0 send callbacks installed or invoked. This is NOT live restart verification.

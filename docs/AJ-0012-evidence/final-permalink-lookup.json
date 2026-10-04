@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"results\":\"# Search Results for: \\n\\n## Messages (3 results)\\n### Result 1 of 3\\nChannel: DM (ID: D0C6J9ZKF4J)\\nParticipants: vicadtorex-dekun (ID: U0C6C7V10P5), Vic'Adex (ID: U0C6LCCH9QR)\\nFrom: vicadtorex-dekun (ID: U0C6C7V10P5)  [BOT]\\nTime: 2026-10-04 19:51:34 CET\\nMessage_ts: 1791139894.566079\\nPermalink: [link](https:\\/\\/vicadexcommandcenter.slack.com\\/archives\\/D0C6J9ZKF4J\\/p1791139894566079)\\nText: \\nSynthetic test \\u2014 no action required. AJ-0012\\/1\\/1\\/1\\/VA-LIVE-SLACK-0012-01\\/synthetic-transport\\/owner\\n\\n---\\n\\n### Result 2 of 3\\nChannel: #needs-my-attention (ID: C0C6N5H1QCU)\\nFrom: vicadtorex-dekun (ID: U0C6C7V10P5)  [BOT]\\nTime: 2026-10-04 19:48:13 CET\\nMessage_ts: 1791139693.278939\\nPermalink: [link](https:\\/\\/vicadexcommandcenter.slack.com\\/archives\\/C0C6N5H1QCU\\/p1791139693278939)\\nText: \\nSynthetic test \\u2014 no action required. AJ-0012\\/1\\/1\\/1\\/VA-LIVE-SLACK-0012-01\\/synthetic-transport\\/attention\\n\\n---\\n\\n### Result 3 of 3\\nChannel: #agent-activity (ID: C0C7CRRJDLY)\\nFrom: vicadtorex-dekun (ID: U0C6C7V10P5)  [BOT]\\nTime: 2026-10-04 19:44:31 CET\\nMessage_ts: 1791139471.957359\\nPermalink: [link](https:\\/\\/vicadexcommandcenter.slack.com\\/archives\\/C0C7CRRJDLY\\/p1791139471957359)\\nText: \\nSynthetic test \\u2014 no action required. AJ-0012\\/1\\/1\\/1\\/VA-LIVE-SLACK-0012-01\\/synthetic-transport\\/activity\\n\\n---\\n\\n\",\"pagination_info\":\"End of results - No more pages available.\\\\n\"}"
+    }
+  ],
+  "isError": false
+}

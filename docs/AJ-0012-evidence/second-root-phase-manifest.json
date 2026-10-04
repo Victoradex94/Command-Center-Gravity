@@ -1,0 +1,16 @@
+{
+  "phase": "activity accepted and destination verified; attention reserved only; owner pending",
+  "root_reported_provider_sends": 1,
+  "reserved_attempts": 2,
+  "human_read": "unknown",
+  "request_sha256": "881d023b609325e9e4dd630a8ce8d7cdf6d976c94a92a7369ad9d3954b4272bf",
+  "files": {
+    "docs/AJ-0012-evidence/prepared-journal.sqlite": "7ea068c8529ea44c9a048e413635cc1079655b29173f3b19f563f407fa7ec0fa",
+    "docs/AJ-0012-evidence/activity-root-receipt.json": "00b453acedf197e32eff42d0314aca230457a312ade2cbc9532585ed438d9d34",
+    "docs/AJ-0012-evidence/activity-root-readback.json": "c5bccb96616f242a023d0717b53cc1f4f3fa442009e7f7a764295e243ca64e6e",
+    "docs/AJ-0012-evidence/activity-normalization.json": "3c2cc6f8c9ea4738d9a95f504103d241fec98be9829181effe3b89f404e677dd",
+    "docs/AJ-0012-evidence/second-root-request.json": "6fbe0420fe9a477620e3bcc443167a3a1c39c0fceb8893867e6cc975cbaf2ad1",
+    "docs/AJ-0012-evidence/second-root-reservation-snapshot.json": "eb9347a3db72cccb59222b711d33ad5e3aee1fe9a9e9b776d66a762e0cc46b93",
+    "docs/AJ-0012-review/activity-receipt-review.json": "fa9cec44efab83eef228a0255fe4b2ecd484f7c2a68067fe851d46d2913c6ac7"
+  }
+}

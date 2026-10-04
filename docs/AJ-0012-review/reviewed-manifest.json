@@ -1,0 +1,19 @@
+{
+  "dispatcher/slack_controlled.py": "202583ed7f5e3af32ebd606fda773f86627d80b023740378f83b663139a3b026",
+  "tests/test_slack_controlled.py": "be7a10657262f16c402dc15116f19a9d0d1ad59c97886bfd690564c50cb7cfcc",
+  "dispatcher/slack.py": "401146db3859a56a87cb0b53054baad4d6111d77258523df437060c4f8f23eff",
+  "docs/AJ-0012-evidence/route-original-responses.json": "0b5c83bd397dbdf7a4d05fb6666b3957c13536f708b458c66c5b95ee52d77450",
+  "docs/AJ-0012-review/route-evidence.json": "2642972517498743a330b9e757af7b77e6641c556bc50a9686a2c25f93a0a4cb",
+  "docs/AJ-0012-review/probes.py": "4739946b98c6718abf4c3a6f01c571539be1305e9bf9340e2fc759251ef03e75",
+  "docs/AJ-0012-review/baseline.stdout": "1c79eee504828d75b721e4036d2b7d6f458ca0c310402e6d48d105f72f9d20aa",
+  "docs/AJ-0012-review/baseline.stderr": "aa121e1ba231994df824ba1d6a3317236abf25a3c5f5b62b44b3a0a4a4851a04",
+  "docs/AJ-0012-review/final-suite.stdout": "241f2bd30bfa7bb74b6f32989f0768a5839eed149ba1b9dd52a9105e7b3f5b76",
+  "docs/AJ-0012-review/final-suite.stderr": "874597390ce4e7cd39fde7662748d5b527b0e8b52542923177bd6fa5b7e10bf1",
+  "docs/AJ-0012-review/probes.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "docs/AJ-0012-review/probes.stderr": "6b8b7f8f8bc0b76f18cab8edfcfdb36db34ce15ddea0850c73068778a620b0f8",
+  "docs/AJ-0012-controlled-slack.md": "bd8fb18243d3f1a7459e95a396e2307a4d22b8adf118ed2bf3d388f22586be22",
+  "docs/AJ-0012-evidence/prepared-journal.sqlite": "5e379dcfab35cb6258b807d3e969dc602d3fcb4e0f3b61a68e3c66e6a088bf77",
+  "docs/AJ-0012-evidence/prepared-snapshot.json": "11611dfe34981711e4d0b430f96a0465a9389f3d40f4595fb99ba02f7837a5a8",
+  "docs/AJ-0012-evidence/prepared-restart.txt": "f6fa50241dc89a78490f55db0618157ea0704e364c34b4d1e69e34c77bf9e65b",
+  "docs/AJ-0012-review/review-summary.json": "c2d35fd27442cd282db4cec01ea4915a3f6dfcb3556f1ac384863be24e84762f"
+}

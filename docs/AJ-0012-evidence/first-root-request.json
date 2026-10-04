@@ -1,0 +1,12 @@
+{
+  "operation_id": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+  "attempt_id": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity/send-attempt-1",
+  "route": "user_message.send_message(channel=slack)",
+  "workspace": "T0C63317YDV",
+  "sender": "U0C6C7V10P5",
+  "destination": "C0C7CRRJDLY",
+  "thread": "",
+  "content": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+  "binding_sha256": "be9def73448d3aed229ab458a1b54891645a4dccccb40a40f153d6eb3ce5a58c",
+  "request_sha256": "230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f"
+}

@@ -1,0 +1,17 @@
+{
+  "docs/AJ-0012-review/final-live-review.json": "339a5dcd0184600ba88e36c99351972f254877751c42a56aa2c869d231ad2782",
+  "docs/AJ-0012-review/final-live-audit.py": "75830d052f3889f9223bce3d0e6372208568970b9f21d8aa1047906e84b19a9d",
+  "docs/AJ-0012-review/final-live-audit.stdout": "8cd46dfc4e8d5001dd21dffe590f0f9a4ab729c98d509ef485bc4c3fd4132264",
+  "docs/AJ-0012-review/final-live-audit.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "docs/AJ-0012-evidence/prepared-journal.sqlite": "bf3b00c1f119b6e4500efe89ebf071064fdc17b3af4b156a2de9e2a0721a1fbf",
+  "docs/AJ-0012-evidence/restart-verification.py": "58bbe5ddbb7b7b58c55823b871f7c3ff23b19bf126ada6f4ee9991630a228d23",
+  "docs/AJ-0012-evidence/restart-verification.json": "7e0c68da420c6854289b890799895a0e9b2a7e1b9d8d06973370116c3ba47425",
+  "docs/AJ-0012-evidence/final-permalink-lookup.json": "ebef1608b43d6a9b9be60eb79a2aaa9c8d08f8c3d2a38fe786f41fd075cb9cfa",
+  "docs/AJ-0012-evidence/activity-root-receipt.json": "00b453acedf197e32eff42d0314aca230457a312ade2cbc9532585ed438d9d34",
+  "docs/AJ-0012-evidence/activity-root-readback.json": "c5bccb96616f242a023d0717b53cc1f4f3fa442009e7f7a764295e243ca64e6e",
+  "docs/AJ-0012-evidence/attention-root-receipt.json": "eea7970ed1f4e410e5a5e90bb1a494570f3443b35a07959d898a7c4b3ed4dfa2",
+  "docs/AJ-0012-evidence/attention-root-readback.json": "5399c2cb4f84393e1a3aab1f670f50855720c530cf7a3b4b5722fd92eebac6d3",
+  "docs/AJ-0012-evidence/owner-root-receipt.json": "ab46aa350738cf2cb8627d94210390282fe705af591ae92b26cf0f617556d568",
+  "docs/AJ-0012-evidence/owner-root-readback.json": "31e9a9ecdc6ea9a327707332d96ae8d145e0e0745ac06fdd749dd7e75fa61b0e",
+  "docs/AJ-0012-final-live-result.md": "dcc4518c0f0fbd6006b7f7f5f662834ffaabf35ad3d51a375b594ff0f8526fcc"
+}

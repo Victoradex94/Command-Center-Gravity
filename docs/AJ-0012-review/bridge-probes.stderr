@@ -1,0 +1,12 @@
+test_review_adapter_only_crash_window_never_reissues (__main__.BridgeProbes.test_review_adapter_only_crash_window_never_reissues) ... ok
+test_review_contradictory_acceptance_cannot_certify_good_readback (__main__.BridgeProbes.test_review_contradictory_acceptance_cannot_certify_good_readback) ... ok
+test_review_corrupt_request_freezes_reconciliation (__main__.BridgeProbes.test_review_corrupt_request_freezes_reconciliation) ... ok
+test_review_exact_evidence_idempotent_and_retained (__main__.BridgeProbes.test_review_exact_evidence_idempotent_and_retained) ... ok
+test_review_permission_withdrawn_between_inspect_and_reserve (__main__.BridgeProbes.test_review_permission_withdrawn_between_inspect_and_reserve) ... ok
+test_review_receipt_reference_conflict_freezes (__main__.BridgeProbes.test_review_receipt_reference_conflict_freezes) ... ok
+test_review_returned_request_cannot_mutate_journal (__main__.BridgeProbes.test_review_returned_request_cannot_mutate_journal) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.012s
+
+OK

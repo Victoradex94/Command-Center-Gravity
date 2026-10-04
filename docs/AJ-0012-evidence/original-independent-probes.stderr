@@ -1,0 +1,13 @@
+test_already_blocked_pause_crash_reconciliation (__main__.ReviewProbes.test_already_blocked_pause_crash_reconciliation) ... ok
+test_cancel_crash_reconciliation (__main__.ReviewProbes.test_cancel_crash_reconciliation) ... ok
+test_crash_after_send_reconciles_original_without_replay (__main__.ReviewProbes.test_crash_after_send_reconciles_original_without_replay) ... ok
+test_crashed_correction_with_confirmed_absence_trips_circuit (__main__.ReviewProbes.test_crashed_correction_with_confirmed_absence_trips_circuit) ... ok
+test_escalation_has_actual_decision (__main__.ReviewProbes.test_escalation_has_actual_decision) ... ok
+test_pause_crash_reconciliation (__main__.ReviewProbes.test_pause_crash_reconciliation) ... ok
+test_unknown_lookup_never_sends (__main__.ReviewProbes.test_unknown_lookup_never_sends) ... ok
+test_wrong_destination_evidence_does_not_verify (__main__.ReviewProbes.test_wrong_destination_evidence_does_not_verify) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.015s
+
+OK

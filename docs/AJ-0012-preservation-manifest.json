@@ -1,0 +1,342 @@
+{
+  "job": "AJ-0012",
+  "lineage": {
+    "spec_revision": 1,
+    "run_epoch": 1,
+    "attempt": 1,
+    "nonce": "VA-LIVE-SLACK-0012-01"
+  },
+  "branch": "aj-0012-controlled-slack",
+  "base": "a845dd7dc36edaaa029f4d73147a3d4a4bc197b1",
+  "original_accepted_manifest": "docs/AJ-0012-final-manifest.json",
+  "original_accepted_manifest_sha256": "36375f966d2c79cb1a7a4214b81c95b489cf88180c81a5c45ac838fd5a021ca7",
+  "included_accepted_file_count": 80,
+  "added_manifest": "docs/AJ-0012-preservation-manifest.json",
+  "total_new_preserved_files": 81,
+  "included_accepted_files": {
+    "dispatcher/slack_controlled.py": "202583ed7f5e3af32ebd606fda773f86627d80b023740378f83b663139a3b026",
+    "dispatcher/slack_handoff.py": "80d53cf46ed2b310eaf9c62b4e8df268da9a51a9e076bc639aea95e9dfdfdd79",
+    "docs/AJ-0012-bridge-manifest.json": "bed545f5b53bc74ca159c15e75c6682073d995d33ac0b2a87746cce31be8795b",
+    "docs/AJ-0012-controlled-slack.md": "bd8fb18243d3f1a7459e95a396e2307a4d22b8adf118ed2bf3d388f22586be22",
+    "docs/AJ-0012-evidence/activity-normalization.json": "3c2cc6f8c9ea4738d9a95f504103d241fec98be9829181effe3b89f404e677dd",
+    "docs/AJ-0012-evidence/activity-root-readback.json": "c5bccb96616f242a023d0717b53cc1f4f3fa442009e7f7a764295e243ca64e6e",
+    "docs/AJ-0012-evidence/activity-root-receipt.json": "00b453acedf197e32eff42d0314aca230457a312ade2cbc9532585ed438d9d34",
+    "docs/AJ-0012-evidence/attention-normalization.json": "9aa37d5c93418b4ab147ab948a77adbf55935fd54c233211c5060423e609d0f3",
+    "docs/AJ-0012-evidence/attention-root-readback.json": "5399c2cb4f84393e1a3aab1f670f50855720c530cf7a3b4b5722fd92eebac6d3",
+    "docs/AJ-0012-evidence/attention-root-receipt.json": "eea7970ed1f4e410e5a5e90bb1a494570f3443b35a07959d898a7c4b3ed4dfa2",
+    "docs/AJ-0012-evidence/baseline.stderr": "11ac96d325d85b1e82bf989063b1ff9b006b396a467273b69c7260639a68a76c",
+    "docs/AJ-0012-evidence/baseline.stdout": "1c79eee504828d75b721e4036d2b7d6f458ca0c310402e6d48d105f72f9d20aa",
+    "docs/AJ-0012-evidence/bridge-suite.stderr": "a081b1a653f131d7cdaa8e3a0e276632dd5b5574759630408a68df919bb591ad",
+    "docs/AJ-0012-evidence/bridge-suite.stdout": "32093fcc453c1bbad253cbcdcd965bf989bff946562b27d5031f4fc00ac81930",
+    "docs/AJ-0012-evidence/final-controlled-probes.stderr": "a2945380ff5b8b9d423aeaca1cb4d2c432dea44b3cc94b33bc0a47a4b4969a43",
+    "docs/AJ-0012-evidence/final-controlled-probes.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/AJ-0012-evidence/final-handoff-probes.stderr": "1675d562cba8ecf080eb30df657ab67f947c6b373779bc03f069d2627d135bf6",
+    "docs/AJ-0012-evidence/final-handoff-probes.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/AJ-0012-evidence/final-original-probes.stderr": "900c013c2d7a0ca924bff56f85cc4a485f2df255accd1d14a4abfc6321e4dffa",
+    "docs/AJ-0012-evidence/final-original-probes.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/AJ-0012-evidence/final-permalink-lookup.json": "ebef1608b43d6a9b9be60eb79a2aaa9c8d08f8c3d2a38fe786f41fd075cb9cfa",
+    "docs/AJ-0012-evidence/final-reconciled-snapshot.json": "e901514d16812a81b6cd7852bd95062003ec07555ef90296363be540c1d7eb6f",
+    "docs/AJ-0012-evidence/final-suite.stderr": "32e22b1f64c9d4b8c74289eebda6b6fbb1bd0e99e248758bd396ab045337bc6a",
+    "docs/AJ-0012-evidence/final-suite.stdout": "32093fcc453c1bbad253cbcdcd965bf989bff946562b27d5031f4fc00ac81930",
+    "docs/AJ-0012-evidence/first-root-request.json": "888abb0092ce77475e5bf6608fce96a5d770fa2de5650acd5709cfb97eac8ab7",
+    "docs/AJ-0012-evidence/first-root-reservation-snapshot.json": "8d8d19eb0620b1fe9fb167847e10c32fd79ee0a0ac8e4578c159676751ba4b79",
+    "docs/AJ-0012-evidence/full.stderr": "c7e250185d3dd639f56e88237fce82f8b53655f78b452f531356c3300004d6ff",
+    "docs/AJ-0012-evidence/full.stdout": "241f2bd30bfa7bb74b6f32989f0768a5839eed149ba1b9dd52a9105e7b3f5b76",
+    "docs/AJ-0012-evidence/original-independent-probes.stderr": "727c02033aac301fd4b81bfceb4fb663359bd6fd2eba619e04326656cb008109",
+    "docs/AJ-0012-evidence/original-independent-probes.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/AJ-0012-evidence/owner-normalization.json": "5c48632ee1483a72c0c328d58f6607185d5bfb7921dc8bf0ebb8c8d4c3617cf3",
+    "docs/AJ-0012-evidence/owner-root-readback.json": "31e9a9ecdc6ea9a327707332d96ae8d145e0e0745ac06fdd749dd7e75fa61b0e",
+    "docs/AJ-0012-evidence/owner-root-receipt.json": "ab46aa350738cf2cb8627d94210390282fe705af591ae92b26cf0f617556d568",
+    "docs/AJ-0012-evidence/pre-handoff-journal.sqlite": "5e379dcfab35cb6258b807d3e969dc602d3fcb4e0f3b61a68e3c66e6a088bf77",
+    "docs/AJ-0012-evidence/pre-handoff-manifest.json": "f93dff13de502ff0a2b46480b749f7aebd4abaed740d3a2f0de34e004ca6ec54",
+    "docs/AJ-0012-evidence/prepared-journal.sqlite": "bf3b00c1f119b6e4500efe89ebf071064fdc17b3af4b156a2de9e2a0721a1fbf",
+    "docs/AJ-0012-evidence/prepared-restart.txt": "f6fa50241dc89a78490f55db0618157ea0704e364c34b4d1e69e34c77bf9e65b",
+    "docs/AJ-0012-evidence/prepared-snapshot.json": "11611dfe34981711e4d0b430f96a0465a9389f3d40f4595fb99ba02f7837a5a8",
+    "docs/AJ-0012-evidence/reconciliation-process.json": "6735e28ea9f7f23248aa01d35690161c213b850f71b04c8df253e5605d4dde7d",
+    "docs/AJ-0012-evidence/restart-verification.json": "7e0c68da420c6854289b890799895a0e9b2a7e1b9d8d06973370116c3ba47425",
+    "docs/AJ-0012-evidence/restart-verification.py": "58bbe5ddbb7b7b58c55823b871f7c3ff23b19bf126ada6f4ee9991630a228d23",
+    "docs/AJ-0012-evidence/restart-verification.stdout": "7e0c68da420c6854289b890799895a0e9b2a7e1b9d8d06973370116c3ba47425",
+    "docs/AJ-0012-evidence/second-root-phase-manifest.json": "c1c6e172c841321007e78b24eb2d617c96e0d9120f581bc535cfa94352b71718",
+    "docs/AJ-0012-evidence/second-root-request.json": "6fbe0420fe9a477620e3bcc443167a3a1c39c0fceb8893867e6cc975cbaf2ad1",
+    "docs/AJ-0012-evidence/second-root-reservation-snapshot.json": "eb9347a3db72cccb59222b711d33ad5e3aee1fe9a9e9b776d66a762e0cc46b93",
+    "docs/AJ-0012-evidence/third-root-phase-manifest.json": "821f166d735cb1be3cf69a3c79f7a0cde80b25573e1eab0bb23509275cce20f8",
+    "docs/AJ-0012-evidence/third-root-request.json": "3951ef7551678c9d0fdc160b4254fa7934e0f838cfe3148aff823e9f0ebf422e",
+    "docs/AJ-0012-evidence/third-root-reservation-snapshot.json": "ec6703fff1635dccf7e5f928b7294b3195c54d745f9f71bb18b090c57fcad31b",
+    "docs/AJ-0012-final-live-result.md": "dcc4518c0f0fbd6006b7f7f5f662834ffaabf35ad3d51a375b594ff0f8526fcc",
+    "docs/AJ-0012-final-manifest.json": "36375f966d2c79cb1a7a4214b81c95b489cf88180c81a5c45ac838fd5a021ca7",
+    "docs/AJ-0012-manifest.json": "f93dff13de502ff0a2b46480b749f7aebd4abaed740d3a2f0de34e004ca6ec54",
+    "docs/AJ-0012-review/activity-receipt-review.json": "fa9cec44efab83eef228a0255fe4b2ecd484f7c2a68067fe851d46d2913c6ac7",
+    "docs/AJ-0012-review/attention-receipt-review.json": "a04cf28c428428a8322b3628e96fc25b263d5b749c148a6fbfe3fcd2d9014a79",
+    "docs/AJ-0012-review/baseline.stderr": "aa121e1ba231994df824ba1d6a3317236abf25a3c5f5b62b44b3a0a4a4851a04",
+    "docs/AJ-0012-review/baseline.stdout": "1c79eee504828d75b721e4036d2b7d6f458ca0c310402e6d48d105f72f9d20aa",
+    "docs/AJ-0012-review/bridge-audit-reservation.py": "b5ae5af4584081cf96ed09c2f7102dd1c3d46bc10b8affb0771485fbc6253e13",
+    "docs/AJ-0012-review/bridge-audit-reservation.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/AJ-0012-review/bridge-audit-reservation.stdout": "fd2e68737a5367be4d9427f06e84fb699fe65e97fbb73bb07cff6f040a6eaa56",
+    "docs/AJ-0012-review/bridge-probes.py": "e31db490b18de59e234436b616aa9722b3531b02ccfdd1058461cfb773b26fcb",
+    "docs/AJ-0012-review/bridge-probes.stderr": "40141c761c36aa64a5559ea9ee19df0deccf773b126913722f0b2763c7bbef7b",
+    "docs/AJ-0012-review/bridge-probes.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/AJ-0012-review/bridge-review-summary.json": "d9f4479cc84443fc19f8f01c529a7274b53b7f23ab7e31f6e22c35febc2d76b1",
+    "docs/AJ-0012-review/bridge-reviewed-manifest.json": "00e4f610350108933848d140f6994f9060052cbe7d8d411805dfec7a2cc11af2",
+    "docs/AJ-0012-review/bridge-suite.stderr": "0ea2c481aa56e6b20db60d6a746bb457586bac1ca81fb6bfc3021a91fa70067c",
+    "docs/AJ-0012-review/bridge-suite.stdout": "32093fcc453c1bbad253cbcdcd965bf989bff946562b27d5031f4fc00ac81930",
+    "docs/AJ-0012-review/final-live-audit.py": "75830d052f3889f9223bce3d0e6372208568970b9f21d8aa1047906e84b19a9d",
+    "docs/AJ-0012-review/final-live-audit.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/AJ-0012-review/final-live-audit.stdout": "8cd46dfc4e8d5001dd21dffe590f0f9a4ab729c98d509ef485bc4c3fd4132264",
+    "docs/AJ-0012-review/final-live-review.json": "339a5dcd0184600ba88e36c99351972f254877751c42a56aa2c869d231ad2782",
+    "docs/AJ-0012-review/final-live-reviewed-manifest.json": "def9c478b7ea1c329d019980769b9bfefc22c43fa625f62053255dfd8ceb4773",
+    "docs/AJ-0012-review/final-suite.stderr": "874597390ce4e7cd39fde7662748d5b527b0e8b52542923177bd6fa5b7e10bf1",
+    "docs/AJ-0012-review/final-suite.stdout": "241f2bd30bfa7bb74b6f32989f0768a5839eed149ba1b9dd52a9105e7b3f5b76",
+    "docs/AJ-0012-review/probes.py": "4739946b98c6718abf4c3a6f01c571539be1305e9bf9340e2fc759251ef03e75",
+    "docs/AJ-0012-review/probes.stderr": "6b8b7f8f8bc0b76f18cab8edfcfdb36db34ce15ddea0850c73068778a620b0f8",
+    "docs/AJ-0012-review/probes.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/AJ-0012-review/review-summary.json": "c2d35fd27442cd282db4cec01ea4915a3f6dfcb3556f1ac384863be24e84762f",
+    "docs/AJ-0012-review/reviewed-manifest.json": "705171e4832656e76df2365a3804868c532bda1c4ee8711179ca4b413ba3af52",
+    "docs/AJ-0012-root-handoff.md": "47c7db122374f8aeda7e1e8a0d1ba067c8fd46c88494db1d499d48c6fb0c6ba5",
+    "tests/test_slack_controlled.py": "be7a10657262f16c402dc15116f19a9d0d1ad59c97886bfd690564c50cb7cfcc",
+    "tests/test_slack_handoff.py": "c258de29ee8143096cd9a93acea1f0636d601f015806c8d4541e027f83f3ac8d"
+  },
+  "excluded_local_only_files": {
+    "docs/AJ-0012-evidence/route-original-responses.json": {
+      "sha256": "0b5c83bd397dbdf7a4d05fb6666b3957c13536f708b458c66c5b95ee52d77450",
+      "reason": "Unnecessary personal profile/contact data in raw preflight evidence; original retained locally without staging or deletion."
+    },
+    "docs/AJ-0012-review/route-evidence.json": {
+      "sha256": "2642972517498743a330b9e757af7b77e6641c556bc50a9686a2c25f93a0a4cb",
+      "reason": "Unnecessary personal profile/contact data in raw preflight evidence; original retained locally without staging or deletion."
+    }
+  },
+  "scope_note": "Root accepted the two privacy-preserving exclusions. All other accepted bytes remain unchanged. Historical manifests include hash references to excluded files; these are not copies of private content. This preservation manifest records the intentional omissions. No journal or actual synthetic receipt excluded.",
+  "privacy_review": {
+    "publication_set_reviewed": true,
+    "personal_email_or_full_profile_matches": 0,
+    "credential_pattern_matches": 0,
+    "sqlite_logical_and_raw_content_reviewed": true,
+    "limits": "Targeted content review and pattern scan, not a universal secret-detection guarantee.",
+    "inherited_base_review": {
+      "disposition": "PASS within explicitly approved AJ-0012-only scope",
+      "authority": "Victor latest direct approval: Approve exclusions and manifest; delegation explicitly treats 41 inherited files as existing accepted ancestor history.",
+      "base": "a845dd7dc36edaaa029f4d73147a3d4a4bc197b1",
+      "remote_base_ref": "refs/heads/aj-0011-slack-adapter",
+      "remote_base_verified": true,
+      "inherited_file_count": 41,
+      "files": [
+        {
+          "file": "docs/AJ-0010-connection-evidence.json",
+          "sha256": "41a0b023713111ca7d27a0185f85db567f449615dcf7e68e45237236a1012c28",
+          "base_blob": "76cb5f86ef91acb363022f6c5b60327f286141cd"
+        },
+        {
+          "file": "docs/AJ-0010-google-sheets-sandbox.md",
+          "sha256": "d5fcd2026890f5ff267d711104a66420265c0d6c57300f9cacc446b3afe423af",
+          "base_blob": "cce40a14b8bf0abb3f86e5de1d956545a82ddbd6"
+        },
+        {
+          "file": "docs/AJ-0010-live-independent-review/review-summary.json",
+          "sha256": "daa85ba345d54f6b6d68b6793148f40c015ddaec0acfe9723a972eb48db41c60",
+          "base_blob": "02cea246e4960e94c68d514f2b3fa8711cd65d2d"
+        },
+        {
+          "file": "docs/AJ-0010-live-independent-review/verification-results.json",
+          "sha256": "a694a7e17b4c6a057930cf29e41e37c3237bf617a05b644778ff0f5a308ebe8d",
+          "base_blob": "5a4f92ff2e75073e1835a9858f8c5b1426f13353"
+        },
+        {
+          "file": "docs/AJ-0010-live-independent-review/verification.stdout",
+          "sha256": "a694a7e17b4c6a057930cf29e41e37c3237bf617a05b644778ff0f5a308ebe8d",
+          "base_blob": "5a4f92ff2e75073e1835a9858f8c5b1426f13353"
+        },
+        {
+          "file": "docs/AJ-0010-live/config.json",
+          "sha256": "284d99d0079868a5092ca44410e1f7de8bd7869cf99b17a3231a489026117689",
+          "base_blob": "abdad7a8d4e7d06399ba90313b982eee0729ba76"
+        },
+        {
+          "file": "docs/AJ-0010-live/created-read-0.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/created-read-1.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-after.json",
+          "sha256": "d35906e32c421be7eba8ddeaa4356160be6cc3ff432b61072469de05f1d2b427",
+          "base_blob": "1c509de6c1ea370c7b27c0d84526226a1310d6ef"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-before.json",
+          "sha256": "3d3de43c35809a22f5aec8e939a8326311e85a2c644e4b3bcea862eef6fe4a81",
+          "base_blob": "81deab00c528324353fdd60caaa5716d2f4e33e0"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-001-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-002-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-005-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-006-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-009-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-010-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-013-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-014-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-018-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-019-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-022-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-023-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-026-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-027-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-030-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-031-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-035-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-036-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-039-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-040-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-043-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/execute-tool-044-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/receipts.sqlite",
+          "sha256": "ad1b777a5c20359f465191001c0edce0a3f38a2cdf4159262d32290d15bf681f",
+          "base_blob": "42356d28bb2e6c5ec9bc199cd7e70f88e0857a2c"
+        },
+        {
+          "file": "docs/AJ-0010-live/reconcile-after.json",
+          "sha256": "d35906e32c421be7eba8ddeaa4356160be6cc3ff432b61072469de05f1d2b427",
+          "base_blob": "1c509de6c1ea370c7b27c0d84526226a1310d6ef"
+        },
+        {
+          "file": "docs/AJ-0010-live/reconcile-before.json",
+          "sha256": "d35906e32c421be7eba8ddeaa4356160be6cc3ff432b61072469de05f1d2b427",
+          "base_blob": "1c509de6c1ea370c7b27c0d84526226a1310d6ef"
+        },
+        {
+          "file": "docs/AJ-0010-live/reconcile-tool-001-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/reconcile-tool-002-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/reconcile-tool-005-response.json",
+          "sha256": "e2ea6821fb832c5b066c64bae2efeeb83a29c49683ad569502a50e44443c1ec3",
+          "base_blob": "432843230dd41f0d70ac72d66e340222717bc669"
+        },
+        {
+          "file": "docs/AJ-0010-live/reconcile-tool-006-response.json",
+          "sha256": "907ad916a09a1e0743e1b5e748afe664d8ba9d5a9286c71a7d645a103eb1d96a",
+          "base_blob": "532b9e0c085a48189092a1b151fcb95e80999d5c"
+        },
+        {
+          "file": "docs/AJ-0010-live/setup-verified-capture.json",
+          "sha256": "97d871e31eabf843efcd5323f3eea36b8817d3384841b9083b365c62640d8cde",
+          "base_blob": "62182d650737e69489318d98c6dc22a212755a60"
+        },
+        {
+          "file": "docs/history/AJ-0010-before-ack-correction/docs/AJ-0010-google-sheets-sandbox.md",
+          "sha256": "c42e0ee1419ef34a6d8511454fc9467418a2fe67ffcc5536923122621513d121",
+          "base_blob": "c99a869ec04cccbc6c59e2fdc26a45c18b5836da"
+        }
+      ],
+      "verification": "All tracked ancestor bytes match base blobs exactly. These 41 paths are excluded from the AJ-0012 changed-file set; no ancestor modifications or copied private data in the 80 additions.",
+      "exposure_scope": "Existing repository origin and push destination retained. No repository visibility/access/permission changes performed. No new personal profile/contact content introduced by AJ-0012.",
+      "local_retention": "The two excluded AJ-0012 raw evidence files remain byte-identical locally; exact paths will be locally ignored via .git/info/exclude to retain a clean working tree."
+    }
+  },
+  "remote_heads_before": {
+    "refs/heads/aj-0007-dispatcher-adapter-v1": "1057b5575f7cecb0da67295b6d0ea9308dc76c9c",
+    "refs/heads/aj-0009-sheets-writer-v1": "78928bc29fe920143891061307d5ed44308b4c97",
+    "refs/heads/aj-0010-google-sheets-sandbox": "9f40ada529481dcc91d81cf286c0df1c4ccbf5c8",
+    "refs/heads/aj-0011-slack-adapter": "a845dd7dc36edaaa029f4d73147a3d4a4bc197b1",
+    "refs/heads/codex-worker-route-v1": "d9cec7635bba5a214b990a479ff5ad4f68667126",
+    "refs/heads/main": "dea8cddc0bb6e7ab20479d8aca25121590749a3b"
+  }
+}

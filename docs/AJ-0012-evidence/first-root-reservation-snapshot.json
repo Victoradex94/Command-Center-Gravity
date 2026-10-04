@@ -1,0 +1,103 @@
+{
+  "commands": {},
+  "controlled_slack": {
+    "binding": {
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity": {
+        "destination": "C0C7CRRJDLY",
+        "group": "AJ-0012",
+        "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+        "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+        "thread": ""
+      },
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention": {
+        "destination": "C0C6N5H1QCU",
+        "group": "AJ-0012",
+        "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+        "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+        "thread": ""
+      },
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner": {
+        "destination": "D0C6J9ZKF4J",
+        "group": "AJ-0012",
+        "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+        "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+        "thread": ""
+      }
+    },
+    "fingerprint": "be9def73448d3aed229ab458a1b54891645a4dccccb40a40f153d6eb3ce5a58c",
+    "operations": {
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity": {
+        "calls": 1,
+        "request_sha256": "230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f",
+        "state": "root-request-reserved"
+      }
+    }
+  },
+  "incidents": {},
+  "messages": {
+    "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity": {
+      "attempted_correction": false,
+      "attempts": 1,
+      "correction": false,
+      "destination": "C0C7CRRJDLY",
+      "group": "AJ-0012",
+      "human_read": "unknown",
+      "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+      "reference": "",
+      "state": "sending",
+      "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+      "thread": ""
+    },
+    "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention": {
+      "attempts": 0,
+      "destination": "C0C6N5H1QCU",
+      "group": "AJ-0012",
+      "human_read": "unknown",
+      "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+      "reference": "",
+      "state": "pending",
+      "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+      "thread": ""
+    },
+    "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner": {
+      "attempts": 0,
+      "destination": "D0C6J9ZKF4J",
+      "group": "AJ-0012",
+      "human_read": "unknown",
+      "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+      "reference": "",
+      "state": "pending",
+      "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+      "thread": ""
+    }
+  },
+  "root_handoff": {
+    "authority": {
+      "approval": "Authenticated owner U0C6LCCH9QR reply 1791138961.408669 yes to all in thread 1791138860.804219; delegated root-mediated option 1 approval",
+      "identity_evidence": "Root delegation: existing verified user_message.send_message(channel=slack) route as bot U0C6C7V10P5 in T0C63317YDV; root executes and independently reads destinations",
+      "route": "user_message.send_message(channel=slack)",
+      "sender": "U0C6C7V10P5",
+      "workspace": "T0C63317YDV",
+      "zero_send_evidence": "Root continuation attests fresh original completed zero-send return; no duplicate execution or live synthetic send has occurred; root/executor exclusively own these three synthetic operations"
+    },
+    "evidence": [],
+    "requests": {
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity": {
+        "reference": "",
+        "request": {
+          "attempt_id": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity/send-attempt-1",
+          "binding_sha256": "be9def73448d3aed229ab458a1b54891645a4dccccb40a40f153d6eb3ce5a58c",
+          "content": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+          "destination": "C0C7CRRJDLY",
+          "operation_id": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+          "request_sha256": "230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f",
+          "route": "user_message.send_message(channel=slack)",
+          "sender": "U0C6C7V10P5",
+          "thread": "",
+          "workspace": "T0C63317YDV"
+        },
+        "state": "reserved"
+      }
+    }
+  }
+}

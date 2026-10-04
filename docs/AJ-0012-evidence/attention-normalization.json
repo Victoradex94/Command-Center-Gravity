@@ -1,0 +1,21 @@
+{
+  "request_sha256": "881d023b609325e9e4dd630a8ce8d7cdf6d976c94a92a7369ad9d3954b4272bf",
+  "readback_observed_at": "2026-10-04T18:48:14Z",
+  "acceptance": {
+    "workspace": "T0C63317YDV",
+    "sender": "U0C6C7V10P5",
+    "destination": "C0C6N5H1QCU",
+    "reference": "slack:C0C6N5H1QCU::1791139693.278939"
+  },
+  "observation": {
+    "workspace": "T0C63317YDV",
+    "sender": "U0C6C7V10P5",
+    "destination": "C0C6N5H1QCU",
+    "reference": "slack:C0C6N5H1QCU::1791139693.278939",
+    "thread": "",
+    "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention"
+  },
+  "provenance": "Original root-supplied tool responses; acceptance sender comes from approved root route attestation, corroborated by destination user_id; readback workspace comes from matching acceptance and approved route. Top level: original acceptance thread_id null; no reply thread in readback. Positive exact presence only; no inference of absence from pagination.",
+  "permalink": "Not supplied in original tool response.",
+  "ledger_scope": "Root reports unrelated AJ14 uncertain ledger update frozen; no ledger access or mutation by executor; authority for exact three AJ-0012 messages explicitly retained."
+}

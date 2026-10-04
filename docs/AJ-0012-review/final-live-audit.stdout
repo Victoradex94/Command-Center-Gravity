@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "journal_sha256": "bf3b00c1f119b6e4500efe89ebf071064fdc17b3af4b156a2de9e2a0721a1fbf",
+  "messages": [
+    {
+      "label": "activity",
+      "destination": "C0C7CRRJDLY",
+      "message_id": "slack:C0C7CRRJDLY::1791139471.957359",
+      "request_sha256": "230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f"
+    },
+    {
+      "label": "attention",
+      "destination": "C0C6N5H1QCU",
+      "message_id": "slack:C0C6N5H1QCU::1791139693.278939",
+      "request_sha256": "881d023b609325e9e4dd630a8ce8d7cdf6d976c94a92a7369ad9d3954b4272bf"
+    },
+    {
+      "label": "owner",
+      "destination": "D0C6J9ZKF4J",
+      "message_id": "slack:D0C6J9ZKF4J::1791139894.566079",
+      "request_sha256": "fcf4f1f06cd20c3816ac26f925e7737ede038a51252fe2dbb25c494bf83e5547"
+    }
+  ],
+  "reservation_count": 3,
+  "accepted_receipt_count": 3,
+  "destination_readback_count": 3,
+  "human_read": "unknown",
+  "separate_restart_send_calls": 0,
+  "separate_restart_new_requests": 0,
+  "reviewer_sends": 0,
+  "reviewer_journal_mutations": 0
+}

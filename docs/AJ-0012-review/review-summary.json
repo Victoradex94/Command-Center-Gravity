@@ -1,0 +1,58 @@
+{
+  "disposition": "PASS for safe blocked-route offline preparation; NOT accepted as completed live verification",
+  "branch": "aj-0012-controlled-slack",
+  "base": "a845dd7dc36edaaa029f4d73147a3d4a4bc197b1",
+  "accepted_tracked_files_unchanged": true,
+  "commands": [
+    {
+      "command": "python -m tests.offline_suite",
+      "baseline_count": 215,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "command": "PYTHONPATH=. python docs/AJ-0012-review/probes.py",
+      "independent_count": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "command": "python -m tests.offline_suite",
+      "candidate_count": 226,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "reviewed_safeguards": [
+    "Exactly three immutable synthetic intents, all top-level, labelled no action required; no job mutation.",
+    "Trusted callbacks gate expected workspace, bot sender, exact route and current permission. Callbacks remain unimplemented live.",
+    "SQLite reservations before callback; original response retention; independent exact destination/sender/content readback.",
+    "Accepted core and recovery code unchanged. Controlled job adds no-replay reservation even if recovery budget is used.",
+    "Timeout, restart without receipt, wrong key/destination/thread/text/reference, corrupt binding, missing read access all freeze; fixture receipt retention verified.",
+    "Separate process restart fixture in original candidate tests passes; no live restart was executed."
+  ],
+  "live_gate": "Expected workspace is established, but supported connector current-user profile is Victor U0C6LCCH9QR Bot No. Send schema does not establish or select dot bot U0C6C7V10P5. Historic dot bot posts are not current-route sender proof.",
+  "live_evidence": "No synthetic send invocation by reviewer. Available main-agent evidence contains read-only workspace/profile/activity calls, no synthetic accepted response or destination receipt. Candidate code installs no live tool callbacks. No basis to claim three sends, live destination verification, live restart or human read. Reviewer cannot prove workspace-wide absence from incomplete history.",
+  "limitations": [
+    "RouteIdentity.evidence and verify_identity are trusted coordinator ports, not cryptographic/provider authentication; mock callbacks do not prove live identity.",
+    "Observation normalization and complete_absence are trusted callback contracts; no real connector normalizer or authoritative full-history coverage is installed.",
+    "At-most-one callback is reserved durably; calls counter denotes reserved provider invocation, not proof Slack received a request.",
+    "Baseline journal is single coordinator/local durable file, not distributed or absolute exactly-once delivery.",
+    "Full historical Slack activity page is incomplete and cannot prove synthetic message absence."
+  ],
+  "blockers": [
+    "Independently establish same approved existing route sends as dot bot, without new credentials/permissions/routes.",
+    "Provide trustworthy original-tool-response normalization and sufficient destination coverage before bounded live execution.",
+    "Three original acceptance responses, actual destination readbacks, and separate-process live restart journal/counter evidence remain unavailable."
+  ],
+  "reviewer_external_mutations": 0,
+  "commits_pushes": 0,
+  "prepared_journal_audit": {
+    "read_only_sqlite_reopen": "passed",
+    "exact_three_pending": true,
+    "attempts": 0,
+    "transport_reservations": 0,
+    "snapshot_exact_match": true,
+    "live_restart": "not performed; only pre-dispatch durability and separate offline simulated three-send restart are proven"
+  }
+}

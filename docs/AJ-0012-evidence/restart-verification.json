@@ -1,0 +1,44 @@
+{
+  "reconciliation_pid": 1463,
+  "restart_pid": 1472,
+  "same_journal": "docs/AJ-0012-evidence/prepared-journal.sqlite",
+  "before_sha256": "bf3b00c1f119b6e4500efe89ebf071064fdc17b3af4b156a2de9e2a0721a1fbf",
+  "after_sha256": "bf3b00c1f119b6e4500efe89ebf071064fdc17b3af4b156a2de9e2a0721a1fbf",
+  "network_and_subprocess_blocked": true,
+  "root_reported_actual_provider_sends": 3,
+  "retained_actual_acceptances": 3,
+  "retained_actual_destination_readbacks": 3,
+  "restart_send_calls": 0,
+  "new_requests": 0,
+  "attempt_counters": [
+    1,
+    1,
+    1
+  ],
+  "logical_journal_unchanged": true,
+  "original_bindings_unchanged": true,
+  "checks": [
+    {
+      "operation": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+      "reference": "slack:C0C7CRRJDLY::1791139471.957359",
+      "destination": "C0C7CRRJDLY",
+      "attempts": 1,
+      "human_read": "unknown"
+    },
+    {
+      "operation": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+      "reference": "slack:C0C6N5H1QCU::1791139693.278939",
+      "destination": "C0C6N5H1QCU",
+      "attempts": 1,
+      "human_read": "unknown"
+    },
+    {
+      "operation": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+      "reference": "slack:D0C6J9ZKF4J::1791139894.566079",
+      "destination": "D0C6J9ZKF4J",
+      "attempts": 1,
+      "human_read": "unknown"
+    }
+  ],
+  "limitations": "Reconciles authentic root-supplied original destination readbacks retained in journal; no fresh Slack read or send during restart. Does not assert global duplicate absence from partial channel history or human reading."
+}

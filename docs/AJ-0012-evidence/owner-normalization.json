@@ -1,0 +1,20 @@
+{
+  "request_sha256": "fcf4f1f06cd20c3816ac26f925e7737ede038a51252fe2dbb25c494bf83e5547",
+  "readback_observed_at": "2026-10-04T18:51:35Z",
+  "acceptance": {
+    "workspace": "T0C63317YDV",
+    "sender": "U0C6C7V10P5",
+    "destination": "D0C6J9ZKF4J",
+    "reference": "slack:D0C6J9ZKF4J::1791139894.566079"
+  },
+  "observation": {
+    "workspace": "T0C63317YDV",
+    "sender": "U0C6C7V10P5",
+    "destination": "D0C6J9ZKF4J",
+    "reference": "slack:D0C6J9ZKF4J::1791139894.566079",
+    "thread": "",
+    "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner"
+  },
+  "provenance": "Root supplied original accepted response and actual DM readback. JSON decoding alone resolves slash and unicode escaping; strict full rendered record matching extracts actual destination, author, timestamp and text. Workspace comes from matching accepted route; thread empty from explicit accepted thread_id null, no reply marker in returned record. Positive presence only; paginated history is not exhaustive duplicate absence proof.",
+  "permalink": "Not supplied in original tool response."
+}

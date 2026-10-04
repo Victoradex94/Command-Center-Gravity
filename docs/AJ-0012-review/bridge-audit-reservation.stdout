@@ -1,0 +1,3 @@
+PASS: original binding intact; first activity request durably reserved; two untouched pending intents; no receipts/acceptance/presence/human-read claim.
+Request SHA256: 230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f
+Journal SHA256: a4913740c3cc3dce0191a31f18d9d828cafb58c11afdb674b9f031d10b535a50

@@ -1,0 +1,40 @@
+{
+  "disposition": "PASS offline root-mediated bridge and first durable activity reservation; no live receipt or restart claim",
+  "route": "user_message.send_message(channel=slack)",
+  "trust_boundary": "Owner/root attestation supplied via authenticated coordination is authority. Root is trusted transport executor and original-response normalization/provenance authority. This module neither calls Slack nor independently proves sender identity.",
+  "authorization_context": "Continuation cites owner approval thread 1791138860.804219, reply 1791138961.408669 yes to all; same AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01 intents. Reviewer relies on delegated approval/attestation and did not send any messages.",
+  "tests": {
+    "offline_suite": 236,
+    "independent_bridge_probes": 7,
+    "failures": 0,
+    "errors": 0
+  },
+  "safeguards": [
+    "Accepted adapter sending/attempt reservation commits before handoff reservation and intentional BaseException yield.",
+    "No request replay after restart, uncertainty, or adapter-only crash window.",
+    "Exact immutable destinations, content, request and binding hashes; sequential advancement only after verified previous receipt.",
+    "Root original acceptance and destination readback retained; acceptance alone cannot advance to next request.",
+    "Readback can settle lost acceptance; contradictory acceptance or reference mismatch freezes.",
+    "Permission withdrawal blocks new requests but permits read-only receipt reconciliation.",
+    "Human reading remains unknown; reserved calls do not establish Slack provider calls."
+  ],
+  "scope_limits": [
+    "Single trusted coordinator; no security boundary against forged coordinator callbacks or journal access.",
+    "Initial absence rests on trusted exclusive zero-send attestation for exact pristine intents; does not infer absence from incomplete Slack history.",
+    "No live acceptance, destination receipt or live restart audited yet."
+  ],
+  "first_reservation_audit": {
+    "result": "PASS read-only SQLite audit",
+    "original_binding_preserved": true,
+    "activity_state": "sending",
+    "activity_attempts": 1,
+    "handoff_state": "reserved",
+    "transport_state": "root-request-reserved",
+    "other_intents": "two original pending, zero attempts",
+    "receipt_evidence": [],
+    "request_sha256": "230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f",
+    "journal_sha256": "a4913740c3cc3dce0191a31f18d9d828cafb58c11afdb674b9f031d10b535a50"
+  },
+  "reviewer_slack_sends": 0,
+  "commits_pushes": 0
+}

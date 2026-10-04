@@ -1,0 +1,315 @@
+{
+  "commands": {},
+  "controlled_slack": {
+    "binding": {
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity": {
+        "destination": "C0C7CRRJDLY",
+        "group": "AJ-0012",
+        "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+        "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+        "thread": ""
+      },
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention": {
+        "destination": "C0C6N5H1QCU",
+        "group": "AJ-0012",
+        "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+        "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+        "thread": ""
+      },
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner": {
+        "destination": "D0C6J9ZKF4J",
+        "group": "AJ-0012",
+        "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+        "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+        "thread": ""
+      }
+    },
+    "fingerprint": "be9def73448d3aed229ab458a1b54891645a4dccccb40a40f153d6eb3ce5a58c",
+    "operations": {
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity": {
+        "calls": 1,
+        "reference": "slack:C0C7CRRJDLY::1791139471.957359",
+        "request_sha256": "230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f",
+        "state": "verified"
+      },
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention": {
+        "calls": 1,
+        "reference": "slack:C0C6N5H1QCU::1791139693.278939",
+        "request_sha256": "881d023b609325e9e4dd630a8ce8d7cdf6d976c94a92a7369ad9d3954b4272bf",
+        "state": "verified"
+      },
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner": {
+        "calls": 1,
+        "reference": "slack:D0C6J9ZKF4J::1791139894.566079",
+        "request_sha256": "fcf4f1f06cd20c3816ac26f925e7737ede038a51252fe2dbb25c494bf83e5547",
+        "state": "verified"
+      }
+    }
+  },
+  "incidents": {},
+  "messages": {
+    "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity": {
+      "attempted_correction": false,
+      "attempts": 1,
+      "correction": false,
+      "destination": "C0C7CRRJDLY",
+      "group": "AJ-0012",
+      "human_read": "unknown",
+      "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+      "reference": "slack:C0C7CRRJDLY::1791139471.957359",
+      "state": "verified",
+      "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+      "thread": ""
+    },
+    "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention": {
+      "attempted_correction": false,
+      "attempts": 1,
+      "correction": false,
+      "destination": "C0C6N5H1QCU",
+      "group": "AJ-0012",
+      "human_read": "unknown",
+      "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+      "reference": "slack:C0C6N5H1QCU::1791139693.278939",
+      "state": "verified",
+      "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+      "thread": ""
+    },
+    "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner": {
+      "attempted_correction": false,
+      "attempts": 1,
+      "correction": false,
+      "destination": "D0C6J9ZKF4J",
+      "group": "AJ-0012",
+      "human_read": "unknown",
+      "key": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+      "reference": "slack:D0C6J9ZKF4J::1791139894.566079",
+      "state": "verified",
+      "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+      "thread": ""
+    }
+  },
+  "root_handoff": {
+    "authority": {
+      "approval": "Authenticated owner U0C6LCCH9QR reply 1791138961.408669 yes to all in thread 1791138860.804219; delegated root-mediated option 1 approval",
+      "identity_evidence": "Root delegation: existing verified user_message.send_message(channel=slack) route as bot U0C6C7V10P5 in T0C63317YDV; root executes and independently reads destinations",
+      "route": "user_message.send_message(channel=slack)",
+      "sender": "U0C6C7V10P5",
+      "workspace": "T0C63317YDV",
+      "zero_send_evidence": "Root continuation attests fresh original completed zero-send return; no duplicate execution or live synthetic send has occurred; root/executor exclusively own these three synthetic operations"
+    },
+    "evidence": [
+      {
+        "acceptance": {
+          "destination": "C0C7CRRJDLY",
+          "reference": "slack:C0C7CRRJDLY::1791139471.957359",
+          "sender": "U0C6C7V10P5",
+          "workspace": "T0C63317YDV"
+        },
+        "observation": {
+          "destination": "C0C7CRRJDLY",
+          "reference": "slack:C0C7CRRJDLY::1791139471.957359",
+          "sender": "U0C6C7V10P5",
+          "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+          "thread": "",
+          "workspace": "T0C63317YDV"
+        },
+        "raw_readback": {
+          "content": [
+            {
+              "text": "{\"channel_id\":\"C0C7CRRJDLY\",\"channel_name\":\"agent-activity\",\"messages\":[{\"message_ts\":\"1791139471.957359\",\"user_id\":\"U0C6C7V10P5\",\"user_name\":\"vicadtorex-dekun\",\"bot_id\":\"B0C7CR9QNSU\",\"text\":\"Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity\",\"text_truncated\":false}],\"next_cursor\":\"bmV4dF90czoxNzkxMTM5NDI4ODIxMDE5\"}",
+              "type": "text"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "channel_id": "C0C7CRRJDLY",
+            "channel_name": "agent-activity",
+            "messages": [
+              {
+                "bot_id": "B0C7CR9QNSU",
+                "message_ts": "1791139471.957359",
+                "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+                "text_truncated": false,
+                "user_id": "U0C6C7V10P5",
+                "user_name": "vicadtorex-dekun"
+              }
+            ],
+            "next_cursor": "bmV4dF90czoxNzkxMTM5NDI4ODIxMDE5"
+          }
+        },
+        "raw_response": {
+          "content": [
+            {
+              "text": "{\"channel\":\"slack\",\"provider\":\"slack\",\"status\":\"accepted\",\"workspace_id\":\"T0C63317YDV\",\"destination\":\"C0C7CRRJDLY\",\"thread_id\":null,\"message_id\":\"slack:C0C7CRRJDLY::1791139471.957359\"}",
+              "type": "text"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "channel": "slack",
+            "destination": "C0C7CRRJDLY",
+            "message_id": "slack:C0C7CRRJDLY::1791139471.957359",
+            "provider": "slack",
+            "status": "accepted",
+            "thread_id": null,
+            "workspace_id": "T0C63317YDV"
+          }
+        },
+        "request_sha256": "230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f"
+      },
+      {
+        "acceptance": {
+          "destination": "C0C6N5H1QCU",
+          "reference": "slack:C0C6N5H1QCU::1791139693.278939",
+          "sender": "U0C6C7V10P5",
+          "workspace": "T0C63317YDV"
+        },
+        "observation": {
+          "destination": "C0C6N5H1QCU",
+          "reference": "slack:C0C6N5H1QCU::1791139693.278939",
+          "sender": "U0C6C7V10P5",
+          "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+          "thread": "",
+          "workspace": "T0C63317YDV"
+        },
+        "raw_readback": {
+          "content": [
+            {
+              "text": "{\"channel_id\":\"C0C6N5H1QCU\",\"channel_name\":\"needs-my-attention\",\"messages\":[{\"message_ts\":\"1791139693.278939\",\"user_id\":\"U0C6C7V10P5\",\"user_name\":\"vicadtorex-dekun\",\"bot_id\":\"B0C7CR9QNSU\",\"text\":\"Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention\",\"text_truncated\":false}],\"next_cursor\":\"bmV4dF90czoxNzkxMTM5NjE5ODY4NDU5\"}",
+              "type": "text"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "channel_id": "C0C6N5H1QCU",
+            "channel_name": "needs-my-attention",
+            "messages": [
+              {
+                "bot_id": "B0C7CR9QNSU",
+                "message_ts": "1791139693.278939",
+                "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+                "text_truncated": false,
+                "user_id": "U0C6C7V10P5",
+                "user_name": "vicadtorex-dekun"
+              }
+            ],
+            "next_cursor": "bmV4dF90czoxNzkxMTM5NjE5ODY4NDU5"
+          }
+        },
+        "raw_response": {
+          "content": [
+            {
+              "text": "{\"channel\":\"slack\",\"provider\":\"slack\",\"status\":\"accepted\",\"workspace_id\":\"T0C63317YDV\",\"destination\":\"C0C6N5H1QCU\",\"thread_id\":null,\"message_id\":\"slack:C0C6N5H1QCU::1791139693.278939\"}",
+              "type": "text"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "channel": "slack",
+            "destination": "C0C6N5H1QCU",
+            "message_id": "slack:C0C6N5H1QCU::1791139693.278939",
+            "provider": "slack",
+            "status": "accepted",
+            "thread_id": null,
+            "workspace_id": "T0C63317YDV"
+          }
+        },
+        "request_sha256": "881d023b609325e9e4dd630a8ce8d7cdf6d976c94a92a7369ad9d3954b4272bf"
+      },
+      {
+        "acceptance": {
+          "destination": "D0C6J9ZKF4J",
+          "reference": "slack:D0C6J9ZKF4J::1791139894.566079",
+          "sender": "U0C6C7V10P5",
+          "workspace": "T0C63317YDV"
+        },
+        "observation": {
+          "destination": "D0C6J9ZKF4J",
+          "reference": "slack:D0C6J9ZKF4J::1791139894.566079",
+          "sender": "U0C6C7V10P5",
+          "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+          "thread": "",
+          "workspace": "T0C63317YDV"
+        },
+        "raw_readback": {
+          "content": [
+            {
+              "text": "{\"messages\":\"Channel: DM (D0C6J9ZKF4J)\\n\\n=== Message from vicadtorex-dekun &lt;botuser-T0C63317YDV-B0C7CR9QNSU@slack-bots.com&gt; (U0C6C7V10P5) at 2026-10-04 19:51:34 CET === \\nMessage TS: 1791139894.566079\\nSynthetic test \\u2014 no action required. AJ-0012\\/1\\/1\\/1\\/VA-LIVE-SLACK-0012-01\\/synthetic-transport\\/owner\",\"pagination_info\":\"There are more messages available. To view the next page, use cursor: `bmV4dF90czoxNzkxMTM5NjM0MTU3MjA5`\\n\"}",
+              "type": "text"
+            }
+          ],
+          "isError": false
+        },
+        "raw_response": {
+          "content": [
+            {
+              "text": "{\"channel\":\"slack\",\"provider\":\"slack\",\"status\":\"accepted\",\"workspace_id\":\"T0C63317YDV\",\"destination\":\"D0C6J9ZKF4J\",\"thread_id\":null,\"message_id\":\"slack:D0C6J9ZKF4J::1791139894.566079\"}",
+              "type": "text"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "channel": "slack",
+            "destination": "D0C6J9ZKF4J",
+            "message_id": "slack:D0C6J9ZKF4J::1791139894.566079",
+            "provider": "slack",
+            "status": "accepted",
+            "thread_id": null,
+            "workspace_id": "T0C63317YDV"
+          }
+        },
+        "request_sha256": "fcf4f1f06cd20c3816ac26f925e7737ede038a51252fe2dbb25c494bf83e5547"
+      }
+    ],
+    "requests": {
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity": {
+        "reference": "slack:C0C7CRRJDLY::1791139471.957359",
+        "request": {
+          "attempt_id": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity/send-attempt-1",
+          "binding_sha256": "be9def73448d3aed229ab458a1b54891645a4dccccb40a40f153d6eb3ce5a58c",
+          "content": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+          "destination": "C0C7CRRJDLY",
+          "operation_id": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity",
+          "request_sha256": "230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f",
+          "route": "user_message.send_message(channel=slack)",
+          "sender": "U0C6C7V10P5",
+          "thread": "",
+          "workspace": "T0C63317YDV"
+        },
+        "state": "verified"
+      },
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention": {
+        "reference": "slack:C0C6N5H1QCU::1791139693.278939",
+        "request": {
+          "attempt_id": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention/send-attempt-1",
+          "binding_sha256": "be9def73448d3aed229ab458a1b54891645a4dccccb40a40f153d6eb3ce5a58c",
+          "content": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+          "destination": "C0C6N5H1QCU",
+          "operation_id": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/attention",
+          "request_sha256": "881d023b609325e9e4dd630a8ce8d7cdf6d976c94a92a7369ad9d3954b4272bf",
+          "route": "user_message.send_message(channel=slack)",
+          "sender": "U0C6C7V10P5",
+          "thread": "",
+          "workspace": "T0C63317YDV"
+        },
+        "state": "verified"
+      },
+      "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner": {
+        "reference": "slack:D0C6J9ZKF4J::1791139894.566079",
+        "request": {
+          "attempt_id": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner/send-attempt-1",
+          "binding_sha256": "be9def73448d3aed229ab458a1b54891645a4dccccb40a40f153d6eb3ce5a58c",
+          "content": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+          "destination": "D0C6J9ZKF4J",
+          "operation_id": "AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/owner",
+          "request_sha256": "fcf4f1f06cd20c3816ac26f925e7737ede038a51252fe2dbb25c494bf83e5547",
+          "route": "user_message.send_message(channel=slack)",
+          "sender": "U0C6C7V10P5",
+          "thread": "",
+          "workspace": "T0C63317YDV"
+        },
+        "state": "verified"
+      }
+    }
+  }
+}

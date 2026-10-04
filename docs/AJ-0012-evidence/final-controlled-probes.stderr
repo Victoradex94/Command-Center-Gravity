@@ -1,0 +1,11 @@
+test_review_all_wrong_readback_dimensions_freeze (__main__.Probes.test_review_all_wrong_readback_dimensions_freeze) ... ok
+test_review_corrupt_binding_freezes (__main__.Probes.test_review_corrupt_binding_freezes) ... ok
+test_review_missing_receipt_after_restart_no_send (__main__.Probes.test_review_missing_receipt_after_restart_no_send) ... ok
+test_review_original_receipts_retained (__main__.Probes.test_review_original_receipts_retained) ... ok
+test_review_read_failure_before_attempt_never_sends (__main__.Probes.test_review_read_failure_before_attempt_never_sends) ... ok
+test_review_timeout_then_recovery_no_repeat (__main__.Probes.test_review_timeout_then_recovery_no_repeat) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.012s
+
+OK

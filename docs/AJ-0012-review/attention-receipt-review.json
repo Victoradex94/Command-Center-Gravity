@@ -1,0 +1,37 @@
+{
+  "disposition": "PASS attention accepted receipt/exact positive destination readback and third original owner reservation",
+  "attention_message_id": "slack:C0C6N5H1QCU::1791139693.278939",
+  "attention_destination": "C0C6N5H1QCU",
+  "bot_sender_observed": "U0C6C7V10P5",
+  "exact_original_content": true,
+  "top_level_evidence": "Original acceptance thread_id null, matching normalized empty thread; destination readback omits reply thread.",
+  "activity_and_attention_original_evidence_exactly_retained": true,
+  "owner": {
+    "state": "reserved",
+    "adapter_state": "sending",
+    "attempts": 1,
+    "destination": "D0C6J9ZKF4J",
+    "thread": "",
+    "request_sha256": "fcf4f1f06cd20c3816ac26f925e7737ede038a51252fe2dbb25c494bf83e5547",
+    "accepted_receipt": false
+  },
+  "original_binding_preserved": true,
+  "sequential_gate": "Both preceding operations verified before third reservation in current state; reviewed implementation enforces this order.",
+  "counts": {
+    "durable_reservations": 3,
+    "actual_sends_reported_by_root": 2,
+    "accepted_receipts": 2,
+    "verified_destination_messages": 2
+  },
+  "journal_sha256": "2c739b6c4c352642360cc5f4c2e914d5a38f3041b21998c087c5e6be0409f6f9",
+  "human_read": "unknown",
+  "limitations": [
+    "Root supplied originals/provenance; reviewer inspected retained files and SQLite without an external read.",
+    "Positive presence valid despite pagination; complete absence or global duplicate absence not established.",
+    "Workspace/readback threading normalization uses documented matching acceptance and approved-route provenance.",
+    "No third receipt or live restart claim.",
+    "Unrelated AJ14 ledger freeze remains outside scope; root explicitly retained exact three-message authority; reviewer made no ledger call."
+  ],
+  "reviewer_sends": 0,
+  "journal_mutations": 0
+}

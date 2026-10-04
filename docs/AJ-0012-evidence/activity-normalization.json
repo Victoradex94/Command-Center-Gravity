@@ -1,0 +1,20 @@
+{
+  "request_sha256": "230a7797b0b98dcbc2b193256f69baf321a1b4adbffb697edb5f4f755cad990f",
+  "readback_observed_at": "2026-10-04T18:44:32Z",
+  "acceptance": {
+    "workspace": "T0C63317YDV",
+    "sender": "U0C6C7V10P5",
+    "destination": "C0C7CRRJDLY",
+    "reference": "slack:C0C7CRRJDLY::1791139471.957359"
+  },
+  "observation": {
+    "workspace": "T0C63317YDV",
+    "sender": "U0C6C7V10P5",
+    "destination": "C0C7CRRJDLY",
+    "reference": "slack:C0C7CRRJDLY::1791139471.957359",
+    "thread": "",
+    "text": "Synthetic test — no action required. AJ-0012/1/1/1/VA-LIVE-SLACK-0012-01/synthetic-transport/activity"
+  },
+  "provenance": "Original root-supplied tool responses; acceptance sender comes from approved root route attestation, corroborated by destination user_id; readback workspace comes from matching acceptance and approved route. Top level: original acceptance thread_id null; no reply thread in readback. Pagination does not undermine this positive exact presence; no absence claimed.",
+  "permalink": "Not supplied in original tool response."
+}
