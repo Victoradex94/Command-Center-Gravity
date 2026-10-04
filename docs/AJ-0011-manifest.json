@@ -1,0 +1,142 @@
+{
+  "job": "AJ-0011",
+  "SpecRevision": 1,
+  "RunEpoch": 1,
+  "Attempt": 1,
+  "Nonce": "VA-SLACK-0011-01",
+  "branch": "aj-0011-slack-adapter",
+  "base": "9f40ada529481dcc91d81cf286c0df1c4ccbf5c8",
+  "commit_push": "Not performed; root acceptance pending",
+  "files": [
+    {
+      "path": "dispatcher/slack.py",
+      "bytes": 15097,
+      "sha256": "401146db3859a56a87cb0b53054baad4d6111d77258523df437060c4f8f23eff"
+    },
+    {
+      "path": "tests/test_slack.py",
+      "bytes": 13606,
+      "sha256": "7b5dc5d7506aa6376ac7004e7269210baa9decb54c8f5698e62de3469707bef5"
+    },
+    {
+      "path": "docs/AJ-0011-slack-adapter.md",
+      "bytes": 8375,
+      "sha256": "9a308c1fe830e357d2eb1d6fd5da05a8b2ca1264aeab6a912610dcc34a7cd9f2"
+    },
+    {
+      "path": "docs/AJ-0011-evidence/baseline.stderr",
+      "bytes": 32291,
+      "sha256": "71ab71bfc404cb1ac6902ae371b759e43f0c50f680bdc4aa6652bc8189a6555c"
+    },
+    {
+      "path": "docs/AJ-0011-evidence/baseline.stdout",
+      "bytes": 155,
+      "sha256": "b385aeb2071708be66deccf6fa0a8a405280c70752ffdfa58df1b9542f84621b"
+    },
+    {
+      "path": "docs/AJ-0011-evidence/commands.json",
+      "bytes": 1286,
+      "sha256": "714f1c53beb62d2f694cee9f1ec2194545946554a50c77bda01e18534475f1c7"
+    },
+    {
+      "path": "docs/AJ-0011-evidence/full.stderr",
+      "bytes": 34773,
+      "sha256": "367c246455cecc1311fdd125baaee38efc02835b38ec70527bf56c7f49577077"
+    },
+    {
+      "path": "docs/AJ-0011-evidence/full.stdout",
+      "bytes": 155,
+      "sha256": "1c79eee504828d75b721e4036d2b7d6f458ca0c310402e6d48d105f72f9d20aa"
+    },
+    {
+      "path": "docs/AJ-0011-evidence/simulation.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/AJ-0011-evidence/simulation.stdout",
+      "bytes": 2533,
+      "sha256": "ebe574290646c73ff9371208efc4bf97989b56f1cc61210e1177bad9158487de"
+    },
+    {
+      "path": "docs/AJ-0011-review/REVIEW.md",
+      "bytes": 4432,
+      "sha256": "97011db99c9a6e1d4aed8490552b3620f05e47633df47e75dd03c3db0305e136"
+    },
+    {
+      "path": "docs/AJ-0011-review/corrected.stderr",
+      "bytes": 760,
+      "sha256": "31df53f4051a84e4b0b1262cd66e2713570910d7fe28d5600f6f94f840334c7b"
+    },
+    {
+      "path": "docs/AJ-0011-review/corrected.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/AJ-0011-review/correction-crash.stderr",
+      "bytes": 1655,
+      "sha256": "5cdca563b170be3aca0b434f7ea435348875b61cfd967a8f56ee2c8d66f74f7e"
+    },
+    {
+      "path": "docs/AJ-0011-review/correction-crash.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/AJ-0011-review/expanded-initial.stderr",
+      "bytes": 3354,
+      "sha256": "6334079eb9f6e08fe90d4b8b43b192003fb26e25de0585fdff1d0235ae19afea"
+    },
+    {
+      "path": "docs/AJ-0011-review/expanded-initial.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/AJ-0011-review/final-full-offline.stderr",
+      "bytes": 34773,
+      "sha256": "6414d1cd53a80516e74980592f53bcae1de5f86df5eacb2e186217fcd91b4fb7"
+    },
+    {
+      "path": "docs/AJ-0011-review/final-full-offline.stdout",
+      "bytes": 155,
+      "sha256": "1c79eee504828d75b721e4036d2b7d6f458ca0c310402e6d48d105f72f9d20aa"
+    },
+    {
+      "path": "docs/AJ-0011-review/final-probes.stderr",
+      "bytes": 1040,
+      "sha256": "a62b1857b4befaae66a48a4e6414f1367ae2811c8dfbc4774236d5613c3807ae"
+    },
+    {
+      "path": "docs/AJ-0011-review/final-probes.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/AJ-0011-review/full-offline.stderr",
+      "bytes": 36200,
+      "sha256": "da0cd4b5c5d54772a4d054ad92302efffac572c8d4ccc06c9b75ecaaef72a5bf"
+    },
+    {
+      "path": "docs/AJ-0011-review/full-offline.stdout",
+      "bytes": 155,
+      "sha256": "34511d7a59f325f1201efd9ffb440f74cf174630e7c9fffc9bd893ea67ec8993"
+    },
+    {
+      "path": "docs/AJ-0011-review/initial.stderr",
+      "bytes": 2987,
+      "sha256": "09f7365d6d063231735dfb8b605e42a33d794f68fb3a4b80101403409bf86f6f"
+    },
+    {
+      "path": "docs/AJ-0011-review/initial.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/AJ-0011-review/probes.py",
+      "bytes": 5952,
+      "sha256": "1d891564e37daabb71637c07d938abf4b7716e578fe357827fb4bc9b1d4b2385"
+    }
+  ]
+}

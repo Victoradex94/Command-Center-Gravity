@@ -1,0 +1,44 @@
+{
+  "lineage": {
+    "job": "AJ-0011",
+    "spec_revision": 1,
+    "run_epoch": 1,
+    "attempt": 1,
+    "nonce": "VA-SLACK-0011-01"
+  },
+  "branch": "aj-0011-slack-adapter",
+  "base": "9f40ada529481dcc91d81cf286c0df1c4ccbf5c8",
+  "commands": [
+    {
+      "command": "python -m tests.offline_suite",
+      "stage": "accepted baseline",
+      "tests": 193,
+      "failures": 0,
+      "errors": 0,
+      "stdout": "baseline.stdout",
+      "stderr": "baseline.stderr"
+    },
+    {
+      "command": "python -m tests.offline_suite",
+      "stage": "final candidate",
+      "tests": 215,
+      "failures": 0,
+      "errors": 0,
+      "stdout": "full.stdout",
+      "stderr": "full.stderr"
+    },
+    {
+      "command": "python with sys.addaudithook(tests.offline_suite.reject_external); runpy.run_module('tests.simulate', run_name='__main__')",
+      "tests": 58,
+      "note": "preserved simulation subset; included in suite, not additional unique tests",
+      "stdout": "simulation.stdout",
+      "stderr": "simulation.stderr"
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    }
+  ],
+  "preservation": "uncommitted, unpushed; await root acceptance",
+  "network": "No live Slack/Sheets calls. Test audit hook blocks external I/O. Only repository fetch used network."
+}

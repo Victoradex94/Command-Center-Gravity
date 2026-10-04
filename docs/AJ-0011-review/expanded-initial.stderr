@@ -1,0 +1,45 @@
+test_cancel_crash_reconciliation (__main__.ReviewProbes.test_cancel_crash_reconciliation) ... ERROR
+test_crash_after_send_reconciles_original_without_replay (__main__.ReviewProbes.test_crash_after_send_reconciles_original_without_replay) ... ok
+test_escalation_has_actual_decision (__main__.ReviewProbes.test_escalation_has_actual_decision) ... FAIL
+test_pause_crash_reconciliation (__main__.ReviewProbes.test_pause_crash_reconciliation) ... ERROR
+test_unknown_lookup_never_sends (__main__.ReviewProbes.test_unknown_lookup_never_sends) ... ok
+test_wrong_destination_evidence_does_not_verify (__main__.ReviewProbes.test_wrong_destination_evidence_does_not_verify) ... ok
+
+======================================================================
+ERROR: test_cancel_crash_reconciliation (__main__.ReviewProbes.test_cancel_crash_reconciliation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/docs/AJ-0011-review/probes.py", line 93, in test_cancel_crash_reconciliation
+    self._crash_reconcile('cancel')
+  File "/workspace/Command-Center-Gravity/docs/AJ-0011-review/probes.py", line 90, in _crash_reconcile
+    self.assertEqual(self.boundary.reconcile_command(command), self.h.job_id)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Command-Center-Gravity/dispatcher/slack.py", line 173, in reconcile_command
+    raise ValueError("no conclusive core evidence; root reconciliation required")
+ValueError: no conclusive core evidence; root reconciliation required
+
+======================================================================
+ERROR: test_pause_crash_reconciliation (__main__.ReviewProbes.test_pause_crash_reconciliation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/docs/AJ-0011-review/probes.py", line 96, in test_pause_crash_reconciliation
+    self._crash_reconcile('pause')
+  File "/workspace/Command-Center-Gravity/docs/AJ-0011-review/probes.py", line 90, in _crash_reconcile
+    self.assertEqual(self.boundary.reconcile_command(command), self.h.job_id)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Command-Center-Gravity/dispatcher/slack.py", line 173, in reconcile_command
+    raise ValueError("no conclusive core evidence; root reconciliation required")
+ValueError: no conclusive core evidence; root reconciliation required
+
+======================================================================
+FAIL: test_escalation_has_actual_decision (__main__.ReviewProbes.test_escalation_has_actual_decision)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/docs/AJ-0011-review/probes.py", line 28, in test_escalation_has_actual_decision
+    self.assertIn(value, attention[0]['text'])
+AssertionError: 'CHOOSE_SCOPE_A_OR_B' not found in '{"at":"2026-10-04T06:00:00+00:00","data":{"action_required":true,"issue":"scope","material_risk":false},"evidence":"Scope changed","historical_event":true,"job":"AJ-0007","kind":"escalation","lineage":"AJ-0007/s1/r1/a1"}'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.009s
+
+FAILED (failures=1, errors=2)
