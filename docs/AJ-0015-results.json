@@ -1,0 +1,29 @@
+{
+  "job_id": "AJ-0015",
+  "identity": "PROVISIONAL PENDING_CANONICAL_RECONCILIATION",
+  "SpecRevision": 1,
+  "RunEpoch": 1,
+  "Attempt": 1,
+  "nonce": "VA-GIT-LEDGER-0015-01",
+  "base": "d9cec7635bba5a214b990a479ff5ad4f68667126",
+  "branch": "aj-0015-git-ledger-v1",
+  "offline_suite": {
+    "tests": 281,
+    "existing": 250,
+    "ledger": 20,
+    "independent": 11,
+    "failures": 0,
+    "errors": 0,
+    "network_and_executable_audit_guard": true
+  },
+  "actual_local_bare_git": "PASS; exact SHA before ref; lost response; parent chain; CAS conflict; retirement fence; no network",
+  "simulation": "PASS",
+  "compileall": "PASS",
+  "independent_review": "PASS after retained corrections; no blocking defect in scoped trusted local coordinator v1",
+  "acceptance": "PENDING_ROOT",
+  "staged": false,
+  "committed": false,
+  "pushed": false,
+  "cutover": false,
+  "live_sheets_or_slack_calls": 0
+}

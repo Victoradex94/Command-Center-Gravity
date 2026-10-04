@@ -1,0 +1,21 @@
+{
+  "algorithm": "SHA-256",
+  "base": "d9cec7635bba5a214b990a479ff5ad4f68667126",
+  "branch": "aj-0015-git-ledger-v1",
+  "files": {
+    "dispatcher/git_ledger.py": "30d25b206803e123958e22d4555af96b0f65361aeb0b87e9cc706a484bb338cc",
+    "dispatcher/git_transport.py": "a2ef945064d944e1f799eb4ca32452d4c176577ea8c9cbb5ce77c5691e0aa0fd",
+    "docs/AJ-0015-git-ledger.md": "0fbeac6c0cad477fb755eb9019930f34e55d6cb871c2a488aaf0583a5d11f3b0",
+    "docs/AJ-0015-results.json": "418696074c16657ed4d6892ace4c8129995952f8aeec5287e33fb5d0fca1407b",
+    "docs/AJ-0015-review.md": "7e612cf0a765b45bd6ba0f2e6dad6fad86593273b31928b711c37350f06d3c56",
+    "docs/history/AJ-0015/final-offline-suite.txt": "8099a6f37081b1185376b7eacfa51a7d0b91d18a83ac96965164c6c99ba2ce60",
+    "docs/history/AJ-0015/initial-independent-failures.txt": "7c5fef6ebd4959348a2e99708e0fce7e05d57905755664278493f56b47973e76",
+    "docs/history/AJ-0015/initial-independent-suite-failure.txt": "1cc4c39880a9a6aedd6fb600f00bc12a20b414988de55476ebf6d7031be6d283",
+    "docs/history/AJ-0015/initial-offline-failure.txt": "426f4900eba8d51470781968303de22ddc5676f25964ec43b8e95b66e1a44e1e",
+    "tests/git_bare_fixture.py": "1dfd5422f5d4e13e8214bf10f92a6b730064717c8b77ea25568181b500b370ac",
+    "tests/git_bare_integration.py": "625105e88034df28c2ee39df23720fcfd508bd1a99e6dfa1e39c8fea3babc0ab",
+    "tests/test_git_ledger.py": "c0c7519c9c6bb8837a8ba0fc42018fd23088deddf52b9322ae267d3b768df424",
+    "tests/test_git_ledger_review.py": "d4c665bf73fb96fa6f355e0c2b68947000ac3788ef7ed24fd687233808263de6"
+  },
+  "scope": "all AJ-0015 added files except this manifest (self-excluded)"
+}

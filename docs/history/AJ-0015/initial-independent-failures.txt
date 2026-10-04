@@ -1,0 +1,28 @@
+test_changed_payload_after_abandon_remains_rejected (tests.test_git_ledger_review.IndependentGitLedgerReview.test_changed_payload_after_abandon_remains_rejected) ... ok
+test_missing_event_and_rehashed_broken_chain_rejected (tests.test_git_ledger_review.IndependentGitLedgerReview.test_missing_event_and_rehashed_broken_chain_rejected) ... ok
+test_projection_diff_accounts_for_canonical_only_rows (tests.test_git_ledger_review.IndependentGitLedgerReview.test_projection_diff_accounts_for_canonical_only_rows) ... ERROR
+test_remote_exact_sha_with_wrong_blobs_is_not_finality (tests.test_git_ledger_review.IndependentGitLedgerReview.test_remote_exact_sha_with_wrong_blobs_is_not_finality) ... ok
+test_restart_unknown_cancellation_freezes_and_preserves_fingerprint (tests.test_git_ledger_review.IndependentGitLedgerReview.test_restart_unknown_cancellation_freezes_and_preserves_fingerprint) ... ok
+test_writer_retirement_cannot_complete_during_publication (tests.test_git_ledger_review.IndependentGitLedgerReview.test_writer_retirement_cannot_complete_during_publication) ... FAIL
+
+======================================================================
+ERROR: test_projection_diff_accounts_for_canonical_only_rows (tests.test_git_ledger_review.IndependentGitLedgerReview.test_projection_diff_accounts_for_canonical_only_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/tests/test_git_ledger_review.py", line 90, in test_projection_diff_accounts_for_canonical_only_rows
+    self.assertEqual(result['diff']['AJ-0014'], {'before': extra, 'after': None})
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'AJ-0014'
+
+======================================================================
+FAIL: test_writer_retirement_cannot_complete_during_publication (tests.test_git_ledger_review.IndependentGitLedgerReview.test_writer_retirement_cannot_complete_during_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Command-Center-Gravity/tests/test_git_ledger_review.py", line 116, in test_writer_retirement_cannot_complete_during_publication
+    self.assertFalse(completed_early, 'retirement completed while old writer could still publish')
+AssertionError: True is not false : retirement completed while old writer could still publish
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.010s
+
+FAILED (failures=1, errors=1)
