@@ -1,0 +1,28 @@
+{
+  "identity": "AJ-0019/s1/r1/a1/VA-READINESS-0019-01",
+  "state": "PROVISIONAL PENDING_CANONICAL_RECONCILIATION",
+  "branch": "aj-0019-cutover-readiness-v1",
+  "base": "f469130a9632054a31cbb9d638170acaf841b52a",
+  "accepted_references": {
+    "AJ12": "9c81bda8675477609e8f6697b9ae26ca6e1fbbe0",
+    "AJ14": "d9cec7635bba5a214b990a479ff5ad4f68667126",
+    "AJ15": "ce956abbe6b8217c1101edea1cbed6f8c9addeb3",
+    "AJ16": "f469130a9632054a31cbb9d638170acaf841b52a"
+  },
+  "integration": "AJ12 and AJ14 separate descendants; not an integrated tested release",
+  "go": "NO-GO",
+  "gaps": [
+    "AJ17 preservation uncertain",
+    "AJ18 native typed conversion unknown",
+    "external legacy routes unknown",
+    "real snapshot bytes unavailable",
+    "distributed CAS unproven",
+    "hosted and live gates unexecuted",
+    "AJ14 outstanding submission can overwrite full A15:Q15",
+    "native note/format/validation/date-policy integration gated on AJ18"
+  ],
+  "committed": false,
+  "pushed": false,
+  "snapshot_contract_version": 2,
+  "coordinator_supplement": "2026-10-05T11:48:00Z metadata only; no real bytes imported"
+}

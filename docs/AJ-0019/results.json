@@ -1,0 +1,68 @@
+{
+  "identity": "AJ-0019 / SpecRevision=1 / RunEpoch=1 / Attempt=1 / VA-READINESS-0019-01",
+  "execution_start_utc": "2026-10-05 11:47:33 UTC",
+  "branch": "aj-0019-cutover-readiness-v1",
+  "base": "f469130a9632054a31cbb9d638170acaf841b52a",
+  "state": "PROVISIONAL PENDING_CANONICAL_RECONCILIATION; uncommitted/unpushed; NO-GO",
+  "tests": [
+    {
+      "command": "python3 -B -m tests.offline_suite",
+      "count": 318,
+      "result": "PASS; failures=0 errors=0; external I/O blocked",
+      "log": "full-suite.log"
+    },
+    {
+      "command": "python3 -B -m unittest tests.test_cutover_readiness",
+      "count": 8,
+      "result": "PASS",
+      "log": "focused.log"
+    },
+    {
+      "command": "python3 -B -m tests.git_bare_integration",
+      "result": "PASS; local disposable Git scenario assertions",
+      "log": "git-bare.log"
+    },
+    {
+      "command": "python3 -B -m tests.isolation_bare_integration",
+      "result": "PASS; local disposable Git scenario assertions",
+      "log": "isolation-bare.log"
+    },
+    {
+      "command": "python3 -B -m tests.simulate",
+      "count": 58,
+      "result": "PASS; scenario assertions",
+      "log": "simulation.log"
+    },
+    {
+      "command": "python3 -B -m tools.aj0019_verify /tmp/aj0019-synthetic.json /tmp/aj0019-synthetic.json",
+      "result": "PASS exit0; synthetic same file",
+      "log": "cli.log"
+    },
+    {
+      "command": "python3 -B -m tools.aj0019_verify /tmp/aj0019-synthetic.json /tmp/aj0019-missing.json",
+      "result": "HOLD exit1; missing file",
+      "log": "cli.log"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    }
+  ],
+  "criterion_map": "readiness.md",
+  "independent_review": "independent-review.md",
+  "live_acceptance": "UNEXECUTED; no real snapshot bytes, live rehearsal, projection, Sheets writes, messaging, deployment or activation",
+  "continuation": "Same AJ-0019/s1/r1/a1/VA-READINESS-0019-01; coordinator metadata corrections at11:48UTC, no new job/attempt",
+  "snapshot_contract_version": 2,
+  "independent_review_result": {
+    "reviewer": "/root/independent_review",
+    "reference": "docs/AJ-0019/independent-review.md; original reviewer reused for same-job continuation",
+    "full_suite_count": 318,
+    "synthetic_assertions": 49,
+    "result": "PASS; R1 fixed and retained; no new blocking findings; activation NO-GO",
+    "evidence": [
+      "independent-review.md",
+      "independent-probes.py",
+      "independent-probes.log"
+    ]
+  }
+}

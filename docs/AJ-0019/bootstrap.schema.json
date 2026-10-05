@@ -1,0 +1,566 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "snapshot": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 2
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "workbook": {
+              "type": "string",
+              "minLength": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "gid": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "range": {
+              "type": "string",
+              "pattern": "^A1:Q[1-9][0-9]*$"
+            }
+          },
+          "required": [
+            "workbook",
+            "title",
+            "gid",
+            "range"
+          ],
+          "additionalProperties": false
+        },
+        "capture": {
+          "type": "object",
+          "properties": {
+            "reference": {
+              "type": "string",
+              "minLength": 1
+            },
+            "captured_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "complete": {
+              "const": true
+            },
+            "timezone": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "reference",
+            "captured_at",
+            "complete",
+            "timezone"
+          ],
+          "additionalProperties": false
+        },
+        "columns": {
+          "const": [
+            "Job ID",
+            "Parent Workplan ID",
+            "Job / Deliverable",
+            "Assigned Worker",
+            "Status",
+            "Priority",
+            "Assigned At",
+            "Control Date",
+            "Dependency",
+            "Source / Brief",
+            "Output",
+            "Verification",
+            "Return Summary",
+            "Needs Victor",
+            "Victor Decision",
+            "Last Update",
+            "Run / Revision ID"
+          ]
+        },
+        "statuses": {
+          "const": [
+            "Intake",
+            "Ready",
+            "Working",
+            "Review",
+            "Blocked",
+            "Done",
+            "Cancelled"
+          ]
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 17,
+            "maxItems": 17,
+            "items": {
+              "$ref": "#/$defs/cell"
+            }
+          }
+        },
+        "header_cells": {
+          "type": "array",
+          "minItems": 17,
+          "maxItems": 17,
+          "items": {
+            "$ref": "#/$defs/cell"
+          }
+        },
+        "grid_metadata": {
+          "type": "object",
+          "properties": {
+            "locale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "timezone": {
+              "type": "string",
+              "minLength": 1
+            },
+            "frozen_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "frozen_columns": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "row_count": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "column_count": {
+              "const": 17
+            },
+            "date_policy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "provenance": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "locale",
+            "timezone",
+            "frozen_rows",
+            "frozen_columns",
+            "row_count",
+            "column_count",
+            "date_policy",
+            "provenance"
+          ],
+          "additionalProperties": false
+        },
+        "cell_provenance": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 17,
+            "maxItems": 17,
+            "items": {
+              "$ref": "#/$defs/cell_provenance"
+            }
+          }
+        }
+      },
+      "required": [
+        "version",
+        "source",
+        "capture",
+        "columns",
+        "statuses",
+        "rows",
+        "header_cells",
+        "grid_metadata",
+        "cell_provenance"
+      ],
+      "additionalProperties": false,
+      "description": "Runtime additionally verifies complete A1:Qn header+rows extent, dimensions, headers, unique nonabsent job IDs/status, timezone-aware capture timestamp and finite exact typed cells. All-absent captured template rows retained. Native extraction/interpretation gated on AJ18."
+    },
+    "genesis": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "identity": {
+          "type": "object",
+          "properties": {
+            "job_id": {
+              "const": "AJ-0019"
+            },
+            "spec_revision": {
+              "const": 1
+            },
+            "run_epoch": {
+              "const": 1
+            },
+            "attempt": {
+              "const": 1
+            },
+            "nonce": {
+              "const": "VA-READINESS-0019-01"
+            },
+            "state": {
+              "const": "PROVISIONAL PENDING_CANONICAL_RECONCILIATION"
+            }
+          },
+          "required": [
+            "job_id",
+            "spec_revision",
+            "run_epoch",
+            "attempt",
+            "nonce",
+            "state"
+          ],
+          "additionalProperties": false
+        },
+        "repo": {
+          "const": "Victoradex94/Command-Center-Gravity"
+        },
+        "base": {
+          "const": "f469130a9632054a31cbb9d638170acaf841b52a"
+        },
+        "ref": {
+          "const": "refs/heads/aj-0019-cutover-readiness-v1"
+        },
+        "snapshot_reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "snapshot_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "columns": {
+          "const": [
+            "Job ID",
+            "Parent Workplan ID",
+            "Job / Deliverable",
+            "Assigned Worker",
+            "Status",
+            "Priority",
+            "Assigned At",
+            "Control Date",
+            "Dependency",
+            "Source / Brief",
+            "Output",
+            "Verification",
+            "Return Summary",
+            "Needs Victor",
+            "Victor Decision",
+            "Last Update",
+            "Run / Revision ID"
+          ]
+        },
+        "statuses": {
+          "const": [
+            "Intake",
+            "Ready",
+            "Working",
+            "Review",
+            "Blocked",
+            "Done",
+            "Cancelled"
+          ]
+        },
+        "jobs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "job_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "provisional": {
+                "type": "boolean"
+              },
+              "cell_sha256": {
+                "type": "array",
+                "minItems": 17,
+                "maxItems": 17,
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                }
+              },
+              "operation_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "job_id",
+              "provisional",
+              "cell_sha256",
+              "operation_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "history": {
+          "const": "snapshot import only; prior history unknown"
+        },
+        "privacy_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "legacy_exceptions": {
+          "type": "object",
+          "properties": {
+            "write_finality": {
+              "const": "UNKNOWN"
+            },
+            "cancel_finality": {
+              "const": "UNKNOWN"
+            }
+          },
+          "required": [
+            "write_finality",
+            "cancel_finality"
+          ],
+          "additionalProperties": false
+        },
+        "route_retirement_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "approval_reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "snapshot_schema_version": {
+          "const": 2
+        },
+        "native_provenance_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "version",
+        "identity",
+        "repo",
+        "base",
+        "ref",
+        "snapshot_reference",
+        "snapshot_sha256",
+        "columns",
+        "statuses",
+        "jobs",
+        "history",
+        "privacy_scope",
+        "legacy_exceptions",
+        "route_retirement_evidence",
+        "approval_reference",
+        "snapshot_schema_version",
+        "native_provenance_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "cell": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "string",
+            "number",
+            "date_serial",
+            "datetime",
+            "blank",
+            "absent",
+            "formula"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "null"
+          ]
+        },
+        "format": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "value",
+        "format",
+        "timezone"
+      ],
+      "additionalProperties": false,
+      "description": "Semantic validation additionally uses dispatcher.isolation.validate_cell; schema alone does not attest fidelity.",
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "blank",
+                  "absent"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "number",
+                  "date_serial"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "string",
+                  "datetime",
+                  "formula"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "formula"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "pattern": "^="
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "date_serial",
+                  "datetime"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "timezone": {
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "date_serial"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "format": {
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "cell_provenance": {
+      "type": "object",
+      "properties": {
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "native_format": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "data_validation": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "note",
+        "native_format",
+        "data_validation",
+        "provenance"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/snapshot"
+    },
+    {
+      "$ref": "#/$defs/genesis"
+    }
+  ]
+}

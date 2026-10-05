@@ -1,0 +1,2 @@
+{"activation": false, "reason": "exact equality", "result": "PASS"}
+{"activation": false, "reason": "unreadable snapshot", "result": "HOLD"}

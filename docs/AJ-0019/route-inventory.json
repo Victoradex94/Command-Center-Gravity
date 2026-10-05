@@ -1,0 +1,155 @@
+{
+  "scope": "Repository Python search at verified AJ16; coordinator supplement observations at 2026-10-05 11:48 UTC. Not complete external inventory.",
+  "repository_paths": [
+    {
+      "path": "dispatcher/google_sheets.py",
+      "evidence": "source lines 163,207-294",
+      "role": "GoogleSheetsAdapter snapshot metadata/cells reads and batch-update submit; SandboxTarget production-ID rejection scoped to this adapter"
+    },
+    {
+      "path": "dispatcher/sheets_tool_bridge.py",
+      "evidence": "source lines 17-40",
+      "role": "agent-mediated read/write tool allowlist; supervising agent executes external tools"
+    },
+    {
+      "path": "dispatcher/sheets_writer.py",
+      "evidence": "source lines 197-204,427-494,575-630",
+      "role": "adapter snapshot/submit/inspect via durable writer journal; cannot fence external clients"
+    },
+    {
+      "path": "dispatcher/sheets_repository.py",
+      "evidence": "source lines 19-92",
+      "role": "JobRepository read/all/commit/reconcile backed by SheetsWriter"
+    },
+    {
+      "path": "dispatcher/engine.py",
+      "evidence": "source lines 45-60",
+      "role": "coordinator injects JobRepository; indirect Sheet read/commit route"
+    },
+    {
+      "path": "dispatcher/slack.py",
+      "evidence": "source lines 91-247",
+      "role": "offline intake boundary can request coordinator mutations through injected Dispatcher"
+    },
+    {
+      "path": "dispatcher/sheets_sandbox.py",
+      "evidence": "source lines 23-46,79-98",
+      "role": "synthetic setup requests/execute/reconcile"
+    },
+    {
+      "path": "tools/aj0010_sandbox_session.py",
+      "evidence": "source lines 90-120",
+      "role": "bounded agent-mediated fixture driver; must not run against legacy"
+    },
+    {
+      "path": "dispatcher/mock_sheets.py",
+      "evidence": "source lines 37-191",
+      "role": "synthetic seed/snapshot/submit/resolve, no live transport"
+    },
+    {
+      "path": "dispatcher/isolation.py",
+      "evidence": "source lines 20,70-150",
+      "role": "synthetic bootstrap and legacy role simulation; no native Sheet reads"
+    },
+    {
+      "path": "dispatcher/cutover_readiness.py",
+      "evidence": "source lines 17-117",
+      "role": "candidate local protected export comparator only; no Sheet tool or conversion"
+    },
+    {
+      "path": "tools/aj0019_verify.py",
+      "evidence": "source lines 1-21",
+      "role": "candidate read-only local file CLI"
+    },
+    {
+      "path": "dispatcher/writer_journal.py",
+      "evidence": "source lines 1-22",
+      "role": "local operation journal, indirect writer dependency"
+    },
+    {
+      "path": "dispatcher/codex_worker.py",
+      "evidence": "source lines 1-18",
+      "role": "worker route; coordinator must verify return, no native Sheet write"
+    },
+    {
+      "path": "dispatcher/store.py",
+      "evidence": "source lines 1",
+      "role": "repository interface/local store; injectable backend"
+    },
+    {
+      "path": "dispatcher/git_ledger.py",
+      "evidence": "source lines 67,195,279-286",
+      "role": "Git snapshot ledger only; no native Sheet call"
+    }
+  ],
+  "offline_and_historical_paths": {
+    "tests": "Sheet/protocol/revision/review fixtures; synthetic only",
+    "docs/history": "preserved implementation copies/probes, no operational retirement proof",
+    "docs/AJ-0010-live/verify_saved_evidence.py": "saved evidence reader",
+    "docs/AJ-0010-live-independent-review/verify_live.py": "saved evidence reader",
+    "matching_python_files": [
+      "docs/history/AJ-0009-ir1-review/test_review_probes.py",
+      "docs/history/AJ-0009-ir2-review/test_renewal_scope.py",
+      "docs/history/AJ-0010-before-ack-correction/dispatcher/google_sheets.py",
+      "docs/history/AJ-0010-before-ack-correction/dispatcher/sheets_sandbox.py",
+      "docs/history/AJ-0010-before-ack-correction/dispatcher/sheets_tool_bridge.py",
+      "docs/history/AJ-0010-before-ack-correction/tests/test_google_sheets.py",
+      "tests/isolation_bare_integration.py",
+      "tests/probe_writer_f2.py",
+      "tests/test_cutover_readiness.py",
+      "tests/test_git_ledger.py",
+      "tests/test_git_ledger_review.py",
+      "tests/test_google_sheets.py",
+      "tests/test_isolation.py",
+      "tests/test_isolation_review.py",
+      "tests/test_sandbox_session.py",
+      "tests/test_sheets_writer.py",
+      "tests/test_slack.py",
+      "tests/test_writer_revision2.py",
+      "tests/test_writer_revision3.py"
+    ]
+  },
+  "confirmed_coordinator_readers": [
+    "google_drive_get_spreadsheet_metadata",
+    "get_spreadsheet_cells",
+    "get_spreadsheet_range",
+    "search_spreadsheet_rows"
+  ],
+  "other_exposed_readers": [
+    "fetch",
+    "export",
+    "revision metadata",
+    "comments metadata"
+  ],
+  "confirmed_writer": {
+    "tool": "google_drive_batch_update_spreadsheet",
+    "requests": [
+      "updateCells",
+      "findReplace",
+      "structural requests"
+    ],
+    "revision_CAS": "not required",
+    "provider_finality_handle": "unavailable"
+  },
+  "known_consumers": [
+    "root reconciliation",
+    "exclusive writer workflow",
+    "human dashboard",
+    "independent read audit",
+    "scheduled ChatGPT oversight"
+  ],
+  "unknown_or_potential": [
+    "copy/import/duplicate",
+    "UI-browser",
+    "AppsScript/triggers",
+    "OAuth/service accounts",
+    "external collaborators/ACL",
+    "cached readers/queues",
+    "hosted/cron/webhooks",
+    "reverse sync/projection",
+    "in-flight coordinator tool calls"
+  ],
+  "other_tabs": "Five tabs formula-only inspection found 23 formulas, no literal Agent Jobs/gid or IMPORT* references; does not exclude indirect/external readers",
+  "ACL": "shared=true does not establish complete ACL",
+  "late_write": "Original AJ14 submission targeted all 17 userEnteredValue cells A15:Q15; full-row late overwrite risk; no operation handle/finality proof; Git lock cannot fence submitted request"
+}
