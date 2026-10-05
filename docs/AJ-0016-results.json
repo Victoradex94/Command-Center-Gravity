@@ -1,0 +1,79 @@
+{
+  "lineage": "AJ-0016 / SpecRevision 1 / RunEpoch 1 / Attempt 1 / Nonce VA-ISOLATION-0016-01",
+  "identity": "PENDING_CANONICAL_RECONCILIATION",
+  "branch": "aj-0016-isolation-prototype-v1",
+  "base": "ce956abbe6b8217c1101edea1cbed6f8c9addeb3",
+  "status": "reviewed OFFLINE candidate; exact Dẹkun manifest acceptance pending; uncommitted/unpushed",
+  "tests": [
+    {
+      "command": "python3 -B -m tests.offline_suite",
+      "tests": 310,
+      "existing": 281,
+      "new_primary": 18,
+      "new_independent": 11,
+      "failures": 0,
+      "errors": 0,
+      "result": "PASS",
+      "external_io": "audit blocked",
+      "log": "docs/AJ-0016-offline-tests.log"
+    },
+    {
+      "command": "python3 -B -m unittest tests.test_isolation_review",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "result": "PASS; independent reviewer"
+    },
+    {
+      "command": "python3 -B -m tests.offline_suite",
+      "tests": 310,
+      "failures": 0,
+      "errors": 0,
+      "result": "PASS; independent reviewer",
+      "log": "docs/AJ-0016-independent-tests.log"
+    },
+    {
+      "command": "python3 -B -m tests.git_bare_integration",
+      "result": "PASS; existing actual local Git exact objects/ref CAS/lost response/retirement; scenario assertions, not unittest count"
+    },
+    {
+      "command": "python3 -B -m tests.isolation_bare_integration",
+      "result": "PASS; actual disposable local Git, seven import commits/seven publications with lost responses; restart zero replay; activation/restart and rollback HOLD; scenario assertions, not unittest count"
+    },
+    {
+      "command": "python3 -B -m tests.simulate",
+      "tests": 58,
+      "failures": 0,
+      "errors": 0,
+      "result": "PASS; existing scenarios"
+    },
+    {
+      "command": "python3 -B -m compileall -q dispatcher tests",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --exit-code",
+      "exit_code": 0,
+      "result": "PASS; all existing tracked files unchanged; new candidate files untracked"
+    }
+  ],
+  "review": {
+    "findings": [
+      "dispatch second-read head race",
+      "rollback during dispatch selection",
+      "published pending bootstrap prefix restart recovery"
+    ],
+    "disposition": "all corrected; independent adversarial probes pass",
+    "outstanding": "none for bounded offline review",
+    "report": "docs/AJ-0016-review.md"
+  },
+  "acceptance_map": "docs/AJ-0016-isolation.md",
+  "limits": [
+    "no hosted/distributed consensus or actual worker execution fencing",
+    "production route isolation not activated; default engine unchanged",
+    "typed nonliteral cells retained in envelopes but rejected for AJ15 string bootstrap export",
+    "no provider finality of original UNKNOWN write claimed"
+  ],
+  "recommendation": "Separately authorize disposable synthetic hosted exact-ref CAS, parent/blob readback and lost-response identity reconciliation with two independent clients. No production destination or activation."
+}

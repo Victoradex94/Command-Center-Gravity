@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "lineage": "AJ-0016 / SpecRevision 1 / RunEpoch 1 / Attempt 1 / Nonce VA-ISOLATION-0016-01",
+  "identity": "PENDING_CANONICAL_RECONCILIATION",
+  "repo": "Victoradex94/Command-Center-Gravity",
+  "branch": "aj-0016-isolation-prototype-v1",
+  "base": "ce956abbe6b8217c1101edea1cbed6f8c9addeb3",
+  "scope": "Exact new working-file set; existing tracked files unchanged. This manifest excludes itself to avoid recursive hashing; its SHA256 is supplied in final return. No stage/commit/push.",
+  "files": {
+    "dispatcher/isolation.py": "9e5a10f52223eb84e165eba7a992bdb0c7a1c9378b36aeeb1b0f4f16d6777b52",
+    "docs/AJ-0016-bootstrap-manifest.json": "79259df68a2e960383fade3f8b39e2fccaf720bfe412c7d96c5f4084901a28cb",
+    "docs/AJ-0016-independent-tests.log": "a3941ecf0fb835152800953143e1b2be2739fbc4d6cec14f7e4272deb559389f",
+    "docs/AJ-0016-isolation.md": "990c55ee4c33ceb5bd001da912b0871252337c6dd91ae5cc8f7231d1f0a377f2",
+    "docs/AJ-0016-offline-tests.log": "6e409bfa72f58d697ec76de6cf7b9f50682ced40c60324a599b21761d361fc62",
+    "docs/AJ-0016-results.json": "d20cdb506730d9a388ed9aba69b0695f403b2c01d4838f2c2884e06cd7e81712",
+    "docs/AJ-0016-review.md": "eeb4cbbeff9179a4619f0f147722f8da27344a61bd3b476ff9ca6c79693a64bd",
+    "docs/history/AJ-0016/independent-initial.log": "9aaac59955de01e28db8e78765c21c9445d670f617299b2fc9964f54828f6977",
+    "docs/history/AJ-0016/initial-full.log": "e893e0a3fc51d24d02da56c41d22be2dd03dcbe6f5bef51316109d2184af739f",
+    "tests/isolation_bare_integration.py": "748b44a8d09bab739e499f747f3a36fa92e7a98af67f7b6a4b4f244ed7ca5984",
+    "tests/test_isolation.py": "d6ab4e1bfcef79cd1e606730402ef92005c6f7c2645cff707e3fd615036752d1",
+    "tests/test_isolation_review.py": "fd7a468712987cdda65b4e3b177fb20a0f8b8d990cb24556a8bb5be67b5cefba"
+  }
+}

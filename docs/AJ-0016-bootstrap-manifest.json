@@ -1,0 +1,934 @@
+{
+  "acceptance": "OFFLINE_CANDIDATE_ONLY; Dẹkun acceptance pending",
+  "digest": "e7ebd57a5a342fcc312804b6159cc24c1e1e639cdb76c52befe89a611dd2123e",
+  "manifest": {
+    "version": 1,
+    "repo": "Victoradex94/Command-Center-Gravity",
+    "ref": "refs/heads/aj-0016-isolation-prototype-v1",
+    "base": "ce956abbe6b8217c1101edea1cbed6f8c9addeb3",
+    "source": "synthetic://invented-sheet/agent-jobs/A1:Q8",
+    "lineage": "AJ-0016/s1/r1/a1/VA-ISOLATION-0016-01",
+    "identity": "PENDING_CANONICAL_RECONCILIATION",
+    "columns": [
+      "Job ID",
+      "Parent Workplan ID",
+      "Job / Deliverable",
+      "Assigned Worker",
+      "Status",
+      "Priority",
+      "Assigned At",
+      "Control Date",
+      "Dependency",
+      "Source / Brief",
+      "Output",
+      "Verification",
+      "Return Summary",
+      "Needs Victor",
+      "Victor Decision",
+      "Last Update",
+      "Run / Revision ID"
+    ],
+    "statuses": [
+      "Intake",
+      "Ready",
+      "Working",
+      "Review",
+      "Blocked",
+      "Done",
+      "Cancelled"
+    ],
+    "source_digest": "8f6a9ca59305b81e4e7a3915e69065600e52a60aca9f906a9616183bc4449794",
+    "rows": {
+      "AJ-8000": [
+        {
+          "kind": "string",
+          "value": "AJ-8000",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Invented task 0",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Intake",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "No",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Not required",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        }
+      ],
+      "AJ-8001": [
+        {
+          "kind": "string",
+          "value": "AJ-8001",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Invented task 1",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Ready",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "No",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Not required",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        }
+      ],
+      "AJ-8002": [
+        {
+          "kind": "string",
+          "value": "AJ-8002",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Invented task 2",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Working",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "No",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Not required",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        }
+      ],
+      "AJ-8003": [
+        {
+          "kind": "string",
+          "value": "AJ-8003",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Invented task 3",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Review",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "No",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Not required",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        }
+      ],
+      "AJ-8004": [
+        {
+          "kind": "string",
+          "value": "AJ-8004",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Invented task 4",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Blocked",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "No",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Not required",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        }
+      ],
+      "AJ-8005": [
+        {
+          "kind": "string",
+          "value": "AJ-8005",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Invented task 5",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Done",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "No",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Not required",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        }
+      ],
+      "AJ-8006": [
+        {
+          "kind": "string",
+          "value": "AJ-8006",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Invented task 6",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Cancelled",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "No",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "Not required",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        },
+        {
+          "kind": "string",
+          "value": "",
+          "format": "",
+          "timezone": ""
+        }
+      ]
+    },
+    "provisional_ids": [
+      "AJ-8001"
+    ],
+    "privacy_policy": "synthetic-only; no bodies, secrets or personal data; no normalization",
+    "provenance": "synthetic://accepted-snapshot/fixture-v1",
+    "reconciliation": {
+      "AJ-8000": [
+        "fba4698168b861b4d4b807eb5926eeebab2e3791f783b65bc035bde3c099c0da",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "88a985e21b96872cf9f6bc1d589bcdc8f2f028a5e313010de701deb1b4e9df34",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "fe4acbdf1f0e8ff333de06fd3fcc4171e455c51ca9d4a52e16f856b41981b95a",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "7e706f44f673707e4276dae0436ded2416cf4306c0cd02dbae103f69a6506971",
+        "c63caa6eda820acac8551cf83ed9664623dc5ab3096a8a6a5d0d739c775d8a6d",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f"
+      ],
+      "AJ-8001": [
+        "99076a3cd8a838572cce9a1a184c8f2a242b2248fc808274cda519c453453085",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "7f4df79822b3cf6ffafd0f5b3cfcaceb79561083a9ed673367d28e921726bc95",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "cc5e6e1118dfff340be3094d0ca6f130d671b51b66621244d7a33fd15bc97caf",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "7e706f44f673707e4276dae0436ded2416cf4306c0cd02dbae103f69a6506971",
+        "c63caa6eda820acac8551cf83ed9664623dc5ab3096a8a6a5d0d739c775d8a6d",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f"
+      ],
+      "AJ-8002": [
+        "01ff7f09dd049a0563e878510a96956ad781e212a00fb157cb05aedf38629105",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "8b46775493f0e7cf09e17ac6fe2c4b984826116e2802e3eff03495417daa816c",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "e90c9ee50c742f2e301903be4698a2a9b2d09384584114d8e2b9fbd71692150f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "7e706f44f673707e4276dae0436ded2416cf4306c0cd02dbae103f69a6506971",
+        "c63caa6eda820acac8551cf83ed9664623dc5ab3096a8a6a5d0d739c775d8a6d",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f"
+      ],
+      "AJ-8003": [
+        "5c857c2158600423ab74fe5e5482ef9cac7b91dd02b2edd89978e2583462aa39",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "6fb541edf7cf6f0d2a1d1191a1b0387a5bb3aea947aa3e80237dd4fb2f9c8c01",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "855654368fcff804a073de37025e2fec092aa449916a1858c682c49fe14d4552",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "7e706f44f673707e4276dae0436ded2416cf4306c0cd02dbae103f69a6506971",
+        "c63caa6eda820acac8551cf83ed9664623dc5ab3096a8a6a5d0d739c775d8a6d",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f"
+      ],
+      "AJ-8004": [
+        "1a1f7761882076afaf5a9df1636efbe54b80ae8bf18a8217f4c09597ee0521ee",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "85073ee383a38ef5fdc771d353832382f3729d556573bf3863dcc952e1cc357c",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "80d8416cc9fee10eca8d0f6a7c2d7fd31c7eaa99def736448515fe81f163efe9",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "7e706f44f673707e4276dae0436ded2416cf4306c0cd02dbae103f69a6506971",
+        "c63caa6eda820acac8551cf83ed9664623dc5ab3096a8a6a5d0d739c775d8a6d",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f"
+      ],
+      "AJ-8005": [
+        "602b891c68a362bc49326b303e7246ea743ac9a5d96a1d038acb9443876abdc0",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "5a2c8475ef3fa3bdffee49a21ca88fa41fab1bc8ca58b9890b1588a02453dfd9",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "49d39626e42b566f887321865de2147c0e270da88a728089c4685d573c774868",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "7e706f44f673707e4276dae0436ded2416cf4306c0cd02dbae103f69a6506971",
+        "c63caa6eda820acac8551cf83ed9664623dc5ab3096a8a6a5d0d739c775d8a6d",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f"
+      ],
+      "AJ-8006": [
+        "a7238ad1cd17a073bdec416bb4ab4bd46cdfb8c9a1b2bd09508202ba063cb11e",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "a7978168ebe31ad5849d0250bfd4feabc74ef5c52fce6644dd6ea1fa1d15fa85",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "cc1249810a15f30a21b4d6323c00b301d80cdd073c4eb5056bd3644f6db05c21",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "7e706f44f673707e4276dae0436ded2416cf4306c0cd02dbae103f69a6506971",
+        "c63caa6eda820acac8551cf83ed9664623dc5ab3096a8a6a5d0d739c775d8a6d",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f",
+        "9c9e8763bc0917ff405d3d401abe02844b0ceadcef82cab8c57448aeb4c0339f"
+      ]
+    },
+    "operations": {
+      "AJ-8000": "import:1874f9d9c612480c1ea243281f90049ecd418f5aa7adba0b7d044adc23a1e53c",
+      "AJ-8001": "import:f515fffc284f56b1c28c112a2fc6215f7823cf4ed0dc20846a535c871ad2f70e",
+      "AJ-8002": "import:d37d7a65bad2bc9b2b6e1eb7a4600712a05a6c36f57f61c2f96fa5491d2ba944",
+      "AJ-8003": "import:301c54935f8c160fd168f2e21d09de436c5477e011d7f7657a98ea34e7eb4435",
+      "AJ-8004": "import:8e6446c971db495de0a5b5bf4f25754f896c7d06520e3a098ad5e4666648217d",
+      "AJ-8005": "import:50c0699ffbdf6bcc66bb2c45a06f32d7ab647b7065ce270e6e48875ebf90fe64",
+      "AJ-8006": "import:beeb134837d12b39f9ca34ff8fdeac928c08513043cdbbd68f845ce43d281572"
+    },
+    "history": "snapshot import only; prior history unknown",
+    "audit_exception": {
+      "legacy_unconditional_write": "UNKNOWN",
+      "cancel_finality": "UNKNOWN"
+    },
+    "routes": {
+      "reader": "deny-legacy",
+      "allocator": "deny-legacy",
+      "dispatcher": "deny-legacy",
+      "writer": "deny-legacy",
+      "cache": "deny-legacy",
+      "reverse_sync": "deny-legacy"
+    }
+  }
+}
