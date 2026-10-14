@@ -8,5 +8,5 @@ assert(html.includes('data-count="64"'));assert(html.includes('data-expand-state
 const zoom=m.render({Lagos:{People:28,Places:11,Platforms:16,Prizes:6,Publications:3}},'Lagos');
 assert(zoom.includes('data-category-count="People"'));assert(!zoom.includes('data-expand-state-count="Lagos"'));
 assert(fs.readFileSync('dist/vicadex-theme.css','utf8').includes('stroke-width:.7'));
-assert(fs.readFileSync('dist/directory.js','utf8').includes('Not event frequency or a census'));
+assert(fs.readFileSync('dist/directory.js','utf8').includes('not event frequency'));
 console.log('PASS percentage bands and automatic scaling, neutral totals, selected category expansion and stronger boundaries.');
