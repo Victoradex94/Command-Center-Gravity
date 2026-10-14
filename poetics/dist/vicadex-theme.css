@@ -277,3 +277,21 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .frequency-swatches i{height:12px;border:1px solid #315766;border-radius:3px}
 .map-frequency-key p{font-size:10px;line-height:1.4;color:#555;margin:8px 0 0}
 @media(max-width:700px){.map-state-filter{position:static;max-width:none;width:100%;border-radius:0;box-shadow:none;border-inline:0}.map-stage{display:flex;flex-direction:column}.map-state-filter{order:-1}.map-caption{position:static;max-width:none;border-radius:0}#legend-drag,#legend-position-reset{display:none}}
+/* One shared, connected map filter; navigation stays above the viewport. */
+.map-stage>.map-state-filter,.map-filter-row>.map-state-filter{position:relative;inset:auto;width:auto;display:flex;align-items:end;gap:12px;padding:12px 16px;box-shadow:none;border-radius:12px 12px 0 0;z-index:2;flex-wrap:wrap}
+.map-stage>.map-state-filter>label,.map-filter-row>.map-state-filter>label{flex:1 1 130px;margin:0;min-width:0}
+.map-stage>.map-state-filter>.map-category-filter,.map-filter-row>.map-state-filter>.map-category-filter{position:relative;inset:auto;flex:1 1 180px;min-width:0;max-width:320px;border:0;padding:0;margin:0;background:transparent;box-shadow:none}
+.map-state-filter select{width:100%;max-width:100%}
+.map-state-filter .type-toggles{flex-wrap:wrap}
+.state-navigation{position:relative;margin:0;border-radius:0;gap:12px}
+.state-navigation button{min-height:42px;min-width:0;white-space:normal}
+.state-map-switch{display:flex;align-items:center;gap:8px;padding:8px 16px;background:#fffdf9;flex-wrap:wrap}
+.state-map-switch button{min-height:40px;padding:8px 14px;border:1px solid #c8d1d3;border-radius:14px;background:transparent;color:#182a32}
+.state-map-switch button[aria-pressed=true]{background:#0b5f78;color:#fffdf9}
+.state-map-switch small{font-size:12px;color:#454f55}
+#nigeria-map>.state-city-map{margin:0;padding:12px 16px;background:#fffdf9;border-radius:0}
+#nigeria-map>.state-city-map h3{font-size:16px;margin:0 0 10px}
+#nigeria-map>.state-city-map iframe{display:block;height:480px;max-width:100%;border-radius:14px}
+.map-stage:has(.state-city-map)>.map-caption{position:static;padding:10px 16px;background:#fffdf9;color:#182a32}
+.map-filter-row>.map-state-filter{flex:1 1 100%}
+@media(max-width:700px){.map-stage>.map-state-filter,.map-filter-row>.map-state-filter{padding:10px;gap:10px;order:initial}.map-stage>.map-state-filter>.map-category-filter,.map-filter-row>.map-state-filter>.map-category-filter{flex-basis:100%;max-width:none}.map-stage>.map-state-filter>label,.map-filter-row>.map-state-filter>label{display:block;flex-basis:calc(50% - 10px)}#nigeria-map>.state-city-map iframe{height:320px}.state-navigation{padding:8px 10px}.state-navigation button{font-size:13px}.state-map-switch{padding:8px 10px}}
