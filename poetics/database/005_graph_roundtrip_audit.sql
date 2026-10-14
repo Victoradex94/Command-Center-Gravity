@@ -13,7 +13,7 @@ WITH graph AS (
          'github-efee4944-claim-' || lpad(ordinality::text,4,'0') AS claim_id
   FROM graph, LATERAL jsonb_array_elements(payload->'edges') WITH ORDINALITY AS e(value,ordinality)
 ), expected_aliases AS (
-  SELECT DISTINCT n.id AS node_id, a.value #>> '{}' AS alias
+  SELECT DISTINCT n.value->>'id' AS node_id, a.value #>> '{}' AS alias
   FROM graph, LATERAL jsonb_array_elements(payload->'rows') AS n(value),
        LATERAL jsonb_array_elements(COALESCE(n.value->'searchAliases','[]'::jsonb)) AS a(value)
 ), expected_urls AS (
