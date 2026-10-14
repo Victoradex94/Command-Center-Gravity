@@ -1,33 +1,46 @@
 # Poetics Atlas staging database
 
-This directory documents the private Supabase staging migration for Poetics Atlas. The canonical Drive ledger remains authoritative until source reconciliation, history coverage, access checks, and recovery are verified. The database is at project tknahlnirtnanzqqvufb. Do not connect this staging database to the live WordPress site.
+**Status: imported into private Supabase staging, not ready for cutover.** The canonical Drive ledger remains authoritative. This project is separate from WordPress.
 
-## Current verified state (14 October 2026)
+## Current sources
 
-- Dashboard project: Poetics Staging; project URL: https://tknahlnirtnanzqqvufb.supabase.co
-- The project dashboard shows a technical-issue investigation banner. Read-only checks succeeded during this session.
-- Tables contain 449 nodes, 664 claims, 31 aliases, 187 sources, 4 artifact records, 664 connections, 664 claim-source links, 30 research runs, 78 queries, 449 artifact chunks, 114 ledger sections, 3 audit events, and 0 decisions.
-- All tables in the poetics schema have row-level security enabled and no policies. Neither anon nor authenticated has schema usage or node-select privilege. This is private default-deny posture.
-- Referential summaries show no missing run-to-section links, query-to-run links, or connection endpoints. Exact source-byte reconstruction hashes matched the three archived captures inspected.
-- The ledger's decision/status history has not been fully represented in the decisions table. An authorised application identity read/write test and a durable recovery test remain open.
+- Supabase: project `Poetics Staging`, ref `tknahlnirtnanzqqvufb`, EU West. The branch selector reads `main PRODUCTION`; this is a database branch label within the separately named staging project. Dashboard showed a service-investigation banner during review.
+- GitHub `main` HEAD observed 14 October 2026: `f2a92a07aa9ea158de21faa1c8b5583feaea91b9`. `poetics/dist/atlas-data.json` was last changed at `a221c05668739a15c0b1f664c5ab2d61bea6ebdd`.
+- `poetics-staging` remains at `a221c05668739a15c0b1f664c5ab2d61bea6ebdd`, four commits behind main. Main contains `poetics/archives/sites-v45-retained-artifacts.tar.gz`, last changed at `efee4944d8177766173dc46411ee48bac76be155`; the path is absent from staging.
+- The Sites Atlas preview currently says “Sign in required”. Its current rendered version cannot be compared with GitHub. GitHub changes do not automatically publish to Sites.
+- Latest verified raw Drive download: 14 October 11:56, 153,555 bytes, SHA256 `b24cffd7c301cb92692914cd4e866da11560c3979a008cdcdfc738442047186a`. Provider revision metadata was not retrieved. A fresh read currently requires Google “Verify it’s you”.
 
-## Files
+## Current database inventory
 
-- 001_staging_schema.sql: original bootstrap schema used in the staging project. It is a record of setup; it is not idempotent and must not be rerun against the existing project.
-- 002_import_support_schema.sql: safe, data-free schema for artifact chunks. Raw data inserts are intentionally excluded.
-- 003_integrity_audit.sql: read-only row-count, RLS, chunk-hash and relationship checks.
+Fresh read-only SQL confirmed that `public` contains no tables and the private `poetics` schema has 13 tables: 449 nodes, 664 connections, 664 claims, 664 claim-source links, 187 sources, 31 aliases, 4 artifact manifests, 469 artifact chunks, 114 ledger sections, 30 research runs, 78 search queries, 0 normalized decisions, and 3 audit events.
 
-## Operating rules
+All four captured payloads were rebuilt from ordered chunks and compared with `original_bytes` and the manifest SHA256. Every payload matched:
 
-1. Keep this branch and database private and staging-only. Never place API keys, connection strings, ledger exports, CSVs, private submissions, or artifact payloads in GitHub.
-2. Inspect the current Drive revision and GitHub main before any new import. Preserve newer source text and record source commit IDs and divergence.
-3. Do not label Drive as superseded until decision/status history, role-based access, and recovery are verified and the user has a clear cutover record.
-4. Preserve stable IDs, original JSON payloads, source URLs, query wording, dates as written, evidence scope, uncertainty, aliases, and all connections.
-5. SQL files in this directory are reviewable records. They are not connected to Supabase migrations and are not automatically deployed. The dashboard currently shows no migration history and no GitHub integration.
+| Artifact | Bytes | Chunks | SHA256 |
+|---|---:|---:|---|
+| `drive-raw-20261014-1156` | 153,555 | 20 | `b24cffd7c301cb92692914cd4e866da11560c3979a008cdcdfc738442047186a` |
+| `drive-rendered-20261014-1130` | 154,655 | 20 | `5db750a0fa809b27359d1a6d88ea08c1d4e9733ea968eda0efe7729cd83c5a64` |
+| `github-main-efee4944-graph-20261014` | 1,597,040 | 200 | `31009691dfc69103ba77a11672757fb8c49f2e42e0c8d29200f7836c8763522d` |
+| `github-main-efee4944-zip-20261014` | 1,825,048 | 229 | `edd0097c89266cc856e1816b61f1c81af6227599ede3c3d8b093e1dfbdc702d2` |
 
+The rendered ledger is a separate browser capture, not the original Drive file. Its `original_bytes` preserve CRLF introduced by browser paste; its `decoded_text` is LF-normalised. The restore script preserves this distinction.
 
-## Latest byte-level recheck (14 October 2026)
+A fresh access query found all 13 tables with RLS enabled, zero policies, and zero SELECT grants to `anon` or `authenticated`. This is default-deny; no authorised application read/write path has been tested.
 
-- The Drive source payload reconstructs to 153,555 bytes and matches its recorded SHA-256. The GitHub graph snapshot reconstructs to 1,597,040 bytes and matches. The GitHub archive reconstructs to 1,825,048 bytes and matches.
-- A fourth artifact manifest, drive-rendered-20261014-1130, has no imported chunks and zero stored bytes. Its original rendered payload is not preserved in Supabase. Keep this as an open evidence gap; do not treat the three verified payloads as all four artifact records.
-- The separate search found 0 decisions. The full ledger sections retain source text, but normalized decision/status history coverage remains incomplete.
+## Remaining gates
+
+1. Reauthenticate to Google, read the current Drive text and provider revision, preserve newer contributions, then append and read back the same file ID.
+2. Reconcile current Drive against GitHub data, aliases, the retained archive, and the branch differences. Do not assume Sites sync.
+3. Rerun complete stable-ID, payload, endpoint, source-URL, query, run, decision and status-history checks against the reconciled source. Raw ledger sections retain narrative status history; `poetics.decisions` has zero rows.
+4. Verify a narrowly authorised application identity and unauthorised denial. Do not widen public access.
+5. Demonstrate durable backup/recovery. The Supabase Free Plan reports no project backups; no restore test is complete.
+6. Reconcile the Cross Country identity proposal and P012 research before importing supported new claims or connections.
+
+## Files and operating rules
+
+- `001_staging_schema.sql`: historical bootstrap; not idempotent and must not be rerun on this project.
+- `002_import_support_schema.sql`: data-free artifact chunk schema.
+- `003_integrity_audit.sql`, `005_graph_roundtrip_audit.sql`, `006_history_artifact_reconciliation.sql`: read-only audits.
+- `004_restore_verified_artifact_bytes.sql`: transactional SHA256-gated restoration for all four captured payloads; not run in this read-only check.
+
+Keep this branch private and staging-only. Commit safe schema and SQL only. Never add credentials, connection strings, ledger dumps, CSV imports, private submissions, or artifact payloads. No live WordPress change, public database/API, Sites publish, or cutover is recorded.
