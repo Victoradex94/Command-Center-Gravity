@@ -1,0 +1,130 @@
+{
+  "run": "RUN-20261014-0014-BIBLIOGRAPHIC",
+  "date": "2026-10-14",
+  "queries": [
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"The Flames of Discord\" \"Uzomah\"",
+      "yield": "Matching Open Library catalogue found."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Rhapsodies of a Corper\" publisher book",
+      "yield": "Other-book listings; no target imprint."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Grains\" \"Richard Inya\" journal 2019 2022",
+      "yield": "Existing 2022 report; no new edition chronology."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Flames of Discord\" Chukwudifu ISBN",
+      "yield": "Matching catalogue; unrelated conflict books rejected."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"2012387449\" \"flames\"",
+      "yield": "No usable direct LC result."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "site:loc.gov \"The flames of discord\"",
+      "yield": "Unrelated historic document; no matching catalogue result."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Rhapsodies of a corper\" \"publisher\"",
+      "yield": "Author interview / announcement only; imprint remains unknown."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Grains\" \"ANA Ebonyi\" edition journal 2019",
+      "yield": "Existing report plus unread social snippets; no chronology resolution."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"9783433652\" poetry",
+      "yield": "Same Open Library family; unrelated numeric matches rejected."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Rhapsodies of a corper\" site:worldcat.org",
+      "yield": "No qualifying target catalogue recovered."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Rhapsodies of a corper\" site:openlibrary.org",
+      "yield": "No qualifying target catalogue recovered."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Grains\" \"Richard Inya\" ISBN",
+      "yield": "No qualifying ISBN; existing newspaper report only."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://openlibrary.org/books/OL25254338M/The_flames_of_discord",
+      "access": "Read",
+      "family": "LC MARC via Open Library"
+    },
+    {
+      "url": "https://openlibrary.org/show-records/marc_loc_updates/v40.i12.records.utf8:14829331:590",
+      "access": "Read full MARC",
+      "family": "LC MARC via Open Library",
+      "claims": [
+        "245 title/author Emma Chukwudifu Uzomah",
+        "260 Aba, Stephanie Bright International, 2006",
+        "020 ISBN 9783433652",
+        "300 iii, 59 pages",
+        "500 Stephanie Bright Literary Series"
+      ],
+      "confidence": "Catalogue-supported; primary-origin record through mirror, not direct LC"
+    },
+    {
+      "url": "https://openlibrary.org/show-records/marc_loc_2016/BooksAll.2016.part40.utf8:11599943:590",
+      "access": "Read same record",
+      "family": "LC MARC via Open Library",
+      "independent": false
+    },
+    {
+      "url": "https://lccn.loc.gov/2012387449",
+      "access": "Inaccessible via search open"
+    },
+    {
+      "url": "https://search.worldcat.org/isbn/9789783433656",
+      "access": "Non-retryable fetch failure"
+    },
+    {
+      "url": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "access": "Search full text; already-known report",
+      "status": "14 July 2022 unveiling; 2019 call stated; conflicting earlier magazine release chronology unresolved"
+    }
+  ],
+  "connections": "Existing Uzomah→book author edge retained; no publisher organisation added without identity evidence. Aba is publication-place association, not author residence or publisher headquarters.",
+  "unresolved": [
+    "Genre of Flames; direct LC/publisher confirmation",
+    "Rhapsodies imprint/ISBN",
+    "Grains first release/edition chronology"
+  ],
+  "counts": {
+    "entries": 428,
+    "relationships": 636,
+    "publications": 25,
+    "Abia": 25
+  },
+  "renderLimit": "No supported browser capability; no fresh rendered/mobile/overflow claim."
+}

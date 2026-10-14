@@ -1,0 +1,154 @@
+{
+  "queries": [
+    {
+      "q": "\"Aba Poetry Club\" \"literary festival\" 2019"
+    },
+    {
+      "q": "\"Ebonyi\" \"poetry slam\" -site:facebook.com"
+    },
+    {
+      "q": "\"ANA Imo\" \"poetry\" \"2024\" winners"
+    },
+    {
+      "q": "\"Abakaliki\" \"poetry\" \"festival\" -site:facebook.com"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ADDRESS DELIVERED BY THE PRESIDENT OF ABA ...",
+      "url": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "ref": "turn162search0"
+    },
+    {
+      "title": "ENUGU HOSTS ITS FIRST POETRY SLAM",
+      "url": "https://radionigeriaenugu.gov.ng/2018/02/enugu-hosts-its-first-poetry-slam/",
+      "ref": "turn162search1"
+    },
+    {
+      "title": "BREAKING NEWS!!! ANAKOR VERA, WINNER OF ALUKO ...",
+      "url": "https://www.facebook.com/hccikoyi/posts/breaking-newsanakor-vera-winner-of-aluko-oyebode-poetry-competition-congratulati/2979468668961882/",
+      "ref": "turn162search2"
+    },
+    {
+      "title": "festival of love",
+      "url": "https://egotickets.com/events/festival-of-love",
+      "ref": "turn162search3"
+    },
+    {
+      "title": "Aba Museum Poetry Club",
+      "url": "https://www.facebook.com/abamuseumpoetryclub/posts/support-aba-literary-festival-the-aba-literary-festival-the-thrust-of-which-is-t/1653139501497062/",
+      "ref": "turn162search4"
+    },
+    {
+      "title": "I had the privilege of Co-hosting the very first Benin Poetry ...",
+      "url": "https://www.instagram.com/",
+      "ref": "turn162search5"
+    },
+    {
+      "title": "Chiamaka Anozie from Myrtle Vine Academy Onitsha ...",
+      "url": "https://www.facebook.com/61550128470329/posts/chiamaka-anozie-from-myrtle-vine-academy-onitsha-showcases-her-poetic-talent-ear/122238800750004282/",
+      "ref": "turn162search6"
+    },
+    {
+      "title": "IQUO, OPPONG, EZE, AGARAU, BADMUS & MADUWUBA",
+      "url": "https://www.wrr.ng/news/fow-2018-guests/",
+      "ref": "turn162search7"
+    },
+    {
+      "title": "Aba Literary and Arts Festival (@abalitfest)",
+      "url": "https://www.facebook.com/abalitfest/",
+      "ref": "turn162search8"
+    },
+    {
+      "title": "creativity is always fed by exposure to different cultures and ...",
+      "url": "https://librettong.com/creativity-is-always-fed-by-exposure-to-different-cultures-and-perspectives-a-conversation-with-dike-chukwumerije/",
+      "ref": "turn162search9"
+    },
+    {
+      "title": "News and Events",
+      "url": "https://www.ananigeria.org/news?page=8",
+      "ref": "turn162search10"
+    },
+    {
+      "title": "\u201cIbadan Will Never Sink\u201d: Inside IBAFEST 2025",
+      "url": "https://ibadanfestival.org/ibadan-will-never-sink-inside-ibafest-2025/",
+      "ref": "turn162search11"
+    },
+    {
+      "title": "AGU PRINCE OSINAYAH (happyprince) - Poet, writer ...",
+      "url": "https://ng.linkedin.com/in/agu-prince-osinayah-happyprince-a814747a",
+      "ref": "turn162search12"
+    },
+    {
+      "title": "Current Poetry Contest/submission In Nigeria - Literature",
+      "url": "https://www.nairaland.com/3295780/current-poetry-contest-submission-nigeria",
+      "ref": "turn162search13"
+    },
+    {
+      "title": "Chimnemezu Nwaeze",
+      "url": "https://boldscholar.com/Home/AuthorsProfile?authorId=7e4c3f55-3ef1-4c7b-9b6f-8423ef222927",
+      "ref": "turn162search14"
+    },
+    {
+      "title": "Indigenous Historiography and Clan Authority in Izzi (Izhi) ...",
+      "url": "https://www.researchgate.net/publication/404867802_Indigenous_Historiography_and_Clan_Authority_in_Izzi_Izhi_Abakaliki_Nigeria_An_Analytic_Auto_ethnographic_Study",
+      "ref": "turn162search15"
+    },
+    {
+      "title": "Opas Fedas: A Fellowship of Kindred Spirits | by Neche J.",
+      "url": "https://medium.com/%40neche/opas-fedas-a-fellowship-of-kindred-spirits-0c4eabc82bd1",
+      "ref": "turn162search16"
+    },
+    {
+      "title": "Welcome to The Poetry Court: August 2016",
+      "url": "https://thepoetrycourt.blogspot.com/2016/08/",
+      "ref": "turn162search17"
+    },
+    {
+      "title": "Winners Of ANA Imo Short Story Competition Emerge.",
+      "url": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+      "ref": "turn162search18"
+    },
+    {
+      "title": "JK Anowe, a Confessional Poet, Confronts Himself",
+      "url": "https://opencountrymag.com/jk-anowe-a-confessional-poet-confronts-himself/",
+      "ref": "turn162search19"
+    },
+    {
+      "title": "BN MAGAZINE'S 2020 TOP TEN YOUNG NIGERIAN POETS ...",
+      "url": "https://bnmagazineng.wordpress.com/2020/12/30/bn-magazines-2020-top-ten-young-nigerian-poets-to-watch/",
+      "ref": "turn162search20"
+    },
+    {
+      "title": "Deborah Uzoma - Currently, a teaching staff member at ...",
+      "url": "https://ng.linkedin.com/in/deborah-uzoma-82235815a",
+      "ref": "turn162search21"
+    },
+    {
+      "title": "Congratulations to Momodou he was the winner \ud83c\udfc6 of ...",
+      "url": "https://www.facebook.com/tanjigottalent/posts/congratulations-to-momodou-he-was-the-winner-of-the-senior-poetry-category-more-/539619664563367/",
+      "ref": "turn162search22"
+    },
+    {
+      "title": "Ikeogu Oke, the poet-warrior laid to rest",
+      "url": "https://www.vanguardngr.com/2019/04/ikeogu-oke-the-poet-warrior-laid-to-rest/",
+      "ref": "turn162search23"
+    },
+    {
+      "title": "WELCOME ADDRESS DELIVERED BY THE PRESIDENT OF ABA POETRY CLUB ON THE OCCASION OF THE MAUDEN ABA LITERARY FESTIVAL ON THE 28TH OF SEPTEMBER, 2019, AT THE CONFERENCE HALL, ACCIMA. \u2013 happyprince Blog",
+      "url": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "ref": "turn162view0"
+    },
+    {
+      "title": "ANA IMO CELEBRATES ANA\u2019S IMMEDIATE PAST PRESIDENT DR CAMILUS UKAH IN A WORTHY HOME COMING EVENT AND THE CHAPTER\u2019S CONTINUED PROMOTION OF LITERATURE",
+      "url": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "ref": "turn162view1"
+    },
+    {
+      "title": "I Just Want 2 Say? (My Alacrity) | TikkBay",
+      "url": "https://www.tikkbay.com/events/i-just-want-2-say-my-alacrity-dcGbEv",
+      "ref": "turn162view3"
+    }
+  ],
+  "note": "Discovery metadata only; inspected claim extracts are recorded separately."
+}

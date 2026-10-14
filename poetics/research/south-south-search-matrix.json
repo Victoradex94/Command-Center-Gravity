@@ -1,0 +1,767 @@
+{
+  "batch": "2026-10-13-south-south",
+  "searchedAt": "2026-10-13",
+  "queryCount": 52,
+  "groups": [
+    {
+      "id": "SS01",
+      "engine": "system2",
+      "queries": [
+        "\"Cross Country Celebration of Poetry\" 2023 held October",
+        "\"Cross Country Celebration\" poetry Calabar Port Harcourt Yenagoa",
+        "\"Cross Country Celebration\" poetry \"Issele\" \"Enang\"",
+        "\"Cross Country Celebration\" poetry Benin Ehis Ferguson"
+      ],
+      "outcome": "Programme statements, Ekiti post-event account and university biography discovered; no local South South completion proof.",
+      "refs": [
+        "turn142search0",
+        "turn142search1",
+        "turn142search2",
+        "turn142search5",
+        "turn142search6",
+        "turn142search7"
+      ],
+      "negativeYield": "No South South stop completion proven by these grouped results."
+    },
+    {
+      "id": "SS02",
+      "engine": "system1",
+      "queries": [
+        "\"Cross Country Celebration of Poetry\" \"Calabar\" 2023",
+        "\"Cross Country Celebration of Poetry\" \"Port Harcourt\" 2023",
+        "\"Cross Country Celebration of Poetry\" \"Yenagoa\" 2023",
+        "\"Cross Country Celebration of Poetry\" \"Ikot\" 2023"
+      ],
+      "outcome": "Itinerary and syndicated announcement retrieved; mixed-edition social index snippets retained as leads only.",
+      "refs": [
+        "turn143search6",
+        "turn143search11"
+      ],
+      "negativeYield": "No readable local result report. Facebook index snippets mix 2023/2025/2026 and cannot establish occurrence."
+    },
+    {
+      "id": "SS03",
+      "engine": "system2",
+      "queries": [
+        "\"Cross Country Celebration of Poetry\" \"Benin\" 2023 report",
+        "\"Cross Country Celebration of Poetry\" \"Issele-Uku\" report",
+        "\"Cross Country Celebration of Poetry\" \"Yenagoa\" held",
+        "\"Cross Country Celebration of Poetry\" \"Calabar\" held"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/",
+          "ref": "turn144search0"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+          "ref": "turn144search1"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry – Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn144search2"
+        },
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn144search3"
+        },
+        {
+          "title": "Pomp's as Poets in Nigeria Takes Poetry to Ekiti Varsity, Solicit Supports, Govt recognition - Topnewsng.com",
+          "url": "https://topnewsng.com/poets-in-nigeria-takes-poetry-to-ekiti-varsity-solicit-govt-recognition-support/",
+          "ref": "turn144search5"
+        },
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn144view0"
+        },
+        {
+          "title": "INTRODUCING THE CROSS COUNTRY CELEBRATION OF POETRY The cross country celebration of poetry is an Initiative of Poets in Nigeria (PIN) that seeks to showcase poetry and poets in the finest of ways… | POETS IN NIGERIA INITIATIVE (PIN)",
+          "url": "https://www.linkedin.com/posts/poets-in-nigeria-initiative_introducing-the-cross-country-celebration-activity-7070398230315831297-K_cy",
+          "ref": "turn144view1"
+        },
+        {
+          "title": "On October 21st Poets in Nigeria Initiative (PIN) held a Cross Country Celebration of Poetry at 44 locations simultaneously in Nigeria. Poets and poetry lovers gathered to read, recite and perform… | Funke Awodiya",
+          "url": "https://www.linkedin.com/posts/funke-awodiya-b5bba165_on-october-21st-poets-in-nigeria-initiative-activity-7122227136219742208-OjZI",
+          "ref": "turn144view2"
+        },
+        {
+          "title": "Pomp's as Poets in Nigeria Takes Poetry to Ekiti Varsity, Solicit Supports, Govt recognition - Topnewsng.com",
+          "url": "https://topnewsng.com/poets-in-nigeria-takes-poetry-to-ekiti-varsity-solicit-govt-recognition-support/",
+          "ref": "turn144view3"
+        }
+      ],
+      "negativeYield": "No South South city-level completion report retrieved; national releases repeat one evidence family."
+    },
+    {
+      "id": "SS04",
+      "engine": "system2",
+      "queries": [
+        "poetry festival slam Yenagoa Bayelsa 2024 2025 report",
+        "poetry slam Benin Edo festival 2024 2025",
+        "poetry open mic Delta Warri Asaba 2024 2025",
+        "poetry Calabar Cross River festival spoken word competition report"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "Zoom Meetings and Webinars Archive » LAGOSINTERNATIONALPOETRYFESTIVAL",
+          "url": "https://lagospoetryfestival.com/zoom-meetings/",
+          "ref": "turn145search0"
+        },
+        {
+          "title": "When festival poetry Calabar 2016 stood on novelty, sociability footing | The Guardian Nigeria News - Nigeria and World News",
+          "url": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+          "ref": "turn145search1"
+        },
+        {
+          "title": "Poetry Festival : In Calabar, festivity meets creativity on platform of dynamism – The Sun Nigeria",
+          "url": "https://thesun.ng/poetry-festival-in-calabar-festivity-meets-creativity-on-platform-of-dynamism/",
+          "ref": "turn145search2"
+        },
+        {
+          "title": "La grande nuit du SLAM - Institut Français du Bénin",
+          "url": "https://if-benin.com/agenda-culturel/la-grande-nuit-du-slam/",
+          "ref": "turn145search3"
+        },
+        {
+          "title": "FESTIVAL POETRY COMPETITION: CALL FOR ENTRIES – Poets in Nigeria",
+          "url": "https://poetsinnigeria.org.ng/index.php/festival-poetry-competition-call-for-entries/",
+          "ref": "turn145search4"
+        },
+        {
+          "title": "Art oratoire au Bénin : la Fédération Béninoise de Slam-Poésie voit le jour - Le Grand Oueme",
+          "url": "https://legrandoueme.bj/art-oratoire-au-benin-la-federation-beninoise-de-slam-poesie-voit-le-jour/",
+          "ref": "turn145search5"
+        },
+        {
+          "title": "Grande Finale du Concours National de Slam Poésie : Le verbe béninois à l’épreuve des réseaux sociaux - AGENCE DEKART",
+          "url": "https://dekartcom.net/actualites/grande-finale-du-concours-national-de-slam-poesie-le-verbe-beninois-a-lepreuve-des-reseaux-sociaux/",
+          "ref": "turn145search6"
+        },
+        {
+          "title": "Accueil - Afroslam",
+          "url": "https://afroslam.org/",
+          "ref": "turn145search7"
+        },
+        {
+          "title": "WORLD POETRY DAY: Delta Literary Forum lights up Asaba - Blank News Online",
+          "url": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+          "ref": "turn145search8"
+        },
+        {
+          "title": "Call For Entry |2017 Ken Egbas Prize For Festival Poetry Calabar | PIN & EPF",
+          "url": "https://www.thearts-musefair.com/2017/10/call-for-entry-2017-ken-egbas-prize-for.html",
+          "ref": "turn145search11"
+        },
+        {
+          "title": "3 Days Poetry Fiesta Ends In Calabar - CrossRiverWatch",
+          "url": "https://crossriverwatch.com/2017/01/3-days-poetry-fiesta-ends-in-calabar/",
+          "ref": "turn145search13"
+        },
+        {
+          "title": "KEN EGBAS PRIZE FOR FESTIVAL POETRY (CALABAR 2017) – THE PRIZE WINNERS – Poets in Nigeria",
+          "url": "https://poetsinnigeria.org.ng/index.php/ken-egbas-prize-for-festival-poetry-calabar-2017-the-prize-winners/",
+          "ref": "turn145search14"
+        },
+        {
+          "title": "Le Bénin relance la scène slam avec un concours national engagé - Afroslam",
+          "url": "https://afroslam.org/le-benin-relance-la-scene-slam-avec-un-concours-national-engage/",
+          "ref": "turn145search16"
+        },
+        {
+          "title": "CONCOURS NATIONAL DE SLAM ET POESIE DU BENIN - WAYI",
+          "url": "https://wayi.app/f/v_event/CNSPB",
+          "ref": "turn145search18"
+        },
+        {
+          "title": "Paid Archives » LAGOSINTERNATIONALPOETRYFESTIVAL",
+          "url": "https://lagospoetryfestival.com/fest-event-cat/paid/",
+          "ref": "turn145search20"
+        },
+        {
+          "title": "Tobi Abiodun » LAGOSINTERNATIONALPOETRYFESTIVAL",
+          "url": "https://lagospoetryfestival.com/tobi-abiodun/",
+          "ref": "turn145search21"
+        },
+        {
+          "title": "Benin Slam Awards",
+          "url": "https://beninslamawards.com/",
+          "ref": "turn145search24"
+        },
+        {
+          "title": "FESTIVAL POETRY CALABAR 2017 – DRUMS OF POETRY: ECHOES & PROSPECTS – Poets in Nigeria",
+          "url": "https://poetsinnigeria.org.ng/index.php/festival-poetry-calabar-2017-drums-of-poetry-echoes-prospects/",
+          "ref": "turn145search30"
+        },
+        {
+          "title": "GREY MARTYR WINS THE LIPFEST POETRY GRAND SLAM, 2024 - ARTS LOUNGE MAGAZINE",
+          "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/",
+          "ref": "turn145search37"
+        }
+      ],
+      "negativeYield": "Broad Benin results include Republic of Benin and UK band; excluded. Comedy-only open mics and essay-only contests excluded."
+    },
+    {
+      "id": "SS05",
+      "engine": "system2",
+      "queries": [
+        "\"Victory Udie\" poetry anthology",
+        "\"Rowland Ofiyou\" poet",
+        "\"Ehis Ferguson\" poetry",
+        "\"Salomi Ikoyoko\" poetry"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn146search0"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry – Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn146search1"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+          "ref": "turn146search2"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/",
+          "ref": "turn146search3"
+        },
+        {
+          "title": "Bayelsa Author, Tobuyei Launches New Book Daily Asset Online",
+          "url": "https://dailyasset.ng/bayelsa-author-tobuyei-launches-new-book/",
+          "ref": "turn146search7"
+        },
+        {
+          "title": "Bayelsa Author and Writer of GASP, Theresa Ebi Tobuyei, Launches New Book The Man Called Elizabeth Martins – Niger Delta Herald Newspaper",
+          "url": "https://nigerdeltaheraldngr.com/bayelsa-author-and-writer-of-gasp-theresa-ebi-tobuyei-launches-new-book-the-man-called-elizabeth-martins/",
+          "ref": "turn146search9"
+        },
+        {
+          "title": "EShipley – Poem of the Month",
+          "url": "https://blogs.baruch.cuny.edu/poemofthemonth/author/5837/",
+          "ref": "turn146search15"
+        },
+        {
+          "title": "3 Days Poetry Fiesta Ends In Calabar - CrossRiverWatch",
+          "url": "https://crossriverwatch.com/2017/01/3-days-poetry-fiesta-ends-in-calabar/",
+          "ref": "turn146view2"
+        }
+      ],
+      "negativeYield": "No corroborated biography for Ehis Ferguson or Salomi Ikoyoko. Victory Udie profile identities ambiguous; Ofiyou literary role lead found but not merged."
+    },
+    {
+      "id": "SS06",
+      "engine": "system1",
+      "queries": [
+        "\"Delta Literary Forum\" \"March 21, 2024\"",
+        "\"Festival Poetry Calabar\" 2016 winners Prestige Arch Angel",
+        "\"Ken Egbas\" \"2017\" \"winners\"",
+        "\"poetry\" \"Benin City\" \"festival\" -site:facebook.com -Bénin -Cotonou"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "WORLD POETRY DAY: Delta Literary Forum lights up Asaba",
+          "url": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/?nb=1&share=jetpack-whatsapp",
+          "ref": "turn147search0"
+        },
+        {
+          "title": "KEN EGBAS PRIZE FOR FESTIVAL POETRY (CALABAR ...",
+          "url": "https://poetsinnigeria.org.ng/index.php/ken-egbas-prize-for-festival-poetry-calabar-2017-the-prize-winners/",
+          "ref": "turn147search1"
+        },
+        {
+          "title": "Battle of the Stanzas (BOTS) takes Benin City by storm with ...",
+          "url": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+          "ref": "turn147search2"
+        },
+        {
+          "title": "Poet in the City Presents: Benin City – Last Night",
+          "url": "https://www.kingsplace.co.uk/whats-on/contemporary/poet-city-presents-benin-city-last-night/",
+          "ref": "turn147search5"
+        },
+        {
+          "title": "KEN EGBAS PRIZE FOR FESTIVAL POETRY (CALABAR ...",
+          "url": "https://poetsinnigeria.org.ng/index.php/ken-egbas-prize-for-festival-poetry-calabar-2017-the-shortlist/",
+          "ref": "turn147search8"
+        },
+        {
+          "title": "PAWA Backs “battle Of Stanzas” And Benin City's First ...",
+          "url": "https://www.nairaland.com/8498647/pawa-backs-battle-stanzas-benin",
+          "ref": "turn147search11"
+        },
+        {
+          "title": "CALLS FOR SUBMISION: KEN EGBAS POETRY PRIZE",
+          "url": "https://thevoiceofficial.over-blog.com/2017/10/calls-for-submision-ken-egbas-poetry-prize.html",
+          "ref": "turn147search12"
+        },
+        {
+          "title": "(DOC) THE POETRY OF IGUE FESTIVAL'S SONG-TEXT",
+          "url": "https://www.academia.edu/4894605/THE_POETRY_OF_IGUE_FESTIVALS_SONG_TEXT",
+          "ref": "turn147search13"
+        },
+        {
+          "title": "Poetry and Lyrics Festival",
+          "url": "https://www.knowledgequarter.london/event/poetry-and-lyrics-festival/",
+          "ref": "turn147search15"
+        },
+        {
+          "title": "KEN EGBAS PRIZE FOR FESTIVAL POETRY CALABAR ...",
+          "url": "https://www.facebook.com/poetsinnigeria/posts/call-for-entries-ken-egbas-prize-for-festival-poetry-calabar-2017poets-in-nigeri/1180481602052277/",
+          "ref": "turn147search16"
+        },
+        {
+          "title": "BN MAGAZINE'S 2018 TOP TEN YOUNG NIGERIAN POETS ...",
+          "url": "https://bnmagazineng.wordpress.com/2018/12/11/bn-magazines-2018-top-ten-young-nigerian-poets-to-watch/",
+          "ref": "turn147search17"
+        },
+        {
+          "title": "When festival poetry Calabar 2016 stood on novelty, sociability footing | The Guardian Nigeria News - Nigeria and World News",
+          "url": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+          "ref": "turn147view0"
+        },
+        {
+          "title": "Bayelsa Author, Tobuyei Launches New Book Daily Asset Online",
+          "url": "https://dailyasset.ng/bayelsa-author-tobuyei-launches-new-book/",
+          "ref": "turn147view2"
+        }
+      ],
+      "negativeYield": "Ken Egbas result page inaccessible; no winner imported. Delta 2024 direct report timeout recorded."
+    },
+    {
+      "id": "SS07",
+      "engine": "system2",
+      "queries": [
+        "\"Battle of the Stanzas\" \"August 30\" 2025",
+        "\"Stanzas from the Bronze Capital\" anthology 2025",
+        "\"Delta Literary Forum\" \"Chike\" 2024",
+        "\"Bright Chukwuemeke\" poetry anthology"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "Stanzas from the Bronze Capital: A Defining Voice in Edo’s Literary Journey - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+          "ref": "turn148search0"
+        },
+        {
+          "title": "Special Events - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/category/special-events/",
+          "ref": "turn148search1"
+        },
+        {
+          "title": "Poetry Renaissance beckons in Edo State as \"Battle of... - TheConclaveNg",
+          "url": "https://www.theconclaveng.com/poetry-renaissance-beckons-in-edo-state-as-battle-of-stanza-takes-centre-stage/amp/",
+          "ref": "turn148search2"
+        },
+        {
+          "title": "Naija Poetry Fest, Benin Writers Society Invite Literary Artists to Edo Anthology Stanza | Town Crier",
+          "url": "https://towncriernews.com.ng/naija-poetry-fest-benin-writers-society-invite-literary-artists-to-edo-anthology-stanza/",
+          "ref": "turn148search3"
+        },
+        {
+          "title": "Edo marks literary milestone with launch of ‘Stanzas from the Bronze Capital’ | Nigerian NewsDirect",
+          "url": "https://nigeriannewsdirect.com/edo-marks-literary-milestone-with-launch-of-stanzas-from-the-bronze-capital/",
+          "ref": "turn148search4"
+        },
+        {
+          "title": "Edo’s Poetic Renaissance: A New Era of Literary Excellence – Splash9ja",
+          "url": "https://splash9ja.org/edos-poetic-renaissance-a-new-era-of-literary-excellence/",
+          "ref": "turn148search5"
+        },
+        {
+          "title": "Art, Music, and the Power of the Word: Naija Poetry Fest Unites for Peace Day. – Splash9ja",
+          "url": "https://splash9ja.org/naija-poetry-fest-marks-peace-day-with-art-music-and-words/",
+          "ref": "turn148search6"
+        },
+        {
+          "title": "WORLD POETRY DAY: Delta Literary Forum lights up Asaba - Blank News Online",
+          "url": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+          "ref": "turn148search7"
+        },
+        {
+          "title": "Battle of the Stanzas - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/category/special-events/battle-of-the-stanzas/",
+          "ref": "turn148search8"
+        },
+        {
+          "title": "Glitz, glamour as battle of stanzas redefines poetry events in Nigeria, births first anthology of poems in Edo | PeriscopeNGA.com",
+          "url": "https://periscopenga.com/2025/08/glitz-glamour-as-battle-of-stanzas-redefines-poetry-events-in-nigeria-births-first-anthology-of-poems-in-edo/",
+          "ref": "turn148search9"
+        },
+        {
+          "title": "Why Battle of the Stanzas? - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/why-battle-of-the-stanzas/",
+          "ref": "turn148search11"
+        },
+        {
+          "title": "PAWA Backs “battle Of Stanzas” And Benin City’s First Poetry Anthology - Literature - Nigeria",
+          "url": "https://www.nairaland.com/8498647/pawa-backs-battle-stanzas-benin",
+          "ref": "turn148search13"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry – Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn148search14"
+        },
+        {
+          "title": "The Woman’s Voice – POETic BANE",
+          "url": "https://poeticbane.wordpress.com/2018/01/03/the-womans-voice/",
+          "ref": "turn148search15"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/",
+          "ref": "turn148search23"
+        },
+        {
+          "title": "Battle of the Stanzas (BOTS) takes Benin City by storm with Renaissance of the Poetic - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+          "ref": "turn148view0"
+        },
+        {
+          "title": "When festival poetry Calabar 2016 stood on novelty, sociability footing | The Guardian Nigeria News - Nigeria and World News",
+          "url": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+          "ref": "turn148view2"
+        }
+      ],
+      "negativeYield": "Floreb winner identity still unresolved; source variants retained. Bright Chukwuemeke fuller-name match not resolved."
+    },
+    {
+      "id": "SS08",
+      "engine": "system2",
+      "queries": [
+        "\"Godswill Enang\" poetry",
+        "\"Lue Trust Benjamin\" poetry",
+        "\"Sunday Igbikiberebima\" poetry",
+        "\"Delta Literary Forum\" poetry 2024 Alonu Azua"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "WORLD POETRY DAY: Delta Literary Forum lights up Asaba - Blank News Online",
+          "url": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+          "ref": "turn149search0"
+        },
+        {
+          "title": "NIGERIAN STUDENTS POETRY PRIZE 2017: TOP 100 POEMS – Poets in Nigeria",
+          "url": "https://poetsinnigeria.org.ng/index.php/nigerian-students-poetry-prize-2017-top-100-poems/",
+          "ref": "turn149search1"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/",
+          "ref": "turn149search5"
+        },
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn149search6"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+          "ref": "turn149search7"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry – Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn149search8"
+        },
+        {
+          "title": "I Want To Be Part Of The Nigerian Literary Community - Ken Wiwa - AfricanWriter.com",
+          "url": "https://www.africanwriter.com/i-want-to-be-part-of-the-nigerian-literary-community-ken-wiwa/",
+          "ref": "turn149search9"
+        },
+        {
+          "title": "Blank POETRY – Home Of Literary Arts",
+          "url": "https://blankpoetry.wordpress.com/",
+          "ref": "turn149search16"
+        },
+        {
+          "title": "Glitz, glamour as battle of stanzas redefines poetry events in Nigeria, births first anthology of poems in Edo | PeriscopeNGA.com",
+          "url": "https://periscopenga.com/2025/08/glitz-glamour-as-battle-of-stanzas-redefines-poetry-events-in-nigeria-births-first-anthology-of-poems-in-edo/",
+          "ref": "turn149view0"
+        },
+        {
+          "title": "Stanzas from the Bronze Capital: A Defining Voice in Edo’s Literary Journey - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+          "ref": "turn149view1"
+        },
+        {
+          "title": "Dr. Emmanuel Uche Nnyagu - Nnamdi Azikiwe University",
+          "url": "https://profile.unizik.edu.ng/nau4594",
+          "ref": "turn149view3"
+        }
+      ],
+      "negativeYield": "Lue Trust Benjamin and Sunday Igbikiberebima biographies not corroborated. Enang chapbook titles unresolved."
+    },
+    {
+      "id": "SS09",
+      "engine": "system2",
+      "queries": [
+        "\"Battle of the Stanzas\" \"Oghenovo\" Floreb",
+        "\"Godswill Enang\" \"chapbook\" title",
+        "\"Cross Country\" poetry \"Salomi\" held",
+        "\"Cross Country\" poetry \"Ofiyou\" held"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/",
+          "ref": "turn150search0"
+        },
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn150search1"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+          "ref": "turn150search3"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry – Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn150search4"
+        },
+        {
+          "title": "FESTIVAL POETRY COMPETITION: CALL FOR ENTRIES – Poets in Nigeria",
+          "url": "https://poetsinnigeria.org.ng/index.php/festival-poetry-competition-call-for-entries/",
+          "ref": "turn150view2"
+        }
+      ],
+      "negativeYield": "No readable Salomi/Ofiyou CCPC completion evidence. Oghenovo winner search returned irrelevant matches."
+    },
+    {
+      "id": "SS10",
+      "engine": "system2",
+      "queries": [
+        "\"poetry\" \"Yenagoa\" \"open mic\"",
+        "\"Cross Country\" \"Benin\" \"Ehis\" 2023 poetry",
+        "\"Cross Country\" \"Ikot Ekpene\" \"October 21\" poetry",
+        "\"Cross Country\" \"Issele-Uku\" \"October 21\" poetry"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "Update on Cross Country Celebration of Poetry – Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn151search0"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/",
+          "ref": "turn151search2"
+        },
+        {
+          "title": "You promised us madaraka,",
+          "url": "https://static1.squarespace.com/static/5f91fef8b0d4490021b637f5/t/67acf6dda0c8570ea633f604/1739388637678/GEN%2BZ%2BKenya%2BPoetry%2Bcompetition%2B25%2BSHORTLIST.pdf",
+          "ref": "turn151search26"
+        },
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn151search4"
+        },
+        {
+          "title": "PORT-HARCOURT LITERARY SOCIETY: Changing The Niger Delta Story With Poetry.",
+          "url": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+          "ref": "turn151search7"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+          "ref": "turn151search8"
+        },
+        {
+          "title": "NSPP 2020 to reward student poets - The Nation Newspaper",
+          "url": "https://thenationonlineng.net/nspp-2020-to-reward-student-poets/",
+          "ref": "turn151search9"
+        },
+        {
+          "title": "Jazz Poetry Night – An evening of undiluted spoken word poetry and good music",
+          "url": "https://jazznight.poetry.blog/",
+          "ref": "turn151search11"
+        }
+      ],
+      "negativeYield": "Benin/Issele/Ikot searches still yield announcements. Ink Potters original supporter notice found, not a completion report."
+    },
+    {
+      "id": "SS11",
+      "engine": "system2",
+      "queries": [
+        "\"Ink Potters\" \"Open Mic Night\" Yenagoa report",
+        "\"Battle of the Stanzas\" \"Lanre Sonde\" anthology",
+        "\"Port Harcourt Literary Society\" slam 2018 Tobi Ude Ugo",
+        "\"Cross Country\" poetry \"Victory Udie\" 2023 photos"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "Stanzas from the Bronze Capital: A Defining Voice in Edo’s Literary Journey - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+          "ref": "turn152search0"
+        },
+        {
+          "title": "PORT-HARCOURT LITERARY SOCIETY: Changing The Niger Delta Story With Poetry.",
+          "url": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+          "ref": "turn152search1"
+        },
+        {
+          "title": "Do You Want To Win 100,000 Thousand Naira In A Poetry Slam - Literature/Writing Ads - Nigeria",
+          "url": "https://www.nairaland.com/4490881/want-win-100000-thousand-naira",
+          "ref": "turn152search2"
+        },
+        {
+          "title": "Port Harcourt Literary Society | Project Tags | New Books Nigeria",
+          "url": "https://newbooksnigeria.wordpress.com/project-tag/port-harcourt-literary-society/",
+          "ref": "turn152search8"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry – Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn152search10"
+        },
+        {
+          "title": "ENUGU HOSTS ITS FIRST POETRY SLAM - Radio Nigeria South East Zonal Station",
+          "url": "https://radionigeriaenugu.gov.ng/2018/02/enugu-hosts-its-first-poetry-slam/",
+          "ref": "turn152search11"
+        },
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn152search14"
+        },
+        {
+          "title": "As PH spills poems, not just oil – Businessday NG",
+          "url": "https://businessday.ng/news/article/as-ph-spills-poems-not-just-oil/",
+          "ref": "turn152search15"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+          "ref": "turn152search16"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/",
+          "ref": "turn152search17"
+        },
+        {
+          "title": "Jazz Poetry Night – An evening of undiluted spoken word poetry and good music",
+          "url": "https://jazznight.poetry.blog/",
+          "ref": "turn152search18"
+        },
+        {
+          "title": "2022 SPRINNG POETRY CONTEST WINNER",
+          "url": "https://sprinng.org/s/2022-SprinNG-Poetry-Contest-Winner.pdf",
+          "ref": "turn152search34"
+        },
+        {
+          "title": "PORT-HARCOURT LITERARY SOCIETY:  Changing The Niger Delta Story With Poetry.",
+          "url": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+          "ref": "turn152view2"
+        }
+      ],
+      "negativeYield": "Calabar 2023 occurrence still unverified. PHLS announcement and held-results account found; exact day conflict unresolved."
+    },
+    {
+      "id": "SS12",
+      "engine": "system1",
+      "queries": [
+        "site:vanguardngr.com \"SDU\" \"Salome\" poets 2026",
+        "site:blanknewsonline.com \"WORLD POETRY DAY\" \"Ograka\" \"2024\" schools",
+        "site:fulaninewsmedia.com \"Abdulbaki Ahmad\" \"24\" \"2024\"",
+        "\"Southern Delta University\" \"Orerokpe\" \"poetry\" October 2026"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "SDU hosts poets, writers in courtesy visit, pledges support ...",
+          "url": "https://www.vanguardngr.com/2026/08/sdu-hosts-poets-writers-in-courtesy-visit-pledges-support-for-creative-culture/",
+          "ref": "turn156search0"
+        },
+        {
+          "title": "WORLD POETRY DAY: Delta Literary Forum lights up Asaba",
+          "url": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/?nb=1&share=jetpack-whatsapp",
+          "ref": "turn156search1"
+        },
+        {
+          "title": "I Cease To Be When Fulfulde Ceases To Be",
+          "url": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+          "ref": "turn156search2"
+        },
+        {
+          "title": "Cross Country Poetry Celebration at Southern Delta ...",
+          "url": "https://www.facebook.com/61567367845042/posts/cross-country-poetry-celebration-to-hold-in-southern-delta-university-orerokpe-c/122224351808578928/",
+          "ref": "turn156search3"
+        },
+        {
+          "title": "REPRESENTATIVES OF PIN, THE CCPC, PTS AND ANA ...",
+          "url": "https://www.facebook.com/oribhabor/posts/representatives-of-pin-the-ccpc-pts-and-ana-delta-pay-courtesy-visit-to-the-vice/28916701651266042/",
+          "ref": "turn156search5"
+        },
+        {
+          "title": "CCPC 2026 TO HOLD IN THE FOLLOWING ...",
+          "url": "https://www.facebook.com/oribhabor/posts/ccpc-2026-to-hold-in-the-following-institutionswe-are-excited-to-announce-that-t/29195507870052084/",
+          "ref": "turn156search7"
+        },
+        {
+          "title": "SDU hosts poets, writers in courtesy visit, pledges support for creative culture - Vanguard News",
+          "url": "https://www.vanguardngr.com/2026/08/sdu-hosts-poets-writers-in-courtesy-visit-pledges-support-for-creative-culture/",
+          "ref": "turn156view0"
+        }
+      ],
+      "negativeYield": "No university-hosted corroboration for Orerokpe proposal; social index snippets remain leads. User Gombe URL inaccessible; canonical longer URL found."
+    },
+    {
+      "id": "SS13",
+      "engine": "system2",
+      "queries": [
+        "site:blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba \"Izuma\" \"schools\"",
+        "site:blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba \"Diai\" \"Ifowodo\"",
+        "site:blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba \"Secretary\"",
+        "site:sdu.edu.ng \"Cross Country\" poetry"
+      ],
+      "outcome": "Retrieved; candidate URLs below are batch-wide results, not individually attributable to a query.",
+      "candidates": [
+        {
+          "title": "WORLD POETRY DAY: Delta Literary Forum lights up Asaba - Blank News Online",
+          "url": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+          "ref": "turn157search0"
+        },
+        {
+          "title": "to commemorate the 2026 World Press Freedom Day in Asaba - Blank News Online",
+          "url": "https://www.blanknewsonline.com/to-commemorate-the-2026-world-press-freedom-day-in-asaba/",
+          "ref": "turn157search2"
+        },
+        {
+          "title": "I Cease To Be When Fulfulde Ceases To Be: The Role of Poetry in Preserving and Promoting the Fulfulde Language as Well as Saving the Fulɓe Nation - Fulani News Media ",
+          "url": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+          "ref": "turn157view0"
+        }
+      ],
+      "negativeYield": "University-domain search yielded no relevant corroboration. Full Asaba article returned by targeted search, despite direct fetch timeouts."
+    }
+  ],
+  "limitations": [
+    "Grouped searches cannot map every candidate to a particular query.",
+    "No direct Google or signed-in Facebook/Instagram audit performed.",
+    "No-result or irrelevant yields do not prove a locality lacks poetry activity."
+  ]
+}

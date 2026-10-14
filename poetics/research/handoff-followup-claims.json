@@ -1,0 +1,194 @@
+{
+  "reviewedAt": "2026-10-13",
+  "claims": [
+    {
+      "entity": "ccpc-abeokuta-2024",
+      "claim": "Guardian reports poetry performances and participation certificates.",
+      "sourceURL": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+      "status": "Source confirmed",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "usc-cathedral-hall",
+      "claim": "Reported event venue.",
+      "sourceURL": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+      "status": "Source confirmed",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "babatunde-sanyaolu",
+      "claim": "Reported host.",
+      "sourceURL": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+      "status": "Source confirmed",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "adesola-adenekan",
+      "claim": "Reported co-host.",
+      "sourceURL": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+      "status": "Source confirmed",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "ccpc-abeokuta-2024",
+      "claim": "reported venue → usc-cathedral-hall",
+      "sourceURL": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+      "status": "Single newspaper post-event report",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "ccpc-abeokuta-2024",
+      "claim": "host reported → babatunde-sanyaolu",
+      "sourceURL": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+      "status": "Single newspaper post-event report",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "ccpc-abeokuta-2024",
+      "claim": "co-host reported → adesola-adenekan",
+      "sourceURL": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+      "status": "Single newspaper post-event report",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "ccpc-abeokuta-2024",
+      "claim": "programme initiative attributed → c2",
+      "sourceURL": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+      "status": "Single newspaper post-event report",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "ccpc-abeokuta-2024",
+      "claim": "named programme → ccpc",
+      "sourceURL": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+      "status": "Single newspaper post-event report",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "ccpc-ojokoro-2024",
+      "claim": "Advance notice advertises a poetry gathering.",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Announcement verified",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "ojokoro-library",
+      "claim": "Announced venue.",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Announcement verified",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "yemi-adebiyi",
+      "claim": "Announced host and named poetry-book author.",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Announcement verified",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "adedapo-conde",
+      "claim": "Announced co-host.",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Announcement verified",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "mercy-eno",
+      "claim": "Announced co-host.",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Announcement verified",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "ccpc-ojokoro-2024",
+      "claim": "announced venue → ojokoro-library",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Advance announcement; attendance and occurrence unverified",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "ccpc-ojokoro-2024",
+      "claim": "announced host → yemi-adebiyi",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Advance announcement; attendance and occurrence unverified",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "ccpc-ojokoro-2024",
+      "claim": "announced co-host → adedapo-conde",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Advance announcement; attendance and occurrence unverified",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "ccpc-ojokoro-2024",
+      "claim": "announced co-host → mercy-eno",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Advance announcement; attendance and occurrence unverified",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "ccpc-ojokoro-2024",
+      "claim": "announced initiative → c2",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Advance announcement; attendance and occurrence unverified",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "rhapsodies-corper",
+      "claim": "Poetry book attributed to Yemi Adebiyi.",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Source confirmed",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "yemi-adebiyi",
+      "claim": "author attributed → rhapsodies-corper",
+      "sourceURL": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "status": "Only the source-stated role",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "nwuguru-chidiebere",
+      "claim": "Full name in UNLV biography matches itinerary identity; institutional biography supports writer identity, not event completion.",
+      "sourceURL": "https://www.unlv.edu/people/chidiebere-nwuguru",
+      "status": "Primary biography",
+      "confidence": "High for name variant match"
+    },
+    {
+      "entity": "uncanny-58",
+      "claim": "Publisher credits Nwuguru Chidiebere Sullivan’s poetry.",
+      "sourceURL": "https://www.uncannymagazine.com/issues/uncanny-magazine-issue-fifty-eight/",
+      "status": "Source confirmed",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "mizna-24-1",
+      "claim": "Publisher’s feature list names Nwuguru Chidiebere Sullivan.",
+      "sourceURL": "https://mizna.org/journal-slider/24-1-myth-and-memory/",
+      "status": "Source confirmed",
+      "confidence": "High for source-stated claim; wider biography/activity not inferred"
+    },
+    {
+      "entity": "nwuguru-chidiebere",
+      "claim": "poetry contributor credited → uncanny-58",
+      "sourceURL": "https://www.uncannymagazine.com/issues/uncanny-magazine-issue-fifty-eight/",
+      "status": "Publisher table of contents",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "nwuguru-chidiebere",
+      "claim": "featured contributor credited → mizna-24-1",
+      "sourceURL": "https://mizna.org/journal-slider/24-1-myth-and-memory/",
+      "status": "Publisher feature list; contributed work/genre unverified",
+      "confidence": "High for attribution"
+    },
+    {
+      "entity": "ana-abia-yusuf-2019",
+      "claim": "Corrected school names; removed unsupported amounts and venue link. Reading venue remains supported. PDF page 25, printed 25.",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=25",
+      "status": "Correction after primary-text recheck",
+      "confidence": "High for explicit chapter wording"
+    }
+  ]
+}

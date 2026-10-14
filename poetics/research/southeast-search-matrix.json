@@ -1,0 +1,1474 @@
+{
+  "batch": "2026-10-13-abia-ebonyi-imo",
+  "searchedAt": "2026-10-13",
+  "queryCount": 44,
+  "groups": [
+    {
+      "id": "SE01",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": "poetry open mic Aba Abia Umuahia literary event",
+          "yieldNote": "Aba president address and ANA notices discovered.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "poetry slam festival Abakaliki Ebonyi Nigeria",
+          "yieldNote": "CCPC itinerary and unrelated comedy listing; no completion proof.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "poetry open mic Owerri Imo literary event",
+          "yieldNote": "Official ANA Imo report and book presentation discovered.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "\"Cross Country Celebration\" \"Abakaliki\" poetry",
+          "yieldNote": "2023 itinerary only; local completion unsupported.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+          "ref": "turn161search3"
+        },
+        {
+          "url": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+          "ref": "turn161search7"
+        }
+      ],
+      "negativeYield": "No additional qualifying independent completion, winner or bibliographic evidence beyond the explicitly classified claims. Absence applies to this pass only."
+    },
+    {
+      "id": "SE02",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": {
+            "q": "\"Aba Poetry Club\" \"literary festival\" 2019"
+          },
+          "yieldNote": "President address read: 28 September 2019, ACCIMA.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"Ebonyi\" \"poetry slam\" -site:facebook.com"
+          },
+          "yieldNote": "No qualifying slam occurrence; comedy ticket excluded.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"ANA Imo\" \"poetry\" \"2024\" winners"
+          },
+          "yieldNote": "Official May 2024 prize report; winner absent.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"Abakaliki\" \"poetry\" \"festival\" -site:facebook.com"
+          },
+          "yieldNote": "Festival of Love ticket announcement; completion absent.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        }
+      ],
+      "sources": [
+        {
+          "title": "ADDRESS DELIVERED BY THE PRESIDENT OF ABA ...",
+          "url": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+          "ref": "turn162search0"
+        },
+        {
+          "title": "ENUGU HOSTS ITS FIRST POETRY SLAM",
+          "url": "https://radionigeriaenugu.gov.ng/2018/02/enugu-hosts-its-first-poetry-slam/",
+          "ref": "turn162search1"
+        },
+        {
+          "title": "BREAKING NEWS!!! ANAKOR VERA, WINNER OF ALUKO ...",
+          "url": "https://www.facebook.com/hccikoyi/posts/breaking-newsanakor-vera-winner-of-aluko-oyebode-poetry-competition-congratulati/2979468668961882/",
+          "ref": "turn162search2"
+        },
+        {
+          "title": "festival of love",
+          "url": "https://egotickets.com/events/festival-of-love",
+          "ref": "turn162search3"
+        },
+        {
+          "title": "Aba Museum Poetry Club",
+          "url": "https://www.facebook.com/abamuseumpoetryclub/posts/support-aba-literary-festival-the-aba-literary-festival-the-thrust-of-which-is-t/1653139501497062/",
+          "ref": "turn162search4"
+        },
+        {
+          "title": "I had the privilege of Co-hosting the very first Benin Poetry ...",
+          "url": "https://www.instagram.com/",
+          "ref": "turn162search5"
+        },
+        {
+          "title": "Chiamaka Anozie from Myrtle Vine Academy Onitsha ...",
+          "url": "https://www.facebook.com/61550128470329/posts/chiamaka-anozie-from-myrtle-vine-academy-onitsha-showcases-her-poetic-talent-ear/122238800750004282/",
+          "ref": "turn162search6"
+        },
+        {
+          "title": "IQUO, OPPONG, EZE, AGARAU, BADMUS & MADUWUBA",
+          "url": "https://www.wrr.ng/news/fow-2018-guests/",
+          "ref": "turn162search7"
+        },
+        {
+          "title": "Aba Literary and Arts Festival (@abalitfest)",
+          "url": "https://www.facebook.com/abalitfest/",
+          "ref": "turn162search8"
+        },
+        {
+          "title": "creativity is always fed by exposure to different cultures and ...",
+          "url": "https://librettong.com/creativity-is-always-fed-by-exposure-to-different-cultures-and-perspectives-a-conversation-with-dike-chukwumerije/",
+          "ref": "turn162search9"
+        },
+        {
+          "title": "News and Events",
+          "url": "https://www.ananigeria.org/news?page=8",
+          "ref": "turn162search10"
+        },
+        {
+          "title": "\u201cIbadan Will Never Sink\u201d: Inside IBAFEST 2025",
+          "url": "https://ibadanfestival.org/ibadan-will-never-sink-inside-ibafest-2025/",
+          "ref": "turn162search11"
+        },
+        {
+          "title": "AGU PRINCE OSINAYAH (happyprince) - Poet, writer ...",
+          "url": "https://ng.linkedin.com/in/agu-prince-osinayah-happyprince-a814747a",
+          "ref": "turn162search12"
+        },
+        {
+          "title": "Current Poetry Contest/submission In Nigeria - Literature",
+          "url": "https://www.nairaland.com/3295780/current-poetry-contest-submission-nigeria",
+          "ref": "turn162search13"
+        },
+        {
+          "title": "Chimnemezu Nwaeze",
+          "url": "https://boldscholar.com/Home/AuthorsProfile?authorId=7e4c3f55-3ef1-4c7b-9b6f-8423ef222927",
+          "ref": "turn162search14"
+        },
+        {
+          "title": "Indigenous Historiography and Clan Authority in Izzi (Izhi) ...",
+          "url": "https://www.researchgate.net/publication/404867802_Indigenous_Historiography_and_Clan_Authority_in_Izzi_Izhi_Abakaliki_Nigeria_An_Analytic_Auto_ethnographic_Study",
+          "ref": "turn162search15"
+        },
+        {
+          "title": "Opas Fedas: A Fellowship of Kindred Spirits | by Neche J.",
+          "url": "https://medium.com/%40neche/opas-fedas-a-fellowship-of-kindred-spirits-0c4eabc82bd1",
+          "ref": "turn162search16"
+        },
+        {
+          "title": "Welcome to The Poetry Court: August 2016",
+          "url": "https://thepoetrycourt.blogspot.com/2016/08/",
+          "ref": "turn162search17"
+        },
+        {
+          "title": "Winners Of ANA Imo Short Story Competition Emerge.",
+          "url": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+          "ref": "turn162search18"
+        },
+        {
+          "title": "JK Anowe, a Confessional Poet, Confronts Himself",
+          "url": "https://opencountrymag.com/jk-anowe-a-confessional-poet-confronts-himself/",
+          "ref": "turn162search19"
+        },
+        {
+          "title": "BN MAGAZINE'S 2020 TOP TEN YOUNG NIGERIAN POETS ...",
+          "url": "https://bnmagazineng.wordpress.com/2020/12/30/bn-magazines-2020-top-ten-young-nigerian-poets-to-watch/",
+          "ref": "turn162search20"
+        },
+        {
+          "title": "Deborah Uzoma - Currently, a teaching staff member at ...",
+          "url": "https://ng.linkedin.com/in/deborah-uzoma-82235815a",
+          "ref": "turn162search21"
+        },
+        {
+          "title": "Congratulations to Momodou he was the winner \ud83c\udfc6 of ...",
+          "url": "https://www.facebook.com/tanjigottalent/posts/congratulations-to-momodou-he-was-the-winner-of-the-senior-poetry-category-more-/539619664563367/",
+          "ref": "turn162search22"
+        },
+        {
+          "title": "Ikeogu Oke, the poet-warrior laid to rest",
+          "url": "https://www.vanguardngr.com/2019/04/ikeogu-oke-the-poet-warrior-laid-to-rest/",
+          "ref": "turn162search23"
+        },
+        {
+          "title": "WELCOME ADDRESS DELIVERED BY THE PRESIDENT OF ABA POETRY CLUB ON THE OCCASION OF THE MAUDEN ABA LITERARY FESTIVAL ON THE 28TH OF SEPTEMBER, 2019, AT THE CONFERENCE HALL, ACCIMA. \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+          "ref": "turn162view0"
+        },
+        {
+          "title": "ANA IMO CELEBRATES ANA\u2019S IMMEDIATE PAST PRESIDENT DR CAMILUS UKAH IN A WORTHY HOME COMING EVENT AND THE CHAPTER\u2019S CONTINUED PROMOTION OF LITERATURE",
+          "url": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+          "ref": "turn162view1"
+        },
+        {
+          "title": "I Just Want 2 Say? (My Alacrity) | TikkBay",
+          "url": "https://www.tikkbay.com/events/i-just-want-2-say-my-alacrity-dcGbEv",
+          "ref": "turn162view3"
+        }
+      ],
+      "negativeYield": "No additional qualifying independent completion, winner or bibliographic evidence beyond the explicitly classified claims. Absence applies to this pass only."
+    },
+    {
+      "id": "SE03",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": {
+            "q": "\"Aba Literary Festival\" 2019 September 28 report"
+          },
+          "yieldNote": "Same president source; no independent event report.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"Aba Poetry Club\" \"Agu\" founder"
+          },
+          "yieldNote": "Public professional profile identifies Agu Prince Osinayah; Guardian independently reports founder.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"ANA Imo\" \"poetry\" \"Nwokedi\" winners"
+          },
+          "yieldNote": "No qualifying winner result.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"Festival of Love\" \"Abakaliki\" poetry 2018"
+          },
+          "yieldNote": "Ticket listing: 14 February 2018, Monabliss, Speak Out Loud.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        }
+      ],
+      "sources": [
+        {
+          "title": "WELCOME ADDRESS DELIVERED BY THE PRESIDENT OF ABA POETRY CLUB ON THE OCCASION OF THE MAUDEN ABA LITERARY FESTIVAL ON THE 28TH OF SEPTEMBER, 2019, AT THE CONFERENCE HALL, ACCIMA. \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+          "ref": "turn163search0"
+        },
+        {
+          "title": "A DECADE TO THE DREAD AND THE GREY. \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2021/06/25/a-decade-to-the-dread-and-the-grey/",
+          "ref": "turn163search1"
+        },
+        {
+          "title": "Painting the gloomy memories of COVID-19 through poetry",
+          "url": "https://guardian.ng/news/painting-the-gloomy-memories-of-covid-19-through-poetry/",
+          "ref": "turn163search2"
+        },
+        {
+          "title": "happyprince Blog \u2013 happyprince Blog is where I lay sanity on the commotions of my mind. It's my little sanctuary. My gateway from all that ails the peace in the sky of hearts. Thanks for stopping by.",
+          "url": "https://happyprinceblog.wordpress.com/",
+          "ref": "turn163search3"
+        },
+        {
+          "title": "ANA IMO CELEBRATES ANA\u2019S IMMEDIATE PAST PRESIDENT DR CAMILUS UKAH IN A WORTHY HOME COMING EVENT AND THE CHAPTER\u2019S CONTINUED PROMOTION OF LITERATURE",
+          "url": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+          "ref": "turn163search4"
+        },
+        {
+          "title": "LET\u2019S BE HONEST. \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2021/10/25/lets-be-honest/",
+          "ref": "turn163search5"
+        },
+        {
+          "title": "YOUR BEAD OR YOUR LIFE? \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2021/08/16/your-bead-or-your-life/",
+          "ref": "turn163search6"
+        },
+        {
+          "title": "Gaza and the Contradictions of Faith. \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2025/05/23/gaza-and-the-contradictions-of-faith/",
+          "ref": "turn163search7"
+        },
+        {
+          "title": "TALKNADO, DANNIE AND THE GANG OF MOCKERS. \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2020/04/30/talknado-dannie-and-the-gang-of-mockers/",
+          "ref": "turn163search8"
+        },
+        {
+          "title": "Yesterday. . . \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2021/08/01/yesterday/",
+          "ref": "turn163search9"
+        },
+        {
+          "title": "Winners Of ANA Imo Short Story Competition Emerge. - GrassrootReporters",
+          "url": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+          "ref": "turn163search10"
+        },
+        {
+          "title": "Hon. Dame Blessing Nwagba PhD: Woman and Human at 61",
+          "url": "https://igberetvnews.com/1396504/hon-dame-blessing-nwagba-phd-woman-human-61/",
+          "ref": "turn163search11"
+        },
+        {
+          "title": "How The Rot Deepens\u200a\u2014\u200aby Osinaya HappyPrince Agu - Words Not yet Spoken - Medium",
+          "url": "https://medium.com/%40isaacaju/how-the-rot-deepens-by-osinaya-happyprince-agu-28db182751ab",
+          "ref": "turn163search12"
+        },
+        {
+          "title": "2025 In Review: My Year of Clarity & Doing | by Godsdelight Agu | Medium",
+          "url": "https://medium.com/%40godsdelight-agu/2025-in-review-my-year-of-clarity-doing-e7717677e7a2",
+          "ref": "turn163search13"
+        },
+        {
+          "title": "A city of griots - Businessday NG",
+          "url": "https://businessday.ng/arts-and-life/article/a-city-of-griots/",
+          "ref": "turn163search14"
+        },
+        {
+          "title": "Chidozie Chukwubuike Holds a Public Presentation of Two Books of Poetry - OtownGist Media",
+          "url": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+          "ref": "turn163search15"
+        },
+        {
+          "title": "Festival of love in Ebonyi \u2013 The Sun Nigeria",
+          "url": "https://thesun.ng/festival-of-love-in-ebonyi/",
+          "ref": "turn163search16"
+        },
+        {
+          "title": "Oke-aku Ezza Ezekuna: A Festival Of Love And Peace",
+          "url": "https://www.thenigerianvoice.com/news/280138/oke-aku-ezza-ezekuna-a-festival-of-love-and-peace.html",
+          "ref": "turn163search17"
+        },
+        {
+          "title": ".:: Abba Abba | Federal University Lokoja",
+          "url": "https://fulokoja.edu.ng/staff.php?i=813&sn=abba-abba",
+          "ref": "turn163search18"
+        },
+        {
+          "title": "OWERRI: A City Of Griots By Chuks Oluigbo | Naija247news",
+          "url": "https://naija247news.com/owerri-a-city-of-griots-by-chuks-oluigbo/",
+          "ref": "turn163search19"
+        },
+        {
+          "title": "Owerri: A City Of Griots - Politics - Nigeria",
+          "url": "https://www.nairaland.com/3515865/owerri-city-griots",
+          "ref": "turn163search20"
+        },
+        {
+          "title": "Vivek Arora aka Karma is an Indian hip hop and rap artist",
+          "url": "https://sccz.edu.in/wp-content/uploads/2023/05/7.3.1-Ziro-Literary-Fest-2019.pdf",
+          "ref": "turn163search47"
+        },
+        {
+          "title": "Owerri A City Of Groits. - Literature - Nigeria",
+          "url": "https://www.nairaland.com/3510814/owerri-city-groits",
+          "ref": "turn163search21"
+        },
+        {
+          "title": "Aji: Festival celebrated shirtless \u2013 The Sun Nigeria",
+          "url": "https://thesun.ng/aji-festival-celebrated-shirtless/",
+          "ref": "turn163search22"
+        },
+        {
+          "title": "Anyi Aboo by Chandel: Listen on Audiomack",
+          "url": "https://audiomack.com/chandel4realest/song/anyi-aboo",
+          "ref": "turn163search23"
+        },
+        {
+          "title": "WELCOME ADDRESS DELIVERED BY THE PRESIDENT OF ABA POETRY CLUB ON THE OCCASION OF THE MAUDEN ABA LITERARY FESTIVAL ON THE 28TH OF SEPTEMBER, 2019, AT THE CONFERENCE HALL, ACCIMA. \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+          "ref": "turn163view0"
+        },
+        {
+          "title": "eGotickets \u2014 FESTIVAL OF LOVE at Monabliss Hotels & Suites, Abakaliki, Ebonyi State of Nigeria., Nigeria, Wed, 14 Feb 2018 at 4:00 PM, Get Tickets",
+          "url": "https://egotickets.com/events/festival-of-love",
+          "ref": "turn163view1"
+        },
+        {
+          "title": "Association of Nigerian Authors, Abia State Chapter Announces Monthly Reading For April 2026 | Ojemba Magazine",
+          "url": "https://ojembamagazine.com/association-of-nigerian-authors-abia-state-chapter-announces-monthly-reading-for-april-2026/",
+          "ref": "turn163view2"
+        }
+      ],
+      "negativeYield": "No additional qualifying independent completion, winner or bibliographic evidence beyond the explicitly classified claims. Absence applies to this pass only."
+    },
+    {
+      "id": "SE04",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": {
+            "q": "\"Aba Literary Festival\" \"September\" \"2019\" -site:facebook.com"
+          },
+          "yieldNote": "No additional independent completion report.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"Roadside Notes\" poetry Aba"
+          },
+          "yieldNote": "Named in president account; exact date/venue not recovered.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"Festival of Love\" \"Speak Out Loud\" \"Abakaliki\""
+          },
+          "yieldNote": "Same announcement family; no completion.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"Cross Country\" \"Nwuguru\" \"2023\" poetry"
+          },
+          "yieldNote": "Itinerary remains a lead; no occurrence or identity merge.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        }
+      ],
+      "sources": [
+        {
+          "title": "WELCOME ADDRESS DELIVERED BY THE PRESIDENT OF ABA POETRY CLUB ON THE OCCASION OF THE MAUDEN ABA LITERARY FESTIVAL ON THE 28TH OF SEPTEMBER, 2019, AT THE CONFERENCE HALL, ACCIMA. \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+          "ref": "turn164search0"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry \u2013 Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn164search1"
+        },
+        {
+          "title": "Resume:  James Applewhite",
+          "url": "https://fds.duke.edu/db/aas/English/faculty/jwa/files/CV.pdf",
+          "ref": "turn164search37"
+        },
+        {
+          "title": "James Applewhite",
+          "url": "https://en.wikipedia.org/wiki/James_Applewhite",
+          "ref": "turn164search38"
+        },
+        {
+          "title": "A Roadside Stand Class 12 Notes English Ch 10 PDF",
+          "url": "https://collegedunia.com/articles/e-1731-ncert-notes-class-12-english-core-chapter-10-flamingo-poetry-a-roadside-stand",
+          "ref": "turn164search2"
+        },
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn164search3"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry \u2013 Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+          "ref": "turn164search4"
+        },
+        {
+          "title": "CBSE Class 12 English Chapter 4 \u2013 A Roadside Stand Notes & Important Questions",
+          "url": "https://infinitylearn.com/cbse-board/class-12-english-notes/a-roadside-stand",
+          "ref": "turn164search5"
+        },
+        {
+          "title": "James Applewhite",
+          "url": "https://cliffipedia.org/content/wikipedia_en_all_maxi_2025-08/James_Applewhite",
+          "ref": "turn164search6"
+        },
+        {
+          "title": "The Empty Stool | Roadside Notes \u2014 A Faith and Good Courage Journal Reading | Ep55 | Roadside Notes Episode on Amazon Music",
+          "url": "https://music.amazon.com/podcasts/a12d956c-33bc-441e-85f4-b491d6c54984/episodes/19a42778-1cab-4311-b212-f363269c003d/roadside-notes-the-empty-stool-roadside-notes-%E2%80%94-a-faith-and-good-courage-journal-reading-ep55",
+          "ref": "turn164search7"
+        },
+        {
+          "title": "What The Road Taught Me | Roadside Notes \u2014 A Faith and Good Courage Journal Reading | Ep44-Roadside Notes",
+          "url": "https://music.amazon.com/podcasts/a12d956c-33bc-441e-85f4-b491d6c54984/episodes/01ce6e26-1a66-4984-8843-3113ad52fb0e/roadside-notes-what-the-road-taught-me-roadside-notes-%E2%80%94-a-faith-and-good-courage-journal-reading-ep44",
+          "ref": "turn164search8"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry \u2013 Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/",
+          "ref": "turn164search9"
+        },
+        {
+          "title": "The Man Who Drove Every Road | Roadside Notes \u2014 A Faith and Good Courage Journal Reading | Ep43-Roadside Notes",
+          "url": "https://music.amazon.com/podcasts/a12d956c-33bc-441e-85f4-b491d6c54984/episodes/ee1e290b-c427-4be5-ae41-2b2115c70658/roadside-notes-the-man-who-drove-every-road-roadside-notes-%E2%80%94-a-faith-and-good-courage-journal-reading-ep43",
+          "ref": "turn164search10"
+        },
+        {
+          "title": "Life and the Student: Roadside Notes on Human Nature, Society, and Letters",
+          "url": "https://api.pageplace.de/preview/DT0400.9781351508728_A30394481/preview-9781351508728_A30394481.pdf",
+          "ref": "turn164search39"
+        },
+        {
+          "title": "A Roadside Stand | Class 12 English Notes AHSEC complete answer",
+          "url": "https://assamboardexam.com/a-roadside-stand-class-12-english-notes/",
+          "ref": "turn164search11"
+        },
+        {
+          "title": "Grace Takes the Detour | Roads\u2026 - Roadside Notes - Apple Podcasts",
+          "url": "https://podcasts.apple.com/us/podcast/grace-takes-the-detour-roadside-notes-a-faith/id1846908723?i=1000773269035",
+          "ref": "turn164search12"
+        },
+        {
+          "title": "^",
+          "url": "https://www.digitalgreensboro.org/nanna/record/68916/files/coraddimar1929unse.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+          "ref": "turn164search40"
+        },
+        {
+          "title": "Select Book Conferences, Festivals, and Fairs in 2019",
+          "url": "https://www2.publishersweekly.com/pw/print/20190107/78933-select-book-conferences-festivals-and-fairs-in-2019.html",
+          "ref": "turn164search13"
+        },
+        {
+          "title": "Poetry at the Motel | Lexington Poetry Month",
+          "url": "https://lexpomo.com/poem/poetry-at-the-motel/",
+          "ref": "turn164search14"
+        },
+        {
+          "title": "James Applewhite",
+          "url": "https://kaweah.freedombox.rocks/kiwix/content/wikipedia_en_all_maxi_2023-10/A/James_Applewhite",
+          "ref": "turn164search15"
+        },
+        {
+          "title": "James Applewhite Explained",
+          "url": "https://everything.explained.today/James_Applewhite/",
+          "ref": "turn164search16"
+        },
+        {
+          "title": "Page 510 \u2013 News Wings",
+          "url": "https://newswings.com.ng/page/510/?cat=-1%3Fq%3Dhow-investments-in-early-childhood-centres-in-zanzibar-are-unlocking-womens-earning-power&lang=en&pr=315143",
+          "ref": "turn164search17"
+        },
+        {
+          "title": "November 13, 1997",
+          "url": "https://transportation.ky.gov/Construction-Procurement/Proposals/101-PIKE-10-1056%20Addendum%201.pdf",
+          "ref": "turn164search41"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://www.ontheroadin.com/wp-content/uploads/2018/11/2018-Nogales-to-PV-final-1.pdf",
+          "ref": "turn164search42"
+        },
+        {
+          "title": "Covid-19 Impact Listing: Cancellations, Closings, Policy Changes, and More",
+          "url": "https://www2.publishersweekly.com/pw/print/20200316/82672-covid-19-ongoing-list-of-cancellations.html",
+          "ref": "turn164search18"
+        },
+        {
+          "title": "Assessment of climate-smart agricultural practices of plantain farmers in Anambra State, Nigeria | Asian Journal of Agriculture",
+          "url": "https://www.smujo.id/aja/article/view/20279",
+          "ref": "turn164search19"
+        },
+        {
+          "title": "August | 2019 | Linda's Book Bag",
+          "url": "https://lindasbookbag.com/2019/08/",
+          "ref": "turn164search20"
+        },
+        {
+          "title": "Chidozie Chukwubuike Holds a Public Presentation of Two Books of Poetry - OtownGist Media",
+          "url": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+          "ref": "turn164view0"
+        },
+        {
+          "title": "Winners Of ANA Imo Short Story Competition Emerge. - GrassrootReporters",
+          "url": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+          "ref": "turn164view1"
+        },
+        {
+          "title": "Painting the gloomy memories of COVID-19 through poetry",
+          "url": "https://guardian.ng/news/painting-the-gloomy-memories-of-covid-19-through-poetry/",
+          "ref": "turn164view2"
+        },
+        {
+          "title": "A DECADE TO THE DREAD AND THE GREY. \u2013 happyprince Blog",
+          "url": "https://happyprinceblog.wordpress.com/2021/06/25/a-decade-to-the-dread-and-the-grey/",
+          "ref": "turn164view3"
+        }
+      ],
+      "negativeYield": "No additional qualifying independent completion, winner or bibliographic evidence beyond the explicitly classified claims. Absence applies to this pass only."
+    },
+    {
+      "id": "SE05",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": {
+            "q": "\"Festival of Love\" \"Speak Out Loud\" poetry Abakaliki 2018 report"
+          },
+          "yieldNote": "No qualifying completion; unrelated traditional festival not conflated.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"Abakaliki\" \"open mic\" poetry -site:facebook.com -site:instagram.com"
+          },
+          "yieldNote": "No qualifying local occurrence returned.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"Umuahia Literary Society\" poetry reading"
+          },
+          "yieldNote": "Named interface supported; social snippets remain leads.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": {
+            "q": "\"Aba Poetry Club\" anthology book"
+          },
+          "yieldNote": "Florence author site and anthology PDF lead; publisher credits unresolved.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open Mic Night with Lolo 1 of Wazobia FM, Date: 5th March ...",
+          "url": "https://funtaqa.wordpress.com/2015/03/03/open-mic-night-with-lolo-1-of-wazobia-fm-date-5th-march-2015-venue-bogobiri-ikoyi/",
+          "ref": "turn165search0"
+        },
+        {
+          "title": "These days, I get excited about coming to Umuahia. It's ...",
+          "url": "https://www.facebook.com/chukwuka24/posts/these-days-i-get-excited-about-coming-to-umuahia-its-now-a-place-i-look-forward-/10211183206170271/",
+          "ref": "turn165search1"
+        },
+        {
+          "title": "Live at the Aba Literary and Arts Festival organized ...",
+          "url": "https://www.instagram.com/",
+          "ref": "turn165search2"
+        },
+        {
+          "title": "poetry Archives - Events in Nigeria - EventsNigeria",
+          "url": "https://eventsnigeria.com/event_tag/poetry/",
+          "ref": "turn165search3"
+        },
+        {
+          "title": "ADDRESS DELIVERED BY THE PRESIDENT OF ABA ...",
+          "url": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+          "ref": "turn165search4"
+        },
+        {
+          "title": "It's Association of Nigerian Authors (ANA), Abia State chapter's ...",
+          "url": "https://www.facebook.com/abapoetryclub/posts/its-association-of-nigerian-authors-ana-abia-state-chapters-final-reading-of-202/1303397391803722/",
+          "ref": "turn165search5"
+        },
+        {
+          "title": "Laureates Science Innovation and Education Initiative",
+          "url": "https://ng.linkedin.com/company/ebonyi-laureates",
+          "ref": "turn165search6"
+        },
+        {
+          "title": "Moleskine Foundation",
+          "url": "https://www.facebook.com/MoleskineFoundation/posts/we-are-extremely-excited-to-be-collaborating-with-abuja-literary-society-to-part/1541979195982104/",
+          "ref": "turn165search7"
+        },
+        {
+          "title": "Today at the Aba Literary and Arts Festival, I got to experience ...",
+          "url": "https://www.facebook.com/oruzkennedy/videos/today-at-the-aba-literary-and-arts-festival-i-got-to-experience-the-pulse-of-the/1704438876898721/",
+          "ref": "turn165search8"
+        },
+        {
+          "title": "Events This Weekend",
+          "url": "https://www.bellanaija.com/2016/06/events-this-weekend-249/",
+          "ref": "turn165search9"
+        },
+        {
+          "title": "Reviving the reading culture, one story at a time. Writer, editor ...",
+          "url": "https://www.facebook.com/s24television/posts/reviving-the-reading-culture-one-story-at-a-timewriter-editor-and-cultural-advoc/122197005254925618/",
+          "ref": "turn165search10"
+        },
+        {
+          "title": "Aba Book Club (@ababooklub) - Mentions",
+          "url": "https://www.facebook.com/ababooklub/mentions/",
+          "ref": "turn165search11"
+        },
+        {
+          "title": "Ebonyi Laureates(Laureates SIE) (@EbonyiLaureates) ...",
+          "url": "https://x.com/EbonyiLaureates",
+          "ref": "turn165search12"
+        },
+        {
+          "title": "Books are slowly regaining space in Enugu's public life. ...",
+          "url": "https://www.facebook.com/NewsCentralAfrica/posts/books-are-slowly-regaining-space-in-enugus-public-life-from-bookshops-to-festiva/1607434374729656/",
+          "ref": "turn165search13"
+        },
+        {
+          "title": "Stage Poetry Performance by Fatima Adamu, titled \"See Me ...",
+          "url": "https://www.facebook.com/mpsmediang2/posts/stage-poetry-performance-by-fatima-adamu-titled-see-me-beyond-the-disability-dur/1340744278223348/",
+          "ref": "turn165search14"
+        },
+        {
+          "title": "(PDF) Plague finalTuseday 2 july (1) (1) (2)",
+          "url": "https://www.academia.edu/43513403/Plague_finalTuseday_2_july_1_1_2_",
+          "ref": "turn165search15"
+        },
+        {
+          "title": "the first literary festival held in Enugu in decades. Her work has ...",
+          "url": "https://www.facebook.com/dailytimesnigeria/posts/how-one-woman-is-reviving-enugus-literary-culturefor-decades-enugus-once-vibrant/1486690866817640/",
+          "ref": "turn165search16"
+        },
+        {
+          "title": "Florence Chukwuonye \u2014 African Literary Fiction Writer ...",
+          "url": "https://www.florencechukwuonye.com/",
+          "ref": "turn165search17"
+        },
+        {
+          "title": "AGU PRINCE OSINAYAH (happyprince) - Poet, writer ...",
+          "url": "https://ng.linkedin.com/in/agu-prince-osinayah-happyprince-a814747a",
+          "ref": "turn165search18"
+        },
+        {
+          "title": "Abuja, this is your chance to an amazing evening of poetry ...",
+          "url": "https://m.facebook.com/cafeonenig/photos/abuja-this-is-your-chance-to-an-amazing-evening-of-poetry-short-stories-and-musi/1038695444719303/",
+          "ref": "turn165search19"
+        },
+        {
+          "title": "Friday, 27 Oct 2017 (today) Time: 7PM Venue: Sandralia ...",
+          "url": "https://www.facebook.com/dike.chukwumerije/posts/what-are-you-doing-this-friday-eveningits-happening-again-in-this-city-of-lights/724027974454358/",
+          "ref": "turn165search21"
+        },
+        {
+          "title": "Proud of you Abdulmajid Gambo Danbaba",
+          "url": "https://www.facebook.com/usman.muazu.988/posts/proud-of-you-abdulmajid-gambo-danbaba/4400619700151616/",
+          "ref": "turn165search22"
+        },
+        {
+          "title": "NWA releases 100 MOST INFLUENTIAL NIGERIAN WRITERS ...",
+          "url": "https://blackpridemagazine.wordpress.com/2018/12/29/nwa-releases-100-most-influential-nigerian-writers-under-40-2018-list/",
+          "ref": "turn165search23"
+        },
+        {
+          "title": "When Silence Is No Longer an Option\u2026 ...",
+          "url": "https://www.facebook.com/mpsmediang2/posts/%EF%B8%8F-when-silence-is-no-longer-an-optionthe-knockout-stage-of-the-mps-media-poetry-/1385392140425228/",
+          "ref": "turn165search24"
+        }
+      ],
+      "negativeYield": "No additional qualifying independent completion, winner or bibliographic evidence beyond the explicitly classified claims. Absence applies to this pass only."
+    },
+    {
+      "id": "SE06",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": "\"Chidozie Chukwubuike\" \"Jangolova\" presentation Owerri 2022",
+          "yieldNote": "Otown full indexed report: held presentation in Owerri at Whelan.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "\"Jangolova\" \"Wriggling to Freedom\" publisher",
+          "yieldNote": "No qualifying imprint/ISBN; source year not publication year.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "\"ANA Imo\" poetry May 2024 winner Nwokedi",
+          "yieldNote": "Official report confirms May prize, not winner.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "\"Ebonyi Laureates\" poetry June 27 2026",
+          "yieldNote": "Primary club page reports two 2025 open mics without venue/format; LinkedIn online notice.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Chidozie Chukwubuike Holds a Public Presentation of Two Books of Poetry - OtownGist Media",
+          "url": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+          "ref": "turn166search0"
+        },
+        {
+          "title": "ANA IMO CELEBRATES ANA\u2019S IMMEDIATE PAST PRESIDENT DR CAMILUS UKAH IN A WORTHY HOME COMING EVENT AND THE CHAPTER\u2019S CONTINUED PROMOTION OF LITERATURE",
+          "url": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+          "ref": "turn166search1"
+        },
+        {
+          "title": "Home | Ebonyi Laureates",
+          "url": "https://www.ebonyilaureates.com/index.html",
+          "ref": "turn166search2"
+        },
+        {
+          "title": "Ebonyi Laureates | Substack",
+          "url": "https://ebonyilaureates.substack.com/",
+          "ref": "turn166search3"
+        },
+        {
+          "title": "Scholarships & Mentorship | Ebonyi Laureates",
+          "url": "https://www.ebonyilaureates.com/scholarships.html",
+          "ref": "turn166search4"
+        },
+        {
+          "title": "Scholarships & Mentorship | Ebonyi Laureates",
+          "url": "https://ebonyilaureates.com/scholarships.html",
+          "ref": "turn166search5"
+        },
+        {
+          "title": "EDUCATION M",
+          "url": "https://nigeriareposit.nln.gov.ng/bitstreams/541bf037-2fec-4311-8013-52b3ceff7c56/download",
+          "ref": "turn166search25"
+        },
+        {
+          "title": "Clubs | Ebonyi Laureates",
+          "url": "https://ebonyilaureates.com/clubs.html",
+          "ref": "turn166search6"
+        },
+        {
+          "title": "Damola Sanyaolu - OVO | LinkedIn",
+          "url": "https://uk.linkedin.com/in/damolasanyaolu",
+          "ref": "turn166search7"
+        },
+        {
+          "title": "Ebonyi Laureates - Laureates Science Innovation and Education Initiative - Laureates SIE | LinkedIn",
+          "url": "https://ng.linkedin.com/company/ebonyi-laureates",
+          "ref": "turn166search8"
+        },
+        {
+          "title": "Winners Of ANA Imo Short Story Competition Emerge. - GrassrootReporters",
+          "url": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+          "ref": "turn166search9"
+        },
+        {
+          "title": "Testimonials | Ebonyi Laureates",
+          "url": "https://www.ebonyilaureates.com/testimonials.html",
+          "ref": "turn166search10"
+        },
+        {
+          "title": "ebonyilaureates.com Reviews | scam, legit or safe check | Scamadviser",
+          "url": "https://www.scamadviser.com/check-website/ebonyilaureates.com",
+          "ref": "turn166search11"
+        },
+        {
+          "title": "About Us | My Site",
+          "url": "https://ds361x.wixstudio.com/ebonyilaureates/blank",
+          "ref": "turn166search12"
+        },
+        {
+          "title": "#ebonyilaureates | Ebonyi Laureates - Laureates Science Innovation and Education Initiative - Laureates SIE",
+          "url": "https://www.linkedin.com/posts/ebonyi-laureates_ebonyilaureates-activity-7246964733919064064-SGOg",
+          "ref": "turn166search13"
+        },
+        {
+          "title": "Welcome to July 2026 - Ebonyi Laureates",
+          "url": "https://ebonyilaureates.substack.com/p/welcome-to-july-2026",
+          "ref": "turn166search14"
+        },
+        {
+          "title": "A city of griots - Businessday NG",
+          "url": "https://businessday.ng/arts-and-life/article/a-city-of-griots/",
+          "ref": "turn166search15"
+        },
+        {
+          "title": "Deborah Uzoma Unveils My Father\u2019s House & Other Poems at Star-Studded Imo Event - OtownGist Media",
+          "url": "https://www.otowngist.com/2025/06/deborah-uzoma-unveils-my-fathers-house-other-poems-at-star-studded-imo-event/",
+          "ref": "turn166search16"
+        },
+        {
+          "title": "Boldscholar - AuthorsProfile",
+          "url": "https://boldscholar.com/Home/AuthorsProfile?authorId=7e4c3f55-3ef1-4c7b-9b6f-8423ef222927",
+          "ref": "turn166search17"
+        },
+        {
+          "title": "OWERRI: A City Of Griots By Chuks Oluigbo | Naija247news",
+          "url": "https://naija247news.com/owerri-a-city-of-griots-by-chuks-oluigbo/",
+          "ref": "turn166search18"
+        },
+        {
+          "title": "Owerri: A City Of Griots - Politics - Nigeria",
+          "url": "https://www.nairaland.com/3515865/owerri-city-griots",
+          "ref": "turn166search19"
+        },
+        {
+          "title": "How Super Falcons rated in semifinal victory against Cameroon | The Guardian Nigeria News - Nigeria and World News",
+          "url": "https://guardian.ng/sport/how-super-falcons-rated-in-semifinal-victory-against-cameroon/",
+          "ref": "turn166search20"
+        },
+        {
+          "title": "Solomon Awuzie, PhD - Department of English, Edo State University Uzairue | LinkedIn",
+          "url": "https://ng.linkedin.com/in/solomon-awuzie-phd-70338828",
+          "ref": "turn166search21"
+        },
+        {
+          "title": "(PDF) Migrating bards: Writers\u2019 burdens and a writers\u2019 body in Nigeria at the turn of the century",
+          "url": "https://www.researchgate.net/publication/272454964_Migrating_bards_Writers%27_burdens_and_a_writers%27_body_in_Nigeria_at_the_turn_of_the_century",
+          "ref": "turn166search22"
+        },
+        {
+          "title": "ANA Imo honours its own - The Nation Newspaper",
+          "url": "https://thenationonlineng.net/ana-imo-honours-its-own/",
+          "ref": "turn166search23"
+        },
+        {
+          "title": "CURRICULUM VITAE",
+          "url": "https://www.deswilson.com.ng/CV%20Prof%20Current%202022.pdf",
+          "ref": "turn166search27"
+        },
+        {
+          "title": "OCAK / 2024",
+          "url": "https://aliaga.denizticaretodasi.org.tr/media/SharedDocuments/DenizTicaretiDergisi/ocak2024.pdf",
+          "ref": "turn166search28"
+        }
+      ],
+      "negativeYield": "No additional qualifying independent completion, winner or bibliographic evidence beyond the explicitly classified claims. Absence applies to this pass only."
+    },
+    {
+      "id": "SE07",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": "\"Aba Literary Festival\" \"2019\" \"held\"",
+          "yieldNote": "No independent completion report; unrelated overseas ABA results excluded.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "\"Festival of Love\" \"Abakaliki\" \"2018\" poetry report",
+          "yieldNote": "No qualifying completion report; ticket Past Event tag insufficient.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "\"ANA Imo\" \"July\" \"2025\" poetry winner",
+          "yieldNote": "Returned short-story winners and July poetry call, not poetry results.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "\"Florence Chukwuonye\" \"Aba Poetry Club\" anthology",
+          "yieldNote": "Author site supports historical memberships and poetry collection; anthology imprints unresolved.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Florence Chukwuonye \u2014 African Literary Fiction Writer & Fiction Writing Coach",
+          "url": "https://www.florencechukwuonye.com/",
+          "ref": "turn167search0"
+        },
+        {
+          "title": "Winners Of ANA Imo Short Story Competition Emerge. - GrassrootReporters",
+          "url": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+          "ref": "turn167search1"
+        },
+        {
+          "title": "Independent Bookstores Amplify Diverse Voices",
+          "url": "https://www.asaecenter.org/resources/articles/an_magazine/2019/july-august/independent-bookstores-amplify-diverse-voices",
+          "ref": "turn167search2"
+        },
+        {
+          "title": "Conferences | Books+Publishing",
+          "url": "https://www.booksandpublishing.com.au/category/section/events/conferences/",
+          "ref": "turn167search3"
+        },
+        {
+          "title": "Events | Books+Publishing | Page 10",
+          "url": "https://www.booksandpublishing.com.au/category/uncategorised/events/page/10/",
+          "ref": "turn167search4"
+        },
+        {
+          "title": "Planeyo Journal of Arts and Humanities | PLANJAH",
+          "url": "https://planjah.org/",
+          "ref": "turn167search5"
+        },
+        {
+          "title": "Poetry as Migration: Orbiting Through Nigeria and America in Segun Adekoya's Here and There | Planeyo Journal",
+          "url": "https://planjah.org/a-poetry-as-migration-orbiting-through-32",
+          "ref": "turn167search6"
+        },
+        {
+          "title": "OwerriEvents Archives - OtownGist Media",
+          "url": "https://www.otowngist.com/tag/owerrievents/",
+          "ref": "turn167search7"
+        },
+        {
+          "title": "Chinua Achebe",
+          "url": "https://kiwix.drnathanhutchins.com/content/wikipedia_en_all_maxi_2026-02/Chinua_Achebe",
+          "ref": "turn167search8"
+        },
+        {
+          "title": "Events | Books+Publishing | Page 9",
+          "url": "https://www.booksandpublishing.com.au/category/section/events/page/9/",
+          "ref": "turn167search9"
+        },
+        {
+          "title": "Kaca - [SA] Skill Arena",
+          "url": "https://www.sarp.gg/forum/profile/125232-kaca/?%2Fprofile%2F125232-kaca%2Ffollowers%2F=&page=7",
+          "ref": "turn167search10"
+        },
+        {
+          "title": "Googlier.com | Chinua Achebe - Wikipedia",
+          "url": "https://googlier.com/forward.php?url=ek38NcbDgm40LXX4nhevyOT5lzVyPclGm-_mBqVlMMBuN6OP-ZOlkIEp2P1oyz3z9ixdHhWAMzD7DeHzF8T1fxoRhQAP250",
+          "ref": "turn167search11"
+        },
+        {
+          "title": "Chinua Achebe",
+          "url": "https://nomad.iallowyoutoseewhatihavefornow.com/content/wikipedia_en_all_maxi_2025-08/Chinua_Achebe",
+          "ref": "turn167search12"
+        },
+        {
+          "title": "International Mathematical Olympiad Mirzakhani Award",
+          "url": "https://www.imo-register.org.uk/mirzakhani-award.html",
+          "ref": "turn167search13"
+        },
+        {
+          "title": "Update on developments in Anambra state-photos - Politics (312) - Nigeria",
+          "url": "https://www.nairaland.com/4245053/update-developments-anambra-state-photos/311",
+          "ref": "turn167search14"
+        },
+        {
+          "title": "Past Events from April 5, 2019 \u2013 December 20, 2025 \u2013 Novi Sad Tourism Organisation",
+          "url": "https://novisad.travel/en/kalendar-dogadjaja/list/?eventDisplay=past&tribe-bar-date=2025-12-21",
+          "ref": "turn167search15"
+        },
+        {
+          "title": "risingnepaldaily.com",
+          "url": "https://epaper.gorkhapatraonline.com/uploads/file/2026/5/risingnepal/2026-05-16-11-55-27-TRN-17-May.pdf",
+          "ref": "turn167search35"
+        },
+        {
+          "title": "Events | Books+Publishing | Page 9",
+          "url": "https://www.booksandpublishing.com.au/category/uncategorised/events/page/9/",
+          "ref": "turn167search16"
+        },
+        {
+          "title": "Conferences | Books+Publishing | Page 2",
+          "url": "https://www.booksandpublishing.com.au/category/section/events/conferences/page/2/",
+          "ref": "turn167search17"
+        },
+        {
+          "title": "Planeyo Journal of",
+          "url": "https://planjah.com/pdf/6913205b5ee33.pdf",
+          "ref": "turn167search36"
+        },
+        {
+          "title": "Events | Books+Publishing | Page 11",
+          "url": "https://www.booksandpublishing.com.au/category/section/events/page/11/",
+          "ref": "turn167search18"
+        },
+        {
+          "title": "Sueddie Agema",
+          "url": "https://en.wikipedia.org/wiki/Sueddie_Agema",
+          "ref": "turn167search37"
+        },
+        {
+          "title": "Clubs | Ebonyi Laureates",
+          "url": "https://ebonyilaureates.com/clubs.html",
+          "ref": "turn167view0"
+        },
+        {
+          "title": "Florence Chukwuonye \u2014 African Literary Fiction Writer & Fiction Writing Coach",
+          "url": "https://www.florencechukwuonye.com/",
+          "ref": "turn167view1"
+        }
+      ],
+      "negativeYield": "No additional qualifying independent completion, winner or bibliographic evidence beyond the explicitly classified claims. Absence applies to this pass only."
+    },
+    {
+      "id": "SE08",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "\"Aba Poetry Club\" \"Roadside Notes\" poetry",
+          "yieldNote": "Primary president account and social lead, no exact event metadata.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "\"Umuahia Literary Society\" poetry Nigeria",
+          "yieldNote": "2019 interface and public-page snippets; recurrence not established.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "\"Ebonyi\" \"open mic\" poetry 2025 Laureates",
+          "yieldNote": "Primary organizer describes 2025 open mics; dated social virtual notice remains announcement.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        },
+        {
+          "q": "\"Jangolova\" Chukwubuike ISBN publisher",
+          "yieldNote": "No qualifying publisher/ISBN found.",
+          "status": "Source-scoped discovery; see claim ledger for adopted facts"
+        }
+      ],
+      "sources": [
+        {
+          "title": "ADDRESS DELIVERED BY THE PRESIDENT OF ABA ...",
+          "url": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+          "ref": "turn168search0"
+        },
+        {
+          "title": "Umuahia Literary Society-Uls",
+          "url": "https://www.facebook.com/UmuahiaLitSoc/",
+          "ref": "turn168search1"
+        },
+        {
+          "title": "Ebonyi Laureates",
+          "url": "https://www.facebook.com/Ebonyilaureatespage/posts/-calling-all-ebonyi-wordsmiths-and-storytellers-the-ebonyi-laureates-book-club-i/695830149763104/",
+          "ref": "turn168search2"
+        },
+        {
+          "title": "We are incredibly proud to have the works of the ...",
+          "url": "https://www.facebook.com/groups/806750120254006/posts/1594326724829671/",
+          "ref": "turn168search3"
+        },
+        {
+          "title": "Memorable day. Thank you,Sir Ken Ike",
+          "url": "https://www.facebook.com/happyprince84/posts/memorable-day-thank-yousir-ken-ike/24321077004167131/",
+          "ref": "turn168search4"
+        },
+        {
+          "title": "Laureates Science Innovation and Education Initiative",
+          "url": "https://ng.linkedin.com/company/ebonyi-laureates",
+          "ref": "turn168search5"
+        },
+        {
+          "title": "Chukwuka Chukwumerije",
+          "url": "https://www.facebook.com/chukwuka24/posts/lets-tell-a-story-shall-wetrue-this-is-a-story-about-umuahia-literary-society-an/10212307637800359/",
+          "ref": "turn168search6"
+        },
+        {
+          "title": "ABK THE POET SPOKE FOR JUSTICE The Knockout Stage ...",
+          "url": "https://www.facebook.com/mpsmediang2/posts/%EF%B8%8F-abk-the-poet-spoke-for-justicethe-knockout-stage-of-the-mps-media-poetry-chall/1357084336589342/",
+          "ref": "turn168search7"
+        },
+        {
+          "title": "Two Poems | Kalu Siza Amah",
+          "url": "https://themuseunn.com/two-poems-kalu-siza-amah/",
+          "ref": "turn168search8"
+        },
+        {
+          "title": "Ebonyi Laureates(Laureates SIE) (@EbonyiLaureates) ...",
+          "url": "https://x.com/EbonyiLaureates",
+          "ref": "turn168search9"
+        },
+        {
+          "title": "the first literary festival held in Enugu in decades. Her work has ...",
+          "url": "https://www.facebook.com/dailytimesnigeria/posts/how-one-woman-is-reviving-enugus-literary-culturefor-decades-enugus-once-vibrant/1486690866817640/",
+          "ref": "turn168search10"
+        },
+        {
+          "title": "Celebrating poetry in Nigeria",
+          "url": "https://www.facebook.com/groups/209098666178915/posts/2269489030139858/",
+          "ref": "turn168search11"
+        },
+        {
+          "title": "Books are slowly regaining space in Enugu's public life. ...",
+          "url": "https://www.facebook.com/NewsCentralAfrica/posts/books-are-slowly-regaining-space-in-enugus-public-life-from-bookshops-to-festiva/1607434374729656/",
+          "ref": "turn168search12"
+        },
+        {
+          "title": "Mazisi Kunene - Poetry Africa",
+          "url": "https://poetryafrica.ukzn.ac.za/map-location/mazisi-kunene/",
+          "ref": "turn168search13"
+        },
+        {
+          "title": "Reviving the reading culture, one story at a time. Writer, editor ...",
+          "url": "https://www.facebook.com/s24television/posts/reviving-the-reading-culture-one-story-at-a-timewriter-editor-and-cultural-advoc/122197005254925618/",
+          "ref": "turn168search14"
+        }
+      ],
+      "negativeYield": "No additional qualifying independent completion, winner or bibliographic evidence beyond the explicitly classified claims. Absence applies to this pass only."
+    },
+    {
+      "id": "SE09",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": "\"Nnenna Ihebom\" \"Gbaghara\" \"2020\" poetry",
+          "status": "Source-scoped",
+          "yieldNote": "Single Otown result report; no independent corroboration returned."
+        },
+        {
+          "q": "\"Fr Njoku\" \"poetry competition\" \"October\" 2020",
+          "status": "Source-scoped",
+          "yieldNote": "Same source family; planned continuation not proof of recurrence."
+        },
+        {
+          "q": "\"Abakaliki Spoken Words Festival\" 2025 held",
+          "status": "Source-scoped",
+          "yieldNote": "AllEvents listing only; direct open failed; completion not supported."
+        },
+        {
+          "q": "\"Cross Country Celebration\" \"Abakaliki\" \"Pearl\" 2023",
+          "status": "Source-scoped",
+          "yieldNote": "Primary itinerary plus release-family republications; no Abakaliki completion."
+        }
+      ],
+      "sources": [
+        {
+          "title": "ABAKALIKI SPOKEN WORDS FESTIVAL , Abakaliki, 12 September 2025 | AllEvents",
+          "url": "https://allevents.in/abakaliki/abakaliki-spoken-words-festival/200028540787344",
+          "ref": "turn170search0"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry \u2013 Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn170search1"
+        },
+        {
+          "title": "Nnenna Ihebom wins Fr. Njoku Igbo Poetry Competition, as Imo ANA holds reading - OtownGist Media",
+          "url": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+          "ref": "turn170search2"
+        },
+        {
+          "title": "ABAKALIKI SPOKEN WORDS FESTIVAL , Abakaliki, 12 September 2025 | AllEvents",
+          "url": "https://allevents.in/abakaliki/abakaliki-spoken-words-festival/200028540787344?action=interested",
+          "ref": "turn170search3"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry \u2013 Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+          "ref": "turn170search4"
+        },
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn170search5"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry \u2013 Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/",
+          "ref": "turn170search6"
+        },
+        {
+          "title": "Page 510 \u2013 News Wings",
+          "url": "https://newswings.com.ng/page/510/?cat=-1%3Fq%3Dhow-investments-in-early-childhood-centres-in-zanzibar-are-unlocking-womens-earning-power&lang=en&pr=315143",
+          "ref": "turn170search7"
+        },
+        {
+          "title": "Nnenna Ihebom wins Fr. Njoku Igbo Poetry Competition, as Imo ANA holds reading - OtownGist Media",
+          "url": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+          "ref": "turn170view0"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry \u2013 Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn170view1"
+        }
+      ],
+      "negativeYield": "No independent 2020 result corroboration or Abakaliki completion evidence found."
+    },
+    {
+      "id": "SE10",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "\"Enyimba Reading Festival\" \"2015\" Artrise",
+          "yieldNote": "Single organizer interview; no independent first-party edition report returned.",
+          "status": "Classified"
+        },
+        {
+          "q": "\"ANA Abia\" \"Yusuf Ali\" \"2019\" poetry",
+          "yieldNote": "Chapter Facebook report snippets; official magazine independently retrieved as primary chapter source, not independent corroboration.",
+          "status": "Classified"
+        },
+        {
+          "q": "\"Abia Hotels\" \"Okara\" \"June\" 2019",
+          "yieldNote": "No additional qualifying independent event report.",
+          "status": "Classified"
+        },
+        {
+          "q": "\"Enyimba Reading Festival\" Obioma Okezie held",
+          "yieldNote": "Same interview; no current activity or edition completion inferred.",
+          "status": "Classified"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=24",
+          "ref": "turn172view0 / turn173view1",
+          "access": "Non-www failed; www PDF readable; page 24 screenshot inspected."
+        },
+        {
+          "url": "https://iheanyiigboko.wordpress.com/2019/06/12/enyimba-reading-festival-is-envisioned-to-make-aba-the-world-book-centre-obioma-okezie/",
+          "ref": "turn171view1"
+        },
+        {
+          "url": "https://www.facebook.com/anaabiastatechapter/posts/report-of-ana-abiayusuf-ali-poetry-competition-2019the-ana-abiayusuf-ali-poetry-/578701025870174/",
+          "ref": "turn171search1",
+          "status": "Indexed primary-page snippet only; no signed-in audit"
+        }
+      ],
+      "negativeYield": "No independent completion/current-activity corroboration beyond attributed primary chapter and organizer sources."
+    },
+    {
+      "id": "SE11",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": "\"Grains\" \"ANA Ebonyi\" \"2022\" journal",
+          "yieldNote": "Independent report supports 14 July unveiling; not original publication year.",
+          "status": "Classified"
+        },
+        {
+          "q": "\"Grains\" \"ANA Ebonyi\" \"2019\"",
+          "yieldNote": "No separate qualifying edition chronology; unrelated rice-grain research excluded.",
+          "status": "Classified"
+        },
+        {
+          "q": "\"Richard Inya\" \"This is not a poem\" FUNAI",
+          "yieldNote": "Official university author/book/prize linkage; academic research not an event node.",
+          "status": "Classified"
+        },
+        {
+          "q": "\"Nigerian Authors Unveil Maiden Journal In Ebonyi\"",
+          "yieldNote": "Same Independent source; no second completion corroboration.",
+          "status": "Classified"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2020 ANA PRIZE WINNER FOR POETRY PAYS HOMAGE TO AE-FUNAI VC, PROF. NWAJIUBA \u2013 Alex Ekwueme Federal Univesity, Ndufu-Alike",
+          "url": "https://funai.edu.ng/news/2020-ana-prize-winner-for-poetry-pays-homage-to-ae-funai-vc-prof-nwajiuba/",
+          "ref": "turn175search0"
+        },
+        {
+          "title": "Nigerian Authors Unveil Maiden Journal In Ebonyi \u2013 Independent Newspaper Nigeria",
+          "url": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+          "ref": "turn175search1"
+        },
+        {
+          "title": "James Eze, others make ANA shortlist \u2013 The Sun Nigeria",
+          "url": "https://thesun.ng/james-eze-others-make-ana-shortlist/",
+          "ref": "turn175search2"
+        },
+        {
+          "title": "Bluesology And Bofelosophy Poetry And Essays",
+          "url": "https://proyectoisi.frc.utn.edu.ar/public/detail/index.jsp/Bluesology_And_Bofelosophy_Poetry_And_Essays.pdf",
+          "ref": "turn175search33"
+        },
+        {
+          "title": "(PDF) Metaphors of Chaos: A Posthuman Appraisal of Violence in Contemporary Nigerian Poetry",
+          "url": "https://www.researchgate.net/publication/377397851_Metaphors_of_Chaos_A_Posthuman_Appraisal_of_Violence_in_Contemporary_Nigerian_Poetry",
+          "ref": "turn175search3"
+        },
+        {
+          "title": "ANA NEWS: November 2020",
+          "url": "https://ananewsonline.blogspot.com/2020/11/?m=1",
+          "ref": "turn175search5"
+        },
+        {
+          "title": "Ouafa And Thawra About A Lover From Tunisia Poetr",
+          "url": "https://test.post-gazette.com/book/Resources/fetch.php/ouafa_and_thawra_about_a_lover_from_tunisia_poetr.pdf",
+          "ref": "turn175search35"
+        },
+        {
+          "title": "Ouafa And Thawra About A Lover From Tunisia Poetr",
+          "url": "https://test.post-gazette.com/files/browse/HomePages/Ouafa-And-Thawra-About-A-Lover-From-Tunisia-Poetr.pdf",
+          "ref": "turn175search36"
+        },
+        {
+          "title": "This is Not a Poem book by Richard Inya",
+          "url": "https://www.thriftbooks.com/w/this-is-not-a-poem_richard-inya/21918935/",
+          "ref": "turn175search6"
+        },
+        {
+          "title": "(PDF) Copyright\u00a9 Centre for Advanced Training and Research 2022 Online Publication: www.irdionline.org in the Catrjournal Series ASSESSMENT OF PHYSICAL AND MECHANICAL PROPERTIES OF RICE GRAINS GROWN IN EBONYI STATE AT TWO LOADING POSITION UNDER DIFFERENT MOISTURE CONTENT",
+          "url": "https://www.researchgate.net/publication/366683906_CopyrightC_Centre_for_Advanced_Training_and_Research_2022_Online_Publication_wwwirdionlineorg_in_the_Catrjournal_Series_ASSESSMENT_OF_PHYSICAL_AND_MECHANICAL_PROPERTIES_OF_RICE_GRAINS_GROWN_IN_EBONYI_",
+          "ref": "turn175search7"
+        },
+        {
+          "title": "Review ~ Aesthetics and the Contextualization of Meaning in Ahmed Maiwada\u2019s We\u2019re Fish ~ Paul Liam",
+          "url": "https://www.thearts-musefair.com/2019/10/discourse-aesthetics-and-the-contextualization-of-meaning-in-ahmed-maiwadas-were-fish.html",
+          "ref": "turn175search8"
+        },
+        {
+          "title": "THE RHYTHM OF LIFE FULL.pdf",
+          "url": "https://www.librairienumeriqueafricaine.com/sites/default/files/private/livrel/creer-livrel/9781779296047_0.pdf",
+          "ref": "turn175search37"
+        },
+        {
+          "title": "Richard Inya Books | List of books by author Richard Inya",
+          "url": "https://www.thriftbooks.com/a/richard-inya/3987394/",
+          "ref": "turn175search9"
+        },
+        {
+          "title": "Vol.15, No.4,",
+          "url": "https://www.fwls.org/uploads/soft/240110/1-240110132101.pdf",
+          "ref": "turn175search38"
+        },
+        {
+          "title": "Archiv f\u00fcr 9780797493",
+          "url": "https://diebuchsuche.de/ar_9780797493.html",
+          "ref": "turn175search10"
+        },
+        {
+          "title": "(PDF) Nutrient Interaction and Health Risk Assessment of Cereal Grains on Nigerian\u2019s Markets",
+          "url": "https://www.researchgate.net/publication/365794674_Nutrient_Interaction_and_Health_Risk_Assessment_of_Cereal_Grains_on_Nigerian%27s_Markets",
+          "ref": "turn175search11"
+        },
+        {
+          "title": "23092017 - Why South East governors moved against Kanu",
+          "url": "https://www.yumpu.com/en/document/view/59439545/23092017-why-south-east-governors-moved-against-kanu",
+          "ref": "turn175search12"
+        },
+        {
+          "title": "Agricultural Research Communication Centre | ARCC Journals | Since 1967",
+          "url": "https://arccjournals.com/journal/agricultural-science-digest/D-320",
+          "ref": "turn175search13"
+        },
+        {
+          "title": "Grain yield, cooking quality, and aroma of fragrant rice as affected by nitrogen source and method of application",
+          "url": "https://www.aimspress.com/article/id/67343623ba35de7eae90807e",
+          "ref": "turn175search14"
+        },
+        {
+          "title": "(PDF) A comparative study of physical properties of selected rice varieties in Nigeria",
+          "url": "https://www.researchgate.net/publication/334020960_A_comparative_study_of_physical_properties_of_selected_rice_varieties_in_Nigeria",
+          "ref": "turn175search15"
+        },
+        {
+          "title": "(PDF) Physicochemical and Cooking Properties of Some of the Popular Milled Rice (Oryza sativa L.) Cultivars in Six Regions of Nigeria",
+          "url": "https://www.researchgate.net/publication/332177605_Physicochemical_and_Cooking_Properties_of_Some_of_the_Popular_Milled_Rice_Oryza_sativa_L_Cultivars_in_Six_Regions_of_Nigeria",
+          "ref": "turn175search16"
+        },
+        {
+          "title": "(PDF) Farmer willingness to pay for seed-related information: rice varieties in Nigeria and Benin",
+          "url": "https://www.researchgate.net/publication/4851299_Farmer_willingness_to_pay_for_seed-related_information_rice_varieties_in_Nigeria_and_Benin?_tp=eyJjb250ZXh0Ijp7InBhZ2UiOiJzY2llbnRpZmljQ29udHJpYnV0aW9ucyIsInByZXZpb3VzUGFnZSI6bnVsbCwic3ViUGFnZSI6bnVsbH19",
+          "ref": "turn175search17"
+        },
+        {
+          "title": "(PDF) Genetic Diversity of some African Yam Bean Accessions in Ebonyi State Assessed using Inter-Simple Sequence Repeat (ISSR) markers",
+          "url": "https://www.researchgate.net/publication/352151959_Genetic_Diversity_of_some_African_Yam_Bean_Accessions_in_Ebonyi_State_Assessed_using_Inter-Simple_Sequence_Repeat_ISSR_markers",
+          "ref": "turn175search18"
+        },
+        {
+          "title": "Grain yield, cooking quality, and aroma of fragrant rice as affected by nitrogen source and method of application",
+          "url": "https://www.aimspress.com/article/doi/10.3934/agrfood.2024055",
+          "ref": "turn175search19"
+        },
+        {
+          "title": "Climate Smart Commodities",
+          "url": "https://www.cambridge.org/core/journals/renewable-agriculture-and-food-systems/collections/climate-smart-commodities",
+          "ref": "turn175search20"
+        },
+        {
+          "title": "(PDF) Ethnobotanical, trado-medicinal uses, pharmacological investigations and chemical constituents of Sphenostylis stenocarpa (ex. a. Rich) harms seed. A review",
+          "url": "https://www.researchgate.net/publication/358173105_Ethnobotanical_trado-medicinal_uses_pharmacological_investigations_and_chemical_constituents_of_Sphenostylis_stenocarpa_ex_a_Rich_harms_seed_A_review",
+          "ref": "turn175search21"
+        },
+        {
+          "title": "Nigerian Authors Unveil Maiden Journal In Ebonyi \u2013 Independent Newspaper Nigeria",
+          "url": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+          "ref": "turn175view0"
+        },
+        {
+          "title": "2020 ANA PRIZE WINNER FOR POETRY PAYS HOMAGE TO AE-FUNAI VC, PROF. NWAJIUBA \u2013 Alex Ekwueme Federal Univesity, Ndufu-Alike",
+          "url": "https://funai.edu.ng/news/2020-ana-prize-winner-for-poetry-pays-homage-to-ae-funai-vc-prof-nwajiuba/",
+          "ref": "turn175view1"
+        }
+      ],
+      "negativeYield": "No edition identity resolution, dated university visit, independently corroborated recurring activity, or publisher/ISBN evidence."
+    }
+  ],
+  "method": "Events/platforms first; named people and publications only through reviewed role-specific evidence.",
+  "google": "Search connector engines used; direct Google/browser remains blocked; no signed-in Facebook/Instagram audit.",
+  "zeroMeaning": "No qualifying evidence found in this pass; not absence of an ecosystem.",
+  "unresolved": {
+    "Abia": [
+      "Independent 2019 festival corroboration",
+      "Exact founding year",
+      "April 2026 reading completion",
+      "ANA mis-expansion in speech not used as identity merge"
+    ],
+    "Ebonyi": [
+      "Festival of Love completion",
+      "2025 open mic dates/venues/physical or virtual setting",
+      "Online June 2026 evening completion",
+      "CCPC Abakaliki 2023 occurrence and host identities"
+    ],
+    "Imo": [
+      "May 2024 prize winners/day/venue",
+      "July 2025 Igbo poetry results",
+      "Exact 2022 presentation day",
+      "Collection publisher/ISBN/publication years",
+      "Whelan Institute vs Research Academy identity not merged"
+    ]
+  }
+}

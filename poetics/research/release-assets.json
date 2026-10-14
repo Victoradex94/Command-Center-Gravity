@@ -1,0 +1,94 @@
+{
+  "style.css": {
+    "file": "style.d60d49f9b4e0.css",
+    "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
+  },
+  "vicadex-theme.css": {
+    "file": "vicadex-theme.591f134bc2f5.css",
+    "sha256": "591f134bc2f547f589babc11b596f1b71945560d90a18045e9631c78515bf74c"
+  },
+  "atlas.js": {
+    "file": "atlas.098a181b5d31.js",
+    "sha256": "098a181b5d310ff34dc1a2a6aa1dc8a0fba57cc9f2848fb8b70474de7ab22d93"
+  },
+  "engine.js": {
+    "file": "engine.d45dd739b129.js",
+    "sha256": "d45dd739b12955d0b02f59ae5640beeee1e5d05d3ef6e98490c4017359e34ce5"
+  },
+  "opportunities.js": {
+    "file": "opportunities.4ddfcc6ef954.js",
+    "sha256": "4ddfcc6ef95452e352adc0aabb2117d34b14f6dce988e4a76e820fc761ae45d9"
+  },
+  "gamemap.js": {
+    "file": "gamemap.08bb0e75cf74.js",
+    "sha256": "08bb0e75cf74c468b5427fd7c90425f5510d64ecfd00e4cb6d9f988fc287680e"
+  },
+  "city3d.js": {
+    "file": "city3d.a10fc14c3716.js",
+    "sha256": "a10fc14c3716d026f36ebb1821429305e14c69e690e49aacbf725a278c6f8841"
+  },
+  "world.js": {
+    "file": "world.1efd030f1f57.js",
+    "sha256": "1efd030f1f57d9120326436a27b350c104f8cfa47735e651215275f6b66c2055"
+  },
+  "canonical-research.js": {
+    "file": "canonical-research.9926b012c6c8.js",
+    "sha256": "9926b012c6c847b59d5be83ed5d3057a8bd184f1ea58893b1d98635319b8b48a"
+  },
+  "national-directory.js": {
+    "file": "national-directory.da74245a9290.js",
+    "sha256": "da74245a9290f45c4cb74c9eed82559087640534a50285dd17b4f1fb321824e5"
+  },
+  "directory-expansion.js": {
+    "file": "directory-expansion.9a50b5dc53b4.js",
+    "sha256": "9a50b5dc53b41af013d98f27d325d427c084280b34c5a7d8b48d3a65190bab31"
+  },
+  "nigeria-boundary.js": {
+    "file": "nigeria-boundary.c6bcc236b322.js",
+    "sha256": "c6bcc236b322c3b9d16964fc42fb311383049c199c05649b3177272d693e3a53"
+  },
+  "nigeria-map.js": {
+    "file": "nigeria-map.2945d9baaa7c.js",
+    "sha256": "2945d9baaa7c9667225330ed794ae91d60e145fcf5c51d67f60eef23f8bac91d"
+  },
+  "nigeria-states.js": {
+    "file": "nigeria-states.554e1d97a522.js",
+    "sha256": "554e1d97a522d5282a40d2aac935010f878250e508e65e5c710d96f7e4e92a5f"
+  },
+  "nigeria-states-map.js": {
+    "file": "nigeria-states-map.01e4cea6df7a.js",
+    "sha256": "01e4cea6df7a6df37acaac175f84484e2041320d411a4f6fadc9003fb1b1c719"
+  },
+  "atlas-icons.js": {
+    "file": "atlas-icons.42a2a8504cfb.js",
+    "sha256": "42a2a8504cfbb17dea31bb860a380606cac69c050f2e09876ddbf5565e07801c"
+  },
+  "atlas-audit.js": {
+    "file": "atlas-audit.7173f266c127.js",
+    "sha256": "7173f266c127a040110cc0646ed17966b99933e78d07e0d4d64e4e9e8090355c"
+  },
+  "entry-status.js": {
+    "file": "entry-status.5f0dd8b074d2.js",
+    "sha256": "5f0dd8b074d2b9365883619edf8e7546d444524057d1f109eb4b6e5f3f86885d"
+  },
+  "entry-schema.js": {
+    "file": "entry-schema.b6d6d9ca4343.js",
+    "sha256": "b6d6d9ca434394c34e1d0bd215dc7452ef9f9870e774c4c8939340510676b5b0"
+  },
+  "directory.js": {
+    "file": "directory.ee52366ab93c.js",
+    "sha256": "ee52366ab93c96fd95addcea0b4f351fee164a7282ab9ba68443b88265279fbf"
+  },
+  "contribute.js": {
+    "file": "contribute.3543a5e295e9.js",
+    "sha256": "3543a5e295e9150d89a3c30049c03f3922e30bf4cf9288e032ff1e6c44603b65"
+  },
+  "atlas-ui-guard.js": {
+    "file": "atlas-ui-guard.94d3156d05db.js",
+    "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
+  },
+  "app.js": {
+    "file": "app.19de9ed8117c.js",
+    "sha256": "19de9ed8117c817208e8b8847d2cd24b46e774ecd979b447f744ae7dd5a00d7b"
+  }
+}

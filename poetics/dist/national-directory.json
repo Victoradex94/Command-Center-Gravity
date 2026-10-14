@@ -1,0 +1,373 @@
+{
+  "reviewed": "2026-10-12",
+  "coverage": "National discovery pass; not a complete census. Historical and current sources; continuing activity unconfirmed unless explicitly sourced.",
+  "profiles": [
+    {
+      "id": "loudthotz",
+      "name": "Loudthotz Poetry Open Reading",
+      "category": "Platforms",
+      "city": "Lagos",
+      "format": "Open mic / reading",
+      "summary": "Independent Poets Concerns describes a free monthly open reading on the second Thursday. The platform also has First Gong anthologies and a podcast archive.",
+      "status": "Organiser archive reviewed",
+      "evidenceDate": "Archive undated; podcast episode 2023",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Confirm current venue and timetable. Do not infer a founding date from season numbering; an Abuja aggregator listing repeats a Lagos venue and is excluded.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://chisomohuaka.wixsite.com/loudthotz-poetry/gallery"
+        }
+      ]
+    },
+    {
+      "id": "taruwa",
+      "name": "Taruwa",
+      "category": "Platforms",
+      "city": "Lagos",
+      "format": "Open mic / reading",
+      "summary": "A multidisciplinary performance gathering associated with Lydia Idakula. Cambridge’s museum programme describes the format developing in Lagos from 2007.",
+      "status": "Institutional discovery excerpt — full retrieval failed",
+      "evidenceDate": "2007 origin reported; museum notice 2023",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Recover organiser history and current schedule; historical recurring format does not imply a live event this month.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://maa.cam.ac.uk/taruwa-maa"
+        }
+      ]
+    },
+    {
+      "id": "freedomhall",
+      "name": "Freedom Hall",
+      "category": "Platforms",
+      "city": "Lagos / Abuja",
+      "format": "Open mic / reading",
+      "summary": "The organiser’s 2016 archive announces a music and poetry open mic at Freedom Park in Lagos; separate archive notices describe Abuja activity.",
+      "status": "Contemporaneous organiser announcement reviewed",
+      "evidenceDate": "17 November 2016 announced",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Historical notice; event occurrence and present activity not verified. Venues vary across editions.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://freedomhallnigeria.wordpress.com/2016/11/"
+        }
+      ]
+    },
+    {
+      "id": "coal-openmic",
+      "name": "COAL Open Mic",
+      "category": "Platforms",
+      "city": "Jos",
+      "format": "Open mic / reading",
+      "summary": "COAL’s own notice invites poets, musicians and spoken-word performers to its Jos open mic and reports its 2025 programme participation.",
+      "status": "Organiser announcement reviewed",
+      "evidenceDate": "21 June 2026 announced",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Past announcement, not a next-event listing. Verify occurrence and further editions; programme statistics are organiser-reported.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://www.linkedin.com/posts/custodians-of-african-literature-coal_coalng-coalopenmic-openmic-activity-7470006878496968704-KTIA"
+        }
+      ]
+    },
+    {
+      "id": "els-bookjam",
+      "name": "Enugu BookJam & Open Mic (ELS)",
+      "category": "Platforms",
+      "city": "Enugu",
+      "format": "Open mic / reading",
+      "summary": "An April 2021 notice describes Enugu Literary Society’s BookJam with an open mic for poetry, short stories and creative nonfiction.",
+      "status": "Contemporaneous event notice reviewed",
+      "evidenceDate": "10 April 2021 announced",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "The notice reports a 2016 founding year for ELS; independent founding verification and current programme schedule remain pending.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://discoverenugu042.wordpress.com/2021/04/09/enugu-literary-society-els-hosts-two-home-authors-plus-an-open-mic/"
+        }
+      ]
+    },
+    {
+      "id": "third-space",
+      "name": "The Third Space",
+      "category": "Platforms",
+      "city": "Kano",
+      "format": "Open mic / reading",
+      "summary": "A Kano book café and workspace whose own website describes literary events, workshops and open-mic nights.",
+      "status": "Venue self-description reviewed",
+      "evidenceDate": "Website reviewed 12 October 2026",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "No dated programme or next event verified; do not infer uninterrupted activity from a website.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://thethirdspace.com.ng/"
+        }
+      ]
+    },
+    {
+      "id": "penwarriors",
+      "name": "Pen Warriors Open Mic & Writers’ Connect",
+      "category": "Platforms",
+      "city": "Ilorin",
+      "format": "Open mic / reading",
+      "summary": "A published report describes a Pen Warriors gathering featuring poetry, spoken word and entertainment in Ilorin.",
+      "status": "Published discovery excerpt — full article pending",
+      "evidenceDate": "Historical report; exact event date pending",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Retrieve full article and organiser records before dating the event or claiming continuing activity.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://independent.ng/many-gods-one-mic-outcome-of-pen-warriors-open-mic-writers-connect/"
+        }
+      ]
+    },
+    {
+      "id": "purple-silver",
+      "name": "Purple Silver Open Mic",
+      "category": "Platforms",
+      "city": "Makurdi",
+      "format": "Open mic / reading",
+      "summary": "Su’eddie Agema’s 2013 firsthand account describes a literary and musical open mic at Symbols Complex in Makurdi, including performance feedback.",
+      "status": "Contemporaneous participant account reviewed",
+      "evidenceDate": "4 August 2013 report",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Weekly schedule is historical testimony; current schedule and founding date unknown.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://sueddie.wordpress.com/2013/08/04/thrills-at-purple-silver-open-mic-session/"
+        }
+      ]
+    },
+    {
+      "id": "roving-openmic",
+      "name": "Rovingheights Open Mic Night",
+      "category": "Platforms",
+      "city": "Abuja / Ibadan / Kaduna",
+      "format": "Open mic / reading",
+      "summary": "APVA’s notice lists poetry, music, spoken word and storytelling across Rovingheights’ Garki, Ibadan and Kaduna stores.",
+      "status": "Event listing reviewed",
+      "evidenceDate": "29 May 2026 announced",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Past listing. Body says 5pm while calendar says all-day; precise time excluded. Confirm organiser notice and occurrence.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://apva.africa/events/rovingheights-open-mic-night/"
+        }
+      ]
+    },
+    {
+      "id": "benin-arts",
+      "name": "Benin Arts and Books Festival open mic",
+      "category": "Platforms",
+      "city": "Benin City",
+      "format": "Festival / showcase",
+      "summary": "The festival’s site lists poetry open-mic sessions as part of its programme.",
+      "status": "Organiser discovery excerpt — full retrieval failed",
+      "evidenceDate": "Undated programme",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Recover edition year, actual sessions and participating venues; not a recurring standalone open-mic claim.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://www.baabfest.name.ng/"
+        }
+      ]
+    },
+    {
+      "id": "sos-slam",
+      "name": "Sound of Sages (SOS) Poetry Slam",
+      "category": "Platforms",
+      "city": "Lagos",
+      "format": "Spoken-word competition",
+      "summary": "The organiser archive describes the 2018 SOS Poetry Slam 3.0; WRR’s 2019 survey reports the 8 December 2018 slam at Shogunle Town Hall.",
+      "status": "Organiser / published discovery excerpts — full retrieval failed",
+      "evidenceDate": "8 December 2018 reported",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Recover full results and earlier editions. Source discovery also identifies a 2016 inaugural slam; not independently reverified.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://soundofsages.blogspot.com/2018/12/"
+        }
+      ]
+    },
+    {
+      "id": "eko-slam",
+      "name": "Eko Literary Society Poetry Slam",
+      "category": "Platforms",
+      "city": "Lagos",
+      "format": "Spoken-word competition",
+      "summary": "A published result report identifies an Eko Literary Society poetry slam; other contemporary references name the Eko Poetry Slam circuit.",
+      "status": "Published discovery excerpt — result details pending",
+      "evidenceDate": "Historical result report; exact edition pending",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Verify whether all Eko Poetry Slam references refer to this organiser, and recover dates and winners before linking individual results.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://articles.connectnigeria.com/winners-emerge-from-the-eko-literary-society-poetry-slam/"
+        }
+      ]
+    },
+    {
+      "id": "pin-slam",
+      "name": "PIN National Poetry Slam",
+      "category": "Platforms",
+      "city": "Lagos",
+      "format": "Spoken-word competition",
+      "summary": "JAY Lit reports the late-2025 maiden PIN National Poetry Slam, naming Pacella Chukwuma-Eke, Muna and Jay Sukpa as its top three.",
+      "status": "Published result report reviewed",
+      "evidenceDate": "Late 2025; report 16 January 2026",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Distinct from the written Nigerian Students Poetry Prize. Recover original PIN results and exact finale date; no current application claim.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://jaylit.com/pacella-chukwuma-eke-muna-jay-sukpa-win-2025-pin-national-poetry-slam/"
+        }
+      ]
+    },
+    {
+      "id": "als-champions",
+      "name": "ALS Slam of Champions",
+      "category": "Platforms",
+      "city": "Abuja / Nigeria",
+      "format": "Spoken-word competition",
+      "summary": "A published report describes a champions’ slam and selection for Nigeria’s berth at the 2026 World Poetry Slam Championship.",
+      "status": "Published discovery excerpt — full retrieval forbidden",
+      "evidenceDate": "2026 report",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Retrieve official competition rules, event date, venue and results. Do not infer current qualifying entries or winner from snippets.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://tribuneonlineng.com/als-slam-of-champions-when-champions-had-to-prove-it-again/"
+        }
+      ]
+    },
+    {
+      "id": "mic-check",
+      "name": "Mic Check Poetry Slam (DWUL 7.0)",
+      "category": "Platforms",
+      "city": "Nigeria; city verification pending",
+      "format": "Spoken-word competition",
+      "summary": "A September 2026 Guardian notice describes the Sarah’s Place Foundation festival’s original spoken-word competition with a reported ₦100,000 prize.",
+      "status": "Published competition notice reviewed",
+      "evidenceDate": "11 September 2026 report",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Past notice, not a live entry call. Eligibility, city, deadline and organiser results require further verification.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://guardian.ng/news/foundations-do-what-u-love-festival-7-0-spotlights-next-generation-of-creators/"
+        }
+      ]
+    },
+    {
+      "id": "ana-slam",
+      "name": "ANA International Poetry Slam Prize",
+      "category": "Platforms",
+      "city": "Abuja",
+      "format": "Spoken-word competition",
+      "summary": "Kabura Zakama’s archive includes a September 2026 registration notice for an ANA International Poetry Slam Prize.",
+      "status": "Author archive discovery excerpt — rules pending",
+      "evidenceDate": "7 September 2026 notice",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Recover exact announcement, rules, organisers and deadline; no live registration status asserted.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://writezakama.wordpress.com/page/2/?cat=-1"
+        }
+      ]
+    },
+    {
+      "id": "yagydi-mic",
+      "name": "YAGYDI UNILORIN Open Mic",
+      "category": "Platforms",
+      "city": "Ilorin",
+      "format": "Open mic / reading",
+      "summary": "The initiative’s own announcement introduces an open-mic platform as part of its University of Ilorin chapter.",
+      "status": "Organiser discovery excerpt — full retrieval pending",
+      "evidenceDate": "29 November 2025 chapter launch announced",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "A broad youth forum, not exclusively poetry. Verify the event format and programme continuity.",
+      "links": [
+        {
+          "title": "Platform evidence",
+          "url": "https://ynginitiative.org/yagydi-officially-launches-university-of-ilorin-chapter-2/"
+        }
+      ]
+    },
+    {
+      "id": "vocal-ink",
+      "name": "Vocal Ink Poetry & Jazz",
+      "city": "Uyo",
+      "category": "Platforms",
+      "format": "Festival / showcase",
+      "summary": "THISDAY’s 2017 notice announces a Uyo poetry-and-jazz showcase produced by Desire Umoh of Vocal Ink Poetry Club.",
+      "status": "Contemporaneous announcement reviewed",
+      "evidenceDate": "20 July 2017 announced",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Performance showcase; no evidence that this edition was an open mic or a competition. Founding and continuing activity unknown.",
+      "links": [
+        {
+          "title": "Historical event evidence",
+          "url": "https://www.thisdaylive.com/2017/07/16/vocal-ink-stages-poetry-and-jazz-event-in-uyo/"
+        }
+      ]
+    },
+    {
+      "id": "bassey-slam",
+      "name": "BasseyWorldLive Nigeria / Naija Poetry Slam",
+      "city": "Lagos",
+      "category": "Platforms",
+      "format": "Spoken-word competition",
+      "summary": "Terra Kulture’s 2012 notice announces Bassey Ikpi’s show with a slam selected from video submissions.",
+      "status": "Contemporaneous announcement reviewed",
+      "evidenceDate": "14 September 2012 announced",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "The source’s claim to be the first national slam is promotional and not adopted as an established fact. Results and occurrence require separate evidence.",
+      "links": [
+        {
+          "title": "Historical event evidence",
+          "url": "https://terrakulture.wordpress.com/2012/09/14/terra-kulture-from-def-jam-stage-to-nigeria-bassey-ikpi-returns-home-with-a-poetry-slam/"
+        }
+      ]
+    },
+    {
+      "id": "calabar-slam2012",
+      "name": "Calabar Festival Poetry Slam (2012 notice)",
+      "city": "Calabar",
+      "category": "Platforms",
+      "format": "Spoken-word competition",
+      "summary": "A December 2012 literary archive notice announces a Calabar slam headlined by Bassey Ikpi.",
+      "status": "Contemporaneous announcement reviewed",
+      "evidenceDate": "17 December 2012 announced",
+      "availability": "Current schedule / entry status unconfirmed",
+      "gaps": "Venue is written as Transcorp Hilton Hotel Calabar in the notice; resolve naming before mapping. Do not merge with Festival Poetry Calabar without organiser continuity evidence.",
+      "links": [
+        {
+          "title": "Historical event evidence",
+          "url": "https://portharcourtbookfestival.blogspot.com/2012/"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    "Coverage remains uneven in Southeast, Niger Delta, rural areas and campus communities.",
+    "Owerri, Osogbo and several state searches returned no strong identifiable poetry platform; absence of a result is not absence of a scene.",
+    "Upcoming deadlines and recurring schedules need fresh organiser confirmation.",
+    "Discovery excerpts remain separate from retrieved articles.",
+    "Exact Vic’Adex / 60 Seconds Poetry design tokens unavailable: visual browser blocked."
+  ]
+}

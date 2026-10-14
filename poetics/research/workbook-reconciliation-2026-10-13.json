@@ -1,0 +1,23 @@
+{
+  "spreadsheetId": "1vfG2is3sXNilWhXU9BwxpxmrEHXMhZA_C8Jw5wDngHs",
+  "reviewedAt": "2026-10-13",
+  "existingUpdated": [
+    "E005 / S005 source URL and verification notes",
+    "Handoff B5/B6/B13",
+    "Evidence Additions E2:F2"
+  ],
+  "added": {
+    "evidence": {
+      "ids": "E093–E099",
+      "range": "'Ecosystem — Evidence Ledger'!A94:V100"
+    },
+    "sources": {
+      "ids": "S093–S099",
+      "range": "'Ecosystem — Source Register'!A94:M100"
+    },
+    "handoff": "'Atlas Evidence Additions 2026-10-13'!A14:F20"
+  },
+  "verification": "Exact seven-row values verified by native CellData readback for each added block; no validation or formula present. Existing alert date/Gmail links preserved.",
+  "visualFit": "Google-rendered visual verification unavailable; best-effort native cell/format inspection only.",
+  "scope": "No archive poem/source records, shared permissions, unrelated cells or WordPress modified."
+}

@@ -1,0 +1,51 @@
+{
+  "version": 27,
+  "build": "2026-10-13-southeast-r27",
+  "sourceCommit": "c1c920080cbd20a8032e0c89d147b71844f3b067",
+  "savedVersionId": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_5c1363351ae88191bb1b93f8340622c7",
+  "deployment": {
+    "id": "appgdep_6ace7466122c819199539bdcd729f9ee",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "title": "Poetics — Vic’Adex Prototype",
+    "version_id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_5c1363351ae88191bb1b93f8340622c7",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://poetics-vicadex-lab.vicadexconcepts.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acce9493e8c81919635a9e7438b820c",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-13T18:12:11.153207+00:00"
+  },
+  "archiveMetadata": {
+    "archive_format": "tar",
+    "sediment_file_id": "file_000000002628820e89353474b034c69c",
+    "content_hash": "sha256:9f726d975dc5922fbde5bafde5204c694b4e7f26623b473f33845e18f9dfb892",
+    "size_bytes": 3553280,
+    "file_count": 63
+  },
+  "counts": {
+    "entries": 390,
+    "relationships": 586,
+    "Abia": 18,
+    "Ebonyi": 9,
+    "Imo": 18,
+    "Delta": 16,
+    "Gombe": 8,
+    "Edo": 13,
+    "Publications": 18
+  },
+  "queryCount": 40,
+  "claimCount": 102,
+  "checks": "10 relevant suites passed; 23 referenced packaged assets exist; source-scoped endpoints and southeast counts checked.",
+  "freshRender": {
+    "status": "Unverified",
+    "reason": "Browser tools unavailable in current session; fresh search-service open returned inaccessible URL. Previous managed browser/HTTP access was blocked.",
+    "responsiveOverflow": "Not independently visually tested"
+  },
+  "access": "custom; unchanged one external viewer",
+  "appearance": "Light page, dark outside-Nigeria map, approved visual system and mounted control removal preserved in source; fresh visual check unavailable",
+  "priorUserEvidence": "User independently verified Version 26 controls absent and 341 entries; not proof of Version 27 rendering.",
+  "wordPress": "Untouched"
+}

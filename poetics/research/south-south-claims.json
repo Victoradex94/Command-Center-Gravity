@@ -1,0 +1,1360 @@
+{
+  "batch": "2026-10-13-south-south",
+  "claims": [
+    {
+      "entity": "ccpc",
+      "claim": "PIN volunteer-hosted poetry programme; organiser recalls a first edition in October 2021.",
+      "sourceURL": "https://www.linkedin.com/posts/poets-in-nigeria-initiative_introducing-the-cross-country-celebration-activity-7070398230315831297-K_cy",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc",
+      "claim": "organiser identifies PIN initiative → c2",
+      "sourceURL": "https://www.linkedin.com/posts/poets-in-nigeria-initiative_introducing-the-cross-country-celebration-activity-7070398230315831297-K_cy",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2021
+    },
+    {
+      "entity": "cross-event-5",
+      "claim": "Announced poetry gathering at Calabar Municipal Garden. Local occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "cross-venue-5",
+      "claim": "Announced venue for the 2023 Calabar stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "cross-event-5",
+      "claim": "announced venue → cross-venue-5",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "cross-host-5",
+      "claim": "Announced host for the 2023 Calabar stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "cross-event-5",
+      "claim": "announced host → cross-host-5",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "bruno-nwagbo",
+      "claim": "Announced co-host for the 2023 Calabar stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "cross-event-5",
+      "claim": "announced co-host → bruno-nwagbo",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "cross-event-5",
+      "claim": "announced 2023 city stop → ccpc",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; not evidence all 44 stops happened",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ccpc-benin-2023",
+      "claim": "Announced poetry gathering at Randheki (Gold) Hotel. Local occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "randheki-hotel",
+      "claim": "Announced venue for the 2023 Benin City stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-benin-2023",
+      "claim": "announced venue → randheki-hotel",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ehis-ferguson",
+      "claim": "Announced host for the 2023 Benin City stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-benin-2023",
+      "claim": "announced host → ehis-ferguson",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "testimony-odey",
+      "claim": "Announced co-host for the 2023 Benin City stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-benin-2023",
+      "claim": "announced co-host → testimony-odey",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "diongoli-queen",
+      "claim": "Announced co-host for the 2023 Benin City stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-benin-2023",
+      "claim": "announced co-host → diongoli-queen",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ccpc-benin-2023",
+      "claim": "announced 2023 city stop → ccpc",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; not evidence all 44 stops happened",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ccpc-ph-2023",
+      "claim": "Announced poetry gathering at Captain Elechi Amadi Polytechnic — Conference Hall. Local occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "elechi-conference",
+      "claim": "Announced venue for the 2023 Port Harcourt stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-ph-2023",
+      "claim": "announced venue → elechi-conference",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "salomi-ikoyoko",
+      "claim": "Announced host for the 2023 Port Harcourt stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-ph-2023",
+      "claim": "announced host → salomi-ikoyoko",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "sunday-igbikiberebima",
+      "claim": "Announced co-host for the 2023 Port Harcourt stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-ph-2023",
+      "claim": "announced co-host → sunday-igbikiberebima",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ccpc-ph-2023",
+      "claim": "announced 2023 city stop → ccpc",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; not evidence all 44 stops happened",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ccpc-ikot-2023",
+      "claim": "Announced poetry gathering at Akwa Ibom Polytechnic. Local occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "akwa-poly",
+      "claim": "Announced venue for the 2023 Ikot Ekpene stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-ikot-2023",
+      "claim": "announced venue → akwa-poly",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "godswill-enang",
+      "claim": "Announced host for the 2023 Ikot Ekpene stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-ikot-2023",
+      "claim": "announced host → godswill-enang",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "omodot-jackson",
+      "claim": "Announced co-host for the 2023 Ikot Ekpene stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-ikot-2023",
+      "claim": "announced co-host → omodot-jackson",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ccpc-ikot-2023",
+      "claim": "announced 2023 city stop → ccpc",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; not evidence all 44 stops happened",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ccpc-yenagoa-2023",
+      "claim": "Announced poetry gathering at Bayelsa Peace Park. Local occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "bayelsa-peace-park",
+      "claim": "Announced venue for the 2023 Yenagoa stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-yenagoa-2023",
+      "claim": "announced venue → bayelsa-peace-park",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "rowland-ofiyou",
+      "claim": "Announced host for the 2023 Yenagoa stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-yenagoa-2023",
+      "claim": "announced host → rowland-ofiyou",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "lue-trust",
+      "claim": "Announced co-host for the 2023 Yenagoa stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-yenagoa-2023",
+      "claim": "announced co-host → lue-trust",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ccpc-yenagoa-2023",
+      "claim": "announced 2023 city stop → ccpc",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; not evidence all 44 stops happened",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ccpc-issele-2023",
+      "claim": "Announced poetry gathering at Pilgrim Baptist Grammar School. Local occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "pilgrim-baptist-school",
+      "claim": "Announced venue for the 2023 Issele-Uku stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-issele-2023",
+      "claim": "announced venue → pilgrim-baptist-school",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "bright-chukwuemeke",
+      "claim": "Announced host for the 2023 Issele-Uku stop; occurrence unverified.",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-issele-2023",
+      "claim": "announced host → bright-chukwuemeke",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; attendance and local completion unverified",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "ccpc-issele-2023",
+      "claim": "announced 2023 city stop → ccpc",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement only; not evidence all 44 stops happened",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2023-10-21"
+    },
+    {
+      "entity": "cross-event-0",
+      "claim": "Scheduled 21 October 2023; city occurrence not established",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "cross-event-1",
+      "claim": "Scheduled 21 October 2023; city occurrence not established",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "cross-event-2",
+      "claim": "Scheduled 21 October 2023; city occurrence not established",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "cross-event-3",
+      "claim": "Scheduled 21 October 2023; city occurrence not established",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "cross-event-4",
+      "claim": "Scheduled 21 October 2023; city occurrence not established",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "cross-event-6",
+      "claim": "Scheduled 21 October 2023; city occurrence not established",
+      "sourceURL": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-ekiti-2023",
+      "claim": "Host account and press coverage describe a held gathering at EKSU.",
+      "sourceURL": "https://www.linkedin.com/posts/funke-awodiya-b5bba165_on-october-21st-poets-in-nigeria-initiative-activity-7122227136219742208-OjZI",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "funke-awodiya",
+      "claim": "Identifies herself as Ekiti host in a post-event account.",
+      "sourceURL": "https://www.linkedin.com/posts/funke-awodiya-b5bba165_on-october-21st-poets-in-nigeria-initiative-activity-7122227136219742208-OjZI",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "adetutu-hall",
+      "claim": "Hall identified in the host’s post-event account.",
+      "sourceURL": "https://www.linkedin.com/posts/funke-awodiya-b5bba165_on-october-21st-poets-in-nigeria-initiative-activity-7122227136219742208-OjZI",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-ekiti-2023",
+      "claim": "host-reported organiser → funke-awodiya",
+      "sourceURL": "https://www.linkedin.com/posts/funke-awodiya-b5bba165_on-october-21st-poets-in-nigeria-initiative-activity-7122227136219742208-OjZI",
+      "status": "Host-reported date; press occurrence corroboration",
+      "confidence": "High — explicit source statement",
+      "date": "2023-10-21"
+    },
+    {
+      "entity": "ccpc-ekiti-2023",
+      "claim": "host-reported venue → adetutu-hall",
+      "sourceURL": "https://www.linkedin.com/posts/funke-awodiya-b5bba165_on-october-21st-poets-in-nigeria-initiative-activity-7122227136219742208-OjZI",
+      "status": "Host-reported date; press occurrence corroboration",
+      "confidence": "High — explicit source statement",
+      "date": "2023-10-21"
+    },
+    {
+      "entity": "ccpc-ekiti-2023",
+      "claim": "reported city edition → ccpc",
+      "sourceURL": "https://www.linkedin.com/posts/funke-awodiya-b5bba165_on-october-21st-poets-in-nigeria-initiative-activity-7122227136219742208-OjZI",
+      "status": "Host-reported date; press occurrence corroboration",
+      "confidence": "High — explicit source statement",
+      "date": "2023-10-21"
+    },
+    {
+      "entity": "ccpc-awka-2023",
+      "claim": "University profile records a panel appearance at Awka Window on America in October 2023.",
+      "sourceURL": "https://profile.unizik.edu.ng/nau4594",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "uche-nnyagu",
+      "claim": "University profile records an October 2023 panel role.",
+      "sourceURL": "https://profile.unizik.edu.ng/nau4594",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "awka-window",
+      "claim": "Named setting of the recorded panel appearance.",
+      "sourceURL": "https://profile.unizik.edu.ng/nau4594",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "uche-nnyagu",
+      "claim": "panel role in university profile → ccpc-awka-2023",
+      "sourceURL": "https://profile.unizik.edu.ng/nau4594",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": "2023-10"
+    },
+    {
+      "entity": "ccpc-awka-2023",
+      "claim": "setting named in university profile → awka-window",
+      "sourceURL": "https://profile.unizik.edu.ng/nau4594",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": "2023-10"
+    },
+    {
+      "entity": "ccpc-awka-2023",
+      "claim": "named programme participation → ccpc",
+      "sourceURL": "https://profile.unizik.edu.ng/nau4594",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": "2023-10"
+    },
+    {
+      "entity": "bots-2025",
+      "claim": "Organiser reports a festival and contest at Sir Victor Uwaifo Creative Hub.",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "benin-writers",
+      "claim": "Named festival co-organiser.",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "uwaifo-hub",
+      "claim": "Venue in the held-event accounts.",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "godson-osarenren",
+      "claim": "Founder and lead convener of Naija Poetry Fest; festival director in host biography.",
+      "sourceURL": "https://www.genevapeaceforum.ch/en/speaker/godson-osarenren",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "douglas-ogbankwa",
+      "claim": "Festival co-convener named in organiser account.",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "bots-contest-2025",
+      "claim": "Contest reported within the festival; winner identity needs clarification.",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "bronze-capital",
+      "claim": "Poetry anthology with a documented festival launch and editorial credits.",
+      "sourceURL": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "lanre-sonde",
+      "claim": "Named anthology editor.",
+      "sourceURL": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "bots-2025",
+      "claim": "co-organiser → c14",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": "2025-08-30"
+    },
+    {
+      "entity": "bots-2025",
+      "claim": "co-organiser → benin-writers",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": "2025-08-30"
+    },
+    {
+      "entity": "bots-2025",
+      "claim": "reported held venue → uwaifo-hub",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": "2025-08-30"
+    },
+    {
+      "entity": "bots-2025",
+      "claim": "festival contest → bots-contest-2025",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": "2025-08-30"
+    },
+    {
+      "entity": "bots-2025",
+      "claim": "anthology launch → bronze-capital",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": "2025-08-30"
+    },
+    {
+      "entity": "godson-osarenren",
+      "claim": "co-convener → bots-2025",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": "2025-08-30"
+    },
+    {
+      "entity": "douglas-ogbankwa",
+      "claim": "co-convener → bots-2025",
+      "sourceURL": "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": "2025-08-30"
+    },
+    {
+      "entity": "godson-osarenren",
+      "claim": "founder / lead convener in host biography → c14",
+      "sourceURL": "https://www.genevapeaceforum.ch/en/speaker/godson-osarenren",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": null
+    },
+    {
+      "entity": "douglas-ogbankwa",
+      "claim": "founder credited by anthology page → benin-writers",
+      "sourceURL": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2025
+    },
+    {
+      "entity": "lanre-sonde",
+      "claim": "credited editor → bronze-capital",
+      "sourceURL": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2025
+    },
+    {
+      "entity": "godson-osarenren",
+      "claim": "credited editor → bronze-capital",
+      "sourceURL": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2025
+    },
+    {
+      "entity": "eriata",
+      "claim": "foreword credited → bronze-capital",
+      "sourceURL": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2025
+    },
+    {
+      "entity": "c14",
+      "claim": "Naija Poetry Fest community; founder Godson Osarenren also directs Battle of the Stanzas.",
+      "sourceURL": "https://www.genevapeaceforum.ch/en/speaker/godson-osarenren",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "fpc-2016",
+      "claim": "Three-day festival with readings, performance and a writing contest.",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "festival-poetry-foundation",
+      "claim": "Festival organising foundation.",
+      "sourceURL": "https://poetsinnigeria.org.ng/index.php/festival-poetry-competition-call-for-entries/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "henshaw-foundation",
+      "claim": "Local report names festival collaboration.",
+      "sourceURL": "https://crossriverwatch.com/2017/01/3-days-poetry-fiesta-ends-in-calabar/",
+      "status": "Report supported",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "henshaw-centre",
+      "claim": "Reported venue for most festival activities.",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "fpc-onsite-2016",
+      "claim": "Writing contest reported during the second festival day.",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "clean-green-2016",
+      "claim": "Organiser call invited environment-themed poems for the festival.",
+      "sourceURL": "https://poetsinnigeria.org.ng/index.php/festival-poetry-competition-call-for-entries/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "amarachi-attamah",
+      "claim": "Reported performer in the 2016 festival account.",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "amarachi-attamah",
+      "claim": "reported performer → fpc-2016",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2016
+    },
+    {
+      "entity": "kalejaye-folajimi",
+      "claim": "Reported performer in the 2016 festival account.",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "kalejaye-folajimi",
+      "claim": "reported performer → fpc-2016",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2016
+    },
+    {
+      "entity": "bassey-asuquo",
+      "claim": "Reported contest adjudicator in the 2016 festival account.",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "bassey-asuquo",
+      "claim": "reported contest adjudicator → fpc-onsite-2016",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2016
+    },
+    {
+      "entity": "fpc-2016",
+      "claim": "festival edition → c8",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2016
+    },
+    {
+      "entity": "fpc-2016",
+      "claim": "organiser → festival-poetry-foundation",
+      "sourceURL": "https://poetsinnigeria.org.ng/index.php/festival-poetry-competition-call-for-entries/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2016
+    },
+    {
+      "entity": "fpc-2016",
+      "claim": "collaborator in local report → henshaw-foundation",
+      "sourceURL": "https://crossriverwatch.com/2017/01/3-days-poetry-fiesta-ends-in-calabar/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2016
+    },
+    {
+      "entity": "fpc-2016",
+      "claim": "reported venue → henshaw-centre",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2016
+    },
+    {
+      "entity": "fpc-2016",
+      "claim": "reported writing contest → fpc-onsite-2016",
+      "sourceURL": "https://guardian.ng/art/when-festival-poetry-calabar-2016-stood-on-novelty-sociability-footing/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2016
+    },
+    {
+      "entity": "clean-green-2016",
+      "claim": "organiser call → festival-poetry-foundation",
+      "sourceURL": "https://poetsinnigeria.org.ng/index.php/festival-poetry-competition-call-for-entries/",
+      "status": "Call only; completion and winners unverified",
+      "confidence": "High — explicit source statement",
+      "date": 2016
+    },
+    {
+      "entity": "clean-green-2016",
+      "claim": "announced festival selection → c8",
+      "sourceURL": "https://poetsinnigeria.org.ng/index.php/festival-poetry-competition-call-for-entries/",
+      "status": "Call only; not the on-site contest",
+      "confidence": "High — explicit source statement",
+      "date": 2016
+    },
+    {
+      "entity": "eriata",
+      "claim": "chairman in 2017 local coverage → festival-poetry-foundation",
+      "sourceURL": "https://crossriverwatch.com/2017/01/3-days-poetry-fiesta-ends-in-calabar/",
+      "status": "Historical office reported; not current staffing",
+      "confidence": "High — explicit source statement",
+      "date": 2017
+    },
+    {
+      "entity": "c8",
+      "claim": "Festival platform with a completed second edition documented in local 2017 coverage.",
+      "sourceURL": "https://crossriverwatch.com/2017/01/3-days-poetry-fiesta-ends-in-calabar/",
+      "status": "Report supported",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "delta-literary-forum",
+      "claim": "Literary movement documented in its chairman’s 2009 account.",
+      "sourceURL": "https://www.africanwriter.com/drum-beats-for-nduka-otiono-in-the-delta/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "dlf-otiono-2009",
+      "claim": "Chairman’s account reports an inaugural guest-writer gathering.",
+      "sourceURL": "https://www.africanwriter.com/drum-beats-for-nduka-otiono-in-the-delta/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "lander-anchorage",
+      "claim": "Venue named in the reading account.",
+      "sourceURL": "https://www.africanwriter.com/drum-beats-for-nduka-otiono-in-the-delta/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "david-diai",
+      "claim": "Chairman and reporter of the 2009 gathering.",
+      "sourceURL": "https://www.africanwriter.com/drum-beats-for-nduka-otiono-in-the-delta/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "nduka-otiono",
+      "claim": "Guest writer in the Asaba reading account.",
+      "sourceURL": "https://www.africanwriter.com/drum-beats-for-nduka-otiono-in-the-delta/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "dlf-otiono-2009",
+      "claim": "reported host → delta-literary-forum",
+      "sourceURL": "https://www.africanwriter.com/drum-beats-for-nduka-otiono-in-the-delta/",
+      "status": "Participant report; independent corroboration pending",
+      "confidence": "High — explicit source statement",
+      "date": "2009-07-30"
+    },
+    {
+      "entity": "dlf-otiono-2009",
+      "claim": "reported venue → lander-anchorage",
+      "sourceURL": "https://www.africanwriter.com/drum-beats-for-nduka-otiono-in-the-delta/",
+      "status": "Participant report; independent corroboration pending",
+      "confidence": "High — explicit source statement",
+      "date": "2009-07-30"
+    },
+    {
+      "entity": "dlf-otiono-2009",
+      "claim": "reported guest reader → nduka-otiono",
+      "sourceURL": "https://www.africanwriter.com/drum-beats-for-nduka-otiono-in-the-delta/",
+      "status": "Participant report; independent corroboration pending",
+      "confidence": "High — explicit source statement",
+      "date": "2009-07-30"
+    },
+    {
+      "entity": "david-diai",
+      "claim": "chairman as of 2009 → delta-literary-forum",
+      "sourceURL": "https://www.africanwriter.com/drum-beats-for-nduka-otiono-in-the-delta/",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2009
+    },
+    {
+      "entity": "ink-potters",
+      "claim": "Poetry platform named in a supporter’s open-mic notice.",
+      "sourceURL": "https://lockersupdate.wordpress.com/2016/10/07/theinkpotters-openmicnight-4/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ink-openmic-4",
+      "claim": "Poetry and spoken-word night announced at La Gold Hotel.",
+      "sourceURL": "https://lockersupdate.wordpress.com/2016/10/07/theinkpotters-openmicnight-4/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "la-gold-hotel",
+      "claim": "Announced open-mic venue.",
+      "sourceURL": "https://lockersupdate.wordpress.com/2016/10/07/theinkpotters-openmicnight-4/",
+      "status": "Announcement verified",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ink-openmic-4",
+      "claim": "platform in supporter notice → ink-potters",
+      "sourceURL": "https://lockersupdate.wordpress.com/2016/10/07/theinkpotters-openmicnight-4/",
+      "status": "Announcement only",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2016-10-14"
+    },
+    {
+      "entity": "ink-openmic-4",
+      "claim": "announced venue → la-gold-hotel",
+      "sourceURL": "https://lockersupdate.wordpress.com/2016/10/07/theinkpotters-openmicnight-4/",
+      "status": "Announcement only",
+      "confidence": "High — explicit source statement",
+      "date": "Scheduled 2016-10-14"
+    },
+    {
+      "entity": "phls-slam-2018",
+      "claim": "Results report names Tobi Abiodun as senior-category winner.",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Report supported",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "phls-library",
+      "claim": "Venue in results coverage and earlier open-mic notice.",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Report supported",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "amu-nnadi",
+      "claim": "Resident poet in the 2018 report.",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Report supported",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "andrew-patience",
+      "claim": "Named 2018 slam judge; full name in published announcement.",
+      "sourceURL": "https://newbooksnigeria.wordpress.com/project-tag/port-harcourt-literary-society/",
+      "status": "Source confirmed",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "phls-slam-2018",
+      "claim": "reported organiser → c1004",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2018
+    },
+    {
+      "entity": "phls-slam-2018",
+      "claim": "reported venue → phls-library",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2018
+    },
+    {
+      "entity": "tobi",
+      "claim": "reported senior-category winner → phls-slam-2018",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2018
+    },
+    {
+      "entity": "amu-nnadi",
+      "claim": "resident poet as of 2018 → c1004",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2018
+    },
+    {
+      "entity": "efe",
+      "claim": "reported judge → phls-slam-2018",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2018
+    },
+    {
+      "entity": "andrew-patience",
+      "claim": "reported judge → phls-slam-2018",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2018
+    },
+    {
+      "entity": "obii",
+      "claim": "reported judge → phls-slam-2018",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2018
+    },
+    {
+      "entity": "graciano",
+      "claim": "reported judge → phls-slam-2018",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Explicit source role; no residence or current staffing inferred",
+      "confidence": "High — explicit source statement",
+      "date": 2018
+    },
+    {
+      "entity": "c1004",
+      "claim": "Society with a monthly open mic and teen programme reported in 2018; slam results are documented.",
+      "sourceURL": "https://www.newsplatformng.com/2018/06/port-harcourt-literary-society-changing.html",
+      "status": "Report supported",
+      "confidence": "High — explicit source statement"
+    },
+    {
+      "entity": "ccpc-gsu-speech",
+      "claim": "Published speech documents a gathering on campus.",
+      "sourceURL": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "gsu-campus",
+      "claim": "Campus named in the speech attribution.",
+      "sourceURL": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "abdulbaki-speech",
+      "claim": "Speaker credited by the published speech.",
+      "sourceURL": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "fulfulde-speech",
+      "claim": "Published address on Fulfulde and poetry.",
+      "sourceURL": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "ccpc-gsu-speech",
+      "claim": "campus stated → gsu-campus",
+      "sourceURL": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+      "status": "First-person occurrence evidence; event date unresolved",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "ccpc-gsu-speech",
+      "claim": "credited speaker → abdulbaki-speech",
+      "sourceURL": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+      "status": "First-person occurrence evidence; event date unresolved",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "ccpc-gsu-speech",
+      "claim": "published speech evidence → fulfulde-speech",
+      "sourceURL": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+      "status": "First-person occurrence evidence; event date unresolved",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "ccpc-gsu-speech",
+      "claim": "named programme → ccpc",
+      "sourceURL": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+      "status": "First-person occurrence evidence; event date unresolved",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "abdulbaki-speech",
+      "claim": "credited speaker / author → fulfulde-speech",
+      "sourceURL": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+      "status": "Only the source-stated role is supported",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "ccpc-orerokpe-proposal",
+      "claim": "Proposed; completion unverified.",
+      "sourceURL": "https://www.vanguardngr.com/2026/08/sdu-hosts-poets-writers-in-courtesy-visit-pledges-support-for-creative-culture/",
+      "status": "Announcement verified",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "sdu-orerokpe",
+      "claim": "Proposed setting.",
+      "sourceURL": "https://www.vanguardngr.com/2026/08/sdu-hosts-poets-writers-in-courtesy-visit-pledges-support-for-creative-culture/",
+      "status": "Announcement verified",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "salome-ikokoyo",
+      "claim": "Proposal presenter.",
+      "sourceURL": "https://www.vanguardngr.com/2026/08/sdu-hosts-poets-writers-in-courtesy-visit-pledges-support-for-creative-culture/",
+      "status": "Report supported",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "ccpc-orerokpe-proposal",
+      "claim": "proposed campus → sdu-orerokpe",
+      "sourceURL": "https://www.vanguardngr.com/2026/08/sdu-hosts-poets-writers-in-courtesy-visit-pledges-support-for-creative-culture/",
+      "status": "Proposal only, not held",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "salome-ikokoyo",
+      "claim": "proposal presenter → ccpc-orerokpe-proposal",
+      "sourceURL": "https://www.vanguardngr.com/2026/08/sdu-hosts-poets-writers-in-courtesy-visit-pledges-support-for-creative-culture/",
+      "status": "Reported proposal; identity variant unresolved",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "Secretary reports a held poetry gathering.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "chike-secretariat",
+      "claim": "Reported gathering venue.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "albert-ograka",
+      "claim": "Forum secretary and report author.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "alonu-azua",
+      "claim": "Forum chairman in this account.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "nkechi-maduemezia",
+      "claim": "Reported poetry reader.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "melvis-ugo",
+      "claim": "Reported performer and chair’s representative.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "ogaga-ifowodo",
+      "claim": "Author credited in a book reference.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "izuma",
+      "claim": "Poetry collection cited in the account.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "albert-ograka",
+      "claim": "author attributed → izuma",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Bibliographic attribution in insider report; publisher metadata pending",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "cited in account → izuma",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Citation / reading context, not author attendance",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "ash-flakes",
+      "claim": "Poetry collection cited in the account.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "david-diai",
+      "claim": "author attributed → ash-flakes",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Bibliographic attribution in insider report; publisher metadata pending",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "cited in account → ash-flakes",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Citation / reading context, not author attendance",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "oil-lamp",
+      "claim": "Poetry collection cited in the account.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Source confirmed",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "ogaga-ifowodo",
+      "claim": "author attributed → oil-lamp",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Bibliographic attribution in insider report; publisher metadata pending",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "cited in account → oil-lamp",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Citation / reading context, not author attendance",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "reported host → delta-literary-forum",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Insider report; independent corroboration pending",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "reported venue → chike-secretariat",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Insider report; independent corroboration pending",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "reported opening address → alonu-azua",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Insider report; independent corroboration pending",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "reported reader → nkechi-maduemezia",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Insider report; independent corroboration pending",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "reported performer → melvis-ugo",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Insider report; independent corroboration pending",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "reported reader → david-diai",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Insider report; independent corroboration pending",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "albert-ograka",
+      "claim": "secretary as of 2024 → delta-literary-forum",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Only the source-stated role is supported",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "alonu-azua",
+      "claim": "chairman as of 2024 → delta-literary-forum",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Only the source-stated role is supported",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "david-diai",
+      "claim": "reported reader of poems → izuma",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Only the source-stated role is supported",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "dlf-world-poetry-2024",
+      "claim": "Four schools reported participating; institution and student identities not expanded in this batch.",
+      "sourceURL": "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/",
+      "status": "Insider report only",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    },
+    {
+      "entity": "bots-2025",
+      "claim": "Venue, winner and judge variants retained; no uncertain identity merge. Periscope is co-organiser-associated, not independent.",
+      "sourceURL": "https://periscopenga.com/2025/08/glitz-glamour-as-battle-of-stanzas-redefines-poetry-events-in-nigeria-births-first-anthology-of-poems-in-edo/",
+      "status": "Unresolved variants",
+      "confidence": "High for the attributed statement; wider verification incomplete",
+      "origin": "13 October user addendum plus retrieved source text"
+    }
+  ]
+}

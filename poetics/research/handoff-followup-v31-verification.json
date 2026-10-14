@@ -1,0 +1,48 @@
+{
+  "version": {
+    "id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_667caa87c4e88191a8fa46a4971160c4",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "version_number": 31,
+    "source": {
+      "commit_sha": "d84c12f40cd22617b9945f253f91c0a6c829f51f"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000c72481f48ee6b0af15285a14",
+      "content_hash": "sha256:3341d9d207ad7af261f078eadff16e67003f1212f434b968d016296abb2e27f9",
+      "size_bytes": 4741120,
+      "file_count": 68
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6acea9d405e08191aaac76f2afd029c5",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "title": "Poetics — Vic’Adex Prototype",
+    "version_id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_667caa87c4e88191a8fa46a4971160c4",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://poetics-vicadex-lab.vicadexconcepts.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acce9493e8c81919635a9e7438b820c",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-13T22:00:04.151920+00:00"
+  },
+  "archiveModel": {
+    "entries": 421,
+    "relationships": 627,
+    "Abia": 18,
+    "Ebonyi": 19,
+    "Imo": 18,
+    "Kogi": 3,
+    "Anambra": 13,
+    "Ogun": 9,
+    "Lagos": 64
+  },
+  "workbookReadback": "E005/S005 supplemented; seven ledger/source/additions rows verified; historical reference, Markdown now working ledger.",
+  "freshVisual": "Unavailable; responsive overflow unverified.",
+  "wordPress": "Untouched"
+}

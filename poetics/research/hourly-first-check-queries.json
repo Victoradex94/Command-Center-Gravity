@@ -1,0 +1,58 @@
+{
+  "reviewedAt": "2026-10-13T23:05:38+01:00",
+  "queries": [
+    "\"Rhapsodies of a Corper\" \"Yemi Adebiyi\" \"1998\" publisher",
+    "\"Writers brace up in Abia\" \"Ijioma\" \"2024\"",
+    "\"Ojokoro\" \"Cross Country\" \"26 October 2024\" held",
+    "\"Rhapsodies of a Corper\" ISBN"
+  ],
+  "sources": [
+    {
+      "title": "Writers brace up in Abia - The Nation Newspaper",
+      "url": "https://thenationonlineng.net/writers-brace-up-in-abia/amp/",
+      "ref": "turn191search0"
+    },
+    {
+      "title": "At 70, I’m Still Hopeful Of Seeing My Script On Screen – Adebiyi  – Independent Newspaper Nigeria",
+      "url": "https://independent.ng/at-70-im-still-hopeful-of-seeing-my-script-on-screen-adebiyi/",
+      "ref": "turn191search1"
+    },
+    {
+      "title": "Welcome teacher goodbye lover de Yemi Adebiyi",
+      "url": "https://www.books-express.ro/welcome-teacher-goodbye-lover/p/fa%2C9783845449623",
+      "ref": "turn191search2"
+    },
+    {
+      "title": "Pass on the Baton by Yemi Adebiyi (Ebook) - Read free for 30 days",
+      "url": "https://www.everand.com/book/387799247/Pass-on-the-Baton",
+      "ref": "turn191search3"
+    },
+    {
+      "title": "Yemi Adebiyi To Host Cross Country Poetry Celebration In Lagos  – Independent Newspaper Nigeria",
+      "url": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "ref": "turn191search4"
+    },
+    {
+      "title": "Making the Case: The Narrative Psychological Case-history and the Invention of Individuality in Germany, 1750-1800 9783110642674, 9783110643466, 9783110642797, 2019939360 - DOKUMEN.PUB",
+      "url": "https://dokumen.pub/making-the-case-the-narrative-psychological-case-history-and-the-invention-of-individuality-in-germany-1750-1800-9783110642674-9783110643466-9783110642797-2019939360.html",
+      "ref": "turn191search5"
+    },
+    {
+      "title": "The German Tradition of Psychology in Literature and Thought 1700-1840 | PDF | Nous | Neoplatonism",
+      "url": "https://www.scribd.com/document/444430872/The-german-tradition-of-psychology-in-Literature-and-Thought-1700-1840",
+      "ref": "turn191search6"
+    },
+    {
+      "title": "Extreme Exoticism: Japan in the American Musical Imagination 0190072709, 9780190072704 - DOKUMEN.PUB",
+      "url": "https://dokumen.pub/extreme-exoticism-japan-in-the-american-musical-imagination-0190072709-9780190072704.html",
+      "ref": "turn191search7"
+    },
+    {
+      "title": "At 70, I’m Still Hopeful Of Seeing My Script On Screen – Adebiyi  – Independent Newspaper Nigeria",
+      "url": "https://independent.ng/at-70-im-still-hopeful-of-seeing-my-script-on-screen-adebiyi/",
+      "ref": "turn191view0"
+    }
+  ],
+  "claimStatus": "Author-recalled book year; single newspaper event account returned in full through search. Author/participant identity unresolved; direct Abia fetch remains 403.",
+  "negativeYield": "No Rhapsodies publisher/ISBN recovered; other-book ISBNs rejected. No qualifying Ojokoro completion. No independent Abia event corroboration."
+}

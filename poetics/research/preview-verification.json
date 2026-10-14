@@ -1,0 +1,55 @@
+{
+  "version": 26,
+  "build": "2026-10-13-ui-contract-r26-341",
+  "sourceCommit": "f5d67bcbe001c3eef1a7eb8cc1b0c9c1e117bf0d",
+  "savedVersionId": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_530bcaaa029881919425eee9d29eb0af",
+  "deploymentId": "appgdep_6ace6f819c3c81919599fbaea9fb8e28",
+  "status": "succeeded",
+  "publishedAt": "2026-10-13T17:51:15.892297+00:00",
+  "url": "https://poetics-vicadex-lab.vicadexconcepts.chatgpt.site",
+  "archiveMetadata": {
+    "archive_format": "tar",
+    "sediment_file_id": "file_000000000a30820eb2a25772f3ca74f9",
+    "content_hash": "sha256:f5124ca5fad54125a3ba42f088a6b0dcd8c0b82500bc8ce66e5b842f277bb862",
+    "size_bytes": 2447360,
+    "file_count": 59
+  },
+  "counts": {
+    "entries": 341,
+    "relationships": 534,
+    "Delta": 16,
+    "Gombe": 8,
+    "Edo": 13,
+    "Publications": 15
+  },
+  "mountedUIChange": "App calls enforce after Atlas mount. Observer removes exact legacy IDs/names/text, including late controls. CSS prevents pre-removal flash. State and All Nigeria navigation are retained.",
+  "runtimeCheck": "test-atlas-ui-guard.cjs passed initial, label-only, text-only, late injection and unaffected-route cases.",
+  "userIndependentV25Observation": "341 entries, Delta 16, Gombe 8, Edo 13; legacy controls remained visible. This is preserved as a live observation.",
+  "freshV26BrowserCheck": {
+    "result": "Blocked",
+    "error": "net::ERR_BLOCKED_BY_CLIENT",
+    "liveControlAbsenceConfirmed": false
+  },
+  "localVisualCheck": {
+    "result": "Preview runner failed",
+    "error": "bwrap: Can't mount proc on /newroot/proc: Operation not permitted",
+    "responsiveOverflowVisuallyVerified": false
+  },
+  "limits": "No fresh rendered proof of v26 control absence or overflow. Native deployment success is not browser confirmation.",
+  "wordpress": "No changes",
+  "userIndependentV26Verification": {
+    "reportedAt": "2026-10-13",
+    "entries": 341,
+    "Delta": 16,
+    "Gombe": 8,
+    "Edo": 13,
+    "controlsAbsent": [
+      "Zoom in",
+      "Zoom out",
+      "Show all Nigeria"
+    ],
+    "stateSelectionAvailable": true,
+    "Orerokpe": "Proposal; not completed, 2026 inferred",
+    "scope": "User-reported independent fresh reload; not agent visual QA."
+  }
+}

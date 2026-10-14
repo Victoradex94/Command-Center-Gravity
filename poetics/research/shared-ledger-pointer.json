@@ -1,0 +1,9 @@
+{
+  "canonicalWorkingLedger": "https://drive.google.com/file/d/13qDg2XVdUM5ZAbplLoeNT5X6hB89cnSq/view",
+  "driveFileId": "13qDg2XVdUM5ZAbplLoeNT5X6hB89cnSq",
+  "format": "text/markdown",
+  "sharedParent": "1ehNFW06W6sxrFy80ZFy66AQSSvCA6JIu",
+  "authority": "Read current shared bytes at each run. Attachments and local Git reports are snapshots/supporting evidence, not competing working ledgers.",
+  "writeRule": "Fresh read, merge/rebase preserving Codex contributions, append timestamped run, verify readback; stop on conflict. No atomic conditional-write guard exposed by connector.",
+  "visualLimit": "Fresh browser and responsive overflow unverified. Preserve restricted Sites audience; do not deploy live WordPress."
+}

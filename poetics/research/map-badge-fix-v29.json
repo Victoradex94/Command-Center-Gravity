@@ -1,0 +1,40 @@
+{
+  "version": {
+    "id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_8872f98dcea08191ad7787392087aa7f",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "version_number": 29,
+    "source": {
+      "commit_sha": "e0f27539804cb416748c79fdf03ff2b9e61f5480"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000009f5481f498c6df36367d6148",
+      "content_hash": "sha256:e37fc97d17cb3d258e08c84f601bfedb5edcf42d20bd5354c3aedbffdf22f970",
+      "size_bytes": 3932160,
+      "file_count": 65
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6acea0961f348191aaa209c5a4c46659",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "title": "Poetics — Vic’Adex Prototype",
+    "version_id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_8872f98dcea08191ad7787392087aa7f",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://poetics-vicadex-lab.vicadexconcepts.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acce9493e8c81919635a9e7438b820c",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-13T21:20:37.526888+00:00"
+  },
+  "change": "State paths render first, labels second, all count badges last in pointer-through overlay. People/Publications numbers use light text on dark circles.",
+  "checks": "Map navigation, state/prize counts, GIS and southeast integrity passed. Layer-order, contrast and pointer-through regressions passed.",
+  "entries": 400,
+  "connections": 596,
+  "visualVerification": "Unavailable: browser control not available in current session; responsive overflow still not independently visually tested.",
+  "wordPress": "Untouched"
+}

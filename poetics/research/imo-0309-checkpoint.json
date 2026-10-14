@@ -1,0 +1,127 @@
+{
+  "id": "RUN-20261014-0309-IMO",
+  "date": "2026-10-14",
+  "queries": [
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"ANA Imo\" \"Sylvester Nwokedi\" poetry prize winner 2024",
+      "yield": "Official report supports held May2024/endowment, not winners; existing 2022 presentation found."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"ANA Imo\" \"poetry\" \"May 2024\" winner",
+      "yield": "No qualifying results beyond official held-prize statement."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"ANA Imo\" \"July 2025\" competition poetry results",
+      "yield": "GrassrootReporters17June2025 advance poetry notice; completed short-story winners must not transfer to poetry."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Fr Njoku\" \"poetry competition\" 2025 winner",
+      "yield": "2020 OtownGist winner account only; no2025 result."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"ANA Imo\" \"July\" \"2025\" \"Igbo poetry\" winner",
+      "yield": "Unrelated ship/acronym results; no qualifying evidence."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Nwokedi\" \"May 2024\" \"poetry\"",
+      "yield": "Unrelated May2024 results; no qualifying evidence."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Chidozie Chukwubuike\" \"Wriggling to Freedom\" publisher",
+      "yield": "Unrelated similarly worded surgery/other texts; no target imprint."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Chidozie Chukwubuike\" \"Jangolova\" \"2022\"",
+      "yield": "Unrelated2022 results; no catalogue metadata."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Chidozie Chukwubuike\" \"Jangolova\" publisher",
+      "yield": "Existing2022 presentation report; no qualifying publisher."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Wriggling to Freedom\" \"Chukwubuike\" ISBN",
+      "yield": "No qualifying ISBN/catalogue recovered."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Chidozie\" \"Whelan\" \"October\" \"2022\"",
+      "yield": "Existing launch report; unrelated name fragments rejected."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Sylvester Nwokedi\" \"Igbo poetry\" \"July 2025\" results",
+      "yield": "No qualifying completion/results source recovered."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "access": "Search relevant full passage",
+      "family": "ANA official chapter report",
+      "claims": [
+        "1Sep2024 report says poetry prize heldMay2024",
+        "Endowed bySylvesterNwokedi"
+      ],
+      "unresolved": "Day/venue/winners absent; unchanged."
+    },
+    {
+      "url": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+      "access": "Direct relevant text read",
+      "family": "Outlet report citing chapter PRO release",
+      "claims": [
+        "Completed short-story competition results",
+        "Separate July Igbo poetry competition announced"
+      ],
+      "unresolved": "Poetry occurrence/winners not supported; short-story venue cannot be assigned to proposed poetry."
+    },
+    {
+      "url": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "access": "Direct relevant fulltext",
+      "family": "DeborahUzoma participant-authored OtownGist report",
+      "claims": [
+        "Held two-book poetry presentation at Whelan hall Owerri",
+        "10Oct2022 pubdate, lastSaturday wording",
+        "Jangolova &otherpoems; WrigglingToFreedom(A Decuplet in verse)",
+        "SylvesterNwokedi/MbemIjele performed; DeborahUzoma performed"
+      ],
+      "unresolved": "Already imported; no duplicate. Exact day not normalized; imprint/ISBN/firstpublicationyear unresolved."
+    },
+    {
+      "url": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "access": "Search full report",
+      "family": "DeborahUzoma OtownGist2020 report",
+      "unresolved": "2020edition not2025 evidence."
+    }
+  ],
+  "decision": "P012 unchanged OPEN; no new qualifying atomic claim or connection. Prototype already has all relevant2022 event/book/performer nodes; no data/CSS mutation.",
+  "source": "fb791a67f0ff2ef5909bf54ed3e48cb91e26e138",
+  "counts": {
+    "entries": 430,
+    "connections": 640,
+    "publications": 25,
+    "Imo": 18
+  },
+  "visual": "Browser unavailable; no fresh rendered/mobile/overflow claim"
+}

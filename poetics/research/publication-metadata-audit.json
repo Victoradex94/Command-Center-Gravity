@@ -1,0 +1,315 @@
+{
+  "batch": "2026-10-13-publication-metadata",
+  "queryCount": 12,
+  "groups": [
+    {
+      "id": "META01",
+      "engine": "system2",
+      "queries": [
+        "\"Stanzas from the Bronze Capital\" ISBN publisher",
+        "\"Izuma\" \"Albert Ograka\" publisher ISBN",
+        "\"Ashflakes\" \"David Diai\" publisher",
+        "\"Oil Lamp\" \"Ogaga Ifowodo\" ISBN"
+      ],
+      "candidates": [
+        {
+          "title": "The oil lamp by Ogaga Ifowodo | Open Library",
+          "url": "https://openlibrary.org/books/OL3391930M/The_oil_lamp",
+          "ref": "turn158search0"
+        },
+        {
+          "title": "The oil lamp | WorldCat.org",
+          "url": "https://search.worldcat.org/es/title/The-oil-lamp/oclc/57434359",
+          "ref": "turn158search1"
+        },
+        {
+          "title": "Odyssey: Poems by David Diai - AfricanWriter.com",
+          "url": "https://www.africanwriter.com/odyssey-poems-by-david-diai/",
+          "ref": "turn158search2"
+        },
+        {
+          "title": "The Oil Lamp: Poems by Ogaga Ifowodo (9781592213603)",
+          "url": "https://www.allbookstores.com/The-Oil-Lamp-Poems-Ogaga/9781592213603",
+          "ref": "turn158search3"
+        },
+        {
+          "title": "Ogaga Ifowodo",
+          "url": "https://a.osmarks.net/content/wikipedia_en_all_maxi_2020-08/A/Ogaga_Ifowodo",
+          "ref": "turn158search5"
+        },
+        {
+          "title": "THE OIL LAMP: Poems, by Ogaga Ifowodo - Africa World Press & The Red Sea Press",
+          "url": "https://africaworldpressbooks.com/the-oil-lamp-poems-by-ogaga-ifowodo/",
+          "ref": "turn158search6"
+        },
+        {
+          "title": "Ifowodo – AbeBooks",
+          "url": "https://www.abebooks.com/book-search/author/ifowodo/",
+          "ref": "turn158search7"
+        },
+        {
+          "title": "The Oil Lamp: Poems - Ogaga Ifowodo: 9781592213603 - AbeBooks",
+          "url": "https://www.abebooks.com/9781592213603/Oil-Lamp-Poems-Ogaga-Ifowodo-159221360X/plp",
+          "ref": "turn158search9"
+        },
+        {
+          "title": "Oil Lamp by Ogaga Ifowodo (2005, Hardcover) for sale online | eBay",
+          "url": "https://www.ebay.com/itm/306770609737",
+          "ref": "turn158search10"
+        },
+        {
+          "title": "The Oil Lamp By Ogaga Ifowodo | World of Books US",
+          "url": "https://www.worldofbooks.com/products/oil-lamp-buch-ogaga-ifowodo-9781592213603",
+          "ref": "turn158search12"
+        },
+        {
+          "title": "Ogaga Ifowodo",
+          "url": "https://en.wikipedia.org/wiki/Ogaga_Ifowodo",
+          "ref": "turn158search30"
+        },
+        {
+          "title": "Stanzas from the Bronze Capital: A Defining Voice in Edo’s Literary Journey - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+          "ref": "turn158search15"
+        },
+        {
+          "title": "Edo marks literary milestone with launch of ‘Stanzas from the Bronze Capital’ | Nigerian NewsDirect",
+          "url": "https://nigeriannewsdirect.com/edo-marks-literary-milestone-with-launch-of-stanzas-from-the-bronze-capital/",
+          "ref": "turn158search16"
+        },
+        {
+          "title": "Why Battle of the Stanzas? - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/why-battle-of-the-stanzas/",
+          "ref": "turn158search17"
+        },
+        {
+          "title": "Glitz, glamour as battle of stanzas redefines poetry events in Nigeria, births first anthology of poems in Edo | PeriscopeNGA.com",
+          "url": "https://periscopenga.com/2025/08/glitz-glamour-as-battle-of-stanzas-redefines-poetry-events-in-nigeria-births-first-anthology-of-poems-in-edo/",
+          "ref": "turn158search23"
+        },
+        {
+          "title": "Battle of the Stanzas - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/category/special-events/battle-of-the-stanzas/",
+          "ref": "turn158search25"
+        },
+        {
+          "title": "PAWA Backs “battle Of Stanzas” And Benin City’s First Poetry Anthology - Literature - Nigeria",
+          "url": "https://www.nairaland.com/8498647/pawa-backs-battle-stanzas-benin",
+          "ref": "turn158search26"
+        }
+      ],
+      "negativeYield": "No Izuma imprint or Stanzas ISBN retrieved. Retail editions disagree with library year/pagination."
+    },
+    {
+      "id": "META02",
+      "engine": "system1",
+      "queries": [
+        "\"Izuma\" \"Ograka\" book",
+        "\"Ashflakes\" \"Diai\" ISBN",
+        "\"Stanzas from the Bronze Capital\" \"contributors\"",
+        "\"Stanzas from the Bronze Capital\" \"publisher\" \"ISBN\""
+      ],
+      "candidates": [
+        {
+          "title": "Albert Ograka",
+          "url": "https://pcm.wikipedia.org/wiki/Albert_Ograka",
+          "ref": "turn159search0"
+        },
+        {
+          "title": "August 5th, 2025 Naija Poetry Fest, in collaboration ...",
+          "url": "https://www.facebook.com/godsonosarenrensartandliterature/posts/call-for-poemsstanzas-from-the-bronze-capitaldeadline-august-5th-2025naija-poetr/1098282075738960/",
+          "ref": "turn159search1"
+        },
+        {
+          "title": "How Battle of Stanzas from the Bronze Capital Strives to ...",
+          "url": "https://newsleader.com.ng/how-battle-of-stanzas-from-the-bronze-capital-strives-to-change-the-paradigm-in-the-literary-world-in-edo-state/",
+          "ref": "turn159search2"
+        },
+        {
+          "title": "Dance of the Locust: A Collection of Poems: Ograka, Albert",
+          "url": "https://www.amazon.com/Dance-Locust-Collection-Albert-Ograka/dp/9789912447",
+          "ref": "turn159search3"
+        },
+        {
+          "title": "Stanzas by Emily Brontë - Poems",
+          "url": "https://poets.org/poem/stanzas",
+          "ref": "turn159search15"
+        },
+        {
+          "title": "Stanzas | The Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/poems/47645/stanzas-56d2283e287a7",
+          "ref": "turn159search20"
+        },
+        {
+          "title": "THE OIL LAMP: Poems, by Ogaga Ifowodo - Africa World Press & The Red Sea Press",
+          "url": "https://africaworldpressbooks.com/the-oil-lamp-poems-by-ogaga-ifowodo/",
+          "ref": "turn159view0"
+        },
+        {
+          "title": "The oil lamp | WorldCat.org",
+          "url": "https://search.worldcat.org/es/title/The-oil-lamp/oclc/57434359",
+          "ref": "turn159view1"
+        }
+      ],
+      "negativeYield": "No readable contributor roster or publisher imprint for Stanzas; no Ashflakes ISBN."
+    },
+    {
+      "id": "META03",
+      "engine": "system2",
+      "queries": [
+        "\"Izuma and Other Poems\" publisher ISBN",
+        "\"Izuma\" \"Albert Ograka\" publication year",
+        "\"Ashflakes\" \"David Diai\" December 2008 publisher",
+        "\"Stanzas from the Bronze Capital\" PDF book ISBN Lanre"
+      ],
+      "candidates": [
+        {
+          "title": "Odyssey: Poems by David Diai - AfricanWriter.com",
+          "url": "https://www.africanwriter.com/odyssey-poems-by-david-diai/",
+          "ref": "turn160search0"
+        },
+        {
+          "title": "Stanzas from the Bronze Capital: A Defining Voice in Edo’s Literary Journey - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+          "ref": "turn160search1"
+        },
+        {
+          "title": "Edo marks literary milestone with launch of ‘Stanzas from the Bronze Capital’ | Nigerian NewsDirect",
+          "url": "https://nigeriannewsdirect.com/edo-marks-literary-milestone-with-launch-of-stanzas-from-the-bronze-capital/",
+          "ref": "turn160search6"
+        },
+        {
+          "title": "Why Battle of the Stanzas? - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/why-battle-of-the-stanzas/",
+          "ref": "turn160search8"
+        },
+        {
+          "title": "Battle of the Stanzas - Naija Poetry Fest",
+          "url": "https://naijapoetryfest.com.ng/category/special-events/battle-of-the-stanzas/",
+          "ref": "turn160search11"
+        },
+        {
+          "title": "Glitz, glamour as battle of stanzas redefines poetry events in Nigeria, births first anthology of poems in Edo | PeriscopeNGA.com",
+          "url": "https://periscopenga.com/2025/08/glitz-glamour-as-battle-of-stanzas-redefines-poetry-events-in-nigeria-births-first-anthology-of-poems-in-edo/",
+          "ref": "turn160search13"
+        },
+        {
+          "title": "PAWA Backs “battle Of Stanzas” And Benin City’s First Poetry Anthology - Literature - Nigeria",
+          "url": "https://www.nairaland.com/8498647/pawa-backs-battle-stanzas-benin",
+          "ref": "turn160search15"
+        }
+      ],
+      "negativeYield": "Izuma year/publisher/ISBN still unverified; no Stanzas preliminary pages retrieved. Another Ograka book's ISBN is not assigned to Izuma."
+    }
+  ],
+  "claims": [
+    {
+      "entry": "oil-lamp",
+      "fields": {
+        "title": "The Oil Lamp",
+        "author": "Ogaga Ifowodo",
+        "publisher": "Africa World Press",
+        "copyrightYear": "2005 — WorldCat",
+        "isbn13": [
+          "9781592213603",
+          "9781592213597"
+        ],
+        "isbn10": [
+          "159221360X",
+          "1592213596"
+        ],
+        "oclc": "57434359"
+      },
+      "sources": [
+        "https://africaworldpressbooks.com/the-oil-lamp-poems-by-ogaga-ifowodo/",
+        "https://search.worldcat.org/es/title/The-oil-lamp/oclc/57434359"
+      ],
+      "locators": [
+        "Publisher title/author/SKU (9781592213603), retrieved lines 189–213",
+        "WorldCat title/author/year/publisher/ISBN, lines 39–57"
+      ],
+      "status": "Publisher and library metadata supported",
+      "confidence": "High for named fields; edition reconciliation incomplete",
+      "unresolved": "Retail paperback listings use 2006 and 82 pages; library record ©2005 and 60 pages. No single physical edition inspected."
+    },
+    {
+      "entry": "ash-flakes",
+      "fields": {
+        "title": "Ashflakes",
+        "author": "David Diai",
+        "publication": "December 2008 — author-attributed footer"
+      },
+      "sources": [
+        "https://www.africanwriter.com/odyssey-poems-by-david-diai/"
+      ],
+      "locator": "Readable indexed footer directly after excerpt; no poem lines imported",
+      "status": "Author-attributed date; publisher/ISBN unverified",
+      "confidence": "High for what the footer says, not publisher independently confirmed",
+      "unresolved": "Direct fetch timeout; original imprint, ISBN, edition unresolved."
+    },
+    {
+      "entry": "bronze-capital",
+      "fields": {
+        "editors": [
+          "Lanre Sonde",
+          "Godson Osarenren"
+        ],
+        "foreword": "Eriata Oribhabor",
+        "length": "109 pages — organiser stated",
+        "launch": "30 August 2025 — organiser retrospective"
+      },
+      "sources": [
+        "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+        "https://naijapoetryfest.com.ng/battle-of-the-stanzas-bots-takes-benin-city-by-storm-with-renaissance-of-the-poetic/"
+      ],
+      "status": "Organiser metadata supported; imprint/ISBN/roster unresolved",
+      "confidence": "High for credits attribution",
+      "unresolved": "No title/copyright pages, bibliographic imprint, ISBN or complete contributor roster retrieved. Advance notice has August 31 variant; not substituted for post-event date."
+    },
+    {
+      "entry": "izuma",
+      "fields": {
+        "title": "Izuma — 2024 report citation",
+        "author": "Albert Ograka — report attribution"
+      },
+      "sources": [
+        "https://www.blanknewsonline.com/world-poetry-day-delta-literary-forum-lights-up-asaba/"
+      ],
+      "status": "Cited work; edition unverified",
+      "confidence": "High for citation attribution; expanded title relationship uncertain",
+      "unresolved": "Year, publisher and ISBN absent from retrieved evidence. Retail bio references Izuma And Other Poems; no edition/identity confirmation. Another Ograka collection's ISBN not adopted."
+    }
+  ],
+  "sourcesRead": [
+    {
+      "url": "https://africaworldpressbooks.com/the-oil-lamp-poems-by-ogaga-ifowodo/",
+      "ref": "turn159view0",
+      "kind": "Primary publisher",
+      "access": "Read"
+    },
+    {
+      "url": "https://search.worldcat.org/es/title/The-oil-lamp/oclc/57434359",
+      "ref": "turn159view1",
+      "kind": "Library union catalogue",
+      "access": "Metadata visible despite JS-required notice"
+    },
+    {
+      "url": "https://www.africanwriter.com/odyssey-poems-by-david-diai/",
+      "ref": "turn160search0",
+      "kind": "Author-attributed excerpt footer",
+      "access": "Readable search extraction; direct fetch timeout"
+    },
+    {
+      "url": "https://naijapoetryfest.com.ng/stanzas-from-the-bronze-capital-a-defining-voice-in-edos-literary-journey/",
+      "ref": "turn149view1",
+      "kind": "Organiser metadata",
+      "access": "Read"
+    }
+  ],
+  "isbnCheckDigits": {
+    "9781592213603": true,
+    "9781592213597": true,
+    "159221360X": true,
+    "1592213596": true
+  }
+}

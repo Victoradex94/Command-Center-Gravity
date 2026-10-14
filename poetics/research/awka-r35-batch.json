@@ -1,0 +1,94 @@
+{
+  "id": "RUN-20261014-0410-AWKA",
+  "queries": [
+    {
+      "date": "2026-10-14",
+      "engine": "system2",
+      "query": "\"Awka\" \"Cross Country\" poetry \"2023\" \"Vincent\"",
+      "yield": "Official profile and itineraries only; new venue-linked colloquium leads."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system2",
+      "query": "\"Nnyagu\" \"poetry\" \"October 2023\"",
+      "yield": "Official October panel role; exactday unresolved."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system2",
+      "query": "\"Window on America\" \"Awka\" \"poetry\" \"2023\"",
+      "yield": "LitFEAST editorial and birthday reports; separate events, noCCPC day."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system2",
+      "query": "\"Vincent Eze\" \"Cross Country\" poetry",
+      "yield": "Itinerary/press-release repeats; athlete same-name rejected."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system2",
+      "query": "\"LitFEAST\" \"Awka\" \"July\" \"2023\"",
+      "yield": "University magazine index retrospective lead; guessed articlepath inaccessible, no import."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system2",
+      "query": "\"Colloquium on Performance Poetry\" \"2025\" Awka",
+      "yield": "Two official attendance records plus separate retrospective; CF/GF variant preserved."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system1",
+      "query": "\"Colloquium on Performance Poetry\" \"Awka\" March 2025",
+      "yield": "Unrelated March results; no additional direct organiser evidence."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system1",
+      "query": "\"Cross Country\" \"Awka\" \"Nnyagu\" 2023",
+      "yield": "Facebook retrospective snippets; direct temporarilyblocked, no expanded2023 roles."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://profile.unizik.edu.ng/nau3973",
+      "access": "Direct event section read",
+      "family": "UNIZIK CIRMS staff profile",
+      "claim": "Ebekue eventsattended lists19March2025 colloquium, CFgroup, AwkaWindow venue; webinarclassification"
+    },
+    {
+      "url": "https://profile.unizik.edu.ng/NAU5098",
+      "access": "Direct event section read",
+      "family": "UNIZIK CIRMS staff profile",
+      "claim": "Oyewole eventsattended lists19March2025 performancepoetrycolloquium, hybrid; profile does not establish on-sitepresence"
+    },
+    {
+      "url": "https://www.linkedin.com/posts/ifeoma-odinye-24618526_gf-20th-march-2025-the-gf-research-activity-7308429912091111424-XsuD",
+      "access": "Direct retrospective read",
+      "family": "Odinye first-person account",
+      "claim": "Describes occurredcolloquium with AwkaWindow collaboration; GFgroup/ChikeOkoye;20March heading not normalized toeventday"
+    },
+    {
+      "url": "https://www.facebook.com/groups/209098666178915/posts/1003422896746484/",
+      "access": "Temporarilyblocked direct; indexedsnippet only",
+      "claim": "Lead only; no2023 date/participant imports"
+    },
+    {
+      "url": "https://ulimagofunizik.blogspot.com/",
+      "access": "Indexed editorial text",
+      "claim": "LitFEAST lead; distinctfromCCPC"
+    },
+    {
+      "url": "https://ulimagofunizik.blogspot.com/2023/07/editorial-litfeast-and-its-meaning-for.html",
+      "access": "Unconfirmed guessed article path inaccessible",
+      "claim": "Not treated as canonical source"
+    }
+  ],
+  "status": "P008 unchangedOPEN; P014 advancednewprimary-supported event. Three newnodes/three typededges. No CF/GFentity merge; no physicalattendance assumption.",
+  "counts": {
+    "entries": 433,
+    "relationships": 643,
+    "publications": 25
+  }
+}

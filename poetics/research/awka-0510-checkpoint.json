@@ -1,0 +1,78 @@
+{
+  "id": "RUN-20261014-0510-AWKA-FOLLOWUP",
+  "timestamp": "2026-10-14T05:10:44+01:00",
+  "queries": [
+    {
+      "date": "2026-10-14",
+      "engine": "system2",
+      "query": "\"GF Research Group\" \"Chike Okoye\" poetry colloquium",
+      "yield": "Previously-read Odinye retrospective only; no new organiser identity evidence."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system2",
+      "query": "\"CF Research Group\" \"Performance Poetry\"",
+      "yield": "Unrelated scholarly texts; no additional target source."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system2",
+      "query": "\"LitFEAST\" \"Ozy Aneke\" 2023",
+      "yield": "Indexed Uli editorial; direct root fetch unavailable."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system2",
+      "query": "\"LitFEAST\" \"Precious Ifeoma Benjamin\"",
+      "yield": "Same editorial source family; no corroborating event day."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system1",
+      "query": "\"GF\" \"Chike Okoye\" \"Colloquium\" 2025",
+      "yield": "Unrelated2025 results; no qualifying primary source."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system1",
+      "query": "\"LitFEAST\" \"Nnamdi Azikiwe\" 2023",
+      "yield": "Uli index and unrelated programmes; no exact eventday."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system1",
+      "query": "site:unizik.edu.ng \"performance poetry\" \"2025\"",
+      "yield": "General performancepoetry results; no new organiser source."
+    },
+    {
+      "date": "2026-10-14",
+      "engine": "system1",
+      "query": "\"EDITORIAL: LitFEAST\" Uli",
+      "yield": "Uli index confirms dated8July2023 editorial; no canonical article URL recovered."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.linkedin.com/posts/ifeoma-odinye-24618526_gf-20th-march-2025-the-gf-research-activity-7308429912091111424-XsuD",
+      "access": "Search text; previously direct read",
+      "family": "Same Odinye first-person retrospective",
+      "supports": "GF/ChikeOkoye wording, not resolving CF variant"
+    },
+    {
+      "url": "https://ulimagofunizik.blogspot.com/",
+      "access": "Relevant editorial via index; directroot inaccessible",
+      "family": "OzyAneke/Uli editorial",
+      "supports": "Retrospective LitFEAST with poetry;8July2023 is editorial date, not eventday",
+      "unresolved": "Canonical article URL, exact day, corroboration"
+    }
+  ],
+  "decision": "No new qualifying claim beyond existing source support; no organiser merge, no LitFEAST import from duplicated indexed text. P008/P014 statuses unchanged.",
+  "counts": {
+    "entries": 433,
+    "connections": 643,
+    "publications": 25,
+    "Anambra": 16
+  },
+  "visual": "Not rendered; browser unavailable",
+  "wordpress": "Untouched"
+}

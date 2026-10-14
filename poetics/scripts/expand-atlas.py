@@ -1,0 +1,137 @@
+import json
+from pathlib import Path
+
+base=Path(__file__).resolve().parents[1]/'dist'
+S={
+ 'lamikanra':'https://thenewsnigeria.com.ng/2016/01/21/adebayo-lamikanra-my-ikere-ekiti-adventure/',
+ 'lamikanra2024':'https://ileshabookclub.blogspot.com/',
+ 'empowered':'https://speakingp.blogspot.com/',
+ 'aip2024':'https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/',
+ 'aip2026':'https://jaylit.com/abuja-international-poetry-festival-returns-for-2nd-edition-in-october/',
+ 'lipslam':'https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/',
+ 'lacasera':'https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/',
+ 'lacasera2020':'https://www.promosinnigeria.com/join-the-lacasera-this-is-not-a-full-stop-spoken-word-competition-and-win-prizes/',
+ 'echo':'https://thenationonlineng.net/echowords-makes-debut-empowers-youth/',
+ 'wordup':'https://www.linkedin.com/pulse/why-do-we-what-olumide-holloway-king-olulu-',
+ 'wordtour':'https://primetimenews.ng/open-mic-maiduguri-how-vicadex-connected-creatives-in-nigerias-northeast-2/',
+ 'wrr':'https://www.wrr.ng/about-us/',
+ 'wrrcontact':'https://www.wrr.ng/contact-us/',
+ 'art':'https://tainsville.wordpress.com/2013/10/16/artmosphere-the-open-mic-with-the-bards/',
+ 'artfeb':'https://tainsville.wordpress.com/2013/02/',
+ 'fos':'https://tedxportharcourt.com/talks/9fe41d26-49a1-4012-adbe-e1da6ccb901c',
+ 'fos2015':'https://bnmagazineng.wordpress.com/2015/11/13/bn-blogs-2015-top-ten-young-nigerian-poets-to-watch/',
+ 'bb':'https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/',
+ 'freedom':'https://communicatorsleague.wordpress.com/2016/10/17/nigerian-writers-awards-2017/',
+ 'eko':'https://articles.connectnigeria.com/winners-emerge-from-the-eko-literary-society-poetry-slam/',
+ 'omm':'https://vicadex.com/portfolio/open-mic-maiduguri/',
+}
+profiles=[]
+def add(id,name,category,city,summary,source,years,**kw):
+ profiles.append(dict(id=id,name=name,category=category,city=city,summary=summary,status='Source-attributed historical record',availability='Current activity / entry status unconfirmed',years=[dict(year=y,label=label,url=S[source]) for y,label in years],links=[dict(title=source+' — profile evidence',url=S[source])],**kw))
+add('wordtour','Word Tour (WordTour)','Platforms','Maiduguri / Yola','A poetry event associated with Moses Abah (Oracle). A 2025 account recalls Vic’Adex participating in its Maiduguri and Yola gatherings before Open Mic Maiduguri.', 'wordtour',[(2025,'Retrospective published')],format='Open mic / reading',gaps='Tour dates, editions and founding year remain unverified. The source names participation before the 2021 open mic but does not date the tour.')
+add('oracle','Moses Abah (Oracle)','People','Maiduguri / Yola','Poet associated with Word Tour in a retrospective on Open Mic Maiduguri. These are event associations, not a residence claim.','wordtour',[(2025,'Retrospective published')])
+add('wrr','Words Rhymes & Rhythm (WRR)','Platforms','Lagos / Ibadan / Abuja','A Nigerian literary community and publisher offering peer learning, publications, prizes and a literary festival. Its own history names Kukogho Iruesiri Samson as founder in August 2012.','wrr',[(2012,'Founded — organiser history')],history='The organiser traces WRR to a Facebook-based writing community in August 2012. Its publishing and educational programmes developed from that community.',gaps='Founding is organiser-attributed. Individual programme dates require their own evidence.',searchAliases=['Words Rhymes and Rhythms','Words Rhymes and Rhythm','WRR'],format='Other / not classified')
+add('artmosphere','Artmosphere','Platforms','Ibadan','A literary, music and performance gathering curated by WriteHouse Collective. Contemporary 2013 notices describe poetry performances and a special open-mic edition.','art',[(2013,'Contemporary programme notices')],format='Open mic / reading',gaps='The October notice contains conflicting October/November wording and a day/date mismatch. Exact edition date and founding year are not asserted.')
+add('writehouse','WriteHouse Collective','Platforms','Ibadan','The creative enterprise named as curator and parent organisation of Artmosphere in contemporary programme announcements.','art',[(2013,'Programme announcement')])
+add('servio','Servio Gbadamosi','People','Ibadan','Poet named in Artmosphere’s February 2013 programme and as its organiser in the Be Blessed 6 announcement.','artfeb',[(2013,'Announced performer'),(2014,'Organiser named in event notice')])
+add('nustreams','NuStreams Conference Centre','Places','Ibadan','Public venue listed for Artmosphere’s special open-mic notice in 2013. The notice’s conflicting date wording is preserved as a research gap.','art',[(2013,'Venue announcement')])
+add('fos','Figures of Speech Movement (FOS)','Platforms','Online / Nigeria','An online poetry-learning community associated with Graciano Enwerem. A 2015 profile names him as co-founder; his 2022 TEDx biography calls him founder and describes a WhatsApp teaching platform.','fos',[(2015,'Co-founder described in profile'),(2022,'TEDx speaker biography')],gaps='Founder/co-founder wording varies across sources. Founding year, full founding team and current membership remain unverified.',searchAliases=['Figures of Speech Movement Africa','FOS movement'])
+add('freedom-spoke','Freedom Spoke Words','Platforms','Nigeria','Poetry platform linked to AJ Dagga Tolar in a contemporaneous Nigerian Writers Awards nomination list published in October 2016.','freedom',[(2016,'Platform affiliation in nomination list')],gaps='Exact city, founding year, venue and recurring schedule need stronger primary evidence. This entry is distinct from Freedom Hall.',searchAliases=['Freedom Spoken Words','Freedom Spoke Words'])
+add('aj-tolar','AJ Dagga Tolar','People','Nigeria','Poet and promoter listed with Freedom Spoke Words in the 2016 announcement of nominees for the 2017 Nigerian Writers Awards.','freedom',[(2016,'Nomination list published')])
+add('ui-zoo','University of Ibadan Zoological Garden','Places','Ibadan','Public venue advertised for Be Blessed 6 on 26 April 2014.','bb',[(2014,'Advertised venue')])
+add('eko-literary','Eko Literary Society','Platforms','Lagos','Literary organisation named in the November 2014 result report of Eko Poetry Slam, held to mark its first anniversary.','eko',[(2014,'Slam result report')],gaps='The anniversary statement is not independently used to establish a founding date.')
+add('kemi-bakare','Kemi Bakare (Kemistree)','People','Lagos','Poet reported as the first-place winner of Eko Poetry Slam on 22 November 2014. The 2016 nomination list identifies Kemi Bakare with the stage name Kemistree.','eko',[(2014,'Reported slam result'),(2016,'Stage-name attribution')],gaps='The pilot announcement entry “Kemistry” remains separate pending confirmation of that particular spelling and identity.')
+add('ui-love-garden','Love Garden, University of Maiduguri','Places','Maiduguri','The documented venue of Open Mic Maiduguri on 30 October 2021.','omm',[(2021,'Documented open mic')])
+add('wordup','WORD UP','Platforms','Lagos','Spoken-word showcase described in Olumide Holloway’s organiser retrospective; related to the distinct War of Words slam competition.','wordup',[(2012,'Show launch recalled by organiser')],format='Open mic / reading')
+add('la-casera-company','The La Casera Company','Platforms','Lagos','Brand named as organiser of the reported 2022 spoken-word challenge.','lacasera',[(2022,'Result report')])
+add('popcentral-studios','Pop Central Studios','Places','Lagos','Venue named for the reported 2022 La Casera final.','lacasera',[(2022,'Final venue reported')])
+add('78th-psalmist','David Osaodion Odiase (78th Psalmist)','People','Lagos','Overall winner in the 2022 La Casera result report.','lacasera',[(2022,'Winner reported')])
+add('loveth-liberty','Loveth Liberty','People','Lagos','First runner-up in the 2022 La Casera result report.','lacasera',[(2022,'Result reported')])
+add('divine-titus','Divine Titus','People','Lagos','Second runner-up in the 2022 La Casera result report.','lacasera',[(2022,'Result reported')])
+add('maryam-bukar','Maryam Bukar Hassan','People','Lagos','Judge named in the 2022 La Casera result report.','lacasera',[(2022,'Judge reported')])
+add('youpoetry-slam','YouPoetry Slam','Prizes','Nigeria','Slam named among Graciano Enwerem’s wins in a 2015 profile.','fos2015',[(2015,'Profile published; slam date unverified')],format='Spoken-word competition',gaps='Edition date, venue and organiser remain unverified.')
+add('echowords','Echowords','Platforms','Nigeria','Creative platform associated with Elu Emina and a reported 2025 spoken-word contest.','echo',[(2025,'Published contest report')])
+add('echowords-contest','Echowords Spoken Word Contest','Prizes','Nigeria','A maiden spoken-word contest reported in October 2025, with Iyenemi Muriel Ogbole named as winner.','echo',[(2025,'Result report published')],format='Spoken-word competition',gaps='Exact event date and venue not established; current entry status unconfirmed.')
+add('elu-emina','Elu Emina','People','Nigeria','Named as founder of Echowords in the 2025 contest report.','echo',[(2025,'Founder reported')])
+add('iyenemi-ogbole','Iyenemi Muriel Ogbole','People','Nigeria','First-place winner named in the 2025 Echowords contest report.','echo',[(2025,'Winner reported')])
+add('empowered-by-words','Empowered by Words','Platforms','Abeokuta','A spoken-word and soul-music event at MAPOLY recalled by James Ademuyiwa (James Conco) in a Speaking Pen interview.','empowered',[(2015,'Activity recalled in interview; exact event date unverified')],format='Open mic / reading',gaps='The speaker links the event to a 2015 performance. Exact edition date and founding date are not independently verified.')
+add('mapoly','Moshood Abiola Polytechnic (MAPOLY)','Places','Abeokuta','Institution named as the setting of Empowered by Words in the organiser’s interview.','empowered',[(2015,'Event setting recalled')])
+add('nasara-creative','Nasara Creative','Platforms','Abuja','Curatorial organisation linked to Abuja International Poetry Festival in the 2024 report and 2026 announcement.','aip2024',[(2024,'Festival report')])
+add('aip-grand-slam','AIPFest Grand Slam / Efe Paul Azino Prize','Prizes','Abuja','The festival’s 2024 closing slam, reported as won by Pacella Chukwuma-Eke.','aip2024',[(2024,'Reported slam result')],format='Spoken-word competition',gaps='Exact competition recurrence and current entry rules remain unverified.')
+add('pacella','Pacella Chukwuma-Eke','People','Abuja / Lagos','Poet reported as winner of the 2024 AIPFest slam and first runner-up at the 2024 LIPFest Grand Slam.','aip2024',[(2024,'Published result reports')])
+add('lip-grand-slam','LIPFest Poetry Grand Slam','Prizes','Lagos','LIPFest’s slam competition, whose 2024 result report names Grey Martyr as winner.','lipslam',[(2024,'Reported slam result')],format='Spoken-word competition',gaps='Current edition rules and future entry status are unconfirmed.')
+add('grey-martyr','Nwani Emmanuel Chidera (Grey Martyr)','People','Lagos','Poet reported as winner of the 2024 LIPFest Poetry Grand Slam.','lipslam',[(2024,'Winner reported')])
+add('alliance-lagos','Alliance Française, Mike Adenuga Centre','Places','Lagos','Venue named in the 2024 LIPFest Grand Slam result report.','lipslam',[(2024,'Slam venue reported')])
+add('lamikanra','Adebayo Lamikanra','People','Ilesa','Poet and academic whose January 2016 author account describes welcoming poets to an annual festival in Ilesa.','lamikanra',[(2016,'Author account published')],status_note='Indexed author account reviewed; full page inaccessible')
+add('lamikanra-house-party','Poetry House Party (Lamikanra, Ilesa)','Platforms','Ilesa','A poetry gathering associated with Adebayo Lamikanra in Ilesa (Ilesha). Ilesa Book Club’s 2024 tribute identifies the Poetry House Party as the later name of the Ife Poetry Festival.','lamikanra2024',[(2016,'Ilesa annual festival described in author account'),(2024,'Community tribute names Poetry House Party')],format='Open mic / reading',searchAliases=['Lamikanra Poetry Night','Lamikanra poetry night in Ilesha','Ife Poetry Festival','Poetry House Party'],gaps='Exact title of the user-recalled night and the chronology of renaming/relocation require confirmation. Founding date and current schedule are not independently established.')
+overrides={
+ 'c11':dict(format='Festival / showcase',name='Abuja International Poetry Festival (AIPFest)',searchAliases=['AIPFest','Abuja International Poetry Festival','AIPFEST'],summary='Abuja poetry festival curated by Nasara Creative, with a documented 2024 edition and a second edition announced for October 2026.',history='The 2024 report places the inaugural festival on 14–16 November. A 2 October 2026 announcement gives the second edition as 22–24 October 2026.',status='2024 festival report and 2026 announcement reviewed',availability='22–24 October 2026 announced; future occurrence and current entry rules unconfirmed',years=[dict(year=2024,label='Reported inaugural edition',url=S['aip2024']),dict(year=2026,label='Announced second edition',url=S['aip2026'])],links=[dict(title='2024 festival report',url=S['aip2024']),dict(title='2026 announcement',url=S['aip2026'])],gaps='Older notices projected different timing; use the latest dated announcement without treating the future event as completed.'),
+ 'c4':dict(searchAliases=['LIPFest','Lagos International Poetry Festival','LIPFEST'],format='Festival / showcase'),
+ 'jamesconco':dict(name='James Ademuyiwa (James Conco)',searchAliases=['Jamesconco','James Conco'],city='Ogbomoso / Abeokuta',summary='Poet named in the 2015 Words on Rampage announcement, who recalls organising Empowered by Words at MAPOLY in a Speaking Pen interview.',links=[dict(title='Speaking Pen interview',url=S['empowered'])]),
+ 'wow':dict(name='War of Words',searchAliases=['War of Words / WORDUP'],category='Prizes',format='Spoken-word competition'),
+ 'c27':dict(category='Prizes',city='Lagos / Online / Nigeria',format='Spoken-word competition',summary='Brand-backed spoken-word competition. A 2022 report names David Odiase as winner, three other judges alongside Olumide Holloway, and Pop Central Studios as final venue.',status='2022 published results reviewed; 2020 call preserved separately',history='An earlier 2020 This Is Not A Full Stop call is also preserved. Its rules and prizes are not applied to the 2022 result report.',years=[dict(year=2020,label='Earlier competition call',url=S['lacasera2020']),dict(year=2022,label='Published result report',url=S['lacasera'])],links=[dict(title='2022 La Casera result report',url=S['lacasera']),dict(title='2020 competition call',url=S['lacasera2020'])],gaps='Exact 2022 final date, recurrence and current entry status remain unverified.',searchAliases=['Lacasera','La Casera Spoken Word Competition','La Casera Spoken War']),
+ 'eko-slam':dict(name='Eko Poetry Slam',searchAliases=['Eko Literary Society Poetry Slam'],summary='A Lagos poetry slam whose 22 November 2014 edition was reported to have been won by Kemi Bakare; Elizabeth Adeola Ayoola and Increase were runners-up.',status='Contemporary result report reviewed',evidenceDate='22 November 2014 — reported event date',years=[dict(year=2014,label='Reported slam result',url=S['eko'])],gaps='Later editions and any changes of organiser require separate evidence. Exact venue not established.'),
+ 'graciano':dict(city='Lagos / Lafia',status='Source-attributed profiles; 2018 pilot appearance was scheduled, not confirmed attendance',summary='Poet and poetry educator associated with Figures of Speech Movement. Sources describe both founder and co-founder roles; his 2022 TEDx biography identifies a WhatsApp teaching platform.',years=[dict(year=2015,label='Contemporary profile',url=S['fos2015']),dict(year=2022,label='TEDx speaker biography',url=S['fos'])],searchAliases=['Gracianno','Sir Grrraciano','Grrraciano'],links=[dict(title='TEDx speaker biography',url=S['fos']),dict(title='2015 poet profile',url=S['fos2015'])]),
+ 'kukogho':dict(name='Kukogho Iruesiri Samson',summary='Poet and founder of Words Rhymes & Rhythm according to the organisation’s published history. The earlier pilot also lists him in the 2015 Words on Rampage announcement.',links=[dict(title='WRR organiser history',url=S['wrr'])]),
+ 'bb':dict(searchAliases=['Be Blessed poetry and sundry talent event','Be Blessed all and sundry talent event'],summary='An Ibadan poetry and sundry talent event. Be Blessed 6 was advertised for 26 April 2014 at the University of Ibadan Zoological Garden, with Enigmatic Olumide as host.',years=[dict(year=2014,label='Be Blessed 6 announced',url=S['bb'])],links=[dict(title='Contemporary Be Blessed 6 announcement',url=S['bb'])]),
+ 'omm':dict(media=[dict(url='https://vicadex.com/wp-content/uploads/2026/09/codex-clipboard-13a7fd7d-d974-4b0d-a3f6-33f034c3f85b.png',caption='Open Mic Maiduguri · original 2021 flyer',credit='60 Seconds Poetry / Vic’Adex archive',sourceURL=S['omm'],rights='User-owned project archive; reuse requested in this project')]),
+ 'vicadex':dict(media=[dict(url='https://vicadex.com/wp-content/uploads/2026/09/IMG-20211105-WA0013_3affe1a2.jpg',caption='Vic’Adex at Love Garden, 2021',credit='60 Seconds Poetry / Vic’Adex archive',sourceURL=S['omm'],rights='User-owned project archive; reuse requested in this project')]),
+}
+relationships=[]
+def edge(a,b,label,source,date,status='Source-attributed historical relationship'):
+ relationships.append(dict(a=a,b=b,label=label,url=S[source],date=date,status=status))
+edge('oracle','wordtour','organiser associated in retrospective','wordtour',2025)
+edge('vicadex','wordtour','participation recalled','wordtour',2025,'2025 retrospective; tour dates not established')
+edge('wordtour','omm','inspiration recalled by open-mic organiser','wordtour',2025)
+edge('kukogho','wrr','founder in organiser history','wrr',2012)
+edge('artmosphere','writehouse','curated by','art',2013)
+edge('artmosphere','nustreams','announced venue','art',2013,'Contemporary announcement; exact edition date conflicts')
+edge('servio','artmosphere','organiser named','bb',2014)
+edge('servio','bb','announced guest','bb',2014,'Announced; attendance not established')
+edge('graciano','fos','founder / co-founder in source biographies','fos',2022,'2015 co-founder wording; 2022 founder wording')
+edge('aj-tolar','freedom-spoke','platform affiliation named','freedom',2016)
+edge('bb','ui-zoo','announced venue','bb',2014,'Advertised Be Blessed 6 venue; attendance not established')
+edge('olulu','bb','announced guest','bb',2014,'Announced; attendance not established')
+edge('agarau','bb','announced guest','bb',2014,'Announced; attendance not established')
+edge('vicadex','bb','announced guest','bb',2014,'Announced; attendance not established')
+edge('eko-slam','eko-literary','organiser named in result report','eko',2014)
+edge('kemi-bakare','eko-slam','first-place winner reported','eko',2014)
+edge('omm','ui-love-garden','documented venue','omm',2021)
+for profile in profiles:
+ for y in profile['years']:
+  source={('servio',2014):'bb',('fos',2015):'fos2015',('kemi-bakare',2016):'freedom'}.get((profile['id'],y['year']))
+  if source:
+   y['url']=S[source]
+   profile['links'].append(dict(title=source+' — additional evidence',url=S[source]))
+edge('olulu','wordup','organiser retrospective','wordup',2012,'Retrospective date claim')
+edge('wordup','wow','related showcase and slam','wordup',2013,'Organiser retrospective; distinct experiences')
+edge('graciano','youpoetry-slam','winner named in profile','fos2015',2015,'2015 profile; edition date unverified')
+for key,label in [('78th-psalmist','overall winner reported'),('loveth-liberty','first runner-up reported'),('divine-titus','second runner-up reported'),('maryam-bukar','judge reported'),('olulu','judge reported'),('efe','judge reported'),('obii','judge reported')]:edge(key,'c27',label,'lacasera',2022)
+edge('c27','la-casera-company','organiser named','lacasera',2022)
+edge('c27','popcentral-studios','final venue reported','lacasera',2022)
+edge('elu-emina','echowords','founder reported','echo',2025)
+edge('echowords','echowords-contest','organising platform','echo',2025)
+edge('iyenemi-ogbole','echowords-contest','winner reported','echo',2025)
+edge('jamesconco','empowered-by-words','organising recalled','empowered',2015,'Speaker recollection; exact event date unverified')
+edge('empowered-by-words','mapoly','event setting recalled','empowered',2015,'Speaker recollection; exact event date unverified')
+edge('c11','nasara-creative','curatorial organisation reported','aip2024',2024)
+edge('c11','als','curatorial partnership announced','aip2026',2026,'Future festival announcement; occurrence not confirmed')
+edge('c11','aip-grand-slam','festival closing slam reported','aip2024',2024)
+edge('pacella','aip-grand-slam','winner reported','aip2024',2024)
+edge('efe','aip-grand-slam','prize named after','aip2024',2024,'Namesake relationship; not a claim of judging')
+edge('loveth-liberty','aip-grand-slam','judge reported','aip2024',2024)
+edge('c4','lip-grand-slam','festival competition','lipslam',2024)
+edge('grey-martyr','lip-grand-slam','winner reported','lipslam',2024)
+edge('pacella','lip-grand-slam','first runner-up reported','lipslam',2024)
+edge('loveth-liberty','lip-grand-slam','second runner-up reported','lipslam',2024)
+edge('lip-grand-slam','alliance-lagos','venue in result report','lipslam',2024)
+for profile in profiles:
+ if profile['id']=='lamikanra':profile['status']='Indexed firsthand author account; full page retrieval blocked'
+ if profile['id']=='lamikanra-house-party':
+  profile['status']='Indexed author account and community tribute; exact recalled-night identity pending'
+  profile['years'][0]['url']=S['lamikanra']
+  profile['links'].append(dict(title='Lamikanra’s 2016 author account',url=S['lamikanra']))
+edge('lamikanra','lamikanra-house-party','annual gathering host in author account','lamikanra',2016,'Indexed firsthand account; exact edition title unverified')
+data=dict(reviewed='2026-10-12',profiles=profiles,overrides=overrides,relationships=relationships)
+(base/'directory-expansion.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+(base/'directory-expansion.js').write_text('window.PoeticsExpansion='+json.dumps(data,ensure_ascii=False,indent=2)+';\n')

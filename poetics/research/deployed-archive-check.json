@@ -1,0 +1,27 @@
+{
+  "entries": 341,
+  "relationships": 534,
+  "states": {
+    "Delta": 16,
+    "Gombe": 8,
+    "Edo": 13
+  },
+  "directoryAsset": "directory.a80db8a9a23f.js",
+  "directorySHA256": "a80db8a9a23f7d1dcc05956aa2a9b3b143395568df599698218cb2e66aeb1013",
+  "controlsPresentInLoadedSource": false,
+  "filesLoadedFromPackagedIndex": [
+    "atlas.098a181b5d31.js",
+    "canonical-research.9926b012c6c8.js",
+    "national-directory.da74245a9290.js",
+    "directory-expansion.9a50b5dc53b4.js",
+    "atlas-audit.dcfc7dde1ee1.js",
+    "entry-status.5f0dd8b074d2.js",
+    "nigeria-states.554e1d97a522.js",
+    "nigeria-states-map.2cdf9969242f.js",
+    "atlas-icons.42a2a8504cfb.js",
+    "entry-schema.b6d6d9ca4343.js",
+    "directory.a80db8a9a23f.js"
+  ],
+  "localGzipSHA256": "4ed1bf9f8494fce74b18f51c0d3251caf4a2cffc124cb7f369f2a8c8112f1002",
+  "scope": "Supplied deployment archive; not downloaded remote bytes or rendered browser DOM"
+}

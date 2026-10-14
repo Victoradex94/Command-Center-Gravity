@@ -1,0 +1,60 @@
+{
+  "saved": {
+    "id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_27869fa1a5508191adabc598803ed86a",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "version_number": 33,
+    "source": {
+      "commit_sha": "ec6dfe779ae7a61cc082b371944ded6a234c2a68"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_0000000048fc8209a9de88689df3fda7",
+      "content_hash": "sha256:1a5080e05cf2f2e0a92bcb8c060caebf37f04722700713c47fca4b476f1b8dc2",
+      "size_bytes": 5918720,
+      "file_count": 71
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "savedReadback": {
+    "id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_27869fa1a5508191adabc598803ed86a",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "version_number": 33,
+    "source": {
+      "commit_sha": "ec6dfe779ae7a61cc082b371944ded6a234c2a68"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_0000000048fc8209a9de88689df3fda7",
+      "content_hash": "sha256:1a5080e05cf2f2e0a92bcb8c060caebf37f04722700713c47fca4b476f1b8dc2",
+      "size_bytes": 5918720,
+      "file_count": 71
+    },
+    "screenshot_url": null,
+    "deployment_id": "appgdep_6acebb3e658481919e3f17581b0c9953"
+  },
+  "deployment": {
+    "id": "appgdep_6acebb3e658481919e3f17581b0c9953",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "title": "Poetics — Vic’Adex Prototype",
+    "version_id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_27869fa1a5508191adabc598803ed86a",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://poetics-vicadex-lab.vicadexconcepts.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acce9493e8c81919635a9e7438b820c",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-13T23:14:21.306197+00:00"
+  },
+  "counts": {
+    "entries": 428,
+    "relationships": 636,
+    "Publications": 25,
+    "Abia": 25
+  },
+  "ledgerReadback": "Full candidate matched; existing text preserved except documented P018 status update",
+  "browser": "Unavailable; no rendered/mobile/overflow verification",
+  "wordpress": "Untouched"
+}

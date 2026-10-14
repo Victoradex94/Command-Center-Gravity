@@ -1,0 +1,81 @@
+{
+  "version": {
+    "id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_401cd44ed93c819188c9bc6d25aee98e",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "version_number": 32,
+    "source": {
+      "commit_sha": "420f532ae6c9d58df29a4e5aa9de844991adc7e8"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000004ca08243bc1a271312e0db21",
+      "content_hash": "sha256:26a2d988cf7ce4cafd836ab5132de46dce78887fd499cc1ace28da69bf0dd674",
+      "size_bytes": 5529600,
+      "file_count": 70
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6aceac61075c8191a728c5ded88c1ddd",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "title": "Poetics — Vic’Adex Prototype",
+    "version_id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_401cd44ed93c819188c9bc6d25aee98e",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://poetics-vicadex-lab.vicadexconcepts.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acce9493e8c81919635a9e7438b820c",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-13T22:10:57.695193+00:00"
+  },
+  "savedVersionReadback": {
+    "id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_401cd44ed93c819188c9bc6d25aee98e",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "version_number": 32,
+    "source": {
+      "commit_sha": "420f532ae6c9d58df29a4e5aa9de844991adc7e8"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000004ca08243bc1a271312e0db21",
+      "content_hash": "sha256:26a2d988cf7ce4cafd836ab5132de46dce78887fd499cc1ace28da69bf0dd674",
+      "size_bytes": 5529600,
+      "file_count": 70
+    },
+    "screenshot_url": null,
+    "deployment_id": "appgdep_6aceac61075c8191a728c5ded88c1ddd"
+  },
+  "packagedEntrypointCounts": {
+    "entries": 428,
+    "relationships": 636,
+    "Publications": 25,
+    "Abia": 24,
+    "Ebonyi": 19,
+    "Imo": 18,
+    "Kogi": 3,
+    "Anambra": 13,
+    "Ogun": 9,
+    "Lagos": 64
+  },
+  "canonicalLedger": {
+    "url": "https://drive.google.com/file/d/13qDg2XVdUM5ZAbplLoeNT5X6hB89cnSq/view",
+    "readWriteVerified": true,
+    "runRecord": "RUN-20261013-PLUS-FIRST-230538",
+    "readback": "Complete candidate content matched",
+    "coordinatingRuntime": "Not directly tested; inherited shared owner/writer access inspected",
+    "concurrency": "No atomic conditional-write exposed; fresh-read/rebase/readback with conflict stop"
+  },
+  "automation": {
+    "enabled": true,
+    "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Africa/Lagos:20261014T000500\nRRULE:FREQ=HOURLY;INTERVAL=1\nEND:VEVENT",
+    "timezone": "Africa/Lagos",
+    "scheduledStart": "2026-10-14T00:05:00+01:00",
+    "backendNextRun": null
+  },
+  "checks": "Data/source/status/map navigation and badge overlay passed; native deployment/archive provenance confirmed.",
+  "visual": "Fresh rendered/mobile/overflow verification unavailable",
+  "wordPress": "Untouched"
+}

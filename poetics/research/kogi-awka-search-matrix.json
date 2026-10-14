@@ -1,0 +1,499 @@
+{
+  "reviewedAt": "2026-10-13",
+  "queryCount": 12,
+  "groups": [
+    {
+      "id": "KA01",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": "Cross Country Poetry Celebration Lokoja October 26 2024",
+          "yieldNote": "Nigerian Post + near-identical Accurate News lead; no independent completion.",
+          "status": "Classified; adopted claims separately logged"
+        },
+        {
+          "q": "Cross Country Celebration Federal University Lokoja poetry October 2024 ANSA PIN",
+          "yieldNote": "National announcements and the same report family; FUL-specific primary post not found.",
+          "status": "Classified; adopted claims separately logged"
+        },
+        {
+          "q": "Cross Country Poetry Celebration in Lokoja ANSA PIN",
+          "yieldNote": "Repeated post-event report family; no new independent witness.",
+          "status": "Classified; adopted claims separately logged"
+        },
+        {
+          "q": "site:fulokoja.edu.ng Cross Country poetry celebration 2024",
+          "yieldNote": "No qualifying FUL-domain post-event report returned.",
+          "status": "Classified; adopted claims separately logged"
+        }
+      ],
+      "sources": [
+        {
+          "title": "A Tapestry of Words: The Cross Country Poetry Celebration in Kogi - The Nigerian Post",
+          "url": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+          "ref": "turn181search0"
+        },
+        {
+          "title": "Poets in Nigeria Initiative Holds 3rd Edition of Cross Country Poetry Celebration | Ojemba Magazine",
+          "url": "https://ojembamagazine.com/poets-in-nigeria-initiative-holds-3rd-edition-of-cross-country-poetry-celebration/",
+          "ref": "turn181search1"
+        },
+        {
+          "title": "Accurate News 24/7",
+          "url": "https://accuratenewsblogspot.blogspot.com/2024/10/",
+          "ref": "turn181search2"
+        },
+        {
+          "title": "The Arthub, Lagos, Surulere, Lagos (2026)",
+          "url": "https://www.findglocal.com/NG/Lagos/612992612175731/The-Arthub%2C-Lagos",
+          "ref": "turn181search3"
+        },
+        {
+          "title": "The People and Poetry » LAGOSINTERNATIONALPOETRYFESTIVAL",
+          "url": "https://lagospoetryfestival.com/festival-events/the-people-and-poetry/",
+          "ref": "turn181search4"
+        },
+        {
+          "title": "Yemi Adebiyi To Host Cross Country Poetry Celebration In Lagos  – Independent Newspaper Nigeria",
+          "url": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+          "ref": "turn181search5"
+        },
+        {
+          "title": "Poets in Nigeria, Education",
+          "url": "https://www.enbizopedia.com/NG/Lagos/693975764036199/Poets-in-Nigeria",
+          "ref": "turn181search6"
+        },
+        {
+          "title": "Ogun Marks 2024 Cross Country Poetry celebration with funfair",
+          "url": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+          "ref": "turn181search7"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+          "ref": "turn181search8"
+        },
+        {
+          "title": "SDU hosts poets, writers in courtesy visit, pledges support for creative culture - Vanguard News",
+          "url": "https://www.vanguardngr.com/2026/08/sdu-hosts-poets-writers-in-courtesy-visit-pledges-support-for-creative-culture/",
+          "ref": "turn181search9"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry – Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn181search10"
+        },
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn181search11"
+        },
+        {
+          "title": "Akweya TV To Host, Promote 'Cross Country Poetry Celebration' (CCPC) 2024 | Ojemba Magazine",
+          "url": "https://ojembamagazine.com/akweya-tv-to-host-promote-cross-country-poetry-celebration-ccpc-2024/",
+          "ref": "turn181search12"
+        },
+        {
+          "title": "Events » LAGOSINTERNATIONALPOETRYFESTIVAL",
+          "url": "https://lagospoetryfestival.com/events/",
+          "ref": "turn181search13"
+        },
+        {
+          "title": "Yemi Adebiyi To Host Cross Country Poetry Celebration In Lagos - Daily Independent",
+          "url": "https://www.latestnigeriannews.com/p/3781516/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos.html",
+          "ref": "turn181search14"
+        },
+        {
+          "title": "INTRODUCING THE CROSS COUNTRY CELEBRATION OF POETRY The cross country celebration of poetry is an Initiative of Poets in Nigeria (PIN) that seeks to showcase poetry and poets in the finest of ways… | POETS IN NIGERIA INITIATIVE (PIN)",
+          "url": "https://www.linkedin.com/posts/poets-in-nigeria-initiative_introducing-the-cross-country-celebration-activity-7070398230315831297-K_cy",
+          "ref": "turn181search15"
+        },
+        {
+          "title": "Open Mic. (Hosted by SharethyVerse) » LAGOSINTERNATIONALPOETRYFESTIVAL",
+          "url": "https://lagospoetryfestival.com/festival-events/open-mic-hosted-by-sharethyverse/",
+          "ref": "turn181search16"
+        },
+        {
+          "title": "Ayeni Kehinde, the forthcoming Cross Country Poetry Celebration in Ekiti is truly commendable. Celebrating the 10th anniversary of Poet In Nigeria (PIN) through such a creative platform at the… | Federal University Oye-Ekiti",
+          "url": "https://www.linkedin.com/posts/federal-university-oye-ekiti_ayeni-kehinde-the-forthcoming-cross-country-activity-7382756559803658241-oiGI",
+          "ref": "turn181search17"
+        },
+        {
+          "title": "Lagos Poetry Festival hosts Friends of Ireland, others in night of stellar performances  - Vanguard News",
+          "url": "https://www.vanguardngr.com/2024/10/lagos-poetry-festival-hosts-friends-of-ireland-others-in-night-of-stellar-performances/amp/",
+          "ref": "turn181search18"
+        },
+        {
+          "title": ".:: Text of Pre-Convocation Press Briefing for the 8th Convocation Ceremony by FUL VC, Prof. Akinwumi | Federal University Lokoja",
+          "url": "https://www.fulokoja.edu.ng/news-page.php?a=text-of-pre-convocation-press-briefing-for-the-8th-convocation-ceremony-by-ful-vc-prof-akinwumi&i=976",
+          "ref": "turn181search19"
+        },
+        {
+          "title": "About Us - ANSA Nigeria",
+          "url": "https://ansa.com.ng/team/",
+          "ref": "turn181search20"
+        },
+        {
+          "title": "#ful #fulokoja #adastra #fulisgreat #federaluniversitylokoja #education #university #nigeria #nigerianuniversities #academia #highereducation #profolayemiakinwumi #convocation #fulconvocation… | Federal University Lokoja",
+          "url": "https://www.linkedin.com/posts/fulokoja_ful-fulokoja-adastra-activity-7249851210579542017-f7uU",
+          "ref": "turn181search21"
+        },
+        {
+          "title": "#ful #fulokoja #adastra #fulisgreat #fulrising #federaluniversitylokoja #education #university #nigeria #nigerianuniversities #leadinguniversity #universityofthefuture #firstamongequals #academia… | Federal University Lokoja",
+          "url": "https://www.linkedin.com/posts/fulokoja_the-academic-staff-union-of-universities-activity-7248993620211449856-GFUp",
+          "ref": "turn181search22"
+        },
+        {
+          "title": "FEDERAL UNIVERSITY, LOKOJA TO GRADUATE 2,196 STUDENTS, PRODUCES 41 FIRST-CLASS - Team Babs Reporting",
+          "url": "https://babsreporting.com/federal-university-lokoja-to-graduate-2196-students-produces-41-first-class/",
+          "ref": "turn181search23"
+        },
+        {
+          "title": "FUL Releases Programme of Activities for 8th Convocation Ceremony - Myschoolnews",
+          "url": "https://myschoolnews.ng/ful-releases-programme-of-activities-for-8th-convocation-ceremony",
+          "ref": "turn181search24"
+        },
+        {
+          "title": "www.justicen",
+          "url": "https://cdnc.heyzine.com/files/uploaded/b11db27f03a6f0a77d2a5c4a153d24d41c955161.pdf",
+          "ref": "turn181search48"
+        },
+        {
+          "title": "Lagos International Poetry Festival",
+          "url": "https://en.wikipedia.org/wiki/Lagos_International_Poetry_Festival",
+          "ref": "turn181search49"
+        },
+        {
+          "title": "Federal University, Lokoja",
+          "url": "https://en.wikipedia.org/wiki/Federal_University%2C_Lokoja",
+          "ref": "turn181search50"
+        },
+        {
+          "title": ".:: Inspired Generosity: Professor Al-Bishak Donates Student Creative Writing Board to English Department | Federal University Lokoja",
+          "url": "https://fulokoja.edu.ng/news-page.php?a=inspired-generosity-professor-al-bishak-donates-student-creative-writing-board-to-english-department&i=819",
+          "ref": "turn181search25"
+        },
+        {
+          "title": "SATURDAY 26, OCTOBER 2024                                                                 30",
+          "url": "https://cdn.businessday.ng/wp-content/uploads/2024/10/BD_20241026.pdf",
+          "ref": "turn181search51"
+        },
+        {
+          "title": "Lokoja",
+          "url": "https://en.wikipedia.org/wiki/Lokoja",
+          "ref": "turn181search52"
+        },
+        {
+          "title": ".:: Interview on the Courageous Leadership and Triumph of Professor Angela Freeman Miri, Vice-Chancellor, FUL | Federal University Lokoja",
+          "url": "https://www.fulokoja.edu.ng/news-page.php?a=interview-on-the-courageous-leadership-and-triumph-of-professor-angela-freeman-miri-vice-chancellor-ful&i=356",
+          "ref": "turn181search26"
+        }
+      ],
+      "negativeYield": "No independent Kogi event completion or exact Awka event day established; absence is limited to this pass."
+    },
+    {
+      "id": "KA02",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "Cross Country Poetry Celebration Kogi 2024 ANSA PIN",
+          "yieldNote": "Kogi Reports found; read text substantially overlaps Nigerian Post.",
+          "status": "Classified; adopted claims separately logged"
+        },
+        {
+          "q": "site:facebook.com Cross Country Lokoja poetry 2024 ANSA",
+          "yieldNote": "ANSA pre-event invitation plus participant-post snippet; direct participant fetch throttled.",
+          "status": "Classified; adopted claims separately logged"
+        },
+        {
+          "q": "site:instagram.com Cross Country Poetry Lokoja 2024",
+          "yieldNote": "No qualifying Instagram post-event evidence; generic Instagram pages excluded.",
+          "status": "Classified; adopted claims separately logged"
+        },
+        {
+          "q": "Lokoja ANSA PENKUP poetry October 2024",
+          "yieldNote": "PENKUP website and unrelated research returned; no sponsor primary completion report.",
+          "status": "Classified; adopted claims separately logged"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Join us for the Cross Country Poetry Celebration on 26th ...",
+          "url": "https://www.facebook.com/Ansa.com.ng/posts/join-us-for-the-cross-country-poetry-celebration-on-26th-october-2024-happening-/875359298032675/",
+          "ref": "turn182search0"
+        },
+        {
+          "title": "I like to get my 10k steps in before 8am every day. ...",
+          "url": "https://www.instagram.com/",
+          "ref": "turn182search1"
+        },
+        {
+          "title": "Penkup: Homepage",
+          "url": "https://penkup.com/",
+          "ref": "turn182search2"
+        },
+        {
+          "title": "Cross Country Poetry Celebration: ANSA Restates ...",
+          "url": "https://kogireports.com/cross-country-poetry-celebration-ansa-restates-commitment-to-creating-platform-for-young-writers/",
+          "ref": "turn182search3"
+        },
+        {
+          "title": "It was an amazing experience in the city of Lokoja as we ...",
+          "url": "https://www.facebook.com/ibukunolu.adesoji/posts/it-was-an-amazing-experience-in-the-city-of-lokoja-as-we-celebrated-poets-and-po/3411990885610906/",
+          "ref": "turn182search4"
+        },
+        {
+          "title": "Terms of Use | Instagram Help Center",
+          "url": "https://help.instagram.com/",
+          "ref": "turn182search5"
+        },
+        {
+          "title": "Editorial Team",
+          "url": "https://jormajournals.com/about-jorma-journals/editorial-team/",
+          "ref": "turn182search6"
+        },
+        {
+          "title": "Cross Country Poetry Celebration 2025 Kebbi State: Eriata ...",
+          "url": "https://www.facebook.com/mpsmediang2/videos/eriata-oribhabor-a-renowned-nigerian-poet-and-literary-promoter-graced-the-2025-/1544873146692965/",
+          "ref": "turn182search7"
+        },
+        {
+          "title": "Nigeria poetry celebration event",
+          "url": "https://www.facebook.com/groups/209098666178915/posts/2243995702689191/",
+          "ref": "turn182search8"
+        },
+        {
+          "title": "Pen,Kup and microphone - Single by Bussdownbo",
+          "url": "https://open.spotify.com/album/4VDl5vRTnTEHXEsDRlwLND",
+          "ref": "turn182search9"
+        },
+        {
+          "title": "A Tapestry of Words: The Cross Country Poetry ...",
+          "url": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi/",
+          "ref": "turn182search10"
+        },
+        {
+          "title": "Celebrating poetry in Nigeria",
+          "url": "https://www.facebook.com/groups/209098666178915/posts/2269489030139858/",
+          "ref": "turn182search11"
+        },
+        {
+          "title": "View of Educational Attainment as a Structural Determinant ...",
+          "url": "https://intjmm.com/index.php/ijmm/article/view/106/102",
+          "ref": "turn182search12"
+        },
+        {
+          "title": "Muhammad Namadi Sani performed his poem “Nigeria of My ...",
+          "url": "https://www.facebook.com/mpsmediang2/posts/muhammad-namadi-sani-performed-his-poem-nigeria-of-my-dreams-as-part-of-the-poet/1116352543995857/",
+          "ref": "turn182search13"
+        },
+        {
+          "title": "We had a good number of corpers attend the # ...",
+          "url": "https://www.facebook.com/esther.umoh.5458/posts/we-had-a-good-number-of-corpers-attend-the-lagosnyscpoetryslam-the-smiles-on-the/2462966960598561/",
+          "ref": "turn182search14"
+        },
+        {
+          "title": "EndPolioNow",
+          "url": "https://x.com/endpolionow/status/1174700098774810625?lang=ar",
+          "ref": "turn182search15"
+        },
+        {
+          "title": "Poets in Nigeria Initiative (PIN) announces date for Cross ...",
+          "url": "https://somolunewspaper.com.ng/2024/10/19/poets-in-nigeria-initiative-pin-announces-date-for-cross-country-poetry-celebration/",
+          "ref": "turn182search16"
+        },
+        {
+          "title": "Thanks for the invitation, my poet friend Folajimi Notch ...",
+          "url": "https://www.facebook.com/groups/worldpoetrymovementoceania/posts/1005793615405663/",
+          "ref": "turn182search17"
+        },
+        {
+          "title": "Knowledge and Cognitive Determinants of Health-Seeking ...",
+          "url": "https://www.researchgate.net/publication/399893366_Knowledge_and_Cognitive_Determinants_of_Health-Seeking_Behaviour_Among_Healthcare_Professionals_in_a_Nigerian_Tertiary_Hospital_A_Behavioural_Science_Perspective",
+          "ref": "turn182search18"
+        },
+        {
+          "title": "Celebration of poets in Nigeria",
+          "url": "https://www.facebook.com/groups/209098666178915/posts/1266576693764435/",
+          "ref": "turn182search19"
+        },
+        {
+          "title": "Come let's celebrate our latest poets in town… your presence ...",
+          "url": "https://www.facebook.com/epoowiy.shaairu.l.mahd/posts/come-lets-celebrate-our-latest-poets-in-town-your-presence-means-a-lot-to-usalla/1822365498780564/",
+          "ref": "turn182search20"
+        },
+        {
+          "title": "World Poetry Day 2021 celebration with Nigerian poets",
+          "url": "https://www.facebook.com/groups/209098666178915/permalink/1148633195558786/",
+          "ref": "turn182search21"
+        },
+        {
+          "title": "Poets in Nigeria 6th Year Anniversary Celebration",
+          "url": "https://www.facebook.com/groups/209098666178915/posts/1279219349166836/",
+          "ref": "turn182search22"
+        },
+        {
+          "title": "2024 in Nigeria",
+          "url": "https://en.wikipedia.org/wiki/2024_in_Nigeria",
+          "ref": "turn182search24"
+        }
+      ],
+      "negativeYield": "No independent Kogi event completion or exact Awka event day established; absence is limited to this pass."
+    },
+    {
+      "id": "KA03",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": "\"Emmanuel Uche Nnyagu\" \"Cross Country\" \"October\" 2023",
+          "yieldNote": "Official UNIZIK profile supports month, panelist and setting.",
+          "status": "Classified; adopted claims separately logged"
+        },
+        {
+          "q": "\"Vincent Eze\" \"Awka\" \"Cross Country\" 2023",
+          "yieldNote": "2023 itinerary host only; attendance not verified.",
+          "status": "Classified; adopted claims separately logged"
+        },
+        {
+          "q": "\"Maymunah Kadiri\" \"Lokoja\" poetry 2024 ANSA",
+          "yieldNote": "ANSA team profile confirms literary identity and chapbook; no independent Kogi completion.",
+          "status": "Classified; adopted claims separately logged"
+        },
+        {
+          "q": "site:penkup.com \"Lokoja\" poetry 2024",
+          "yieldNote": "PENKUP biography and other literary leads; no event-specific primary completion.",
+          "status": "Classified; adopted claims separately logged"
+        }
+      ],
+      "sources": [
+        {
+          "title": "About Us - ANSA Nigeria",
+          "url": "https://ansa.com.ng/team/",
+          "ref": "turn184search0"
+        },
+        {
+          "title": "Dr. Emmanuel Uche Nnyagu - Nnamdi Azikiwe University",
+          "url": "https://profile.unizik.edu.ng/nau4594",
+          "ref": "turn184search1"
+        },
+        {
+          "title": "A Tapestry of Words: The Cross Country Poetry Celebration in Kogi - The Nigerian Post",
+          "url": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+          "ref": "turn184search2"
+        },
+        {
+          "title": "Accurate News 24/7",
+          "url": "https://accuratenewsblogspot.blogspot.com/2024/10/",
+          "ref": "turn184search3"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry – Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn184search4"
+        },
+        {
+          "title": "ANSA Nigeria - Association of Nigerian Student Authors",
+          "url": "https://ansa.com.ng/",
+          "ref": "turn184search5"
+        },
+        {
+          "title": "Dr. Emmanuel Uche Nnyagu - Nnamdi Azikiwe University",
+          "url": "https://profile.unizik.edu.ng/NAU4594",
+          "ref": "turn184search6"
+        },
+        {
+          "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+          "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+          "ref": "turn184search7"
+        },
+        {
+          "title": "YOUNG AUTHORS BLAZE THE TRAIL AT 2018 CREATIVE WRITERS AWARDS - ANSA Nigeria",
+          "url": "https://ansa.com.ng/2018-ansa_awards_for_creative_writing/",
+          "ref": "turn184search8"
+        },
+        {
+          "title": "Dr Kennedy Obohwemu - Penkup",
+          "url": "https://penkup.com/dr-kennedy-obohwemu/",
+          "ref": "turn184search9"
+        },
+        {
+          "title": "Poets in Nigeria to hold cross country celebration of poetry – Business Hallmark",
+          "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+          "ref": "turn184search10"
+        },
+        {
+          "title": "Celebrating Nigerian Literature: ANSA Launches Anthology Showcasing Diverse Voices – THISAGE | Breaking News from Nigeria and Around the World",
+          "url": "https://thisage.com.ng/celebrating-nigerian-literature-ansa-launches-anthology-showcasing-diverse-voices/",
+          "ref": "turn184search11"
+        },
+        {
+          "title": "Obohwenu Launches Collection Of 100 Days Stories – Independent Newspaper Nigeria",
+          "url": "https://independent.ng/obohwenu-launches-collection-of-100-days-stories/",
+          "ref": "turn184search12"
+        },
+        {
+          "title": "32 Young Writers Battle For Prizes In ANSA World Cup - The Nigerian Post",
+          "url": "https://thenigerianpost.com.ng/32-young-writers-battle-for-prizes-in-ansa-world-cup/",
+          "ref": "turn184search13"
+        },
+        {
+          "title": "Page 510 – News Wings",
+          "url": "https://newswings.com.ng/page/510/?cat=-1%3Fq%3Dhow-investments-in-early-childhood-centres-in-zanzibar-are-unlocking-womens-earning-power&lang=en&pr=315143",
+          "ref": "turn184search14"
+        },
+        {
+          "title": "Dr. Kennedy Oberhiri Obohwemu - EverybodyWiki Bios & Wiki",
+          "url": "https://en.everybodywiki.com/Dr._Kennedy_Oberhiri_Obohwemu",
+          "ref": "turn184search15"
+        },
+        {
+          "title": "ISLAM IN EDO State – A research work by Shehu Jimoh – KnowIslam Project",
+          "url": "https://knowislam.com.ng/islam-in-edo-state-a-research-work-by-shehu-jimoh/",
+          "ref": "turn184search16"
+        },
+        {
+          "title": "Update on Cross Country Celebration of Poetry – Kabura Zakama Randomised",
+          "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+          "ref": "turn184view0"
+        }
+      ],
+      "negativeYield": "No independent Kogi event completion or exact Awka event day established; absence is limited to this pass."
+    }
+  ],
+  "userIndependentPass": {
+    "origin": "User-provided prior independent search; first eight exact queries repeated by agent in KA01–02, not counted twice",
+    "reportedYield": "Nigerian Post only; no independent FUL/ANSA/PIN post-event report"
+  },
+  "accessCorrection": {
+    "url": "https://profile.unizik.edu.ng/NAU4594",
+    "status": "Direct full text read",
+    "previousNote": "Prior failed fetch attempts superseded; existing adopted Awka record was already supported by profile extraction. No duplicate event/person/venue added."
+  },
+  "sourcesRead": [
+    {
+      "url": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "class": "Single post-event report family",
+      "support": "26 October 2024 venue and named roles",
+      "confidence": "High for attribution; independent corroboration unresolved"
+    },
+    {
+      "url": "https://kogireports.com/cross-country-poetry-celebration-ansa-restates-commitment-to-creating-platform-for-young-writers/",
+      "class": "Substantially repeated text; source independence unresolved",
+      "support": "No increase in independent corroboration count"
+    },
+    {
+      "url": "https://ansa.com.ng/team/",
+      "class": "Undated primary organisation biography",
+      "support": "Identity and chapbook attribution, not dated event completion or current leadership"
+    }
+  ],
+  "limits": [
+    "No 2024 venue host invented",
+    "No link to Ajiyolo-Ojaji 2023 inferred",
+    "No Gombe speech/2023 itinerary merge",
+    "Abakaliki planned-only retained",
+    "Ekiti separate post-event sources retained",
+    "Direct Google and signed-in social audit not performed",
+    "Zero means no qualifying evidence found in this pass"
+  ]
+}

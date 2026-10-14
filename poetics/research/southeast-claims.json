@@ -1,0 +1,1107 @@
+{
+  "reviewedAt": "2026-10-13",
+  "sources": {
+    "aba": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+    "identity": "https://guardian.ng/news/painting-the-gloomy-memories-of-covid-19-through-poetry/",
+    "abia": "https://ojembamagazine.com/association-of-nigerian-authors-abia-state-chapter-announces-monthly-reading-for-april-2026/",
+    "florence": "https://www.florencechukwuonye.com/",
+    "love": "https://egotickets.com/events/festival-of-love",
+    "laureates": "https://ebonyilaureates.com/clubs.html",
+    "online": "https://ng.linkedin.com/company/ebonyi-laureates",
+    "imo": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+    "books": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+    "call": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+    "njoku": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+    "itinerary": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+    "festival": "https://allevents.in/abakaliki/abakaliki-spoken-words-festival/200028540787344",
+    "magazine": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=24",
+    "enyimba": "https://iheanyiigboko.wordpress.com/2019/06/12/enyimba-reading-festival-is-envisioned-to-make-aba-the-world-book-centre-obioma-okezie/",
+    "grains": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+    "funai": "https://funai.edu.ng/news/2020-ana-prize-winner-for-poetry-pays-homage-to-ae-funai-vc-prof-nwajiuba/",
+    "ebonyiPDF": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=36"
+  },
+  "claims": [
+    {
+      "entity": "aba-poetry-club",
+      "claim": "Club documented by its president’s 2019 address. Exact founding year unverified.",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "aba-festival-2019",
+      "claim": "President’s address documents the gathering.",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held — first-person address",
+        "dateBasis": "Address published 20 October 2019; independent completion report not found.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "accima-hall",
+      "claim": "Festival venue named in the address.",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "aba-museum",
+      "claim": "Club host facility in the 2019 account; not the festival venue.",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "happyprince",
+      "claim": "Aba Poetry Club founder; identity also reported by The Guardian.",
+      "sourceURL": "https://guardian.ng/news/painting-the-gloomy-memories-of-covid-19-through-poetry/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "aba-story-2018",
+      "claim": "Guest-poet visit recalled in the president’s address.",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held — retrospective participant account",
+        "dateBasis": "Year explicitly recalled; day and venue unverified.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "umuahia-literary-society",
+      "claim": "Named club interface in the 2019 address.",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "aba-festival-2019",
+      "claim": "club president’s address → aba-poetry-club",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "aba-festival-2019",
+      "claim": "stated venue → accima-hall",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "aba-poetry-club",
+      "claim": "host facility as of 2019 → aba-museum",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "aba-poetry-club",
+      "claim": "interface named → umuahia-literary-society",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "aba-story-2018",
+      "claim": "programme recalled → aba-poetry-club",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "aba-story-2018",
+      "claim": "guest poet recalled → dike",
+      "sourceURL": "https://happyprinceblog.wordpress.com/2019/10/20/284/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "happyprince",
+      "claim": "founder reported → aba-poetry-club",
+      "sourceURL": "https://guardian.ng/news/painting-the-gloomy-memories-of-covid-19-through-poetry/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-abia",
+      "claim": "Chapter named in its attributed reading notice.",
+      "sourceURL": "https://ojembamagazine.com/association-of-nigerian-authors-abia-state-chapter-announces-monthly-reading-for-april-2026/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ana-abia-april-2026",
+      "claim": "Poetry and spoken-word reading announced.",
+      "sourceURL": "https://ojembamagazine.com/association-of-nigerian-authors-abia-state-chapter-announces-monthly-reading-for-april-2026/",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Announced; occurrence unverified",
+        "dateBasis": "Notice published 22 April; no qualifying completion report found.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ibiza-aba",
+      "claim": "Announced reading venue.",
+      "sourceURL": "https://ojembamagazine.com/association-of-nigerian-authors-abia-state-chapter-announces-monthly-reading-for-april-2026/",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "nnaemeka-nwokocha",
+      "claim": "Secretary signing the April 2026 notice.",
+      "sourceURL": "https://ojembamagazine.com/association-of-nigerian-authors-abia-state-chapter-announces-monthly-reading-for-april-2026/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ana-abia-april-2026",
+      "claim": "announced chapter reading → ana-abia",
+      "sourceURL": "https://ojembamagazine.com/association-of-nigerian-authors-abia-state-chapter-announces-monthly-reading-for-april-2026/",
+      "status": "Announcement only",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-abia-april-2026",
+      "claim": "announced venue → ibiza-aba",
+      "sourceURL": "https://ojembamagazine.com/association-of-nigerian-authors-abia-state-chapter-announces-monthly-reading-for-april-2026/",
+      "status": "Announcement only; attendance not established",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "nnaemeka-nwokocha",
+      "claim": "secretary in notice → ana-abia",
+      "sourceURL": "https://ojembamagazine.com/association-of-nigerian-authors-abia-state-chapter-announces-monthly-reading-for-april-2026/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "florence-chukwuonye",
+      "claim": "Author’s site describes historical club membership; currently UK-based.",
+      "sourceURL": "https://www.florencechukwuonye.com/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "florence-chukwuonye",
+      "claim": "historical membership stated → aba-poetry-club",
+      "sourceURL": "https://www.florencechukwuonye.com/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "florence-chukwuonye",
+      "claim": "historical welfare officer / vice chairman stated → ana-abia",
+      "sourceURL": "https://www.florencechukwuonye.com/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "tranquillity-turbulence",
+      "claim": "Poetry collection listed by its author.",
+      "sourceURL": "https://www.florencechukwuonye.com/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "dateBasis": "Publication date, publisher and ISBN unverified.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "florence-chukwuonye",
+      "claim": "author’s bookshelf attribution → tranquillity-turbulence",
+      "sourceURL": "https://www.florencechukwuonye.com/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "abakaliki-love-2018",
+      "claim": "Poetry and spoken-word programme advertised.",
+      "sourceURL": "https://egotickets.com/events/festival-of-love",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Announced; occurrence unverified",
+        "dateBasis": "Past Event ticket label does not prove occurrence.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "speak-out-loud-abakaliki",
+      "claim": "Organizer credited in the ticket listing.",
+      "sourceURL": "https://egotickets.com/events/festival-of-love",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "monabliss-abakaliki",
+      "claim": "Advertised Festival of Love venue.",
+      "sourceURL": "https://egotickets.com/events/festival-of-love",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "abakaliki-love-2018",
+      "claim": "announced organizer → speak-out-loud-abakaliki",
+      "sourceURL": "https://egotickets.com/events/festival-of-love",
+      "status": "Announcement only; similarly named platforms not merged",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "abakaliki-love-2018",
+      "claim": "announced venue → monabliss-abakaliki",
+      "sourceURL": "https://egotickets.com/events/festival-of-love",
+      "status": "Announcement only",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ebonyi-laureates-book-club",
+      "claim": "Organizer reports two 2025 open mics on unity and New Yam themes.",
+      "sourceURL": "https://ebonyilaureates.com/clubs.html",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held programmes — organizer self-report",
+        "dateBasis": "Dates, venues and physical/online format absent; no individual local event inferred.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ebonyi-literary-evening-2026",
+      "claim": "Discussion, poetry and open mic advertised on Microsoft Teams.",
+      "sourceURL": "https://ng.linkedin.com/company/ebonyi-laureates",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Announced; occurrence unverified",
+        "dateBasis": "Virtual programme; not counted as an event held in Abakaliki.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ebonyi-literary-evening-2026",
+      "claim": "announced host → ebonyi-laureates-book-club",
+      "sourceURL": "https://ng.linkedin.com/company/ebonyi-laureates",
+      "status": "Announcement only; online setting",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-imo",
+      "claim": "Chapter’s official report documents poetry activity.",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ana-imo-poetry-2024",
+      "claim": "Chapter reports a poetry prize endowed by Nwokedi.",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held — official chapter report",
+        "dateBasis": "Exact day, venue and winners unverified; Owerri is chapter association, not confirmed competition venue.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "sylvester-nwokedi",
+      "claim": "Poetry-prize endower named by the chapter.",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ana-imo-homecoming-2023",
+      "claim": "Chapter reports reception with readings and recitals.",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held — official chapter report",
+        "dateBasis": "Official report published 1 September 2024.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "whelan-research-owerri",
+      "claim": "Reception venue; chapter secretariat in the report.",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "camillus-ukah",
+      "claim": "Honouree in the chapter account.",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "osinachi-emeghara",
+      "claim": "Chapter chairman in the 2024 report.",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ana-imo-poetry-2024",
+      "claim": "chapter prize → ana-imo",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "sylvester-nwokedi",
+      "claim": "endower reported → ana-imo-poetry-2024",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-imo-homecoming-2023",
+      "claim": "chapter reception → ana-imo",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-imo-homecoming-2023",
+      "claim": "reported venue → whelan-research-owerri",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-imo-homecoming-2023",
+      "claim": "honouree → camillus-ukah",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "osinachi-emeghara",
+      "claim": "chairman in source → ana-imo",
+      "sourceURL": "https://www.ananigeria.org/news/ana-imo-celebrates-anas-immediate-past-president-dr-camilus-ukah-in-a-worthy-home-coming-event-and-the-chapters-continued-promotion-of-literature",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-imo-igbo-poetry-2025",
+      "claim": "July competition announced in an attributed chapter release.",
+      "sourceURL": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Announced; occurrence unverified",
+        "dateBasis": "No poetry results found; short-story results are not poetry results.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ana-imo-igbo-poetry-2025",
+      "claim": "announced chapter competition → ana-imo",
+      "sourceURL": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+      "status": "Announcement only",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "sylvester-nwokedi",
+      "claim": "competition announcement attributed → ana-imo-igbo-poetry-2025",
+      "sourceURL": "https://grassrootreporters.ng/2025/06/17/winners-of-ana-imo-short-story-competition-emerge/",
+      "status": "Announcement only",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "chukwubuike-launch-2022",
+      "claim": "Report documents presentation of two collections.",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held — participant-authored report",
+        "dateBasis": "Report dated 10 October 2022 says last Saturday; exact event date not normalized.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "chidozie-chukwubuike",
+      "claim": "Author presenting the two collections.",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "jangolova",
+      "claim": "Collection named in the presentation report.",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "dateBasis": "2022 is presentation evidence; original publication year, publisher and ISBN unverified.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "chidozie-chukwubuike",
+      "claim": "author credited → jangolova",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "chukwubuike-launch-2022",
+      "claim": "presented collection → jangolova",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "wriggling-freedom",
+      "claim": "Collection named in the presentation report.",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "dateBasis": "2022 is presentation evidence; original publication year, publisher and ISBN unverified.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "chidozie-chukwubuike",
+      "claim": "author credited → wriggling-freedom",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "chukwubuike-launch-2022",
+      "claim": "presented collection → wriggling-freedom",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "deborah-uzoma",
+      "claim": "Named poetry performer and report byline.",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "chukwuebuka-amaechi",
+      "claim": "Reviewer of Wriggling to Freedom.",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "chukwubuike-launch-2022",
+      "claim": "presenting author → chidozie-chukwubuike",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "chukwubuike-launch-2022",
+      "claim": "reported venue → whelan-research-owerri",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "chukwubuike-launch-2022",
+      "claim": "poetry performer → sylvester-nwokedi",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "chukwubuike-launch-2022",
+      "claim": "poetry performer → deborah-uzoma",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "chukwuebuka-amaechi",
+      "claim": "reviewer at presentation → wriggling-freedom",
+      "sourceURL": "https://www.otowngist.com/2022/10/chidozie-chukwubuike-holds-a-public-presentation-of-two-books-of-poetry/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-imo-reading-2020",
+      "claim": "Reading held alongside Igbo poetry competition.",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held — one participant-authored outlet report",
+        "dateBasis": "Report published 19 November 2020; independent corroboration not found.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "fr-njoku-poetry-2020",
+      "claim": "Competition result reported by OtownGist.",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held — one participant-authored outlet report",
+        "dateBasis": "Continuation intended; subsequent editions not inferred.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "anthony-njoku",
+      "claim": "Competition host.",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "nnenna-ihebom",
+      "claim": "Reported winner; winning poem titled Gbaghara ji, Gbaghara ede.",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ben-igbokwe",
+      "claim": "Judge named in report.",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "chinwe-onyemma",
+      "claim": "Judge named in report.",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ana-imo-reading-2020",
+      "claim": "chapter reading reported → ana-imo",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Single participant-authored outlet; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-imo-reading-2020",
+      "claim": "reported venue → whelan-research-owerri",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Single participant-authored outlet; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "fr-njoku-poetry-2020",
+      "claim": "held alongside reading → ana-imo-reading-2020",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Single participant-authored outlet; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "fr-njoku-poetry-2020",
+      "claim": "reported venue → whelan-research-owerri",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Single participant-authored outlet; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "anthony-njoku",
+      "claim": "host reported → fr-njoku-poetry-2020",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Single participant-authored outlet; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "nnenna-ihebom",
+      "claim": "winner reported → fr-njoku-poetry-2020",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Single participant-authored outlet; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ben-igbokwe",
+      "claim": "judge reported → fr-njoku-poetry-2020",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Single participant-authored outlet; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "chinwe-onyemma",
+      "claim": "judge reported → fr-njoku-poetry-2020",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Single participant-authored outlet; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "deborah-uzoma",
+      "claim": "participant reported → fr-njoku-poetry-2020",
+      "sourceURL": "https://www.otowngist.com/2020/11/nnenna-ihebom-wins-fr-njoku-igbo-poetry-competition-as-imo-ana-holds-reading/",
+      "status": "Single participant-authored outlet; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ccpc-abakaliki-2023",
+      "claim": "Planned node in published itinerary.",
+      "sourceURL": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Announced; occurrence unverified",
+        "dateBasis": "Itinerary published 17 October 2023; exact local event day unverified.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "fati-lami-abakaliki",
+      "claim": "Announced venue, behind ICC.",
+      "sourceURL": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "nwuguru-chidiebere",
+      "claim": "Announced host.",
+      "sourceURL": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "pearl-chidera",
+      "claim": "Announced co-host.",
+      "sourceURL": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ccpc-abakaliki-2023",
+      "claim": "named programme → ccpc",
+      "sourceURL": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Itinerary only; not attendance or occurrence evidence",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ccpc-abakaliki-2023",
+      "claim": "announced venue → fati-lami-abakaliki",
+      "sourceURL": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Itinerary only; not attendance or occurrence evidence",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ccpc-abakaliki-2023",
+      "claim": "announced host → nwuguru-chidiebere",
+      "sourceURL": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Itinerary only; not attendance or occurrence evidence",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ccpc-abakaliki-2023",
+      "claim": "announced co-host → pearl-chidera",
+      "sourceURL": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Itinerary only; not attendance or occurrence evidence",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "abakaliki-spoken-festival-2025",
+      "claim": "AllEvents discovery listing advertises spoken words.",
+      "sourceURL": "https://allevents.in/abakaliki/abakaliki-spoken-words-festival/200028540787344",
+      "status": "Listing verified",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Announced; occurrence unverified",
+        "dateBasis": "Indexed ticket metadata only; direct open failed. Exact venue, organizer identity and completion unverified.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ana-abia-okara-2019",
+      "claim": "Chapter reports poetry reading honouring Okara.",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=24",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held — official chapter report",
+        "dateBasis": "ANA Magazine 2019, PDF page 24; chapter-authored, not independent corroboration.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "abia-hotels-aba",
+      "claim": "Chapter-report venue.",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=24",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ana-abia-yusuf-2019",
+      "claim": "Chapter reports state-wide school competition and prizes.",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=24",
+      "status": "Withdrawn / superseded after primary-text recheck",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held — official chapter report",
+        "dateBasis": "Reported winners: Girls Secondary School Ohafia (₦25,000), National High School Azumini (₦15,000), Ututu Secondary School (₦10,000). Independent corroboration pending.",
+        "gaps": "Current activity and independent corroboration unverified."
+      },
+      "supersededBy": "handoff-followup-claims.json; PDF page 25. Do not reuse school/amount/venue metadata."
+    },
+    {
+      "entity": "ana-abia-okara-2019",
+      "claim": "chapter reading reported → ana-abia",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=24",
+      "status": "Official chapter report; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-abia-okara-2019",
+      "claim": "reported venue → abia-hotels-aba",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=24",
+      "status": "Official chapter report; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-abia-yusuf-2019",
+      "claim": "chapter competition reported → ana-abia",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=24",
+      "status": "Official chapter report; independent corroboration pending",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-abia-yusuf-2019",
+      "claim": "reported venue → abia-hotels-aba",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=24",
+      "status": "Withdrawn / superseded after primary-text recheck",
+      "confidence": "High for the stated relationship",
+      "supersededBy": "handoff-followup-claims.json; PDF page 25. Do not reuse school/amount/venue metadata."
+    },
+    {
+      "entity": "ana-abia",
+      "claim": "Regular meetings reported; anthology in pipeline only, publication not inferred.",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=24",
+      "status": "Chapter report; publication plan only",
+      "confidence": "High for source statement"
+    },
+    {
+      "entity": "enyimba-reading-festival",
+      "claim": "Organizer’s interview states the reading-and-arts festival started in 2015.",
+      "sourceURL": "https://iheanyiigboko.wordpress.com/2019/06/12/enyimba-reading-festival-is-envisioned-to-make-aba-the-world-book-centre-obioma-okezie/",
+      "status": "Organizer-attributed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "dateBasis": "Interview published June 2019. No exact edition or ongoing activity inferred; broader literary programme, not established as a dedicated poetry festival.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "artrise-book-arts",
+      "claim": "Festival organizer named in interview.",
+      "sourceURL": "https://iheanyiigboko.wordpress.com/2019/06/12/enyimba-reading-festival-is-envisioned-to-make-aba-the-world-book-centre-obioma-okezie/",
+      "status": "Organizer-attributed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "obioma-okezie",
+      "claim": "Interviewed festival organizer.",
+      "sourceURL": "https://iheanyiigboko.wordpress.com/2019/06/12/enyimba-reading-festival-is-envisioned-to-make-aba-the-world-book-centre-obioma-okezie/",
+      "status": "Organizer-attributed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "enyimba-reading-festival",
+      "claim": "organizer attributed → artrise-book-arts",
+      "sourceURL": "https://iheanyiigboko.wordpress.com/2019/06/12/enyimba-reading-festival-is-envisioned-to-make-aba-the-world-book-centre-obioma-okezie/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "obioma-okezie",
+      "claim": "organizer interviewed → enyimba-reading-festival",
+      "sourceURL": "https://iheanyiigboko.wordpress.com/2019/06/12/enyimba-reading-festival-is-envisioned-to-make-aba-the-world-book-centre-obioma-okezie/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-ebonyi",
+      "claim": "Chapter documented by official magazine and reported journal unveiling.",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "grains-journal",
+      "claim": "Journal / anthology including poetry, drama, stories and criticism.",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "dateBasis": "Not a confirmed original publication year. ANA Magazine cover says October 2019, yet chapter text claims maiden edition released; 2022 report says maiden unveiling from a 2019 call. Edition identity and chronology unresolved.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "grains-unveiling-2022",
+      "claim": "Newspaper reports a held literary-publication unveiling.",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "eventEvidence": "Held — newspaper report",
+        "dateBasis": "Report dated 18 July 2022; not labelled a slam or poetry-only event.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "akadike-suites",
+      "claim": "Reported unveiling venue.",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "richard-inya",
+      "claim": "Poet and chapter chairman in the sources.",
+      "sourceURL": "https://funai.edu.ng/news/2020-ana-prize-winner-for-poetry-pays-homage-to-ae-funai-vc-prof-nwajiuba/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "dateBasis": "2020 is cited prize year; university visit day and post publication date unverified.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "this-not-poem",
+      "claim": "Richard Inya’s collection named by university.",
+      "sourceURL": "https://funai.edu.ng/news/2020-ana-prize-winner-for-poetry-pays-homage-to-ae-funai-vc-prof-nwajiuba/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "dateBasis": "2020 is award evidence, not publication year. Publisher, edition and ISBN unverified.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "ae-funai",
+      "claim": "University documents Inya’s Library Department connection and book presentation.",
+      "sourceURL": "https://funai.edu.ng/news/2020-ana-prize-winner-for-poetry-pays-homage-to-ae-funai-vc-prof-nwajiuba/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "dateBasis": "Campus association; no invented poetry-event node or academic-editor connection.",
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "matthew-odono",
+      "claim": "ANA president’s representative at unveiling.",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "gmt-emezue",
+      "claim": "Author named among awardees.",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "akachi-ezeigbo",
+      "claim": "Author named among awardees.",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source confirmed",
+      "confidence": "High for source attribution; independent corroboration pending",
+      "qualifiers": {
+        "gaps": "Current activity and independent corroboration unverified."
+      }
+    },
+    {
+      "entity": "grains-unveiling-2022",
+      "claim": "chapter unveiling reported → ana-ebonyi",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "grains-unveiling-2022",
+      "claim": "unveiled publication → grains-journal",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "grains-unveiling-2022",
+      "claim": "reported venue → akadike-suites",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "richard-inya",
+      "claim": "chairman in 2022 report → ana-ebonyi",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "matthew-odono",
+      "claim": "represented president → grains-unveiling-2022",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "gmt-emezue",
+      "claim": "named awardee → grains-unveiling-2022",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "akachi-ezeigbo",
+      "claim": "named awardee → grains-unveiling-2022",
+      "sourceURL": "https://independent.ng/nigerian-authors-unveil-maiden-journal-in-ebonyi/",
+      "status": "Source-stated role only; not current residence or office",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "richard-inya",
+      "claim": "author; collection second runner-up in 2020 ANA poetry prize → this-not-poem",
+      "sourceURL": "https://funai.edu.ng/news/2020-ana-prize-winner-for-poetry-pays-homage-to-ae-funai-vc-prof-nwajiuba/",
+      "status": "Official university account; award year only",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "richard-inya",
+      "claim": "Library Department affiliation; presented book copies → ae-funai",
+      "sourceURL": "https://funai.edu.ng/news/2020-ana-prize-winner-for-poetry-pays-homage-to-ae-funai-vc-prof-nwajiuba/",
+      "status": "Official account; visit date unverified",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-ebonyi",
+      "claim": "chapter journal released per magazine → grains-journal",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=36",
+      "status": "Issue labelled October 2019; release chronology conflicts with 2022 maiden unveiling",
+      "confidence": "High for the stated relationship"
+    },
+    {
+      "entity": "ana-ebonyi",
+      "claim": "Magazine describes consistent monthly readings so far this year; issue cover October 2019 but precise activity dates not established.",
+      "sourceURL": "https://www.ananigeria.org/documents/ANA%20MAGAZINE%202019.pdf#page=36",
+      "status": "First-party chapter statement; date scope qualified",
+      "confidence": "High for wording; chronology unresolved"
+    }
+  ]
+}

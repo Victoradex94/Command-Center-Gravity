@@ -1,0 +1,164 @@
+{
+  "id": "RUN-20261014-0113-OGUN",
+  "queries": [
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Ojokoro Community Library\" \"poetry\" \"2024\" \"Yemi\"",
+      "yield": "Independent announcement and attributed aggregator repeat only."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Mercy Eno\" \"Cross Country\" \"2024\"",
+      "yield": "No qualifying post-event account."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Adedapo Conde\" \"October\" \"2024\" poetry",
+      "yield": "No qualifying post-event account."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Babatunde Sanyaolu\" \"2024\" poetry \"October\"",
+      "yield": "Mostly unrelated academic/name matches; no corroboration."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Sanyaolu\" \"Cross Country\" poetry 2024 Abeokuta",
+      "yield": "Unrelated cross-country results; no qualifying source."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Adenekan\" \"USC\" poetry 2024",
+      "yield": "Unrelated US universities; not venue evidence."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Ojokoro\" poetry \"celebration\" October 2024 held",
+      "yield": "Unrelated place results; no occurrence evidence."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "site:poetsinnigeria.org.ng \"2024\" \"Ojokoro\"",
+      "yield": "No qualifying primary result; unrelated results returned."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Ogun\" \"Cross Country Poetry\" \"2024\"",
+      "yield": "Guardian and explicit Guardian aggregator repeat; indexed participant lead."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Babatunde Sanyaolu\" poetry",
+      "yield": "Guardian; Tribune teacher interview; anthology fuller-name credit; 2026 social mirrors. Same-name expansion deferred."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Ojokoro\" \"CCPC\" \"2024\"",
+      "yield": "Announcement only."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Martins A. Akinyemi\" \"poetry\"",
+      "yield": "Guardian goodwill-message role; no independent role account."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Inioluwa Sanyaolu\" \"Cross Country\" poetry certificate 2024",
+      "yield": "Relevant profile certification section returned through search: two certificates issued October2024. Direct open999."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Ojokoro Community Library\" \"October 26\" poetry",
+      "yield": "No qualifying completion evidence."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Babatunde Sanyaolu\" \"USC\" \"26\"",
+      "yield": "Guardian last weekend; no exact date."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Adeṣọla Adenẹkan\" poetry 2024",
+      "yield": "Unrelated name matches; no independent cohost corroboration."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://guardian.ng/art/ogun-marks-2024-cross-country-poetry-celebration-with-funfair/",
+      "access": "Direct full text read",
+      "published": "2024-11-02",
+      "family": "Guardian Gbenga Akinfenwa report",
+      "claims": [
+        "Gathering at USC (Cathedral) Hall Abeokuta last weekend",
+        "Babatunde Sanyaolu host; Adeṣọla Adenẹkan cohost",
+        "Martins A. Akinyemi goodwill message; delivery mode/physical attendance unstated"
+      ],
+      "status": "Single newspaper occurrence account; exact day unresolved"
+    },
+    {
+      "url": "https://ng.linkedin.com/in/inioluwa-sanyaolu-333997364",
+      "access": "Direct999; full relevant certification section through search",
+      "family": "Participant self-reported profile",
+      "claims": [
+        "Certificate for poem presentation at Poets In Nigeria2024 Cross Country Celebration Abeokuta",
+        "Certificate for voluntary services at Abeokuta location",
+        "IssuedOct2024, not exact event day"
+      ],
+      "status": "Separate participant-attributed account; not certificate image, independently verified attendance or venue evidence"
+    },
+    {
+      "url": "https://independent.ng/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos/",
+      "access": "Search text",
+      "published": "2024-09-28",
+      "family": "Independent advance notice",
+      "status": "Announcement, not occurrence"
+    },
+    {
+      "url": "https://www.latestnigeriannews.com/p/3871216/ogun-marks-2024-cross-country-poetry-celebration-with-funfair.html",
+      "access": "Search text",
+      "family": "Explicit Guardian aggregator repeat",
+      "independent": false
+    },
+    {
+      "url": "https://www.latestnigeriannews.com/p/3781516/yemi-adebiyi-to-host-cross-country-poetry-celebration-in-lagos.html",
+      "access": "Search text",
+      "family": "Explicit Independent aggregator repeat",
+      "independent": false
+    }
+  ],
+  "typedConnections": [
+    [
+      "ccpc-abeokuta-2024",
+      "martins-akinyemi",
+      "reported goodwill message contributor"
+    ],
+    [
+      "ccpc-abeokuta-2024",
+      "inioluwa-sanyaolu",
+      "self-reported poem presentation and volunteering"
+    ]
+  ],
+  "deferred": "Do not merge fuller-name anthology credit Solomon Babatunde Sanyaolu, unrelated NHS profile, Tribune teacher, or mirrored2026 coordinator notice without identity/primary checks. Do not add publications from profile project descriptions as published editions.",
+  "counts": {
+    "entries": 430,
+    "connections": 640,
+    "Ogun": 11
+  },
+  "negative": "No Ojokoro completion; no precise Ogun day; participant profile does not establish USC venue or hosts."
+}

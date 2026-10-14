@@ -1,0 +1,11 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const text=fs.readFileSync('dist/canonical-research.json','utf8'),d=JSON.parse(text),t=d.tables;
+assert.equal(t['Evidence Ledger'].length,92);assert.equal(t['People & Platforms'].length,30);assert.equal(t['Historical Timeline'].length,26);assert.equal(t['Annual Synthesis'].length,8);assert.equal(t['Research Questions'].length,10);
+assert(!/Gmail Message ID|Gmail Reference|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/.test(text));assert(t['Evidence Ledger'].every(r=>!r['Original Source URL']));assert.equal(new Set(t['Evidence Ledger'].map(r=>r['Evidence ID'])).size,92);
+const ctx={window:{PoeticsResearch:d}};vm.runInNewContext(fs.readFileSync('dist/research-atlas.js','utf8'),ctx);const ids=ctx.window.PoeticsResearchUtils.ids;
+assert.equal(ids('E074–E076, E085').join(','),'E074,E075,E076,E085');
+const known=new Set(t['Evidence Ledger'].map(r=>r['Evidence ID']));for(const [name,rows] of Object.entries(t))for(const row of rows)for(const id of ids(row['Evidence IDs']))assert(known.has(id),name+' missing '+id);
+let html='';const element={scrollIntoView(){},focus(){},setSelectionRange(){}};const root={set innerHTML(v){html=v},get innerHTML(){return html},querySelector(){return element},querySelectorAll(){return []}};
+ctx.window.renderResearchAtlas(root,()=>{});assert(html.includes('92 alert records'));assert(html.includes('Poets in Nigeria'));assert(!html.includes('Gmail'));
+console.log('Research counts, privacy, evidence references, range expansion and initial rendering passed.');
+assert.equal(d.supplementalProfiles.length,5);for(const p of d.supplementalProfiles){assert(p['Source Links'].length);assert(p['Record Origin'].includes('not a canonical'));assert(html.includes(p.Entity));}assert(d.supplementalProfiles[0]['Verification Status'].includes('blocked'));assert(d.supplementalProfiles[2]['Research Notes'].includes('Distinct from Griots Lounge'));console.log('Supplementary profile separation and discovery status passed.');

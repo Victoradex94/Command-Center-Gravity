@@ -1,0 +1,1453 @@
+{
+  "reviewed": "2026-10-12",
+  "profiles": [
+    {
+      "id": "wordtour",
+      "name": "Word Tour (WordTour)",
+      "category": "Platforms",
+      "city": "Maiduguri / Yola",
+      "summary": "A poetry event associated with Moses Abah (Oracle). A 2025 account recalls Vic’Adex participating in its Maiduguri and Yola gatherings before Open Mic Maiduguri.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2025,
+          "label": "Retrospective published",
+          "url": "https://primetimenews.ng/open-mic-maiduguri-how-vicadex-connected-creatives-in-nigerias-northeast-2/"
+        }
+      ],
+      "links": [
+        {
+          "title": "wordtour — profile evidence",
+          "url": "https://primetimenews.ng/open-mic-maiduguri-how-vicadex-connected-creatives-in-nigerias-northeast-2/"
+        }
+      ],
+      "format": "Open mic / reading",
+      "gaps": "Tour dates, editions and founding year remain unverified. The source names participation before the 2021 open mic but does not date the tour."
+    },
+    {
+      "id": "oracle",
+      "name": "Moses Abah (Oracle)",
+      "category": "People",
+      "city": "Maiduguri / Yola",
+      "summary": "Poet associated with Word Tour in a retrospective on Open Mic Maiduguri. These are event associations, not a residence claim.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2025,
+          "label": "Retrospective published",
+          "url": "https://primetimenews.ng/open-mic-maiduguri-how-vicadex-connected-creatives-in-nigerias-northeast-2/"
+        }
+      ],
+      "links": [
+        {
+          "title": "wordtour — profile evidence",
+          "url": "https://primetimenews.ng/open-mic-maiduguri-how-vicadex-connected-creatives-in-nigerias-northeast-2/"
+        }
+      ]
+    },
+    {
+      "id": "wrr",
+      "name": "Words Rhymes & Rhythm (WRR)",
+      "category": "Platforms",
+      "city": "Lagos / Ibadan / Abuja",
+      "summary": "A Nigerian literary community and publisher offering peer learning, publications, prizes and a literary festival. Its own history names Kukogho Iruesiri Samson as founder in August 2012.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2012,
+          "label": "Founded — organiser history",
+          "url": "https://www.wrr.ng/about-us/"
+        }
+      ],
+      "links": [
+        {
+          "title": "wrr — profile evidence",
+          "url": "https://www.wrr.ng/about-us/"
+        }
+      ],
+      "history": "The organiser traces WRR to a Facebook-based writing community in August 2012. Its publishing and educational programmes developed from that community.",
+      "gaps": "Founding is organiser-attributed. Individual programme dates require their own evidence.",
+      "searchAliases": [
+        "Words Rhymes and Rhythms",
+        "Words Rhymes and Rhythm",
+        "WRR"
+      ],
+      "format": "Other / not classified"
+    },
+    {
+      "id": "artmosphere",
+      "name": "Artmosphere",
+      "category": "Platforms",
+      "city": "Ibadan",
+      "summary": "A literary, music and performance gathering curated by WriteHouse Collective. Contemporary 2013 notices describe poetry performances and a special open-mic edition.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2013,
+          "label": "Contemporary programme notices",
+          "url": "https://tainsville.wordpress.com/2013/10/16/artmosphere-the-open-mic-with-the-bards/"
+        }
+      ],
+      "links": [
+        {
+          "title": "art — profile evidence",
+          "url": "https://tainsville.wordpress.com/2013/10/16/artmosphere-the-open-mic-with-the-bards/"
+        }
+      ],
+      "format": "Open mic / reading",
+      "gaps": "The October notice contains conflicting October/November wording and a day/date mismatch. Exact edition date and founding year are not asserted."
+    },
+    {
+      "id": "writehouse",
+      "name": "WriteHouse Collective",
+      "category": "Platforms",
+      "city": "Ibadan",
+      "summary": "The creative enterprise named as curator and parent organisation of Artmosphere in contemporary programme announcements.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2013,
+          "label": "Programme announcement",
+          "url": "https://tainsville.wordpress.com/2013/10/16/artmosphere-the-open-mic-with-the-bards/"
+        }
+      ],
+      "links": [
+        {
+          "title": "art — profile evidence",
+          "url": "https://tainsville.wordpress.com/2013/10/16/artmosphere-the-open-mic-with-the-bards/"
+        }
+      ]
+    },
+    {
+      "id": "servio",
+      "name": "Servio Gbadamosi",
+      "category": "People",
+      "city": "Ibadan",
+      "summary": "Poet named in Artmosphere’s February 2013 programme and as its organiser in the Be Blessed 6 announcement.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2013,
+          "label": "Announced performer",
+          "url": "https://tainsville.wordpress.com/2013/02/"
+        },
+        {
+          "year": 2014,
+          "label": "Organiser named in event notice",
+          "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/"
+        }
+      ],
+      "links": [
+        {
+          "title": "artfeb — profile evidence",
+          "url": "https://tainsville.wordpress.com/2013/02/"
+        },
+        {
+          "title": "bb — additional evidence",
+          "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/"
+        }
+      ]
+    },
+    {
+      "id": "nustreams",
+      "name": "NuStreams Conference Centre",
+      "category": "Places",
+      "city": "Ibadan",
+      "summary": "Public venue listed for Artmosphere’s special open-mic notice in 2013. The notice’s conflicting date wording is preserved as a research gap.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2013,
+          "label": "Venue announcement",
+          "url": "https://tainsville.wordpress.com/2013/10/16/artmosphere-the-open-mic-with-the-bards/"
+        }
+      ],
+      "links": [
+        {
+          "title": "art — profile evidence",
+          "url": "https://tainsville.wordpress.com/2013/10/16/artmosphere-the-open-mic-with-the-bards/"
+        }
+      ]
+    },
+    {
+      "id": "fos",
+      "name": "Figures of Speech Movement (FOS)",
+      "category": "Platforms",
+      "city": "Online / Nigeria",
+      "summary": "An online poetry-learning community associated with Graciano Enwerem. A 2015 profile names him as co-founder; his 2022 TEDx biography calls him founder and describes a WhatsApp teaching platform.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2015,
+          "label": "Co-founder described in profile",
+          "url": "https://bnmagazineng.wordpress.com/2015/11/13/bn-blogs-2015-top-ten-young-nigerian-poets-to-watch/"
+        },
+        {
+          "year": 2022,
+          "label": "TEDx speaker biography",
+          "url": "https://tedxportharcourt.com/talks/9fe41d26-49a1-4012-adbe-e1da6ccb901c"
+        }
+      ],
+      "links": [
+        {
+          "title": "fos — profile evidence",
+          "url": "https://tedxportharcourt.com/talks/9fe41d26-49a1-4012-adbe-e1da6ccb901c"
+        },
+        {
+          "title": "fos2015 — additional evidence",
+          "url": "https://bnmagazineng.wordpress.com/2015/11/13/bn-blogs-2015-top-ten-young-nigerian-poets-to-watch/"
+        }
+      ],
+      "gaps": "Founder/co-founder wording varies across sources. Founding year, full founding team and current membership remain unverified.",
+      "searchAliases": [
+        "Figures of Speech Movement Africa",
+        "FOS movement"
+      ]
+    },
+    {
+      "id": "freedom-spoke",
+      "name": "Freedom Spoke Words",
+      "category": "Platforms",
+      "city": "Nigeria",
+      "summary": "Poetry platform linked to AJ Dagga Tolar in a contemporaneous Nigerian Writers Awards nomination list published in October 2016.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2016,
+          "label": "Platform affiliation in nomination list",
+          "url": "https://communicatorsleague.wordpress.com/2016/10/17/nigerian-writers-awards-2017/"
+        }
+      ],
+      "links": [
+        {
+          "title": "freedom — profile evidence",
+          "url": "https://communicatorsleague.wordpress.com/2016/10/17/nigerian-writers-awards-2017/"
+        }
+      ],
+      "gaps": "Exact city, founding year, venue and recurring schedule need stronger primary evidence. This entry is distinct from Freedom Hall.",
+      "searchAliases": [
+        "Freedom Spoken Words",
+        "Freedom Spoke Words"
+      ]
+    },
+    {
+      "id": "aj-tolar",
+      "name": "AJ Dagga Tolar",
+      "category": "People",
+      "city": "Nigeria",
+      "summary": "Poet and promoter listed with Freedom Spoke Words in the 2016 announcement of nominees for the 2017 Nigerian Writers Awards.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2016,
+          "label": "Nomination list published",
+          "url": "https://communicatorsleague.wordpress.com/2016/10/17/nigerian-writers-awards-2017/"
+        }
+      ],
+      "links": [
+        {
+          "title": "freedom — profile evidence",
+          "url": "https://communicatorsleague.wordpress.com/2016/10/17/nigerian-writers-awards-2017/"
+        }
+      ]
+    },
+    {
+      "id": "ui-zoo",
+      "name": "University of Ibadan Zoological Garden",
+      "category": "Places",
+      "city": "Ibadan",
+      "summary": "Public venue advertised for Be Blessed 6 on 26 April 2014.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2014,
+          "label": "Advertised venue",
+          "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/"
+        }
+      ],
+      "links": [
+        {
+          "title": "bb — profile evidence",
+          "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/"
+        }
+      ]
+    },
+    {
+      "id": "eko-literary",
+      "name": "Eko Literary Society",
+      "category": "Platforms",
+      "city": "Lagos",
+      "summary": "Literary organisation named in the November 2014 result report of Eko Poetry Slam, held to mark its first anniversary.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2014,
+          "label": "Slam result report",
+          "url": "https://articles.connectnigeria.com/winners-emerge-from-the-eko-literary-society-poetry-slam/"
+        }
+      ],
+      "links": [
+        {
+          "title": "eko — profile evidence",
+          "url": "https://articles.connectnigeria.com/winners-emerge-from-the-eko-literary-society-poetry-slam/"
+        }
+      ],
+      "gaps": "The anniversary statement is not independently used to establish a founding date."
+    },
+    {
+      "id": "kemi-bakare",
+      "name": "Kemi Bakare (Kemistree)",
+      "category": "People",
+      "city": "Lagos",
+      "summary": "Poet reported as the first-place winner of Eko Poetry Slam on 22 November 2014. The 2016 nomination list identifies Kemi Bakare with the stage name Kemistree.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2014,
+          "label": "Reported slam result",
+          "url": "https://articles.connectnigeria.com/winners-emerge-from-the-eko-literary-society-poetry-slam/"
+        },
+        {
+          "year": 2016,
+          "label": "Stage-name attribution",
+          "url": "https://communicatorsleague.wordpress.com/2016/10/17/nigerian-writers-awards-2017/"
+        }
+      ],
+      "links": [
+        {
+          "title": "eko — profile evidence",
+          "url": "https://articles.connectnigeria.com/winners-emerge-from-the-eko-literary-society-poetry-slam/"
+        },
+        {
+          "title": "freedom — additional evidence",
+          "url": "https://communicatorsleague.wordpress.com/2016/10/17/nigerian-writers-awards-2017/"
+        }
+      ],
+      "gaps": "The pilot announcement entry “Kemistry” remains separate pending confirmation of that particular spelling and identity."
+    },
+    {
+      "id": "ui-love-garden",
+      "name": "Love Garden, University of Maiduguri",
+      "category": "Places",
+      "city": "Maiduguri",
+      "summary": "The documented venue of Open Mic Maiduguri on 30 October 2021.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2021,
+          "label": "Documented open mic",
+          "url": "https://vicadex.com/portfolio/open-mic-maiduguri/"
+        }
+      ],
+      "links": [
+        {
+          "title": "omm — profile evidence",
+          "url": "https://vicadex.com/portfolio/open-mic-maiduguri/"
+        }
+      ]
+    },
+    {
+      "id": "wordup",
+      "name": "WORD UP",
+      "category": "Platforms",
+      "city": "Lagos",
+      "summary": "Spoken-word showcase described in Olumide Holloway’s organiser retrospective; related to the distinct War of Words slam competition.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2012,
+          "label": "Show launch recalled by organiser",
+          "url": "https://www.linkedin.com/pulse/why-do-we-what-olumide-holloway-king-olulu-"
+        }
+      ],
+      "links": [
+        {
+          "title": "wordup — profile evidence",
+          "url": "https://www.linkedin.com/pulse/why-do-we-what-olumide-holloway-king-olulu-"
+        }
+      ],
+      "format": "Open mic / reading"
+    },
+    {
+      "id": "la-casera-company",
+      "name": "The La Casera Company",
+      "category": "Platforms",
+      "city": "Lagos",
+      "summary": "Brand named as organiser of the reported 2022 spoken-word challenge.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2022,
+          "label": "Result report",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lacasera — profile evidence",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ]
+    },
+    {
+      "id": "popcentral-studios",
+      "name": "Pop Central Studios",
+      "category": "Places",
+      "city": "Lagos",
+      "summary": "Venue named for the reported 2022 La Casera final.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2022,
+          "label": "Final venue reported",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lacasera — profile evidence",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ]
+    },
+    {
+      "id": "78th-psalmist",
+      "name": "David Osaodion Odiase (78th Psalmist)",
+      "category": "People",
+      "city": "Lagos",
+      "summary": "Overall winner in the 2022 La Casera result report.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2022,
+          "label": "Winner reported",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lacasera — profile evidence",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ]
+    },
+    {
+      "id": "loveth-liberty",
+      "name": "Loveth Liberty",
+      "category": "People",
+      "city": "Lagos",
+      "summary": "First runner-up in the 2022 La Casera result report.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2022,
+          "label": "Result reported",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lacasera — profile evidence",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ]
+    },
+    {
+      "id": "divine-titus",
+      "name": "Divine Titus",
+      "category": "People",
+      "city": "Lagos",
+      "summary": "Second runner-up in the 2022 La Casera result report.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2022,
+          "label": "Result reported",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lacasera — profile evidence",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ]
+    },
+    {
+      "id": "maryam-bukar",
+      "name": "Maryam Bukar Hassan",
+      "category": "People",
+      "city": "Lagos",
+      "summary": "Judge named in the 2022 La Casera result report.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2022,
+          "label": "Judge reported",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lacasera — profile evidence",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ]
+    },
+    {
+      "id": "youpoetry-slam",
+      "name": "YouPoetry Slam",
+      "category": "Prizes",
+      "city": "Nigeria",
+      "summary": "Slam named among Graciano Enwerem’s wins in a 2015 profile.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2015,
+          "label": "Profile published; slam date unverified",
+          "url": "https://bnmagazineng.wordpress.com/2015/11/13/bn-blogs-2015-top-ten-young-nigerian-poets-to-watch/"
+        }
+      ],
+      "links": [
+        {
+          "title": "fos2015 — profile evidence",
+          "url": "https://bnmagazineng.wordpress.com/2015/11/13/bn-blogs-2015-top-ten-young-nigerian-poets-to-watch/"
+        }
+      ],
+      "format": "Spoken-word competition",
+      "gaps": "Edition date, venue and organiser remain unverified."
+    },
+    {
+      "id": "echowords",
+      "name": "Echowords",
+      "category": "Platforms",
+      "city": "Nigeria",
+      "summary": "Creative platform associated with Elu Emina and a reported 2025 spoken-word contest.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2025,
+          "label": "Published contest report",
+          "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/"
+        }
+      ],
+      "links": [
+        {
+          "title": "echo — profile evidence",
+          "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/"
+        }
+      ]
+    },
+    {
+      "id": "echowords-contest",
+      "name": "Echowords Spoken Word Contest",
+      "category": "Prizes",
+      "city": "Nigeria",
+      "summary": "A maiden spoken-word contest reported in October 2025, with Iyenemi Muriel Ogbole named as winner.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2025,
+          "label": "Result report published",
+          "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/"
+        }
+      ],
+      "links": [
+        {
+          "title": "echo — profile evidence",
+          "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/"
+        }
+      ],
+      "format": "Spoken-word competition",
+      "gaps": "Exact event date and venue not established; current entry status unconfirmed."
+    },
+    {
+      "id": "elu-emina",
+      "name": "Elu Emina",
+      "category": "People",
+      "city": "Nigeria",
+      "summary": "Named as founder of Echowords in the 2025 contest report.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2025,
+          "label": "Founder reported",
+          "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/"
+        }
+      ],
+      "links": [
+        {
+          "title": "echo — profile evidence",
+          "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/"
+        }
+      ]
+    },
+    {
+      "id": "iyenemi-ogbole",
+      "name": "Iyenemi Muriel Ogbole",
+      "category": "People",
+      "city": "Nigeria",
+      "summary": "First-place winner named in the 2025 Echowords contest report.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2025,
+          "label": "Winner reported",
+          "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/"
+        }
+      ],
+      "links": [
+        {
+          "title": "echo — profile evidence",
+          "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/"
+        }
+      ]
+    },
+    {
+      "id": "empowered-by-words",
+      "name": "Empowered by Words",
+      "category": "Platforms",
+      "city": "Abeokuta",
+      "summary": "A spoken-word and soul-music event at MAPOLY recalled by James Ademuyiwa (James Conco) in a Speaking Pen interview.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2015,
+          "label": "Activity recalled in interview; exact event date unverified",
+          "url": "https://speakingp.blogspot.com/"
+        }
+      ],
+      "links": [
+        {
+          "title": "empowered — profile evidence",
+          "url": "https://speakingp.blogspot.com/"
+        }
+      ],
+      "format": "Open mic / reading",
+      "gaps": "The speaker links the event to a 2015 performance. Exact edition date and founding date are not independently verified."
+    },
+    {
+      "id": "mapoly",
+      "name": "Moshood Abiola Polytechnic (MAPOLY)",
+      "category": "Places",
+      "city": "Abeokuta",
+      "summary": "Institution named as the setting of Empowered by Words in the organiser’s interview.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2015,
+          "label": "Event setting recalled",
+          "url": "https://speakingp.blogspot.com/"
+        }
+      ],
+      "links": [
+        {
+          "title": "empowered — profile evidence",
+          "url": "https://speakingp.blogspot.com/"
+        }
+      ]
+    },
+    {
+      "id": "nasara-creative",
+      "name": "Nasara Creative",
+      "category": "Platforms",
+      "city": "Abuja",
+      "summary": "Curatorial organisation linked to Abuja International Poetry Festival in the 2024 report and 2026 announcement.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2024,
+          "label": "Festival report",
+          "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/"
+        }
+      ],
+      "links": [
+        {
+          "title": "aip2024 — profile evidence",
+          "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/"
+        }
+      ]
+    },
+    {
+      "id": "aip-grand-slam",
+      "name": "AIPFest Grand Slam / Efe Paul Azino Prize",
+      "category": "Prizes",
+      "city": "Abuja",
+      "summary": "The festival’s 2024 closing slam, reported as won by Pacella Chukwuma-Eke.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2024,
+          "label": "Reported slam result",
+          "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/"
+        }
+      ],
+      "links": [
+        {
+          "title": "aip2024 — profile evidence",
+          "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/"
+        }
+      ],
+      "format": "Spoken-word competition",
+      "gaps": "Exact competition recurrence and current entry rules remain unverified."
+    },
+    {
+      "id": "pacella",
+      "name": "Pacella Chukwuma-Eke",
+      "category": "People",
+      "city": "Abuja / Lagos",
+      "summary": "Poet reported as winner of the 2024 AIPFest slam and first runner-up at the 2024 LIPFest Grand Slam.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2024,
+          "label": "Published result reports",
+          "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/"
+        }
+      ],
+      "links": [
+        {
+          "title": "aip2024 — profile evidence",
+          "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/"
+        }
+      ]
+    },
+    {
+      "id": "lip-grand-slam",
+      "name": "LIPFest Poetry Grand Slam",
+      "category": "Prizes",
+      "city": "Lagos",
+      "summary": "LIPFest’s slam competition, whose 2024 result report names Grey Martyr as winner.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2024,
+          "label": "Reported slam result",
+          "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lipslam — profile evidence",
+          "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/"
+        }
+      ],
+      "format": "Spoken-word competition",
+      "gaps": "Current edition rules and future entry status are unconfirmed."
+    },
+    {
+      "id": "grey-martyr",
+      "name": "Nwani Emmanuel Chidera (Grey Martyr)",
+      "category": "People",
+      "city": "Lagos",
+      "summary": "Poet reported as winner of the 2024 LIPFest Poetry Grand Slam.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2024,
+          "label": "Winner reported",
+          "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lipslam — profile evidence",
+          "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/"
+        }
+      ]
+    },
+    {
+      "id": "alliance-lagos",
+      "name": "Alliance Française, Mike Adenuga Centre",
+      "category": "Places",
+      "city": "Lagos",
+      "summary": "Venue named in the 2024 LIPFest Grand Slam result report.",
+      "status": "Source-attributed historical record",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2024,
+          "label": "Slam venue reported",
+          "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lipslam — profile evidence",
+          "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/"
+        }
+      ]
+    },
+    {
+      "id": "lamikanra",
+      "name": "Adebayo Lamikanra",
+      "category": "People",
+      "city": "Ilesa",
+      "summary": "Poet and academic whose January 2016 author account describes welcoming poets to an annual festival in Ilesa.",
+      "status": "Indexed firsthand author account; full page retrieval blocked",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2016,
+          "label": "Author account published",
+          "url": "https://thenewsnigeria.com.ng/2016/01/21/adebayo-lamikanra-my-ikere-ekiti-adventure/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lamikanra — profile evidence",
+          "url": "https://thenewsnigeria.com.ng/2016/01/21/adebayo-lamikanra-my-ikere-ekiti-adventure/"
+        }
+      ],
+      "status_note": "Indexed author account reviewed; full page inaccessible"
+    },
+    {
+      "id": "lamikanra-house-party",
+      "name": "Poetry House Party (Lamikanra, Ilesa)",
+      "category": "Platforms",
+      "city": "Ilesa",
+      "summary": "A poetry gathering associated with Adebayo Lamikanra in Ilesa (Ilesha). Ilesa Book Club’s 2024 tribute identifies the Poetry House Party as the later name of the Ife Poetry Festival.",
+      "status": "Indexed author account and community tribute; exact recalled-night identity pending",
+      "availability": "Current activity / entry status unconfirmed",
+      "years": [
+        {
+          "year": 2016,
+          "label": "Ilesa annual festival described in author account",
+          "url": "https://thenewsnigeria.com.ng/2016/01/21/adebayo-lamikanra-my-ikere-ekiti-adventure/"
+        },
+        {
+          "year": 2024,
+          "label": "Community tribute names Poetry House Party",
+          "url": "https://ileshabookclub.blogspot.com/"
+        }
+      ],
+      "links": [
+        {
+          "title": "lamikanra2024 — profile evidence",
+          "url": "https://ileshabookclub.blogspot.com/"
+        },
+        {
+          "title": "Lamikanra’s 2016 author account",
+          "url": "https://thenewsnigeria.com.ng/2016/01/21/adebayo-lamikanra-my-ikere-ekiti-adventure/"
+        }
+      ],
+      "format": "Open mic / reading",
+      "searchAliases": [
+        "Lamikanra Poetry Night",
+        "Lamikanra poetry night in Ilesha",
+        "Ife Poetry Festival",
+        "Poetry House Party"
+      ],
+      "gaps": "Exact title of the user-recalled night and the chronology of renaming/relocation require confirmation. Founding date and current schedule are not independently established."
+    }
+  ],
+  "overrides": {
+    "c11": {
+      "format": "Festival / showcase",
+      "name": "Abuja International Poetry Festival (AIPFest)",
+      "searchAliases": [
+        "AIPFest",
+        "Abuja International Poetry Festival",
+        "AIPFEST"
+      ],
+      "summary": "Abuja poetry festival curated by Nasara Creative, with a documented 2024 edition and a second edition announced for October 2026.",
+      "history": "The 2024 report places the inaugural festival on 14–16 November. A 2 October 2026 announcement gives the second edition as 22–24 October 2026.",
+      "status": "2024 festival report and 2026 announcement reviewed",
+      "availability": "22–24 October 2026 announced; future occurrence and current entry rules unconfirmed",
+      "years": [
+        {
+          "year": 2024,
+          "label": "Reported inaugural edition",
+          "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/"
+        },
+        {
+          "year": 2026,
+          "label": "Announced second edition",
+          "url": "https://jaylit.com/abuja-international-poetry-festival-returns-for-2nd-edition-in-october/"
+        }
+      ],
+      "links": [
+        {
+          "title": "2024 festival report",
+          "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/"
+        },
+        {
+          "title": "2026 announcement",
+          "url": "https://jaylit.com/abuja-international-poetry-festival-returns-for-2nd-edition-in-october/"
+        }
+      ],
+      "gaps": "Older notices projected different timing; use the latest dated announcement without treating the future event as completed."
+    },
+    "c4": {
+      "searchAliases": [
+        "LIPFest",
+        "Lagos International Poetry Festival",
+        "LIPFEST"
+      ],
+      "format": "Festival / showcase"
+    },
+    "jamesconco": {
+      "name": "James Ademuyiwa (James Conco)",
+      "searchAliases": [
+        "Jamesconco",
+        "James Conco"
+      ],
+      "city": "Ogbomoso / Abeokuta",
+      "summary": "Poet named in the 2015 Words on Rampage announcement, who recalls organising Empowered by Words at MAPOLY in a Speaking Pen interview.",
+      "links": [
+        {
+          "title": "Speaking Pen interview",
+          "url": "https://speakingp.blogspot.com/"
+        }
+      ]
+    },
+    "wow": {
+      "name": "War of Words",
+      "searchAliases": [
+        "War of Words / WORDUP"
+      ],
+      "category": "Prizes",
+      "format": "Spoken-word competition"
+    },
+    "c27": {
+      "category": "Prizes",
+      "city": "Lagos / Online / Nigeria",
+      "format": "Spoken-word competition",
+      "summary": "Brand-backed spoken-word competition. A 2022 report names David Odiase as winner, three other judges alongside Olumide Holloway, and Pop Central Studios as final venue.",
+      "status": "2022 published results reviewed; 2020 call preserved separately",
+      "history": "An earlier 2020 This Is Not A Full Stop call is also preserved. Its rules and prizes are not applied to the 2022 result report.",
+      "years": [
+        {
+          "year": 2020,
+          "label": "Earlier competition call",
+          "url": "https://www.promosinnigeria.com/join-the-lacasera-this-is-not-a-full-stop-spoken-word-competition-and-win-prizes/"
+        },
+        {
+          "year": 2022,
+          "label": "Published result report",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        }
+      ],
+      "links": [
+        {
+          "title": "2022 La Casera result report",
+          "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/"
+        },
+        {
+          "title": "2020 competition call",
+          "url": "https://www.promosinnigeria.com/join-the-lacasera-this-is-not-a-full-stop-spoken-word-competition-and-win-prizes/"
+        }
+      ],
+      "gaps": "Exact 2022 final date, recurrence and current entry status remain unverified.",
+      "searchAliases": [
+        "Lacasera",
+        "La Casera Spoken Word Competition",
+        "La Casera Spoken War"
+      ]
+    },
+    "eko-slam": {
+      "name": "Eko Poetry Slam",
+      "searchAliases": [
+        "Eko Literary Society Poetry Slam"
+      ],
+      "summary": "A Lagos poetry slam whose 22 November 2014 edition was reported to have been won by Kemi Bakare; Elizabeth Adeola Ayoola and Increase were runners-up.",
+      "status": "Contemporary result report reviewed",
+      "evidenceDate": "22 November 2014 — reported event date",
+      "years": [
+        {
+          "year": 2014,
+          "label": "Reported slam result",
+          "url": "https://articles.connectnigeria.com/winners-emerge-from-the-eko-literary-society-poetry-slam/"
+        }
+      ],
+      "gaps": "Later editions and any changes of organiser require separate evidence. Exact venue not established."
+    },
+    "graciano": {
+      "city": "Lagos / Lafia",
+      "status": "Source-attributed profiles; 2018 pilot appearance was scheduled, not confirmed attendance",
+      "summary": "Poet and poetry educator associated with Figures of Speech Movement. Sources describe both founder and co-founder roles; his 2022 TEDx biography identifies a WhatsApp teaching platform.",
+      "years": [
+        {
+          "year": 2015,
+          "label": "Contemporary profile",
+          "url": "https://bnmagazineng.wordpress.com/2015/11/13/bn-blogs-2015-top-ten-young-nigerian-poets-to-watch/"
+        },
+        {
+          "year": 2022,
+          "label": "TEDx speaker biography",
+          "url": "https://tedxportharcourt.com/talks/9fe41d26-49a1-4012-adbe-e1da6ccb901c"
+        }
+      ],
+      "searchAliases": [
+        "Gracianno",
+        "Sir Grrraciano",
+        "Grrraciano"
+      ],
+      "links": [
+        {
+          "title": "TEDx speaker biography",
+          "url": "https://tedxportharcourt.com/talks/9fe41d26-49a1-4012-adbe-e1da6ccb901c"
+        },
+        {
+          "title": "2015 poet profile",
+          "url": "https://bnmagazineng.wordpress.com/2015/11/13/bn-blogs-2015-top-ten-young-nigerian-poets-to-watch/"
+        }
+      ]
+    },
+    "kukogho": {
+      "name": "Kukogho Iruesiri Samson",
+      "summary": "Poet and founder of Words Rhymes & Rhythm according to the organisation’s published history. The earlier pilot also lists him in the 2015 Words on Rampage announcement.",
+      "links": [
+        {
+          "title": "WRR organiser history",
+          "url": "https://www.wrr.ng/about-us/"
+        }
+      ]
+    },
+    "bb": {
+      "searchAliases": [
+        "Be Blessed poetry and sundry talent event",
+        "Be Blessed all and sundry talent event"
+      ],
+      "summary": "An Ibadan poetry and sundry talent event. Be Blessed 6 was advertised for 26 April 2014 at the University of Ibadan Zoological Garden, with Enigmatic Olumide as host.",
+      "years": [
+        {
+          "year": 2014,
+          "label": "Be Blessed 6 announced",
+          "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/"
+        }
+      ],
+      "links": [
+        {
+          "title": "Contemporary Be Blessed 6 announcement",
+          "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/"
+        }
+      ]
+    },
+    "omm": {
+      "media": [
+        {
+          "url": "https://vicadex.com/wp-content/uploads/2026/09/codex-clipboard-13a7fd7d-d974-4b0d-a3f6-33f034c3f85b.png",
+          "caption": "Open Mic Maiduguri · original 2021 flyer",
+          "credit": "60 Seconds Poetry / Vic’Adex archive",
+          "sourceURL": "https://vicadex.com/portfolio/open-mic-maiduguri/",
+          "rights": "User-owned project archive; reuse requested in this project"
+        }
+      ]
+    },
+    "vicadex": {
+      "media": [
+        {
+          "url": "https://vicadex.com/wp-content/uploads/2026/09/IMG-20211105-WA0013_3affe1a2.jpg",
+          "caption": "Vic’Adex at Love Garden, 2021",
+          "credit": "60 Seconds Poetry / Vic’Adex archive",
+          "sourceURL": "https://vicadex.com/portfolio/open-mic-maiduguri/",
+          "rights": "User-owned project archive; reuse requested in this project"
+        }
+      ]
+    }
+  },
+  "relationships": [
+    {
+      "a": "oracle",
+      "b": "wordtour",
+      "label": "organiser associated in retrospective",
+      "url": "https://primetimenews.ng/open-mic-maiduguri-how-vicadex-connected-creatives-in-nigerias-northeast-2/",
+      "date": 2025,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "vicadex",
+      "b": "wordtour",
+      "label": "participation recalled",
+      "url": "https://primetimenews.ng/open-mic-maiduguri-how-vicadex-connected-creatives-in-nigerias-northeast-2/",
+      "date": 2025,
+      "status": "2025 retrospective; tour dates not established"
+    },
+    {
+      "a": "wordtour",
+      "b": "omm",
+      "label": "inspiration recalled by open-mic organiser",
+      "url": "https://primetimenews.ng/open-mic-maiduguri-how-vicadex-connected-creatives-in-nigerias-northeast-2/",
+      "date": 2025,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "kukogho",
+      "b": "wrr",
+      "label": "founder in organiser history",
+      "url": "https://www.wrr.ng/about-us/",
+      "date": 2012,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "artmosphere",
+      "b": "writehouse",
+      "label": "curated by",
+      "url": "https://tainsville.wordpress.com/2013/10/16/artmosphere-the-open-mic-with-the-bards/",
+      "date": 2013,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "artmosphere",
+      "b": "nustreams",
+      "label": "announced venue",
+      "url": "https://tainsville.wordpress.com/2013/10/16/artmosphere-the-open-mic-with-the-bards/",
+      "date": 2013,
+      "status": "Contemporary announcement; exact edition date conflicts"
+    },
+    {
+      "a": "servio",
+      "b": "artmosphere",
+      "label": "organiser named",
+      "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/",
+      "date": 2014,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "servio",
+      "b": "bb",
+      "label": "announced guest",
+      "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/",
+      "date": 2014,
+      "status": "Announced; attendance not established"
+    },
+    {
+      "a": "graciano",
+      "b": "fos",
+      "label": "founder / co-founder in source biographies",
+      "url": "https://tedxportharcourt.com/talks/9fe41d26-49a1-4012-adbe-e1da6ccb901c",
+      "date": 2022,
+      "status": "2015 co-founder wording; 2022 founder wording"
+    },
+    {
+      "a": "aj-tolar",
+      "b": "freedom-spoke",
+      "label": "platform affiliation named",
+      "url": "https://communicatorsleague.wordpress.com/2016/10/17/nigerian-writers-awards-2017/",
+      "date": 2016,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "bb",
+      "b": "ui-zoo",
+      "label": "announced venue",
+      "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/",
+      "date": 2014,
+      "status": "Advertised Be Blessed 6 venue; attendance not established"
+    },
+    {
+      "a": "olulu",
+      "b": "bb",
+      "label": "announced guest",
+      "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/",
+      "date": 2014,
+      "status": "Announced; attendance not established"
+    },
+    {
+      "a": "agarau",
+      "b": "bb",
+      "label": "announced guest",
+      "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/",
+      "date": 2014,
+      "status": "Announced; attendance not established"
+    },
+    {
+      "a": "vicadex",
+      "b": "bb",
+      "label": "announced guest",
+      "url": "https://whatsupibadan.wordpress.com/2014/04/23/poets-to-rock-ibadan-at-be-blessed-6/",
+      "date": 2014,
+      "status": "Announced; attendance not established"
+    },
+    {
+      "a": "eko-slam",
+      "b": "eko-literary",
+      "label": "organiser named in result report",
+      "url": "https://articles.connectnigeria.com/winners-emerge-from-the-eko-literary-society-poetry-slam/",
+      "date": 2014,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "kemi-bakare",
+      "b": "eko-slam",
+      "label": "first-place winner reported",
+      "url": "https://articles.connectnigeria.com/winners-emerge-from-the-eko-literary-society-poetry-slam/",
+      "date": 2014,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "omm",
+      "b": "ui-love-garden",
+      "label": "documented venue",
+      "url": "https://vicadex.com/portfolio/open-mic-maiduguri/",
+      "date": 2021,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "olulu",
+      "b": "wordup",
+      "label": "organiser retrospective",
+      "url": "https://www.linkedin.com/pulse/why-do-we-what-olumide-holloway-king-olulu-",
+      "date": 2012,
+      "status": "Retrospective date claim"
+    },
+    {
+      "a": "wordup",
+      "b": "wow",
+      "label": "related showcase and slam",
+      "url": "https://www.linkedin.com/pulse/why-do-we-what-olumide-holloway-king-olulu-",
+      "date": 2013,
+      "status": "Organiser retrospective; distinct experiences"
+    },
+    {
+      "a": "graciano",
+      "b": "youpoetry-slam",
+      "label": "winner named in profile",
+      "url": "https://bnmagazineng.wordpress.com/2015/11/13/bn-blogs-2015-top-ten-young-nigerian-poets-to-watch/",
+      "date": 2015,
+      "status": "2015 profile; edition date unverified"
+    },
+    {
+      "a": "78th-psalmist",
+      "b": "c27",
+      "label": "overall winner reported",
+      "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/",
+      "date": 2022,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "loveth-liberty",
+      "b": "c27",
+      "label": "first runner-up reported",
+      "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/",
+      "date": 2022,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "divine-titus",
+      "b": "c27",
+      "label": "second runner-up reported",
+      "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/",
+      "date": 2022,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "maryam-bukar",
+      "b": "c27",
+      "label": "judge reported",
+      "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/",
+      "date": 2022,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "olulu",
+      "b": "c27",
+      "label": "judge reported",
+      "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/",
+      "date": 2022,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "efe",
+      "b": "c27",
+      "label": "judge reported",
+      "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/",
+      "date": 2022,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "obii",
+      "b": "c27",
+      "label": "judge reported",
+      "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/",
+      "date": 2022,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "c27",
+      "b": "la-casera-company",
+      "label": "organiser named",
+      "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/",
+      "date": 2022,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "c27",
+      "b": "popcentral-studios",
+      "label": "final venue reported",
+      "url": "https://www.thisdaylive.com/2022/08/06/la-casera-rewards-winners-of-spoken-word-challenge/",
+      "date": 2022,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "elu-emina",
+      "b": "echowords",
+      "label": "founder reported",
+      "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/",
+      "date": 2025,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "echowords",
+      "b": "echowords-contest",
+      "label": "organising platform",
+      "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/",
+      "date": 2025,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "iyenemi-ogbole",
+      "b": "echowords-contest",
+      "label": "winner reported",
+      "url": "https://thenationonlineng.net/echowords-makes-debut-empowers-youth/",
+      "date": 2025,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "jamesconco",
+      "b": "empowered-by-words",
+      "label": "organising recalled",
+      "url": "https://speakingp.blogspot.com/",
+      "date": 2015,
+      "status": "Speaker recollection; exact event date unverified"
+    },
+    {
+      "a": "empowered-by-words",
+      "b": "mapoly",
+      "label": "event setting recalled",
+      "url": "https://speakingp.blogspot.com/",
+      "date": 2015,
+      "status": "Speaker recollection; exact event date unverified"
+    },
+    {
+      "a": "c11",
+      "b": "nasara-creative",
+      "label": "curatorial organisation reported",
+      "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/",
+      "date": 2024,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "c11",
+      "b": "als",
+      "label": "curatorial partnership announced",
+      "url": "https://jaylit.com/abuja-international-poetry-festival-returns-for-2nd-edition-in-october/",
+      "date": 2026,
+      "status": "Future festival announcement; occurrence not confirmed"
+    },
+    {
+      "a": "c11",
+      "b": "aip-grand-slam",
+      "label": "festival closing slam reported",
+      "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/",
+      "date": 2024,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "pacella",
+      "b": "aip-grand-slam",
+      "label": "winner reported",
+      "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/",
+      "date": 2024,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "efe",
+      "b": "aip-grand-slam",
+      "label": "prize named after",
+      "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/",
+      "date": 2024,
+      "status": "Namesake relationship; not a claim of judging"
+    },
+    {
+      "a": "loveth-liberty",
+      "b": "aip-grand-slam",
+      "label": "judge reported",
+      "url": "https://artsloungenyc.com/2024/11/27/rundown-of-the-abuja-international-poetry-festival24/",
+      "date": 2024,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "c4",
+      "b": "lip-grand-slam",
+      "label": "festival competition",
+      "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/",
+      "date": 2024,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "grey-martyr",
+      "b": "lip-grand-slam",
+      "label": "winner reported",
+      "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/",
+      "date": 2024,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "pacella",
+      "b": "lip-grand-slam",
+      "label": "first runner-up reported",
+      "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/",
+      "date": 2024,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "loveth-liberty",
+      "b": "lip-grand-slam",
+      "label": "second runner-up reported",
+      "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/",
+      "date": 2024,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "lip-grand-slam",
+      "b": "alliance-lagos",
+      "label": "venue in result report",
+      "url": "https://artsloungenyc.com/2024/11/07/grey-martry-wins-the-lipfest-poetry-grand-slam-2024/",
+      "date": 2024,
+      "status": "Source-attributed historical relationship"
+    },
+    {
+      "a": "lamikanra",
+      "b": "lamikanra-house-party",
+      "label": "annual gathering host in author account",
+      "url": "https://thenewsnigeria.com.ng/2016/01/21/adebayo-lamikanra-my-ikere-ekiti-adventure/",
+      "date": 2016,
+      "status": "Indexed firsthand account; exact edition title unverified"
+    }
+  ]
+}

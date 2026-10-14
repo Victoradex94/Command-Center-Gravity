@@ -1,0 +1,109 @@
+{
+  "run": "RUN-20261014-0607-NORTHEAST",
+  "queries": [
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Taraba\" \"poetry\" \"festival\" Jalingo",
+      "yield": "Minna-based HIASFEST school associations, MPS Bauchi stages, Taraba filmfestival lead; no relocation of events to Taraba."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Jalingo\" \"spoken word\" poetry event",
+      "yield": "Luma announced YouthHangout; personal writing/publication leads deferred."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Yola\" \"poetry\" \"open mic\"",
+      "yield": "AUN2020completed festival; unrelated singer Yola rejected."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Adamawa\" \"poetry\" event festival",
+      "yield": "AUN first-party report; announcements/undatedschool mirrors deferred."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Adamawa Arts Festival\" \"2020\" poetry",
+      "yield": "AUN occurrence/14–16February report; no independent family recovered."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Adamawa Arts\" \"February 14\" \"2020\"",
+      "yield": "Same AUN report; no further source."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Taraba\" \"poetry\" \"Jalingo Youth Hangout\" held",
+      "yield": "No qualifying completion evidence."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Yola\" \"Arts Festival\" \"AUN\" venue 2020",
+      "yield": "University context, no exact venue room established."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Adamawa Arts Festival\" \"2020\" Yola poetry",
+      "yield": "Same AUN report, not independent corroboration."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Jalingo Youth Hangout 2025\" completed poetry",
+      "yield": "Luma advance notice and CCPC2024Facebookannouncement; no completion."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.aun.edu.ng/index.php/news-events/news/aun-sga-yola-group-hold-arts-festival-for-charity",
+      "access": "Direct full relevant article read",
+      "published": "2020-02-19",
+      "family": "AUN communications first-party report byGraceTogorPassa",
+      "claims": [
+        "Festival held14–16February2020",
+        "Spokenword/poetry included",
+        "AUNSGA+AdamawaArts collaborated",
+        "TaslimLadoja SGA president in account",
+        "OgungbebiTimiletin oneorganiser"
+      ],
+      "confidence": "First-party occurrence supported; no independent corroboration",
+      "gaps": "Exact room/venue, namedpoetryperformers, recurrence/currentoffice unknown"
+    },
+    {
+      "url": "https://luma.com/m27m81gw",
+      "access": "Indexed advance text",
+      "status": "Announced; completionunverified"
+    },
+    {
+      "url": "https://www.facebook.com/groups/203564125959397/posts/507281738920966/",
+      "access": "Snippet only",
+      "status": "26Oct2024Jalingo planned; no completion"
+    },
+    {
+      "url": "https://www.hiasfest.com.ng/editions/2022",
+      "access": "Indexed primarylead",
+      "status": "Minna event; Jalingoschool participationnotTarabaevent"
+    },
+    {
+      "url": "https://www.mps.ng/updates",
+      "access": "Indexed organiserlead",
+      "status": "Bauchi stage; stateparticipationnotlocalTaraba/Adamawa occurrence"
+    }
+  ],
+  "typedConnections": "4explicit source-stated roles plus5 sourced cityassociations; no residence/HQ/currentrole inference",
+  "counts": {
+    "entries": 438,
+    "connections": 652,
+    "publications": 25
+  },
+  "unresolved": "Taraba this pass: no qualifying completed localevent imported; not a claim that noneoccurred."
+}

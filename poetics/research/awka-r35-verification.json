@@ -1,0 +1,43 @@
+{
+  "version": {
+    "id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_198d8a3c3b2c819183f0963dc0326130",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "version_number": 35,
+    "source": {
+      "commit_sha": "3f429a8579e52ad8e161543cf832874a5830e62b"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_0000000038b48230a10fd496ec94a809",
+      "content_hash": "sha256:52479d9c718e4e48544d4b4240577b14e958678e10eabec82d2aad13fc66e87c",
+      "size_bytes": 6727680,
+      "file_count": 73
+    },
+    "screenshot_url": null,
+    "deployment_id": "appgdep_6acef228c96081919e4fad9c48788381"
+  },
+  "deployment": {
+    "id": "appgdep_6acef228c96081919e4fad9c48788381",
+    "project_id": "appgprj_6acce9493e8c81919635a9e7438b820c",
+    "title": "Poetics — Vic’Adex Prototype",
+    "version_id": "appgprj_6acce9493e8c81919635a9e7438b820c~appgver_198d8a3c3b2c819183f0963dc0326130",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://poetics-vicadex-lab.vicadexconcepts.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acce9493e8c81919635a9e7438b820c",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-14T03:08:33.310764+00:00"
+  },
+  "counts": {
+    "entries": 433,
+    "connections": 643,
+    "publications": 25,
+    "Anambra": 16
+  },
+  "ledger": "Full candidate matched; append only",
+  "visual": "Unverified browser/mobile/overflow",
+  "wordpress": "Untouched"
+}

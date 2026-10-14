@@ -1,0 +1,617 @@
+{
+  "checked": "2026-10-12",
+  "scope": "First broad web-discovery sweep. Metadata only. Discovery does not establish historical accuracy. Some primary websites contain errors or are unavailable.",
+  "sources": [
+    {
+      "title": "Contact | Ladoke Akintola University of Technology (LAUTECH)",
+      "url": "https://lautech.edu.ng/de/node/115",
+      "reference": "turn10view0",
+      "status": "opened \u2014 requires claim review",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Open Mic Ogbomoso | Poetry & Creative Community",
+      "url": "https://vicadex.com/portfolio/open-mic-ogbomoso/",
+      "reference": "turn10view1",
+      "status": "opened \u2014 requires claim review",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Update on Cross Country Celebration of Poetry \u2013 Kabura Zakama Randomised",
+      "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "reference": "turn10view2",
+      "status": "opened \u2014 requires claim review",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Negotiating\u00a0Spoken Word Poetry in Nigeria: An Interview with Titilope Sonuga, Efe Paul Azino, and Wana Udobang",
+      "url": "https://brittlepaper.com/2020/09/negotiating-spoken-word-poetry-in-nigeria-an-interview-with-titilope-sonuga-efe-paul-azino-and-wana-udobang/",
+      "reference": "turn10view3",
+      "status": "opened \u2014 requires claim review",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "The 2023 Here and Now Writers Residency Recipients \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/the-2023-here-and-now-writers-residency-recipients/",
+      "reference": "turn11search0",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "OCT 31ST - NOV 4TH",
+      "url": "https://lagospoetryfestival.com/wp-content/uploads/2018/10/lipfest2018-0nline-program.pdf",
+      "reference": "turn11search24",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Festival Archive \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/festival-archive/",
+      "reference": "turn11search1",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "LIPFest Partners Moniack Mhor for International Writers Residency \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/lipfest-partners-with-moniack-mhor-for-international-writers-residency/",
+      "reference": "turn11search2",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "ABOUT \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/about/",
+      "reference": "turn11search3",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Home \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/",
+      "reference": "turn11search4",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Blog Archives \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/category/blog/",
+      "reference": "turn11search5",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "SIGN UP FOR UPDATES \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/sign-up-for-updates/",
+      "reference": "turn11search6",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "\u2018Poetry is a sacred calling\u2019 \u2013 78th Psalmist | PIN Literary Interviews \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/poetry-is-a-sacred-calling-78th-psalmist-pin-literary-interviews/",
+      "reference": "turn11search7",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Lagos International Poetry Festival Archives \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/tag/lagos-international-poetry-festival/",
+      "reference": "turn11search8",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Events Archives \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/tag/events/",
+      "reference": "turn11search9",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "LIPFest 2024 \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL The Science of Things",
+      "url": "https://lagospoetryfestival.com/lipfest-2024/",
+      "reference": "turn11search10",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Applications Are Open for the LIPFest Craft and Development Lab \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/applications-are-open-for-the-lipfest-craft-and-development-lab/",
+      "reference": "turn11search11",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Participate \u00bb LAGOSINTERNATIONALPOETRYFESTIVAL",
+      "url": "https://lagospoetryfestival.com/participate/",
+      "reference": "turn11search12",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "FR33ZINPAUL EMERGES WINNER OF 2ND EDITION OF ARTHUB REPORT WRITING CONTEST \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/fr33zinpaul-emerges-winner-of-2nd-edition-of-arthub-report-writing-contest/",
+      "reference": "turn11search13",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "PAGING",
+      "url": "https://lagospoetryfestival.com/wp-content/uploads/2015/08/program2016.pdf",
+      "reference": "turn11search25",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "\u2018Poetry is a bond across barriers\u2019 \u2013 Brigitte Poirson | PIN Literary Interviews \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/poetry-is-a-bond-across-barriers-brigitte-poirson-pin-literary-interviews/",
+      "reference": "turn11search14",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "profiles-lpf.cdr",
+      "url": "https://lagospoetryfestival.com/wp-content/uploads/2022/07/profiles-lpf.pdf",
+      "reference": "turn11search26",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "FESTIVAL POETRY CALABAR 2017 \u2013 DRUMS OF POETRY: ECHOES & PROSPECTS \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/festival-poetry-calabar-2017-drums-of-poetry-echoes-prospects/",
+      "reference": "turn11search15",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "FPC 2021 KEYNOTE SPEECH: Poets, Poetry and the Pandemic | Elizabeth Ita \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/fpc-2021-keynote-speech-poets-poetry-and-the-pandemic-elizabeth-ita/",
+      "reference": "turn11search16",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "KEN EGBAS PRIZE FOR FESTIVAL POETRY (CALABAR 2017) \u2013 THE PRIZE WINNERS \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/ken-egbas-prize-for-festival-poetry-calabar-2017-the-prize-winners/",
+      "reference": "turn11search17",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Poetry Festival \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/tag/poetry-festival/",
+      "reference": "turn11search18",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "FESTIVAL POETRY COMPETITION: CALL FOR ENTRIES \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/festival-poetry-competition-call-for-entries/",
+      "reference": "turn11search19",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "LONGLISTED ENTRIES: NIGERIAN STUDENTS POETRY PRIZE (NSPP) 2022 \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/longlisted-entries-nigerian-students-poetry-prize-nspp-2022/",
+      "reference": "turn11search20",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "\u2018Nigerian poets are taking up elite spaces\u2019 \u2013 Abdulbaseet Yusuff | PIN Literary Interviews \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/nigerian-poets-are-taking-up-elite-spaces-abdulbaseet-yusuff-pin-literary-interviews/",
+      "reference": "turn11search21",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "PIN Literary Interviews \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/category/pin-literary-interviews/",
+      "reference": "turn11search22",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "PIN UNVEILS NEW CONNECT CENTRES \u2013 Poets in Nigeria",
+      "url": "https://poetsinnigeria.org.ng/index.php/pin-unveils-new-connect-centres/",
+      "reference": "turn11search23",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "www.google.com",
+      "url": "https://www.google.com/maps/search/Ogbomosho%2BNigeria",
+      "reference": "turn13view2",
+      "status": "opened \u2014 requires claim review",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Abuja Literary & Arts Festival \u2013 An Abuja Literary Soceity Powered Initiative",
+      "url": "https://alitfest.ng/",
+      "reference": "turn14search0",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "home - PH Poetry Festival",
+      "url": "https://phpoetryfestival.com/",
+      "reference": "turn14search1",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Abuja Literary + Arts Festival (ALitFest) | LinkedIn",
+      "url": "https://www.linkedin.com/company/abuja-literary-arts-festival-alitfest",
+      "reference": "turn14search2",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Port Harcourt Poetry Festival",
+      "url": "https://en.wikipedia.org/wiki/Port_Harcourt_Poetry_Festival",
+      "reference": "turn14search48",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Abuja Literary + Arts Festival (ALitFest) | LinkedIn",
+      "url": "https://ad.linkedin.com/company/abuja-literary-arts-festival-alitfest",
+      "reference": "turn14search3",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Tickets \u2013 Book Buzz Foundation",
+      "url": "https://bookbuzzfoundation.org/festivals/abuja-festival-of-literature-and-ideas-tickets/",
+      "reference": "turn14search4",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "INAUGURAL ABUJA INTERNATIONAL POETRY FESTIVAL",
+      "url": "https://www.ananigeria.org/news/inaugural-abuja-international-poetry-festival",
+      "reference": "turn14search5",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Abuja International Poetry Festival Returns for 2nd Edition in October - JAY Lit",
+      "url": "https://jaylit.com/abuja-international-poetry-festival-returns-for-2nd-edition-in-october/",
+      "reference": "turn14search6",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "ENUGU HOSTS ITS FIRST POETRY SLAM - Radio Nigeria South East Zonal Station",
+      "url": "https://radionigeriaenugu.gov.ng/2018/02/enugu-hosts-its-first-poetry-slam/",
+      "reference": "turn14search8",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Abuja International Poetry Festival AIPFest - Abuja International Poetry Festival | LinkedIn",
+      "url": "https://ng.linkedin.com/in/abuja-international-poetry-festival-aipfest-5791b4325",
+      "reference": "turn14search10",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Kano International Poetry Festival @Kanopoetryfest - Twitter Profile | Sotwe",
+      "url": "https://www.sotwe.com/Kanopoetryfest",
+      "reference": "turn14search11",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "PRESS RELEASE: POETIC WEDNESDAYS INITIATIVE TURNS 10, UNVEILS \"RECLAIMING LANGUAGES\" AS THE THEME FOR KAPFEST 3.0 AT EID POP-UP - The Nation Voice",
+      "url": "https://thenationsvoice.com.ng/2026/06/11/press-release-poetic-wednesdays-initiative-turns-10-unveils-reclaiming-languages-as-the-theme-for-kapfest-3-0-at-eid-pop-up/",
+      "reference": "turn14search12",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Poetic Wednesdays Initiative @poeticwednexday - Twitter Profil | Sotwe",
+      "url": "https://www.sotwe.com/poeticwednexday?lang=id",
+      "reference": "turn14search13",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Kano International Poetry Festival @kanopoetryfest - Twitter Profile | Sotwe",
+      "url": "https://www.sotwe.com/kanopoetryfest",
+      "reference": "turn14search14",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Poetic Wednesdays Initiative @Poeticwednexday - Twitter Profile | Sotwe",
+      "url": "https://www.sotwe.com/Poeticwednexday?lang=en",
+      "reference": "turn14search15",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Kano International Poetry Festival @Kanopoetryfest - Twitter Profile | Sotwe",
+      "url": "https://www.sotwe.com/Kanopoetryfest?lang=en",
+      "reference": "turn14search16",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Poetic Wednesdays Initiative @poeticwednexday - Twitter Profile | Sotwe",
+      "url": "https://www.sotwe.com/poeticwednexday",
+      "reference": "turn14search18",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Port Harcourt Poetry Festival 2025 \u2013 APVA",
+      "url": "https://apva.africa/events/port-harcourt-poetry-festival-2025/",
+      "reference": "turn14search19",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "African poetry on stage, on screen and on the page \u2014 Orange Poetry Africa",
+      "url": "https://orangepoetry.africa/",
+      "reference": "turn14search20",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Day 9: Today members of the Abuja Literary + Arts Festival (ALitFest) planning team met for a dinner and Award night. We were presented the awards by a member of the Board of Trustees of the Abuja\u2026 | Aisha Kabiru Mohammed",
+      "url": "https://www.linkedin.com/posts/aisha-kabiru-mohammed-255ba6137_day-9-today-members-of-the-abuja-literary-activity-7139356449725485056-68BB",
+      "reference": "turn14search21",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Selected work and public archive \u2014 Orange Poetry Africa",
+      "url": "https://orangepoetry.africa/archive",
+      "reference": "turn14search22",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Poetic Wednesdays Initiative @Poeticwednexday - Twitter Profil | Sotwe",
+      "url": "https://www.sotwe.com/Poeticwednexday?lang=id",
+      "reference": "turn14search24",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "SLANG Global's Academy for Poets \u2014 SLANG Global",
+      "url": "https://www.slangglobal.org/events/slang-global-academy-of-poets",
+      "reference": "turn14search25",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "2023 Port Harcourt Poetry Festival - Alliance Francaise de Port Harcourt",
+      "url": "https://af-nigeria.org/culture-at-alliance-francaise/2023-port-harcourt-poetry-festival/",
+      "reference": "turn14search28",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "ABUJA LITERARY FESTIVAL 2020 POETRY GRAND SLAM COMPETITION",
+      "url": "https://thatgreentea.com/wp-content/uploads/2020/07/alitfest20-grand-slam-guidelines-1.pdf",
+      "reference": "turn14search49",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Rousing reception for Port Harcourt Poetry Festival 2024",
+      "url": "https://www.premiumtimesng.com/entertainment/artsbooks/763084-rousing-reception-for-port-harcourt-poetry-festival-2024.html",
+      "reference": "turn14search30",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "World Poetry Day: Divine Onyekwena Wins 2025 Enugu Literary Society Poetry Competition - ESUT Monitor",
+      "url": "https://esutmonitor.com/2025/03/29/world-poetry-day-divine-onyekwena-wins-2025-enugu-literary-society-poetry-competition/",
+      "reference": "turn14search31",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Port Harcourt Poetry Festival returns for third edition - Peoples Daily Newspaper",
+      "url": "https://peoplesdaily.ng/port-harcourt-poetry-festival-returns-for-third-edition/",
+      "reference": "turn14search32",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "More Life Poetry announces the Port Harcourt Poetry Festival in November, 2023: Paving the Way",
+      "url": "https://soundartonthespot.substack.com/p/more-life-poetry-announces-the-port",
+      "reference": "turn14search33",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "SLANG Global",
+      "url": "https://www.slangglobal.org/events",
+      "reference": "turn14search34",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Port Harcourt Poetry Festival Debuts and Celebrates Triumph of Literary Talent - Konya Shamsrumi",
+      "url": "https://shamsrumi.org/phpoetryfest2023/",
+      "reference": "turn14search35",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Port Harcourt Poetry Festival To Hold November",
+      "url": "https://leadership.ng/port-harcourt-poetry-festival-to-hold-november/",
+      "reference": "turn14search36",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Join Spoken Word Challenge at TechUp Port Harcourt Season 5 | Harvoxx Tech Hub posted on the topic | LinkedIn",
+      "url": "https://www.linkedin.com/posts/harvoxx-tech-hub_techupphspokenwordchallenge-techupportharcourt-activity-7300849149120253952-y4_e",
+      "reference": "turn14search37",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Poets in Nigeria (PiN) Initiative set to Hold Cross Country Poetry Celebration - News Wings",
+      "url": "https://newswings.com.ng/poets-in-nigeria-pin-initiative-set-to-hold-cross-country-poetry-celebration/",
+      "reference": "turn14search39",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "About - Naija Poetry Fest",
+      "url": "https://naijapoetryfest.com.ng/about/",
+      "reference": "turn14search40",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Poets in Nigeria to hold cross country celebration of poetry \u2013 Business Hallmark",
+      "url": "https://hallmarknews.com/poets-in-nigeria-to-hold-cross-country-celebration-of-poetry/?amp=1",
+      "reference": "turn14search41",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Dike Chukwumerije \u2014 THE GREEN INSTITUTE",
+      "url": "https://greeninstitute.ng/dike-chukwumerije",
+      "reference": "turn14search42",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Youdee wins the 2023 ElitfestSlam Poetry contest - OtownGist Media",
+      "url": "https://www.otowngist.com/2023/12/youdee-wins-the-2023-elitfestslam-poetry-contest/",
+      "reference": "turn14search46",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Copyright \u00a9Abuja Literary Society and the individual contributors whose works appear",
+      "url": "https://alitfest.ng/wp-content/uploads/2025/02/BLOWS-TO-THE-PLAGUE-July-FINAL-2024-Electronic.pdf",
+      "reference": "turn14search53",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "May | 2015 | TONY TOKUNBO ETEKA FERNANDEZ | Page 2",
+      "url": "https://myfernandez.com/2015/05/page/2/",
+      "reference": "turn15view0",
+      "status": "opened \u2014 requires claim review",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Dike Chukwumerije - International Literature Showcase",
+      "url": "https://litshowcase.org/participant/dike-chukwumerije/",
+      "reference": "turn15view3",
+      "status": "opened \u2014 requires claim review",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "KAPFEST 2024: A Transformative Journey at Kano\u2019s Premier Poetry Festival - Myschoolnews",
+      "url": "https://myschoolnews.ng/kapfest-2024-a-transformative-journey-at-kanos-premier-poetry-festival",
+      "reference": "turn18search0",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "What it takes to Curate Northern Nigeria\u2019s First poetry Festival.",
+      "url": "https://esesinsight.substack.com/p/what-it-takes-to-curate-northern",
+      "reference": "turn18search1",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "A Report on the Maiden Edition of Kano International Poetry Festival (KAPFEST) - JAY Lit",
+      "url": "https://jaylit.com/a-report-of-maiden-edition-of-kano-international-poetry-festival-kapfest/",
+      "reference": "turn18search3",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Kano's first international poetry festival celebrates Hausa heritage - Prime Progress NG",
+      "url": "https://primeprogressng.com/spotlight/kanos-first-international-poetry-festival-celebrates-hausa-heritage/",
+      "reference": "turn18search4",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Kano Poetry Festival Scheduled To Hold In July - Boldscholar News",
+      "url": "https://boldscholarnews.com/kano-poetry-festival-scheduled-to-hold-in-july",
+      "reference": "turn18search6",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Kano International Poetry Festival: A Celebration of Literature and Culture",
+      "url": "https://brittlepaper.com/2024/08/kano-international-poetry-festival-a-celebration-of-hausa-heritage-and-literary-talent/",
+      "reference": "turn18search7",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Poetic Wednesdays - Poetic Wednesdays Initiative | LinkedIn",
+      "url": "https://ng.linkedin.com/in/poetic-wednesdays-776592338",
+      "reference": "turn18search8",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "[Featured Post] Celebrating African Literary Festivals: A Compendium of Post-2020 Debuts - JAY Lit",
+      "url": "https://jaylit.com/african-literary-festivals/",
+      "reference": "turn18search9",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "How a Random Hashtag Birthed Kano International Poetry Festival || Culture Custodian",
+      "url": "https://culturecustodian.com/how-a-random-hashtag-birthed-kano-international-poetry-festival/",
+      "reference": "turn18search10",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "My Opening Remarks at the Kano International Poetry Festival, 2024. | by Salim Yunusa | Medium",
+      "url": "https://medium.com/%40syunusa/good-morning-writers-and-poets-lovers-and-friends-esteemed-guests-0ef1c2ccab34",
+      "reference": "turn18search11",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Lagos International Poetry Festival",
+      "url": "https://en.wikipedia.org/wiki/Lagos_International_Poetry_Festival",
+      "reference": "turn18search13",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Spoken Word in Nigeria: The New Voice of the Younger Generation - WanAwa",
+      "url": "https://wanawana.net/spoken-word-in-nigeria-the-new-voice-of-the-younger-generation/",
+      "reference": "turn18search12",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "INKSPIRED POETRY ANTHOLOGY",
+      "url": "https://jidebadmus.com/books/How%20To%20Fall%20In%20Love%20Again%20-%20INKSpired%20Poetry%20Anthology.pdf",
+      "reference": "turn18search14",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Program Saturday 08 06 2024",
+      "url": "https://www.poetryinternational.com/media/10/p_54_sa_program_280524_defdef.pdf",
+      "reference": "turn18search15",
+      "status": "discovery lead \u2014 not verified",
+      "checked": "2026-10-12"
+    }
+  ],
+  "rawDiscoveryCount": 117,
+  "relevantSourceCount": 87
+}

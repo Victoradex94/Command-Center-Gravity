@@ -1,0 +1,14 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+let atlas=true,callback,observed,removed=[];
+const node=(id,name,text)=>({id,getAttribute:key=>key==='aria-label'?name:null,textContent:text,remove(){removed.push(this);}});
+const legacy=node('map-zoom-in','Zoom in','+'),labelOnly=node('other-shell-control','Zoom out','−'),textOnly=node('another-component',null,'Show all Nigeria');
+const country=node('city-all',null,'All Nigeria'),state=node('state-delta','Delta: 16 directory entries','Delta'),game=node('game-zoom','Zoom in','+');
+let controls=[legacy,labelOnly,textOnly,country,state],shell={remove(){removed.push(this);}};
+const document={body:{},querySelector:()=>atlas?{}:null,querySelectorAll:s=>s==='.country-map-controls'?[shell]:controls};
+const window={addEventListener:()=>{}},MutationObserver=function(cb){callback=cb;this.observe=(target,options)=>observed=options;};
+vm.runInNewContext(fs.readFileSync('dist/atlas-ui-guard.js','utf8'),{document,window,MutationObserver});
+assert(removed.includes(legacy)&&removed.includes(labelOnly)&&removed.includes(textOnly)&&removed.includes(shell));assert(!removed.includes(country)&&!removed.includes(state));
+assert(observed.subtree&&observed.childList);
+removed=[];const inserted=node('injected-later','Zoom in','+');controls=[inserted,country];callback();assert(removed.includes(inserted));assert(!removed.includes(country));
+removed=[];atlas=false;controls=[game];callback();assert.equal(removed.length,0);
+console.log('PASS mounted Atlas removes legacy controls by ID, accessible name and text, including late injection; keeps state/All Nigeria navigation and other routes.');

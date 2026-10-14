@@ -1,0 +1,12 @@
+const fs=require('node:fs'),assert=require('node:assert/strict'),vm=require('node:vm');
+const m=JSON.parse(fs.readFileSync('research/discovery-matrix.json','utf8')),q=m.groups.flatMap(g=>g.queries);
+assert.equal(q.length,146);assert.equal(new Set(q.filter(x=>x.state).map(x=>x.state)).size,37);
+for(const state of new Set(q.filter(x=>x.state).map(x=>x.state)))assert.equal(q.filter(x=>x.state===state).length,2);
+assert.equal(new Set(q.filter(x=>x.poet).map(x=>x.poet)).size,72);
+assert(m.google.includes('blocked'));assert(m.socialBrowser.includes('no signed-in'));
+const window={PoeticsMap:{render:()=>'<svg></svg>'}};
+vm.runInNewContext(fs.readFileSync('dist/world.js','utf8'),{window});
+const world=window.PoeticsWorld('Ogbomoso');
+for(const [key,label] of [['w','W'],['a','A'],['s','S'],['d','D']])assert(world.includes('data-walk="'+key+'" aria-label=')&&world.includes('>'+label+'</button>'));
+assert(!/[↗←→↑↓›]/.test(world));
+console.log('PASS 37 state/FCT search coverage, 72 poet anthology queries, explicit access limits and nonempty arrow-free movement controls.');

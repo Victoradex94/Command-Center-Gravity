@@ -1,0 +1,182 @@
+{
+  "reviewedAt": "2026-10-13",
+  "claims": [
+    {
+      "entity": "ccpc-awka-2023",
+      "claim": "Direct official profile read: October 2023 panelist / setting supported; exact day unknown.",
+      "sourceURL": "https://profile.unizik.edu.ng/NAU4594",
+      "status": "Primary profile confirmed",
+      "confidence": "High for attributed participation"
+    },
+    {
+      "entity": "uche-nnyagu",
+      "claim": "Direct official profile read: October 2023 panelist / setting supported; exact day unknown.",
+      "sourceURL": "https://profile.unizik.edu.ng/NAU4594",
+      "status": "Primary profile confirmed",
+      "confidence": "High for attributed participation"
+    },
+    {
+      "entity": "awka-window",
+      "claim": "Direct official profile read: October 2023 panelist / setting supported; exact day unknown.",
+      "sourceURL": "https://profile.unizik.edu.ng/NAU4594",
+      "status": "Primary profile confirmed",
+      "confidence": "High for attributed participation"
+    },
+    {
+      "entity": "vincent-eze-awka",
+      "claim": "Named planned host in the 2023 itinerary; attendance unverified.",
+      "sourceURL": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Announcement verified",
+      "confidence": "High for source attribution; independent event corroboration absent"
+    },
+    {
+      "entity": "vincent-eze-awka",
+      "claim": "announced host only → ccpc-awka-2023",
+      "sourceURL": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Itinerary; role performance / attendance not verified",
+      "confidence": "High for attributed role"
+    },
+    {
+      "entity": "ccpc-lokoja-2024",
+      "claim": "Post-event report documents poetry, spoken word and cultural performances.",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Report supported",
+      "confidence": "High for source attribution; independent event corroboration absent"
+    },
+    {
+      "entity": "ful-faculty-arts",
+      "claim": "Venue named in the post-event report.",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Report supported",
+      "confidence": "High for source attribution; independent event corroboration absent"
+    },
+    {
+      "entity": "ansa",
+      "claim": "Named co-organizer; identity also supported by ANSA’s own site.",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Report supported",
+      "confidence": "High for source attribution; independent event corroboration absent"
+    },
+    {
+      "entity": "naya",
+      "claim": "Named collaborator in the report.",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Report supported",
+      "confidence": "High for source attribution; independent event corroboration absent"
+    },
+    {
+      "entity": "gaya",
+      "claim": "Named collaborator in the report.",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Report supported",
+      "confidence": "High for source attribution; independent event corroboration absent"
+    },
+    {
+      "entity": "penkup-international",
+      "claim": "Named sponsor in the report.",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Report supported",
+      "confidence": "High for source attribution; independent event corroboration absent"
+    },
+    {
+      "entity": "maymunah-kadiri",
+      "claim": "Reported speaker and Q&A participant; ANSA’s site identifies the poet.",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Report supported",
+      "confidence": "High for source attribution; independent event corroboration absent"
+    },
+    {
+      "entity": "ccpc-lokoja-2024",
+      "claim": "reported venue → ful-faculty-arts",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Single post-event report family; independent corroboration pending",
+      "confidence": "High for attributed role"
+    },
+    {
+      "entity": "ccpc-lokoja-2024",
+      "claim": "co-organizer reported → ansa",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Single post-event report family; independent corroboration pending",
+      "confidence": "High for attributed role"
+    },
+    {
+      "entity": "ccpc-lokoja-2024",
+      "claim": "co-organizer reported → c2",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Single post-event report family; independent corroboration pending",
+      "confidence": "High for attributed role"
+    },
+    {
+      "entity": "ccpc-lokoja-2024",
+      "claim": "collaborator reported → naya",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Single post-event report family; independent corroboration pending",
+      "confidence": "High for attributed role"
+    },
+    {
+      "entity": "ccpc-lokoja-2024",
+      "claim": "collaborator reported → gaya",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Single post-event report family; independent corroboration pending",
+      "confidence": "High for attributed role"
+    },
+    {
+      "entity": "ccpc-lokoja-2024",
+      "claim": "sponsor reported → penkup-international",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Single post-event report family; independent corroboration pending",
+      "confidence": "High for attributed role"
+    },
+    {
+      "entity": "ccpc-lokoja-2024",
+      "claim": "speech and Q&A participant reported → maymunah-kadiri",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Single post-event report family; independent corroboration pending",
+      "confidence": "High for attributed role"
+    },
+    {
+      "entity": "maymunah-kadiri",
+      "claim": "president in 2024 report → ansa",
+      "sourceURL": "https://thenigerianpost.com.ng/a-tapestry-of-words-the-cross-country-poetry-celebration-in-kogi-2/",
+      "status": "Only the source-stated relationship; not current residence or headquarters",
+      "confidence": "High for attributed role"
+    },
+    {
+      "entity": "dont-love-yourself",
+      "claim": "Chapbook attributed to Maymunah Kadiri by ANSA’s own team profile.",
+      "sourceURL": "https://ansa.com.ng/team/",
+      "status": "Primary attribution confirmed",
+      "confidence": "High for source attribution; independent event corroboration absent"
+    },
+    {
+      "entity": "maymunah-kadiri",
+      "claim": "author attributed → dont-love-yourself",
+      "sourceURL": "https://ansa.com.ng/team/",
+      "status": "Primary professional biography; bibliographic metadata pending",
+      "confidence": "High for attributed role"
+    },
+    {
+      "entity": "ansa",
+      "claim": "ANSA page heading expands Student Authors, but Maymunah biography erroneously expands Nigerian Authors. Do not merge ANSA with ANA; undated leadership not current-office proof.",
+      "sourceURL": "https://ansa.com.ng/team/",
+      "status": "Source inconsistency preserved",
+      "confidence": "Identity supported by page heading; biography acronym expansion inconsistent"
+    }
+  ],
+  "sourceFamilies": {
+    "Kogi post-event": [
+      "The Nigerian Post original and -2 URL",
+      "Kogi Reports substantial repeated wording",
+      "Accurate News indexed repetition; direct blocked"
+    ],
+    "Awka participation": [
+      "Official UNIZIK profile"
+    ],
+    "Awka planned host": [
+      "2023 national itinerary"
+    ],
+    "Identity/publication": [
+      "ANSA undated primary team page"
+    ]
+  }
+}

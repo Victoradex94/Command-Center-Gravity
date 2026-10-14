@@ -1,0 +1,113 @@
+{
+  "id": "RUN-20261014-0208-GOMBE",
+  "queries": [
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Abdulbaki Ahmad\" \"Gombe\" poetry 2024 celebration",
+      "yield": "Known speech/2023 itinerary; same-name career profile not merged."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Cross Country\" \"Gombe State University\" \"2024\" poetry",
+      "yield": "Known speech and 2023 itinerary, no exact2024 day."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"I cease to be\" \"Fulfulde\" poetry Gombe date",
+      "yield": "Known speech; no event date."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"Cross Country\" \"Gombe\" \"2024\" \"October\" poetry",
+      "yield": "Unrelated cross-country results and Kogi repeats; no Gombe date evidence."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "site:gsu.edu.ng poetry \"Cross\" \"2024\"",
+      "yield": "No qualifying university account; unrelated CROSS results."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Abdulbaki Ahmad\" \"Fulfulde\" poetry celebration",
+      "yield": "Same-name foundation/career profiles and social lead; no identity bridge."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Gombe State University\" \"Cross-Country Celebration\" poetry",
+      "yield": "Facebook Muntaka/Abdulbaki/Aliyu leads, not readable dated evidence."
+    },
+    {
+      "engine": "system1",
+      "date": "2026-10-14",
+      "query": "\"Gombe\" \"Love Garden\" poetry \"2024\"",
+      "yield": "Known2023 itinerary and unrelated garden results; no2024venue proof."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "site:fulaninewsmedia.com \"I cease to be\" poetry",
+      "yield": "Full speech at corrected longer URL; current source already uses correct URL and qualifieddate."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"muhammadkhabeeyr\" \"Cross Country\" \"2023\"",
+      "yield": "No additional qualifying dated readable account."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"aliyu.danladi.75\" \"Love Garden\" poetry",
+      "yield": "No additional qualifying dated readable account."
+    },
+    {
+      "engine": "system2",
+      "date": "2026-10-14",
+      "query": "\"elsilaame\" \"Jaabiire\" \"21st\" poetry",
+      "yield": "No complete dated readable event source."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-fulfulde-language-as-well-as-saving-the-ful%C9%93e-nation",
+      "status": "Direct full relevant text read; published24Oct2024. Existing GSU speaker/occurrence evidence confirmed; exactday/edition unstated. Some weeks back qualifies conversation, not event. Same source family as existing record."
+    },
+    {
+      "url": "https://fulaninewsmedia.com/i-cease-to-be-when-fulfulde-ceases-to-be-the-role-of-poetry-in-preserving-and-promoting-the-ful%C9%93e-nation",
+      "status": "Shorter addendum URL inaccessible; longer actual URL recovered; existing prototype already correct."
+    },
+    {
+      "url": "https://www.facebook.com/muhammadkhabeeyr.muntaka/posts/last-week-saturday-i-was-at-the-cross-country-poetry-celebration-gombe-with-some/1344098150427305/",
+      "status": "Snippet lead, direct throttled; lastweekSaturday not usable without postdate. No occurrence/edition/person edge imported."
+    },
+    {
+      "url": "https://www.facebook.com/aliyu.danladi.75/posts/i-had-joined-poets-and-artistes-at-the-cross-country-poetry-celebration-a-progra/2243746022501173/",
+      "status": "Snippet LoveGarden retrospective lead; directthrottled; no edition/date established."
+    },
+    {
+      "url": "https://www.facebook.com/elsilaame/posts/will-you-be-in-gombe-on-the-21st-of-this-month-if-so-we-invite-you-to-join-us-fo/3499592930261504/",
+      "status": "Indexed planned invitation lead;21stmonth unspecified; no completionproof."
+    },
+    {
+      "url": "https://www.mandelarhodes.org/scholarship/scholars/abdulbaki-ahmad/",
+      "status": "Institutional same-name energy practitioner lead; not poet/2023host identity proof. No career/residence import."
+    },
+    {
+      "url": "https://writezakama.wordpress.com/2023/10/17/update-on-cross-country-celebration-of-poetry/",
+      "status": "Already-known2023 planned itinerary; distinct from speech."
+    }
+  ],
+  "status": "P009 unchanged OPEN; no new qualifying claim; no prototype mutation",
+  "next": "Recover readable dated Muntaka/Aliyu posts before any edition merge; no immediate throttled retries",
+  "sourceCommit": "eb4218942f125d7231f46d7689ecc1ea0056c692",
+  "deploymentVersion": 34,
+  "counts": "430 entries/640 connections/25Publications; Gombe8 unchanged; current ledger prior archive counts",
+  "verification": "No supported browser; no visual/mobile/overflow claim"
+}
