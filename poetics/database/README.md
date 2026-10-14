@@ -24,3 +24,10 @@ This directory documents the private Supabase staging migration for Poetics Atla
 3. Do not label Drive as superseded until decision/status history, role-based access, and recovery are verified and the user has a clear cutover record.
 4. Preserve stable IDs, original JSON payloads, source URLs, query wording, dates as written, evidence scope, uncertainty, aliases, and all connections.
 5. SQL files in this directory are reviewable records. They are not connected to Supabase migrations and are not automatically deployed. The dashboard currently shows no migration history and no GitHub integration.
+
+
+## Latest byte-level recheck (14 October 2026)
+
+- The Drive source payload reconstructs to 153,555 bytes and matches its recorded SHA-256. The GitHub graph snapshot reconstructs to 1,597,040 bytes and matches. The GitHub archive reconstructs to 1,825,048 bytes and matches.
+- A fourth artifact manifest, drive-rendered-20261014-1130, has no imported chunks and zero stored bytes. Its original rendered payload is not preserved in Supabase. Keep this as an open evidence gap; do not treat the three verified payloads as all four artifact records.
+- The separate search found 0 decisions. The full ledger sections retain source text, but normalized decision/status history coverage remains incomplete.
