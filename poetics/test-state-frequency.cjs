@@ -1,12 +1,12 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),window={};
 for(const f of ['nigeria-states','nigeria-states-map'])vm.runInNewContext(fs.readFileSync('dist/'+f+'.js','utf8'),{window});
 const m=window.PoeticsStateMap;
-assert.deepEqual([0,1,4,5,14,15,29,30,64].map(n=>m.frequencyBand(n).label),['0','1–4','1–4','5–14','5–14','15–29','15–29','30+','30+']);
+assert.deepEqual([0,1,25,26,50,51,75,76,100].map(n=>m.frequencyBand(n).label),['0%','>0–25%','>0–25%','>25–50%','>25–50%','>50–75%','>50–75%','>75–100%','>75–100%']);assert.equal(m.frequencyBand(10,20).label,'>25–50%');assert.equal(m.frequencyBand(20,40).label,'>25–50%');assert.equal(m.frequencyBand(0,0).label,'0%');
 const html=m.render({Lagos:{People:28,Places:11,Platforms:16,Prizes:6,Publications:3},Yobe:3},'All states',1,{compactStateCounts:true});
-assert(html.includes('--state-fill:#0b5f78'));assert(html.includes('data-frequency-band="1–4"'));
+assert(html.includes('--state-fill:#0b5f78'));assert(html.includes('data-frequency-band="&gt;0–25%"'));
 assert(html.includes('data-count="64"'));assert(html.includes('data-expand-state-count="Lagos"'));
 const zoom=m.render({Lagos:{People:28,Places:11,Platforms:16,Prizes:6,Publications:3}},'Lagos');
 assert(zoom.includes('data-category-count="People"'));assert(!zoom.includes('data-expand-state-count="Lagos"'));
-assert(fs.readFileSync('dist/vicadex-theme.css','utf8').includes('stroke-width:1.25'));
-assert(fs.readFileSync('dist/directory.js','utf8').includes('not event frequency or a census'));
-console.log('PASS fixed entry-count bands, neutral totals, selected category expansion and stronger boundaries.');
+assert(fs.readFileSync('dist/vicadex-theme.css','utf8').includes('stroke-width:.7'));
+assert(fs.readFileSync('dist/directory.js','utf8').includes('Not event frequency or a census'));
+console.log('PASS percentage bands and automatic scaling, neutral totals, selected category expansion and stronger boundaries.');
