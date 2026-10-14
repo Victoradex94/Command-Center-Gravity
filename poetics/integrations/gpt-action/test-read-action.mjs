@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {createHandler} from './supabase/functions/poetics-read/handler.mjs';
+import {queries} from './supabase/functions/poetics-read/queries.mjs';
+const token='synthetic-test-only-not-a-real-credential',hash=Buffer.from(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(token))).toString('hex');
+let calls=[];const handler=createHandler({tokenHash:hash,read:async(r,p)=>{calls.push({r,p});return [{id:'synthetic',evidence_status:'announced',uncertainty:'Occurrence unresolved'}];}});
+const req=(path,options={})=>new Request('https://example.test/functions/v1/poetics-read/'+path,{headers:{Authorization:'Bearer '+token},...options});
+assert.equal((await handler(req('nodes',{headers:{}}))).status,401);assert.equal(calls.length,0);
+assert.equal((await handler(req('nodes',{method:'POST'}))).status,405);assert.equal(calls.length,0);
+for(const path of ['nodes?limit=21','nodes?limit=-1','nodes?offset=1.2','nodes?sql=DROP','nodes?q=x&q=y','connections','ledger','nodes?category=Secret'])assert.equal((await handler(req(path))).status,400);
+assert.equal((await handler(req('artifacts'))).status,404);
+let response=await handler(req('connections?nodeId=synthetic&limit=1'));assert.equal(response.status,200);let body=await response.json();assert.equal(body.rows[0].evidence_status,'announced');assert(body.authority.includes('snapshot'));
+await handler(req('nodes?q=%27%3BDROP%20TABLE%20poetics.nodes'));assert.equal(calls.at(-1).p.q,"';DROP TABLE poetics.nodes");assert.equal(queries.nodes.args(calls.at(-1).p)[0],calls.at(-1).p.q);assert(!queries.nodes.text.includes('DROP'));
+assert.equal((await createHandler({read:async()=>[]})(req('nodes'))).status,503);
+const fail=createHandler({tokenHash:hash,read:async()=>{throw new Error('secret-db-password');}});assert.equal((await fail(req('sources'))).status,503);assert(!(await (await fail(req('sources'))).text()).includes('secret-db-password'));
+const huge=createHandler({tokenHash:hash,read:async()=>[{body:'x'.repeat(65000)}]});assert.equal((await huge(req('sources'))).status,413);
+assert.equal((await handler(req('ledger?artifactId=known'))).headers.get('Cache-Control'),'no-store');
+assert(Object.values(queries).every(q=>q.text.trim().startsWith('SELECT')));
+console.log('PASS bearer denial, read-only routes, bounded parameters, parameterized queries, provenance, snapshot warning, errors and response cap.');

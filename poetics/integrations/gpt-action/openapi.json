@@ -1,0 +1,396 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Poetics Private Staging Reader",
+    "version": "0.1.0",
+    "description": "Read-only GPT Action. Deployment and database permission checks remain pending."
+  },
+  "servers": [
+    {
+      "url": "https://tknahlnirtnanzqqvufb.supabase.co/functions/v1/poetics-read",
+      "description": "Intended existing staging project; endpoint not deployed by this change."
+    }
+  ],
+  "security": [
+    {
+      "ActionBearer": []
+    }
+  ],
+  "paths": {
+    "/nodes": {
+      "get": {
+        "operationId": "searchPoeticsNodes",
+        "summary": "searchPoeticsNodes",
+        "description": "Search source-attributed nodes and aliases. Do not infer current activity or location from association.",
+        "x-openai-isConsequential": false,
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "description": "Literal case-insensitive search; no wildcard or SQL syntax."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20,
+              "default": 10
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000,
+              "default": 0
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "maxLength": 200
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "People",
+                "Places",
+                "Platforms",
+                "Prizes",
+                "Publications"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bounded private staging snapshot; preserve evidence qualifiers.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StagingPage"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid bounded request"
+          },
+          "401": {
+            "description": "Missing or invalid action token"
+          },
+          "405": {
+            "description": "Writes are not supported"
+          },
+          "413": {
+            "description": "Narrow the query or reduce limit"
+          },
+          "503": {
+            "description": "Reader unconfigured or unavailable"
+          }
+        }
+      }
+    },
+    "/connections": {
+      "get": {
+        "operationId": "getPoeticsConnections",
+        "summary": "getPoeticsConnections",
+        "description": "Read typed connections and their claims/source support for a stable node ID. Announced is not occurrence.",
+        "x-openai-isConsequential": false,
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "description": "Literal case-insensitive search; no wildcard or SQL syntax."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20,
+              "default": 10
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000,
+              "default": 0
+            }
+          },
+          {
+            "name": "nodeId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bounded private staging snapshot; preserve evidence qualifiers.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StagingPage"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid bounded request"
+          },
+          "401": {
+            "description": "Missing or invalid action token"
+          },
+          "405": {
+            "description": "Writes are not supported"
+          },
+          "413": {
+            "description": "Narrow the query or reduce limit"
+          },
+          "503": {
+            "description": "Reader unconfigured or unavailable"
+          }
+        }
+      }
+    },
+    "/sources": {
+      "get": {
+        "operationId": "searchPoeticsSources",
+        "summary": "searchPoeticsSources",
+        "description": "Read source families, dates, access outcomes and notes. Duplicate outlets are not automatically independent.",
+        "x-openai-isConsequential": false,
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "description": "Literal case-insensitive search; no wildcard or SQL syntax."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20,
+              "default": 10
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000,
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bounded private staging snapshot; preserve evidence qualifiers.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StagingPage"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid bounded request"
+          },
+          "401": {
+            "description": "Missing or invalid action token"
+          },
+          "405": {
+            "description": "Writes are not supported"
+          },
+          "413": {
+            "description": "Narrow the query or reduce limit"
+          },
+          "503": {
+            "description": "Reader unconfigured or unavailable"
+          }
+        }
+      }
+    },
+    "/ledger": {
+      "get": {
+        "operationId": "searchPoeticsLedgerCapture",
+        "summary": "searchPoeticsLedgerCapture",
+        "description": "Search one explicitly identified captured ledger artifact. This is not the latest canonical Drive file; headings/bodies may be truncated.",
+        "x-openai-isConsequential": false,
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "description": "Literal case-insensitive search; no wildcard or SQL syntax."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20,
+              "default": 10
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000,
+              "default": 0
+            }
+          },
+          {
+            "name": "artifactId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bounded private staging snapshot; preserve evidence qualifiers.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StagingPage"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid bounded request"
+          },
+          "401": {
+            "description": "Missing or invalid action token"
+          },
+          "405": {
+            "description": "Writes are not supported"
+          },
+          "413": {
+            "description": "Narrow the query or reduce limit"
+          },
+          "503": {
+            "description": "Reader unconfigured or unavailable"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ActionBearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Separate dedicated GPT Action token; never a Supabase service key or database password."
+      }
+    },
+    "schemas": {
+      "StagingPage": {
+        "type": "object",
+        "required": [
+          "resource",
+          "rows",
+          "limit",
+          "offset",
+          "returned",
+          "hasMore",
+          "authority"
+        ],
+        "properties": {
+          "resource": {
+            "type": "string",
+            "enum": [
+              "nodes",
+              "connections",
+              "sources",
+              "ledger"
+            ]
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "returned": {
+            "type": "integer"
+          },
+          "hasMore": {
+            "type": "boolean",
+            "description": "A full page may have more rows; request the next offset."
+          },
+          "authority": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
