@@ -1,10 +1,10 @@
 # Poetics — local staging
 
-Private source copy of the Vic’Adex Sites prototype, Version 45.
+Primary GitHub source for the Vic’Adex prototype; current publication baseline Version 45. See SOURCE-WORKFLOW.md.
 
 ## Run locally
 
-Clone this repository, switch to `poetics-staging`, and open the `poetics` folder in your editor. With Python 3 installed, run:
+Clone this repository, switch to `main` (or a working branch based on current main), and open the `poetics` folder in your editor. With Python 3 installed, run:
 
     python -m http.server 4173 --directory dist
 
