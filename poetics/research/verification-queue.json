@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-13",
-  "total": 449,
+  "total": 453,
   "queue": [
     {
       "id": "c2",
@@ -6762,6 +6762,74 @@
       },
       "sourceURLs": [
         "https://ananigeria.org/news/ekiti-ana-and-youth-ministry-host-erelu-bisi-fayemis-reading"
+      ],
+      "nextStep": "Expand readable sources for role-specific connections; verify exact dates, geography and current activity.",
+      "priority": "High"
+    },
+    {
+      "id": "yopafest-2021",
+      "name": "Yobe State Peace and Arts Festival — 2021",
+      "category": "Platforms",
+      "verification": {
+        "label": "Primary support-programme account",
+        "sourceURL": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+        "reviewedAt": "2026-10-14",
+        "sourceLocator": "YOUTH PEACE INITIATIVES",
+        "scope": "British Council MCN retrospective explicitly describes occurrence and organiser/support roles. No independent report family established."
+      },
+      "sourceURLs": [
+        "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+      ],
+      "nextStep": "Expand readable sources for role-specific connections; verify exact dates, geography and current activity.",
+      "priority": "High"
+    },
+    {
+      "id": "yobe-arts-council",
+      "name": "Yobe State Council for Arts and Culture",
+      "category": "Platforms",
+      "verification": {
+        "label": "Primary support-programme account",
+        "sourceURL": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+        "reviewedAt": "2026-10-14",
+        "sourceLocator": "YOUTH PEACE INITIATIVES",
+        "scope": "British Council MCN retrospective explicitly describes occurrence and organiser/support roles. No independent report family established."
+      },
+      "sourceURLs": [
+        "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+      ],
+      "nextStep": "Expand readable sources for role-specific connections; verify exact dates, geography and current activity.",
+      "priority": "High"
+    },
+    {
+      "id": "yobe-youth-sports-ministry",
+      "name": "Ministry of Youth and Sports — Yobe report wording",
+      "category": "Platforms",
+      "verification": {
+        "label": "Primary support-programme account",
+        "sourceURL": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+        "reviewedAt": "2026-10-14",
+        "sourceLocator": "YOUTH PEACE INITIATIVES",
+        "scope": "British Council MCN retrospective explicitly describes occurrence and organiser/support roles. No independent report family established."
+      },
+      "sourceURLs": [
+        "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+      ],
+      "nextStep": "Expand readable sources for role-specific connections; verify exact dates, geography and current activity.",
+      "priority": "High"
+    },
+    {
+      "id": "mcn-programme",
+      "name": "Managing Conflict in Nigeria (MCN)",
+      "category": "Platforms",
+      "verification": {
+        "label": "Primary support-programme account",
+        "sourceURL": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+        "reviewedAt": "2026-10-14",
+        "sourceLocator": "YOUTH PEACE INITIATIVES",
+        "scope": "British Council MCN retrospective explicitly describes occurrence and organiser/support roles. No independent report family established."
+      },
+      "sourceURLs": [
+        "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
       ],
       "nextStep": "Expand readable sources for role-specific connections; verify exact dates, geography and current activity.",
       "priority": "High"

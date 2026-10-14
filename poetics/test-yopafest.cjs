@@ -1,0 +1,12 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),window={};
+for(const f of ['atlas','canonical-research','national-directory','directory-expansion','atlas-audit','entry-status','nigeria-states','nigeria-states-map','atlas-icons','entry-schema','directory'])vm.runInNewContext(fs.readFileSync('dist/'+f+'.js','utf8'),{window});
+const {rows,edges}=window.PoeticsDirectoryData,by=id=>rows.find(r=>r.id===id);
+assert.equal(rows.length,453);assert.equal(edges.length,667);
+assert.equal(rows.filter(r=>window.PoeticsStateMap.statesForRecord(r).includes('Yobe')).length,3);
+assert.equal(by('yopafest-2021').dateFact.value,'22–24 June 2021');
+assert.equal(by('yopafest-2021').activityStatus.label,'Historical');
+assert.deepEqual([...window.PoeticsStateMap.statesForRecord(by('mcn-programme'))],[]);
+assert.equal(edges.filter(e=>e.a==='yopafest-2021').length,3);
+assert(by('yobe-youth-sports-ministry').gaps.includes('Formal institutional name unresolved'));
+assert(!JSON.stringify(by('yopafest-2021')).includes('State Arts and Culture Centre'));
+console.log('PASS YOPAFEST counts, date range, historical status, source-qualified roles and non-HQ geography.');

@@ -7927,6 +7927,155 @@ window.PoeticsAudit={
       ],
       "media": [],
       "gaps": "Independent corroboration unverified; no current roles, residence or incidental attendance inferred."
+    },
+    {
+      "category": "Platforms",
+      "status": "Primary support-programme retrospective; one source family",
+      "verification": {
+        "label": "Primary support-programme account",
+        "sourceURL": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+        "reviewedAt": "2026-10-14",
+        "sourceLocator": "YOUTH PEACE INITIATIVES",
+        "scope": "British Council MCN retrospective explicitly describes occurrence and organiser/support roles. No independent report family established."
+      },
+      "links": [
+        {
+          "title": "British Council MCN — January–June 2021 retrospective",
+          "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+        }
+      ],
+      "years": [
+        {
+          "year": 2021,
+          "label": "Documented festival association",
+          "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+        }
+      ],
+      "media": [],
+      "gaps": "Exact venue/room, named poetry performers, current activity and independent corroboration unverified. Fifty participants covers the whole event, not fifty poets. Unspecified award is not proof of a poetry prize.",
+      "id": "yopafest-2021",
+      "name": "Yobe State Peace and Arts Festival — 2021",
+      "nameVariants": [
+        "YOPAFEST 2021",
+        "Yobe Peace and Arts Festival"
+      ],
+      "city": "Damaturu",
+      "summary": "Held in Damaturu on 22–24 June 2021, with poetry readings among a wider youth arts programme. MCN’s retrospective names the Council and Ministry as organisers and MCN as supporter.",
+      "eventEvidence": "Occurred — primary support-programme account; single family",
+      "dateFact": {
+        "label": "Reported event dates",
+        "value": "22–24 June 2021",
+        "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+      },
+      "dateBasis": "Exact range stated in the retrospective; publication date not established. No venue transferred from the separate 21 June policing donation.",
+      "oneOff": true,
+      "historical": true,
+      "phase": {
+        "label": "Completed",
+        "date": "2021-06-24",
+        "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+      },
+      "format": "Literary festival",
+      "entryType": "Dated festival edition"
+    },
+    {
+      "category": "Platforms",
+      "status": "Primary support-programme retrospective; one source family",
+      "verification": {
+        "label": "Primary support-programme account",
+        "sourceURL": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+        "reviewedAt": "2026-10-14",
+        "sourceLocator": "YOUTH PEACE INITIATIVES",
+        "scope": "British Council MCN retrospective explicitly describes occurrence and organiser/support roles. No independent report family established."
+      },
+      "links": [
+        {
+          "title": "British Council MCN — January–June 2021 retrospective",
+          "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+        }
+      ],
+      "years": [
+        {
+          "year": 2021,
+          "label": "Documented festival association",
+          "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+        }
+      ],
+      "media": [],
+      "gaps": "Exact venue/room, named poetry performers, current activity and independent corroboration unverified.",
+      "id": "yobe-arts-council",
+      "name": "Yobe State Council for Arts and Culture",
+      "city": "Damaturu",
+      "summary": "Named organiser of YOPAFEST 2021 in MCN’s retrospective. Damaturu is the associated event location, not a verified headquarters.",
+      "locationLabel": "Damaturu · event association only",
+      "dateBasis": "2021 is the documented event association, not a founding date."
+    },
+    {
+      "category": "Platforms",
+      "status": "Primary support-programme retrospective; one source family",
+      "verification": {
+        "label": "Primary support-programme account",
+        "sourceURL": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+        "reviewedAt": "2026-10-14",
+        "sourceLocator": "YOUTH PEACE INITIATIVES",
+        "scope": "British Council MCN retrospective explicitly describes occurrence and organiser/support roles. No independent report family established."
+      },
+      "links": [
+        {
+          "title": "British Council MCN — January–June 2021 retrospective",
+          "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+        }
+      ],
+      "years": [
+        {
+          "year": 2021,
+          "label": "Documented festival association",
+          "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+        }
+      ],
+      "media": [],
+      "gaps": "Exact venue/room, named poetry performers, current activity and independent corroboration unverified. Formal institutional name unresolved.",
+      "id": "yobe-youth-sports-ministry",
+      "name": "Ministry of Youth and Sports — Yobe report wording",
+      "nameVariants": [
+        "Yobe Ministry of Youth and Sports"
+      ],
+      "city": "Damaturu",
+      "summary": "Named in conjunction with the Yobe State Council for Arts and Culture as an organiser of YOPAFEST 2021. Formal institutional name remains unverified.",
+      "locationLabel": "Damaturu · event association only",
+      "dateBasis": "Source wording retained; no current ministry name or founding date inferred."
+    },
+    {
+      "category": "Platforms",
+      "status": "Primary support-programme retrospective; one source family",
+      "verification": {
+        "label": "Primary support-programme account",
+        "sourceURL": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+        "reviewedAt": "2026-10-14",
+        "sourceLocator": "YOUTH PEACE INITIATIVES",
+        "scope": "British Council MCN retrospective explicitly describes occurrence and organiser/support roles. No independent report family established."
+      },
+      "links": [
+        {
+          "title": "British Council MCN — January–June 2021 retrospective",
+          "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+        }
+      ],
+      "years": [
+        {
+          "year": 2021,
+          "label": "Documented festival association",
+          "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021"
+        }
+      ],
+      "media": [],
+      "gaps": "Exact venue/room, named poetry performers, current activity and independent corroboration unverified.",
+      "id": "mcn-programme",
+      "name": "Managing Conflict in Nigeria (MCN)",
+      "city": "Nigeria",
+      "summary": "Support programme whose retrospective reports support for YOPAFEST 2021 in Damaturu. This record does not establish a Damaturu headquarters or a direct festival funding chain.",
+      "locationLabel": "Nigeria · programme scope; no headquarters assigned",
+      "dateBasis": "2021 is the documented support association, not a founding date."
     }
   ],
   "overrides": {
@@ -10712,6 +10861,30 @@ window.PoeticsAudit={
       "url": "https://ananigeria.org/news/ekiti-ana-and-youth-ministry-host-erelu-bisi-fayemis-reading",
       "date": "13 August 2024",
       "status": "Explicit ANA organiser-associated report; one source family"
+    },
+    {
+      "a": "yopafest-2021",
+      "b": "yobe-arts-council",
+      "label": "organised by",
+      "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+      "date": "22–24 June 2021",
+      "status": "Explicit primary support-programme retrospective; one family"
+    },
+    {
+      "a": "yopafest-2021",
+      "b": "yobe-youth-sports-ministry",
+      "label": "co-organised by",
+      "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+      "date": "22–24 June 2021",
+      "status": "Explicit primary support-programme retrospective; one family"
+    },
+    {
+      "a": "yopafest-2021",
+      "b": "mcn-programme",
+      "label": "supported by",
+      "url": "https://www.justice-security.ng/managing-conflict-nigeria-mcn-january-june-2021",
+      "date": "22–24 June 2021",
+      "status": "Explicit primary support-programme retrospective; one family"
     }
   ]
 };
