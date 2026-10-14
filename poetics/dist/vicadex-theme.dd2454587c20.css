@@ -1,0 +1,269 @@
+/* Vic’Adex review-template reference: stored CSS of post 6288.
+   Current WOR landing 4902 uses warm cream/near-black/rust-orange;
+   the Atlas retains its approved palette rather than equating these templates.
+   Verified tokens: cream #fffaf3, peach #fde9dc, teal #0b5f78,
+   orange #e94f27, ink #171717; Comfortaa headings / Afacad body.
+   Hosted prototype adapter; production WordPress theme is never edited. */
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&display=swap');
+:root{--bg:#fffaf3;--paper:#171717;--muted:#555;--line:#e8e1d8;--accent:#0b5f78;--red:#e94f27;--panel:#fffdf9}
+body{background:var(--bg);color:var(--paper);font-family:'Afacad',Arial,sans-serif;font-size:18px}
+body>header{background:#fffaf3;border-bottom:4px solid #0b5f78;padding-block:20px}
+.brand,.atlas-wordmark,.map-caption b,h1,h2,h3,.directory-column h2,.map-record strong,.map-floating-profile b,.profile-monogram{font-family:'Comfortaa',Arial,sans-serif;letter-spacing:-.02em;font-weight:500}
+.brand{color:#171717;font-size:30px;letter-spacing:-.04em}
+nav a{font-size:16px}nav a[aria-current]{color:#0b5f78}
+p{color:#24211d}
+button,.btn,input,select,textarea{border-color:#d8cfc3;border-radius:12px}
+button,.btn{background:#fffdf9;color:#272727}
+button:hover,.btn:hover{background:#fde9dc;color:#0b5f78;border-color:#0b5f78}
+.primary,.primary:hover,.tabs button[aria-pressed=true]{background:#0b5f78;color:#fff;border-color:#0b5f78}
+input,select,textarea{background:#fff;color:#171717}
+input[type=checkbox]{accent-color:#0b5f78}
+:focus-visible,.map-atlas a:focus-visible,.map-atlas button:focus-visible,.directory-column-records:focus-visible{outline:3px solid #0b5f78;outline-offset:3px}
+.panel,.post,.entry-form,.about-project-copy,.saved-entry-drafts{background:#fffdf9;border-color:#e8e1d8;border-radius:22px}
+.notice,.submission-notice,.game-banner{background:#fde9dc;color:#24211d;border-color:#e94f27;border-radius:14px}
+.badge{border-color:#0b5f78;color:#0b5f78;border-radius:8px}
+.map-switch{background:#eee7dc}
+.map-switch button{background:transparent}
+.map-switch button:hover,.map-switch button:focus{background:#fde9dc}
+.map-switch button[aria-pressed=true],.map-view-switch button[aria-pressed=true]{background:#0b5f78;color:white}
+.map-atlas #nigeria-map,.nigeria-gis,.nigeria-state-map{background:#fffaf3}
+.nigeria-state path{fill:#eee7dc;stroke:#fffaf3}
+.nigeria-state.has-records path{fill:#cbe2e8}
+.nigeria-state:hover path,.nigeria-state:focus path{fill:#fde9dc;stroke:#0b5f78}
+.nigeria-state.selected path{fill:#0b5f78;stroke:#e94f27}
+.state-name{fill:#272727;stroke:#eee7dc;font-family:'Afacad',Arial,sans-serif}
+.nigeria-state.selected .state-name{fill:#fff;stroke:#0b5f78}
+.nigeria-state.hidden-state path{fill:#f1ece5;stroke:#e8e1d8}
+.boundaries-hidden .nigeria-state path{stroke:transparent}
+.boundaries-hidden .nigeria-state.selected path,.boundaries-hidden .nigeria-state:focus path{stroke:#e94f27}
+.state-entry-count circle{stroke:#fffaf3}
+.state-entry-count text{fill:#171717;font-family:'Afacad',Arial,sans-serif}
+[data-category-count=People] circle{fill:#0b5f78!important}
+[data-category-count=People] text{fill:#fff}
+[data-category-count=Places] circle{fill:#fde9dc!important}
+[data-category-count=Platforms] circle{fill:#e94f27!important}
+[data-category-count=Prizes] circle{fill:#eee7dc!important}
+.map-caption,.map-legend,.map-floating-profile{background:#fffdf9f5;border-color:#e8e1d8;border-radius:20px;box-shadow:0 8px 24px #49322012}
+.map-caption span,.map-floating-profile span,.category-count-key,.legend-heading,.map-legend summary>span{color:#555}
+.map-legend details{border-color:#e8e1d8}
+.category-count-key>span:nth-of-type(2) i{background:#0b5f78!important}
+.category-count-key>span:nth-of-type(3) i{background:#fde9dc!important;border:1px solid #b8a999}
+.category-count-key>span:nth-of-type(4) i{background:#e94f27!important}
+.category-count-key>span:nth-of-type(5) i{background:#eee7dc!important;border:1px solid #b8a999}
+.country-map-controls button{background:#fffdf9;color:#0b5f78;border-color:#e8e1d8}
+.map-atlas .map-results{background:#fffdf9;border-color:#e8e1d8}
+.map-results-heading,.map-record small,.map-record-type,.map-record .record-summary{color:#555}
+.map-atlas .map-list .map-record,.directory-column .map-record{background:#fffdf9;border-color:#e8e1d8;border-radius:20px!important}
+.map-record:hover{background:#fde9dc}
+.directory-column h2 span{background:#eee7dc;color:#555}
+.directory-column[data-column=People] h2{border-color:#0b5f78}
+.directory-column[data-column=Places] h2{border-color:#d8ad8e}
+.directory-column[data-column=Platforms] h2{border-color:#e94f27}
+.directory-column[data-column=Prizes] h2{border-color:#a89a85}
+.profile-facts,.profile-years,.directory-evidence,.profile-connection,.state-profile{border-color:#e8e1d8}
+.profile-facts dt,.profile-connection small,.profile-connection-group h3 span,.profile-monogram small,.profile-missing{color:#555}
+.profile-connection>a,.state-profile>a,.map-floating-profile a{color:#0b5f78}
+.profile-photo,.profile-photo>span{background:#eee7dc}
+.profile-photo small{color:#555}
+.phone-shell,.phone-dialog,.notification-dialog,.performance-dialog,.district-map-dialog{background:#fffdf9;color:#171717}
+.phone-post,.notice-card,.phone-app-head,.phone-status,.phone-compose-actions,.phone-notices{background:#fffdf9;color:#171717;border-color:#e8e1d8}
+footer{background:#eee7dc;color:#555}
+#toast,.skip{background:#0b5f78;color:#fff}
+@media(max-width:600px){body{font-size:17px}.brand{font-size:27px}nav a{font-size:14px}}
+/* Dark Vic’Adex shell, light geographic canvas. */
+body{background:#171717;color:#fffaf3}
+body>header{background:#171717;color:#fffaf3}
+body>header .brand{color:#fffaf3}
+body>header nav a[aria-current]{color:#9bd0de}
+.atlas-brand{--bg:#171717;--paper:#fffaf3;--muted:#c3bcb2;--line:#45403b;--accent:#9bd0de;--panel:#24211d;background:#171717;color:#fffaf3}
+.atlas-introduction{padding:14px 0 24px;max-width:780px}
+.atlas-introduction h1{font-size:clamp(24px,3vw,34px);line-height:1.25;margin:0 0 10px;letter-spacing:-.035em}
+.atlas-introduction p{font-size:16px;line-height:1.5;color:#ded6cb;margin:0 0 12px;max-width:72ch}
+.atlas-introduction>div{display:flex;gap:24px;flex-wrap:wrap;font-size:13px}
+.atlas-introduction a{color:#9bd0de;text-decoration:underline;text-underline-offset:4px}
+.atlas-wordmark{color:#fffaf3}
+.atlas-wordmark span{color:#e99472}
+.map-body{--paper:#171717;--accent:#0b5f78;--muted:#555;--line:#e8e1d8;--panel:#fffdf9;background:#fffaf3;color:#171717}
+.map-body .map-stage{background:#fffaf3}
+.map-search input,.atlas-brand input,.atlas-brand select,.atlas-brand textarea{background:#fffdf9;color:#171717;border-color:#d8cfc3}
+.type-toggles{flex-wrap:wrap;gap:8px}
+.atlas-brand .type-toggles label{color:#fffaf3;border-color:#655d54}
+.atlas-brand .type-toggles input{accent-color:#0b5f78}
+.directory-year,.map-foot,.map-filter-row .map-more>summary{color:#d6cfc5}
+.map-view-switch button[aria-pressed=true]{background:#0b5f78;color:#fff}
+.map-atlas .map-more[open]{background:#fffdf9;color:#171717;border-color:#e8e1d8;top:auto;z-index:20}
+.map-more label{color:#555}
+.map-results .caption,.map-body .caption,.map-results p,.map-body .column-empty,.directory-year-note{color:#555}
+.map-record .entry-statuses{grid-column:1/-1}
+.entry-statuses{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 10px}
+.entry-status{font:500 11px/1.4 'Afacad',Arial,sans-serif;border:1px solid #ddd4c8;padding:3px 7px;border-radius:8px;color:#555;background:#f5efe6;letter-spacing:0;text-transform:none}
+.entry-status[data-activity-status=Active]{background:#0b5f78;color:#fff;border-color:#0b5f78}
+.entry-status[data-activity-status=Historical]{background:#eee7dc;color:#555}
+.entry-status[data-verification="Source confirmed"]{border-color:#0b5f78;color:#0b5f78}
+.entry-status[data-verification="Archive supported"]{background:#fde9dc;color:#713e24}
+.directory-columns{grid-template-columns:repeat(5,minmax(225px,1fr))}
+.directory-column[data-column=Publications] h2{border-color:#171717}
+[data-category-count=Publications] circle{fill:#171717!important}
+[data-category-count=Publications] text{fill:#fffaf3}
+.category-count-key>span:nth-of-type(6) i{background:#171717!important}
+.project-page .project-intro{color:#ded6cb}
+.project-page .about-project-copy,.project-page .entry-form,.project-page .saved-entry-drafts{--paper:#171717;--accent:#0b5f78;color:#171717;background:#fffdf9}
+.project-page .entry-form label,.project-page .about-project-copy p{color:#555}
+@media(max-width:850px){.directory-columns{grid-template-columns:repeat(5,260px)}}
+@media(max-width:500px){.directory-columns{grid-template-columns:repeat(5,minmax(250px,78vw))}.atlas-introduction{padding-bottom:20px}.atlas-introduction p{font-size:15px}.atlas-introduction h1{font-size:24px}}
+
+/* Correction: only the canvas outside Nigeria is dark. */
+body,body>header{background:#fffaf3;color:#171717}
+body>header .brand{color:#171717}
+body>header nav a[aria-current]{color:#0b5f78}
+.atlas-brand{--bg:#fffaf3;--paper:#171717;--muted:#555;--line:#e8e1d8;--accent:#0b5f78;--panel:#fffdf9;background:#fffaf3;color:#171717}
+.atlas-introduction p,.project-page .project-intro{color:#555}
+.atlas-introduction a{color:#0b5f78}
+.atlas-wordmark{color:#171717}
+.atlas-wordmark span{color:#e94f27}
+.atlas-brand .type-toggles label,.directory-year,.map-foot,.map-filter-row .map-more>summary{color:#555;border-color:#e8e1d8}
+.map-atlas #nigeria-map,.nigeria-gis,.nigeria-state-map{background:#171717}
+.nigeria-state path{stroke:#fffaf3}
+.boundaries-hidden .nigeria-state path{stroke:transparent}
+.boundaries-hidden .nigeria-state.selected path,.boundaries-hidden .nigeria-state:focus path{stroke:#e94f27}
+.map-record>span:last-child{grid-column:auto;grid-row:auto}
+.profile-connection>a{font-size:11px;white-space:nowrap}
+.map-record>span.record-summary:last-child{grid-column:1/-1;grid-row:auto}
+
+/* October research cycle: quieter WOR editorial spacing and tactile controls. */
+.atlas-brand{max-width:1180px;margin-inline:auto;padding-inline:clamp(12px,2.5vw,28px)}
+.atlas-kicker{display:block;font:500 12px/1.5 'Afacad',Arial,sans-serif;letter-spacing:.035em;color:#0b5f78;margin-bottom:10px}
+.atlas-introduction{max-width:760px;padding:12px 0 22px}
+.atlas-introduction h1{font-weight:500;letter-spacing:-.02em;line-height:1.25}
+.atlas-introduction p{font-size:18px;line-height:1.55;max-width:66ch}
+.atlas-introduction>div{gap:20px;font-size:15px}
+.map-top{gap:18px;padding-block:16px;border-top:1px solid #e8e1d8}
+.atlas-wordmark{font-size:21px;letter-spacing:-.02em;white-space:nowrap}
+.map-search input{font-family:'Afacad',Arial,sans-serif;font-size:17px;min-height:46px;border-radius:14px;padding-inline:16px!important}
+.map-view-switch{padding:4px;background:#eee7dc;border:0;border-radius:15px;gap:3px}
+.map-view-switch button{font:500 15px/1.2 'Afacad',Arial,sans-serif;min-height:42px;padding-inline:15px;box-shadow:none}
+.map-filter-row{gap:14px;padding-block:12px 18px}
+.type-toggles{gap:8px!important;flex-wrap:wrap}
+.type-toggles label{display:flex;align-items:center;gap:7px;min-height:42px;padding:7px 11px;border:1px solid #e8e1d8;border-radius:12px;background:#fffdf9;font:500 14px/1.25 'Afacad',Arial,sans-serif;cursor:pointer}
+.type-toggles label:has(input:checked){background:#fde9dc;border-color:#d8ad8e;color:#171717}
+.type-toggles input{width:15px;height:15px;margin:0;accent-color:#0b5f78}
+.directory-year{font:500 14px/1.4 'Afacad',Arial,sans-serif;gap:10px}
+.directory-year select,.map-more summary,#browse-records{font:500 14px/1.3 'Afacad',Arial,sans-serif;min-height:44px}
+.map-stage{border-radius:24px;overflow:hidden;border:1px solid #e8e1d8}
+.map-atlas #nigeria-map{border-radius:0;background:#171717}
+.map-caption{padding:12px 16px;border-radius:16px;box-shadow:0 8px 24px #00000012}
+.map-caption b{font-size:22px}
+.map-caption span{font:400 14px/1.4 'Afacad',Arial,sans-serif}
+.map-legend{width:190px;padding:12px 14px;border-radius:18px;background:#fffdf9f5;box-shadow:0 8px 24px #00000012}
+.category-count-key{font:500 12px/1.3 'Afacad',Arial,sans-serif;gap:7px}
+.legend-heading{font-size:11px;letter-spacing:.035em}
+.map-legend summary{font:500 14px/1.3 'Afacad',Arial,sans-serif;min-height:44px;padding-block:12px}
+.map-legend summary>span{font-size:12px}
+.map-legend fieldset label{font:400 14px/1.3 'Afacad',Arial,sans-serif;min-height:44px}
+.legend-state-controls{font-size:13px}.legend-state-controls button{font-size:13px;min-height:44px}
+.country-map-controls button{width:44px;min-height:44px;border-radius:13px;font-size:20px}
+.map-city-shortcuts button{min-height:44px;font:500 14px/1.3 'Afacad',Arial,sans-serif}
+.map-foot{font:400 13px/1.5 'Afacad',Arial,sans-serif;gap:12px;padding-block:16px;flex-wrap:wrap}
+.map-foot a{text-underline-offset:3px;color:#0b5f78}
+.map-record strong{font-weight:500;font-size:18px;line-height:1.35}
+.map-record small,.map-record-type{font:400 13px/1.4 'Afacad',Arial,sans-serif}
+.map-record .record-summary{font:400 15px/1.4 'Afacad',Arial,sans-serif}
+.entry-statuses{gap:6px}.entry-status{font:500 12px/1.4 'Afacad',Arial,sans-serif;padding:5px 8px;border-radius:8px}
+.entry-status[data-event-evidence]{color:#0b5f78;border-color:#b8cdd2;background:#f1f7f8}
+.entry-status[data-event-evidence^="Announced"],.entry-status[data-event-evidence^="Call"]{color:#753318;background:#fde9dc;border-color:#d8ad8e}
+.atlas-profile p{font-size:17px;line-height:1.6}.profile-facts{gap:16px}.profile-facts dt{font-size:13px}.profile-facts dd{font-size:16px;line-height:1.5}
+.profile-connection button{font:500 15px/1.35 'Afacad',Arial,sans-serif;min-height:44px}
+.profile-connection small,.profile-connection>a{font:400 13px/1.4 'Afacad',Arial,sans-serif}
+.directory-column h2{font-size:20px;line-height:1.35}
+.directory-year-note,.column-empty{color:#555;font:400 14px/1.5 'Afacad',Arial,sans-serif}
+[data-category-count=Publications] circle{fill:#b4c9bc!important}
+.category-count-key>span:nth-of-type(6) i{background:#b4c9bc!important}
+@media(max-width:700px){.atlas-introduction p{font-size:17px}.map-top{flex-wrap:wrap;gap:12px}.map-search{flex-basis:100%;order:2}.map-view-switch{margin-left:auto}.map-filter-row{gap:10px}.type-toggles{flex-basis:100%}.map-legend{width:158px;padding:10px;max-width:46%}.category-count-key{font-size:11px}.map-caption{max-width:60%;padding:10px 12px}.map-caption b{font-size:20px}.map-caption span{font-size:12px}.map-floating-profile{max-width:calc(100% - 200px)}.map-foot{font-size:12px}.atlas-brand{padding-inline:12px}}
+@media(max-width:420px){.atlas-introduction h1{font-size:24px}.atlas-introduction>div{font-size:14px}.type-toggles label{font-size:13px;padding-inline:9px}.map-view-switch button{padding-inline:10px}.map-caption{max-width:58%}.map-floating-profile{display:none}.map-results{padding:16px}}
+@media(prefers-reduced-motion:reduce){.map-brand *, .atlas-brand *{scroll-behavior:auto;transition:none!important;animation:none!important}}
+
+/* Preserve the approved cream page / pale-blue Nigeria; contain content width. */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body>header{gap:24px;flex-wrap:wrap;min-width:0}
+body>header nav{min-width:0;max-width:100%;flex-wrap:wrap;gap:14px 22px}
+body>header .lab{white-space:normal;min-width:0}
+main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-width:100%}
+.map-top{min-width:0;flex-wrap:wrap}.map-top>*{min-width:0}
+.map-search{flex:1 1 260px;max-width:100%}
+.map-view-switch{flex:0 1 auto;max-width:100%;flex-wrap:wrap}
+.map-filter-row{min-width:0;flex-wrap:wrap}.map-filter-row>*{min-width:0;max-width:100%}
+.map-atlas .map-body.with-results{grid-template-columns:minmax(0,1fr) minmax(0,350px)}
+.nigeria-gis,.nigeria-state-map{display:block;width:100%;max-width:100%;height:100%}
+.map-city-shortcuts{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+.directory-board{width:100%;max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain}
+.directory-columns{width:max-content;min-width:100%;grid-template-columns:repeat(5,minmax(225px,1fr))}
+.map-record,.profile-facts dd,.profile-connection,.directory-evidence,.map-foot{min-width:0;overflow-wrap:anywhere}
+.map-record{max-width:100%;text-align:left}
+.map-foot{display:flex;flex-wrap:wrap;align-items:center}.map-foot>span{min-width:0;max-width:100%}
+.map-more[open]{max-width:min(320px,calc(100vw - 40px));right:0}
+[data-category-count=Publications] circle{fill:#171717!important}
+[data-category-count=Publications] text{fill:#fffaf3}
+.category-count-key>span:nth-of-type(6) i{background:#171717!important}
+@media(max-width:850px){.map-atlas .map-body.with-results{grid-template-columns:minmax(0,1fr)}.directory-columns{grid-template-columns:repeat(5,minmax(225px,75vw))}.map-results{width:100%}}
+@media(max-width:500px){body>header{gap:12px;padding:16px 12px}.brand{font-size:26px}body>header nav{flex-basis:100%}.lab{margin-left:0}.map-top{gap:10px}.map-view-switch{margin-left:0}.map-filter-row .directory-year{margin:0}.map-atlas{padding-inline:0}.map-foot{align-items:flex-start}}
+
+/* No flash of legacy controls before the mounted UI contract removes nodes. */
+.atlas-brand #map-zoom-in,.atlas-brand #map-zoom-out,.atlas-brand #map-country-reset,.atlas-brand .country-map-controls{display:none!important}
+.state-entry-count [data-expand-state-count] > circle{fill:#67617d!important;stroke:#fffaf3}
+.state-entry-count [data-expand-state-count] > text{fill:#fffaf3!important}
+@media(max-width:700px){
+  .map-stage .map-legend{position:static;inset:auto;width:100%;max-width:none;max-height:none;overflow:visible;margin:0;padding:12px 14px;border-radius:0;box-shadow:none;border-inline:0}
+  .map-stage .category-count-key{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12px}
+  .map-stage .category-count-key .legend-heading{flex-basis:100%;padding-bottom:0}
+  .map-stage .map-legend details{margin-top:8px}
+  .map-stage .map-legend fieldset{grid-template-columns:repeat(2,minmax(0,1fr));max-height:220px}
+  .map-stage .map-legend fieldset label{min-width:0}
+}
+
+/* Atlas refinement: approved Vic’Adex palette and typography, clearer hierarchy. */
+.atlas-introduction{max-width:850px;padding:20px 0 28px}
+.atlas-introduction .atlas-kicker{display:block;margin-bottom:14px;font-size:11px;letter-spacing:.12em;color:#0b5f78}
+.atlas-introduction h1{font-size:clamp(28px,3.6vw,44px);line-height:1.18;margin-bottom:14px}
+.atlas-introduction p{max-width:65ch;font-size:18px;line-height:1.55;margin-bottom:16px}
+.atlas-introduction>div{gap:20px}.atlas-introduction a{text-decoration-thickness:1px}
+.map-top{padding:16px 0;border-top:1px solid #e8e1d8;margin-bottom:12px;gap:18px}
+.map-view-switch{padding:4px;background:#eee7dc;border-radius:16px;gap:3px}
+.map-view-switch button{border-color:transparent;background:transparent;min-height:44px;transition:background .15s ease,color .15s ease}
+.map-view-switch button[aria-pressed=true]{background:#0b5f78;color:#fffaf3;box-shadow:0 2px 5px #17171712}
+.map-search input{border:1px solid #d8cfc3!important;box-shadow:0 2px 8px #17171704}
+.map-search input:focus{border-color:#0b5f78!important}
+.type-toggles{gap:6px}.type-toggles label{border-radius:12px!important;min-height:44px;display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+.type-toggles label:has(input:checked){background:#fffdf9;border-color:#d8cfc3;color:#171717}
+.type-toggles label:not(:has(input:checked)){opacity:.65}
+#browse-records{background:#0b5f78;color:#fffaf3;border-color:#0b5f78;min-height:44px;border-radius:12px}
+#browse-records span{background:#ffffff20;color:#fffaf3;border-radius:7px;padding:2px 7px;margin-left:6px}
+.map-body{border-radius:22px;overflow:hidden;border:1px solid #e8e1d8}
+.map-record{transition:background .15s ease,border-color .15s ease;gap:9px!important;padding:18px!important}
+.map-record:hover{border-color:#0b5f78}.map-record strong{line-height:1.45}
+.map-record .record-summary{line-height:1.5}.map-results-heading{padding-bottom:12px;border-bottom:1px solid #e8e1d8;margin-bottom:14px}
+.map-caption{border-radius:14px;background:#171717e8;padding:14px 16px}
+.map-caption span{line-height:1.5;max-width:36ch}
+.map-city-shortcuts{scrollbar-width:thin;scrollbar-color:#d8cfc3 transparent}
+.map-city-shortcuts button[aria-pressed=true]{background:#0b5f78;color:#fffaf3;border-color:#0b5f78}
+@media(max-width:700px){.atlas-introduction{padding:12px 0 22px}.atlas-introduction h1{font-size:29px}.atlas-introduction p{font-size:17px}.map-top{gap:12px}.map-view-switch{margin-left:auto}.map-caption{padding:10px 12px}.map-caption span{font-size:11px}.map-body{border-radius:18px}.map-stage .map-legend{border-radius:0}.map-filter-row{padding-bottom:14px}}
+@media(prefers-reduced-motion:reduce){.map-record,.map-view-switch button{transition:none}}
+
+/* Upper-left state selector; draggable desktop key stays separate. */
+.map-state-filter{position:absolute;top:16px;left:16px;z-index:10;width:210px;max-width:calc(100% - 32px);padding:12px;background:#fffaf3f5;color:#171717;border:1px solid #e8e1d8;border-radius:16px;box-shadow:0 4px 16px #0002}
+.map-state-filter>label{display:grid;font-size:13px;gap:5px}.map-state-filter select{width:100%;min-height:44px}.map-state-filter summary{cursor:pointer;min-height:44px;padding-top:12px;font-size:13px}.map-state-filter fieldset{display:grid;max-height:230px;overflow:auto;border:0;padding:0}.map-state-filter fieldset label{min-height:44px;font-size:14px;display:flex;align-items:center;gap:8px}.map-state-filter summary span{float:right}
+#legend-drag{touch-action:none;cursor:grab;width:100%;min-height:44px;font-size:12px;margin-bottom:8px}#legend-position-reset{font-size:11px;margin-bottom:8px}
+.map-city-shortcuts small{align-self:center;white-space:nowrap;color:#555;font-size:12px;padding:0 8px}
+#surprise-entry{border-color:#0b5f78;color:#0b5f78}
+.nigeria-state:not(.hidden-state) path{fill:var(--state-fill,#eee7dc);stroke:var(--state-border,#315766);stroke-width:1.25;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.nigeria-state:not(.hidden-state):hover path,.nigeria-state:not(.hidden-state):focus path,.nigeria-state:not(.hidden-state).selected path{fill:var(--state-fill,#eee7dc);stroke:#e94f27;stroke-width:2.5}
+.boundaries-hidden .nigeria-state:not(.hidden-state) path{stroke:transparent}
+.boundaries-hidden .nigeria-state:not(.hidden-state).selected path,.boundaries-hidden .nigeria-state:not(.hidden-state):focus path{stroke:#e94f27}
+.nigeria-state .state-name,.nigeria-state.selected .state-name{fill:#171717;stroke:#fffaf3;stroke-width:2}
+.nigeria-state.frequency-high .state-name{fill:#fffaf3;stroke:#0b5f78}
+.map-frequency-key{border-top:1px solid #d9d2c8;margin-top:10px;padding-top:4px}
+.map-frequency-key summary{color:#171717;font-size:11px}
+.frequency-swatches{display:flex;flex-wrap:wrap;gap:6px;padding-top:6px}
+.frequency-swatches span{display:grid;gap:4px;flex:1;min-width:24px;font-size:9px;color:#333;text-align:center}
+.frequency-swatches i{height:12px;border:1px solid #315766;border-radius:3px}
+.map-frequency-key p{font-size:10px;line-height:1.4;color:#555;margin:8px 0 0}
+@media(max-width:700px){.map-state-filter{position:static;max-width:none;width:100%;border-radius:0;box-shadow:none;border-inline:0}.map-stage{display:flex;flex-direction:column}.map-state-filter{order:-1}.map-caption{position:static;max-width:none;border-radius:0}#legend-drag,#legend-position-reset{display:none}}
