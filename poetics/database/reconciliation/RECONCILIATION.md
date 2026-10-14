@@ -33,6 +33,12 @@ The original database artifact has a different serialization/byte hash. A recons
 
 This does not activate the GPT Action or make the preview SQL-backed. SQL reader authorization/server secrets/deployment/Builder checks remain pending. Merge only reconciliation scripts/docs into the database workflow after review; do not copy this branch's inherited older app files over main/Sites.
 
+## Provider-history reconciliation recovered
+
+Drive version-history reads now succeed through the connector. The exact10:11:46UTC revision `0B_RHNWbQWCpUQkY3SkVUeEJEalVjVFRHcnJXelA0dWhxdExrPQ` was read directly; its152825characters/153555UTF8bytes hash exactly matches the database-reported raw ledger manifest `b24cffd7c301cb92692914cd4e866da11560c3979a008cdcdfc738442047186a`. The current14:30:38UTC revision `0B_RHNWbQWCpUT003aC9ySHZGWVRDcDhtK29yVTBTV0l2MDNBPQ` preserves the entire old text prefix and appends five top-level run blocks. No prior text was removed/changed in this source comparison. `history-reconciliation-report.json` records actual revisions, sizes, hash and headings; it contains no ledger bodies.
+
+This resolves the branch README's prior Drive identity/revision access gap for these two exact revisions only. The database still has to capture/import the newer revision and verify normalized sections/runs/queries/status decisions. Newer ledger contributions after this checkpoint require another fresh revision read/rebase, not reuse of this report as authority. No second canonical ledger created or old database capture rewritten.
+
 ## Validation and limits
 
 `test-reconciliation.mjs` passes comparison counts/unchanged IDs, multiset/duplicate fixtures,235-position detection, no destructive/permission statements and current capture hash/size. All22 source blob IDs are in the ledger; report includes full per-edge move fingerprints. SQL is prepared, **not executed or database-parsed** here: no authenticated Supabase/SQL connection, psql/Deno/runtime database access or PostgreSQL parser is available. Stop on any live divergence; do not force counts to match.
