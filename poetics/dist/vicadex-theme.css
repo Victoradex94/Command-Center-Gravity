@@ -312,3 +312,10 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .atlas-view-context>span:first-child{flex:1 1 200px;overflow-wrap:anywhere}
 .atlas-view-context button{min-height:36px;border-radius:12px;color:#0b5f78}
 .atlas-view-context input{width:100%;min-width:0;box-sizing:border-box}
+.map-city-shortcuts{display:flex;flex-wrap:wrap;gap:7px;overflow:visible;min-width:0}
+.top-city-heading{flex-basis:100%;font-size:12px;color:#454f55;font-weight:500}
+.map-city-shortcuts button{white-space:normal;overflow-wrap:anywhere}
+.map-city-shortcuts strong{font-weight:600}
+.top-city-empty{font-size:12px;color:#454f55}
+.map-shortcut-actions{display:flex;gap:8px;flex-wrap:wrap;background:#fffaf3;padding:8px 12px;border-top:1px solid #e8e1d8}
+.map-shortcut-actions button{min-height:38px;border-radius:12px;color:#0b5f78}
