@@ -322,3 +322,6 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .top-city-empty{font-size:12px;color:#454f55}
 .map-shortcut-actions{display:flex;gap:8px;flex-wrap:wrap;background:#fffaf3;padding:8px 12px;border-top:1px solid #e8e1d8}
 .map-shortcut-actions button{min-height:38px;border-radius:12px;color:#0b5f78}
+
+.urban-layer-status{min-height:460px;display:grid;place-content:center;text-align:center;color:#fffaf3;padding:24px}
+.urban-city-label{cursor:pointer}.urban-city-label .city-hit{fill:transparent}.urban-city-label text{font-size:11px;font-weight:700;fill:#15343c;paint-order:stroke;stroke:#fffaf3;stroke-width:3px;stroke-linejoin:round}.urban-city-label .urban-city-count{font-size:9px;font-weight:400}.urban-city-label:focus .city-hit,.urban-city-label.selected .city-hit{stroke:#e94f27;stroke-width:1.5;vector-effect:non-scaling-stroke}

@@ -4,8 +4,8 @@
     "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.bd53dd9e2194.css",
-    "sha256": "bd53dd9e2194def26745f2ebf8d4675110eabf30643d646edf2429faab3a65dd"
+    "file": "vicadex-theme.56a7dd358704.css",
+    "sha256": "56a7dd3587042da7a9583212a6b56bb2bd487214a90b31a910f5b1685f828fdf"
   },
   "atlas.js": {
     "file": "atlas.098a181b5d31.js",
@@ -63,13 +63,17 @@
     "file": "osm-state-locators.aee0b5e6db37.js",
     "sha256": "aee0b5e6db3770284c6856d3a9e4c9bbd6c724bd961907ac98d12acbfe0613a4"
   },
-  "urban-extents.js": {
-    "file": "urban-extents.65200cbd4d76.js",
-    "sha256": "65200cbd4d76485409cf6d4bba37f9c22a3a96868bcc5217b753ed5121293a98"
-  },
   "geography-registry.js": {
     "file": "geography-registry.4fdc196409b5.js",
     "sha256": "4fdc196409b52fc6716df9462d5593220d4f2d51fbe4a3e54b711f2667e7030b"
+  },
+  "state-urban-manifest.js": {
+    "file": "state-urban-manifest.e3b55e4d044b.js",
+    "sha256": "e3b55e4d044b205e875326dab04290704c9219c7253e52dc2c1b6393dc3d8afe"
+  },
+  "state-urban-map.js": {
+    "file": "state-urban-map.ca6124c10f2f.js",
+    "sha256": "ca6124c10f2f12d6a9e74ce5625b63f7bdb032b2c76659f1e1d4023e70f4bd3c"
   },
   "state-city-map.js": {
     "file": "state-city-map.644a0d9c2016.js",
@@ -96,8 +100,8 @@
     "sha256": "73065d977671c97cf2b1b0a18ebdff20e77844dd5eb3530b565806c82e9cf7c2"
   },
   "directory.js": {
-    "file": "directory.9440637f104c.js",
-    "sha256": "9440637f104ce492d0396983c6162d8d18ab24211c2f825367abb293023e0a35"
+    "file": "directory.390cc0e6f8c7.js",
+    "sha256": "390cc0e6f8c7c72074155145675b64cde318de8a422165f70c684b4e96c20fa0"
   },
   "contribute.js": {
     "file": "contribute.3543a5e295e9.js",
