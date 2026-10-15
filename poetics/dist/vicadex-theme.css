@@ -327,3 +327,8 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .urban-city-label{cursor:pointer}.urban-city-label .city-hit{fill:transparent}.urban-city-label text{font-size:11px;font-weight:700;fill:#15343c;paint-order:stroke;stroke:#fffaf3;stroke-width:3px;stroke-linejoin:round}.urban-city-label .urban-city-count{font-size:9px;font-weight:400}.urban-city-label:focus .city-hit,.urban-city-label.selected .city-hit{stroke:#e94f27;stroke-width:1.5;vector-effect:non-scaling-stroke}
 
 .map-atlas #nigeria-map .state-urban-gis{background:#171717}.state-urban-gis .state-city-heading{fill:#fffaf3}.urban-extent[aria-disabled="true"],.urban-city-label[aria-disabled="true"]{opacity:.4;cursor:default}.urban-extent[aria-disabled="true"]:hover{fill:#216c78;stroke:#245962;stroke-width:.55}.urban-back-state{display:block;margin:10px 16px;min-height:40px}.map-stage:has(.state-urban-gis)>.map-caption{position:static;background:#fffaf3;color:#182a32}
+
+/* Persistent map nameplate: reserved top-left row, never over geography or controls. */
+.map-atlas .map-stage>.map-caption.atlas-nameplate{position:relative;inset:auto;order:-2;z-index:0;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:12px 16px;background:#171717;color:#fffaf3;border:0;border-bottom:1px solid #ffffff20;border-radius:0;box-shadow:none;pointer-events:auto;overflow-wrap:anywhere;}
+.map-atlas .atlas-nameplate>span{color:#d4cec4;font-size:12px;line-height:1.4;margin:0 0 4px;}
+.map-atlas .atlas-nameplate>b{display:block;color:#fffaf3;font-family:'Comfortaa',Arial,sans-serif;font-size:clamp(20px,2vw,26px);font-weight:500;line-height:1.35;}
