@@ -9,9 +9,19 @@ def asset(match):
     name=re.sub(r'\.[a-f0-9]{12}(?=\.(?:js|css)$)','',name)
     source=dist/name
     if not source.exists():raise RuntimeError('Missing asset '+name)
-    digest=hashlib.sha256(source.read_bytes()).hexdigest()
+    payload=source.read_bytes()
+    # Compact pure JSON assignments for delivery; retain readable canonical sources.
+    if source.suffix=='.js':
+        data=re.fullmatch(r'(window\.\w+\s*=)\s*([\s\S]*?);?\s*',source.read_text())
+        if data:
+            try:
+                value=json.loads(data[2].removesuffix(';'))
+                payload=(data[1]+json.dumps(value,ensure_ascii=False,separators=(',',':'))+';\n').encode()
+            except json.JSONDecodeError:
+                pass
+    digest=hashlib.sha256(payload).hexdigest()
     stem=source.stem+'.'+digest[:12]+source.suffix
-    (dist/stem).write_bytes(source.read_bytes())
+    (dist/stem).write_bytes(payload)
     mapping[name]=dict(file=stem,sha256=digest)
     return attr+'="'+stem+'"'
 html=re.sub(r'(src|href)="([^"#]+\.(?:js|css)(?:\?[^"#]*)?)"',asset,html)
