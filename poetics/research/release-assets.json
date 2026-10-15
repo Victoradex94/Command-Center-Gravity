@@ -4,8 +4,8 @@
     "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.6a962d55a672.css",
-    "sha256": "6a962d55a6729474ff10634d258c8ed8af1197eaefa7a943e76be55332012cf0"
+    "file": "vicadex-theme.669ce2527b2a.css",
+    "sha256": "669ce2527b2aa58cd870cdccbd6de6aec148f89cda46c28692efc45357b522d0"
   },
   "atlas.js": {
     "file": "atlas.3cbc35bb4861.js",
@@ -56,8 +56,8 @@
     "sha256": "554e1d97a522d5282a40d2aac935010f878250e508e65e5c710d96f7e4e92a5f"
   },
   "nigeria-states-map.js": {
-    "file": "nigeria-states-map.26a57839c159.js",
-    "sha256": "26a57839c159f3be3db9e95f76089c6743b9c46208ce6c2aa1d56a74a0825d24"
+    "file": "nigeria-states-map.1e5bb3681860.js",
+    "sha256": "1e5bb36818605e7381827c55b02405c3504c6ad811afb2717f40f3e893bd2b06"
   },
   "osm-state-locators.js": {
     "file": "osm-state-locators.aee0b5e6db37.js",
@@ -72,8 +72,8 @@
     "sha256": "e3b55e4d044b205e875326dab04290704c9219c7253e52dc2c1b6393dc3d8afe"
   },
   "state-urban-map.js": {
-    "file": "state-urban-map.2f44f38c03b3.js",
-    "sha256": "2f44f38c03b38de1984b53878946bae1dc9e7d2579a4e176292dcb3b4f0499b1"
+    "file": "state-urban-map.aa800ae2c7d9.js",
+    "sha256": "aa800ae2c7d94ecad2cac4aba3e98b1a14340f8e9038834e9d11b306b8ea30b3"
   },
   "state-city-map.js": {
     "file": "state-city-map.644a0d9c2016.js",
@@ -96,12 +96,12 @@
     "sha256": "b6d6d9ca434394c34e1d0bd215dc7452ef9f9870e774c4c8939340510676b5b0"
   },
   "atlas-navigation.js": {
-    "file": "atlas-navigation.73065d977671.js",
-    "sha256": "73065d977671c97cf2b1b0a18ebdff20e77844dd5eb3530b565806c82e9cf7c2"
+    "file": "atlas-navigation.4edd4adecc88.js",
+    "sha256": "4edd4adecc88a32dda512f85e0a4a0f5a6c363e3cb3e6cd84f804fe343d8c73e"
   },
   "directory.js": {
-    "file": "directory.aa00f030f27f.js",
-    "sha256": "aa00f030f27f9aec68f449e06d82a7d9539b63151034d0eff9955bc3ce868a4c"
+    "file": "directory.5a0a4a311a70.js",
+    "sha256": "5a0a4a311a70c8dd483b3e49d2fe897897c84b7b1e4bde62d94ce6e0323a324a"
   },
   "contribute.js": {
     "file": "contribute.3543a5e295e9.js",

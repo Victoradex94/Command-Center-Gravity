@@ -332,3 +332,64 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .map-atlas .map-stage>.map-caption.atlas-nameplate{position:relative;inset:auto;order:-2;z-index:0;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:12px 16px;background:#171717;color:#fffaf3;border:0;border-bottom:1px solid #ffffff20;border-radius:0;box-shadow:none;pointer-events:auto;overflow-wrap:anywhere;}
 .map-atlas .atlas-nameplate>span{color:#d4cec4;font-size:12px;line-height:1.4;margin:0 0 4px;}
 .map-atlas .atlas-nameplate>b{display:block;color:#fffaf3;font-family:'Comfortaa',Arial,sans-serif;font-size:clamp(20px,2vw,26px);font-weight:500;line-height:1.35;}
+
+/* V62: one coordinated filter card, readable entries, and a clear geographic path. */
+.atlas-introduction{padding:12px 0 18px;max-width:850px}
+.atlas-introduction .atlas-kicker{margin-bottom:6px;letter-spacing:.06em}
+.atlas-introduction h1{font-size:clamp(26px,3vw,36px);margin:8px 0}
+.atlas-introduction p{font-size:17px;line-height:1.5;margin:0 0 12px;max-width:65ch}
+.atlas-release{opacity:.7}.map-top{padding:12px 0;margin:0;gap:12px}.map-filter-row{margin:0;padding:8px 0;gap:8px}
+.map-filter-row #browse-records{margin-left:auto}.map-view-switch{border-radius:14px}
+.atlas-view-context{padding:4px 0 12px;gap:8px;font-size:14px}
+.active-filter-chips{display:flex;flex:1 1 240px;gap:6px;flex-wrap:wrap;min-width:0}
+.active-filter-chips>span{padding:8px 0;color:#555}
+.atlas-view-context .active-filter-chips button{background:#eee7dc;border:1px solid #dfd7cc;color:#343434;min-height:38px;padding:7px 10px;font:400 14px 'Afacad',Arial,sans-serif;white-space:normal;max-width:100%;overflow-wrap:anywhere}
+.active-filter-chips button span{margin-left:6px;color:#0b5f78}.atlas-view-context #atlas-copy-link{background:transparent;border-color:transparent;text-decoration:underline;text-underline-offset:3px}
+.map-atlas .map-stage>.map-state-filter,.map-atlas .map-filter-row>.map-state-filter{border-radius:0;padding:12px 16px;gap:10px 14px;background:#fffaf3;border:0;border-bottom:1px solid #e8e1d8;align-items:flex-start}
+.atlas-filter-heading{display:flex;align-items:center;justify-content:space-between;flex:1 1 100%;gap:10px;min-width:0}
+.atlas-filter-heading button{min-height:40px;border:0;background:transparent;color:#0b5f78;padding:6px 0;font:500 15px 'Afacad',Arial,sans-serif}
+#toggle-map-filters{display:flex;gap:10px;align-items:center}#toggle-map-filters>span:first-child{font-size:12px;color:#666;font-weight:400}
+.map-state-filter.filters-collapsed>:not(.atlas-filter-heading){display:none!important}
+.map-atlas .map-state-filter>label{flex:1 1 140px;display:flex;flex-direction:column;gap:5px;font-size:12px;color:#555;margin:0}
+.map-atlas .map-state-filter select{min-height:42px;padding:8px 10px;border-radius:11px;background:#fffdf9;color:#171717;font:400 15px 'Afacad',Arial,sans-serif;border:1px solid #d9d1c5}
+.map-state-filter .map-category-filter{flex:1 1 190px!important;max-width:none!important}
+.map-category-filter summary{min-height:42px;font-size:12px;padding:0;list-style:none;color:#555}
+.map-category-filter summary b{display:block;font:400 15px 'Afacad',Arial,sans-serif;color:#171717;border:1px solid #d9d1c5;border-radius:11px;padding:10px;margin-top:5px;background:#fffdf9;overflow-wrap:anywhere}
+.map-category-filter[open]{flex-basis:100%!important}.map-category-filter .type-toggles{padding-top:8px}
+.atlas-geography-path{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;background:#171717;color:#d4cec4;padding:8px 16px;font-size:14px;min-width:0}
+.atlas-geography-path button{border:0;background:transparent;color:#fffaf3;min-height:38px;padding:4px 0;text-decoration:underline;text-underline-offset:4px;font:400 14px 'Afacad',Arial,sans-serif}
+.atlas-geography-path [aria-current]{color:#fffaf3;overflow-wrap:anywhere}.atlas-geography-path>span[aria-hidden]{opacity:.5}
+.map-atlas #nigeria-map{height:auto;min-height:0;background:#171717}
+.map-atlas #nigeria-map>.nigeria-gis{width:100%;height:auto;aspect-ratio:744/600}
+.state-category-counts{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:12px 10px;background:#171717}
+.state-category-counts button{display:flex;flex:0 1 76px;min-width:48px;align-items:center;flex-direction:column;gap:6px;border:0;background:transparent;padding:0 2px 4px;color:#fffaf3;font:400 12px 'Afacad',Arial,sans-serif;cursor:pointer}
+.category-count-circle{display:grid;place-items:center;width:46px;height:46px;border:1px solid #fffaf3;border-radius:50%;background:var(--category-fill);color:var(--category-ink);font:600 20px 'Afacad',Arial,sans-serif}
+.state-category-counts button:hover .category-count-circle{box-shadow:0 0 0 3px #ffffff26}
+.urban-city-label text{font-size:14px}.urban-city-label .urban-city-count{font-size:11px}
+.map-results-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:16px}.map-results-heading button{min-width:42px;min-height:42px}
+.map-atlas .atlas-entry-card{background:#fffdf9;border:1px solid #e5ded4;border-radius:16px;margin:0 0 12px;overflow:hidden;min-width:0;transition:border-color .15s ease,box-shadow .15s ease}
+.atlas-entry-card:hover{border-color:#8baeb9;box-shadow:0 4px 16px #17171708}
+.map-atlas .atlas-entry-card .map-record{display:flex;flex-direction:column;align-items:flex-start;width:100%;border:0!important;margin:0;border-radius:0!important;background:transparent;padding:16px!important;gap:7px!important;text-align:left}
+.atlas-entry-card .map-record>*{max-width:100%;overflow-wrap:anywhere}.atlas-entry-card .map-record strong{font-size:17px;line-height:1.4;color:#171717}
+.atlas-entry-card .map-record-type{color:#0b5f78;display:flex;align-items:center;gap:6px;font-size:12px}
+.atlas-entry-card .record-location{font-size:14px;color:#454f55}.atlas-entry-card .record-date{font-size:12px;color:#666}
+.atlas-entry-card .entry-statuses{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.atlas-entry-card .entry-status{font-size:11px;line-height:1.45;padding:3px 6px;border-color:#e8e1d8;background:#f7f3ed}
+.entry-card-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px 10px;font-size:13px;color:#666}
+.entry-card-footer a,.entry-card-footer button{color:#0b5f78;min-height:38px;display:inline-flex;align-items:center;background:transparent;border:0;padding:4px 0;font:400 13px 'Afacad',Arial,sans-serif}
+.entry-card-footer a{text-decoration:underline;text-underline-offset:3px}.entry-card-footer button{white-space:normal;text-align:right}
+.atlas-profile>.profile-monogram{min-height:0;height:76px;max-width:110px;margin:0 0 14px;font-size:26px}.atlas-profile>.profile-monogram small{font-size:11px}
+.atlas-profile h2{font-size:25px;line-height:1.3}.profile-facts{font-size:14px}.directory-evidence summary,.profile-years summary{min-height:42px;display:flex;align-items:center;cursor:pointer}
+.map-atlas :is(button,a,select,summary,input):focus-visible{outline:2px solid #e94f27;outline-offset:3px}
+.top-city-heading,.top-city-empty{color:#454f55!important;font-size:13px}.map-city-shortcuts{background:#fffaf3!important;padding:12px 16px;gap:8px}.map-city-shortcuts button{min-height:42px}
+.map-shortcut-actions{padding:10px 16px}.map-heat-scale{padding:12px 16px}.heat-scale-bar small{font-size:11px}.map-heat-scale p{font-size:11px;line-height:1.45}
+@media(max-width:700px){
+ .atlas-introduction{padding:8px 0 14px}.atlas-introduction h1{font-size:27px}.atlas-introduction p{font-size:16px}.atlas-introduction>div{font-size:13px;gap:16px}
+ .map-atlas .map-state-filter>label{flex:1 1 calc(50% - 14px)}.map-state-filter .map-category-filter{flex-basis:100%!important}
+ .atlas-view-context{gap:4px}.active-filter-chips{flex-basis:100%}.map-stage .map-legend{border-top:1px solid #e8e1d8}
+ .map-atlas .map-results{padding:14px;max-height:none;overflow:visible;border-top:1px solid #e8e1d8;box-sizing:border-box}
+ .state-category-counts{gap:5px;padding:10px 5px}.state-category-counts button{flex:1 1 48px;max-width:70px;font-size:10px;overflow-wrap:anywhere}.category-count-circle{width:44px;height:44px;font-size:18px}
+ .map-atlas .map-stage>.map-caption.atlas-nameplate{padding:12px 14px}.atlas-geography-path{padding:6px 14px}
+ .directory-columns{grid-template-columns:repeat(5,minmax(250px,82vw))}.directory-column{min-width:0}
+}
+@media(prefers-reduced-motion:reduce){.atlas-entry-card{transition:none}}
