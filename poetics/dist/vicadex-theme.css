@@ -325,3 +325,5 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 
 .urban-layer-status{min-height:460px;display:grid;place-content:center;text-align:center;color:#fffaf3;padding:24px}
 .urban-city-label{cursor:pointer}.urban-city-label .city-hit{fill:transparent}.urban-city-label text{font-size:11px;font-weight:700;fill:#15343c;paint-order:stroke;stroke:#fffaf3;stroke-width:3px;stroke-linejoin:round}.urban-city-label .urban-city-count{font-size:9px;font-weight:400}.urban-city-label:focus .city-hit,.urban-city-label.selected .city-hit{stroke:#e94f27;stroke-width:1.5;vector-effect:non-scaling-stroke}
+
+.map-atlas #nigeria-map .state-urban-gis{background:#171717}.state-urban-gis .state-city-heading{fill:#fffaf3}.urban-extent[aria-disabled="true"],.urban-city-label[aria-disabled="true"]{opacity:.4;cursor:default}.urban-extent[aria-disabled="true"]:hover{fill:#216c78;stroke:#245962;stroke-width:.55}.urban-back-state{display:block;margin:10px 16px;min-height:40px}.map-stage:has(.state-urban-gis)>.map-caption{position:static;background:#fffaf3;color:#182a32}

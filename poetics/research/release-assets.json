@@ -4,8 +4,8 @@
     "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.56a7dd358704.css",
-    "sha256": "56a7dd3587042da7a9583212a6b56bb2bd487214a90b31a910f5b1685f828fdf"
+    "file": "vicadex-theme.06b3c98625e7.css",
+    "sha256": "06b3c98625e7a2ae1e0889e90c2c49027f75afae43c20f7f95c7e2513b7e167f"
   },
   "atlas.js": {
     "file": "atlas.098a181b5d31.js",
@@ -56,8 +56,8 @@
     "sha256": "554e1d97a522d5282a40d2aac935010f878250e508e65e5c710d96f7e4e92a5f"
   },
   "nigeria-states-map.js": {
-    "file": "nigeria-states-map.ef0e2e8a3224.js",
-    "sha256": "ef0e2e8a32247e66bec5ca65cab799c1a196e21adb0902edb331ee1669896f97"
+    "file": "nigeria-states-map.26a57839c159.js",
+    "sha256": "26a57839c159f3be3db9e95f76089c6743b9c46208ce6c2aa1d56a74a0825d24"
   },
   "osm-state-locators.js": {
     "file": "osm-state-locators.aee0b5e6db37.js",
@@ -72,8 +72,8 @@
     "sha256": "e3b55e4d044b205e875326dab04290704c9219c7253e52dc2c1b6393dc3d8afe"
   },
   "state-urban-map.js": {
-    "file": "state-urban-map.ca6124c10f2f.js",
-    "sha256": "ca6124c10f2f12d6a9e74ce5625b63f7bdb032b2c76659f1e1d4023e70f4bd3c"
+    "file": "state-urban-map.2f44f38c03b3.js",
+    "sha256": "2f44f38c03b38de1984b53878946bae1dc9e7d2579a4e176292dcb3b4f0499b1"
   },
   "state-city-map.js": {
     "file": "state-city-map.644a0d9c2016.js",
@@ -100,8 +100,8 @@
     "sha256": "73065d977671c97cf2b1b0a18ebdff20e77844dd5eb3530b565806c82e9cf7c2"
   },
   "directory.js": {
-    "file": "directory.390cc0e6f8c7.js",
-    "sha256": "390cc0e6f8c7c72074155145675b64cde318de8a422165f70c684b4e96c20fa0"
+    "file": "directory.2e5b184f7cbc.js",
+    "sha256": "2e5b184f7cbc2989abf176d66d81add9e5f55b4b76aaffadac427e0f8480648d"
   },
   "contribute.js": {
     "file": "contribute.3543a5e295e9.js",
