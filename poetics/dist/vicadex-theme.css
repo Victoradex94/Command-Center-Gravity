@@ -393,3 +393,13 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
  .directory-columns{grid-template-columns:repeat(5,minmax(250px,82vw))}.directory-column{min-width:0}
 }
 @media(prefers-reduced-motion:reduce){.atlas-entry-card{transition:none}}
+
+/* One icon language across filters, map counts, legend and records. */
+.map-category-filter .type-toggles .entry-icon{width:19px;height:19px;flex:0 0 19px;color:#171717}
+.category-count-key .category-key-item{display:flex;align-items:center;gap:8px;color:#332f2b}
+.category-key-icon{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border:1px solid #d7cfc3;border-radius:9px;background:var(--category-fill);color:var(--category-ink)}
+.category-key-icon .entry-icon{width:18px;height:18px;margin:0}
+.state-category-counts .category-count-circle{display:flex;flex-direction:column;justify-content:center;gap:0;line-height:1}
+.category-count-circle .entry-icon{width:16px;height:16px;margin:0;flex:none}
+.category-count-circle b{font-size:18px;line-height:20px;font-weight:600}
+.route-loading{padding:2rem;font-size:18px}

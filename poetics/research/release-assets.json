@@ -1,16 +1,4 @@
 {
-  "style.css": {
-    "file": "style.d60d49f9b4e0.css",
-    "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
-  },
-  "vicadex-theme.css": {
-    "file": "vicadex-theme.669ce2527b2a.css",
-    "sha256": "669ce2527b2aa58cd870cdccbd6de6aec148f89cda46c28692efc45357b522d0"
-  },
-  "atlas.js": {
-    "file": "atlas.3cbc35bb4861.js",
-    "sha256": "3cbc35bb4861312123381e535bdb8e0795631c8a6cce626bb046026a2005fc98"
-  },
   "engine.js": {
     "file": "engine.d45dd739b129.js",
     "sha256": "d45dd739b12955d0b02f59ae5640beeee1e5d05d3ef6e98490c4017359e34ce5"
@@ -31,9 +19,21 @@
     "file": "world.1efd030f1f57.js",
     "sha256": "1efd030f1f57d9120326436a27b350c104f8cfa47735e651215275f6b66c2055"
   },
-  "canonical-research.js": {
-    "file": "canonical-research.16c0f45ed24f.js",
-    "sha256": "16c0f45ed24f1c08ff25ee6bc1cddcb523c28c43df0e5c72b14d8b23ea567fe7"
+  "style.css": {
+    "file": "style.d60d49f9b4e0.css",
+    "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
+  },
+  "vicadex-theme.css": {
+    "file": "vicadex-theme.341e5f2d5c2f.css",
+    "sha256": "341e5f2d5c2f2d1b08dcefc3f624dd680e2431b970c4051490e10cd2fe840962"
+  },
+  "atlas.js": {
+    "file": "atlas.3cbc35bb4861.js",
+    "sha256": "3cbc35bb4861312123381e535bdb8e0795631c8a6cce626bb046026a2005fc98"
+  },
+  "canonical-research-runtime.js": {
+    "file": "canonical-research-runtime.461f102f40d6.js",
+    "sha256": "461f102f40d69a92ddd43f2cb6cec6bc90c0054546107433447fef45ec432fff"
   },
   "national-directory.js": {
     "file": "national-directory.9968b6c922fc.js",
@@ -72,16 +72,16 @@
     "sha256": "e3b55e4d044b205e875326dab04290704c9219c7253e52dc2c1b6393dc3d8afe"
   },
   "state-urban-map.js": {
-    "file": "state-urban-map.aa800ae2c7d9.js",
-    "sha256": "aa800ae2c7d94ecad2cac4aba3e98b1a14340f8e9038834e9d11b306b8ea30b3"
+    "file": "state-urban-map.ef1d750d27a1.js",
+    "sha256": "ef1d750d27a1beea2f55e73fcacc6a7528adcd958e0c2f4eadbeb3e221a8102a"
   },
   "state-city-map.js": {
     "file": "state-city-map.644a0d9c2016.js",
     "sha256": "644a0d9c201694141da1d925834cefe952fb512ed31ed6b01ea1a30ddea14000"
   },
   "atlas-icons.js": {
-    "file": "atlas-icons.42a2a8504cfb.js",
-    "sha256": "42a2a8504cfbb17dea31bb860a380606cac69c050f2e09876ddbf5565e07801c"
+    "file": "atlas-icons.2d8a4274555b.js",
+    "sha256": "2d8a4274555b19c3a281ba8d1df84fd352a4e928d684f084209eaeebac3df06e"
   },
   "atlas-audit.js": {
     "file": "atlas-audit.cdd3131a8bf3.js",
@@ -100,8 +100,8 @@
     "sha256": "4edd4adecc88a32dda512f85e0a4a0f5a6c363e3cb3e6cd84f804fe343d8c73e"
   },
   "directory.js": {
-    "file": "directory.5a0a4a311a70.js",
-    "sha256": "5a0a4a311a70c8dd483b3e49d2fe897897c84b7b1e4bde62d94ce6e0323a324a"
+    "file": "directory.608edb5b19a7.js",
+    "sha256": "608edb5b19a7bcd7b9755585d29ccfdbfa99cc836cfb6400a4e2568cbe20a22f"
   },
   "contribute.js": {
     "file": "contribute.3543a5e295e9.js",
@@ -111,8 +111,16 @@
     "file": "atlas-ui-guard.94d3156d05db.js",
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
+  "game-assets.js": {
+    "file": "game-assets.db95b115001a.js",
+    "sha256": "db95b115001ad678171b511ba2b4c2a35b614268c8f6c17c4014917c78149f1b"
+  },
+  "game-loader.js": {
+    "file": "game-loader.8db66b59d2cc.js",
+    "sha256": "8db66b59d2cc18d315959389c36c702d2024ce35885fb31d69e422b32efd158c"
+  },
   "app.js": {
-    "file": "app.def3ee9cb5ae.js",
-    "sha256": "def3ee9cb5ae5b2f2b914cf31037e71faf92052c48526230007205cf47e29d43"
+    "file": "app.85ebcdee1aeb.js",
+    "sha256": "85ebcdee1aeb763e5da0436bdba4489f672dc5b0843182b8975f871eec3d266a"
   }
 }
