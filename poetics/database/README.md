@@ -48,3 +48,34 @@ All 13 tables have RLS enabled with no policies or `anon`/`authenticated` grants
 - `004_restore_verified_artifact_bytes.sql`: transactional, SHA256-gated restoration for the four captured payloads; successfully run and read back against ordered chunks.
 
 Keep this branch private and staging-only. Store schema, migration and data-free audit SQL only. Never add credentials, connection strings, ledger dumps, CSV imports, private submissions or artifact payloads. No live WordPress change, public database/API, Sites publish or cutover is recorded.
+
+
+## Verified status checkpoint — 15 October 2026
+
+This checkpoint supersedes the earlier source pointers and inventory above; those figures remain as historical snapshots. The audits below were read-only. The canonical Drive ledger remains authoritative and no cutover is recorded.
+
+### Source state
+
+- Canonical Drive file: Poetics-Atlas-Working-Ledger.md, ID 13qDg2XVdUM5ZAbplLoeNT5X6hB89cnSq. The authenticated preview currently displays entries through DB082-20261015-CURRENT-DRIVE-AND-STAGING-AUDIT. Drive metadata says it was modified on 15 October, but no exact provider revision ID or byte-exact current Markdown export was obtained.
+- Two append artifacts must remain distinct. drive-ledger-append-20261015-0853 records the canonical file ID but is only an append payload. The normalized DB082 section is attached to drive-ledger-append-20261015-0911, whose recorded source URI contains a different Google Doc ID (1zuYwUn5O82BqqYiIc-A3exCGuypE_3GZIVsHStwDcsc). The current canonical preview contains DB082, but exact payload equality has not been established. Do not treat the 09:11 artifact as a byte-verified capture of the canonical file.
+- GitHub main HEAD: c840387909221dd16f3f92f460910b33ad9e9b7b. The current poetics/dist/atlas-data.json file was last changed at a221c05668739a15c0b1f664c5ab2d61bea6ebdd; the later main commits inspected change UI/release files, not that graph export.
+- GitHub poetics-staging remains at a221c05668739a15c0b1f664c5ab2d61bea6ebdd, 12 commits behind main at inspection; its tree lacks the retained-assets archive. The separate migration branch codex/poetics-supabase-migrations is at 5bb2cea52aa049044592379a91e887c1ef637fb0, 13 commits ahead and 11 behind main. Its six SQL scripts are migration/audit work, not proof that the canonical ledger has been fully reconciled.
+- The Sites preview was last observed as V55 with the five city shortcuts matching the inspected main feature. This is a feature/marker comparison only; no byte-for-byte GitHub-to-Sites sync is established.
+
+### Current Supabase staging audit
+
+Fresh read-only inventory for project tknahlnirtnanzqqvufb: 449 nodes, 31 aliases, 664 connections, 664 claims, 188 sources, 664 claim-source links, 7 artifacts, 504 artifact chunks, 198 ledger sections, 38 research runs, 91 search queries, 0 decisions and 8 audit events.
+
+All seven artifact payloads pass the database-internal byte/chunk/SHA256 reconstruction check. The 16 declared foreign keys are validated. All 664 connection endpoints and claim/source references resolve. These checks establish internal integrity, not completeness against the current Drive file. All 664 imported graph claims have NULL run_id; do not invent run associations. All 38 normalized runs and 91 query rows resolve internally, but decision and status history coverage against the current ledger remains open.
+
+RLS is enabled on all 13 poetics tables, with zero policies and no table grants observed for PUBLIC, anon, authenticated or service_role. This describes configured restrictions; API denial, a narrowly authorised application identity, and durable backup/recovery have not been demonstrated. Do not widen access as part of this checkpoint.
+
+### Open gates
+
+1. Obtain an exact current same-ID Drive export and revision metadata if available; reconcile the DB082 source-identity mismatch and preserve all newer text before any write.
+2. Finish full section/run/query/decision/status reconciliation without inferring claim-to-run links.
+3. Complete narrowly scoped authorized access and unauthorized-denial checks, plus a durable recovery/restore demonstration, without public exposure.
+4. Continue source-backed node and connection review. P012 (the MJC Echeruo / ANA Imo poetry-prize identity) remains open; the latest search found no new corroborating source, so no connection was added.
+5. Keep the retained archive and Sites preview as separate source states; do not assume branch or deployment synchronization.
+
+No database rows, access settings, Drive content, Sites content or live WordPress content were changed during this checkpoint.
