@@ -1,0 +1,1201 @@
+{
+  "scope": "39 explicit mapped cities in current composed Atlas cityStates; all location labels separately inventoried",
+  "sourceCommit": "5dddd6a73fca1f89895ed42e29c5dd3c4c0f95e0",
+  "sitesVersion": 57,
+  "uploadSha256": "71b11c3ffafcb69574befc8d28b1aae362b0f892c5151c597b60732e3ef5327c",
+  "uploadFeatureCount": 1714,
+  "nigeriaFeatureCount": 1465,
+  "rows": [
+    {
+      "city": "Aba",
+      "atlasState": "Abia",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.9",
+          "sourceName": "Aba",
+          "bbox": [
+            7.1982,
+            4.9326,
+            7.5115,
+            5.4876
+          ],
+          "positions": 78504,
+          "rings": 241
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Abakaliki",
+      "atlasState": "Ebonyi",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.17",
+          "sourceName": "Abakaliki",
+          "bbox": [
+            7.9252,
+            6.1859,
+            8.3173,
+            6.6187
+          ],
+          "positions": 114578,
+          "rings": 289
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Abeokuta",
+      "atlasState": "Ogun",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.29",
+          "sourceName": "Abeokuta",
+          "bbox": [
+            3.236,
+            7.0413,
+            3.4707,
+            7.2478
+          ],
+          "positions": 17579,
+          "rings": 34
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.29",
+          "sourceName": "Abeokuta",
+          "bbox": [
+            3.236,
+            7.0413,
+            3.4707,
+            7.2478
+          ],
+          "positions": 17579,
+          "rings": 34
+        }
+      ],
+      "existingCentre": {
+        "lat": 7.15571,
+        "lon": 3.345086,
+        "source": "https://www.geonames.org/advanced-search.html?q=%27Abeokuta%2C+Nigeria%27&startRow=0",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Abuja",
+      "atlasState": "Federal Capital Territory",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.133",
+          "sourceName": "Abuja",
+          "bbox": [
+            7.1592,
+            8.8747,
+            7.7171,
+            9.2508
+          ],
+          "positions": 46994,
+          "rings": 87
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.133",
+          "sourceName": "Abuja",
+          "bbox": [
+            7.1592,
+            8.8747,
+            7.7171,
+            9.2508
+          ],
+          "positions": 46994,
+          "rings": 87
+        }
+      ],
+      "existingCentre": {
+        "lat": 9.05785,
+        "lon": 7.49508,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Abuja",
+        "precision": "City-centre locator; not a venue address."
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Ado Ekiti",
+      "atlasState": "Ekiti",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.201",
+          "sourceName": "Ado ekiti",
+          "bbox": [
+            5.1546,
+            7.5469,
+            5.3187,
+            7.7031
+          ],
+          "positions": 8830,
+          "rings": 20
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Asaba",
+      "atlasState": "Delta",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.1305",
+          "sourceName": "Asaba",
+          "bbox": [
+            6.5819,
+            6.1116,
+            6.7556,
+            6.2819
+          ],
+          "positions": 8774,
+          "rings": 16
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Awka",
+      "atlasState": "Anambra",
+      "status": "no-qualifying-match-in-this-pass",
+      "nameCandidates": [],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Bauchi",
+      "atlasState": "Bauchi",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.1727",
+          "sourceName": "Bauchi",
+          "bbox": [
+            9.7318,
+            10.2365,
+            9.9153,
+            10.3833
+          ],
+          "positions": 9254,
+          "rings": 27
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Benin City",
+      "atlasState": "Edo",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.1822",
+          "sourceName": "Benin city",
+          "bbox": [
+            5.4683,
+            6.0522,
+            5.8186,
+            6.5479
+          ],
+          "positions": 9028,
+          "rings": 13
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.1822",
+          "sourceName": "Benin city",
+          "bbox": [
+            5.4683,
+            6.0522,
+            5.8186,
+            6.5479
+          ],
+          "positions": 9028,
+          "rings": 13
+        }
+      ],
+      "existingCentre": {
+        "lat": 6.338153,
+        "lon": 5.625749,
+        "source": "https://www.geonames.org/search.html?country=NG&q=",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Calabar",
+      "atlasState": "Cross River",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.2322",
+          "sourceName": "Calabar",
+          "bbox": [
+            8.307,
+            4.9089,
+            8.3896,
+            5.1023
+          ],
+          "positions": 8155,
+          "rings": 24
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.2322",
+          "sourceName": "Calabar",
+          "bbox": [
+            8.307,
+            4.9089,
+            8.3896,
+            5.1023
+          ],
+          "positions": 8155,
+          "rings": 24
+        }
+      ],
+      "existingCentre": {
+        "lat": 4.958931,
+        "lon": 8.32695,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Calabar",
+        "precision": "City-centre locator; not a venue address."
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Damaturu",
+      "atlasState": "Yobe",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.2566",
+          "sourceName": "Damaturu",
+          "bbox": [
+            11.9052,
+            11.6677,
+            12.0337,
+            11.7848
+          ],
+          "positions": 3009,
+          "rings": 5
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Enugu",
+      "atlasState": "Enugu",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.3119",
+          "sourceName": "Enugu",
+          "bbox": [
+            7.3846,
+            6.3277,
+            7.6684,
+            6.5585
+          ],
+          "positions": 16912,
+          "rings": 38
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.3119",
+          "sourceName": "Enugu",
+          "bbox": [
+            7.3846,
+            6.3277,
+            7.6684,
+            6.5585
+          ],
+          "positions": 16912,
+          "rings": 38
+        }
+      ],
+      "existingCentre": {
+        "lat": 6.441321,
+        "lon": 7.498834,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Enugu",
+        "precision": "City-centre locator; not a venue address."
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Gombe",
+      "atlasState": "Gombe",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.3565",
+          "sourceName": "Gombe",
+          "bbox": [
+            11.071,
+            10.237,
+            11.2394,
+            10.3361
+          ],
+          "positions": 7097,
+          "rings": 15
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.3565",
+          "sourceName": "Gombe",
+          "bbox": [
+            11.071,
+            10.237,
+            11.2394,
+            10.3361
+          ],
+          "positions": 7097,
+          "rings": 15
+        }
+      ],
+      "existingCentre": {
+        "lat": 10.28969,
+        "lon": 11.167288,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Gombe",
+        "precision": "City-centre locator; not a venue address."
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Ibadan",
+      "atlasState": "Oyo",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.3853",
+          "sourceName": "Ibadan",
+          "bbox": [
+            3.6559,
+            7.2188,
+            4.1033,
+            7.6027
+          ],
+          "positions": 52871,
+          "rings": 216
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.3853",
+          "sourceName": "Ibadan",
+          "bbox": [
+            3.6559,
+            7.2188,
+            4.1033,
+            7.6027
+          ],
+          "positions": 52871,
+          "rings": 216
+        }
+      ],
+      "existingCentre": {
+        "lat": 7.377562,
+        "lon": 3.905907,
+        "source": "https://www.geonames.org/search.html?country=NG&q=",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Ikot Ekpene",
+      "atlasState": "Akwa Ibom",
+      "status": "no-qualifying-match-in-this-pass",
+      "nameCandidates": [],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Ile-Ife",
+      "atlasState": "Osun",
+      "status": "different-name-containing-area-review-needed",
+      "nameCandidates": [],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.3903",
+          "sourceName": "Ife 1",
+          "bbox": [
+            4.4697,
+            7.4131,
+            4.6153,
+            7.551
+          ],
+          "positions": 6525,
+          "rings": 21
+        }
+      ],
+      "existingCentre": {
+        "lat": 7.482405,
+        "lon": 4.560324,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Osun",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Ilesa",
+      "atlasState": "Osun",
+      "status": "different-name-containing-area-review-needed",
+      "nameCandidates": [],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4019",
+          "sourceName": "Ilesha",
+          "bbox": [
+            4.6686,
+            7.5684,
+            4.833,
+            7.6932
+          ],
+          "positions": 8161,
+          "rings": 11
+        }
+      ],
+      "existingCentre": {
+        "lat": 7.627891,
+        "lon": 4.741609,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Osun",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Ilorin",
+      "atlasState": "Kwara",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4030",
+          "sourceName": "Ilorin",
+          "bbox": [
+            4.4457,
+            8.3723,
+            4.6758,
+            8.5802
+          ],
+          "positions": 17193,
+          "rings": 59
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4030",
+          "sourceName": "Ilorin",
+          "bbox": [
+            4.4457,
+            8.3723,
+            4.6758,
+            8.5802
+          ],
+          "positions": 17193,
+          "rings": 59
+        }
+      ],
+      "existingCentre": {
+        "lat": 8.496642,
+        "lon": 4.542143,
+        "source": "https://www.geonames.org/search.html?country=NG&q=",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Issele-Uku",
+      "atlasState": "Delta",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4127",
+          "sourceName": "Issele uku",
+          "bbox": [
+            6.4459,
+            6.283,
+            6.5414,
+            6.3384
+          ],
+          "positions": 2743,
+          "rings": 6
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Jalingo",
+      "atlasState": "Taraba",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4178",
+          "sourceName": "Jalingo",
+          "bbox": [
+            11.2936,
+            8.8515,
+            11.4195,
+            8.9881
+          ],
+          "positions": 9805,
+          "rings": 17
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Jos",
+      "atlasState": "Plateau",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4226",
+          "sourceName": "Jos",
+          "bbox": [
+            8.7956,
+            9.703,
+            9.0112,
+            10.0459
+          ],
+          "positions": 35125,
+          "rings": 127
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4226",
+          "sourceName": "Jos",
+          "bbox": [
+            8.7956,
+            9.703,
+            9.0112,
+            10.0459
+          ],
+          "positions": 35125,
+          "rings": 127
+        }
+      ],
+      "existingCentre": {
+        "lat": 9.92849,
+        "lon": 8.892118,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Jos",
+        "precision": "City-centre locator; not a venue address."
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Kaduna",
+      "atlasState": "Kaduna",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4291",
+          "sourceName": "Kaduna",
+          "bbox": [
+            7.3474,
+            10.3843,
+            7.5513,
+            10.6572
+          ],
+          "positions": 19476,
+          "rings": 35
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4291",
+          "sourceName": "Kaduna",
+          "bbox": [
+            7.3474,
+            10.3843,
+            7.5513,
+            10.6572
+          ],
+          "positions": 19476,
+          "rings": 35
+        }
+      ],
+      "existingCentre": {
+        "lat": 10.526413,
+        "lon": 7.438795,
+        "source": "https://www.geonames.org/search.html?country=NG&q=",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": true,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Kano",
+      "atlasState": "Kano",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4519",
+          "sourceName": "Kano",
+          "bbox": [
+            8.404,
+            11.8412,
+            8.6813,
+            12.113
+          ],
+          "positions": 35908,
+          "rings": 81
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4519",
+          "sourceName": "Kano",
+          "bbox": [
+            8.404,
+            11.8412,
+            8.6813,
+            12.113
+          ],
+          "positions": 35908,
+          "rings": 81
+        }
+      ],
+      "existingCentre": {
+        "lat": 12.000116,
+        "lon": 8.516722,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Kano",
+        "precision": "City-centre locator; not a venue address."
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Karu",
+      "atlasState": "Nasarawa",
+      "status": "no-qualifying-match-in-this-pass",
+      "nameCandidates": [],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Lafia",
+      "atlasState": "Nasarawa",
+      "status": "different-name-containing-area-review-needed",
+      "nameCandidates": [],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.5194",
+          "sourceName": "Lafia 1",
+          "bbox": [
+            8.476,
+            8.4715,
+            8.5702,
+            8.6027
+          ],
+          "positions": 9111,
+          "rings": 31
+        }
+      ],
+      "existingCentre": {
+        "lat": 8.493897,
+        "lon": 8.515316,
+        "source": "https://www.geonames.org/search.html?country=NG&q=",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Lagos",
+      "atlasState": "Lagos",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.5199",
+          "sourceName": "Lagos",
+          "bbox": [
+            2.9338,
+            6.4122,
+            3.9017,
+            6.9266
+          ],
+          "positions": 74449,
+          "rings": 202
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.5199",
+          "sourceName": "Lagos",
+          "bbox": [
+            2.9338,
+            6.4122,
+            3.9017,
+            6.9266
+          ],
+          "positions": 74449,
+          "rings": 202
+        }
+      ],
+      "existingCentre": {
+        "lat": 6.454066,
+        "lon": 3.394673,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Lagos",
+        "precision": "City-centre locator; not a venue address."
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Lokoja",
+      "atlasState": "Kogi",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.5309",
+          "sourceName": "Lokoja",
+          "bbox": [
+            6.6171,
+            7.7065,
+            6.757,
+            7.8732
+          ],
+          "positions": 7678,
+          "rings": 9
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Maiduguri",
+      "atlasState": "Borno",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.5538",
+          "sourceName": "Maiduguri",
+          "bbox": [
+            12.9924,
+            11.7396,
+            13.2607,
+            11.9174
+          ],
+          "positions": 7352,
+          "rings": 11
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.5538",
+          "sourceName": "Maiduguri",
+          "bbox": [
+            12.9924,
+            11.7396,
+            13.2607,
+            11.9174
+          ],
+          "positions": 7352,
+          "rings": 11
+        }
+      ],
+      "existingCentre": {
+        "lat": 11.846924,
+        "lon": 13.157122,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Maiduguri",
+        "precision": "City-centre locator; not a venue address."
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Makurdi",
+      "atlasState": "Benue",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.5585",
+          "sourceName": "Makurdi",
+          "bbox": [
+            8.4508,
+            7.5926,
+            8.6447,
+            7.8304
+          ],
+          "positions": 13279,
+          "rings": 34
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.5585",
+          "sourceName": "Makurdi",
+          "bbox": [
+            8.4508,
+            7.5926,
+            8.6447,
+            7.8304
+          ],
+          "positions": 13279,
+          "rings": 34
+        }
+      ],
+      "existingCentre": {
+        "lat": 7.733746,
+        "lon": 8.52139,
+        "source": "https://www.geonames.org/search.html?country=NG&q=",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Ogbomoso",
+      "atlasState": "Oyo",
+      "status": "different-name-containing-area-review-needed",
+      "nameCandidates": [],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.6985",
+          "sourceName": "Ogbomosho",
+          "bbox": [
+            4.1804,
+            8.067,
+            4.3451,
+            8.2205
+          ],
+          "positions": 13603,
+          "rings": 56
+        }
+      ],
+      "existingCentre": {
+        "lat": 8.133725,
+        "lon": 4.240144,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Ogbomoso",
+        "precision": "City-centre locator; not a venue address."
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Orerokpe",
+      "atlasState": "Delta",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.7114",
+          "sourceName": "Orerokpe",
+          "bbox": [
+            5.87,
+            5.6302,
+            5.9301,
+            5.6698
+          ],
+          "positions": 1071,
+          "rings": 4
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Owerri",
+      "atlasState": "Imo",
+      "status": "no-qualifying-match-in-this-pass",
+      "nameCandidates": [],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Port Harcourt",
+      "atlasState": "Rivers",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.7357",
+          "sourceName": "Port harcourt",
+          "bbox": [
+            6.8918,
+            4.6697,
+            7.2828,
+            4.993
+          ],
+          "positions": 27377,
+          "rings": 38
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.7357",
+          "sourceName": "Port harcourt",
+          "bbox": [
+            6.8918,
+            4.6697,
+            7.2828,
+            4.993
+          ],
+          "positions": 27377,
+          "rings": 38
+        }
+      ],
+      "existingCentre": {
+        "lat": 4.777423,
+        "lon": 7.013404,
+        "source": "https://www.geonames.org/search.html?country=NG&q=",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Sokoto",
+      "atlasState": "Sokoto",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.8156",
+          "sourceName": "Sokoto",
+          "bbox": [
+            5.1606,
+            12.9557,
+            5.2903,
+            13.1099
+          ],
+          "positions": 7439,
+          "rings": 13
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Umuahia",
+      "atlasState": "Abia",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.8764",
+          "sourceName": "Umuahia",
+          "bbox": [
+            7.4065,
+            5.4215,
+            7.5785,
+            5.6209
+          ],
+          "positions": 20628,
+          "rings": 18
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Uyo",
+      "atlasState": "Akwa Ibom",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.8806",
+          "sourceName": "Uyo",
+          "bbox": [
+            7.4737,
+            4.7979,
+            8.0474,
+            5.361
+          ],
+          "positions": 97433,
+          "rings": 295
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": {
+        "lat": 5.051274622613658,
+        "lon": 7.933502197265625,
+        "source": "https://www.geonames.org/search.html?country=NG&q=",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Yenagoa",
+      "atlasState": "Bayelsa",
+      "status": "name-match-location-review-needed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.9076",
+          "sourceName": "Yenagoa",
+          "bbox": [
+            6.2587,
+            4.8185,
+            6.4126,
+            5.0505
+          ],
+          "positions": 8377,
+          "rings": 8
+        }
+      ],
+      "containingCandidates": [],
+      "existingCentre": null,
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Yola",
+      "atlasState": "Adamawa",
+      "status": "different-name-containing-area-review-needed",
+      "nameCandidates": [],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.4211",
+          "sourceName": "Jimeta",
+          "bbox": [
+            12.3141,
+            9.1653,
+            12.5336,
+            9.3089
+          ],
+          "positions": 11893,
+          "rings": 27
+        }
+      ],
+      "existingCentre": {
+        "lat": 9.208394,
+        "lon": 12.481464,
+        "source": "https://www.geonames.org/search.html?country=NG&q=",
+        "precision": "City-centre locator; not a venue address.",
+        "verifiedOn": "2026-10-12"
+      },
+      "implemented": false,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    },
+    {
+      "city": "Zaria",
+      "atlasState": "Kaduna",
+      "status": "name-match-spatial-confirmed",
+      "nameCandidates": [
+        {
+          "sourceID": "Africapolis_2020.9129",
+          "sourceName": "Zaria",
+          "bbox": [
+            7.6131,
+            11.0247,
+            7.7476,
+            11.1998
+          ],
+          "positions": 6998,
+          "rings": 15
+        }
+      ],
+      "containingCandidates": [
+        {
+          "sourceID": "Africapolis_2020.9129",
+          "sourceName": "Zaria",
+          "bbox": [
+            7.6131,
+            11.0247,
+            7.7476,
+            11.1998
+          ],
+          "positions": 6998,
+          "rings": 15
+        }
+      ],
+      "existingCentre": {
+        "lat": 11.111285,
+        "lon": 7.722702,
+        "source": "https://www.geonames.org/search.html?country=NG&q=Zaria",
+        "precision": "City-centre locator; not a venue address."
+      },
+      "implemented": true,
+      "next": "State geometry + spatial/alias review before import; preserve source name and vintage2020"
+    }
+  ],
+  "otherLocationLabels": [
+    "Ebonyi",
+    "Global",
+    "Nasarawa",
+    "Nigeria",
+    "Nigeria relevance",
+    "Northern Nigeria",
+    "Ogun",
+    "Online",
+    "UK",
+    "Yoruba cultural sphere",
+    "city verification pending",
+    "diaspora",
+    "multi-location"
+  ],
+  "limits": "No new identities/imports; point containment is evidence of footprint overlap, not proof of same city/legal boundary. Name-only matches need geographic check. Noncity labels not forcibly geocoded."
+}
