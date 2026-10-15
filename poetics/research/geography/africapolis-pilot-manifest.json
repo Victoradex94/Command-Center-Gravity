@@ -1,0 +1,25 @@
+{
+  "dataset": "Africapolis",
+  "layer": "africapolis:Africapolis_2020",
+  "vintage": 2020,
+  "crs": "EPSG:4326",
+  "license": "CC BY 4.0",
+  "attribution": "OECD/SWAC and e-Geopolis",
+  "source": "https://docs.digitalearthafrica.org/en/latest/data_specs/Africapolis_urban_specs.html",
+  "extractedAt": "2026-10-15T10:37:04.878Z",
+  "uploadedFile": "nigeria-urban-extents-2020.geojson.json",
+  "uploadSha256": "71b11c3ffafcb69574befc8d28b1aae362b0f892c5151c597b60732e3ef5327c",
+  "uploadBytes": 66922537,
+  "sourceFeatureCount": 1714,
+  "countryCounts": {
+    "NGA": 1465,
+    "BEN": 59,
+    "NER": 56,
+    "CMR": 124,
+    "TCD": 9,
+    "CAF": 1
+  },
+  "selection": "Exact NGA + Kaduna/Zaria name match; checked against uploaded Kaduna state geometry",
+  "precision": "Six decimal degree rounding; no simplification; all rings/holes retained",
+  "scope": "2020 urban settlement extents, not legal city limits or current 2026 boundaries; other states not integrated"
+}

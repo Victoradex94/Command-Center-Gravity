@@ -4,8 +4,8 @@
     "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.261a64ba5b81.css",
-    "sha256": "261a64ba5b812e1cf2102fc5ca3fa2c0b32cc810a8f12910f9f59bc705d54b34"
+    "file": "vicadex-theme.bd53dd9e2194.css",
+    "sha256": "bd53dd9e2194def26745f2ebf8d4675110eabf30643d646edf2429faab3a65dd"
   },
   "atlas.js": {
     "file": "atlas.098a181b5d31.js",
@@ -63,13 +63,17 @@
     "file": "osm-state-locators.aee0b5e6db37.js",
     "sha256": "aee0b5e6db3770284c6856d3a9e4c9bbd6c724bd961907ac98d12acbfe0613a4"
   },
+  "urban-extents.js": {
+    "file": "urban-extents.65200cbd4d76.js",
+    "sha256": "65200cbd4d76485409cf6d4bba37f9c22a3a96868bcc5217b753ed5121293a98"
+  },
   "geography-registry.js": {
-    "file": "geography-registry.3ee40f94a847.js",
-    "sha256": "3ee40f94a8475ea91b51c140429ba86e70386e93283b60a7922bd6b6032aa901"
+    "file": "geography-registry.4fdc196409b5.js",
+    "sha256": "4fdc196409b52fc6716df9462d5593220d4f2d51fbe4a3e54b711f2667e7030b"
   },
   "state-city-map.js": {
-    "file": "state-city-map.e016e9a1c844.js",
-    "sha256": "e016e9a1c8447f67bd19fe9245562a619fe0e6e7ef62004730c15447f9aa39c3"
+    "file": "state-city-map.644a0d9c2016.js",
+    "sha256": "644a0d9c201694141da1d925834cefe952fb512ed31ed6b01ea1a30ddea14000"
   },
   "atlas-icons.js": {
     "file": "atlas-icons.42a2a8504cfb.js",
@@ -92,8 +96,8 @@
     "sha256": "73065d977671c97cf2b1b0a18ebdff20e77844dd5eb3530b565806c82e9cf7c2"
   },
   "directory.js": {
-    "file": "directory.158709796f3b.js",
-    "sha256": "158709796f3b0af8f56082d6e68cf854dbf505663c18bd8d8124a5fb3735c50e"
+    "file": "directory.9440637f104c.js",
+    "sha256": "9440637f104ce492d0396983c6162d8d18ab24211c2f825367abb293023e0a35"
   },
   "contribute.js": {
     "file": "contribute.3543a5e295e9.js",

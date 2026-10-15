@@ -306,6 +306,9 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .city-locator-count{font-size:13px;fill:#171717;stroke:#fffaf3;stroke-width:3;paint-order:stroke}
 .state-city-source{position:relative;margin:0;padding:10px 16px;background:#fffaf3;font-size:11px;line-height:1.5;color:#454f55}
 .state-city-source a{color:#0b5f78}
+.urban-extent{fill:#216c78;fill-opacity:.55;stroke:#245962;stroke-width:.55;vector-effect:non-scaling-stroke;cursor:pointer;stroke-linejoin:round}
+.urban-extent:hover,.urban-extent:focus,.urban-extent.selected{fill:#e94f27;fill-opacity:.65;stroke:#81381f;stroke-width:1;outline:none}
+.urban-extent-key{display:inline-block;width:12px;height:9px;background:#216c78;border:1px solid #245962;vertical-align:middle}
 .map-stage:has(.state-city-gis)>.map-caption{position:static;padding:10px 16px;background:#fffaf3;color:#182a32}
 @media(max-width:700px){.city-locator-label{font-size:28px}.city-locator-count{font-size:22px}.state-city-heading{font-size:22px}}
 .atlas-view-context{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 12px;color:#454f55;font-size:12px;min-width:0}
