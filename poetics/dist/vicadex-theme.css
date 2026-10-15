@@ -308,3 +308,7 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .state-city-source a{color:#0b5f78}
 .map-stage:has(.state-city-gis)>.map-caption{position:static;padding:10px 16px;background:#fffaf3;color:#182a32}
 @media(max-width:700px){.city-locator-label{font-size:28px}.city-locator-count{font-size:22px}.state-city-heading{font-size:22px}}
+.atlas-view-context{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 12px;color:#454f55;font-size:12px;min-width:0}
+.atlas-view-context>span:first-child{flex:1 1 200px;overflow-wrap:anywhere}
+.atlas-view-context button{min-height:36px;border-radius:12px;color:#0b5f78}
+.atlas-view-context input{width:100%;min-width:0;box-sizing:border-box}

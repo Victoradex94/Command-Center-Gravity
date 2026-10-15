@@ -3,11 +3,12 @@
 const d=window.PoeticsOSMStateLocators,h=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 if(!d)return;
 const mercator=([lon,lat])=>[lon,Math.log(Math.tan(Math.PI/4+lat*Math.PI/360))*180/Math.PI];
-const rings=d.geometry.coordinates.map(r=>r.map(mercator)),points=rings.flat();
+const stateLayer=window.PoeticsGeography?.get('osm-kaduna-state'),geometry=stateLayer?.geometry||d.geometry;
+const rings=geometry.coordinates.map(r=>r.map(mercator)),points=rings.flat();
 const bounds=[Math.min(...points.map(p=>p[0])),Math.min(...points.map(p=>p[1])),Math.max(...points.map(p=>p[0])),Math.max(...points.map(p=>p[1]))];
 const scale=Math.min(600/(bounds[2]-bounds[0]),470/(bounds[3]-bounds[1])),cx=(bounds[0]+bounds[2])/2,cy=(bounds[1]+bounds[3])/2;
 function project(coordinates){const [x,y]=mercator(coordinates);return [372+(x-cx)*scale,320-(y-cy)*scale];}
-const path=d.geometry.coordinates.map(r=>r.map((p,i)=>{const [x,y]=project(p);return (i?'L':'M')+x.toFixed(3)+' '+y.toFixed(3);}).join(' ')+'Z').join(' ');
+const path=geometry.coordinates.map(r=>r.map((p,i)=>{const [x,y]=project(p);return (i?'L':'M')+x.toFixed(3)+' '+y.toFixed(3);}).join(' ')+'Z').join(' ');
 function render(state,cityCounts,values,selectedCity='All places',maximum=0){
 if(state!==d.state)return '';
 const m=window.PoeticsStateMap,total=Object.values(values).reduce((a,b)=>a+b,0),band=m.frequencyBand(total,maximum),parts=m.categories.filter(c=>values[c]>0);
