@@ -2,9 +2,9 @@
 
 **Current handoff: Version 76 · 16 October 2026**
 
-Poetics is a static, browser-run Nigerian poetry Atlas and a separate fictional poetry-life simulation. This folder is the working application snapshot in the private GitHub repository `Victoradex94/Command-Center-Gravity`, under `poetics/` on `main`.
+Poetics is a static, browser-run Nigerian poetry Atlas and a separate fictional poetry-life simulation. The private GitHub repository is `Victoradex94/Command-Center-Gravity`; `main` is the current source baseline, and the staging-only branch supplement below records the Supabase-connected changes.
 
-Version 76 is the latest source mirrored here. Its Sites source checkpoint is `e22287464f447cfec4f664c3b9ddf7be7b870b2e`; the matching source and build instructions are in current GitHub main. The Atlas test suite verifies **453 records and 667 source-linked relationships**.
+Version 76 is the latest source on GitHub `main`. Its Sites source checkpoint is `e22287464f447cfec4f664c3b9ddf7be7b870b2e`; the matching source and build instructions are in current GitHub main. The main-branch Atlas test suite verifies **453 records and 667 source-linked relationships**. A staging-only Supabase integration is recorded below; it does not change `main`.
 
 **The dated notes below the current handoff are a historical change log. If an older note conflicts with this section, use this section as current.**
 
@@ -39,7 +39,17 @@ To use GitHub without cloning, sign in, open the `poetics/` folder, and use GitH
 
 The Atlas keeps historical records and their source links separate from the fictional game. Its state map uses Nigerian state boundaries. Detailed urban layers are available only where data has been prepared; where a detailed layer is missing or fails to load, the app falls back to the state outline. Africapolis urban extents describe built-up areas, not legal city boundaries.
 
-The game’s save data stays in that browser’s localStorage and can be exported/imported as JSON. There is no account, cloud save, multiplayer server, or live submission backend. The Submit form makes a local draft; it does not publish an entry.
+The game’s save data stays in that browser’s localStorage and can be exported/imported as JSON. On `main`, there is no account, cloud save, multiplayer server, or live submission backend. The staging branch supplement below adds a read-only Atlas snapshot and a pending-review submission path; it does not publish entries.
+
+## Staging Supabase integration — 16 October 2026
+
+Branch `codex/poetics-supabase-staging-20261016` starts from `main` commit `0988b3197f00ade4ed6e1ee55503b6a09ddbbf1c`. It carries the staging app wiring in `dist/` and preserves the earlier data-free SQL bootstrap and audit scripts in `database/`.
+
+At the last local staging verification, the Supabase snapshot returned **458 records and 673 connections**. The Atlas calls `public.read_poetics_atlas_snapshot()` and keeps the bundled snapshot as a fallback if Supabase is unavailable. The Submit page calls `public.submit_poetics_atlas_record(jsonb)`, which stores a pending-review submission; it does not publish it. Direct table access remains revoked. Only the two reviewed RPCs receive anonymous execute permission.
+
+`database/007_atlas_snapshots.sql` and `database/008_public_atlas_api.sql` preserve the staging schema and API definitions. They do not contain the snapshot row or export the database contents. The current snapshot remains in the staging Supabase project; a database reset would require a separately verified seed export. No service-role key, database dump or private submission is tracked.
+
+This branch is a Git review copy only. GitHub is not connected to automatic hosting, and these commits do not publish to the restricted Sites preview or deploy WordPress. `main` remains unchanged until a separately approved merge.
 
 ## Edit, check, and save your work
 
