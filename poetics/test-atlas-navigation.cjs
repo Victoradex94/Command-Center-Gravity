@@ -20,3 +20,13 @@ assert(fs.readFileSync('dist/app.js','utf8').includes("addEventListener('popstat
 console.log('PASS URL round-trip, encoded text, empty/invalid categories, geographic Surprise isolation, selected-profile reload, reconstructed history, typing without history flooding, no-match behavior, invalid-link normalization, app popstate binding and geography precision/validation; 453/667 preserved.');
 
 assert.equal(nav.read('#/atlas?state=Kaduna&map=streets').stateMapMode,'outline');assert(!nav.hash({...input,stateMapMode:'streets'}).includes('map=streets'));
+
+// The whole-Atlas option must work even when the current filter set is empty,
+// then clear those filters so the selected profile and map stay consistent.
+set(nav.hash({mode:'Map',state:'Kaduna',zone:'North West',geo:'Zaria',year:'2024',activity:'Spoken-word competition',enabled:['Prizes'],query:'unmatchable-surprise-test',selected:null,browsing:true}));window.renderDirectory(root);
+assert(html.includes('No matches'));const emptyFilteredURL=window.location.hash;controls['#surprise-entry'].onclick();assert.equal(window.location.hash,emptyFilteredURL);
+controls['#surprise-scope'].onchange({target:{value:'all'}});assert(!/<button id="surprise-entry"\s+disabled/.test(html));
+const all=window.PoeticsDirectoryData.rows,target=all.findIndex(r=>r.id==='olulu');assert(target>=0);context.Math=Object.create(Math);context.Math.random=()=>(target+.25)/all.length;
+controls['#surprise-entry'].onclick();let whole=nav.read(window.location.hash);assert.equal(whole.selected,'olulu');assert.equal(whole.state,'All states');assert.equal(whole.zone,'All zones');assert.equal(whole.geo,'All places');assert.equal(whole.year,'All years');assert.equal(whole.activity,'All formats');assert.equal(whole.query,'');assert.equal(whole.enabled.length,5);assert(html.includes('atlas-profile'));assert(html.includes('value="all" selected'));
+controls['#surprise-scope'].onchange({target:{value:'filtered'}});change('#directory-state','Kaduna');change('#directory-geo','Zaria');controls['#surprise-entry'].onclick();const scoped=nav.read(window.location.hash),scopedRow=all.find(r=>r.id===scoped.selected);assert.equal(scoped.state,'Kaduna');assert.equal(scoped.geo,'Zaria');assert(window.PoeticsStateMap.statesForRecord(scopedRow).includes('Kaduna'));assert(String(scopedRow.city).split(/\s*\/\s*|;\s*/).includes('Zaria'));assert.equal(all.length,453);assert.equal(window.PoeticsDirectoryData.edges.length,667);
+console.log('PASS two Surprise modes: filtered constraints retained; Anywhere works with zero filtered matches, chooses a known outside record, clears every filter, preserves chosen scope and displays profile.');
