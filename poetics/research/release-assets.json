@@ -24,8 +24,8 @@
     "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.247e91b75777.css",
-    "sha256": "247e91b75777347ef86a0c671ff091b3e917666d062447526f1e86da4ef9cad7"
+    "file": "vicadex-theme.5f415534e94f.css",
+    "sha256": "5f415534e94f47c6cb6b619f2834328a8afb471fa26782e60748022277df092f"
   },
   "atlas.js": {
     "file": "atlas.3cbc35bb4861.js",
@@ -56,8 +56,8 @@
     "sha256": "554e1d97a522d5282a40d2aac935010f878250e508e65e5c710d96f7e4e92a5f"
   },
   "nigeria-states-map.js": {
-    "file": "nigeria-states-map.1e5bb3681860.js",
-    "sha256": "1e5bb36818605e7381827c55b02405c3504c6ad811afb2717f40f3e893bd2b06"
+    "file": "nigeria-states-map.520077c91d6d.js",
+    "sha256": "520077c91d6d72c3abff1d5150aa22094dc53097683670ce589deede27f87b14"
   },
   "osm-state-locators.js": {
     "file": "osm-state-locators.aee0b5e6db37.js",
@@ -100,8 +100,8 @@
     "sha256": "4edd4adecc88a32dda512f85e0a4a0f5a6c363e3cb3e6cd84f804fe343d8c73e"
   },
   "directory.js": {
-    "file": "directory.408fbd4b5fbd.js",
-    "sha256": "408fbd4b5fbd923769a2942fb2b63a8a2704c3ddda26b19f52fc79e4a63ca830"
+    "file": "directory.5ff8da15342d.js",
+    "sha256": "5ff8da15342deda6d7494f73c95a91c0aec135ab6675b6552e660bd4925481b4"
   },
   "contribute.js": {
     "file": "contribute.676d669df152.js",

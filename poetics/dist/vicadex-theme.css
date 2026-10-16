@@ -480,3 +480,7 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .claim-reference{font:500 10px 'Afacad',Arial,sans-serif;vertical-align:super;margin-left:3px;line-height:0}.claim-reference a{color:#0b5f78;text-decoration:underline;text-underline-offset:2px}
 .entry-card-sources{display:flex;align-items:center;flex-wrap:wrap;gap:5px;padding:0 18px 12px;color:#666;font:400 11px 'Afacad',Arial,sans-serif}
 .entry-card-sources>span:first-child{margin-right:3px}.entry-card-sources>a{display:inline-grid;place-items:center;min-width:28px;min-height:28px;border:1px solid #e8e1d8;border-radius:7px;color:#0b5f78;text-decoration:underline;text-underline-offset:3px;font-size:12px}
+
+/* Selected records recolour their recorded state associations; base count shading remains beneath the highlight. */
+.nigeria-state.selected-entry-location:not(.hidden-state) path{fill:var(--entry-focus-fill,var(--state-fill,#eee7dc));fill-opacity:.62;stroke:var(--entry-focus-fill,#e94f27);stroke-opacity:1;stroke-width:2.2;stroke-dasharray:3 1.5;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.map-focus-note{font-size:10px;line-height:1.35;color:#555;text-align:center;margin:5px 0 0}
