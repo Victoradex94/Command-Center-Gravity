@@ -28,5 +28,5 @@ const labels=d.cities.map((c,i)=>{const [x,y]=view.cities[i].point;return `<g cl
 const back=focused?`<button id="urban-back-state" class="urban-back-state">Back to ${h(state)}</button>`:'';
 return `${back}${badges}<svg data-map-level="${focused?'urban':'state'}" class="nigeria-gis state-urban-gis" viewBox="0 0 744 600" role="group" aria-label="${h(state)} state map with urban extents2020"><defs><clipPath id="state-urban-clip"><path d="${outline}" clip-rule="evenodd"/></clipPath></defs><text x="372" y="17" text-anchor="middle" class="state-city-heading">${h(focused?focused.city+' · '+state:state)} · ${focused?counts[focused.city]:total} matching entries</text><path class="osm-state-outline" d="${outline}" fill="${band.fill}" fill-rule="evenodd"/><g clip-path="url(#state-urban-clip)">${urban}${labels}</g></svg>`;
 }
-window.PoeticsStateUrbanMap={has:state=>!!manifest.states[state],citiesForState:state=>manifest.states[state]?.cities||[],ensure,render,attribution,prime,validate,projection,path,loaded:state=>cache.has(state),manifest};
+window.PoeticsStateUrbanMap={has:state=>!!manifest.states[state],citiesForState:state=>manifest.states[state]?.cities||[],ensure,render,attribution,prime,validate,projection,path,loaded:state=>cache.has(state),failed:state=>errors.has(state),manifest};
 })();

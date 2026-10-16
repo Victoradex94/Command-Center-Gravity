@@ -484,3 +484,5 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 /* Selected records recolour their recorded state associations; base count shading remains beneath the highlight. */
 .nigeria-state.selected-entry-location:not(.hidden-state) path{fill:var(--entry-focus-fill,var(--state-fill,#eee7dc));fill-opacity:.62;stroke:var(--entry-focus-fill,#e94f27);stroke-opacity:1;stroke-width:2.2;stroke-dasharray:3 1.5;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .map-focus-note{font-size:10px;line-height:1.35;color:#555;text-align:center;margin:5px 0 0}
+
+.map-atlas .atlas-nameplate .map-location-note{display:block;color:#d4cec4;font:400 13px/1.4 'Afacad',Arial,sans-serif;margin-top:6px}

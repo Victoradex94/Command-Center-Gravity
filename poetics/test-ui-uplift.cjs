@@ -18,7 +18,7 @@ async function run(){
  parents.find(p=>p.dataset.geographyParent==='zone').onclick();assert.equal(state().state,'All states');assert.equal(state().zone,'North West');
  parents.find(p=>p.dataset.geographyParent==='country').onclick();assert.equal(state().zone,'All zones');
  change('#directory-state','Delta');await new Promise(r=>setTimeout(r,0));controls['#directory-query'].oninput({target:{value:'Orerokpe',selectionStart:8}});assert(html.includes('Proposal; not completed'));
- const first=nodes.find(n=>window.PoeticsDirectoryData.rows.some(r=>r.id===n.dataset.node));assert(first);first.onclick();assert.equal(state().query,'Orerokpe');assert(html.includes('class="atlas-profile"'));controls['#back-results'].onclick();assert.equal(state().query,'Orerokpe');
+ const first=nodes.find(n=>window.PoeticsDirectoryData.rows.some(r=>r.id===n.dataset.node));assert(first);first.onclick();assert.equal(state().query,'Orerokpe');assert(html.includes('class="atlas-profile"'));assert(!html.includes('map-selection-preview'),'selected entry belongs in the sidebar, not a duplicate card below the map');controls['#back-results'].onclick();assert.equal(state().query,'Orerokpe');
  chips.find(c=>c.dataset.clearFilter==='search').onclick();assert.equal(state().query,'');assert.equal(state().state,'Delta');
  change('#directory-year','2024');chips.find(c=>c.dataset.clearFilter==='year').onclick();assert.equal(state().year,'All years');assert.equal(state().state,'Delta');
  chips.find(c=>c.dataset.clearFilter==='state').onclick();assert.equal(state().state,'All states');assert.equal(state().zone,'South South');
