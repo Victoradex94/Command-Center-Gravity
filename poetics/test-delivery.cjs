@@ -6,17 +6,15 @@ const plain=s=>s.replace(/\.[a-f0-9]{12}(?=\.js$)/,'');
 const deferredGames=['engine.js','opportunities.js','gamemap.js','city3d.js','world.js'];
 const expected=names(previous).map(m=>plain(m[1])).filter(n=>!deferredGames.includes(n)).map(n=>n==='canonical-research.js'?'canonical-research-runtime.js':n);
 expected.splice(expected.indexOf('app.js'),0,'game-assets.js','game-loader.js');
-assert.deepEqual(names(index).map(m=>plain(m[1])),expected);
+const dataNames=['atlas.js','canonical-research-runtime.js','national-directory.js','directory-expansion.js','nigeria-boundary.js','nigeria-states.js','osm-state-locators.js','state-urban-manifest.js','atlas-audit.js','game-assets.js'];
+assert.deepEqual(names(index).map(m=>plain(m[1])),['atlas-input.js',...expected.filter(n=>!dataNames.includes(n))]);
 for(const m of names(index)){assert(m[2].includes('defer'));assert(!m[2].includes('async'));}
-let checked=0;
-for(const m of names(index)){
- const original=fs.readFileSync('dist/'+plain(m[1]),'utf8');
- if(!/^window\.\w+\s*=/.test(original))continue;
- const a={window:{}},b={window:{}};
- try{vm.runInNewContext(original,a);vm.runInNewContext(fs.readFileSync('dist/'+m[1],'utf8'),b)}catch{continue}
- assert.equal(JSON.stringify(a.window),JSON.stringify(b.window));checked++;
-}
-assert(checked>=4);
+const expectedData={window:{}},actualData={window:{}};
+for(const name of dataNames)vm.runInNewContext(fs.readFileSync('dist/'+name,'utf8'),expectedData);
+const bundle=names(index).find(m=>plain(m[1])==='atlas-input.js');assert(bundle);
+vm.runInNewContext(fs.readFileSync('dist/'+bundle[1],'utf8'),actualData);
+assert.equal(JSON.stringify(actualData.window),JSON.stringify(expectedData.window));
+const checked=Object.keys(expectedData.window).length;
 const gameContext={window:{}};vm.runInNewContext(fs.readFileSync('dist/game-assets.js','utf8'),gameContext);
 assert.deepEqual(Array.from(gameContext.window.PoeticsGameAssets,plain),deferredGames);
 for(const file of gameContext.window.PoeticsGameAssets)assert.equal(fs.readFileSync('dist/'+file,'utf8'),fs.readFileSync('dist/'+plain(file),'utf8'));

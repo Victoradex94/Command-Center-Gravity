@@ -4,7 +4,6 @@
    Verified tokens: cream #fffaf3, peach #fde9dc, teal #0b5f78,
    orange #e94f27, ink #171717; Comfortaa headings / Afacad body.
    Hosted prototype adapter; production WordPress theme is never edited. */
-@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&display=swap');
 :root{--bg:#fffaf3;--paper:#171717;--muted:#555;--line:#e8e1d8;--accent:#0b5f78;--red:#e94f27;--panel:#fffdf9}
 body{background:var(--bg);color:var(--paper);font-family:'Afacad',Arial,sans-serif;font-size:18px}
 body>header{background:#fffaf3;border-bottom:4px solid #0b5f78;padding-block:20px}
@@ -486,3 +485,13 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .map-focus-note{font-size:10px;line-height:1.35;color:#555;text-align:center;margin:5px 0 0}
 
 .map-atlas .atlas-nameplate .map-location-note{display:block;color:#d4cec4;font:400 13px/1.4 'Afacad',Arial,sans-serif;margin-top:6px}
+
+/* Keep exploration actions visible instead of beyond the phone's city rail. */
+@media(max-width:700px){
+ .map-city-toolbar{display:grid;grid-template-columns:minmax(0,1fr);overflow:visible}
+ .map-city-toolbar .map-city-shortcuts{width:100%;max-width:100%;min-width:0;overflow-x:auto;padding-bottom:6px}
+ .map-city-toolbar .map-shortcut-actions{display:grid;grid-template-columns:minmax(0,1fr);width:100%;min-width:0;max-width:100%;gap:8px}
+ .map-city-toolbar .surprise-control{display:flex;min-width:0;max-width:100%}
+ .map-city-toolbar #surprise-entry{flex:1 1 auto;min-width:0;padding-inline:12px}
+ .map-city-toolbar #surprise-scope{flex:1 1 150px;width:150px;min-width:0;max-width:60%}
+}

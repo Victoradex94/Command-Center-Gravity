@@ -32,6 +32,14 @@ game_names=['engine.js','opportunities.js','gamemap.js','city3d.js','world.js']
 for name in game_names:
     asset(re.match(r'(src)="([^"]+)"','src="'+name+'"'))
 (dist/'game-assets.js').write_text('window.PoeticsGameAssets='+json.dumps([mapping[n]['file'] for n in game_names],separators=(',',':'))+';\n')
+# Bundle only immutable data. Executable modules retain their dependency order.
+import runpy
+data_names=runpy.run_path(str(root/'scripts/prepare-atlas-input.py'))['prepare'](dist)
+def remove_data(match):
+    name=re.sub(r'\.[a-f0-9]{12}(?=\.js$)','',match[1])
+    return '' if name in data_names or name=='atlas-input.js' else match[0]
+html=re.sub(r'<script src="([^"]+)"[^>]*></script>',remove_data,html)
+html=html.replace('<script ', '<script src="atlas-input.js" defer></script><script ',1)
 html=re.sub(r'(src|href)="([^"#]+\.(?:js|css)(?:\?[^"#]*)?)"',asset,html)
 index.write_text(html)
 (root/'research/release-assets.json').write_text(json.dumps(mapping,indent=2)+'\n')

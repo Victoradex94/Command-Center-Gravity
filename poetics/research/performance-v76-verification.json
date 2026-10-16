@@ -1,0 +1,19 @@
+{
+  "entries": 453,
+  "relationships": 667,
+  "composedRecordsIdentical": true,
+  "filterSnapshotsEqual": 9,
+  "before": {
+    "requests": 26,
+    "rawBytes": 845695,
+    "estimatedGzipBytes": 186461,
+    "medianRenderMs": 15.57
+  },
+  "after": {
+    "requests": 17,
+    "rawBytes": 630506,
+    "estimatedGzipBytes": 180081,
+    "medianRenderMs": 2.83
+  },
+  "scope": "Local Node/VM redraws with a DOM stub; gzip estimates are not measured network transfers or browser timings."
+}

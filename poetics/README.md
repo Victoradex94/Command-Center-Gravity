@@ -1,10 +1,10 @@
 # Poetics Atlas & Games
 
-**Current handoff: Version 75 · 16 October 2026**
+**Current handoff: Version 76 · 16 October 2026**
 
 Poetics is a static, browser-run Nigerian poetry Atlas and a separate fictional poetry-life simulation. This folder is the working application snapshot in the private GitHub repository `Victoradex94/Command-Center-Gravity`, under `poetics/` on `main`.
 
-Version 75 is the latest source mirrored here. Its Sites source checkpoint is `ea1c7e7790208340fed7d6f7987e9b9e65ecbd8d`; the GitHub code sync is commit [`650ee66`](https://github.com/Victoradex94/Command-Center-Gravity/commit/650ee6678ba55c8b64ee213dde5ed12e6d543f54). The Atlas test suite verifies **453 records and 667 source-linked relationships**.
+Version 76 is the latest source mirrored here. Its Sites source checkpoint is `e22287464f447cfec4f664c3b9ddf7be7b870b2e`; the matching source and build instructions are in current GitHub main. The Atlas test suite verifies **453 records and 667 source-linked relationships**.
 
 **The dated notes below the current handoff are a historical change log. If an older note conflicts with this section, use this section as current.**
 
@@ -79,9 +79,13 @@ The preview is hosted separately through Sites and remains custom-access. This r
 
 Do not change live WordPress, domain, hosting, or visitor-access settings as part of local editing. Updating the Sites preview is a separate, deliberate publish step; reconcile the newest GitHub and Sites sources first and preserve the restricted audience.
 
+## Version 76 performance update
+
+Startup local asset references are reduced from 26 to 17 and raw bytes from 845,695 to 630,506. The new data bundle is a generated lossless derivative; all 453 records and 667 relationships match Version 75. Regeneration still uses only Python's standard library. Phone exploration actions now remain visible below the city rail. See [performance report](research/performance-v76.md), [measurements](research/performance-v76-verification.json), and [rendered QA](research/visual-qa-v76.md). No automatic GitHub-to-Sites deployment has been configured.
+
 ## Verification limits
 
-Version 75’s navigation, data, map-fallback, contribution, game and delivery checks pass in the source checkout. Automated checks are not a full visual or accessibility review. Recheck rendered layout, mobile, touch, keyboard and screen-reader behavior on the host and devices you intend to support.
+Version 76’s navigation, data, map-fallback, contribution, game and delivery checks pass in the source checkout. Automated checks are not a full visual or accessibility review. Recheck rendered layout, mobile, touch, keyboard and screen-reader behavior on the host and devices you intend to support.
 
 ## Historical change log
 

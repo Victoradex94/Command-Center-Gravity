@@ -4,9 +4,9 @@
 
 - Repository: `Victoradex94/Command-Center-Gravity`, folder `poetics/`.
 - Current branch: `main`; start new work branches from its latest commit.
-- Current code snapshot: Version 75. The source sync commit is `650ee6678ba55c8b64ee213dde5ed12e6d543f54`.
+- Current code snapshot: Version 76. Read current main for the exact GitHub commit; its matching Sites source checkpoint is listed below.
 - The `poetics-staging` branch is an older Version 45 snapshot. Do not use it as the base for new work.
-- Sites project: `appgprj_6acce9493e8c81919635a9e7438b820c`; current restricted publication Version 75; its separately managed Sites source checkpoint is `ea1c7e7790208340fed7d6f7987e9b9e65ecbd8d`.
+- Sites project: `appgprj_6acce9493e8c81919635a9e7438b820c`; current restricted publication Version 76; its separately managed Sites source checkpoint is `e22287464f447cfec4f664c3b9ddf7be7b870b2e`.
 
 GitHub is the editable source mirror. The Sites app uses its own managed source repository. GitHub and Sites do not synchronize automatically, and a GitHub commit does not change the preview.
 

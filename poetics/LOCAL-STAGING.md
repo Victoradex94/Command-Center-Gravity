@@ -1,6 +1,6 @@
 # Poetics — local setup and staging
 
-Current working source: Version 75, in `main` at `Victoradex94/Command-Center-Gravity/poetics/`. The GitHub version is separate from the restricted Sites preview; GitHub pushes do not deploy it.
+Current working source: Version 76, in `main` at `Victoradex94/Command-Center-Gravity/poetics/`. The GitHub version is separate from the restricted Sites preview; GitHub pushes do not deploy it.
 
 ## 1. Get a local copy
 

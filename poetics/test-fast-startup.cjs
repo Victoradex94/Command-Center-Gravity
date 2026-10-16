@@ -1,0 +1,15 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),{performance}=require('perf_hooks'),zlib=require('zlib');
+const current=fs.readFileSync('dist/index.html','utf8'),baseline=fs.readFileSync('dist/atlas-preview-75.html','utf8');
+function compose(index){const window={location:{hash:'#/atlas'},history:{replaceState(){},pushState(){}}};for(const m of index.matchAll(/<script src="([^"]+)"/g)){if(/^(app|atlas-ui-guard)\./.test(m[1]))continue;vm.runInNewContext(fs.readFileSync('dist/'+m[1],'utf8'),{window,URLSearchParams});}return window;}
+const before=compose(baseline),after=compose(current);
+assert.equal(JSON.stringify(after.PoeticsDirectoryData),JSON.stringify(before.PoeticsDirectoryData));
+function root(){let html='',controls={};const noop=()=>{};return {classList:{add:noop},get html(){return html},set innerHTML(s){html=s;controls={}},querySelector(s){if(s.startsWith('#')&&!html.includes('id="'+s.slice(1)+'"'))return null;return controls[s]||(controls[s]={focus:noop,setSelectionRange:noop,setAttribute:noop,scrollIntoView:noop})},querySelectorAll(){return []}};}
+const scenarios=['#/atlas','#/atlas?categories=People','#/atlas?year=2024','#/atlas?q=poetry','#/atlas?zone=South+East','#/atlas?state=Kogi','#/atlas?city=Ogbomoso','#/atlas?view=list&q=Asaba','#/atlas?q=no-such-entry'];
+// Compare observable filter/map/card output, including all counts and evidence.
+for(const hash of scenarios){before.location.hash=hash;after.location.hash=hash;const a=root(),b=root();before.renderDirectory(a);after.renderDirectory(b);const normalize=s=>s.replace(/Preview \d+/g,'Preview').replace(/data-poetics-release="\d+"/g,'data-poetics-release="current"');assert.equal(normalize(b.html),normalize(a.html),hash);}
+const initial=index=>[...index.matchAll(/(?:src|href)="([^"#]+\.(?:js|css))"/g)].map(m=>fs.readFileSync('dist/'+m[1]));
+const assetsA=initial(baseline),assetsB=initial(current),sum=a=>a.reduce((n,b)=>n+b.length,0),gzip=a=>a.reduce((n,b)=>n+zlib.gzipSync(b).length,0);
+assert(assetsB.length<assetsA.length);assert(sum(assetsB)<sum(assetsA)*.8);
+function timings(w){w.location.hash='#/atlas';const r=root();w.renderDirectory(r);const runs=[];for(let i=0;i<9;i++){const start=performance.now();w.renderDirectory(r);runs.push(performance.now()-start);}return +runs.sort((a,b)=>a-b)[4].toFixed(2);}
+const result={entries:after.PoeticsDirectoryData.rows.length,relationships:after.PoeticsDirectoryData.edges.length,composedRecordsIdentical:true,filterSnapshotsEqual:scenarios.length,before:{requests:assetsA.length,rawBytes:sum(assetsA),estimatedGzipBytes:gzip(assetsA),medianRenderMs:timings(before)},after:{requests:assetsB.length,rawBytes:sum(assetsB),estimatedGzipBytes:gzip(assetsB),medianRenderMs:timings(after)},scope:'Local Node/VM redraws with a DOM stub; gzip estimates are not measured network transfers or browser timings.'};
+console.log(JSON.stringify(result,null,2));

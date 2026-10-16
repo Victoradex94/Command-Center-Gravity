@@ -24,56 +24,28 @@
     "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.5f415534e94f.css",
-    "sha256": "5f415534e94f47c6cb6b619f2834328a8afb471fa26782e60748022277df092f"
+    "file": "vicadex-theme.438d2291a1ad.css",
+    "sha256": "438d2291a1ad02aad3e52f93cfe01dabfe480103033ee169fb24907f2fa7e1b9"
   },
-  "atlas.js": {
-    "file": "atlas.3cbc35bb4861.js",
-    "sha256": "3cbc35bb4861312123381e535bdb8e0795631c8a6cce626bb046026a2005fc98"
-  },
-  "canonical-research-runtime.js": {
-    "file": "canonical-research-runtime.461f102f40d6.js",
-    "sha256": "461f102f40d69a92ddd43f2cb6cec6bc90c0054546107433447fef45ec432fff"
-  },
-  "national-directory.js": {
-    "file": "national-directory.9968b6c922fc.js",
-    "sha256": "9968b6c922fc3f497fe5fe07041267a18a90350fb2ac6521e2f5b3205a3b34e6"
-  },
-  "directory-expansion.js": {
-    "file": "directory-expansion.b77f2c2f74b4.js",
-    "sha256": "b77f2c2f74b44954884a5f71c34dea111cc22d54be50ba64cf7c27d1df63f9a1"
-  },
-  "nigeria-boundary.js": {
-    "file": "nigeria-boundary.c6bcc236b322.js",
-    "sha256": "c6bcc236b322c3b9d16964fc42fb311383049c199c05649b3177272d693e3a53"
+  "atlas-input.js": {
+    "file": "atlas-input.1534274b6a7f.js",
+    "sha256": "1534274b6a7fa11590434d68aa62f4985089ebb79659fa768d68bda02706d973"
   },
   "nigeria-map.js": {
     "file": "nigeria-map.2945d9baaa7c.js",
     "sha256": "2945d9baaa7c9667225330ed794ae91d60e145fcf5c51d67f60eef23f8bac91d"
   },
-  "nigeria-states.js": {
-    "file": "nigeria-states.554e1d97a522.js",
-    "sha256": "554e1d97a522d5282a40d2aac935010f878250e508e65e5c710d96f7e4e92a5f"
-  },
   "nigeria-states-map.js": {
     "file": "nigeria-states-map.520077c91d6d.js",
     "sha256": "520077c91d6d72c3abff1d5150aa22094dc53097683670ce589deede27f87b14"
-  },
-  "osm-state-locators.js": {
-    "file": "osm-state-locators.aee0b5e6db37.js",
-    "sha256": "aee0b5e6db3770284c6856d3a9e4c9bbd6c724bd961907ac98d12acbfe0613a4"
   },
   "geography-registry.js": {
     "file": "geography-registry.4fdc196409b5.js",
     "sha256": "4fdc196409b52fc6716df9462d5593220d4f2d51fbe4a3e54b711f2667e7030b"
   },
-  "state-urban-manifest.js": {
-    "file": "state-urban-manifest.e3b55e4d044b.js",
-    "sha256": "e3b55e4d044b205e875326dab04290704c9219c7253e52dc2c1b6393dc3d8afe"
-  },
   "state-urban-map.js": {
-    "file": "state-urban-map.42401229d03b.js",
-    "sha256": "42401229d03b940b158a745de3646db3ae4cf521f9f0b0ac37d3e4fb7405de5d"
+    "file": "state-urban-map.da332a082724.js",
+    "sha256": "da332a0827241f9eb8c2c1ed57aae6e66ec5cc4043e3de5d8024a24c11e49071"
   },
   "state-city-map.js": {
     "file": "state-city-map.4fa7380c44f2.js",
@@ -82,10 +54,6 @@
   "atlas-icons.js": {
     "file": "atlas-icons.2d8a4274555b.js",
     "sha256": "2d8a4274555b19c3a281ba8d1df84fd352a4e928d684f084209eaeebac3df06e"
-  },
-  "atlas-audit.js": {
-    "file": "atlas-audit.cdd3131a8bf3.js",
-    "sha256": "cdd3131a8bf31c1288a4955fb550c58a3e16516c6ccce16aa912eaad5beb553a"
   },
   "entry-status.js": {
     "file": "entry-status.5f0dd8b074d2.js",
@@ -100,8 +68,8 @@
     "sha256": "d43c79c0b3b5c528ce333bf90c46cdf56b8d355b80713dc230871bcf042e4eed"
   },
   "directory.js": {
-    "file": "directory.185d00d679ec.js",
-    "sha256": "185d00d679ec714ef920ee02463c877870a1ed37c2620868518764521b5d0b3a"
+    "file": "directory.6d85a71cd280.js",
+    "sha256": "6d85a71cd2801ca71bbdc7a0eab23bc20b506e39f7bd8a773fa954f684df5bf8"
   },
   "contribute.js": {
     "file": "contribute.676d669df152.js",
@@ -110,10 +78,6 @@
   "atlas-ui-guard.js": {
     "file": "atlas-ui-guard.94d3156d05db.js",
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
-  },
-  "game-assets.js": {
-    "file": "game-assets.db95b115001a.js",
-    "sha256": "db95b115001ad678171b511ba2b4c2a35b614268c8f6c17c4014917c78149f1b"
   },
   "game-loader.js": {
     "file": "game-loader.8db66b59d2cc.js",
