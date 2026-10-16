@@ -1,42 +1,89 @@
-# Poetics — isolated prototype
+# Poetics Atlas & Games
 
-Target integration: https://vicadex.com/poetics. This repository is a separate private preview, not a WordPress deployment.
+**Current handoff: Version 75 · 16 October 2026**
 
-## Run and structure
+Poetics is a static, browser-run Nigerian poetry Atlas and a separate fictional poetry-life simulation. This folder is the working application snapshot in the private GitHub repository `Victoradex94/Command-Center-Gravity`, under `poetics/` on `main`.
 
-Buildless static application: `dist/index.html`, `style.css`, `app.js`, `atlas.js`, `engine.js`.
-Routes: `#/`, `#/atlas`, `#/games`, `#/archive`, `#/research`. Hash routing deliberately requires no hosting rewrite rules. These are preview routes, not confirmed WordPress child routes.
-No third-party fonts, application dependencies or AI calls. The external OpenStreetMap embed requests map data from OpenStreetMap. The map uses the live OpenStreetMap embed with GeoNames city-centre coordinates; pan/zoom and tiles require internet. The relationship view uses readable connected links rather than a graph-layout library.
+Version 75 is the latest source mirrored here. Its Sites source checkpoint is `ea1c7e7790208340fed7d6f7987e9b9e65ecbd8d`; the GitHub code sync is commit [`650ee66`](https://github.com/Victoradex94/Command-Center-Gravity/commit/650ee6678ba55c8b64ee213dde5ed12e6d543f54). The Atlas test suite verifies **453 records and 667 source-linked relationships**.
 
-`node test-engine.cjs` checks deterministic gameplay, NPC independence, resource constraints, original-text preservation, consequential choices, save validation, 1,000-day advancement, evidence pointers and data separation.
+**The dated notes below the current handoff are a historical change log. If an older note conflicts with this section, use this section as current.**
 
-## Historical boundary
+## Run it locally
 
-Eight metadata records and seven relationships from two published first-party Vic’Adex pages. Source-supported does not mean independently corroborated history. Undated records remain undated; other dates carry year precision. No copyrighted historical poems, recordings, photos or likenesses are reproduced. Canonical research ledgers have not been imported into this preview. Every relationship has a source reference. Fictional state never modifies `atlas.js`.
+Requirements: Git (or download the repository ZIP), Python 3, and a modern browser. Node.js is needed only to run the checks. There is no `npm install` step.
 
-## Fictional state
+### Windows PowerShell
 
-Twelve authored NPCs, reproducible seeded random generator, simulated days, original-writing editor, poetry wall, relationships and remembered feedback, money/energy, coaching, researcher, rehearsal, open mic and slam. NPCs act on day advancement, including an opt-in Play/Pause clock (one day per 12 seconds while the page is active). The world pauses when the page is hidden or navigation leaves the game; it does not run on a background server. Scores are game mechanics, not literary assessments. Travel changes city context only; city-specific opportunities are not implemented.
-Saves live in `localStorage` under `poetics-fiction-v1`, with downloadable JSON and validated import. No accounts, cloud persistence or public submissions. Correction form downloads a draft and never transmits it.
+    git clone https://github.com/Victoradex94/Command-Center-Gravity.git
+    cd Command-Center-Gravity/poetics
+    py -3 -m http.server 4173 --directory dist
 
-## WordPress integration recommendation
+Open `http://localhost:4173/#/atlas` in your browser. Leave the terminal open while using the preview; stop the server with Ctrl+C.
 
-Elementor: editorial homepage, archive/resource links, source-method copy and page-scoped visual components.
-Dedicated app: Atlas filtering/network/map, simulation engine, future authentication and durable player saves, editorial data ingestion.
-Preferred next step: validate an isolated WordPress staging site and route ownership for `/poetics` before selecting embed or reverse-proxy integration. Neither route configuration nor plugin/theme/hosting changes are authorized by this prototype. Use a controlled read-only cultural-data export/API; separate historical records, provenance and rights from fictional world/player state.
+### macOS or Linux
+
+    git clone https://github.com/Victoradex94/Command-Center-Gravity.git
+    cd Command-Center-Gravity/poetics
+    python3 -m http.server 4173 --directory dist
+
+Open `http://localhost:4173/#/atlas`. Serve `dist/` over HTTP; opening `index.html` as a `file://` URL will break data fetches.
+
+To use GitHub without cloning, sign in, open the `poetics/` folder, and use GitHub’s web editor. For local previews or tests, download the repository ZIP and follow the same server step.
+
+## What is in the app
+
+- `dist/index.html` is the entrypoint. Hash routes are `#/atlas`, `#/games`, `#/about`, and `#/submit`.
+- `dist/*.js`, `*.css`, and JSON files contain the Atlas, map, game, evidence and presentation assets. Edit the readable, non-fingerprinted files (for example `directory.js`); the entrypoint loads fingerprinted copies.
+- `research/` contains supporting query logs, matrices and claim reviews. The shared Drive Markdown ledger remains the canonical task ledger; read its latest copy before research or data edits: https://drive.google.com/file/d/13qDg2XVdUM5ZAbplLoeNT5X6hB89cnSq/view
+- `wordpress/poetics-preview/` is packaged source only. It is not a live WordPress deployment.
+
+The Atlas keeps historical records and their source links separate from the fictional game. Its state map uses Nigerian state boundaries. Detailed urban layers are available only where data has been prepared; where a detailed layer is missing or fails to load, the app falls back to the state outline. Africapolis urban extents describe built-up areas, not legal city boundaries.
+
+The game’s save data stays in that browser’s localStorage and can be exported/imported as JSON. There is no account, cloud save, multiplayer server, or live submission backend. The Submit form makes a local draft; it does not publish an entry.
+
+## Edit, check, and save your work
+
+Start from the current `main`. The old `poetics-staging` branch is a Version 45 snapshot; do not use it as the base for new work.
+
+Create a separate working branch before editing:
+
+    git switch -c poetics-work
+
+Edit the original non-fingerprinted sources. From the `poetics/` folder, regenerate entrypoint fingerprints and run the relevant checks:
+
+    python scripts/fingerprint-assets.py
+    node test-atlas-navigation.cjs
+    node test-state-urban-integration.cjs
+    node test-directory.cjs
+    node test-delivery.cjs
+    node test-engine.cjs
+    node test-contribute.cjs
+    node test-nigeria-gis.cjs
+
+Commit your work and push the branch:
+
+    git status
+    git add .
+    git commit -m "Describe the Poetics change"
+    git push -u origin poetics-work
+
+Keep source claims tied to evidence. Do not turn an announcement into a completed event, infer a residence or venue from an association, or collapse distinct name/venue variants without documentation. Do not represent fictional game events as history.
+
+## Hosting and preview
+
+The private GitHub repository is an editable source copy. It is **not connected to automatic hosting**. A GitHub commit does not update the restricted ChatGPT Sites preview, and the preview does not push changes back to GitHub.
+
+Current restricted preview: https://poetics-vicadex-lab.vicadexconcepts.chatgpt.site/#/atlas
+
+The preview is hosted separately through Sites and remains custom-access. This repository has no GitHub Pages deployment or independent production host configured. To keep working locally, the ChatGPT subscription is not needed once you can access the private GitHub repository. To host the app independently, choose and configure a static host for the `dist/` directory; that hosting migration has not been done.
+
+Do not change live WordPress, domain, hosting, or visitor-access settings as part of local editing. Updating the Sites preview is a separate, deliberate publish step; reconcile the newest GitHub and Sites sources first and preserve the restricted audience.
 
 ## Verification limits
 
-No control-browser skill was available in this managed runtime. Following the Sites workflow, no preview server or substitute browser automation was started. Rendered desktop/mobile, keyboard, screen-reader, contrast, navigation-click and save-reload checks therefore remain unverified. Responsive CSS, labels, focus states, skip link and safe text rendering are implemented but are not equivalent to accessibility sign-off.
+Version 75’s navigation, data, map-fallback, contribution, game and delivery checks pass in the source checkout. Automated checks are not a full visual or accessibility review. Recheck rendered layout, mobile, touch, keyboard and screen-reader behavior on the host and devices you intend to support.
 
-## Next work
-
-1. Review private preview visually and play a complete day.
-2. Verify staging access, backups, route ownership and integration options without changing production.
-3. Produce a reviewed 40–60-entity canonical pilot with claim-level citations and explicit rights.
-4. Add a self-hosted approved boundary dataset if offline map support is needed; add a graph layout.
-5. Add city-specific opportunities and refine creative feedback with practitioner testing.
-6. Introduce server-side save/auth/moderation only after approving privacy and ownership requirements.
+## Historical change log
 
 ## Dynamic revision — 12 October 2026
 
@@ -131,3 +178,4 @@ The 13 October audit adds separate atlas-audit and entry-status layers, Publicat
 Follow-up correction: light page, dark map canvas outside Nigeria, and arrow-free controls. research/discovery-matrix.json records 146 state/poet query attempts and browser access limitations. Search-batch primary-source enrichment brings the directory to 238 entries, 365 links and nine Publications; 47 claim-scoped reviews, with remaining claims queued.
 
 Directory entries share a standard field schema, with source dates distinguished from event dates and missing information stated explicitly. The 2023 Cross Country Celebration notices display programme, city, named host and venue.
+
