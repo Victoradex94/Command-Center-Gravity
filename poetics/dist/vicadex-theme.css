@@ -413,3 +413,10 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .map-source-notes{max-width:80ch;padding-top:4px}.map-source-notes p{margin:4px 0 8px}
 .map-attribution :is(a,summary):focus-visible{outline:2px solid #0b5f78;outline-offset:3px;border-radius:3px}
 @media(max-width:700px){.map-attribution{padding:12px 14px}.map-attribution summary{min-height:36px;align-content:center}}
+
+/* The selected entry reserves its own row; it cannot cover map controls or credits. */
+.map-atlas .map-stage>.map-selection-preview{position:static;inset:auto;display:flex;box-sizing:border-box;max-width:none;min-width:0;width:auto;margin:12px 16px;padding:12px 14px;z-index:auto;box-shadow:none;flex-shrink:0}
+.map-selection-preview>div{min-width:0;flex:1}
+.map-selection-preview b{display:block;overflow-wrap:anywhere;line-height:1.4}
+.map-selection-preview a{display:inline-flex;align-items:center;min-height:32px;width:fit-content}
+@media(max-width:700px){.map-atlas .map-stage>.map-selection-preview{margin:10px 14px}.map-selection-preview a{min-height:40px}}
