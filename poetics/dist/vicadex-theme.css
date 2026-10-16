@@ -445,3 +445,6 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .map-city-toolbar #surprise-scope{margin:0;min-height:48px;width:155px;padding:8px 24px 8px 10px;border:1px solid #d8ad8e;border-left:0;border-radius:0 12px 12px 0;background:#fff5ec;color:#753318;font:400 14px 'Afacad',Arial,sans-serif}
 .map-city-toolbar .map-all-nigeria:hover{background:#084b60;color:#fffaf3}.map-city-toolbar #surprise-entry:hover{background:#f9d8c2;color:#753318}
 @media(max-width:700px){.map-city-toolbar{gap:12px;padding:10px 14px}}
+
+/* Desktop legend is anchored and dragged inside the dark canvas, not the full panel. */
+@media(min-width:701px){.map-atlas #nigeria-map{position:relative}.map-atlas #nigeria-map>.map-legend{right:16px;bottom:16px;max-width:calc(100% - 32px);max-height:calc(100% - 32px);overflow:auto}}
