@@ -24,8 +24,8 @@
     "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.f7b9284c11f1.css",
-    "sha256": "f7b9284c11f1eeab339ca95d4858d6da8cd27a722e2a3a7cc0c195e435ab32f8"
+    "file": "vicadex-theme.080dc07e0528.css",
+    "sha256": "080dc07e05284f72ea0295fdeb4f4a5a069aa636dae76265d7636ce9ef40aeed"
   },
   "atlas.js": {
     "file": "atlas.3cbc35bb4861.js",
@@ -100,8 +100,8 @@
     "sha256": "4edd4adecc88a32dda512f85e0a4a0f5a6c363e3cb3e6cd84f804fe343d8c73e"
   },
   "directory.js": {
-    "file": "directory.2f362e44bbf9.js",
-    "sha256": "2f362e44bbf92f6b836131272478a49cc0b2afa8d437d81471b8d54ce173ca16"
+    "file": "directory.463ad268cf5c.js",
+    "sha256": "463ad268cf5c7659a84224b70a13b08e77b03839d6eb46447177f384f4390d92"
   },
   "contribute.js": {
     "file": "contribute.3543a5e295e9.js",
