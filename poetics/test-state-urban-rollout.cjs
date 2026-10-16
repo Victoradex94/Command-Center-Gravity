@@ -2,10 +2,10 @@ const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),crypto=r
 const window={},context={window,URLSearchParams};for(const f of ['nigeria-states','nigeria-states-map','state-urban-manifest','state-urban-map'])vm.runInNewContext(fs.readFileSync('dist/'+f+'.js','utf8'),context);
 const api=window.PoeticsStateUrbanMap,m=api.manifest;assert.equal(Object.keys(m.states).length,37);assert.equal(m.metadata.stateUploadSha256,'edd28050c7f1ae40471424605f74e4d2df83502e4f301089761ae18f8ae2fbbf');let cities=0;
 for(const [state,info]of Object.entries(m.states)){const raw=fs.readFileSync('dist/'+info.url);assert.equal(crypto.createHash('sha256').update(raw).digest('hex'),info.sha256);assert.equal(raw.length,info.bytes);const data=JSON.parse(raw);api.prime(state,data);const project=api.projection(data.geometry);for(const poly of (data.geometry.type==='Polygon'?[data.geometry.coordinates]:data.geometry.coordinates))for(const ring of poly)for(const p of ring){const [x,y]=project(p);assert(x>=0&&x<=744&&y>=0&&y<=600);}
- const counts=Object.fromEntries(data.cities.map(c=>[c.city,1]));const html=api.render(state,counts,{People:1,Places:2,Platforms:0,Prizes:0,Publications:0},info.cities[0],64);assert(!/NaN|Infinity/.test(html));assert(!html.includes('<iframe'));assert(html.includes('state-urban-clip'));assert(html.includes('GRID3'));assert.equal((html.match(/class="urban-extent /g)||[]).length,data.cities.length);assert.equal((html.match(/data-category-state=/g)||[]).length,2);cities+=data.cities.length;
- if(state==='Lagos'){assert.equal(data.cities[0].crossState,true);assert(html.includes('clipped to selected state'));}
- if(state==='Adamawa'){assert(html.includes('Containing urban area named Jimeta'));assert.equal(data.cities[0].city,'Yola');}
- for(const city of info.unmatched)assert(html.includes(city));
+ const counts=Object.fromEntries(data.cities.map(c=>[c.city,1]));const html=api.render(state,counts,{People:1,Places:2,Platforms:0,Prizes:0,Publications:0},info.cities[0],64),notes=JSON.stringify(api.attribution(state));assert(!/NaN|Infinity/.test(html));assert(!html.includes('<iframe'));assert(html.includes('state-urban-clip'));assert(notes.includes('GRID3'));assert(!html.includes('state-city-source'));assert.equal((html.match(/class="urban-extent /g)||[]).length,data.cities.length);assert.equal((html.match(/data-category-state=/g)||[]).length,2);cities+=data.cities.length;
+ if(state==='Lagos'){assert.equal(data.cities[0].crossState,true);assert(notes.includes('clipped to selected state'));}
+ if(state==='Adamawa'){assert(notes.includes('Containing urban area named Jimeta'));assert.equal(data.cities[0].city,'Yola');}
+ for(const city of info.unmatched)assert(notes.includes(city));
 }
 assert.equal(cities,35);assert.equal(Object.values(m.states).flatMap(s=>s.unmatched).length,4);assert.throws(()=>api.prime('Lagos',{state:'Oyo'}));
 // Fresh isolated module: national load makes no fetch; one pending request per

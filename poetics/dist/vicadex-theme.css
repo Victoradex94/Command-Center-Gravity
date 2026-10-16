@@ -403,3 +403,13 @@ main,.atlas-brand,.map-atlas,.map-body,.map-stage,.map-results{min-width:0;max-w
 .category-count-circle .entry-icon{width:16px;height:16px;margin:0;flex:none}
 .category-count-circle b{font-size:18px;line-height:20px;font-weight:600}
 .route-loading{padding:2rem;font-size:18px}
+
+/* All map credits live together; qualifications and downloads stay one click away. */
+.map-attribution{position:relative;padding:12px 16px;background:#fffaf3;border-top:1px solid #e8e1d8;color:#555;font:400 12px/1.55 'Afacad',Arial,sans-serif;min-width:0;overflow-wrap:anywhere}
+.map-source-credits{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}
+.map-source-credits b{font-weight:600;color:#332f2b;white-space:nowrap}
+.map-attribution a{color:#0b5f78;text-underline-offset:3px}
+.map-attribution details{margin-top:5px}.map-attribution summary{width:fit-content;min-height:28px;display:list-item;cursor:pointer;color:#555}
+.map-source-notes{max-width:80ch;padding-top:4px}.map-source-notes p{margin:4px 0 8px}
+.map-attribution :is(a,summary):focus-visible{outline:2px solid #0b5f78;outline-offset:3px;border-radius:3px}
+@media(max-width:700px){.map-attribution{padding:12px 14px}.map-attribution summary{min-height:36px;align-content:center}}
