@@ -2,12 +2,12 @@ const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),window={
 for(const f of ['atlas','canonical-research','national-directory','directory-expansion','nigeria-boundary','nigeria-map','nigeria-states','nigeria-states-map','atlas-icons','atlas-audit','entry-status','entry-schema','directory'])vm.runInNewContext(fs.readFileSync('dist/'+f+'.js','utf8'),{window});
 let html='',controls={},categories=[];const noop=()=>{},root={classList:{add:noop},set innerHTML(s){html=s;categories=[...s.matchAll(/data-category="([^"]+)"( checked)?/g)].map(x=>({dataset:{category:x[1]},checked:!!x[2]}));},querySelector(s){return controls[s]||(controls[s]={focus:noop,setSelectionRange:noop,scrollIntoView:noop,setAttribute:noop});},querySelectorAll(s){return s==='[data-category]'?categories:[];}};
 window.renderDirectory(root,noop,noop);
-assert(html.includes('<b>All categories</b>'));assert(html.indexOf('id="map-category-filter"')<html.indexOf('id="nigeria-map"'));
+assert(html.includes('<option value="all" selected>All categories</option>'));assert(html.indexOf('id="map-category-filter"')<html.indexOf('id="nigeria-map"'));
 const z=window.PoeticsStateMap.zones;assert.equal(Object.values(z).flat().length,37);assert.equal(new Set(Object.values(z).flat()).size,37);assert(z['North Central'].includes('Federal Capital Territory'));
 controls['#directory-zone'].onchange({target:{value:'South East'}});
 const ids=()=>[...html.matchAll(/data-node="([^"]+)"/g)].map(x=>x[1]);
 assert(ids().length>0);assert(ids().every(id=>window.PoeticsStateMap.statesForRecord(window.PoeticsDirectoryData.rows.find(r=>r.id===id)).some(s=>z['South East'].includes(s))));
 assert(!html.includes('state-map-legend'));assert(html.includes('<option selected>South East</option>'));
-let b=categories.find(x=>x.dataset.category==='People');b.checked=false;b.onchange();assert(html.includes('<b>Places + Platforms + Prizes + Publications</b>'));
-controls['#directory-reset'].onclick();assert(html.includes('<b>All categories</b>'));assert(html.includes('<option selected>All zones</option>'));
+controls['#directory-category'].onchange({target:{value:'choose'}});assert(!html.includes('class="category-picker" hidden'));let b=categories.find(x=>x.dataset.category==='People');b.checked=false;b.onchange();assert(html.includes('<option value="custom" selected disabled>Places + Platforms + Prizes + Publications</option>'));
+controls['#directory-reset'].onclick();assert(html.includes('<option value="all" selected>All categories</option>'));assert(html.includes('<option selected>All zones</option>'));
 console.log('PASS six-zone complete partition, zone-filtered records, map-contained dynamic category summary and reset.');

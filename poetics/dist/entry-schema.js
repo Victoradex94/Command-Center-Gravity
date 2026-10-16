@@ -37,4 +37,37 @@ function standardize(r){
  r.standardEntry={name:r.name,category:r.category,type:r.entryType,description:r.details,location:r.locationLabel,dates:r.dateLabel,dateMeaning:r.dateBasis,verification:r.verification.label,activity:r.activityStatus?.label||r.publicationState||'Not assessed',sources:r.links};
 }
 window.PoeticsEntrySchema={prepare,standardize};
+
+// Presentation is derived without rewriting the research rows or their original dates.
+const confidenceLevels=[
+ {key:'unconfirmed',label:'Unconfirmed',definition:'The core entry has not had a recorded direct source review yet.'},
+ {key:'weak',label:'Weak',definition:'Reviewed support is limited to an index, listing or a source whose basis remains unclear.'},
+ {key:'strong',label:'Strong',definition:'A directly reviewed primary source or credible report supports the entry as worded, including its qualifications.'},
+ {key:'very-strong',label:'Very strong',definition:'A primary source and a separately assessed independent source family corroborate the same core claim, with no unresolved core conflict.'}
+];
+const reviewedLabels=new Set(['Source confirmed','Report supported','Archive supported','Announcement verified','Primary biography confirmed','Organizer-attributed','Primary attribution confirmed','Catalogue supported','Single newspaper report','Institutional record supported','Institutional report supported','Report-supported; not independently corroborated','Source-supported, role-specific','Primary organiser-associated report','Primary support-programme account']);
+function confidence(r,assessment=r.entryConfidenceAssessment){
+ const v=r.verification||{};let key='unconfirmed',reason='A source link alone is not a recorded claim review.';
+ if(window.PoeticsEntryStatus?.validDate(v.reviewedAt)&&/^https?:\/\//.test(v.sourceURL||'')&&v.label!=='Verification pending'){
+  key=reviewedLabels.has(v.label)?'strong':'weak';
+  reason=key==='strong'?'Recorded source review supports the qualified entry. This does not establish independent corroboration, current activity or event completion.':'The recorded review is limited or indirect; stronger direct support is still needed.';
+ }
+ // Several URLs, copied reports or a primary source alone never trigger this level.
+ if(assessment?.level==='very-strong'&&assessment.entryId===r.id&&window.PoeticsEntryStatus?.validDate(assessment.reviewedAt)&&assessment.claim&&assessment.corroborated===true&&!assessment.unresolvedCoreConflict){
+  const sources=(assessment.sources||[]).filter(s=>s.directlyRead===true&&s.family&&/^https?:\/\//.test(s.url||''));
+  const primary=sources.find(s=>s.role==='primary');
+  if(primary&&sources.some(s=>s.role==='independent'&&s.family!==primary.family&&s.url!==primary.url)){
+   key='very-strong';reason=assessment.reason||'Explicit claim review records primary and independent-family corroboration.';
+  }
+ }
+ return {...confidenceLevels.find(c=>c.key===key),reason,reviewedAt:v.reviewedAt||null,originalLabel:v.label||'Not assessed'};
+}
+function span(years){const sorted=[...new Set(years.filter(y=>Number.isInteger(y)&&y>=1800&&y<=2200))].sort((a,b)=>a-b);return sorted.length?sorted[0]===sorted.at(-1)?String(sorted[0]):sorted[0]+'–'+sorted.at(-1):'Not established';}
+function yearRange(r,now=new Date()){
+ const today=now.toISOString().slice(0,10),valid=window.PoeticsEntryStatus?.validDate||(()=>false);
+ const activity=(r.activities||[]).filter(a=>valid(a.date)&&a.date<=today&&/^https?:\/\//.test(a.url||'')&&['held event','programme announcement','call','award','publication'].includes(a.kind));
+ if(activity.length)return {label:'Years active',value:span(activity.map(a=>Number(a.date.slice(0,4)))),note:'Explicitly dated organising or creative activity only. This is not a continuous lifespan; other dated references remain in the evidence.',basis:'activity'};
+ return {label:'Recorded span',value:span((r.years||[]).map(y=>Number(y.year))),note:'Earliest to latest documented reference. Gaps, announcements and relationship dates do not establish continuous activity, founding, residence or attendance.',basis:'references'};
+}
+window.PoeticsEntryPresentation={confidence,confidenceLevels,yearRange,span,policyVersion:1};
 })();
