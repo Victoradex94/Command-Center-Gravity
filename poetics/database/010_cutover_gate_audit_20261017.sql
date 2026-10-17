@@ -1,6 +1,6 @@
 -- Poetics staging migration verification, 17 October 2026.
 -- Current checkpoint supersedes earlier open-gate notes in this file.
--- CUTOVER NOT DECLARED. Drive remains authoritative.
+-- Supabase is authoritative by explicit user instruction, 17 Oct 2026 11:36 WAT.\n-- Technical verification remains open; no site update or grant widening.
 --
 -- Passed: exact latest Drive import (654893 bytes; SHA256
 -- 08a50dd198f25de9f532d84c3cd63aec295666749f43d9848fccaf3816d6d627);
@@ -49,3 +49,17 @@ select a.id,
  (select decode(string_agg(chunk_hex,'' order by part_no),'hex') from poetics.artifact_import_chunks where artifact_id=a.id)=a.original_bytes chunks_exact,
  (select convert_to(string_agg(raw_line,E'\n' order by line_no),'UTF8') from poetics.history_lines where artifact_id=a.id)=a.original_bytes history_exact
 from poetics.artifacts a where media_type in ('text/markdown','text/plain');
+
+
+-- Current authority and lossless-history verification. Read-only.
+select jsonb_build_object(
+ 'authority_decision',(select jsonb_build_object('id',id,'status',status) from poetics.decisions where id='CUTOVER-20261017-SUPABASE-AUTHORITY'),
+ 'latest_source',(select jsonb_build_object('bytes',octet_length(original_bytes),'sha256',sha256,'hash_ok',encode(extensions.digest(original_bytes,'sha256'),'hex')=sha256) from poetics.artifacts where id='drive-exact-20261017-verification-receipt'),
+ 'history_lines',(select count(*) from poetics.history_lines where artifact_id='drive-exact-20261017-verification-receipt'),
+ 'run_references',(select count(*) from poetics.history_run_references where artifact_id='drive-exact-20261017-verification-receipt'),
+ 'history_passages',(select count(*) from poetics.history_passages where artifact_id='drive-exact-20261017-verification-receipt'),
+ 'passage_hash_mismatches',(select count(*) from poetics.history_passages p where p.artifact_id='drive-exact-20261017-verification-receipt' and p.source_sha256<>encode(extensions.digest(convert_to((select string_agg(h.raw_line,E'\\n' order by h.line_no) from poetics.history_lines h where h.artifact_id=p.artifact_id and h.line_no between p.line_from and p.line_to),'UTF8'),'sha256'),'hex')),
+ 'new_p012_queries',(select count(*) from poetics.search_queries where run_id='WEB-P012-ANA-SEARCH-20261017-1136'),
+ 'site_updated',false,
+ 'public_access_widened',false
+) as current_checkpoint;
