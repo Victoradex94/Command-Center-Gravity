@@ -1,6 +1,6 @@
 # Poetics Atlas staging database
 
-**Status: imported into private Supabase staging, not ready for cutover.** The canonical Drive ledger remains authoritative. This project is separate from WordPress.
+**Status: Supabase is the user-directed authoritative current source (17 October 2026, 11:36 WAT). Technical cutover verification remains open.** This project is separate from WordPress.
 
 ## Current sources
 
@@ -99,3 +99,16 @@ The Supabase project’s selected database branch is labelled `main PRODUCTION`.
 Migration `009_overlay_reconciled_ledger_records.sql` updates that read function without replacing the original snapshot or changing normalized source, claim, connection, artifact, or submission records. It appends only documented records from the reconciled ledger artifact when their IDs are absent, and imported relationships supported by that artifact when their endpoints/label tuple is absent. Submission still enters the pending-review queue. The migration was applied directly in Supabase on 17 October and then recorded in commit `6896634` on the open staging review branch; this GitHub commit does not rerun or merge the database change.
 
 Read verification returned 458 records and 673 connections, including four YOPAFEST/MCN/Yobe records and three festival connections. A fresh local staging Atlas search showed four results and the event’s three connections. No public website deployment occurred. The frozen snapshot remains in Supabase; the full raw research payloads remain separately preserved in the database artifact tables and canonical Drive ledger.
+
+
+## Supabase authority and history reconciliation — 17 October 2026
+
+By explicit user instruction, Supabase project `tknahlnirtnanzqqvufb` is the authoritative current source for Poetics Atlas data and reconciled research, effective 11:36 Africa/Lagos. The same decision is recorded in `poetics.decisions` as `CUTOVER-20261017-SUPABASE-AUTHORITY`. The latest Drive capture is retained in Supabase as provenance and recovery evidence; it is no longer the current authority.
+
+The exact latest source capture is 660,867 bytes, SHA256 `e29d591dd91a08f1cdce79afecc97459315c7a3cc85ea8a288d677aeb32a3199`. Its 4,632 source lines are retained in `history_lines`; all 190 sections reconstruct exactly. A source-linked retrieval index adds 189 run-heading references, 145 retrospective run index rows with unknown actors/dates left NULL, and 1,361 line passages. All passage hashes match their referenced text. Classification tags are retrieval aids only, not atomic factual claims. Graph counts remain 463 nodes, 679 connections and 681 claims; no graph additions were made by the index.
+
+The 17 October P012 search capture records five exact queries across system1/system2 search. The returned NewsTap descriptor is secondary evidence only and does not identify a prize edition. No P012 node, claim or connection was added; the prize identity remains open.
+
+The private history tables have RLS enabled and no anon/authenticated SELECT grants. No grant was widened and no site was changed. Remaining verification: typed semantic history coverage is incomplete, real HTTP/API transport could not be tested from this environment, and the packaged post-snapshot recovery delta has not yet been replay-tested in isolation. The earlier 18-table base restore passed independently; its proof does not cover this later delta.
+
+Migration `20261017101308_poetics_source_linked_history_reconciliation.sql` records the private source-linked history schema. Keep this branch private and staging-only; no payload dumps, credentials, public-access changes, PR merge, or site deployment are included.
