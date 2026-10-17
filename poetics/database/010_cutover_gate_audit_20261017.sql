@@ -1,6 +1,7 @@
 -- Poetics staging migration verification, 17 October 2026.
 -- Current checkpoint supersedes earlier open-gate notes in this file.
--- Supabase is authoritative by explicit user instruction, 17 Oct 2026 11:36 WAT.\n-- Technical verification remains open; no site update or grant widening.
+-- Supabase is authoritative by explicit user instruction, 17 Oct 2026 11:36 WAT.
+-- Technical verification remains open; no site update or grant widening.
 --
 -- Passed: exact latest Drive import (654893 bytes; SHA256
 -- 08a50dd198f25de9f532d84c3cd63aec295666749f43d9848fccaf3816d6d627);
@@ -25,7 +26,7 @@
 -- passed; synthetic transaction rolled back. Direct HTTP verification did NOT
 -- pass: shell403 network policy and browser ERR_BLOCKED_BY_CLIENT.
 -- verify_http_cutover.py records the remaining HTTP checks without credentials.
--- Do not declare cutover until that access gate and history review are closed.
+-- Do not claim all technical verification gates have passed until the remaining checks close.
 -- Unintended rls_auto_enable() execution revoked from public API roles.
 -- Remaining advisors: intentional private default-deny RLS information and
 -- two approved anon SECURITY DEFINER RPC warnings. No access widening.
@@ -58,7 +59,7 @@ select jsonb_build_object(
  'history_lines',(select count(*) from poetics.history_lines where artifact_id='drive-exact-20261017-verification-receipt'),
  'run_references',(select count(*) from poetics.history_run_references where artifact_id='drive-exact-20261017-verification-receipt'),
  'history_passages',(select count(*) from poetics.history_passages where artifact_id='drive-exact-20261017-verification-receipt'),
- 'passage_hash_mismatches',(select count(*) from poetics.history_passages p where p.artifact_id='drive-exact-20261017-verification-receipt' and p.source_sha256<>encode(extensions.digest(convert_to((select string_agg(h.raw_line,E'\\n' order by h.line_no) from poetics.history_lines h where h.artifact_id=p.artifact_id and h.line_no between p.line_from and p.line_to),'UTF8'),'sha256'),'hex')),
+ 'passage_hash_mismatches',(select count(*) from poetics.history_passages p where p.artifact_id='drive-exact-20261017-verification-receipt' and p.source_sha256<>encode(extensions.digest(convert_to((select string_agg(h.raw_line,E'\n' order by h.line_no) from poetics.history_lines h where h.artifact_id=p.artifact_id and h.line_no between p.line_from and p.line_to),'UTF8'),'sha256'),'hex')),
  'new_p012_queries',(select count(*) from poetics.search_queries where run_id='WEB-P012-ANA-SEARCH-20261017-1136'),
  'site_updated',false,
  'public_access_widened',false
