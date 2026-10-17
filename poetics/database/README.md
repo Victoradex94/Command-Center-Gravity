@@ -89,3 +89,13 @@ The last local staging verification read snapshot `github-main-0988b31-preview75
 The snapshot payload is not included in Git. It remains in the Supabase project; these SQL files contain schema and RPC definitions only. The database should not be reset from this repository without a separately verified seed export and integrity check. The public publishable client key is used by the browser; no service-role credential is tracked.
 
 The branch is not merged to `main` and no hosting or WordPress deployment was triggered.
+
+
+
+## Atlas read overlay — 17 October 2026
+
+The Supabase project’s selected database branch is labelled `main PRODUCTION`. The local staging app already calls `public.read_poetics_atlas_snapshot()`; that function had returned only the fixed Version 75 snapshot, omitting reconciled ledger records held in normalized tables.
+
+Migration `009_overlay_reconciled_ledger_records.sql` updates that read function without replacing the original snapshot or changing normalized source, claim, connection, artifact, or submission records. It appends only documented records from the reconciled ledger artifact when their IDs are absent, and imported relationships supported by that artifact when their endpoints/label tuple is absent. Submission still enters the pending-review queue. The migration was applied directly in Supabase on 17 October and then recorded in commit `6896634` on the open staging review branch; this GitHub commit does not rerun or merge the database change.
+
+Read verification returned 458 records and 673 connections, including four YOPAFEST/MCN/Yobe records and three festival connections. A fresh local staging Atlas search showed four results and the event’s three connections. No public website deployment occurred. The frozen snapshot remains in Supabase; the full raw research payloads remain separately preserved in the database artifact tables and canonical Drive ledger.
