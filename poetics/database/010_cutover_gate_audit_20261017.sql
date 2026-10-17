@@ -47,3 +47,14 @@ select a.id,
   from poetics.artifact_import_chunks where artifact_id=a.id) = a.original_bytes as chunks_exact
 from poetics.artifacts a
 where a.id='drive-exact-20261017-082620';
+
+-- Follow-up verified after the initial checkpoint:
+-- All 17 registered artifacts now have chunk copies; zero reconstructed-byte
+-- or SHA256 mismatches. Existing non-zero legacy part numbering was preserved.
+-- GitHub retained archive was subsequently fetched using the base64 file route:
+-- 946585 bytes, SHA256 217542cedef4b9f8f302ec66552cc75bb79e12a4bdf2926ab4c896b435028832.
+-- Actual tar inventory is 38 members. Earlier source note said 37; correction retained.
+-- This supersedes the binary-retrieval limitation in the initial comments above.
+-- Supabase plugin installation was confirmed during this run; its operations
+-- were not exposed in the active runtime tool catalog at the last check.
+-- No cutover was recorded.
