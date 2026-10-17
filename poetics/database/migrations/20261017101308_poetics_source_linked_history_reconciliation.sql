@@ -19,8 +19,6 @@ CREATE INDEX history_run_references_run_id_idx
   ON poetics.history_run_references (run_id);
 ALTER TABLE poetics.history_run_references ENABLE ROW LEVEL SECURITY;
 REVOKE ALL ON poetics.history_run_references FROM PUBLIC, anon, authenticated, service_role;
-COMMENT ON TABLE poetics.history_run_references IS
-  'Maps source headings to exact line spans and preserved run IDs. Dates are raw heading text only; no inferred actor or execution timestamp.';
 
 CREATE TABLE poetics.history_passages (
   artifact_id text NOT NULL REFERENCES poetics.artifacts(id),
