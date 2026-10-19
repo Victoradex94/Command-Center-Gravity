@@ -4,7 +4,7 @@ The exact uploads remain in Library. Rendering derivatives retain every ring;
 RDP max deviation .0001deg (~11m), preserving winding and area within1% or
 falling back to original ring. No legal/topological accuracy claim.
 """
-import argparse, collections, hashlib, json, math, re
+import argparse, collections, hashlib, json, re
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('states',type=Path);p.add_argument('urban',type=Path);a=p.parse_args()
 root=Path(__file__).resolve().parents[1];out=root/'dist/geography';out.mkdir(exist_ok=True)
