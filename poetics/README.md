@@ -1,14 +1,21 @@
 # Poetics Atlas & Games
 
-**Current handoff: Version 76 · 16 October 2026**
+**Current handoff: Release 103 · 19 October 2026**
 
 Poetics is a static, browser-run Nigerian poetry Atlas and a separate fictional poetry-life simulation. This folder is the working application snapshot in the private GitHub repository `Victoradex94/Command-Center-Gravity`, under `poetics/` on `main`.
 
-Version 76 is the latest source mirrored here. Its Sites source checkpoint is `e22287464f447cfec4f664c3b9ddf7be7b870b2e`; the matching source and build instructions are in current GitHub main. The Atlas test suite verifies **453 records and 667 source-linked relationships**.
+GitHub `main` is the authoritative application source. Release 103 was reconciled from LocalWP while preserving repository research, archives and performance improvements. LocalWP and the separately managed Sites preview are optional copies, not upstream application sources. The Atlas loads current records from the existing Supabase snapshot; the bundled **453 records and 667 relationships** remain historical source and test fixtures.
 
 **The dated notes below the current handoff are a historical change log. If an older note conflicts with this section, use this section as current.**
 
 ## Run it locally
+
+LocalWP and WordPress are not required. With Node.js installed, run `node scripts/serve-local.cjs` from `poetics/`, or double-click `START-POETICS.cmd` on Windows. The launcher also recognises the bundled Codex Node runtime when available. Open `http://127.0.0.1:4173/#/atlas`; Ctrl+C stops the server. The alternatives below use Python.
+
+For an existing clone, pull current `main` before starting. Do not run Git updates while you have uncommitted edits.
+
+Atlas data, submissions, Google fonts and Commons portraits require network access. A failed Supabase connection displays an error/retry rather than presenting bundled records as current.
+
 
 Requirements: Git (or download the repository ZIP), Python 3, and a modern browser. Node.js is needed only to run the checks. There is no `npm install` step.
 
@@ -39,7 +46,7 @@ To use GitHub without cloning, sign in, open the `poetics/` folder, and use GitH
 
 The Atlas keeps historical records and their source links separate from the fictional game. Its state map uses Nigerian state boundaries. Detailed urban layers are available only where data has been prepared; where a detailed layer is missing or fails to load, the app falls back to the state outline. Africapolis urban extents describe built-up areas, not legal city boundaries.
 
-The game’s save data stays in that browser’s localStorage and can be exported/imported as JSON. There is no account, cloud save, multiplayer server, or live submission backend. The Submit form makes a local draft; it does not publish an entry.
+The game’s save data stays in that browser’s localStorage and can be exported/imported as JSON. There is no account, cloud save or multiplayer server. The Submit form sends to the existing Supabase review queue and also supports local drafts; submission does not publish an Atlas entry.
 
 ## Edit, check, and save your work
 

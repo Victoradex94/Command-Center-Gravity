@@ -1,6 +1,6 @@
 # Poetics — local setup and staging
 
-Current working source: LocalWP release 103 reconciled from GitHub Version 76 at `Victoradex94/Command-Center-Gravity/poetics/`. The GitHub version is separate from the restricted Sites preview; GitHub pushes do not deploy it.
+Current working source: Release 103 on GitHub `main` at `Victoradex94/Command-Center-Gravity/poetics/`. The GitHub version is separate from the restricted Sites preview; GitHub pushes do not deploy it.
 
 ## 1. Get a local copy
 
@@ -71,3 +71,9 @@ The Atlas now reads the existing Supabase snapshot and displays an error/retry w
 The browser client contains only the existing browser publishable key, which is designed for client distribution. Never copy `.env.local`, secret/service-role keys, database exports or credentials. Hero portraits and logo used from WordPress are packaged in `dist/media/`; Commons portraits and Google fonts still require network access.
 
 Validation: the seven documented core checks plus snapshot replacement, category performance, fast startup and lazy game routes pass. Entry assets and CSS local URLs resolve. Live Supabase read could not be verified from this command environment (network fetch failed); no database write was attempted. These are Node/VM checks, not a claim of desktop/mobile visual QA. GitHub pushes do not deploy Sites or WordPress.
+
+## GitHub-first operation
+
+Run `node scripts/serve-local.cjs` from `poetics/` or use `START-POETICS.cmd` on Windows. This serves only `dist/` on `127.0.0.1:4173`; no WordPress or LocalWP service is needed. Python remains an alternative. Edit readable source in a new branch from current main, regenerate delivery files, run checks, and merge reviewed changes. Pull main into any optional staging copy.
+
+For website delivery, the intended flow is GitHub main -> an approved build/deployment process -> the website serving `poetics/dist/` -> browser requests to the existing Supabase API. Visitors load code from the website host; GitHub remains its source. No website deployment, public host connection, database migration or Supabase setting change was performed by this merge. A private GitHub repository does not make browser-delivered JavaScript secret; browser code must contain only public configuration.

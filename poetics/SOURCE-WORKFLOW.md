@@ -4,16 +4,16 @@
 
 - Repository: `Victoradex94/Command-Center-Gravity`, folder `poetics/`.
 - Current branch: `main`; start new work branches from its latest commit.
-- Current code snapshot: LocalWP release 103 reconciled from Version 76. Read current main for the exact GitHub commit; its matching Sites source checkpoint is listed below.
+- Current code snapshot: Release 103, reconciled from LocalWP and merged into main. Read current main for its exact commit. The Sites checkpoint below describes a separate historical preview, not this release.
 - The `poetics-staging` branch is an older Version 45 snapshot. Do not use it as the base for new work.
 - Sites project: `appgprj_6acce9493e8c81919635a9e7438b820c`; current restricted publication Version 76; its separately managed Sites source checkpoint is `e22287464f447cfec4f664c3b9ddf7be7b870b2e`.
 
-GitHub is the editable source mirror. The Sites app uses its own managed source repository. GitHub and Sites do not synchronize automatically, and a GitHub commit does not change the preview.
+GitHub main is the authoritative application source. LocalWP is an optional staging copy; changes there must be reconciled through a GitHub branch and review before they become authoritative. The Sites app uses its own managed source repository. GitHub and Sites do not synchronize automatically, and a GitHub commit does not change the preview.
 
 ## Before research or data changes
 
 1. Read the latest canonical Drive Markdown ledger: https://drive.google.com/file/d/13qDg2XVdUM5ZAbplLoeNT5X6hB89cnSq/view . Do not use an old download as authority.
-2. Fetch current GitHub `main` and the current Sites source/version; record their commit/version identifiers and inspect for divergence.
+2. Fetch current GitHub `main` and record its commit. Inspect LocalWP or Sites only when explicitly importing changes from those separate copies.
 3. Preserve newer work from either source. Use `research/` artifacts as supporting evidence, not as a replacement task ledger.
 
 ## GitHub development
@@ -54,3 +54,9 @@ The Atlas now reads the existing Supabase snapshot and displays an error/retry w
 The browser client contains only the existing browser publishable key, which is designed for client distribution. Never copy `.env.local`, secret/service-role keys, database exports or credentials. Hero portraits and logo used from WordPress are packaged in `dist/media/`; Commons portraits and Google fonts still require network access.
 
 Validation: the seven documented core checks plus snapshot replacement, category performance, fast startup and lazy game routes pass. Entry assets and CSS local URLs resolve. Live Supabase read could not be verified from this command environment (network fetch failed); no database write was attempted. These are Node/VM checks, not a claim of desktop/mobile visual QA. GitHub pushes do not deploy Sites or WordPress.
+
+## GitHub-first operation
+
+Run `node scripts/serve-local.cjs` from `poetics/` or use `START-POETICS.cmd` on Windows. This serves only `dist/` on `127.0.0.1:4173`; no WordPress or LocalWP service is needed. Python remains an alternative. Edit readable source in a new branch from current main, regenerate delivery files, run checks, and merge reviewed changes. Pull main into any optional staging copy.
+
+For website delivery, the intended flow is GitHub main -> an approved build/deployment process -> the website serving `poetics/dist/` -> browser requests to the existing Supabase API. Visitors load code from the website host; GitHub remains its source. No website deployment, public host connection, database migration or Supabase setting change was performed by this merge. A private GitHub repository does not make browser-delivered JavaScript secret; browser code must contain only public configuration.
