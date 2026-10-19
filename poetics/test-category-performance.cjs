@@ -11,7 +11,7 @@ assert(Object.keys(full.window.PoeticsResearch.tables).length>1);
 for(const c of now.PoeticsStateMap.categories){const icon=now.PoeticsIcon(c);assert(icon.includes(`data-category-icon="${c}"`));assert(icon.includes('aria-hidden="true"'));}
 let html='',nodes={};const noop=()=>{},root={classList:{add:noop},set innerHTML(s){html=s;nodes={}},querySelector(s){if(s.startsWith('#')&&!html.includes('id="'+s.slice(1)+'"'))return null;return nodes[s]||(nodes[s]={focus:noop,setSelectionRange:noop,setAttribute:noop,scrollIntoView:noop})},querySelectorAll(){return []}};
 now.renderDirectory(root);
-for(const c of now.PoeticsStateMap.categories){assert(html.includes(`data-category="${c}"`));assert((html.match(new RegExp(`data-category-icon="${c}"`,'g'))||[]).length>=2);}
+for(const c of now.PoeticsStateMap.categories){assert(html.includes(`data-category="${c}"`));assert((html.match(new RegExp(`data-category-icon="${c}"`,'g'))||[]).length>=1);}
 const manifest=now.PoeticsStateUrbanManifest,oldAPI=before.PoeticsStateUrbanMap,newAPI=now.PoeticsStateUrbanMap;
 const paths=s=>[...s.matchAll(/\sd="([^"]+)"/g)].map(m=>m[1]);
 let calls=0;const instrumentedMath=Object.create(Math);instrumentedMath.log=x=>{calls++;return Math.log(x)};

@@ -5,6 +5,7 @@ const names=h=>[...h.matchAll(/<script src="([^"]+)"([^>]*)>/g)];
 const plain=s=>s.replace(/\.[a-f0-9]{12}(?=\.js$)/,'');
 const deferredGames=['engine.js','opportunities.js','gamemap.js','city3d.js','world.js'];
 const expected=names(previous).map(m=>plain(m[1])).filter(n=>!deferredGames.includes(n)).map(n=>n==='canonical-research.js'?'canonical-research-runtime.js':n);
+expected.splice(expected.indexOf('directory.js'),0,'supabase-atlas.js');
 expected.splice(expected.indexOf('app.js'),0,'game-assets.js','game-loader.js');
 const dataNames=['atlas.js','canonical-research-runtime.js','national-directory.js','directory-expansion.js','nigeria-boundary.js','nigeria-states.js','osm-state-locators.js','state-urban-manifest.js','atlas-audit.js','game-assets.js'];
 assert.deepEqual(names(index).map(m=>plain(m[1])),['atlas-input.js',...expected.filter(n=>!dataNames.includes(n))]);
