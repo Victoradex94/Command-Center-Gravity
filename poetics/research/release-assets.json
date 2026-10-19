@@ -24,12 +24,12 @@
     "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.438d2291a1ad.css",
-    "sha256": "438d2291a1ad02aad3e52f93cfe01dabfe480103033ee169fb24907f2fa7e1b9"
+    "file": "vicadex-theme.bdfdaaeb1f56.css",
+    "sha256": "bdfdaaeb1f5610b6b427ae3b3bfc82d5b085d5d60434f96baacd8ffc3410ec74"
   },
   "atlas-input.js": {
-    "file": "atlas-input.1534274b6a7f.js",
-    "sha256": "1534274b6a7fa11590434d68aa62f4985089ebb79659fa768d68bda02706d973"
+    "file": "atlas-input.c106fb778769.js",
+    "sha256": "c106fb77876978752c69fadca0eca5adb880fa4dcad8a8d52094346d7411585f"
   },
   "nigeria-map.js": {
     "file": "nigeria-map.2945d9baaa7c.js",
@@ -67,13 +67,17 @@
     "file": "atlas-navigation.d43c79c0b3b5.js",
     "sha256": "d43c79c0b3b5c528ce333bf90c46cdf56b8d355b80713dc230871bcf042e4eed"
   },
+  "supabase-atlas.js": {
+    "file": "supabase-atlas.613179fc1175.js",
+    "sha256": "613179fc11759e7f9f6a8fc8ff66d51b572e57e6480c659df63a10c0667560ad"
+  },
   "directory.js": {
-    "file": "directory.6d85a71cd280.js",
-    "sha256": "6d85a71cd2801ca71bbdc7a0eab23bc20b506e39f7bd8a773fa954f684df5bf8"
+    "file": "directory.45e69f2f6ca6.js",
+    "sha256": "45e69f2f6ca636f5aa994922d1515fd428a5e4424e2b50fb95e2aa195914d473"
   },
   "contribute.js": {
-    "file": "contribute.676d669df152.js",
-    "sha256": "676d669df152a712b2553ae79307a0b3aad5a0b259b95ecf8e584a4527287da4"
+    "file": "contribute.5ce1ab9ed1bb.js",
+    "sha256": "5ce1ab9ed1bb9c9fcb034522f077cb4982e7ebcb2128d5881b81f4b94d699ea5"
   },
   "atlas-ui-guard.js": {
     "file": "atlas-ui-guard.94d3156d05db.js",
@@ -84,7 +88,7 @@
     "sha256": "8db66b59d2cc18d315959389c36c702d2024ce35885fb31d69e422b32efd158c"
   },
   "app.js": {
-    "file": "app.85ebcdee1aeb.js",
-    "sha256": "85ebcdee1aeb763e5da0436bdba4489f672dc5b0843182b8975f871eec3d266a"
+    "file": "app.eb267b97b300.js",
+    "sha256": "eb267b97b300c0e8163923d7acd07e3d26da7642a6b9c45f9b1dd6d9a0f667d1"
   }
 }

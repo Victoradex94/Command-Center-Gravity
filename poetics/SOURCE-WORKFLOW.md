@@ -4,7 +4,7 @@
 
 - Repository: `Victoradex94/Command-Center-Gravity`, folder `poetics/`.
 - Current branch: `main`; start new work branches from its latest commit.
-- Current code snapshot: Version 76. Read current main for the exact GitHub commit; its matching Sites source checkpoint is listed below.
+- Current code snapshot: LocalWP release 103 reconciled from Version 76. Read current main for the exact GitHub commit; its matching Sites source checkpoint is listed below.
 - The `poetics-staging` branch is an older Version 45 snapshot. Do not use it as the base for new work.
 - Sites project: `appgprj_6acce9493e8c81919635a9e7438b820c`; current restricted publication Version 76; its separately managed Sites source checkpoint is `e22287464f447cfec4f664c3b9ddf7be7b870b2e`.
 
@@ -20,7 +20,7 @@ GitHub is the editable source mirror. The Sites app uses its own managed source 
 
 1. Clone the private repository and work under `poetics/`.
 2. Create a new working branch from current `main`, for example `poetics-work`; do not start from the stale `poetics-staging` branch.
-3. Edit readable, non-fingerprinted files. After source edits, run `python scripts/fingerprint-assets.py` from `poetics/`.
+3. Edit readable, non-fingerprinted files. After source edits, run `python -X utf8 scripts/fingerprint-assets.py` from `poetics/`.
 4. Run the relevant Node checks. A core set is `test-atlas-navigation.cjs`, `test-state-urban-integration.cjs`, `test-directory.cjs`, `test-delivery.cjs`, `test-engine.cjs`, `test-contribute.cjs`, and `test-nigeria-gis.cjs`.
 5. Commit and push the branch. Merge to `main` only after reviewing the diff and confirming it does not overwrite newer work.
 
@@ -38,9 +38,19 @@ The restricted preview URL is https://poetics-vicadex-lab.vicadexconcepts.chatgp
 
 ## Data and product boundaries
 
-- Current Atlas tests verify 453 records and 667 source-linked relationships. Preserve source attribution, date precision, name variants, uncertainty and planned-versus-completed distinctions.
+- Historical bundled Atlas tests verify 453 records and 667 source-linked relationships; runtime data comes from Supabase. Preserve source attribution, date precision, name variants, uncertainty and planned-versus-completed distinctions.
 - Fictional game events and player state remain separate from historical records. Game saves currently use localStorage; no account/cloud save is configured.
-- The Submit flow produces a local draft; it is not an editorial intake backend.
+- The Submit flow sends records to the existing Supabase review queue and retains a local draft option.
 - State boundaries and prepared urban extents are different geographic products. Urban footprints are not legal city limits; missing detailed layers must not be described as zero cultural activity.
 - `wordpress/poetics-preview/` is package source only. Do not deploy or alter live WordPress.
 
+
+## LocalWP release 103 reconciliation (19 October 2026)
+
+Started from current main `0988b3197f00ade4ed6e1ee55503b6a09ddbbf1c` and compared the local staging build `2026-10-18-release-103`. Readable sources live in `dist/`; fingerprinted files and `research/release-assets.json` are generated with the existing script. GitHub lookup indexes, filter-count caches and packed startup data remain; indexes rebuild after snapshot replacement. Research, archives and historical snapshots are preserved.
+
+The Atlas now reads the existing Supabase snapshot and displays an error/retry when unavailable. The bundled 453-record/667-relationship snapshot remains historical source and test input; it is not the current runtime authority. Submission sends to the existing review queue, with local draft/download support retained. Tests mock submission and create no database records. No migrations or project settings were changed, and no SQL files were imported.
+
+The browser client contains only the existing browser publishable key, which is designed for client distribution. Never copy `.env.local`, secret/service-role keys, database exports or credentials. Hero portraits and logo used from WordPress are packaged in `dist/media/`; Commons portraits and Google fonts still require network access.
+
+Validation: the seven documented core checks plus snapshot replacement, category performance, fast startup and lazy game routes pass. Entry assets and CSS local URLs resolve. Live Supabase read could not be verified from this command environment (network fetch failed); no database write was attempted. These are Node/VM checks, not a claim of desktop/mobile visual QA. GitHub pushes do not deploy Sites or WordPress.
