@@ -1,0 +1,7 @@
+# Keep delivery bytes identical on Windows and Linux.
+dist/*.js text eol=lf
+dist/*.css text eol=lf
+dist/*.html text eol=lf
+scripts/*.py text eol=lf
+*.cjs text eol=lf
+research/release-assets.json text eol=lf

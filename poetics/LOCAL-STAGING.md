@@ -54,3 +54,7 @@ Do not edit directly on a stale checkout or overwrite newer commits.
 - LocalWP staging is synchronized directly from GitHub `main`.
 - Fictional game events and player state remain separate from historical records.
 - Live submission routes to Supabase; `.env.local` must remain local and never committed.
+
+## Verified GitHub-to-LocalWP connector
+
+See [GITHUB-LOCALWP-CONNECTION.md](GITHUB-LOCALWP-CONNECTION.md) for the isolated build/test sync helper, explicit source imports, recovery copies, CI drift gate and the local staging connector. Runtime Atlas data continues to come from the existing Supabase API. No live Vic’Adex deployment is part of this connection.

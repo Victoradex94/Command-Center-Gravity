@@ -36,3 +36,7 @@ GitHub `main` is the sole authoritative application source. LocalWP is a synchro
 Run `node scripts/serve-local.cjs` from `poetics/` or use `START-POETICS.cmd` on Windows. This serves only `dist/` on `127.0.0.1:4173`; no WordPress or LocalWP service is needed. Python remains an alternative. Edit readable source in a new branch from current main, regenerate delivery files, run checks, and merge reviewed changes. Pull main into any staging copy.
 
 For website delivery, the intended flow is GitHub main -> an approved build/deployment process -> the website serving `poetics/dist/` -> browser requests to the existing Supabase API. Visitors load code from the website host; GitHub remains its source. A private GitHub repository does not make browser-delivered JavaScript secret; browser code must contain only public configuration.
+
+## Verified GitHub-to-LocalWP connector
+
+See [GITHUB-LOCALWP-CONNECTION.md](GITHUB-LOCALWP-CONNECTION.md) for the isolated build/test sync helper, explicit source imports, recovery copies, CI drift gate and the local staging connector. Runtime Atlas data continues to come from the existing Supabase API. No live Vic’Adex deployment is part of this connection.

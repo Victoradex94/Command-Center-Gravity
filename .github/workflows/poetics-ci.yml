@@ -1,64 +1,44 @@
 name: Poetics CI
-
 on:
   push:
-    branches: [ main, 'poetics/**' ]
+    branches: [main, 'poetics/**']
   pull_request:
-    branches: [ main ]
-
+    branches: [main]
+permissions:
+  contents: read
 jobs:
   test-and-verify:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: poetics
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      - name: Security Check - Guard secrets and credentials
+      - name: Guard tracked private files
         run: |
-          echo "Verifying no secrets, credentials, or private files are tracked..."
-          if [ -f .env.local ] || [ -f dist/.env.local ]; then
-            echo "ERROR: .env.local detected in repository!"
+          python3 - <<'PY'
+          import pathlib, subprocess
+          files = subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          for name in filter(None, files):
+              p = pathlib.PurePosixPath(name)
+              if any(x == '.env' or x.startswith('.env.') for x in p.parts) or p.suffix.lower() in ('.pem','.key','.pfx','.p12','.dump'):
+                  raise SystemExit('Forbidden tracked private file: ' + name)
+          PY
+      - name: Build and run app verification
+        run: python3 -X utf8 scripts/sync-localwp.py --verify-only
+      - name: Test sync failure and preservation safeguards
+        run: python3 -X utf8 test-sync-localwp.py
+      - name: Fail on build drift, including untracked generated assets
+        run: |
+          git diff --exit-code
+          if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+            echo "ERROR: Build produced untracked files. Regenerate and commit the delivery assets."
+            git ls-files --others --exclude-standard
             exit 1
-          fi
-          if find . -name "*.key" -o -name "*.pem" -o -name "*.pfx" | grep -q .; then
-            echo "ERROR: Private key or certificate detected!"
-            exit 1
-          fi
-          echo "Security scan passed."
-
-      - name: Verify asset fingerprinting
-        run: |
-          python3 -X utf8 scripts/fingerprint-assets.py
-
-      - name: Run Core Verification Suite
-        run: |
-          node test-delivery.cjs
-          node test-atlas-navigation.cjs
-          node test-state-urban-integration.cjs
-          node test-directory.cjs
-          node test-engine.cjs
-          node test-contribute.cjs
-          node test-nigeria-gis.cjs
-          node test-fast-startup.cjs
-          node test-game-lazy-route.cjs
-
-      - name: Check uncommitted changes in fingerprinted assets
-        run: |
-          git status --porcelain
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "Warning: Uncommitted changes detected after fingerprinting."
           fi

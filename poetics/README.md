@@ -190,3 +190,7 @@ Follow-up correction: light page, dark map canvas outside Nigeria, and arrow-fre
 
 Directory entries share a standard field schema, with source dates distinguished from event dates and missing information stated explicitly. The 2023 Cross Country Celebration notices display programme, city, named host and venue.
 
+
+## Verified GitHub-to-LocalWP connector
+
+See [GITHUB-LOCALWP-CONNECTION.md](GITHUB-LOCALWP-CONNECTION.md) for the isolated build/test sync helper, explicit source imports, recovery copies, CI drift gate and the local staging connector. Runtime Atlas data continues to come from the existing Supabase API. No live Vic’Adex deployment is part of this connection.

@@ -2,23 +2,23 @@
 from pathlib import Path
 import hashlib,json,re
 root=Path(__file__).resolve().parents[1]
-dist=root/'dist';index=dist/'index.html';html=index.read_text();mapping={}
+dist=root/'dist';index=dist/'index.html';html=index.read_text(encoding='utf-8');mapping={}
 # Rebuild the display-only derivative on every release; never edit the snapshot.
-exec((root/'scripts/prepare-browser-data.py').read_text(),{'__file__':str(root/'scripts/prepare-browser-data.py')})
+exec((root/'scripts/prepare-browser-data.py').read_text(encoding='utf-8'),{'__file__':str(root/'scripts/prepare-browser-data.py')})
 # Also resolves a prior fingerprint so the helper can run after source edits.
 def asset(match):
     attr,old=match.groups();name=old.split('?')[0]
     name=re.sub(r'\.[a-f0-9]{12}(?=\.(?:js|css)$)','',name)
     source=dist/name
     if not source.exists():raise RuntimeError('Missing asset '+name)
-    payload=source.read_bytes()
+    payload=source.read_text(encoding='utf-8').encode('utf-8')
     # Compact pure JSON assignments for delivery; retain readable canonical sources.
     if source.suffix=='.js':
-        data=re.fullmatch(r'(window\.\w+\s*=)\s*([\s\S]*?);?\s*',source.read_text())
+        data=re.fullmatch(r'(window\.\w+\s*=)\s*([\s\S]*?);?\s*',source.read_text(encoding='utf-8'))
         if data:
             try:
                 value=json.loads(data[2].removesuffix(';'))
-                payload=(data[1]+json.dumps(value,ensure_ascii=False,separators=(',',':'))+';\n').encode()
+                payload=(data[1]+json.dumps(value,ensure_ascii=False,separators=(',',':'))+';\n').encode('utf-8')
             except json.JSONDecodeError:
                 pass
     digest=hashlib.sha256(payload).hexdigest()
@@ -31,7 +31,7 @@ def asset(match):
 game_names=['engine.js','opportunities.js','gamemap.js','city3d.js','world.js']
 for name in game_names:
     asset(re.match(r'(src)="([^"]+)"','src="'+name+'"'))
-(dist/'game-assets.js').write_text('window.PoeticsGameAssets='+json.dumps([mapping[n]['file'] for n in game_names],separators=(',',':'))+';\n')
+(dist/'game-assets.js').write_text('window.PoeticsGameAssets='+json.dumps([mapping[n]['file'] for n in game_names],separators=(',',':'))+';\n',encoding='utf-8',newline='\n')
 # Bundle only immutable data. Executable modules retain their dependency order.
 import runpy
 data_names=runpy.run_path(str(root/'scripts/prepare-atlas-input.py'))['prepare'](dist)
@@ -41,6 +41,6 @@ def remove_data(match):
 html=re.sub(r'<script src="([^"]+)"[^>]*></script>',remove_data,html)
 html=html.replace('<script ', '<script src="atlas-input.js" defer></script><script ',1)
 html=re.sub(r'(src|href)="([^"#]+\.(?:js|css)(?:\?[^"#]*)?)"',asset,html)
-index.write_text(html)
-(root/'research/release-assets.json').write_text(json.dumps(mapping,indent=2)+'\n')
+index.write_text(html,encoding='utf-8',newline='\n')
+(root/'research/release-assets.json').write_text(json.dumps(mapping,indent=2)+'\n',encoding='utf-8',newline='\n')
 print('Fingerprinted',len(mapping),'entrypoint assets')
