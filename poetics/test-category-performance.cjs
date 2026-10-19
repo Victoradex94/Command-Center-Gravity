@@ -34,5 +34,5 @@ for(const state of ['Kaduna','Lagos','Niger','Borno']){
  t=performance.now();for(let i=0;i<n;i++)newAPI.render(state,counts,values,'All places',64);timings.push({state,redraws:n,beforeMs:+oldMs.toFixed(2),afterMs:+(performance.now()-t).toFixed(2)});
 }
 const bytes=h=>[...h.matchAll(/(?:src|href)="([^"#]+\.(?:js|css))"/g)].reduce((n,m)=>n+fs.statSync('dist/'+m[1]).size,0);
-assert(bytes(index)<bytes(previous)*.85);
+assert(bytes(index)<bytes(previous)*.75);
 console.log(JSON.stringify({status:'PASS',entries:453,connections:667,fullComposedDataUnchanged:true,iconsInFiltersLegendStateCounts:true,beforeInitialBytes:bytes(previous),afterInitialBytes:bytes(index),geometryCPU:timings,scope:'Node/VM asset and geometry preparation checks; not browser loading or visual QA'},null,2));
