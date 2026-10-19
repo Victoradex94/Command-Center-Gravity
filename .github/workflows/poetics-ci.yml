@@ -1,0 +1,64 @@
+name: Poetics CI
+
+on:
+  push:
+    branches: [ main, 'poetics/**' ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: poetics
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Security Check - Guard secrets and credentials
+        run: |
+          echo "Verifying no secrets, credentials, or private files are tracked..."
+          if [ -f .env.local ] || [ -f dist/.env.local ]; then
+            echo "ERROR: .env.local detected in repository!"
+            exit 1
+          fi
+          if find . -name "*.key" -o -name "*.pem" -o -name "*.pfx" | grep -q .; then
+            echo "ERROR: Private key or certificate detected!"
+            exit 1
+          fi
+          echo "Security scan passed."
+
+      - name: Verify asset fingerprinting
+        run: |
+          python3 -X utf8 scripts/fingerprint-assets.py
+
+      - name: Run Core Verification Suite
+        run: |
+          node test-delivery.cjs
+          node test-atlas-navigation.cjs
+          node test-state-urban-integration.cjs
+          node test-directory.cjs
+          node test-engine.cjs
+          node test-contribute.cjs
+          node test-nigeria-gis.cjs
+          node test-fast-startup.cjs
+          node test-game-lazy-route.cjs
+
+      - name: Check uncommitted changes in fingerprinted assets
+        run: |
+          git status --porcelain
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Warning: Uncommitted changes detected after fingerprinting."
+          fi
