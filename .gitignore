@@ -5,3 +5,6 @@
 *.p12
 *.pfx
 *.sql
+
+__pycache__/
+*.pyc

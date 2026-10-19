@@ -11,7 +11,7 @@ DATA_NAMES = ['atlas.js', 'canonical-research-runtime.js', 'national-directory.j
 def prepare(dist):
     data = {}
     for name in DATA_NAMES:
-        match = re.fullmatch(r'window\.(\w+)\s*=\s*([\s\S]*?);?\s*', (dist/name).read_text())
+        match = re.fullmatch(r'window\.(\w+)\s*=\s*([\s\S]*?);?\s*', (dist/name).read_text(encoding='utf-8'))
         if not match:
             raise ValueError('Expected a pure data assignment: '+name)
         data[match[1]] = json.loads(match[2].removesuffix(';'))
@@ -38,7 +38,7 @@ def prepare(dist):
     packed = pack(data)
     payload = json.dumps([strings,schemas,packed], ensure_ascii=False, separators=(',',':'))
     decoder = "(function(p){'use strict';function u(v){if(!Array.isArray(v))return v;if(v[0]==='s')return p[0][v[1]];if(v[0]==='a')return v.slice(1).map(u);return Object.fromEntries(p[1][v[1]].map((k,i)=>[k,u(v[i+2])]));}Object.assign(window,u(p[2]));})("+payload+");\n"
-    (dist/'atlas-input.js').write_text(decoder)
+    (dist/'atlas-input.js').write_text(decoder,encoding='utf-8',newline='\n')
     return DATA_NAMES
 
 if __name__ == '__main__':
