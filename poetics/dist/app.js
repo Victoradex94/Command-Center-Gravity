@@ -37,7 +37,7 @@ function games(){main.innerHTML=`<div class="page-top"><h1>Your poetry life.</h1
 </nav>
 
 <div class="in-game-panel active-panel" id="tab-desk">
-  <section class="panel" id="writing-studio"><div class="eyebrow">Challenge 01 / A journey, in a pocket</div><h3>Write the thing you carried.</h3><p class="caption">Choose a concrete object, a place and something left unsaid. Your writing stays on this device. Posting shares it only inside this local simulation.</p><label>Pen name<input id="penname" maxlength="40" value="${esc(game.name)}"></label><label style="margin-top:18px">Your original poem<textarea id="poem" maxlength="4000" placeholder="The bus left before the rain…">${esc(game.poem)}</textarea></label><p class="caption"><span id="chars">${game.poem.length}</span> / 4,000 characters · Device save ${saveAvailable?'available':'unavailable — download a save'}</p><div class="small-actions"><button id="draft">Save draft</button><button id="btn-export-poem" class="btn" type="button">Export / Share Poem</button><button class="primary" data-action="post">Post to wall · 12 energy</button><button data-action="coach">Coach · ₦350 / 18 energy</button><button data-action="rehearse">Rehearse · 16 energy</button></div><details><summary>Craft notebook & game mechanics</summary><p class="caption">Try one vivid image, a deliberate pause and an ending that leaves room. Coaching is authored rule-based advice; no AI service is called. Competition points use word count, skill, preparation, delivery choice, fictional opponent research and seeded chance. They cannot measure literary quality.</p></details></section></div><div class="in-game-panel" id="tab-wall"><section class="panel" id="poetry-wall"><div class="eyebrow">The poetry wall / Fictional posts</div><div class="wall-heading"><h3>A little room on the internet.</h3><button data-phone>Open on your phone </button></div><div class="wall">${game.wall.length?game.wall.map(p=>`<article class="post ${p.day===game.day?'fresh-post':''}"><strong>${esc(p.author)} · Day ${p.day}</strong><p>${esc(p.text)}</p><span class="caption">${p.author===game.name?'Your original writing / local simulation':'Authored fictional miniature'}</span></article>`).join(''):'<p>The wall is quiet. Post your poem, or advance a day to see the community at work.</p>'}</div></section></div><div class="in-game-panel" id="tab-journal"><section class="panel"><h3>Your event journal</h3><div class="log" aria-label="Simulation history">${game.log.map(x=>`<p>${esc(x)}</p>`).join('')}</div></section></div></div><div class="in-game-panel" id="tab-venue"><section class="panel" id="performance-room"><div class="eyebrow">Tonight / Lion’s Lines</div><h3>A microphone. A choice.</h3><p class="caption">Open mic: build confidence without a ranking. Slam: compete with three fictional poets. Minimum draft: 40 characters.</p><label>Delivery approach<select id="delivery"><option value="intimate">Intimate / craft-led</option><option value="rhythmic">Rhythmic / delivery-led</option><option value="balanced">Balanced</option></select></label><div class="small-actions"><button data-action="openmic">Open mic · ₦150 / 20 energy</button><button data-action="research">Research rivals · ₦200 / 10 energy</button><button class="primary" data-action="slam">Enter slam · ₦400 / 25 energy</button></div><p class="caption">Preparation ${game.prepared}/5 · Research ${game.research}/3 · One slam per day. A win earns a fictional ₦700 prize.</p></section><details class="panel community" style="margin-top:22px"><summary>The community · 12 poets</summary><p class="caption">Each day advances all twelve characters’ independent plans. Exchange feedback to build relationships.</p>${game.npcs.map(n=>`<article class="npc"><h3>${esc(n.name)} <span class="caption">/ ${esc(n.style)}</span></h3><p>${esc(n.activity)}<br>Goal: ${n.goal} · Bond ${n.relationship} · Works ${n.works}</p><button data-feedback="${n.id}">Exchange feedback · 10 energy</button>${n.memory.length?`<p class="caption">Remembers: ${esc(n.memory.at(-1))}</p>`:''}</article>`).join('')}</details></div><div class="in-game-panel" id="tab-circuit"><section class="panel"><h3>The fictional circuit</h3><label>Destination<select id="destination">${['Ogbomoso','Ibadan','Lagos'].map(x=>`<option ${x===game.city?'selected':''}>${x}</option>`).join('')}</select></label><div class="small-actions"><button data-action="travel">Travel · ₦600 / 20 energy</button></div><p class="caption">Destinations change the scene label in this slice; city-specific events are a future feature. Travel prices are game balancing values.</p><a class="btn" href="#/atlas">Explore the separate historical Atlas </a></section></div></div><div class="small-actions" style="margin-top:20px;"><button id="export">Download game save</button><label class="btn">Import your save<input id="import" type="file" accept="application/json" style="display:block;width:220px;padding:4px"></label><button id="reset">Reset this fictional journey</button></div><p class="caption">No accounts, public posting or cross-device cloud saves in this prototype. The world runs while this page is active and you choose Play. It pauses when you leave or hide the page. Saves remain on this device.</p></div>`;
+  <section class="panel" id="writing-studio"><div class="eyebrow">Challenge 01 / A journey, in a pocket</div><h3>Write the thing you carried.</h3><p class="caption">Choose a concrete object, a place and something left unsaid. Your writing stays on this device. Posting shares it only inside this local simulation.</p><label>Pen name<input id="penname" maxlength="40" value="${esc(game.name)}"></label><label style="margin-top:18px">Your original poem<textarea id="poem" maxlength="4000" placeholder="The bus left before the rain…">${esc(game.poem)}</textarea></label><p class="caption"><span id="chars">${game.poem.length}</span> / 4,000 characters · Device save ${saveAvailable?'available':'unavailable — download a save'}</p><div class="small-actions"><button id="draft">Save draft</button><button id="btn-export-poem" class="btn" type="button">Copy Poem Text</button><button id="btn-export-image" class="primary" type="button" style="background:#238636;border-color:#2ea043;">📸 Export Social Image (PNG)</button><button class="primary" data-action="post">Post to wall · 12 energy</button><button data-action="coach">Coach · ₦350 / 18 energy</button><button data-action="rehearse">Rehearse · 16 energy</button></div><details><summary>Craft notebook & game mechanics</summary><p class="caption">Try one vivid image, a deliberate pause and an ending that leaves room. Coaching is authored rule-based advice; no AI service is called. Competition points use word count, skill, preparation, delivery choice, fictional opponent research and seeded chance. They cannot measure literary quality.</p></details></section></div><div class="in-game-panel" id="tab-wall"><section class="panel" id="poetry-wall"><div class="eyebrow">The poetry wall / Fictional posts</div><div class="wall-heading"><h3>A little room on the internet.</h3><button data-phone>Open on your phone </button></div><div class="wall">${game.wall.length?game.wall.map(p=>`<article class="post ${p.day===game.day?'fresh-post':''}"><strong>${esc(p.author)} · Day ${p.day}</strong><p>${esc(p.text)}</p><span class="caption">${p.author===game.name?'Your original writing / local simulation':'Authored fictional miniature'}</span></article>`).join(''):'<p>The wall is quiet. Post your poem, or advance a day to see the community at work.</p>'}</div></section></div><div class="in-game-panel" id="tab-journal"><section class="panel"><h3>Your event journal</h3><div class="log" aria-label="Simulation history">${game.log.map(x=>`<p>${esc(x)}</p>`).join('')}</div></section></div></div><div class="in-game-panel" id="tab-venue"><section class="panel" id="performance-room"><div class="eyebrow">Tonight / Lion’s Lines</div><h3>A microphone. A choice.</h3><p class="caption">Open mic: build confidence without a ranking. Slam: compete with three fictional poets. Minimum draft: 40 characters.</p><label>Delivery approach<select id="delivery"><option value="intimate">Intimate / craft-led</option><option value="rhythmic">Rhythmic / delivery-led</option><option value="balanced">Balanced</option></select></label><div class="small-actions"><button data-action="openmic">Open mic · ₦150 / 20 energy</button><button data-action="research">Research rivals · ₦200 / 10 energy</button><button class="primary" data-action="slam">Enter slam · ₦400 / 25 energy</button></div><p class="caption">Preparation ${game.prepared}/5 · Research ${game.research}/3 · One slam per day. A win earns a fictional ₦700 prize.</p></section><details class="panel community" style="margin-top:22px"><summary>The community · 12 poets</summary><p class="caption">Each day advances all twelve characters’ independent plans. Exchange feedback to build relationships.</p>${game.npcs.map(n=>`<article class="npc"><h3>${esc(n.name)} <span class="caption">/ ${esc(n.style)}</span></h3><p>${esc(n.activity)}<br>Goal: ${n.goal} · Bond ${n.relationship} · Works ${n.works}</p><button data-feedback="${n.id}">Exchange feedback · 10 energy</button>${n.memory.length?`<p class="caption">Remembers: ${esc(n.memory.at(-1))}</p>`:''}</article>`).join('')}</details></div><div class="in-game-panel" id="tab-circuit"><section class="panel"><h3>The fictional circuit</h3><label>Destination<select id="destination">${['Ogbomoso','Ibadan','Lagos'].map(x=>`<option ${x===game.city?'selected':''}>${x}</option>`).join('')}</select></label><div class="small-actions"><button data-action="travel">Travel · ₦600 / 20 energy</button></div><p class="caption">Destinations change the scene label in this slice; city-specific events are a future feature. Travel prices are game balancing values.</p><a class="btn" href="#/atlas">Explore the separate historical Atlas </a></section></div></div><div class="small-actions" style="margin-top:20px;"><button id="export">Download game save</button><label class="btn">Import your save<input id="import" type="file" accept="application/json" style="display:block;width:220px;padding:4px"></label><button id="reset">Reset this fictional journey</button></div><p class="caption">No accounts, public posting or cross-device cloud saves in this prototype. The world runs while this page is active and you choose Play. It pauses when you leave or hide the page. Saves remain on this device.</p></div>`;
 window.Poetics3D.mount();main.querySelectorAll(".in-game-tab").forEach(tab => {
   tab.onclick = () => {
     main.querySelectorAll(".in-game-tab").forEach(t => { t.classList.remove("active-tab"); t.setAttribute("aria-selected", "false"); });
@@ -103,4 +103,98 @@ function copyPoemToClipboard(){
   }).catch(() => {
     toast("Clipboard copy failed. Draft saved locally.");
   });
+}
+function exportPoemAsImage(){
+  if (!game || !game.poem || !game.poem.trim()) { toast("Write a draft before exporting an image."); return; }
+  
+  const canvas = document.createElement("canvas");
+  canvas.width = 1080;
+  canvas.height = 1350; // 4:5 portrait ratio ideal for Instagram & Twitter/X
+  const ctx = canvas.getContext("2d");
+  
+  // Clean dark editorial gradient
+  const grad = ctx.createLinearGradient(0, 0, 1080, 1350);
+  grad.addColorStop(0, "#0d1117");
+  grad.addColorStop(0.5, "#161b22");
+  grad.addColorStop(1, "#090d13");
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 1080, 1350);
+  
+  // Double frame borders
+  ctx.strokeStyle = "rgba(88, 166, 255, 0.35)";
+  ctx.lineWidth = 4;
+  ctx.strokeRect(36, 36, 1008, 1278);
+  
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.08)";
+  ctx.lineWidth = 1;
+  ctx.strokeRect(50, 50, 980, 1250);
+  
+  // Stage Badge header
+  ctx.fillStyle = "#58a6ff";
+  ctx.font = "bold 22px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  const stage = (game.persona ? game.persona.current : "PAGE").toUpperCase();
+  ctx.fillText("POETICS SIMULATION • " + stage + " POET", 75, 110);
+  
+  // Location & Day
+  ctx.fillStyle = "rgba(255, 255, 255, 0.55)";
+  ctx.font = "20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  ctx.fillText("Day " + game.day + " • " + (game.city || "Nigeria"), 75, 142);
+  
+  // Line rule
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.15)";
+  ctx.beginPath();
+  ctx.moveTo(75, 175);
+  ctx.lineTo(1005, 175);
+  ctx.stroke();
+  
+  // Poem title
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "bold 38px Georgia, serif";
+  ctx.fillText("Untitled Draft", 75, 240);
+  
+  // Pen name
+  ctx.fillStyle = "#58a6ff";
+  ctx.font = "italic 26px Georgia, serif";
+  ctx.fillText("by " + (game.name || "New Voice"), 75, 282);
+  
+  // Poem lines rendering
+  ctx.fillStyle = "#e6edf3";
+  ctx.font = "28px Georgia, serif";
+  const lines = game.poem.trim().split("\n");
+  let y = 360;
+  const maxLines = 18;
+  let count = 0;
+  
+  for (let l of lines) {
+    if (count >= maxLines) {
+      ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
+      ctx.fillText("[... continued in full collection ...]", 75, y);
+      break;
+    }
+    if (!l.trim()) { y += 22; continue; }
+    ctx.fillText(l.trim(), 75, y);
+    y += 42;
+    count++;
+  }
+  
+  // Footer Box
+  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+  ctx.fillRect(75, 1150, 930, 120);
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";
+  ctx.strokeRect(75, 1150, 930, 120);
+  
+  ctx.fillStyle = "#58a6ff";
+  ctx.font = "bold 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  ctx.fillText("COMMAND CENTER GRAVITY • NIGERIAN POETIC ATLAS", 100, 1195);
+  
+  ctx.fillStyle = "rgba(255, 255, 255, 0.55)";
+  ctx.font = "18px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  ctx.fillText("Grounded in living spoken word archives, literary circuits & real communities", 100, 1230);
+  
+  // Download trigger
+  const link = document.createElement("a");
+  link.download = (game.name || "Poem").replace(/[^a-z0-9]/gi, "_") + "-Day" + game.day + ".png";
+  link.href = canvas.toDataURL("image/png");
+  link.click();
+  toast("Social Graphic Card (PNG) generated and downloaded!");
 }
