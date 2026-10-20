@@ -3,6 +3,46 @@
 const roster=[['Tomi','imagery','publish'],['Bayo','satire','compete'],['Sade','rhythm','collaborate'],['Nnamdi','structure','practice'],['Zara','imagery','publish'],['Femi','performance','compete'],['Ada','structure','mentor'],['Kola','rhythm','practice'],['Muna','imagery','collaborate'],['Dami','satire','publish'],['Ife','performance','compete'],['Reni','rhythm','mentor']];
 const lines=['The rain rehearses on a roof / before the morning finds its voice.','A bus keeps all our borrowed names / and leaves the silence at the stop.','I fold the day into a pocket / where an unfinished song can sleep.','The market counts its little suns / in oranges and open palms.','Night settles on the metal bridge / where headlights write their briefest psalms.','We carried verses across the tracks / and traded salt for simple lines.','A handwritten notebook holds the town / between the margins of the dust.','The electric wire hums in the wind / like a guitar waiting for a tune.'];
 
+const regionalEncounters = {
+  "Jos": [
+    { name: "Victor Words Meshak", title: "Spoken Word Curator & Host", specialty: "delivery", bonus: 3, quote: "Let the breath carry the line before you rush to the rhyme.", trait: "Acoustic Stage Presence" }
+  ],
+  "Calabar": [
+    { name: "Victory Udie", title: "Lyricist & Event Host", specialty: "delivery", bonus: 3, quote: "Poetry here moves like the tide. Give each image its full room.", trait: "Rhythmic Cadence" }
+  ],
+  "Maiduguri": [
+    { name: "M.I. Bagudu", title: "Regional Voice & Mentor", specialty: "craft", bonus: 3, quote: "When you write in the dust of hardship, only true words survive.", trait: "Metaphorical Resilience" }
+  ],
+  "Zaria": [
+    { name: "Mayowa Oluwasegun Oladeji", title: "University Circle Host", specialty: "craft", bonus: 3, quote: "Scrutinize every line. If a word does not pull weight, prune it.", trait: "Classical Craft & Structure" }
+  ],
+  "Gombe": [
+    { name: "Abdulbaki Ahmad", title: "Savannah Circle Host", specialty: "craft", bonus: 3, quote: "The marketplace speaks in parables; listen before you compose.", trait: "Narrative Observation" }
+  ],
+  "Kano": [
+    { name: "Salim Yunusa", title: "Poet & Festival Essayist", specialty: "craft", bonus: 4, quote: "A poem should carry the honor of its language and community.", trait: "Bilingual Oral Poetics" },
+    { name: "Christian Odinaka", title: "Kano Slam Coordinator", specialty: "delivery", bonus: 3, quote: "Command the room with quiet confidence before raising your voice.", trait: "Performance Control" }
+  ],
+  "Abuja": [
+    { name: "Dike Chukwumerije", title: "Simply Poetry Pioneer & Performer", specialty: "delivery", bonus: 5, quote: "Spoken word is theatre stripped of costumes; you are the message.", trait: "Dramatic Theatricality & Delivery" }
+  ],
+  "Enugu": [
+    { name: "Ugochukwu Otike (Dr. Eugo)", title: "Featured Performance Poet", specialty: "craft", bonus: 4, quote: "Proverbs are the palm oil with which words are eaten; use them with intent.", trait: "Proverbial Resonance" },
+    { name: "Chinemerem Mary Anyi", title: "Coal City Reading Host", specialty: "delivery", bonus: 3, quote: "Let your rhythm echo off the hills; never mumble your truth.", trait: "Vocal Clarity" }
+  ],
+  "Lagos": [
+    { name: "Efe Paul Azino", title: "LIPFest Director & Spoken Word Veteran", specialty: "delivery", bonus: 5, quote: "In Lagos, you have ten seconds to arrest the room. Cut the warm-up.", trait: "Dynamic Stage Command" },
+    { name: "Titilope Sonuga", title: "Spoken Word Virtuoso", specialty: "delivery", bonus: 5, quote: "Vulnerability on stage is your greatest armor; own your cadence.", trait: "Emotional Intimacy" },
+    { name: "Wana Udobang", title: "Spoken Word Artist & Chronicler", specialty: "craft", bonus: 4, quote: "Every woman’s quiet thought is an epic waiting for punctuation.", trait: "Confessional Realism" },
+    { name: "Graciano Enwerem", title: "Slam Champion & Mentor", specialty: "delivery", bonus: 4, quote: "Slam is about timing and internal punchlines. Hit the pocket.", trait: "Competitive Punch & Timing" }
+  ],
+  "Ogbomoso": [
+    { name: "Vic'Adex", title: "60 Seconds Poetry Founder & Curator", specialty: "craft", bonus: 4, quote: "Compress your world into 60 seconds. Precision makes brevity powerful.", trait: "Epigrammatic Craft & Compression" },
+    { name: "Eriata Oribhabor", title: "Poet & Words on Rampage Mentor", specialty: "craft", bonus: 4, quote: "Poetry is everyday life spoken in the language of the street.", trait: "Pidgin Lyricism & Cultural Voice" },
+    { name: "Kukogho Samson", title: "WRR Founder & Publisher", specialty: "craft", bonus: 5, quote: "Write honestly, polish relentlessly, and lift other voices as you climb.", trait: "Editorial Polish & Community Ethos" },
+    { name: "Adedayo Agarau", title: "Poet & Documentary Chronicler", specialty: "craft", bonus: 4, quote: "The boy who carries grief inside a bus must learn where to drop it.", trait: "Sensory Imagery & Lyric Depth" }
+  ]
+};
 const cityPeculiarities = {
   // Tier 1: Major Epics (15+ Entries in Atlas)
   'Ogbomoso': { tier: 1, trait: 'Quiet workshop and campus circles', bonus: 'craft', desc: 'A quiet academic town where manuscripts are drafted with patient precision.' },
@@ -120,6 +160,16 @@ function tick(s){
     s.weekly_digests.unshift(digest);
     s.weekly_digests = s.weekly_digests.slice(0, 20);
     note(s, digest);
+  }
+    if (rand(s) < 0.35 && regionalEncounters[s.city]) {
+    const pool = regionalEncounters[s.city];
+    const poet = pool[Math.floor(rand(s) * pool.length)];
+    if (!s.met_poets) s.met_poets = [];
+    if (poet.specialty === 'craft') s.craft += poet.bonus;
+    else if (poet.specialty === 'delivery') s.delivery += poet.bonus;
+    else s.reputation += poet.bonus;
+    if (!s.met_poets.includes(poet.name)) s.met_poets.push(poet.name);
+    note(s, 'Chanced meeting in ' + s.city + ': You cross paths with ' + poet.name + ' (' + poet.title + '). \"' + poet.quote + '\" +' + poet.bonus + ' ' + poet.specialty.toUpperCase() + ' (' + poet.trait + ')!');
   }
   if(root.PoeticsOpportunities)root.PoeticsOpportunities.onDay(s);
   note(s,'Day '+s.day+': the community advances; poets pursue their own plans.');
@@ -296,7 +346,7 @@ function valid(s){
     Array.isArray(s.entered) && s.entered.every(d => Number.isInteger(d) && d > 0);
 }
 
-const api = {create, act, tick, valid, exportPoem, cityPeculiarities, pickRandomOrigin, tier1Cities, tier2Cities, tier3Cities};
+const api = {create, regionalEncounters, act, tick, valid, exportPoem, cityPeculiarities, pickRandomOrigin, tier1Cities, tier2Cities, tier3Cities};
 if(typeof module !== 'undefined') module.exports = api;
 root.PoeticsEngine = api;
 })(typeof window !== 'undefined' ? window : globalThis);
