@@ -31,7 +31,8 @@ def asset(match):
 game_names=['engine.js','opportunities.js','gamemap.js','city3d.js','world.js']
 for name in game_names:
     asset(re.match(r'(src)="([^"]+)"','src="'+name+'"'))
-(dist/'game-assets.js').write_text('window.PoeticsGameAssets='+json.dumps([mapping[n]['file'] for n in game_names],separators=(',',':'))+';\n',encoding='utf-8',newline='\n')
+lazy_assets={'contribute':asset(re.match(r'(src)="([^"]+)"','src="contribute.js"')).split('\"')[1]}
+(dist/'game-assets.js').write_text('window.PoeticsGameAssets='+json.dumps([mapping[n]['file'] for n in game_names],separators=(',',':'))+';window.PoeticsLazyAssets='+json.dumps(lazy_assets,separators=(',',':'))+';\n',encoding='utf-8',newline='\n')
 # Bundle only immutable data. Executable modules retain their dependency order.
 import runpy
 data_names=runpy.run_path(str(root/'scripts/prepare-atlas-input.py'))['prepare'](dist)

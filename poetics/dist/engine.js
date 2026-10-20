@@ -172,7 +172,14 @@ function tick(s){
     note(s, 'Chanced meeting in ' + s.city + ': You cross paths with ' + poet.name + ' (' + poet.title + '). \"' + poet.quote + '\" +' + poet.bonus + ' ' + poet.specialty.toUpperCase() + ' (' + poet.trait + ')!');
   }
   if(root.PoeticsOpportunities)root.PoeticsOpportunities.onDay(s);
-  note(s,'Day '+s.day+': the community advances; poets pursue their own plans.');
+  let struggleEvent='';
+  const struggleRoll=rand(s);
+  if(struggleRoll<0.1){
+    if(struggleRoll<0.03)struggleEvent=' Struggle: A gig paid you in “exposure”. No funds added.';
+    else if(struggleRoll<0.06){s.energy=Math.max(0,s.energy-10);struggleEvent=' Struggle: The MC introduced you as a “comedian”. Energy -10.';}
+    else{s.money=Math.max(0,s.money-200);struggleEvent=' Struggle: Travel costs to an uncalled open mic drained your funds. ₦-200.';}
+  }
+  note(s,'Day '+s.day+': the community advances; poets pursue their own plans.'+struggleEvent);
 }
 
 function act(s,type,arg){

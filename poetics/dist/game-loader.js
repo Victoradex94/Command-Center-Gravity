@@ -16,4 +16,8 @@
   pending=Promise.all(files.map(loadScript)).catch(error=>{pending=null;throw error;});
   return pending;
  };
+ window.PoeticsLoadAsset=name=>{
+  const file=(window.PoeticsLazyAssets||{})[name];
+  return file?loadScript(file):Promise.reject(new Error('Route asset unavailable'));
+ };
 })();
