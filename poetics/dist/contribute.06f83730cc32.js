@@ -8,7 +8,7 @@ if(!text('name')||!text('details')||!text('location'))throw Error('Add a name, d
 if(!['People','Places','Platforms','Prizes','Publications'].includes(input.category))throw Error('Choose an entry type.');
 if(!webURL(text('source')))throw Error('Add a public source link beginning with https:// or http://.');
 if(text('image')&&(!webURL(text('image'))||input.imagePermission!=='on'||!text('imageCredit')))throw Error('To include an image, add its public link, credit and reuse permission.');
-return {id:'entry-draft-'+Date.now()+'-'+Math.random().toString(36).slice(2,8),name:text('name'),category:input.category,details:text('details'),location:text('location'),state:text('state'),year:text('year'),yearMeaning:text('yearMeaning'),source:text('source'),sourceLocator:text('sourceLocator'),connections:text('connections'),image:text('image'),imageCredit:text('imageCredit'),imagePermission:input.imagePermission==='on',contributor:text('contributor'),createdAt:new Date().toISOString(),status:'Draft — saved on this device; not submitted or published'};
+return {id:'entry-draft-'+Date.now()+'-'+crypto.randomUUID().slice(0, 8),name:text('name'),category:input.category,details:text('details'),location:text('location'),state:text('state'),year:text('year'),yearMeaning:text('yearMeaning'),source:text('source'),sourceLocator:text('sourceLocator'),connections:text('connections'),image:text('image'),imageCredit:text('imageCredit'),imagePermission:input.imagePermission==='on',contributor:text('contributor'),createdAt:new Date().toISOString(),status:'Draft — saved on this device; not submitted or published'};
 }
 window.PoeticsContribute={createDraft,key};
 window.renderContribute=function(root){

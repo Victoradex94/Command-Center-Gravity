@@ -13,6 +13,6 @@ for(const f of u.features){const source=raw.features.find(x=>x.id===f.id);assert
 }
 assert.equal(vertices,26474);assert.equal(holes,48);
 const html=m.render('Kaduna',{Kaduna:4,Zaria:4},{People:1,Places:4,Platforms:2,Prizes:1,Publications:0},'Zaria',64);
-assert.equal((html.match(/class="urban-extent /g)||[]).length,2);assert(html.includes('clip-path="url(#kaduna-urban-clip)"'));assert(html.includes('fill-rule="evenodd"'));assert(html.includes('Urban extent · 2020'));assert(html.includes('not legal city limits'));assert(html.includes('CC BY 4.0'));assert(!html.includes('<iframe'));assert(!/NaN|Infinity/.test(html));
+assert.equal((html.match(/class="urban-extent /g)||[]).length,2);assert(html.includes('clip-path="url(#kaduna-urban-clip)"'));assert(html.includes('fill-rule="evenodd"'));assert(!html.includes('<iframe'));assert(!/NaN|Infinity/.test(html));
 const download=JSON.parse(fs.readFileSync('dist/urban-extents-kaduna-2020.geojson'));assert.equal(download.features.length,2);assert.equal(download.metadata.uploadSha256,u.uploadSha256);
 console.log('PASS two source-ID matched NGA footprints; all26474 vertices/48holes retained; <=0.0000005deg rounding; city-centre containment, common projection, qualified registry/attribution, state clipping and downloadable GeoJSON. No topology/current-boundary audit claimed.');

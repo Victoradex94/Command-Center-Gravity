@@ -6,7 +6,7 @@ import json, re
 DATA_NAMES = ['atlas.js', 'canonical-research-runtime.js', 'national-directory.js',
               'directory-expansion.js', 'nigeria-boundary.js', 'nigeria-states.js',
               'osm-state-locators.js', 'state-urban-manifest.js', 'atlas-audit.js',
-              'game-assets.js']
+              ]
 
 def prepare(dist):
     data = {}

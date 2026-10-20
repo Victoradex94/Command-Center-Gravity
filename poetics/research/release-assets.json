@@ -1,7 +1,7 @@
 {
   "engine.js": {
-    "file": "engine.b079ed3fea5c.js",
-    "sha256": "b079ed3fea5c5c0a9dd96a9090d1c50ea6fc893744aca3c335105cd56409d348"
+    "file": "engine.144114ae0e27.js",
+    "sha256": "144114ae0e2721f43052920fb7b2c6d10308a1a3d855a420dd0b8c9ea19f477b"
   },
   "opportunities.js": {
     "file": "opportunities.4ddfcc6ef954.js",
@@ -19,6 +19,10 @@
     "file": "world.1efd030f1f57.js",
     "sha256": "1efd030f1f57d9120326436a27b350c104f8cfa47735e651215275f6b66c2055"
   },
+  "contribute.js": {
+    "file": "contribute.06f83730cc32.js",
+    "sha256": "06f83730cc3221ed705a11a8c016673bc99041858e4f7a7503e6861adbacc367"
+  },
   "style.css": {
     "file": "style.d60d49f9b4e0.css",
     "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
@@ -28,8 +32,8 @@
     "sha256": "bdfdaaeb1f5610b6b427ae3b3bfc82d5b085d5d60434f96baacd8ffc3410ec74"
   },
   "atlas-input.js": {
-    "file": "atlas-input.c578a87662fe.js",
-    "sha256": "c578a87662fe7d79c35ab91848f25af3aef912aaa3d06d58ee188375c0c9374c"
+    "file": "atlas-input.582229977f6a.js",
+    "sha256": "582229977f6ac9252b3de27c02d24249f8b5a88eb30cc12e666d604cc60e2dca"
   },
   "nigeria-map.js": {
     "file": "nigeria-map.2945d9baaa7c.js",
@@ -75,20 +79,20 @@
     "file": "directory.45e69f2f6ca6.js",
     "sha256": "45e69f2f6ca636f5aa994922d1515fd428a5e4424e2b50fb95e2aa195914d473"
   },
-  "contribute.js": {
-    "file": "contribute.5ce1ab9ed1bb.js",
-    "sha256": "5ce1ab9ed1bb9c9fcb034522f077cb4982e7ebcb2128d5881b81f4b94d699ea5"
-  },
   "atlas-ui-guard.js": {
     "file": "atlas-ui-guard.94d3156d05db.js",
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
+  "game-assets.js": {
+    "file": "game-assets.10716c8cf6f6.js",
+    "sha256": "10716c8cf6f6f99783ce623b368488b0d4f3434360b6bfa4c1125f5a1736a460"
+  },
   "game-loader.js": {
-    "file": "game-loader.8db66b59d2cc.js",
-    "sha256": "8db66b59d2cc18d315959389c36c702d2024ce35885fb31d69e422b32efd158c"
+    "file": "game-loader.e60e7eadd08d.js",
+    "sha256": "e60e7eadd08dfa6701b92920c1b608d2c1a90d58e26a65a864cfebb5b408a3a8"
   },
   "app.js": {
-    "file": "app.9a72728042b4.js",
-    "sha256": "9a72728042b4a6855092fe8e4475d359c23051c814e35f77f2e4eaf27f9d85a8"
+    "file": "app.623e0a80d4ce.js",
+    "sha256": "623e0a80d4ce231083e6b44033b95289cf7cafc5d7681d17fa1f2b1836166995"
   }
 }
