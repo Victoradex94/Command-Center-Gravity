@@ -17,6 +17,6 @@ assert.equal(views.length,0);assert(html.includes('nigeria-gis'));assert(!html.i
 assert(!html.includes('<iframe'));assert(!html.includes('City streets'));
 change('#directory-geo','All places');assert(options('directory-state').includes('<option selected>Kaduna</option>'));
 change('#directory-state','Oyo');change('#directory-geo','Ogbomoso');assert(html.includes('nigeria-gis'));assert(!html.includes('<iframe'));
-for(const mode of ['Directory','Mind map','Map']){modes.find(m=>m.dataset.mode===mode).onclick();assert.equal((html.match(/id="directory-state"/g)||[]).length,1);assert.equal((html.match(/id="map-category-filter"/g)||[]).length,1);assert(controls['#directory-state'].onchange);assert(controls['#directory-geo'].onchange);}
+for(const mode of ['Directory','Mind map','Map']){modes.find(m=>m.dataset.mode===mode).onclick();assert.equal((html.match(/id="directory-state"/g)||[]).length,1);assert.equal((html.match(/id="toggle-category-picker"/g)||[]).length,1);assert(controls['#directory-state'].onchange);assert(controls['#directory-geo'].onchange);}
 controls['#directory-reset'].onclick();assert(!html.includes('<iframe'));assert(options('directory-state').includes('Zamfara'));assert.equal(window.PoeticsDirectoryData.rows.length,453);assert.equal(window.PoeticsDirectoryData.edges.length,667);
 console.log('PASS strict rendered-control binding, single State/City controls, Zone→State→City hierarchy, parent synchronization, alphabetical wrap, top navigation, outline-only maps, category counts, all view modes and unchanged 453/667 dataset.');

@@ -2,7 +2,7 @@ const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),window={
 for(const f of ['atlas','canonical-research','national-directory','directory-expansion','atlas-audit','entry-status','nigeria-states','nigeria-states-map','atlas-icons','entry-schema','directory'])vm.runInNewContext(fs.readFileSync('dist/'+f+'.js','utf8'),{window});
 const {rows,edges}=window.PoeticsDirectoryData,by=id=>rows.find(r=>r.id===id);
 assert(rows.length>=400);assert(edges.length>=596);
-for(const [state,n] of Object.entries({Abia:25,Ebonyi:19,Imo:18,Delta:16,Gombe:8,Edo:13}))assert.equal(rows.filter(r=>window.PoeticsStateMap.statesForRecord(r).includes(state)).length,n);
+for(const [state,n] of Object.entries({Abia:25,Ebonyi:19,Imo:18,Delta:16,Gombe:11,Edo:13}))assert.equal(rows.filter(r=>window.PoeticsStateMap.statesForRecord(r).includes(state)).length,n);
 for(const id of ['ana-abia-april-2026','abakaliki-love-2018','ebonyi-literary-evening-2026','ana-imo-igbo-poetry-2025']){assert.equal(by(id).eventEvidence,'Announced; occurrence unverified');assert(!by(id).historical);assert.notEqual(by(id).activityStatus.label,'Active');}
 assert(!window.PoeticsStateMap.statesForRecord(by('ebonyi-literary-evening-2026')).length);
 assert(by('ebonyi-laureates-book-club').dateBasis.includes('physical/online'));
