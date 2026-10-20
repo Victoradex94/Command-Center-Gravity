@@ -1,10 +1,10 @@
 """Give every entrypoint asset a content-addressed URL, not a cache query."""
 from pathlib import Path
-import hashlib,json,re
+import hashlib,json,re,subprocess,sys
 root=Path(__file__).resolve().parents[1]
 dist=root/'dist';index=dist/'index.html';html=index.read_text(encoding='utf-8');mapping={}
 # Rebuild the display-only derivative on every release; never edit the snapshot.
-exec((root/'scripts/prepare-browser-data.py').read_text(encoding='utf-8'),{'__file__':str(root/'scripts/prepare-browser-data.py')})
+subprocess.run([sys.executable, str(root/'scripts/prepare-browser-data.py')], check=True)
 # Also resolves a prior fingerprint so the helper can run after source edits.
 def asset(match):
     attr,old=match.groups();name=old.split('?')[0]
