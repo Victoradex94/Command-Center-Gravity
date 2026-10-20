@@ -4,16 +4,43 @@ const roster=[['Tomi','imagery','publish'],['Bayo','satire','compete'],['Sade','
 const lines=['The rain rehearses on a roof / before the morning finds its voice.','A bus keeps all our borrowed names / and leaves the silence at the stop.','I fold the day into a pocket / where an unfinished song can sleep.','The market counts its little suns / in oranges and open palms.','Night settles on the metal bridge / where headlights write their briefest psalms.','We carried verses across the tracks / and traded salt for simple lines.','A handwritten notebook holds the town / between the margins of the dust.','The electric wire hums in the wind / like a guitar waiting for a tune.'];
 
 const cityPeculiarities = {
-  'Ogbomoso': { trait: 'Quiet workshop and campus circles', bonus: 'craft', desc: 'A quiet academic town where manuscripts are drafted with patient precision.' },
-  'Ibadan': { trait: 'Literary heritage & classical verse', bonus: 'craft', desc: 'Home to the premier university tradition; depth, imagery, and poetic structure reign.' },
-  'Lagos': { trait: 'Commercial slams & street hustle', bonus: 'delivery', desc: 'Fast, dynamic, and unapologetic; high crowd stakes, sharp critiques, and commercial arenas.' },
-  'Jos': { trait: 'Acoustic calm & conscious circles', bonus: 'delivery', desc: 'Cool mountain air, soulful acoustic readings, and deeply communal open mics.' },
-  'Enugu': { trait: 'Coal city grit & folkloric rhythm', bonus: 'craft', desc: 'Eastern oral cadence, proverb-laden metaphors, and cultural pride.' },
-  'Abuja': { trait: 'National stages & institutional showcases', bonus: 'reputation', desc: 'Grand amphitheaters, diplomatic readings, and high-visibility festivals.' },
-  'Aba': { trait: 'Vibrant trade & working-class verse', bonus: 'reputation', desc: 'Craft hammered out in commercial centers; direct, incisive, and unpretentious.' }
+  // Tier 1: Major Epics (15+ Entries in Atlas)
+  'Ogbomoso': { tier: 1, trait: 'Quiet workshop and campus circles', bonus: 'craft', desc: 'A quiet academic town where manuscripts are drafted with patient precision.' },
+  'Lagos': { tier: 1, trait: 'Commercial slams & street hustle', bonus: 'delivery', desc: 'Fast, dynamic, and unapologetic; high crowd stakes, sharp critiques, and commercial arenas.' },
+  
+  // Tier 2: Established Regional Hubs (5-10 Entries in Atlas)
+  'Kano': { tier: 2, trait: 'Griot traditions & deliberate cadence', bonus: 'craft', desc: 'Northern poetry societies; philosophical reflections, moral weight, and rich bilingual oral forms.' },
+  'Abuja': { tier: 2, trait: 'National stages & institutional showcases', bonus: 'reputation', desc: 'Grand amphitheaters, diplomatic readings, and high-visibility festivals.' },
+  'Enugu': { tier: 2, trait: 'Coal city grit & folkloric rhythm', bonus: 'craft', desc: 'Eastern oral cadence, proverb-laden metaphors, and cultural pride.' },
+
+  // Tier 3: Emerging & Regional Scenes (Most Common Starting Origins)
+  'Jos': { tier: 3, trait: 'Acoustic calm & conscious circles', bonus: 'delivery', desc: 'Cool mountain air, soulful acoustic readings, and deeply communal open mics.' },
+  'Calabar': { tier: 3, trait: 'Coastal lyricism & festival warmth', bonus: 'delivery', desc: 'Warm maritime cadence, rich storytelling, and intimate gatherings.' },
+  'Maiduguri': { tier: 3, trait: 'Resilient verse & desert dusk', bonus: 'craft', desc: 'Deep emotional resonance, solemn dignity, and heartfelt stanzas.' },
+  'Zaria': { tier: 3, trait: 'University arts & historic craft', bonus: 'craft', desc: 'Ahmadu Bello University literary lineage; sharp technique and student circles.' },
+  'Gombe': { tier: 3, trait: 'Savannah rhythm & quiet observation', bonus: 'craft', desc: 'Patient, observant verse reflecting town markets and broad horizons.' },
+  'Ibadan': { tier: 3, trait: 'Literary heritage & classical verse', bonus: 'craft', desc: 'Home to the premier university tradition; depth, imagery, and poetic structure reign.' },
+  'Aba': { tier: 3, trait: 'Vibrant trade & working-class verse', bonus: 'reputation', desc: 'Craft hammered out in commercial centers; direct, incisive, and unpretentious.' }
 };
 
+const tier3Cities = ['Jos', 'Calabar', 'Maiduguri', 'Zaria', 'Gombe', 'Ibadan', 'Aba'];
+const tier2Cities = ['Kano', 'Abuja', 'Enugu'];
+const tier1Cities = ['Ogbomoso', 'Lagos'];
+
+function pickRandomOrigin(seed) {
+  let s = { seed };
+  const r = rand(s);
+  if (r < 0.70) {
+    return tier3Cities[Math.floor(rand(s) * tier3Cities.length)];
+  } else if (r < 0.90) {
+    return tier2Cities[Math.floor(rand(s) * tier2Cities.length)];
+  } else {
+    return tier1Cities[Math.floor(rand(s) * tier1Cities.length)];
+  }
+}
+
 function create(seed=2010){
+  const startCity = pickRandomOrigin(seed);
   return {
     version:1,
     seed,
@@ -23,9 +50,9 @@ function create(seed=2010){
     persona:{
       current:'page',
       unlocked:['page'],
-      history:[{stage:'page',day:1,note:'Begun on the Page with a quiet notebook.'}]
+      history:[{stage:'page',day:1,note:'Begun on the Page in ' + startCity + ' with a quiet notebook.'}]
     },
-    city:'Ogbomoso',
+    city:startCity,
     energy:80,
     money:3000,
     craft:12,
@@ -36,7 +63,7 @@ function create(seed=2010){
     poem:'',
     last_submitted_poem:'',
     wall:[],
-    log:['You arrive in a fictional Ogbomoso poetry community, January 2010.'],
+    log:['You arrive in a fictional ' + startCity + ' poetry community, January 2010.'],
     weekly_digests:[],
     npcs:roster.map(([name,style,goal],i)=>({id:i,name,style,goal,relationship:0,skill:14+i,funds:500+i*100,works:0,activity:'Working on a first draft',memory:[]})),
     entered:[],
@@ -112,7 +139,7 @@ function act(s,type,arg){
   if(['post','openmic','slam'].includes(type)&&s.poem.trim().length<40)return {ok:false,message:'Write at least 40 characters before sharing or performing.'};
   if(type==='slam'&&s.entered.includes(s.day))return {ok:false,message:'You have already entered today’s slam. Advance to another day.'};
   
-  const allowedCities = ['Ogbomoso','Ibadan','Lagos','Jos','Enugu','Abuja','Aba'];
+  const allowedCities = Object.keys(cityPeculiarities);
   if(type==='travel'&&!allowedCities.includes(arg))return {ok:false,message:'Choose a destination on the fictional circuit: ' + allowedCities.join(', ') + '.'};
   if(type==='travel'&&arg===s.city)return {ok:false,message:'You are already in '+s.city+'.'};
   if(type==='feedback'&&!s.npcs[arg])return {ok:false,message:'Choose a poet.'};
@@ -146,7 +173,7 @@ function act(s,type,arg){
     if (pec.bonus === 'craft') s.craft += 0.5;
     if (pec.bonus === 'delivery') s.delivery += 0.5;
     if (pec.bonus === 'reputation') s.reputation += 0.5;
-    msg='You travel to '+arg+' ('+pec.trait+'). '+pec.desc;
+    msg='You travel to '+arg+' (Tier '+pec.tier+'  '+pec.trait+'). '+pec.desc;
   }
 
   if(type==='openmic'){
@@ -154,7 +181,7 @@ function act(s,type,arg){
     if (!s.persona.unlocked.includes('spoken_word')) {
       s.persona.unlocked.push('spoken_word');
       s.persona.current = 'spoken_word';
-      s.persona.history.push({stage:'spoken_word', day:s.day, note:'Attended first Open Mic. Unlocked Spoken Word: your verses meet a live audience.'});
+      s.persona.history.push({stage:'spoken_word', day:s.day, note:'Attended first Open Mic in ' + s.city + '. Unlocked Spoken Word: your verses meet a live audience.'});
       unlockNote = ' [TEACHABLE MOMENT: Spoken Word Unlocked! Words leave the page; delivery and breath now matter.]';
     }
 
@@ -174,7 +201,7 @@ function act(s,type,arg){
 
     s.reputation += repGain;
     s.delivery += delGain;
-    msg = 'You perform at the fictional Lion’s Lines open mic. Reputation +' + repGain + '; delivery +' + delGain + '.' + (isRepeat ? ' (Repeat reading: revise your text for full gains).' : '') + rhymeMsg + unlockNote;
+    msg = 'You perform at the local ' + s.city + ' open mic. Reputation +' + repGain + '; delivery +' + delGain + '.' + (isRepeat ? ' (Repeat reading: revise your text for full gains).' : '') + rhymeMsg + unlockNote;
   }
 
   if(type==='slam'){
@@ -214,7 +241,7 @@ function act(s,type,arg){
 
     s.reputation += repGain;
     s.money += prize;
-    msg = 'Fictional slam: ' + score + ' points' + rhymeMsg + '; place ' + rank + ' of ' + (rivals.length+1) + '. ' + rivals.map(n=>n.name+': '+n.score).join(' · ') + '. ' + (rank===1?'Prize +₦'+prize+'.':'Reputation +'+repGain+' for showing up.') + (isRepeat ? ' (Unrevised draft: prize/reputation discounted).' : '') + ' Game points reflect preparation, delivery choice and chance; they are not a literary verdict.';
+    msg = 'Fictional ' + s.city + ' slam: ' + score + ' points' + rhymeMsg + '; place ' + rank + ' of ' + (rivals.length+1) + '. ' + rivals.map(n=>n.name+': '+n.score).join(' · ') + '. ' + (rank===1?'Prize +₦'+prize+'.':'Reputation +'+repGain+' for showing up.') + (isRepeat ? ' (Unrevised draft: prize/reputation discounted).' : '') + ' Game points reflect preparation, delivery choice and chance; they are not a literary verdict.';
     s.prepared = 0;
     s.research = 0;
   }
@@ -257,7 +284,7 @@ function valid(s){
     Number.isInteger(s.seed) &&
     typeof s.poem === 'string' && s.poem.length <= 4000 &&
     typeof s.name === 'string' && s.name.length <= 40 &&
-    ['Ogbomoso','Ibadan','Lagos','Jos','Enugu','Abuja','Aba'].includes(s.city) &&
+    Object.keys(cityPeculiarities).includes(s.city) &&
     ['energy','money','craft','delivery','reputation','prepared','research'].every(k => Number.isFinite(s[k]) && s[k] >= 0) &&
     s.energy <= 100 &&
     Array.isArray(s.npcs) && s.npcs.length === 12 &&
@@ -269,7 +296,7 @@ function valid(s){
     Array.isArray(s.entered) && s.entered.every(d => Number.isInteger(d) && d > 0);
 }
 
-const api = {create, act, tick, valid, exportPoem, cityPeculiarities};
+const api = {create, act, tick, valid, exportPoem, cityPeculiarities, pickRandomOrigin, tier1Cities, tier2Cities, tier3Cities};
 if(typeof module !== 'undefined') module.exports = api;
 root.PoeticsEngine = api;
 })(typeof window !== 'undefined' ? window : globalThis);
