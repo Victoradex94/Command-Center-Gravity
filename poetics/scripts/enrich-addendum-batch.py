@@ -1,5 +1,7 @@
 from pathlib import Path
 import json
+from dataclasses import dataclass
+from typing import Any
 root=Path(__file__).resolve().parents[1]
 path=root/'dist/atlas-audit.json';d=json.loads(path.read_text())
 logpath=root/'research/south-south-claims.json';log=json.loads(logpath.read_text())
@@ -16,10 +18,19 @@ def add(id,name,cat,city,summary,url,year,tier='Source confirmed',**fields):
     else:d['profiles'].append(p)
     claim(id,summary,url,tier)
     return p
-def edge(a,b,label,url,date=None,status='Only the source-stated role is supported'):
-    e=dict(a=a,b=b,label=label,url=url,date=date,status=status)
+@dataclass
+class EdgeData:
+    a: str
+    b: str
+    label: str
+    url: str
+    date: Any = None
+    status: str = 'Only the source-stated role is supported'
+
+def edge(data: EdgeData):
+    e=dict(a=data.a,b=data.b,label=data.label,url=data.url,date=data.date,status=data.status)
     if not any(all(x.get(k)==e[k] for k in ['a','b','label','url']) for x in d['relationships']):d['relationships'].append(e)
-    claim(a,label+' → '+b,url,status)
+    claim(data.a,data.label+' → '+data.b,data.url,data.status)
 
 # A published speech documents occurrence, not its exact date or room, and does
 # not resolve the matching-name 2023 host identity.
@@ -36,8 +47,8 @@ add('fulfulde-speech','I Cease To Be When Fulfulde Ceases To Be','Publications',
     kind='Published speech',publicationState='Published — documented',
     dateFact=dict(label='Published',value='24 October 2024',url=G),
     dateBasis='Web publication date; no event date inferred.',gaps='Metadata only; speech text and photographs not copied.')
-for b,label in [('gsu-campus','campus stated'),('abdulbaki-speech','credited speaker'),('fulfulde-speech','published speech evidence'),('ccpc','named programme')]:edge('ccpc-gsu-speech',b,label,G,None,'First-person occurrence evidence; event date unresolved')
-edge('abdulbaki-speech','fulfulde-speech','credited speaker / author',G,2024)
+for b,label in [('gsu-campus','campus stated'),('abdulbaki-speech','credited speaker'),('fulfulde-speech','published speech evidence'),('ccpc','named programme')]:edge(EdgeData('ccpc-gsu-speech',b,label,G,None,'First-person occurrence evidence; event date unresolved'))
+edge(EdgeData('abdulbaki-speech','fulfulde-speech','credited speaker / author',G,2024))
 
 # The user supplied the exact reported proposal. Additional fetched report text
 # was inspected; no extra administrative biography imported. Event year is inferred.
@@ -50,8 +61,8 @@ add('ccpc-orerokpe-proposal','CCPC — Orerokpe proposal','Platforms','Orerokpe'
 add('sdu-orerokpe','Southern Delta University — Orerokpe Campus','Places','Orerokpe','Proposed setting.',V,2026,'Announcement verified')
 add('salome-ikokoyo','Salome Ikokoyo','People','Orerokpe','Proposal presenter.',V,2026,'Report supported',
     nameVariants=['Madam Salome Ikokoyo'],gaps='Possible same person as Salomi Ikoyoko (Trisha) is unverified; no identity merge.')
-edge('ccpc-orerokpe-proposal','sdu-orerokpe','proposed campus',V,'17 October; year inferred 2026','Proposal only, not held')
-edge('salome-ikokoyo','ccpc-orerokpe-proposal','proposal presenter',V,2026,'Reported proposal; identity variant unresolved')
+edge(EdgeData('ccpc-orerokpe-proposal','sdu-orerokpe','proposed campus',V,'17 October; year inferred 2026','Proposal only, not held'))
+edge(EdgeData('salome-ikokoyo','ccpc-orerokpe-proposal','proposal presenter',V,2026,'Reported proposal; identity variant unresolved'))
 
 # Full report text was returned by targeted search after direct opens timed out.
 # Author Albert Ograka is the forum secretary; this is insider event evidence.
@@ -71,12 +82,12 @@ for id,title,author in [('izuma','Izuma','albert-ograka'),('ash-flakes','Ash Fla
       publicationState='Cited publication — bibliographic verification pending',
       dateBasis='2024 is the citing report year, not the publication year.',gaps='Publisher, original date, edition and ISBN not verified.')
     if id=='ash-flakes':p['nameVariants']=['Ash Flakes','Ashflakes']
-    edge(author,id,'author attributed',A,None,'Bibliographic attribution in insider report; publisher metadata pending')
-    edge('dlf-world-poetry-2024',id,'cited in account',A,2024,'Citation / reading context, not author attendance')
-for b,label in [('delta-literary-forum','reported host'),('chike-secretariat','reported venue'),('alonu-azua','reported opening address'),('nkechi-maduemezia','reported reader'),('melvis-ugo','reported performer'),('david-diai','reported reader')]:edge('dlf-world-poetry-2024',b,label,A,'2024-03-21','Insider report; independent corroboration pending')
-edge('albert-ograka','delta-literary-forum','secretary as of 2024',A,2024)
-edge('alonu-azua','delta-literary-forum','chairman as of 2024',A,2024)
-edge('david-diai','izuma','reported reader of poems',A,'2024-03-21')
+    edge(EdgeData(author,id,'author attributed',A,None,'Bibliographic attribution in insider report; publisher metadata pending'))
+    edge(EdgeData('dlf-world-poetry-2024',id,'cited in account',A,2024,'Citation / reading context, not author attendance'))
+for b,label in [('delta-literary-forum','reported host'),('chike-secretariat','reported venue'),('alonu-azua','reported opening address'),('nkechi-maduemezia','reported reader'),('melvis-ugo','reported performer'),('david-diai','reported reader')]:edge(EdgeData('dlf-world-poetry-2024',b,label,A,'2024-03-21','Insider report; independent corroboration pending'))
+edge(EdgeData('albert-ograka','delta-literary-forum','secretary as of 2024',A,2024))
+edge(EdgeData('alonu-azua','delta-literary-forum','chairman as of 2024',A,2024))
+edge(EdgeData('david-diai','izuma','reported reader of poems',A,'2024-03-21'))
 claim('dlf-world-poetry-2024','Four schools reported participating; institution and student identities not expanded in this batch.',A,'Insider report only')
 p=d['overrides'].setdefault('delta-literary-forum',{})
 p.update(verification=dict(label='Source confirmed',sourceURL=A,reviewedAt='2026-10-13',scope='Insider histories for 2009 and 2024; current activity unverified.'),links=[dict(title='2024 secretary’s report',url=A)],gaps='2009 and 2024 records do not prove uninterrupted operation or current activity.')
