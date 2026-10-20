@@ -1,1 +1,1 @@
-window.PoeticsGameAssets=["engine.d45dd739b129.js","opportunities.4ddfcc6ef954.js","gamemap.08bb0e75cf74.js","city3d.a10fc14c3716.js","world.1efd030f1f57.js"];
+window.PoeticsGameAssets=["engine.71a17f300a02.js","opportunities.ecc28cd9dc5b.js","gamemap.697ebd3170c6.js","city3d.a10fc14c3716.js","world.1efd030f1f57.js"];window.PoeticsLazyAssets={"contribute":"contribute.5ce1ab9ed1bb.js"};

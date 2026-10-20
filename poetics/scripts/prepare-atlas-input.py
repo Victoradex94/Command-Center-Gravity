@@ -6,7 +6,7 @@ import json, re
 DATA_NAMES = ['atlas.js', 'canonical-research-runtime.js', 'national-directory.js',
               'directory-expansion.js', 'nigeria-boundary.js', 'nigeria-states.js',
               'osm-state-locators.js', 'state-urban-manifest.js', 'atlas-audit.js',
-              'game-assets.js']
+              ]
 
 def prepare(dist):
     data = {}
@@ -23,7 +23,7 @@ def prepare(dist):
         elif isinstance(value, dict):
             for item in value.values(): collect(item)
     collect(data)
-    strings = [s for s,n in counts.items() if len(s)>24 and n>1 and len(s)*(n-1)>n*9+len(s)+4]
+    strings = [s for s,n in counts.items() if len(s)>10 and n>1 and len(s)*(n-1)>n*9+len(s)+4]
     string_ids = {s:i for i,s in enumerate(strings)}
     schemas, schema_ids = [], {}
     def pack(value):

@@ -746,3 +746,14 @@ body>footer .poetics-image-credits{font-size:13px}
 .map-city-toolbar .map-shortcut-actions{flex:1 1 100%;width:100%;min-width:0;flex-wrap:wrap;align-items:center}
 .map-city-toolbar .surprise-control{display:flex;flex:0 1 auto;flex-wrap:wrap;min-width:0;max-width:100%}
 .map-city-toolbar #surprise-scope{max-width:100%}
+.in-game-tabs{display:flex;gap:8px;margin:16px 0;border-bottom:2px solid rgba(255,255,255,.12);padding-bottom:10px;overflow-x:auto}
+.in-game-tab{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.2);color:inherit;padding:10px 18px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:all .2s ease}
+.in-game-tab:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.4)}
+.in-game-tab[aria-selected="true"],.in-game-tab.active-tab{background:#2f6feb;border-color:#2f6feb;color:#fff;font-weight:600}
+.in-game-panel{display:none}.in-game-panel.active-panel{display:block;animation:tabFade .2s ease}
+@keyframes tabFade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.game-hud-bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:12px 16px;margin-bottom:16px}
+.stage-badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;background:rgba(47,111,235,.2);border:1px solid #2f6feb;color:#58a6ff}
+.speed-selector{display:inline-flex;border:1px solid rgba(255,255,255,.2);border-radius:6px;overflow:hidden;margin-left:10px}
+.speed-btn{background:transparent;border:none;padding:4px 10px;color:inherit;font-size:12px;cursor:pointer}
+.speed-btn.active-speed{background:rgba(255,255,255,.25);font-weight:700;color:#fff}

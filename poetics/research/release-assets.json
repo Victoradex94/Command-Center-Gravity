@@ -1,15 +1,15 @@
 {
   "engine.js": {
-    "file": "engine.d45dd739b129.js",
-    "sha256": "d45dd739b12955d0b02f59ae5640beeee1e5d05d3ef6e98490c4017359e34ce5"
+    "file": "engine.71a17f300a02.js",
+    "sha256": "71a17f300a026f6d4d41c48119f1e9f7d365877cdb0a0347fc13d4fe848b2f43"
   },
   "opportunities.js": {
-    "file": "opportunities.4ddfcc6ef954.js",
-    "sha256": "4ddfcc6ef95452e352adc0aabb2117d34b14f6dce988e4a76e820fc761ae45d9"
+    "file": "opportunities.ecc28cd9dc5b.js",
+    "sha256": "ecc28cd9dc5b21b6a234aa57f9f521e6b029875aaec130bee82de0fa2aec4e0b"
   },
   "gamemap.js": {
-    "file": "gamemap.08bb0e75cf74.js",
-    "sha256": "08bb0e75cf74c468b5427fd7c90425f5510d64ecfd00e4cb6d9f988fc287680e"
+    "file": "gamemap.697ebd3170c6.js",
+    "sha256": "697ebd3170c6aa85bb2da88e540a4bc967ed44e18705cec4e9ed42c8e1702055"
   },
   "city3d.js": {
     "file": "city3d.a10fc14c3716.js",
@@ -19,17 +19,21 @@
     "file": "world.1efd030f1f57.js",
     "sha256": "1efd030f1f57d9120326436a27b350c104f8cfa47735e651215275f6b66c2055"
   },
+  "contribute.js": {
+    "file": "contribute.5ce1ab9ed1bb.js",
+    "sha256": "5ce1ab9ed1bb9c9fcb034522f077cb4982e7ebcb2128d5881b81f4b94d699ea5"
+  },
   "style.css": {
     "file": "style.d60d49f9b4e0.css",
     "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.bdfdaaeb1f56.css",
-    "sha256": "bdfdaaeb1f5610b6b427ae3b3bfc82d5b085d5d60434f96baacd8ffc3410ec74"
+    "file": "vicadex-theme.227f4b91c264.css",
+    "sha256": "227f4b91c2643581fb928d6aef2179f007894f37163e5b3af7fbf20efa2894d6"
   },
   "atlas-input.js": {
-    "file": "atlas-input.1534274b6a7f.js",
-    "sha256": "1534274b6a7fa11590434d68aa62f4985089ebb79659fa768d68bda02706d973"
+    "file": "atlas-input.d02f665624f6.js",
+    "sha256": "d02f665624f6aaf2c6951f2c26cf7ff087e68e1aec0a64209b7ab3efdca3aa87"
   },
   "nigeria-map.js": {
     "file": "nigeria-map.2945d9baaa7c.js",
@@ -75,20 +79,20 @@
     "file": "directory.45e69f2f6ca6.js",
     "sha256": "45e69f2f6ca636f5aa994922d1515fd428a5e4424e2b50fb95e2aa195914d473"
   },
-  "contribute.js": {
-    "file": "contribute.5ce1ab9ed1bb.js",
-    "sha256": "5ce1ab9ed1bb9c9fcb034522f077cb4982e7ebcb2128d5881b81f4b94d699ea5"
-  },
   "atlas-ui-guard.js": {
     "file": "atlas-ui-guard.94d3156d05db.js",
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
+  "game-assets.js": {
+    "file": "game-assets.09ea57240cfa.js",
+    "sha256": "09ea57240cfac3efce26f7489139917d9d744cb3a52226c6fd41a51c94eea386"
+  },
   "game-loader.js": {
-    "file": "game-loader.8db66b59d2cc.js",
-    "sha256": "8db66b59d2cc18d315959389c36c702d2024ce35885fb31d69e422b32efd158c"
+    "file": "game-loader.e60e7eadd08d.js",
+    "sha256": "e60e7eadd08dfa6701b92920c1b608d2c1a90d58e26a65a864cfebb5b408a3a8"
   },
   "app.js": {
-    "file": "app.eb267b97b300.js",
-    "sha256": "eb267b97b300c0e8163923d7acd07e3d26da7642a6b9c45f9b1dd6d9a0f667d1"
+    "file": "app.9ab79a0d1697.js",
+    "sha256": "9ab79a0d16977eafa196c93ff206685e626f5545a7baf2bbe524cbf428f3589a"
   }
 }

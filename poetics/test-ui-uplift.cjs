@@ -7,7 +7,7 @@ const root={classList:{add:noop},set innerHTML(s){html=s;controls={};nodes=parse
 const change=(id,value)=>controls[id].onchange({target:{value}}),state=()=>window.PoeticsAtlasNavigation.read(window.location.hash);
 async function run(){
  window.renderDirectory(root);assert.equal(fetches,0);
- for(const id of ['directory-state','directory-zone','directory-geo','directory-year','directory-activity','map-category-filter'])assert.equal((html.match(new RegExp('id="'+id+'"','g'))||[]).length,1);
+ for(const id of ['directory-state','directory-zone','directory-geo','directory-year','directory-activity','toggle-category-picker'])assert.equal((html.match(new RegExp('id="'+id+'"','g'))||[]).length,1);
  assert(html.includes('filters-expanded'));controls['#toggle-map-filters'].onclick();assert(html.includes('filters-collapsed'));controls['#toggle-map-filters'].onclick();
  change('#directory-state','Kaduna');await new Promise(r=>setTimeout(r,0));assert(html.includes('class="state-category-counts"'));assert.equal(categoryButtons.reduce((n,b)=>n+b.dataset.count,0),8);
  change('#directory-geo','Zaria');assert.equal(categoryButtons.reduce((n,b)=>n+b.dataset.count,0),4);
