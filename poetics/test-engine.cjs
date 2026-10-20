@@ -7,9 +7,16 @@ test('coaching preparation and research improve deterministic outcome',()=>{cons
 test('one slam daily and open mic alternative',()=>{const s=E.create();s.poem='A journey is the shape of something carried through a morning.';s.energy=100;assert(E.act(s,'slam','intimate').ok);assert.equal(E.act(s,'slam','intimate').ok,false);E.act(s,'rest');assert(E.act(s,'slam','rhythmic').ok);E.act(s,'rest');assert(E.act(s,'openmic').ok);});
 test('travel and work respect economy',()=>{const s=E.create();assert(E.act(s,'travel','Lagos').ok);assert.equal(s.city,'Lagos');assert.equal(s.money,2400);assert.equal(E.act(s,'travel','Lagos').ok,false);E.act(s,'work');assert.equal(s.money,2850);});
 test('different decisions yield different paths',()=>{const a=E.create(),b=E.create();E.act(a,'coach');E.act(b,'feedback',0);assert.notDeepEqual(a,b);assert(a.craft>b.craft);assert(b.npcs[0].relationship>a.npcs[0].relationship);});
-test('save validation rejects invalid data',()=>{assert(E.valid(E.create()));assert(!E.valid({...E.create(),money:-1}));assert(!E.valid({...E.create(),npcs:[]}));assert(!E.valid({...E.create(),poem:3}));assert(!E.valid({...E.create(),city:'unknown'}));});
+test('save validation rejects invalid data',()=>{assert(E.valid(E.create()));assert(!E.valid({...E.create(),money:-1}));assert(!E.valid({...E.create(),npcs:[]}));assert(!E.valid({...E.create(),poem:3}));assert(!E.valid({...E.create(),dna:2}));assert(!E.valid({...E.create(),path:'Invalid'}));assert(!E.valid({...E.create(),city:'unknown'}));});
 test('long runs retain bounded state and resources',()=>{const s=E.create();for(let i=0;i<1000;i++){E.act(s,'rest');E.act(s,'work');}assert(E.valid(s));assert(s.wall.length<=40);assert(s.log.length<=80);assert(s.energy<=100&&s.energy>=0);});
 const context={window:{}};vm.runInNewContext(fs.readFileSync('./dist/atlas.js','utf8'),context);const A=context.window.PoeticsAtlas;
 test('Atlas evidence and relationship integrity',()=>{const ids=new Set(A.records.map(r=>r.id));assert.equal(ids.size,A.records.length);A.records.forEach(r=>{assert(A.sources[r.source]);assert(r.rights);assert(r.year===null||Number.isInteger(r.year));});A.edges.forEach(e=>{assert(ids.has(e[0])&&ids.has(e[1]));assert(A.sources[e[3]]);assert(e[4]===null||Number.isInteger(e[4]));});assert(!JSON.stringify(A).includes('Tomi'));});
 test('routes and escaped player input exist',()=>{const code=fs.readFileSync('./dist/app.js','utf8');['atlas','games','archive','research'].forEach(r=>assert(code.includes("r==='"+r+"'")));assert(code.includes('esc(p.text)'));assert(code.includes('esc(n.name)'));assert(code.includes("localStorage.setItem('poetics-fiction-v1'"));assert(!code.includes('fetch('));});
 console.log(passes+' meaningful checks passed.');
+
+const s3 = E.create();
+s3.money = 10000;
+s3.energy = 100;
+s3.poem = "A cat sat on a mat with a bat and a hat. This is very long and has many rhymes inside.";
+let result3 = E.act(s3, 'openmic');
+assert(result3.ok);
