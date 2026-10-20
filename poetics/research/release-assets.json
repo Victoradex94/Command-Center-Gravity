@@ -20,8 +20,8 @@
     "sha256": "1efd030f1f57d9120326436a27b350c104f8cfa47735e651215275f6b66c2055"
   },
   "contribute.js": {
-    "file": "contribute.5ce1ab9ed1bb.js",
-    "sha256": "5ce1ab9ed1bb9c9fcb034522f077cb4982e7ebcb2128d5881b81f4b94d699ea5"
+    "file": "contribute.06f83730cc32.js",
+    "sha256": "06f83730cc3221ed705a11a8c016673bc99041858e4f7a7503e6861adbacc367"
   },
   "style.css": {
     "file": "style.d60d49f9b4e0.css",
@@ -84,8 +84,8 @@
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
   "game-assets.js": {
-    "file": "game-assets.09ea57240cfa.js",
-    "sha256": "09ea57240cfac3efce26f7489139917d9d744cb3a52226c6fd41a51c94eea386"
+    "file": "game-assets.f2381add1e26.js",
+    "sha256": "f2381add1e26e5324b3a92968339b4fdb70c03cd6c0b850a7d8560f04ba4d77b"
   },
   "game-loader.js": {
     "file": "game-loader.e60e7eadd08d.js",

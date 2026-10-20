@@ -1,9 +1,10 @@
 """Exercise copying and failure safeguards against disposable staging folders."""
 from pathlib import Path
-import importlib.util, json, os, subprocess, sys, tempfile, unittest
+import subprocess, sys, tempfile, unittest
+from importlib.util import module_from_spec, spec_from_file_location
 sys.dont_write_bytecode = True
-spec = importlib.util.spec_from_file_location('sync', Path(__file__).parent / 'scripts/sync-localwp.py')
-sync = importlib.util.module_from_spec(spec)
+spec = spec_from_file_location('sync', Path(__file__).parent / 'scripts/sync-localwp.py')
+sync = module_from_spec(spec)
 spec.loader.exec_module(sync)
 
 class SyncSafety(unittest.TestCase):
