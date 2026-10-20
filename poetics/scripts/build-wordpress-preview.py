@@ -5,7 +5,12 @@ html=(root/'dist/index.html').read_text()
 if 'href="vicadex-theme.css"' not in html:
     html=html.replace('</head>','<link rel="stylesheet" href="vicadex-theme.css"></head>')
 names=['index.html','style.css','vicadex-theme.css','nigeria-states.json']+re.findall(r'<script src="([^"]+)"',html)
-assets={n:base64.b64encode((html.encode() if n=='index.html' else (root/'dist'/n).read_bytes())).decode() for n in names}
+assets={'index.html':base64.b64encode(html.encode()).decode()}
+dist_dir=str(root/'dist')+'/'
+for n in names:
+    if n!='index.html':
+        with open(dist_dir+n,'rb') as f:
+            assets[n]=base64.b64encode(f.read()).decode()
 assets['vicadex-theme.css']=base64.b64encode((root/'wordpress/poetics-preview/vicadex-theme.css').read_bytes()).decode()
 php="""<?php
 /**
