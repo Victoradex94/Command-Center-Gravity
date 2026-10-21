@@ -1,0 +1,3 @@
+# Hero portrait blending
+
+Victor identified hard joins in the hero background. Preserve the same four photographs and existing footer credits, quote, H1, copy and fonts. Replace the four hard-edged background panels with overlapping monochrome portrait layers and feathered CSS masks. Use a more even azure overlay to unify their tones. Decorative spans are aria-hidden, require no additional image assets and add no accessible content or links. No generated faces, image-file edits, data writes or production deployment. Scoped rollback: revert this commit and rebuild/sync after checking subsequent work.

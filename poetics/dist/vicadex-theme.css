@@ -624,8 +624,14 @@ body>footer{background:#fffaf4;border-color:#e5ddd3}
 @media(max-width:700px){.map-atlas .atlas-introduction{padding:26px 22px 22px;min-height:0;border-radius:22px;margin-top:12px}.map-atlas .atlas-introduction h1{font-size:32px}.map-atlas .atlas-introduction p{font-size:17px}.map-atlas .atlas-introduction::after{position:relative;inset:auto;display:block;width:100%;box-sizing:border-box;aspect-ratio:16/10;margin-top:24px;border-radius:14px;flex:none}}
 /* Release 88: full-width mosaic beneath azure overlay. */
 .map-atlas .atlas-introduction{isolation:isolate;min-height:390px;padding:48px 40px;width:100%;max-width:none}
-.map-atlas .atlas-introduction::after{position:absolute;inset:0;width:100%;height:100%;margin:0;border:0;border-radius:0;z-index:-2;opacity:.7;filter:grayscale(1);background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Wole_Soyinka_in_2018_%283x4_cropped%29.jpg/500px-Wole_Soyinka_in_2018_%283x4_cropped%29.jpg'),url('https://upload.wikimedia.org/wikipedia/commons/1/17/Osundare_1.png'),url('media/pariolodo-kolawole-falade.jpg'),url('media/vicadex-selected-portrait.jpg');background-size:25% auto,25% auto,25% auto,25% auto;background-position:0 center,33.333% center,66.666% center,100% center;background-repeat:no-repeat}
-.map-atlas .atlas-introduction::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,52,66,.96),rgba(15,81,99,.8) 48%,rgba(15,81,99,.35));pointer-events:none}
+.map-atlas .atlas-introduction::after{content:none}
+.map-atlas .atlas-introduction>.atlas-hero-portraits{position:absolute;inset:0;z-index:-2;display:block;max-width:none;pointer-events:none;overflow:hidden;opacity:.65;filter:grayscale(1) contrast(.9)}
+.atlas-hero-portraits span{position:absolute;top:0;bottom:0;width:36%;background-position:center;background-size:cover;background-repeat:no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent,#000 24%,#000 76%,transparent);mask-image:linear-gradient(90deg,transparent,#000 24%,#000 76%,transparent)}
+.atlas-hero-portraits span:nth-child(1){left:-5%;background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Wole_Soyinka_in_2018_%283x4_cropped%29.jpg/500px-Wole_Soyinka_in_2018_%283x4_cropped%29.jpg')}
+.atlas-hero-portraits span:nth-child(2){left:20%;background-image:url('https://upload.wikimedia.org/wikipedia/commons/1/17/Osundare_1.png')}
+.atlas-hero-portraits span:nth-child(3){left:45%;background-image:url('media/pariolodo-kolawole-falade.jpg')}
+.atlas-hero-portraits span:nth-child(4){left:70%;background-image:url('media/vicadex-selected-portrait.jpg')}
+.map-atlas .atlas-introduction::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,52,66,.96),rgba(15,81,99,.8) 48%,rgba(15,81,99,.58));pointer-events:none}
 .map-atlas .atlas-introduction h1,.map-atlas .atlas-introduction>p{max-width:620px}
 @media(max-width:700px){.map-atlas .atlas-introduction{min-height:380px;padding:30px 22px}.map-atlas .atlas-introduction::after{position:absolute;inset:0;aspect-ratio:auto;margin:0;opacity:.45}.map-atlas .atlas-introduction::before{background:rgba(8,52,66,.8)}}
 .atlas-hero-credits{font:400 11px/1.5 'Afacad',Arial,sans-serif;margin-top:18px}.atlas-hero-credits a{color:#e1edef!important;text-decoration:underline}
