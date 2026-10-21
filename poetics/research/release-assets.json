@@ -24,36 +24,44 @@
     "sha256": "06f83730cc3221ed705a11a8c016673bc99041858e4f7a7503e6861adbacc367"
   },
   "style.css": {
-    "file": "style.d60d49f9b4e0.css",
-    "sha256": "d60d49f9b4e010edd9cfe316f9df6e5383a00189471850d360f2aff45b777971"
+    "file": "style.bb6dfd57125c.css",
+    "sha256": "bb6dfd57125c5fdd8490f0814a1ae4e9232e9fcc67ba0ea5e09857c8acdb474f"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.227f4b91c264.css",
-    "sha256": "227f4b91c2643581fb928d6aef2179f007894f37163e5b3af7fbf20efa2894d6"
+    "file": "vicadex-theme.411a082b9395.css",
+    "sha256": "411a082b9395755343ca5cfd89677b241b249162b338f9818e9ee148b2de4417"
+  },
+  "ecosystem-switcher.css": {
+    "file": "ecosystem-switcher.48d69d8b6341.css",
+    "sha256": "48d69d8b6341349595c5a882d53a0bd5267fefc947eaf926d5917acd0383bd82"
   },
   "atlas-input.js": {
     "file": "atlas-input.d02f665624f6.js",
     "sha256": "d02f665624f6aaf2c6951f2c26cf7ff087e68e1aec0a64209b7ab3efdca3aa87"
+  },
+  "ecosystem-switcher.js": {
+    "file": "ecosystem-switcher.696c339bc6bf.js",
+    "sha256": "696c339bc6bf2d8cdec3005e00e1d6348110606e55345de41da650d47727cca4"
   },
   "nigeria-map.js": {
     "file": "nigeria-map.2945d9baaa7c.js",
     "sha256": "2945d9baaa7c9667225330ed794ae91d60e145fcf5c51d67f60eef23f8bac91d"
   },
   "nigeria-states-map.js": {
-    "file": "nigeria-states-map.520077c91d6d.js",
-    "sha256": "520077c91d6d72c3abff1d5150aa22094dc53097683670ce589deede27f87b14"
+    "file": "nigeria-states-map.bd780f258d31.js",
+    "sha256": "bd780f258d31fd74895fed3aed24e606869738ed0b288a9f9a30fa3e788597d0"
   },
   "geography-registry.js": {
     "file": "geography-registry.4fdc196409b5.js",
     "sha256": "4fdc196409b52fc6716df9462d5593220d4f2d51fbe4a3e54b711f2667e7030b"
   },
   "state-urban-map.js": {
-    "file": "state-urban-map.da332a082724.js",
-    "sha256": "da332a0827241f9eb8c2c1ed57aae6e66ec5cc4043e3de5d8024a24c11e49071"
+    "file": "state-urban-map.f95542359fba.js",
+    "sha256": "f95542359fba053572c49e20704eca53bb1f1d89cbf1cde00f248d960881b9b9"
   },
   "state-city-map.js": {
-    "file": "state-city-map.4fa7380c44f2.js",
-    "sha256": "4fa7380c44f20fee2581ab1f4c4657c1a17d1452e0ed7aa11b5f2434828ece2a"
+    "file": "state-city-map.6224c01c87ab.js",
+    "sha256": "6224c01c87abdfae18800b64f689c56cf566c4dcd138bf5a3af1130e1124ed2c"
   },
   "atlas-icons.js": {
     "file": "atlas-icons.2d8a4274555b.js",
@@ -68,16 +76,16 @@
     "sha256": "3ff31624aa0d95ea132737b19a8e8c9a8865120383998fa9051eb02719c847f2"
   },
   "atlas-navigation.js": {
-    "file": "atlas-navigation.d43c79c0b3b5.js",
-    "sha256": "d43c79c0b3b5c528ce333bf90c46cdf56b8d355b80713dc230871bcf042e4eed"
+    "file": "atlas-navigation.2e6ffbaa7eb1.js",
+    "sha256": "2e6ffbaa7eb13279f1be7a509f50b3c1b90495e16b3dfdb0a70ddd80bff4410a"
   },
   "supabase-atlas.js": {
-    "file": "supabase-atlas.613179fc1175.js",
-    "sha256": "613179fc11759e7f9f6a8fc8ff66d51b572e57e6480c659df63a10c0667560ad"
+    "file": "supabase-atlas.847d43cdb944.js",
+    "sha256": "847d43cdb944d8b0025a6dd9c2bc9b18972dd68642b7f34363a655faddc8bac9"
   },
   "directory.js": {
-    "file": "directory.45e69f2f6ca6.js",
-    "sha256": "45e69f2f6ca636f5aa994922d1515fd428a5e4424e2b50fb95e2aa195914d473"
+    "file": "directory.e5227f567221.js",
+    "sha256": "e5227f56722114412243b494119581cc342a49a41d0fab4ceb88e11df3bad55f"
   },
   "atlas-ui-guard.js": {
     "file": "atlas-ui-guard.94d3156d05db.js",
@@ -92,7 +100,7 @@
     "sha256": "e60e7eadd08dfa6701b92920c1b608d2c1a90d58e26a65a864cfebb5b408a3a8"
   },
   "app.js": {
-    "file": "app.decd445b772b.js",
-    "sha256": "decd445b772b835ee4a12fb8502686e229ecf8f84d7f9cf795ffb75b30adcee8"
+    "file": "app.8901b823bae6.js",
+    "sha256": "8901b823bae67eb41144480f4f411989b38ca46c9427c7c313f853ecdb4fe7ce"
   }
 }

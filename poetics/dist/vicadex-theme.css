@@ -757,3 +757,23 @@ body>footer .poetics-image-credits{font-size:13px}
 .speed-selector{display:inline-flex;border:1px solid rgba(255,255,255,.2);border-radius:6px;overflow:hidden;margin-left:10px}
 .speed-btn{background:transparent;border:none;padding:4px 10px;color:inherit;font-size:12px;cursor:pointer}
 .speed-btn.active-speed{background:rgba(255,255,255,.25);font-weight:700;color:#fff}
+
+/* Approved staging card hierarchy: category icon beside the entry name. */
+.map-atlas .atlas-entry-card .entry-card-heading{display:flex;align-items:flex-start;gap:9px;min-width:0;text-transform:none;letter-spacing:normal}
+.map-atlas .atlas-entry-card .entry-card-heading strong{flex:1;min-width:0;margin:0;font-size:21px;font-weight:600;line-height:1.3;overflow-wrap:anywhere}
+.map-atlas .atlas-entry-card .entry-category-icon{display:inline-flex;flex:0 0 26px;margin-top:1px}
+.map-atlas .atlas-geography-card .geography-summary{display:flex;flex-direction:column;text-align:left;width:100%;box-sizing:border-box}
+.map-atlas .atlas-geography-card .geography-summary .record-meta{display:grid;grid-template-columns:1fr 1fr;width:100%}
+.map-atlas .atlas-geography-card .geography-summary{align-items:center;padding:16px;text-align:center}
+.map-atlas .atlas-geography-card .geography-summary p{margin:4px 0 8px;font-size:13px}
+.map-atlas .card-location-map{display:grid;place-items:center;position:relative;min-width:80px;height:60px;isolation:isolate;color:#124e60}
+.map-atlas .card-location-map svg{position:absolute;inset:0;width:100%;height:100%;fill:#0b5f78;fill-opacity:.15;stroke:#0b5f78;stroke-opacity:.2;stroke-width:1;z-index:-1}
+.map-atlas .card-location-map>span{font-size:13px;font-weight:600;line-height:1.2;text-align:center;text-shadow:0 1px 2px #fffaf3,0 -1px 2px #fffaf3}
+.map-atlas .card-location-map small{font-size:9px;align-self:end;position:absolute;bottom:0}
+.map-atlas .card-location-map.large{width:100%;height:150px}
+.map-atlas .card-location-map.large>span{font-size:25px}
+.map-atlas .atlas-entry-card .record-meta>span:has(.card-location-map){padding:0;background:transparent;border:0}
+
+.map-atlas .geography-explore{width:100%;text-align:left}.map-atlas .geography-explore>summary{width:max-content;margin:auto;list-style:none;padding:8px 14px;border:1px solid #d5dedf;border-radius:9px;background:#fffaf3;color:#124e60;font-size:13px;cursor:pointer}.map-atlas .geography-explore>summary::-webkit-details-marker{display:none}.geography-category-totals{display:flex;flex-wrap:wrap;gap:6px}.geography-category-totals>span{display:inline-flex;align-items:center;gap:4px;font-size:12px}.geography-overview{padding-top:12px}.geography-overview .caption{font-size:12px}
+
+.map-atlas .atlas-entry-card .record-meta>.card-year-range{border:0;border-radius:0;background:transparent;padding:6px 0;align-self:center;gap:4px}.map-atlas .atlas-entry-card .card-year-range .record-meta-label{font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:#675e54}.map-atlas .atlas-entry-card .card-year-range>span:last-child{font-size:14px;line-height:1.4;color:#173c43}

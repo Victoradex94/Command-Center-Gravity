@@ -3,6 +3,12 @@ from pathlib import Path
 import hashlib,json,re,subprocess,sys
 root=Path(__file__).resolve().parents[1]
 dist=root/'dist';index=dist/'index.html';html=index.read_text(encoding='utf-8');mapping={}
+# Compact executable delivery copies, retaining readable canonical sources.
+# Formatting and local identifier shortening only; no compression transforms,
+# property mangling, public API renaming or data mutation.
+compact_names=['directory.js','ecosystem-switcher.js','state-city-map.js','app.js','state-urban-map.js','nigeria-states-map.js','atlas-navigation.js','supabase-atlas.js']
+compact_input={name:(dist/name).read_text(encoding='utf-8') for name in compact_names}
+compact=json.loads(subprocess.check_output(['node',str(root/'scripts/minify-delivery.cjs')],input=json.dumps(compact_input),text=True,encoding='utf-8'))
 # Rebuild the display-only derivative on every release; never edit the snapshot.
 subprocess.run([sys.executable, str(root/'scripts/prepare-browser-data.py')], check=True)
 # Also resolves a prior fingerprint so the helper can run after source edits.
@@ -11,7 +17,10 @@ def asset(match):
     name=re.sub(r'\.[a-f0-9]{12}(?=\.(?:js|css)$)','',name)
     source=dist/name
     if not source.exists():raise RuntimeError('Missing asset '+name)
-    payload=source.read_text(encoding='utf-8').encode('utf-8')
+    payload=compact.get(name,source.read_text(encoding='utf-8')).encode('utf-8')
+    if source.suffix=='.css':
+        # Remove ordinary comments only; retain quoted text and /*! notices.
+        payload=re.sub(r'''("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')|/\*(?!\!)[\s\S]*?\*/''',lambda m:m[1] if m[1] is not None else ' ',payload.decode('utf-8')).encode('utf-8')
     # Compact pure JSON assignments for delivery; retain readable canonical sources.
     if source.suffix=='.js':
         data=re.fullmatch(r'(window\.\w+\s*=)\s*([\s\S]*?);?\s*',source.read_text(encoding='utf-8'))

@@ -65,3 +65,17 @@ console.log('PASS Surprise focuses and applies a mapped state zoom, preserves ac
 // the national map and selected profile.
 const unlocated=window.PoeticsDirectoryData.rows.find(r=>!window.PoeticsStateMap.statesForRecord(r).length);assert(unlocated,'expected records without a mapped state/city');const unlocatedIndex=window.PoeticsDirectoryData.rows.indexOf(unlocated);set(nav.hash({mode:'Map',state:'All states',zone:'All zones',geo:'All places',year:'All years',activity:'All formats',enabled:['People','Places','Platforms','Prizes','Publications'],query:'',selected:null,browsing:true,focusState:''}));window.renderDirectory(root);controls['#surprise-scope'].onchange({target:{value:'all'}});context.Math.random=()=>(unlocatedIndex+.25)/window.PoeticsDirectoryData.rows.length;controls['#surprise-entry'].onclick();const noLocationFocus=nav.read(window.location.hash);assert.equal(noLocationFocus.selected,unlocated.id);assert.equal(noLocationFocus.focusState,'');assert(html.includes('data-map-layer="Country"'));assert(html.includes('This entry has no mapped state or city; showing the Nigeria map.'));assert(html.includes('id="nigeria-map"'));assert(html.includes('class="atlas-profile"'));
 console.log('PASS Surprise on an entry without a mapped state/city keeps Nigeria map and profile visible and explains the missing geographic focus.');
+
+for(const [hash,name] of [['#/atlas?panel=1','Nigeria'],['#/atlas?state=Kaduna&panel=1','Kaduna'],['#/atlas?state=Kaduna&city=Zaria&panel=1','Zaria']]){
+ set(hash);window.renderDirectory(root);
+ assert(html.includes('data-geography-card="'+name+'"'));
+ assert(html.includes('<summary>Explore '+name+'</summary>'));
+ assert(html.indexOf('data-geography-card=')<html.indexOf('class="entry-card-heading"'));
+}
+const source=fs.readFileSync('dist/directory.js','utf8');
+const displayName=vm.runInNewContext('('+source.match(/function cardDisplayName\(r\)\{[^\n]+/)[0]+')');
+const original={name:'#NaijaPoetryRocks (X Community)'};
+assert.equal(displayName(original),'#NaijaPoetryRocks');
+assert.equal(original.name,'#NaijaPoetryRocks (X Community)');
+assert.equal(displayName({name:'Poetry (2025 listing)'}),'Poetry (2025 listing)');
+console.log('PASS country/state/city leading geography cards, universal Explore overview, display-only community suffix and retained unrelated title qualifiers.');

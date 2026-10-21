@@ -9,7 +9,7 @@ const expected=names(previous).map(m=>plain(m[1])).filter(n=>!deferredGames.incl
 expected.splice(expected.indexOf('directory.js'),0,'supabase-atlas.js');
 expected.splice(expected.indexOf('app.js'),0,'game-assets.js','game-loader.js');
 const dataNames=['atlas.js','canonical-research-runtime.js','national-directory.js','directory-expansion.js','nigeria-boundary.js','nigeria-states.js','osm-state-locators.js','state-urban-manifest.js','atlas-audit.js'];
-assert.deepEqual(names(index).map(m=>plain(m[1])),['atlas-input.js',...expected.filter(n=>!dataNames.includes(n))]);
+assert.deepEqual(names(index).map(m=>plain(m[1])),['atlas-input.js','ecosystem-switcher.js',...expected.filter(n=>!dataNames.includes(n))]);
 for(const m of names(index)){assert(m[2].includes('defer'));assert(!m[2].includes('async'));}
 const expectedData={window:{}},actualData={window:{}};
 for(const name of dataNames)vm.runInNewContext(fs.readFileSync('dist/'+name,'utf8'),expectedData);
