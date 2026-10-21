@@ -9,3 +9,5 @@ Generation prompts: prize cup with five cowries, incised geometric lines, thick 
 One shared SVG-wrapper function references the versioned WebP assets. Accessible category labels and text remain; geographic country/state silhouettes remain unchanged. Export is lossless with an exact decoded-pixel comparison, no resizing or recolouring. The JSON manifest records original/source hashes, delivered hashes and dimensions. Runtime data and evidence are untouched.
 
 Rollback: revert this scoped commit and regenerate delivery assets; check subsequent changes first. No live deployment authorised.
+
+Small-size refinement, 21 October: Victor found Platforms/Publications too detailed. Platforms now uses a simplified meeting-tree with three seats; Victor subsequently selected a book for Publications, so it now uses a simple open-book silhouette with ivory pages, red cover and ochre accent. Both simplify shapes for small-size recognition. Earlier assets remain available for recovery.

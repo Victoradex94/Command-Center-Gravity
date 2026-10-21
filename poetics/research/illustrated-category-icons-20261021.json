@@ -22,15 +22,15 @@
     "provenance": "User-supplied reference"
   },
   "Platforms": {
-    "file": "media/atlas-icons/platforms.52e1f1d16ed9.webp",
-    "sha256": "52e1f1d16ed99344902ebd736bbb7a39ed96b97d32b8f223f2fb03015f09ddb1",
+    "file": "media/atlas-icons/platforms.8d1156512b02.webp",
+    "sha256": "8d1156512b0233792310fe9b9f3fe12690f54c214bde32ea9e4be80046dbb9dc",
     "width": 1254,
     "height": 1254,
-    "description": "Moonlit storytelling circle",
-    "source": "platforms-option-2-storytelling.png",
-    "sourceSha256": "3a086155e44ab67310aa790f3c6de7183e7e2de95ecefc401efa47e5721cc04f",
-    "bytes": 569022,
-    "provenance": "Built-in image generation; drum based on supplied reference"
+    "description": "Meeting tree and gathering circle",
+    "source": "platforms-meeting-tree-simple.png",
+    "sourceSha256": "93a4c36f3726cb91a0920a16ab61df832ca42f7d2a55ebb6425439e70c2d41fa",
+    "bytes": 269070,
+    "provenance": "Built-in image generation, simplified from selected icon reference"
   },
   "Prizes": {
     "file": "media/atlas-icons/prizes.9c5f180ca90d.webp",
@@ -44,14 +44,14 @@
     "provenance": "Built-in image generation; drum based on supplied reference"
   },
   "Publications": {
-    "file": "media/atlas-icons/publications.ddabbceeac0f.webp",
-    "sha256": "ddabbceeac0f534d8eb0f98e87b90275984e11f8cffe532beb5b23ae44f8299a",
+    "file": "media/atlas-icons/publications.f18f3d630fd9.webp",
+    "sha256": "f18f3d630fd95d95b52a17144ff1ed8583268d0777418991a49c953d1b2d2ec2",
     "width": 1254,
     "height": 1254,
-    "description": "Red and brown drum",
-    "source": "publications-drum-transparent.png",
-    "sourceSha256": "780dcb34ba746dafb7d4dcc0a5f5ffa0867a08ae129a187c212fa8d28e5d891c",
-    "bytes": 305152,
-    "provenance": "Built-in image generation; drum based on supplied reference"
+    "description": "Simple open book",
+    "source": "publications-open-book.png",
+    "sourceSha256": "35c21d8906f52b1df10fe319a61131d472c02de6d367126f5c3e76de8eaca3b6",
+    "bytes": 523960,
+    "provenance": "Built-in image generation; open-book direction explicitly selected by Victor"
   }
 }
