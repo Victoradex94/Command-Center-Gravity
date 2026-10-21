@@ -8,12 +8,12 @@
     "sha256": "ecc28cd9dc5b21b6a234aa57f9f521e6b029875aaec130bee82de0fa2aec4e0b"
   },
   "gamemap.js": {
-    "file": "gamemap.697ebd3170c6.js",
-    "sha256": "697ebd3170c6aa85bb2da88e540a4bc967ed44e18705cec4e9ed42c8e1702055"
+    "file": "gamemap.fd49ab76d308.js",
+    "sha256": "fd49ab76d308e24d40577b528227806b7d1dc1f1d3fe73f041e58427ccc7d706"
   },
   "city3d.js": {
-    "file": "city3d.a10fc14c3716.js",
-    "sha256": "a10fc14c3716d026f36ebb1821429305e14c69e690e49aacbf725a278c6f8841"
+    "file": "city3d.6507f6ce6a29.js",
+    "sha256": "6507f6ce6a2924f43400d800b70ee408e53509610a0562c50fc0bf06ad591dde"
   },
   "world.js": {
     "file": "world.1efd030f1f57.js",
@@ -84,15 +84,15 @@
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
   "game-assets.js": {
-    "file": "game-assets.f2381add1e26.js",
-    "sha256": "f2381add1e26e5324b3a92968339b4fdb70c03cd6c0b850a7d8560f04ba4d77b"
+    "file": "game-assets.ad3b8eddec89.js",
+    "sha256": "ad3b8eddec8970d8f13f842e385aebc9d4167f568b812d1184576342db8aad99"
   },
   "game-loader.js": {
     "file": "game-loader.e60e7eadd08d.js",
     "sha256": "e60e7eadd08dfa6701b92920c1b608d2c1a90d58e26a65a864cfebb5b408a3a8"
   },
   "app.js": {
-    "file": "app.9ab79a0d1697.js",
-    "sha256": "9ab79a0d16977eafa196c93ff206685e626f5545a7baf2bbe524cbf428f3589a"
+    "file": "app.decd445b772b.js",
+    "sha256": "decd445b772b835ee4a12fb8502686e229ecf8f84d7f9cf795ffb75b30adcee8"
   }
 }

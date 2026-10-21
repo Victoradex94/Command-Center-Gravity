@@ -1,0 +1,588 @@
+﻿(function(){
+  if (document.querySelector('#in-game-ui-styles')) return;
+  const s = document.createElement('style');
+  s.id = 'in-game-ui-styles';
+  s.textContent = `
+    .in-game-tabs { display:flex; gap:8px; margin: 16px 0; border-bottom: 2px solid rgba(255,255,255,0.12); padding-bottom: 10px; overflow-x: auto; }
+    .in-game-tab { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: inherit; padding: 10px 18px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s ease; }
+    .in-game-tab:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.4); }
+    .in-game-tab[aria-selected="true"], .in-game-tab.active-tab { background: #2f6feb; border-color: #2f6feb; color: #fff; font-weight: 600; }
+    .in-game-panel { display: none; }
+    .in-game-panel.active-panel { display: block; animation: tabFade 0.2s ease; }
+    @keyframes tabFade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    .game-hud-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; }
+    .stage-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; background: rgba(47, 111, 235, 0.2); border: 1px solid #2f6feb; color: #58a6ff; }
+    .speed-selector { display: inline-flex; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; overflow: hidden; margin-left: 10px; }
+    .speed-btn { background: transparent; border: none; padding: 4px 10px; color: inherit; font-size: 12px; cursor: pointer; }
+    .speed-btn.active-speed { background: rgba(255,255,255,0.25); font-weight: 700; color: #fff; }
+  `;
+  document.head.appendChild(s);
+})();
+'use strict';
+const $=s=>document.querySelector(s),main=$('#main'),A=window.PoeticsAtlas;let E;const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let game,view='map',chosen='wor',query='',city='all',until=2026,kind='all',toastTimer;let worldTimer=null,worldRunning=false,gameBusy=false,lastActivity='',lastAction='',currentPlace='home';const reduceMotion=()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches;let saveAvailable=true;
+function initializeGame(){if(game)return;E=window.PoeticsEngine;game=E.create();try{const raw=localStorage.getItem('poetics-fiction-v1');if(raw){const parsed=JSON.parse(raw);if(E.valid(parsed))game=parsed;else saveAvailable=false;}}catch{saveAvailable=false;}}
+let routeRun=0;
+function toast(t){$('#toast').textContent=t;$('#toast').style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').style.display='none',6500);}function save(){try{localStorage.setItem('poetics-fiction-v1',JSON.stringify(game));return true;}catch{saveAvailable=false;toast('Device storage is unavailable. Download your save to keep progress.');return false;}}
+function download(name,content,type='application/json'){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+async function route(){const run=++routeRun;main.classList.remove('atlas-brand');stopWorld();const r=location.hash.replace('#/','').split('?')[0]||'home';document.querySelectorAll('nav a').forEach(a=>{a.removeAttribute('aria-current');if(a.hash==='#/'+r)a.setAttribute('aria-current','page');});const openAtlas=async()=>{main.innerHTML='<p class="route-loading" role="status">Loading Atlas data from SupabaseÃ¢â‚¬Â¦</p>';try{if(!window.PoeticsSupabaseAtlas)throw Error('Supabase Atlas client is unavailable.');let snapshot;try{snapshot=await window.PoeticsSupabaseAtlas.read();}catch(e){};if(!snapshot||!snapshot.rows||snapshot.rows.length===0){snapshot={rows:A.records.map(r=>({id:r.id,name:r.name,category:r.type==='Person'?'People':['Place','Venue'].includes(r.type)?'Places':'Platforms',city:r.city,summary:r.description,status:r.status||'Source-supported metadata'})),edges:A.edges.map(e=>({a:e[0],b:e[1],label:e[2]}))};};if(run!==routeRun)return;window.PoeticsDirectoryData.replaceSnapshot(snapshot);window.renderDirectory(main);window.PoeticsAtlasUI?.enforce();}catch(error){if(run!==routeRun)return;main.innerHTML='<section class="page-top"><h1>The Atlas could not load.</h1><p>Supabase is unavailable. No bundled Atlas records have been displayed. Check your connection and try again.</p><button id="retry-atlas">Try again</button></section>';$('#retry-atlas').onclick=route;console.warn('Poetics Supabase Atlas read failed; no bundled snapshot displayed.',error);}};if(r==='atlas'||r==='home')await openAtlas();else if(r==='games'){main.innerHTML='<p class="route-loading" role="status">Loading your poetry worldÃ¢â‚¬Â¦</p>';try{await window.PoeticsLoadGames();if(run!==routeRun)return;initializeGame();renderGamesHub();}catch{if(run!==routeRun)return;main.innerHTML='<section class="page-top"><h1>The Games could not load.</h1><p>Your saved journey is unchanged. Check your connection and try again.</p><button id="retry-games">Try again</button> <a href="#/atlas">Back to the Atlas</a></section>';$('#retry-games').onclick=route;}}else if(r==='about'||r==='archive'||r==='research')window.renderPoeticsAbout(main);else if(r==='submit'){try{await window.PoeticsLoadAsset('contribute');if(run!==routeRun)return;window.renderContribute(main);}catch{if(run!==routeRun)return;main.innerHTML='<section class="page-top"><h1>Submission could not load.</h1><p>Check your connection and try again.</p></section>';}}else home();main.focus({preventScroll:true});window.scrollTo(0,0);}
+function home(){main.innerHTML=`<section class="quiet-home"><p class="quiet-kicker">A VicÃ¢â‚¬â„¢Adex concept</p><h1>Poetry.<br>People.<br><em>Possibilities.</em></h1><p class="quiet-intro">Explore Nigerian spoken word.<br>Or step into a poetry world of your own.</p><div class="quiet-paths"><a href="#/atlas"><span>Explore the Atlas</span></a><a href="#/games"><span>Enter the Games</span></a></div></section>`;}
+
+function filtered(){return A.records.filter(r=>(city==='all'||r.city===city)&&(kind==='all'||r.type===kind)&&(r.year===null||r.year<=until)&&(r.name+' '+r.description+' '+r.city).toLowerCase().includes(query.toLowerCase()));}
+function profile(){const r=A.records.find(x=>x.id===chosen)||A.records[0],s=A.sources[r.source];const links=A.edges.filter(e=>e[0]===r.id||e[1]===r.id);return `<div class="profile panel"><span class="badge">${esc(r.status||"Source-supported metadata")}</span><span class="badge">${esc(r.type)}</span><h2>${esc(r.name)}</h2><p>${esc(r.description)}</p><p class="caption">${esc(r.city)} Ã‚Â· ${r.year??'Date not established'}${r.year?' Ã‚Â· Year precision only':''} Ã‚Â· documented activity, not residence</p><h3>Connections</h3><div class="connections">${links.map(e=>{let id=e[0]===r.id?e[1]:e[0];let n=A.records.find(x=>x.id===id);return `<button data-record="${id}">${esc(e[2])} ${esc(n.name)} </button>`;}).join('')||'<p>No reviewed connections yet.</p>'}</div><h3 style="margin-top:25px">Evidence & permissions</h3><a href="${s.url}" target="_blank" rel="noopener">${esc(s.title)} </a><p class="caption">Accessed ${s.accessed}. ${esc(s.scope)}</p><p class="caption">${esc(r.rights)}</p><p class="caption">${esc(r.locator||s.locator||'Published page')} Ã‚Â· ${esc(r.dateMeaning||'Year precision as described above.')}</p><a href="#/research">Prepare a correction </a></div>`;}
+function geography(){const places=A.placeCoordinates;const place=places[city];let bbox='2.5,4,14.7,14.5',marker='';if(place){bbox=[place.lon-.7,place.lat-.5,place.lon+.7,place.lat+.5].join(',');marker='&marker='+place.lat+','+place.lon;}const url='https://www.openstreetmap.org/export/embed.html?bbox='+encodeURIComponent(bbox)+'&layer=mapnik'+marker;return `<iframe class="live-map" title="Interactive OpenStreetMap of ${esc(place?city:'Nigeria')}; use map controls to pan and zoom" src="${url}" loading="lazy" referrerpolicy="no-referrer"></iframe><div class="map-places"><button data-city="all">Nigeria</button><button data-city="Ogbomoso">Ogbomoso</button>${Object.keys(places).filter(x=>x!=="Ogbomoso").map(x=>`<button data-city="${esc(x)}">${esc(x)}</button>`).join("")}<button data-city="Online">Online</button></div><p class="caption">Map Ã‚Â© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>. City-centre locators, not venue pins: <a href="https://www.geonames.org/search.html?country=NG&q=${encodeURIComponent(place?city:"Nigeria")}" target="_blank" rel="noopener">GeoNames</a>. Only documented activity appears in the directory. Map loading needs internet.</p>`;}
+
+function atlas(){const rows=filtered();main.innerHTML=`<div class="page-top"><h1>Atlas.</h1><p>A small, evidence-linked window into the ecosystem. Explore documented and announced activity across several Nigerian cities. Coverage is still uneven.</p><div class="notice">${A.records.length} source-linked records Ã‚Â· ${A.edges.length} relationships Ã‚Â· ${Object.keys(A.sources).length} sources. Independent corroboration, wider coverage and historical editorial review are pending.</div><div class="toolbar"><label class="search">Search records<input id="search" value="${esc(query)}" placeholder="A person, platform or placeÃ¢â‚¬Â¦"></label><label>Place<select id="city">${['all',...new Set(A.records.map(r=>r.city))].map(x=>`<option value="${x}" ${x===city?'selected':''}>${x==='all'?'All places':x}</option>`).join('')}</select></label><label>Record type<select id="kind">${['all',...new Set(A.records.map(x=>x.type))].map(x=>`<option ${x===kind?'selected':''} value="${x}">${x==='all'?'All types':x}</option>`).join('')}</select></label><label>Up to year <span id="yearLabel">${until}</span><input id="year" type="range" min="2010" max="2026" value="${until}"></label><button id="clear">Reset filters</button></div><p class="caption">Undated records remain visible when filtering years; no dates are inferred.</p></div><div class="workspace"><div class="tabs" aria-label="Atlas view">${['map','network','timeline'].map(v=>`<button data-view="${v}" aria-pressed="${view===v}">${v[0].toUpperCase()+v.slice(1)}</button>`).join('')}</div><div class="atlas-layout"><div class="panel">${view==='map'?geography():view==='timeline'?`<div class="timeline">${rows.filter(r=>r.year).sort((a,b)=>a.year-b.year).map(r=>`<button data-record="${r.id}"><b>${r.year}</b><h3>${esc(r.name)}</h3><span class="caption">${esc(r.description)}</span></button>`).join('')||'<p>No dated records match.</p>'}</div>`:`<div class="network">${A.edges.filter(e=>rows.some(r=>r.id===e[0])&&rows.some(r=>r.id===e[1])&&(e[4]===null||e[4]<=until)).map(e=>`<div class="network-edge"><button data-record="${e[0]}">${esc(A.records.find(r=>r.id===e[0]).name)}</button><span>${esc(e[2])}<br>${e[4]??'undated'} Ã‚Â· <a href="${A.sources[e[3]].url}" target="_blank" rel="noopener">evidence </a></span><button data-record="${e[1]}">${esc(A.records.find(r=>r.id===e[1]).name)}</button></div>`).join('')||'<p>No reviewed relationships match these filters.</p>'}</div><p class="caption">Connected network, rendered as readable links. Each relationship carries its own source and date precision.</p>`}</div><div><p class="caption" role="status">${rows.length} matching records</p><div class="results">${rows.map(r=>`<button class="record ${r.id===chosen?'selected':''}" data-record="${r.id}"><span>${esc(r.name)}<small>${esc(r.type)} / ${esc(r.city)}</small></span><span>${r.year??'Undated'} </span></button>`).join('')||'<p>No records match. Reset or broaden your search.</p>'}</div></div></div><div id="profile">${profile()}</div></div>`;
+$('#search').oninput=e=>{query=e.target.value;const start=e.target.selectionStart;atlas();$('#search').focus();$('#search').setSelectionRange(start,start);};$('#city').onchange=e=>{city=e.target.value;atlas();};$('#kind').onchange=e=>{kind=e.target.value;atlas();};$('#year').oninput=e=>{until=+e.target.value;$('#yearLabel').textContent=until;};$('#year').onchange=()=>atlas();$('#clear').onclick=()=>{query='';city='all';kind='all';until=2026;atlas();};main.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{view=b.dataset.view;atlas();});bindAtlas();}
+function bindAtlas(){main.querySelectorAll('[data-record]').forEach(b=>b.onclick=()=>{chosen=b.dataset.record;$('#profile').innerHTML=profile();main.querySelectorAll('.record').forEach(x=>x.classList.toggle('selected',x.dataset.record===chosen));bindAtlas();$('#profile').scrollIntoView({behavior:'auto',block:'nearest'});});main.querySelectorAll('[data-city]').forEach(b=>b.onclick=e=>{e.preventDefault();city=b.dataset.city;atlas();});}
+function games(){main.innerHTML=`<div class="page-top"><h1>Your poetry life.</h1><p>Write a miniature about a journey. Share it with the poetry wall, sharpen it for the stage, or spend a day getting to know the room.</p></div><div class="workspace"><div class="game-banner">FICTIONAL WORLD / JANUARY 2010 / All characters, posts, venues, events and prices are invented. No historical activity is implied.</div><div class="game-head"><button class="notifications-button" data-notifications>Notifications <span>${noticeCount()}</span></button><h2>Day ${game.day} Ã‚Â· ${esc(game.city)}</h2><div class="small-actions"><button id="rest">Rest & advance day</button><button id="work">Paid shift Ã‚Â· +Ã¢â€šÂ¦450</button></div></div><div class="world-clock"><div><span class="clock-dot ${worldRunning?'running':''}"></span><span id="world-state">${worldRunning?'World playing':'World paused'}</span><span class="caption"> Ã‚Â· one day every 12 seconds</span></div><button id="world-toggle" aria-pressed="${worldRunning}">${worldRunning?'Pause world':'Play world'}</button></div><div class="visual-neighbourhood">${window.PoeticsWorld(esc(game.city))}</div><details class="activity-details"><summary>Around the room</summary><div id="live-activity" aria-live="polite">${lastActivity||'Play the world to follow the community.'}</div></details><div class="stats">${[['Energy',game.energy+'/100'],['Funds','Ã¢â€šÂ¦'+game.money.toLocaleString()],['Craft',game.craft],['Delivery',game.delivery],['Reputation',game.reputation]].map(([l,v])=>`<div class="stat">${l}<strong>${v}</strong></div>`).join('')}</div><nav class="in-game-tabs" role="tablist" aria-label="In-Game Locations">
+  <button class="in-game-tab active-tab" data-tab="tab-desk" role="tab" aria-selected="true">Ã°Å¸â€œâ€œ My Writing Desk</button>
+  <button class="in-game-tab" data-tab="tab-venue" role="tab" aria-selected="false">Ã°Å¸Å½Â¤ The Performance Venue</button>
+  <button class="in-game-tab" data-tab="tab-wall" role="tab" aria-selected="false">Ã°Å¸â€œÂ± Community Wall & Phone</button>
+  <button class="in-game-tab" data-tab="tab-circuit" role="tab" aria-selected="false">Ã°Å¸Â§Â­ Circuit & Travel</button>
+  <button class="in-game-tab" data-tab="tab-journal" role="tab" aria-selected="false">Ã°Å¸â€œÅ“ Event Journal</button>
+</nav>
+
+<div class="in-game-panel active-panel" id="tab-desk">
+  <section class="panel" id="writing-studio"><div class="eyebrow">Challenge 01 / A journey, in a pocket</div><h3>Write the thing you carried.</h3><p class="caption">Choose a concrete object, a place and something left unsaid. Your writing stays on this device. Posting shares it only inside this local simulation.</p><label>Pen name<input id="penname" maxlength="40" value="${esc(game.name)}"></label><label style="margin-top:18px">Your original poem<textarea id="poem" maxlength="4000" placeholder="The bus left before the rainÃ¢â‚¬Â¦">${esc(game.poem)}</textarea></label><p class="caption"><span id="chars">${game.poem.length}</span> / 4,000 characters Ã‚Â· Device save ${saveAvailable?'available':'unavailable Ã¢â‚¬â€ download a save'}</p><div class="small-actions"><button id="draft">Save draft</button><button id="btn-export-poem" class="btn" type="button">Copy Poem Text</button><button id="btn-export-image" class="primary" type="button" style="background:#238636;border-color:#2ea043;">Ã°Å¸â€œÂ¸ Export Social Image (PNG)</button><button class="primary" data-action="post">Post to wall Ã‚Â· 12 energy</button><button data-action="coach">Coach Ã‚Â· Ã¢â€šÂ¦350 / 18 energy</button><button data-action="rehearse">Rehearse Ã‚Â· 16 energy</button></div><details><summary>Craft notebook & game mechanics</summary><p class="caption">Try one vivid image, a deliberate pause and an ending that leaves room. Coaching is authored rule-based advice; no AI service is called. Competition points use word count, skill, preparation, delivery choice, fictional opponent research and seeded chance. They cannot measure literary quality.</p></details></section></div><div class="in-game-panel" id="tab-wall"><section class="panel" id="poetry-wall"><div class="eyebrow">The poetry wall / Fictional posts</div><div class="wall-heading"><h3>A little room on the internet.</h3><button data-phone>Open on your phone </button></div><div class="wall">${game.wall.length?game.wall.map(p=>`<article class="post ${p.day===game.day?'fresh-post':''}"><strong>${esc(p.author)} Ã‚Â· Day ${p.day}</strong><p>${esc(p.text)}</p><span class="caption">${p.author===game.name?'Your original writing / local simulation':'Authored fictional miniature'}</span></article>`).join(''):'<p>The wall is quiet. Post your poem, or advance a day to see the community at work.</p>'}</div></section></div><div class="in-game-panel" id="tab-journal"><section class="panel"><h3>Your event journal</h3><div class="log" aria-label="Simulation history">${game.log.map(x=>`<p>${esc(x)}</p>`).join('')}</div></section></div></div><div class="in-game-panel" id="tab-venue"><section class="panel" id="performance-room"><div class="eyebrow">Tonight / LionÃ¢â‚¬â„¢s Lines</div><h3>A microphone. A choice.</h3><p class="caption">Open mic: build confidence without a ranking. Slam: compete with three fictional poets. Minimum draft: 40 characters.</p><label>Delivery approach<select id="delivery"><option value="intimate">Intimate / craft-led</option><option value="rhythmic">Rhythmic / delivery-led</option><option value="balanced">Balanced</option></select></label><div class="small-actions"><button data-action="openmic">Open mic Ã‚Â· Ã¢â€šÂ¦150 / 20 energy</button><button data-action="research">Research rivals Ã‚Â· Ã¢â€šÂ¦200 / 10 energy</button><button class="primary" data-action="slam">Enter slam Ã‚Â· Ã¢â€šÂ¦400 / 25 energy</button></div><p class="caption">Preparation ${game.prepared}/5 Ã‚Â· Research ${game.research}/3 Ã‚Â· One slam per day. A win earns a fictional Ã¢â€šÂ¦700 prize.</p></section><details class="panel community" style="margin-top:22px"><summary>The community Ã‚Â· 12 poets</summary><p class="caption">Each day advances all twelve charactersÃ¢â‚¬â„¢ independent plans. Exchange feedback to build relationships.</p>${game.npcs.map(n=>`<article class="npc"><h3>${esc(n.name)} <span class="caption">/ ${esc(n.style)}</span></h3><p>${esc(n.activity)}<br>Goal: ${n.goal} Ã‚Â· Bond ${n.relationship} Ã‚Â· Works ${n.works}</p><button data-feedback="${n.id}">Exchange feedback Ã‚Â· 10 energy</button>${n.memory.length?`<p class="caption">Remembers: ${esc(n.memory.at(-1))}</p>`:''}</article>`).join('')}</details></div><div class="in-game-panel" id="tab-circuit">
+  <div id="sim-active-convening"></div>
+  <div id="sim-mini-map-view"></div>
+  <div id="sim-venue-vignette-container"></div>
+  <div id="sim-transit-banner"></div>
+  <section class="panel"><h3>The fictional circuit & travel corridors</h3><label>Destination<select id="destination">${(E&&E.cityPeculiarities?Object.keys(E.cityPeculiarities):['Ogbomoso','Ibadan','Lagos','Abuja','Jos','Kano','Enugu','Calabar','Zaria','Gombe']).map(x=>`<option ${x===game.city?'selected':''}>${x}</option>`).join('')}</select></label><div class="small-actions"><button data-action="travel">Travel Ã‚Â· Ã¢â€šÂ¦600 / 20 energy</button></div><p class="caption">Destinations change the scene label in this slice; city-specific events are a future feature. Travel prices are game balancing values.</p><a class="btn" href="#/atlas">Explore the separate historical Atlas </a></section></div></div><div class="small-actions" style="margin-top:20px;"><button id="btn-switch-poet" class="btn" type="button" style="background:rgba(47,111,235,0.2);border-color:#2f6feb;">Switch Poet / Log In</button><button id="export">Download game save</button><label class="btn">Import your save<input id="import" type="file" accept="application/json" style="display:block;width:220px;padding:4px"></label><button id="reset">Reset this fictional journey</button></div><p class="caption">No accounts, public posting or cross-device cloud saves in this prototype. The world runs while this page is active and you choose Play. It pauses when you leave or hide the page. Saves remain on this device.</p></div>`;
+window.Poetics3D.mount();
+if(window.PoeticsLivingSim){
+  const mm=$('#sim-mini-map-view');
+  const vig=$('#sim-venue-vignette-container');
+  function updateMiniMap(vId){
+    if(mm) mm.innerHTML=window.PoeticsLivingSim.renderCityMiniMap(game.city, vId);
+    if(vig && window.PoeticsLivingSim.renderVenueVignette){
+      const venues = (window.PoeticsLivingSim.cityLayouts[game.city] && window.PoeticsLivingSim.cityLayouts[game.city].venues) || [];
+      const defaultVenue = vId || (venues[0] ? venues[0].id : null);
+      if(defaultVenue) vig.innerHTML=window.PoeticsLivingSim.renderVenueVignette(defaultVenue);
+    }
+    main.querySelectorAll('[data-venue]').forEach(el => {
+      el.onclick = () => updateMiniMap(el.dataset.venue);
+    });
+    main.querySelectorAll('[data-venue-btn]').forEach(el => {
+      el.onclick = () => updateMiniMap(el.dataset.venueBtn);
+    });
+  }
+  updateMiniMap();
+  const conv=window.PoeticsLivingSim.getActiveConvening(game.day);
+  const ac=$('#sim-active-convening');
+  if(ac && conv){
+    ac.innerHTML=`<div style="background:rgba(230,57,70,0.15);border:1px solid #e63946;border-radius:8px;padding:12px 16px;margin-bottom:14px;"><strong style="color:#e63946;text-transform:uppercase;font-size:12px;">✦ National Convening Event (Day ${conv.day})</strong><h4 style="margin:4px 0;color:#fff;font-size:16px;">${esc(conv.name)} · Host City: ${esc(conv.hostCity)}</h4><p class="caption" style="margin:0;">${esc(conv.desc)} Established regional and national poets are travelling to ${esc(conv.hostCity)}!</p></div>`;
+  }
+}
+main.querySelectorAll(".in-game-tab").forEach(tab => {
+  tab.onclick = () => {
+    main.querySelectorAll(".in-game-tab").forEach(t => { t.classList.remove("active-tab"); t.setAttribute("aria-selected", "false"); });
+    main.querySelectorAll(".in-game-panel").forEach(p => p.classList.remove("active-panel"));
+    tab.classList.add("active-tab");
+    tab.setAttribute("aria-selected", "true");
+    const target = $("#" + tab.dataset.tab);
+    if (target) target.classList.add("active-panel");
+  };
+});bindNoticeButtons();main.querySelectorAll("[data-open-map]").forEach(b=>b.onclick=()=>window.PoeticsMap.open());main.querySelectorAll('[data-phone]').forEach(b=>b.onclick=openPhone);main.querySelectorAll('[data-place]').forEach(b=>b.onclick=()=>visitPlace(b.dataset.place));if($('.player-avatar'))$('.player-avatar').dataset.at=currentPlace;$('#poem').oninput=e=>{$('#chars').textContent=e.target.value.length;E.act(game,'write',e.target.value);save();};$('#penname').onchange=e=>{E.act(game,'name',e.target.value);save();};$('#draft').onclick=()=>{E.act(game,'write',$('#poem').value);toast(save()?'Draft saved on this device.':'Use Download game save to preserve your draft.');};async function action(type,arg){if(gameBusy)return;
+  if(type==='travel'&&window.PoeticsLivingSim&&arg!==game.city){
+    const anim=window.PoeticsLivingSim.getTransitAnimation(game.city,arg,A.placeCoordinates);
+    const tb=$('#sim-transit-banner');
+    if(tb){tb.innerHTML=anim.transitHtml;}
+  }E.act(game,'write',$('#poem').value);E.act(game,'name',$('#penname').value);const before=structuredClone(game);const result=E.act(game,type,arg);if(!result.ok){toast(result.message);return;}save();lastAction=type;if(type==='rest'||type==='work')lastActivity=activityMarkup(before);if(type==='openmic'||type==='slam'){await perform(result.message,type);if(location.hash.split('?')[0]!=='#/games')return;}const expanded=$('.community')?.open;games();if(expanded)$('.community').open=true;animateStats(before);toast(result.message);}$('#world-toggle').onclick=()=>{worldRunning?stopWorld():startWorld();syncClock();};$('#rest').onclick=()=>action('rest');$('#work').onclick=()=>action('work');main.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>action(b.dataset.action,b.dataset.action==='slam'?$('#delivery').value:b.dataset.action==='travel'?$('#destination').value:undefined));main.querySelectorAll('[data-feedback]').forEach(b=>b.onclick=()=>action('feedback',+b.dataset.feedback));$('#export').onclick=()=>download('poetics-fiction-day-'+game.day+'.json',JSON.stringify(game,null,2));$('#import').onchange=async e=>{const file=e.target.files[0];if(!file)return;if(file.size>500000){toast('That save is too large. Maximum 500 KB.');return;}try{const candidate=JSON.parse(await file.text());if(!E.valid(candidate))throw Error();game=candidate;save();games();toast('Fictional journey restored.');}catch{toast('Invalid or incompatible save. Your current journey is unchanged.');}};$('#reset').onclick=()=>{if(confirm('Reset this journey? Download your save first if you want to keep it.')){game=E.create();save();games();toast('A new fictional journey begins.');}};}
+function visitPlace(place){currentPlace=place;window.Poetics3D.go(place);const player=$('.player-avatar');if(player)player.dataset.at=place;const names={home:'Under-Verse Court: your fictional student compound.',studio:'LadoTech Studio: write and rehearse.',stage:'LionÃ¢â‚¬â„¢s Lines: prepare, perform or enter the slam.',work:'VerseMart: take a paid shift to earn Ã¢â€šÂ¦450.',underg:'Under-G Ã‚Â· community district. Placement adapted for play.',gate:'LAUTECH Gate Ã‚Â· campus entrance. Placement adapted for play.',adenike:'Adenike Ã‚Â· student neighbourhood. Placement adapted for play.',general:'General Ã‚Â· neighbourhood. Placement adapted for play.'};$('#place-status').textContent=names[place];const targets={home:'#rest',studio:'#writing-studio',stage:'#performance-room',work:'#work',underg:'#poetry-wall',gate:'#world-help',adenike:'#writing-studio',general:'#work'};let enter=$('#enter-place');if(!enter){enter=document.createElement('button');enter.id='enter-place';$('#place-status').after(enter);}enter.textContent={home:'Rest at home',studio:'Open notebook',stage:'Enter LionÃ¢â‚¬â„¢s Lines',work:'Take a paid shift',underg:'Open poetry wall',gate:'Open district map',adenike:'Open notebook',general:'Take a paid shift'}[place];enter.onclick=()=>{if(place==='underg'){openPhone();return;}if(place==='gate'){window.PoeticsMap.open();return;}const target=$(targets[place]);if(!target)return;if(place==='home'||place==='work'||place==='general')target.click();else target.scrollIntoView({behavior:reduceMotion()?'auto':'smooth',block:'center'});};}
+function phoneFeed(){return game.wall.length?game.wall.map(p=>`<article class="phone-post"><div class="phone-author"><span class="avatar">${esc(p.author[0])}</span><span>${esc(p.author)}<small>Day ${p.day} Ã‚Â· fictional community</small></span></div><p>${esc(p.text)}</p></article>`).join(''):'<p class="caption phone-empty">The wall is quiet. Write a poem or play the world to hear from the community.</p>';}
+function refreshPhone(){const feed=$('#phone-feed');if(feed)feed.innerHTML=phoneFeed();const day=$('#phone-day');if(day)day.textContent='Day '+game.day;document.querySelectorAll('[data-notifications] span').forEach(b=>b.textContent=noticeCount());refreshNotices();}
+function openPhone(){if($('#poetics-phone'))return;const phone=document.createElement('dialog');phone.id='poetics-phone';phone.className='phone-dialog';phone.setAttribute('aria-label','In-game phone: poetry wall');phone.innerHTML=`<div class="phone-shell"><div class="phone-status"><span id="phone-day">Day ${game.day}</span><button data-notifications class="phone-notices">Alerts <span>${noticeCount()}</span></button><button id="phone-close" aria-label="Close phone">Ãƒâ€”</button></div><div class="phone-app-head"><h2>The poetry wall.</h2><p>A little room on the internet.</p></div><div class="phone-scroll"><div id="phone-feed">${phoneFeed()}</div></div><form id="phone-compose"><label for="phone-draft">Your original poem</label><textarea id="phone-draft" maxlength="4000" placeholder="Leave a few lines in the roomÃ¢â‚¬Â¦">${esc(game.poem)}</textarea><div class="phone-compose-actions"><span class="caption">12 energy to post</span><button class="primary" type="submit">Post poem</button></div><p class="caption">Fictional community. Saved only on this device.</p></form></div>`;document.body.append(phone);phone.showModal();bindNoticeButtons();const close=()=>{phone.close();phone.remove();};$('#phone-close').onclick=close;phone.addEventListener('cancel',e=>{e.preventDefault();close();});$('#phone-draft').oninput=e=>{E.act(game,'write',e.target.value);save();const draft=$('#poem');if(draft)draft.value=e.target.value;const chars=$('#chars');if(chars)chars.textContent=e.target.value.length;};$('#phone-compose').onsubmit=e=>{e.preventDefault();E.act(game,'write',$('#phone-draft').value);const result=E.act(game,'post');if(result.ok){save();games();refreshPhone();$('.phone-scroll').scrollTop=0;}toast(result.message);};}
+function activityMarkup(previous){return game.npcs.filter((n,i)=>n.activity!==previous.npcs[i].activity||n.works!==previous.npcs[i].works).slice(0,3).map(n=>`<p class="activity-item"><span class="avatar">${esc(n.name[0])}</span><span><strong>${esc(n.name)}</strong><small>${esc(n.activity)}</small></span></p>`).join('')||'<p class="caption">The poets quietly revise their drafts.</p>';}
+function syncClock(){const b=$('#world-toggle');if(!b)return;b.textContent=worldRunning?'Pause world':'Play world';b.setAttribute('aria-pressed',String(worldRunning));$('#world-state').textContent=worldRunning?'World playing':'World paused';$('.clock-dot').classList.toggle('running',worldRunning);}
+function stopWorld(){clearInterval(worldTimer);worldTimer=null;worldRunning=false;syncClock();}
+function startWorld(){if(worldTimer)return;worldRunning=true;const intervalMs = (game && game.speed === 'slow') ? 30000 : (game && game.speed === 'fast') ? 8000 : 12000; worldTimer=setInterval(()=>{if(document.hidden||gameBusy||location.hash.split('?')[0]!=='#/games'){if(document.hidden||location.hash.split('?')[0]!=='#/games')stopWorld();return;}const previous=structuredClone(game);E.tick(game);lastActivity=activityMarkup(previous);save();const expanded=$('.community')?.open;const active=document.activeElement;const editing=active?.id==='poem'||active?.id==='penname';const selection=editing?[active.id,active.selectionStart,active.selectionEnd]:null;const scroll=window.scrollY;games();if(expanded)$('.community').open=true;if(selection){const field=$('#'+selection[0]);field.focus({preventScroll:true});field.setSelectionRange(selection[1],selection[2]);}window.scrollTo(0,scroll);animateStats(previous);refreshPhone();},intervalMs);syncClock();}
+function animateStats(previous){if(reduceMotion())return;const keys=['energy','money','craft','delivery','reputation'];main.querySelectorAll('.stat').forEach((el,i)=>{if(previous[keys[i]]!==game[keys[i]])el.animate([{opacity:.4,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}],{duration:450,easing:'ease-out'});});}
+async function perform(message,type){gameBusy=true;const dialog=document.createElement('dialog');dialog.className='performance-dialog';dialog.setAttribute('aria-label','Fictional '+(type==='slam'?'slam performance':'open mic performance'));dialog.innerHTML=`<button class="close-performance" aria-label="Skip performance animation">Skip</button><div class="eyebrow">${type==='slam'?'Fictional slam':'Fictional open mic'}</div><h2>${esc(game.name)} takes the mic.</h2><div class="performance-lines">${game.poem.split(/\n/).filter(Boolean).slice(0,4).map((line,i)=>`<p style="--line:${i}">${esc(line)}</p>`).join('')}</div><div class="applause" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p class="performance-result" role="status">${esc(message)}</p><button class="primary continue-performance">Back to the room</button>`;document.body.append(dialog);dialog.showModal();await new Promise(resolve=>{let timer;const finish=()=>{clearTimeout(timer);dialog.close();dialog.remove();gameBusy=false;resolve();};dialog.querySelector('.close-performance').onclick=finish;dialog.querySelector('.continue-performance').onclick=finish;dialog.addEventListener('cancel',e=>{e.preventDefault();finish();});timer=setTimeout(()=>{dialog.classList.add('resolved');},reduceMotion()?0:3500);});}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopWorld();});
+window.addEventListener('hashchange',route);window.addEventListener('popstate',route);route();
+
+window.addEventListener("keydown",e=>{if(e.key.toLowerCase()==="m"&&location.hash.split("?")[0]==="#/games"&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName)&&!document.querySelector("dialog[open]")){e.preventDefault();window.PoeticsMap?.open();}});
+
+function noticeCount(){return window.PoeticsOpportunities.list(game).filter(n=>n.unread&&(n.result||(game.day<=n.deadline&&!n.submitted))).length;}
+function bindNoticeButtons(){document.querySelectorAll('[data-notifications]').forEach(b=>b.onclick=openNotices);}
+function noticeCards(){const O=window.PoeticsOpportunities,items=O.list(game);return items.map(n=>{const expired=game.day>n.deadline;const labels={openmic:'Open mic',slam:'Slam',competition:'Writing competition',anthology:'Anthology'};const desc={openmic:'Share a poem with the room. Ã¢â€šÂ¦150 Ã‚Â· 20 energy.',slam:'Compete with fictional poets. Ã¢â€šÂ¦400 Ã‚Â· 25 energy.',competition:'Submit an original poem. Ã¢â€šÂ¦250 Ã‚Â· 20 energy. Fictional prize: Ã¢â€šÂ¦500.',anthology:'Submit to an invented collection. Free Ã‚Â· 10 energy.'};return `<article class="notice-card ${n.unread?'unread':''}"><div class="notice-card-meta"><span>${labels[n.type]}</span><span>${n.result?'Result Ã‚Â· day '+n.result.day:n.submitted?'Submitted':expired?'Closed':'Closes day '+n.deadline}</span></div><h3>${esc(n.title)}</h3><p>${esc(n.result?n.result.message:desc[n.type])}</p><div class="small-actions">${!expired&&!n.submitted?`<button class="primary" data-notice-action="${n.id}" data-notice-type="${n.type}">${n.type==='anthology'||n.type==='competition'?'Submit your poem':'Go to performance'}</button><button data-notice-prepare="${n.id}">Prepare a poem</button>`:''}<button data-notice-read="${n.id}">${n.unread?'Mark read':'Read'}</button></div></article>`;}).join('');}
+function refreshNotices(){const panel=$('#notification-cards');if(panel){panel.innerHTML=noticeCards();wireNotices();}}
+function wireNotices(){const O=window.PoeticsOpportunities;const close=()=>{const d=$('#notification-dialog');d?.close();d?.remove();};document.querySelectorAll('[data-notice-read]').forEach(b=>b.onclick=()=>{O.markRead(game,b.dataset.noticeRead);save();refreshNotices();document.querySelectorAll('[data-notifications] span').forEach(x=>x.textContent=noticeCount());});document.querySelectorAll('[data-notice-prepare]').forEach(b=>b.onclick=()=>{O.markRead(game,b.dataset.noticePrepare);save();close();const phone=$('#poetics-phone');if(phone)$('#phone-draft').focus();else $('#writing-studio').scrollIntoView({behavior:reduceMotion()?'auto':'smooth',block:'center'});});document.querySelectorAll('[data-notice-action]').forEach(b=>b.onclick=()=>{const type=b.dataset.noticeType,id=b.dataset.noticeAction;if(type==='openmic'||type==='slam'){O.markRead(game,id);save();close();const phone=$('#poetics-phone');if(phone){phone.close();phone.remove();}$('#performance-room').scrollIntoView({behavior:reduceMotion()?'auto':'smooth',block:'center'});return;}const result=O.submit(game,id);if(result.ok){save();games();refreshPhone();}toast(result.message);});}
+function openNotices(){if($('#notification-dialog'))return;const d=document.createElement('dialog');d.id='notification-dialog';d.className='notification-dialog';d.setAttribute('aria-label','Fictional poetry opportunities');d.innerHTML=`<div class="map-dialog-head"><h2>Opportunities</h2><button id="close-notifications" aria-label="Close notifications">Ãƒâ€”</button></div><p class="caption">Fictional in-game calls Ã‚Â· simulated deadlines Ã‚Â· new calls every seven days. These are not live event announcements.</p><div id="notification-cards">${noticeCards()}</div><p class="caption">Submitted poems stay on this device. Outcomes use game rules; they are not literary verdicts or real-world publication.</p>`;document.body.append(d);d.showModal();$('#close-notifications').onclick=()=>{d.close();d.remove();};d.addEventListener('cancel',e=>{e.preventDefault();d.close();d.remove();});wireNotices();}
+
+
+function characterCreation(){
+  stopWorld();
+  const seed = Date.now();
+  const defaultCity = E.pickRandomOrigin ? E.pickRandomOrigin(seed) : 'Jos';
+  
+  main.innerHTML = `<div class="page-top"><h1>Step into the Poetic Atlas</h1><p>Every voice begins with a quiet draft before finding a stage.</p></div><section class="panel" style="max-width:680px;margin:24px auto;padding:28px;"><div class="eyebrow">Character Creation / Fictional Nigerian Poetry World</div><h2 style="margin-top:8px;">Your Starting Journey</h2><p class="caption">Choose your pen name and starting origin. Most voices begin in regional Tier 3 writing circles before traveling to major circuits.</p><form id="creation-form" style="display:flex;flex-direction:column;gap:18px;margin-top:20px;"><label><strong>Pen Name</strong><input id="create-name" maxlength="40" value="New voice" required style="width:100%;margin-top:6px;padding:8px 12px;font-size:16px;"></label><label><strong>Starting Town & Literary Circuit</strong><select id="create-city" style="width:100%;margin-top:6px;padding:8px 12px;font-size:15px;"><optgroup label="Tier 3: Regional Communities & Workshop Circles (Recommended)"><option value="Jos" ${defaultCity==='Jos'?'selected':''}>Jos Ã¢â‚¬â€ Acoustic calm, cool mountain air, conscious circles</option><option value="Calabar" ${defaultCity==='Calabar'?'selected':''}>Calabar Ã¢â‚¬â€ Coastal lyricism, festival warmth</option><option value="Maiduguri" ${defaultCity==='Maiduguri'?'selected':''}>Maiduguri Ã¢â‚¬â€ Resilient verse, desert dusk</option><option value="Zaria" ${defaultCity==='Zaria'?'selected':''}>Zaria Ã¢â‚¬â€ University arts, student circles</option><option value="Gombe" ${defaultCity==='Gombe'?'selected':''}>Gombe Ã¢â‚¬â€ Savannah rhythm, patient market observations</option><option value="Ibadan" ${defaultCity==='Ibadan'?'selected':''}>Ibadan Ã¢â‚¬â€ Literary heritage, premier university classical verse</option><option value="Aba" ${defaultCity==='Aba'?'selected':''}>Aba Ã¢â‚¬â€ Vibrant trade center, working-class lines</option></optgroup><optgroup label="Tier 2: Established Regional Hubs"><option value="Kano" ${defaultCity==='Kano'?'selected':''}>Kano Ã¢â‚¬â€ Griot traditions, deliberate cadence</option><option value="Abuja" ${defaultCity==='Abuja'?'selected':''}>Abuja Ã¢â‚¬â€ National stages, institutional festivals</option><option value="Enugu" ${defaultCity==='Enugu'?'selected':''}>Enugu Ã¢â‚¬â€ Coal city grit, folkloric cadence</option></optgroup><optgroup label="Tier 1: Major Performance Circuits"><option value="Lagos" ${defaultCity==='Lagos'?'selected':''}>Lagos Ã¢â‚¬â€ Commercial slams, street hustle, high crowd stakes</option><option value="Ogbomoso" ${defaultCity==='Ogbomoso'?'selected':''}>Ogbomoso Ã¢â‚¬â€ LAUTECH workshops, Words on Rampage archive</option></optgroup></select></label><label><strong>Game Clock Pacing</strong><select id="create-speed" style="width:100%;margin-top:6px;padding:8px 12px;font-size:15px;"><option value="slow">Story Pace (30s / day) Ã¢â‚¬â€ Plenty of room to read calls & revise</option><option value="normal" selected>Normal Pace (15s / day) Ã¢â‚¬â€ Balanced simulation rhythm</option><option value="fast">Fast Pace (8s / day) Ã¢â‚¬â€ Rapid calendar advance</option></select></label><div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);padding:14px;border-radius:6px;"><strong>Initial Path: The Page Poet</strong><p class="caption" style="margin:4px 0 0 0;">Everyone starts writing quietly on the page. Attending local open mics will unlock Spoken Word and tournament Slams as teachable moments.</p></div><button type="submit" class="primary" style="padding:12px;font-size:16px;cursor:pointer;margin-top:8px;">Begin Poetry Life</button></form></section>`;
+
+  $('#creation-form').onsubmit = e => {
+    e.preventDefault();
+    const name = $('#create-name').value.trim() || 'New voice';
+    const chosenCity = $('#create-city').value;
+    const speed = $('#create-speed').value;
+    game = E.create(seed);
+    game.name = name;
+    game.city = chosenCity;
+    game.speed = speed;
+    if (game.persona && game.persona.history) {
+      game.persona.history[0].note = 'Begun on the Page in ' + chosenCity + ' with a quiet notebook.';
+    }
+    game.log = ['You arrive in the fictional ' + chosenCity + ' poetry community, January 2010.'];
+    save();
+    games();
+  };
+}
+function copyPoemToClipboard(){
+  if (!game || !game.poem) { toast("Write a poem before exporting."); return; }
+  const formatted = E.exportPoem ? E.exportPoem(game) : ("# " + game.name + "\n\n" + game.poem + "\n\nÃ¢â‚¬â€ Day " + game.day + " in " + game.city);
+  navigator.clipboard.writeText(formatted).then(() => {
+    toast("Poem & real-world literary metadata copied to clipboard!");
+  }).catch(() => {
+    toast("Clipboard copy failed. Draft saved locally.");
+  });
+}
+function exportPoemAsImage(){
+  if (!game || !game.poem || !game.poem.trim()) { toast("Write a draft before exporting an image."); return; }
+  
+  const canvas = document.createElement("canvas");
+  canvas.width = 1080;
+  canvas.height = 1350; // 4:5 portrait ratio ideal for Instagram & Twitter/X
+  const ctx = canvas.getContext("2d");
+  
+  // Clean dark editorial gradient
+  const grad = ctx.createLinearGradient(0, 0, 1080, 1350);
+  grad.addColorStop(0, "#0d1117");
+  grad.addColorStop(0.5, "#161b22");
+  grad.addColorStop(1, "#090d13");
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 1080, 1350);
+  
+  // Double frame borders
+  ctx.strokeStyle = "rgba(88, 166, 255, 0.35)";
+  ctx.lineWidth = 4;
+  ctx.strokeRect(36, 36, 1008, 1278);
+  
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.08)";
+  ctx.lineWidth = 1;
+  ctx.strokeRect(50, 50, 980, 1250);
+  
+  // Stage Badge header
+  ctx.fillStyle = "#58a6ff";
+  ctx.font = "bold 22px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  const stage = (game.persona ? game.persona.current : "PAGE").toUpperCase();
+  ctx.fillText("POETICS SIMULATION Ã¢â‚¬Â¢ " + stage + " POET", 75, 110);
+  
+  // Location & Day
+  ctx.fillStyle = "rgba(255, 255, 255, 0.55)";
+  ctx.font = "20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  ctx.fillText("Day " + game.day + " Ã¢â‚¬Â¢ " + (game.city || "Nigeria"), 75, 142);
+  
+  // Line rule
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.15)";
+  ctx.beginPath();
+  ctx.moveTo(75, 175);
+  ctx.lineTo(1005, 175);
+  ctx.stroke();
+  
+  // Poem title
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "bold 38px Georgia, serif";
+  ctx.fillText("Untitled Draft", 75, 240);
+  
+  // Pen name
+  ctx.fillStyle = "#58a6ff";
+  ctx.font = "italic 26px Georgia, serif";
+  ctx.fillText("by " + (game.name || "New Voice"), 75, 282);
+  
+  // Poem lines rendering
+  ctx.fillStyle = "#e6edf3";
+  ctx.font = "28px Georgia, serif";
+  const lines = game.poem.trim().split("\n");
+  let y = 360;
+  const maxLines = 18;
+  let count = 0;
+  
+  for (let l of lines) {
+    if (count >= maxLines) {
+      ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
+      ctx.fillText("[... continued in full collection ...]", 75, y);
+      break;
+    }
+    if (!l.trim()) { y += 22; continue; }
+    ctx.fillText(l.trim(), 75, y);
+    y += 42;
+    count++;
+  }
+  
+  // Footer Box
+  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+  ctx.fillRect(75, 1150, 930, 120);
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";
+  ctx.strokeRect(75, 1150, 930, 120);
+  
+  ctx.fillStyle = "#58a6ff";
+  ctx.font = "bold 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  ctx.fillText("COMMAND CENTER GRAVITY Ã¢â‚¬Â¢ NIGERIAN POETIC ATLAS", 100, 1195);
+  
+  ctx.fillStyle = "rgba(255, 255, 255, 0.55)";
+  ctx.font = "18px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  ctx.fillText("Grounded in living spoken word archives, literary circuits & real communities", 100, 1230);
+  
+  // Download trigger
+  const link = document.createElement("a");
+  link.download = (game.name || "Poem").replace(/[^a-z0-9]/gi, "_") + "-Day" + game.day + ".png";
+  link.href = canvas.toDataURL("image/png");
+  link.click();
+  toast("Social Graphic Card (PNG) generated and downloaded!");
+}
+
+function showLoginPortal(){
+  stopWorld();
+  initializeGame();
+  
+  let savedGame = null;
+  try {
+    const raw = localStorage.getItem('poetics-fiction-v1');
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (E && E.valid && E.valid(parsed)) {
+        savedGame = parsed;
+      }
+    }
+  } catch(e) {}
+  
+  const seed = Date.now();
+  const defaultCity = (E && E.pickRandomOrigin) ? E.pickRandomOrigin(seed) : 'Jos';
+  
+  let resumeBlock = '';
+  if (savedGame) {
+    const stage = (savedGame.persona && savedGame.persona.current) ? savedGame.persona.current.toUpperCase() : 'PAGE';
+    resumeBlock = `
+      <div style="background:rgba(47,111,235,0.08);border:1px solid rgba(47,111,235,0.3);border-radius:8px;padding:20px;margin-bottom:24px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+          <div>
+            <span class="stage-badge" style="margin-bottom:6px;">${stage} POET</span>
+            <h3 style="margin:6px 0;font-size:22px;">${esc(savedGame.name || 'Anonymous Voice')}</h3>
+            <p class="caption" style="margin:0;">Day ${savedGame.day} in ${esc(savedGame.city)} • ⚡ ${savedGame.energy}/100 • ₦${savedGame.money.toLocaleString()} • Craft: ${Math.round(savedGame.craft)} • Delivery: ${Math.round(savedGame.delivery)}</p>
+          </div>
+          <button id="btn-resume-game" class="primary" style="padding:10px 22px;font-size:15px;cursor:pointer;">▶ Resume Journey</button>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;text-align:center;margin:20px 0;color:rgba(255,255,255,0.3);">
+        <hr style="flex:1;border:none;border-top:1px solid rgba(255,255,255,0.1);">
+        <span style="padding:0 12px;font-size:13px;text-transform:uppercase;letter-spacing:1px;">or start fresh</span>
+        <hr style="flex:1;border:none;border-top:1px solid rgba(255,255,255,0.1);">
+      </div>
+    `;
+  }
+  
+  main.innerHTML = `
+    <div class="page-top">
+      <h1>The Poetics Portal</h1>
+      <p>Enter the living Nigerian poetry simulation.</p>
+    </div>
+    <section class="panel" style="max-width:720px;margin:24px auto;padding:28px;">
+      ${resumeBlock}
+      
+      <div class="eyebrow">Create a New Voice / Start New Journey</div>
+      <h2 style="margin-top:8px;">New Poet Profile</h2>
+      <p class="caption">Begin your poetry life. Most voices begin in regional Tier 3 writing circles before traveling to major circuits.</p>
+      
+      <form id="login-portal-form" style="display:flex;flex-direction:column;gap:16px;margin-top:18px;">
+        <label>
+          <strong>Pen Name</strong>
+          <input id="portal-name" maxlength="40" value="New voice" required style="width:100%;margin-top:6px;padding:8px 12px;font-size:15px;">
+        </label>
+        
+        <label>
+          <strong>Starting Town & Literary Circuit</strong>
+          <select id="portal-city" style="width:100%;margin-top:6px;padding:8px 12px;font-size:14px;">
+            <optgroup label="Tier 3: Regional Communities & Workshop Circles (70% natural start)">
+              <option value="Jos" ${defaultCity==='Jos'?'selected':''}>Jos — Acoustic calm, cool mountain air, conscious circles</option>
+              <option value="Calabar" ${defaultCity==='Calabar'?'selected':''}>Calabar — Coastal lyricism, festival warmth, maritime storytelling</option>
+              <option value="Maiduguri" ${defaultCity==='Maiduguri'?'selected':''}>Maiduguri — Resilient verse, solemn dignity, desert dusk</option>
+              <option value="Zaria" ${defaultCity==='Zaria'?'selected':''}>Zaria — University arts, student circles, Ahmadu Bello craft</option>
+              <option value="Gombe" ${defaultCity==='Gombe'?'selected':''}>Gombe — Savannah rhythm, patient market observations</option>
+              <option value="Ibadan" ${defaultCity==='Ibadan'?'selected':''}>Ibadan — Literary heritage, premier university classical verse</option>
+              <option value="Aba" ${defaultCity==='Aba'?'selected':''}>Aba — Vibrant trade center, working-class incisive lines</option>
+            </optgroup>
+            <optgroup label="Tier 2: Established Regional Hubs (20%)">
+              <option value="Kano" ${defaultCity==='Kano'?'selected':''}>Kano — Griot traditions, deliberate cadence, moral weight</option>
+              <option value="Abuja" ${defaultCity==='Abuja'?'selected':''}>Abuja — National stages, diplomatic readings, institutional festivals</option>
+              <option value="Enugu" ${defaultCity==='Enugu'?'selected':''}>Enugu — Coal city grit, folkloric cadence, proverb metaphors</option>
+            </optgroup>
+            <optgroup label="Tier 1: Major Performance Circuits (10%)">
+              <option value="Lagos" ${defaultCity==='Lagos'?'selected':''}>Lagos — Commercial slams, street hustle, high crowd stakes</option>
+              <option value="Ogbomoso" ${defaultCity==='Ogbomoso'?'selected':''}>Ogbomoso — LAUTECH workshops, Words on Rampage archive origins</option>
+            </optgroup>
+          </select>
+        </label>
+
+        <label>
+          <strong>Game Clock Pacing</strong>
+          <select id="portal-speed" style="width:100%;margin-top:6px;padding:8px 12px;font-size:14px;">
+            <option value="slow">Story Pace (30s / day) — Plenty of room to read calls & revise</option>
+            <option value="normal" selected>Normal Pace (15s / day) — Balanced simulation rhythm</option>
+            <option value="fast">Fast Pace (8s / day) — Rapid calendar advance</option>
+          </select>
+        </label>
+
+        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:12px;border-radius:6px;">
+          <strong>Starting Craft: The Page Poet</strong>
+          <p class="caption" style="margin:4px 0 0 0;">You begin quietly in notebooks. Performing at local open mics will unlock Spoken Word and Slams as teachable moments.</p>
+        </div>
+
+        <button type="submit" class="primary" style="padding:12px;font-size:15px;cursor:pointer;margin-top:6px;">✦ Create Poet & Begin</button>
+      </form>
+      
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+        <label class="btn" style="cursor:pointer;font-size:13px;padding:6px 14px;">
+          Load Save JSON
+          <input id="portal-import-file" type="file" accept="application/json" style="display:none;">
+        </label>
+        <span class="caption">Saves remain private on this browser.</span>
+      </div>
+    </section>
+  `;
+
+  if ($('#btn-resume-game')) {
+    $('#btn-resume-game').onclick = () => {
+      game = savedGame;
+      games();
+      if (location.hash.includes('?phone')) openPhone();
+    };
+  }
+
+  $('#login-portal-form').onsubmit = e => {
+    e.preventDefault();
+    const name = $('#portal-name').value.trim() || 'New voice';
+    const chosenCity = $('#portal-city').value;
+    const speed = $('#portal-speed').value;
+
+    game = E.create(seed);
+    game.name = name;
+    game.city = chosenCity;
+    game.speed = speed;
+    if (game.persona && game.persona.history) {
+      game.persona.history[0].note = 'Begun on the Page in ' + chosenCity + ' with a quiet notebook.';
+    }
+    game.log = ['You arrive in the fictional ' + chosenCity + ' poetry community, January 2010.'];
+    save();
+    games();
+  };
+
+  const fileInput = $('#portal-import-file');
+  if (fileInput) {
+    fileInput.onchange = e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        try {
+          const parsed = JSON.parse(ev.target.result);
+          if (E && E.valid && E.valid(parsed)) {
+            game = parsed;
+            save();
+            toast("Save loaded successfully! Welcome back, " + (game.name || "Poet") + ".");
+            games();
+          } else {
+            toast("Invalid save file format.");
+          }
+        } catch(err) {
+          toast("Failed to parse save file.");
+        }
+      };
+      reader.readAsText(file);
+    };
+  }
+}
+
+// Games Hub UI and Rhyme Sprint UI
+
+let rhymeSession = null;
+
+function renderGamesHub() {
+  stopWorld();
+  initializeGame();
+
+  main.innerHTML = `
+    <div class="page-top">
+      <h1>The Poetics Games</h1>
+      <p>Select your mode of play: sharpen your craft in the timed <strong>Rhyme Sprint</strong>, or enter <strong>The Living Poetics Simulation</strong> across Nigerian literary circuits.</p>
+    </div>
+
+    <div style="max-width:860px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;padding:0 16px;">
+      
+      <!-- GAME 1: THE RHYME SPRINT -->
+      <div class="panel" style="display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:24px;background:rgba(255,255,255,0.03);box-shadow:0 8px 24px rgba(0,0,0,0.3);">
+        <div>
+          <div style="display:inline-block;padding:4px 10px;border-radius:16px;background:rgba(247,127,0,0.15);border:1px solid #f77f00;color:#f77f00;font-size:12px;font-weight:700;text-transform:uppercase;margin-bottom:12px;">
+            ⚡ Fast-Paced Word Game
+          </div>
+          <h2 style="margin:0 0 8px;font-size:24px;color:#fff;">The Rhyme Sprint</h2>
+          <p class="caption" style="font-size:14px;line-height:1.5;margin-bottom:16px;">
+            Race against the countdown clock! Rhyme against poetic prompt words. Scoring scales dynamically with <strong>word length</strong>, <strong>rapidity</strong>, and consecutive rhyming streaks.
+          </p>
+          <ul style="font-size:13px;color:#8b949e;line-height:1.6;padding-left:18px;margin-bottom:20px;">
+            <li>30-second rapid sprint round</li>
+            <li>Word length bonuses (+15 pts per letter > 3)</li>
+            <li>Velocity speed multiplier for early answers</li>
+            <li>Combo multiplier builds with unbroken streaks</li>
+          </ul>
+        </div>
+        <button id="btn-launch-rhyme" class="primary" style="width:100%;padding:12px;font-size:16px;font-weight:600;cursor:pointer;background:#f77f00;border-color:#f77f00;">
+          ▶ Play The Rhyme Sprint
+        </button>
+      </div>
+
+      <!-- GAME 2: THE LIVING SIMULATION -->
+      <div class="panel" style="display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(47,111,235,0.3);border-radius:12px;padding:24px;background:rgba(47,111,235,0.04);box-shadow:0 8px 24px rgba(0,0,0,0.3);">
+        <div>
+          <div style="display:inline-block;padding:4px 10px;border-radius:16px;background:rgba(47,111,235,0.2);border:1px solid #2f6feb;color:#58a6ff;font-size:12px;font-weight:700;text-transform:uppercase;margin-bottom:12px;">
+            🌍 Literary World Simulation
+          </div>
+          <h2 style="margin:0 0 8px;font-size:24px;color:#fff;">The Living Poetics Simulation</h2>
+          <p class="caption" style="font-size:14px;line-height:1.5;margin-bottom:16px;">
+            Immerse yourself in a living Nigerian spoken word circuit. Explore interactive city mini-maps with real Atlas venues, animate road and flight transit between coordinates, meet travelling established poets, and convene at major national festivals.
+          </p>
+          <ul style="font-size:13px;color:#8b949e;line-height:1.6;padding-left:18px;margin-bottom:20px;">
+            <li>Interactive City Mini-Maps with documented venues</li>
+            <li>Transit Animation (Plane for flight corridors, Car for regional roads)</li>
+            <li>Travelling Poets appearing where they have connections</li>
+            <li>National Convening Events (LIPFest, AIPFest, KAPFEST)</li>
+          </ul>
+        </div>
+        <button id="btn-launch-sim" class="primary" style="width:100%;padding:12px;font-size:16px;font-weight:600;cursor:pointer;">
+          🎭 Enter Simulation (Login & Portal)
+        </button>
+      </div>
+
+    </div>
+  `;
+
+  $('#btn-launch-rhyme').onclick = () => renderRhymeSprintScreen();
+  $('#btn-launch-sim').onclick = () => showLoginPortal();
+}
+
+function renderRhymeSprintScreen() {
+  stopWorld();
+  if (!window.PoeticsRhymeGame) {
+    main.innerHTML = `<p class="caption">Rhyme game engine loading...</p>`;
+    return;
+  }
+
+  const R = window.PoeticsRhymeGame;
+  rhymeSession = new R.RhymeSprintSession(30);
+
+  main.innerHTML = `
+    <div class="page-top">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+        <button id="btn-back-hub" class="btn" style="padding:4px 10px;font-size:12px;">← Back to Games</button>
+        <span class="stage-badge" style="background:#f77f00;border-color:#f77f00;color:#fff;">Rhyme Sprint</span>
+      </div>
+      <h1>The Rhyme Sprint</h1>
+      <p>Submit words that rhyme with the prompt before the timer expires! Long words and fast answers score higher.</p>
+    </div>
+
+    <section class="panel" style="max-width:680px;margin:20px auto;padding:24px;text-align:center;">
+      <div style="display:flex;justify-content:space-around;align-items:center;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px;margin-bottom:20px;">
+        <div>
+          <span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Time Remaining</span>
+          <div id="rhyme-timer" style="font-size:32px;font-weight:800;color:#58a6ff;">30s</div>
+        </div>
+        <div>
+          <span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Score</span>
+          <div id="rhyme-score" style="font-size:32px;font-weight:800;color:#f77f00;">0</div>
+        </div>
+        <div>
+          <span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Current Streak</span>
+          <div id="rhyme-streak" style="font-size:32px;font-weight:800;color:#2a9d8f;">0🔥</div>
+        </div>
+      </div>
+
+      <div id="rhyme-prompt-box" style="background:rgba(255,255,255,0.04);border:2px dashed rgba(255,255,255,0.2);border-radius:10px;padding:24px;margin-bottom:20px;">
+        <span style="font-size:13px;color:#8b949e;text-transform:uppercase;letter-spacing:1px;">Rhyme Against Prompt</span>
+        <h2 id="rhyme-prompt-word" style="font-size:42px;margin:8px 0;color:#fff;letter-spacing:1px;">${rhymeSession.prompt.word.toUpperCase()}</h2>
+        <p class="caption" style="margin:0;">Target rhyme endings: <strong>${rhymeSession.prompt.targetEndings.join(', ')}</strong></p>
+      </div>
+
+      <form id="rhyme-input-form" style="display:flex;gap:10px;max-width:480px;margin:0 auto 16px;">
+        <input id="rhyme-word-input" autocomplete="off" placeholder="Type your rhyming word..." required style="flex:1;padding:12px 16px;font-size:16px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background:rgba(0,0,0,0.4);color:#fff;">
+        <button type="submit" class="primary" style="padding:12px 20px;font-size:16px;cursor:pointer;">Submit</button>
+      </form>
+
+      <div id="rhyme-feedback" style="min-height:24px;font-size:14px;font-weight:600;margin-bottom:16px;"></div>
+
+      <div style="text-align:left;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;border:1px solid rgba(255,255,255,0.06);">
+        <strong style="font-size:12px;color:#8b949e;text-transform:uppercase;">Matched Words This Round:</strong>
+        <div id="rhyme-matches-list" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
+          <span style="font-size:13px;color:#6e7681;font-style:italic;">No matches yet...</span>
+        </div>
+      </div>
+
+      <div id="rhyme-gameover-dialog" style="display:none;margin-top:20px;padding:20px;background:rgba(47,111,235,0.15);border:1px solid #2f6feb;border-radius:8px;">
+        <h3 style="margin:0 0 6px;color:#fff;">Sprint Finished!</h3>
+        <p id="rhyme-final-summary" style="font-size:16px;margin:0 0 16px;color:#e6edf3;"></p>
+        <button id="btn-replay-rhyme" class="primary" style="padding:10px 20px;font-size:15px;cursor:pointer;">Play Again</button>
+      </div>
+    </section>
+  `;
+
+  $('#btn-back-hub').onclick = () => {
+    rhymeSession.stop();
+    renderGamesHub();
+  };
+
+  const timerEl = $('#rhyme-timer');
+  const scoreEl = $('#rhyme-score');
+  const streakEl = $('#rhyme-streak');
+  const feedbackEl = $('#rhyme-feedback');
+  const matchesList = $('#rhyme-matches-list');
+  const inputEl = $('#rhyme-word-input');
+
+  rhymeSession.start(
+    (left) => {
+      timerEl.textContent = left + 's';
+      if (left <= 5) timerEl.style.color = '#e63946';
+    },
+    (session) => {
+      timerEl.textContent = '0s';
+      $('#rhyme-input-form').style.display = 'none';
+      $('#rhyme-gameover-dialog').style.display = 'block';
+      $('#rhyme-final-summary').innerHTML = `Final Score: <strong>${session.score}</strong> points across <strong>${session.wordsMatched.length}</strong> rhyming words! Longest Streak: <strong>${session.longestStreak}</strong>🔥`;
+    }
+  );
+
+  $('#rhyme-input-form').onsubmit = (e) => {
+    e.preventDefault();
+    const val = inputEl.value;
+    inputEl.value = '';
+    const res = rhymeSession.submitWord(val);
+
+    if (res.ok) {
+      scoreEl.textContent = res.totalScore;
+      streakEl.textContent = res.streak + '🔥';
+      feedbackEl.style.color = '#2a9d8f';
+      feedbackEl.textContent = `✓ '${res.word}' matched! (+${res.scoreGained} pts, length ${res.length})`;
+
+      matchesList.innerHTML = rhymeSession.wordsMatched.map(w => `
+        <span style="background:rgba(42,157,143,0.2);border:1px solid #2a9d8f;color:#e6edf3;padding:3px 8px;border-radius:4px;font-size:12px;">
+          ${w} (${w.length})
+        </span>
+      `).join('');
+    } else {
+      streakEl.textContent = '0🔥';
+      feedbackEl.style.color = '#e63946';
+      feedbackEl.textContent = `✗ ${res.message}`;
+    }
+    inputEl.focus();
+  };
+
+  $('#btn-replay-rhyme').onclick = () => renderRhymeSprintScreen();
+  inputEl.focus();
+}
+

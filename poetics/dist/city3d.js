@@ -17,6 +17,13 @@ house(-25,-5,5,3.2,4,'d8c8a8');house(21,-29,8,3.5,5,'e1d5bc');cube(a,-21,.015,-7
 // Bauhaus accents belong to the fictional redesign, not a claim about LAUTECH architecture.
 cube(a,-6,4.7,-16,4,.55,9.6,rgb('bb3f36'));cube(a,-20,3.9,-17,2,.5,8.5,rgb('335ca2'));cube(a,-5,3.35,13,6.5,.45,2,rgb('d9ac36'));
 sphere(a,1,2.1,-18,1.3,rgb('d9ac36'));cube(a,1,.5,-18,1.1,1,1.1,rgb('335ca2'));
+// GTA-style Archival Venue Billboards: elevated display boards with double borders and festival emblems
+// Billboard 1: Words on Rampage @ Sifax Hall, LAUTECH
+cube(a,-6,2,-7,0.2,2.8,0.2,rgb('555555'));cube(a,-6,2,-5,0.2,2.8,0.2,rgb('555555'));cube(a,-6,3.6,-6,0.3,1.8,2.8,rgb('e63946'));cube(a,-5.83,3.6,-6,0.05,1.5,2.5,rgb('fffaf0'));cube(a,-5.8,3.6,-6,0.02,0.7,2.1,rgb('171717'));
+// Billboard 2: Lion's Lines Spoken Word Lounge @ Under-G
+cube(a,-11,2,15.5,0.2,2.6,0.2,rgb('555555'));cube(a,-11,2,17.5,0.2,2.6,0.2,rgb('555555'));cube(a,-11,3.4,16.5,0.3,1.6,2.6,rgb('2a9d8f'));cube(a,-10.83,3.4,16.5,0.05,1.3,2.3,rgb('fffaf0'));cube(a,-10.8,3.4,16.5,0.02,0.6,1.9,rgb('264653'));
+// Billboard 3: Words on Rampage Gathering / LAUTECH Gate
+cube(a,7.8,2,-1,0.2,2.8,0.2,rgb('555555'));cube(a,7.8,2,1,0.2,2.8,0.2,rgb('555555'));cube(a,7.8,3.6,0,0.3,1.8,2.8,rgb('d9ac36'));cube(a,7.63,3.6,0,0.05,1.5,2.5,rgb('fffaf0'));cube(a,7.6,3.6,0,0.02,0.7,2.1,rgb('171717'));
 // Campus entrance and second gate: existence sourced; placement here is gameplay compression.
 for(const z of[-10,-4])cube(a,8,1.65,z,.8,3.3,.8,rgb('ece3cf'));cube(a,8,3.45,-7,.8,.7,7,rgb('335ca2'));cube(a,7.6,2.1,-7,.12,.7,2.6,rgb('d9ac36'));for(const x of[-13,-9])cube(a,x,1.4,-3,.7,2.8,.7,rgb('ddd1b2'));cube(a,-11,2.95,-3,5,.6,.7,rgb('bb3f36'));
 for(const [x,z]of [[-2,-23],[-25,-5],[4,-20],[24,1],[-16,2],[-3,23]]){cube(a,x,1.2,z,.25,2.4,.25,rgb('807055'));cube(a,x,3.2,z,2.3,2.8,2.3,rgb('84946c'));cube(a,x-.5,3.7,z+.4,1.8,2,1.8,rgb('a3aa76'));}return a;}

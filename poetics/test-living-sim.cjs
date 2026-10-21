@@ -24,7 +24,24 @@ const lagosSvg = Sim.renderCityMiniMap('Lagos');
 assert(lagosSvg.includes('Freedom Park'));
 assert(lagosSvg.includes('MUSON Centre'));
 
-// 2. Transit animation logic
+// 2. Archival Venue Vignettes (GTA-style texture wrapping & historic waypoints)
+assert(typeof Sim.renderVenueVignette === 'function');
+const fpVignette = Sim.renderVenueVignette('freedom-park');
+assert(fpVignette.includes('Freedom Park'));
+assert(fpVignette.includes('LIPFest'));
+assert(fpVignette.includes('brick-pattern'));
+assert(fpVignette.includes('Efe Paul Azino'));
+
+const sifaxVignette = Sim.renderVenueVignette('sifax');
+assert(sifaxVignette.includes('Sifax Hall'));
+assert(sifaxVignette.includes('WORDS ON RAMPAGE'));
+assert(sifaxVignette.includes('LAUTECH'));
+
+const josVignette = Sim.renderVenueVignette('alliance-jos');
+assert(josVignette.includes('Alliance Fran'));
+assert(josVignette.includes('Victor Words Meshak'));
+
+// 3. Transit animation logic
 const coords = {
   'Lagos': { lat: 6.454, lon: 3.394 },
   'Ogbomoso': { lat: 8.133, lon: 4.240 },
@@ -41,7 +58,7 @@ const flight = Sim.getTransitAnimation('Lagos', 'Kano', coords);
 assert.equal(flight.isPlane, true);
 assert(flight.modeIcon.includes('Flight'));
 
-// 3. Convening pull
+// 4. Convening pull
 const conv7 = Sim.getActiveConvening(7);
 assert.equal(conv7.hostCity, 'Lagos');
 assert(conv7.name.includes('LIPFest'));
@@ -55,4 +72,4 @@ const efe = Sim.simulatedPoets.find(p => p.name.includes('Efe Paul'));
 assert.equal(efe.homeCity, 'Lagos');
 assert.equal(efe.platform, 'LIPFest');
 
-console.log('PASS Living Poetics Simulation: city mini-maps, transit animation (car/plane), and convening calendar verified.');
+console.log('PASS Living Poetics Simulation: city mini-maps, archival venue vignettes (GTA texture mapping), transit animation (car/plane), and convening calendar verified.');
