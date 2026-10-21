@@ -777,3 +777,14 @@ body>footer .poetics-image-credits{font-size:13px}
 .map-atlas .geography-explore{width:100%;text-align:left}.map-atlas .geography-explore>summary{width:max-content;margin:auto;list-style:none;padding:8px 14px;border:1px solid #d5dedf;border-radius:9px;background:#fffaf3;color:#124e60;font-size:13px;cursor:pointer}.map-atlas .geography-explore>summary::-webkit-details-marker{display:none}.geography-category-totals{display:flex;flex-wrap:wrap;gap:6px}.geography-category-totals>span{display:inline-flex;align-items:center;gap:4px;font-size:12px}.geography-overview{padding-top:12px}.geography-overview .caption{font-size:12px}
 
 .map-atlas .atlas-entry-card .record-meta>.card-year-range{border:0;border-radius:0;background:transparent;padding:6px 0;align-self:center;gap:4px}.map-atlas .atlas-entry-card .card-year-range .record-meta-label{font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:#675e54}.map-atlas .atlas-entry-card .card-year-range>span:last-child{font-size:14px;line-height:1.4;color:#173c43}
+
+/* Selected illustrated Atlas category set: keep details readable at card size. */
+.map-atlas .entry-icon-illustrated{width:28px;height:28px;stroke:none;fill:none;flex:none}
+.map-atlas .entry-icon-tile{background:transparent!important}
+.map-atlas .atlas-entry-card .entry-category-icon{flex:0 0 42px;margin-top:0}
+.map-atlas .atlas-entry-card .entry-icon-tile{width:42px;height:42px;flex-basis:42px}
+.map-atlas .atlas-entry-card .entry-icon-tile .entry-icon{width:42px;height:42px}
+.map-atlas .map-category-control .type-toggles .category-key-icon{width:32px;height:32px;flex-basis:32px;background:#fffaf3}
+.map-atlas .map-category-control .type-toggles .category-key-icon .entry-icon{width:28px;height:28px}
+.map-atlas .category-count-circle .entry-icon-illustrated{width:24px;height:24px}
+.map-atlas .geography-category-totals .entry-icon-tile,.map-atlas .geography-category-totals .entry-icon-tile .entry-icon{width:24px;height:24px;flex-basis:24px}

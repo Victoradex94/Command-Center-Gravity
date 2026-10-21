@@ -1,0 +1,57 @@
+{
+  "People": {
+    "file": "media/atlas-icons/people.defbe74a2641.webp",
+    "sha256": "defbe74a26411bf446915e55c9e697e4187a5aed868131c170b8e23f86c02d34",
+    "width": 1254,
+    "height": 1254,
+    "description": "Town crier with gong",
+    "source": "people-town-crier.png",
+    "sourceSha256": "64c5a522ea9bee12194f9d4409572c16868f12111c2414da1de4f931cad243bf",
+    "bytes": 532818,
+    "provenance": "Built-in image generation; drum based on supplied reference"
+  },
+  "Places": {
+    "file": "media/atlas-icons/places.99f980638728.webp",
+    "sha256": "99f98063872844334a778b361530490306bc09ff6271ed68995d97c376c0cf3d",
+    "width": 512,
+    "height": 512,
+    "description": "Africa silhouette with location pin",
+    "source": "places-reference.png",
+    "sourceSha256": "d5046c41c68d3ab4e5b61ff5290e01fcd0902736d76e08bee7bdbba4d8637a1d",
+    "bytes": 19894,
+    "provenance": "User-supplied reference"
+  },
+  "Platforms": {
+    "file": "media/atlas-icons/platforms.52e1f1d16ed9.webp",
+    "sha256": "52e1f1d16ed99344902ebd736bbb7a39ed96b97d32b8f223f2fb03015f09ddb1",
+    "width": 1254,
+    "height": 1254,
+    "description": "Moonlit storytelling circle",
+    "source": "platforms-option-2-storytelling.png",
+    "sourceSha256": "3a086155e44ab67310aa790f3c6de7183e7e2de95ecefc401efa47e5721cc04f",
+    "bytes": 569022,
+    "provenance": "Built-in image generation; drum based on supplied reference"
+  },
+  "Prizes": {
+    "file": "media/atlas-icons/prizes.9c5f180ca90d.webp",
+    "sha256": "9c5f180ca90df5002dd7bb3f3de88b0b74b652f58295fb6b9e849325620bd3bd",
+    "width": 1254,
+    "height": 1254,
+    "description": "Carved cowrie-decorated award cup",
+    "source": "prizes-cowrie-cup.png",
+    "sourceSha256": "4b27b44991e01ff7523c937e2fe1436c1fa03f7678647cfca65495dc368a84c2",
+    "bytes": 531410,
+    "provenance": "Built-in image generation; drum based on supplied reference"
+  },
+  "Publications": {
+    "file": "media/atlas-icons/publications.ddabbceeac0f.webp",
+    "sha256": "ddabbceeac0f534d8eb0f98e87b90275984e11f8cffe532beb5b23ae44f8299a",
+    "width": 1254,
+    "height": 1254,
+    "description": "Red and brown drum",
+    "source": "publications-drum-transparent.png",
+    "sourceSha256": "780dcb34ba746dafb7d4dcc0a5f5ffa0867a08ae129a187c212fa8d28e5d891c",
+    "bytes": 305152,
+    "provenance": "Built-in image generation; drum based on supplied reference"
+  }
+}
