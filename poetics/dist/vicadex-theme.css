@@ -788,3 +788,12 @@ body>footer .poetics-image-credits{font-size:13px}
 .map-atlas .map-category-control .type-toggles .category-key-icon .entry-icon{width:28px;height:28px}
 .map-atlas .category-count-circle .entry-icon-illustrated{width:24px;height:24px}
 .map-atlas .geography-category-totals .entry-icon-tile,.map-atlas .geography-category-totals .entry-icon-tile .entry-icon{width:24px;height:24px;flex-basis:24px}
+
+.map-atlas .atlas-introduction .atlas-hero-quote{margin:0 0 20px;max-width:620px;padding:0 0 0 16px;border-left:2px solid #e6bc70}
+.map-atlas .atlas-hero-quote blockquote{margin:0;padding:0;border:0;background:transparent}
+.map-atlas .atlas-introduction .atlas-hero-quote p{font:400 20px/1.5 'Afacad',Arial,sans-serif;color:#fffaf4;max-width:52ch}
+.map-atlas .atlas-hero-quote .atlas-quote-accent{color:#ffdf9b}
+.map-atlas .atlas-hero-quote figcaption{margin-top:8px;font:500 13px/1.5 'Afacad',Arial,sans-serif}
+.map-atlas .atlas-introduction .atlas-hero-quote a{color:#ffdf9b;text-decoration:underline;text-underline-offset:3px}
+.map-atlas .atlas-hero-quote a:focus-visible{outline:2px solid #ffdf9b;outline-offset:4px}
+@media(max-width:700px){.map-atlas .atlas-introduction .atlas-hero-quote p{font-size:18px}.map-atlas .atlas-introduction .atlas-hero-quote{margin-bottom:18px;padding-left:12px}}
