@@ -4,7 +4,7 @@ function harness(){
  let storageReads=0,atlasRenders=0,gameRenders=0;const scripts=[],controls={};
  const main={innerHTML:'',classList:{remove:noop},focus:noop},toast={style:{}};
  const document={hidden:false,activeElement:null,querySelector:s=>s==='#main'?main:s==='#toast'?toast:(s==='#retry-games'||s==='#retry-atlas')?(controls.retry||(controls.retry={})):null,querySelectorAll:()=>[],addEventListener:noop,createElement:()=>({remove:noop}),head:{append:s=>scripts.push(s)}};
- const window={PoeticsSupabaseAtlas:{async read(){return {rows:[],edges:[]}}},PoeticsDirectoryData:{replaceSnapshot:noop},renderDirectory:()=>atlasRenders++,renderPoeticsAbout:noop,renderContribute:noop,addEventListener:noop,scrollTo:noop,matchMedia:()=>({matches:false})},location={hash:'#/atlas'};
+ const window={Poetics3D:{position:()=>({x:0,z:0})}, PoeticsSupabaseAtlas:{async read(){return {rows:[],edges:[]}}},PoeticsDirectoryData:{replaceSnapshot:noop},renderDirectory:()=>atlasRenders++,renderPoeticsAbout:noop,renderContribute:noop,addEventListener:noop,scrollTo:noop,matchMedia:()=>({matches:false})},location={hash:'#/atlas'};
  const context=vm.createContext({window,document,location,localStorage:{getItem:()=>{storageReads++;return null},setItem:noop},clearInterval,clearTimeout,setTimeout,setInterval,URLSearchParams});
  const run=f=>vm.runInContext(fs.readFileSync('dist/'+f,'utf8'),context);
  run('game-assets.js');run('game-loader.js');run('app.js');context.countGame=()=>gameRenders++;vm.runInContext('games=()=>countGame();',context);

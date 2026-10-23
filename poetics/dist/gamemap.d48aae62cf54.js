@@ -1,0 +1,32 @@
+window.PoeticsMap={
+distance: function(p1, p2) { return Math.hypot(p1[0] - p2[0], p1[1] - p2[1]); },
+point(x,z){return [((x+35)/70)*400,((z+40)/80)*360];},
+render(big=false){const s = window.Poetics3D ? window.Poetics3D.position() : {x:-17,z:14}; const p=this.point(s.x, s.z);return `<svg class="navigation-map" viewBox="0 0 400 360" aria-label="Adapted gameplay streets and locations"><rect width="400" height="360" fill="#222725"/><g fill="#343b36"><rect x="20" y="28" width="155" height="85"/><rect x="27" y="215" width="80" height="64"/><rect x="176" y="218" width="58" height="45"/><rect x="300" y="212" width="70" height="60"/></g><path d="M280 0V360M96 149H280M137 149V294" stroke="#90978b" stroke-width="20" fill="none"/><path d="M280 0V360M96 149H280M137 149V294" stroke="#c8cdbc" stroke-width="2" fill="none"/><g fill="#cdd2c4" font-family="Arial" font-size="9"><text x="292" y="35" transform="rotate(90 292 35)">OLD OGBOMOSO–ILORIN RD*</text><text x="96" y="135">CAMPUS LANE (FICTIONAL)</text><text x="122" y="186" transform="rotate(90 122 186)">UNDER-G CORRIDOR*</text></g><g fill="#809dbc" stroke="#e9e4d3" stroke-width="1.5"><circle cx="137" cy="257" r="5"/><circle cx="246" cy="149" r="5"/><circle cx="74" cy="149" r="5"/><circle cx="320" cy="72" r="5"/></g><polyline class="nav-line" points="" stroke="#e6be58" stroke-width="3" fill="none" stroke-dasharray="5 3"/><g fill="#e7bf58"><circle cx="103" cy="243" r="6"/><rect x="160" y="137" width="11" height="11"/><path d="M143 212 149 224 137 224Z"/><rect x="274" y="215" width="11" height="11"/></g>${big?'<g fill="#eee8d5" font-size="10" font-family="Arial"><text x="33" y="315">Under-G</text><text x="219" y="127">LAUTECH Gate</text><text x="21" y="169">Adenike</text><text x="303" y="57">General</text><text x="30" y="298">Under-Verse Court</text><text x="24" y="91">LadoTech Studio</text><text x="160" y="246">Lion’s Lines</text><text x="298" y="292">VerseMart</text></g>':''}<g class="nav-player" transform="translate(${p[0]},${p[1]})"><circle r="9" fill="#111"/><path d="M0-9 6 6 0 3-6 6Z" fill="#fff"/></g></svg>`;},
+update(s){const p=this.point(s.x,s.z);document.querySelectorAll('.nav-player').forEach(e=>e.setAttribute('transform',`translate(${p[0]},${p[1]}) rotate(${-s.angle*180/Math.PI})`));document.querySelectorAll('.nav-line').forEach(e=>{e.setAttribute('points',s.target?[p,this.point(...s.target)].map(v=>v.join(',')).join(' '):'');});},
+open(){if(document.querySelector('#district-map-dialog'))return;
+const s = window.Poetics3D ? window.Poetics3D.position() : {x:-17,z:14};
+const playerPt = this.point(s.x, s.z);
+const placesList = [
+    {id: 'underg', name: 'Under-G', cx: 33, cy: 315, ox: -11, oz: 17},
+    {id: 'gate', name: 'LAUTECH Gate', cx: 219, cy: 127, ox: 8, oz: -7},
+    {id: 'adenike', name: 'Adenike', cx: 21, cy: 169, ox: -22, oz: -7},
+    {id: 'general', name: 'General', cx: 303, cy: 57, ox: 21, oz: -24},
+    {id: 'home', name: 'Under-Verse Court', cx: 30, cy: 298, ox: -17, oz: 14},
+    {id: 'studio', name: 'LadoTech Studio', cx: 24, cy: 91, ox: -6, oz: -8},
+    {id: 'stage', name: 'Lion’s Lines', cx: 160, cy: 246, ox: -10, oz: 9},
+    {id: 'work', name: 'VerseMart', cx: 298, cy: 292, ox: 14, oz: 9}
+];
+
+placesList.forEach(pl => {
+    const pt = this.point(pl.ox, pl.oz);
+    pl.dist = Math.hypot(pt[0] - playerPt[0], pt[1] - playerPt[1]);
+});
+placesList.sort((a,b) => a.dist - b.dist);
+
+let sortedButtonsHTML = '';
+placesList.forEach(pl => {
+    sortedButtonsHTML += `<button data-map-place="${pl.id}">${pl.name} (${Math.round(pl.dist)}m)</button>`;
+});
+
+const d=document.createElement('dialog');d.id='district-map-dialog';d.className='district-map-dialog';d.innerHTML=`<div class="map-dialog-head"><h2>Ogbomoso district</h2><button id="close-district-map" aria-label="Close district map">×</button></div><div class="map-switch"><button id="show-game-map">Game map</button><button id="show-osm-map">OpenStreetMap reference</button></div><div id="expanded-map">${this.render(true)}</div><div class="map-area-picker"><span>Places (Sorted by distance)</span><div class="map-destinations">${sortedButtonsHTML}</div></div><p class="caption">White arrow: you · yellow markers: fictional venues · blue markers: named local areas · dashed line: waypoint direction. *Real place/road names; geometry compressed for gameplay. Campus Lane is invented.</p><p class="caption">Reference map © OpenStreetMap contributors. The game map is adapted, not a traced street map.</p>`;document.body.append(d);d.showModal();const close=()=>{d.close();d.remove();};d.querySelector('#close-district-map').onclick=close;d.addEventListener('cancel',e=>{e.preventDefault();close();});d.querySelector('#show-game-map').onclick=()=>{d.querySelector('#expanded-map').innerHTML=this.render(true);this.update(window.Poetics3D.position());};d.querySelector('#show-osm-map').onclick=()=>{d.querySelector('#expanded-map').innerHTML='<iframe class="local-osm-map" title="OpenStreetMap reference: LAUTECH Ogbomoso area" src="https://www.openstreetmap.org/export/embed.html?bbox=4.251%2C8.151%2C4.283%2C8.183&layer=mapnik&marker=8.16676%2C4.26804"></iframe>';};d.querySelectorAll('[data-map-place]').forEach(b=>b.onclick=()=>{close();if(typeof visitPlace !== 'undefined') visitPlace(b.dataset.mapPlace);});this.update(window.Poetics3D.position());}
+};

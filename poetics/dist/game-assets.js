@@ -1,1 +1,1 @@
-window.PoeticsGameAssets=["engine.d45dd739b129.js","opportunities.4ddfcc6ef954.js","gamemap.08bb0e75cf74.js","city3d.a10fc14c3716.js","world.1efd030f1f57.js"];
+window.PoeticsGameAssets=["engine.d45dd739b129.js","opportunities.4ddfcc6ef954.js","gamemap.d48aae62cf54.js","city3d.e11f0abb80cf.js","world.1efd030f1f57.js"];

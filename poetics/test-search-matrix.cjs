@@ -4,7 +4,7 @@ assert.equal(q.length,146);assert.equal(new Set(q.filter(x=>x.state).map(x=>x.st
 for(const state of new Set(q.filter(x=>x.state).map(x=>x.state)))assert.equal(q.filter(x=>x.state===state).length,2);
 assert.equal(new Set(q.filter(x=>x.poet).map(x=>x.poet)).size,72);
 assert(m.google.includes('blocked'));assert(m.socialBrowser.includes('no signed-in'));
-const window={PoeticsMap:{render:()=>'<svg></svg>'}};
+const window={PoeticsMap:{render:()=>'<svg></svg>'}, Poetics3D:{position:()=>({x:0,z:0})}};
 vm.runInNewContext(fs.readFileSync('dist/world.js','utf8'),{window});
 const world=window.PoeticsWorld('Ogbomoso');
 for(const [key,label] of [['w','W'],['a','A'],['s','S'],['d','D']])assert(world.includes('data-walk="'+key+'" aria-label=')&&world.includes('>'+label+'</button>'));

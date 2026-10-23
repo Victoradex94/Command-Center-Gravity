@@ -8,12 +8,12 @@
     "sha256": "4ddfcc6ef95452e352adc0aabb2117d34b14f6dce988e4a76e820fc761ae45d9"
   },
   "gamemap.js": {
-    "file": "gamemap.08bb0e75cf74.js",
-    "sha256": "08bb0e75cf74c468b5427fd7c90425f5510d64ecfd00e4cb6d9f988fc287680e"
+    "file": "gamemap.d48aae62cf54.js",
+    "sha256": "d48aae62cf545ace96a56d48ee1eae72ec7c2d5e0184b5fbc1b419bfca30fa7e"
   },
   "city3d.js": {
-    "file": "city3d.a10fc14c3716.js",
-    "sha256": "a10fc14c3716d026f36ebb1821429305e14c69e690e49aacbf725a278c6f8841"
+    "file": "city3d.e11f0abb80cf.js",
+    "sha256": "e11f0abb80cfb625295d7be7eab2229dfd9fb36ed800773d8fdf9425a48ec039"
   },
   "world.js": {
     "file": "world.1efd030f1f57.js",
@@ -28,8 +28,8 @@
     "sha256": "bdfdaaeb1f5610b6b427ae3b3bfc82d5b085d5d60434f96baacd8ffc3410ec74"
   },
   "atlas-input.js": {
-    "file": "atlas-input.1534274b6a7f.js",
-    "sha256": "1534274b6a7fa11590434d68aa62f4985089ebb79659fa768d68bda02706d973"
+    "file": "atlas-input.b4774a4a9e90.js",
+    "sha256": "b4774a4a9e9022755c67513d65ac82de993fd2d5b8cfa6165b1321f5b53b1477"
   },
   "nigeria-map.js": {
     "file": "nigeria-map.2945d9baaa7c.js",
