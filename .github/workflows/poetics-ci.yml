@@ -32,8 +32,10 @@ jobs:
           PY
       - name: Build and run app verification
         run: python3 -X utf8 scripts/sync-localwp.py --verify-only
-      - name: Test sync failure and preservation safeguards
-        run: python3 -X utf8 test-sync-localwp.py
+      - name: Run every regression suite
+        run: |
+          for suite in test-*.cjs; do node "$suite"; done
+          for suite in test-*.py; do PYTHONUTF8=1 python3 -X utf8 "$suite"; done
       - name: Fail on build drift, including untracked generated assets
         run: |
           git diff --exit-code

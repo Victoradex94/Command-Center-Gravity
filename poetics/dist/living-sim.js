@@ -134,16 +134,45 @@ function getPoetLocation(poet, day) {
 }
 
 // 4. City mini-map rendering
-function renderCityMiniMap(cityName, currentVenueId = null) {
+function renderCityMiniMap(cityName, currentVenueId = null, transitAnim = null) {
   const layout = cityLayouts[cityName] || cityLayouts["Ogbomoso"];
   const width = 460;
   const height = 300;
-  const [minLon, minLat, maxLon, maxLat] = layout.bounds;
+  let [minLon, minLat, maxLon, maxLat] = layout.bounds;
+  if (transitAnim && transitAnim.fromCoords && transitAnim.toCoords) {
+    minLon = Math.min(minLon, transitAnim.fromCoords.lon, transitAnim.toCoords.lon) - 0.05;
+    maxLon = Math.max(maxLon, transitAnim.fromCoords.lon, transitAnim.toCoords.lon) + 0.05;
+    minLat = Math.min(minLat, transitAnim.fromCoords.lat, transitAnim.toCoords.lat) - 0.05;
+    maxLat = Math.max(maxLat, transitAnim.fromCoords.lat, transitAnim.toCoords.lat) + 0.05;
+  }
 
   const project = (lon, lat) => [
     Math.round(((lon - minLon) / (maxLon - minLon)) * (width - 60) + 30),
     Math.round((1 - (lat - minLat) / (maxLat - minLat)) * (height - 60) + 30)
   ];
+
+  let transitSvg = "";
+  if (transitAnim && transitAnim.fromCoords && transitAnim.toCoords) {
+    const pStart = project(transitAnim.fromCoords.lon, transitAnim.fromCoords.lat);
+    const pEnd = project(transitAnim.toCoords.lon, transitAnim.toCoords.lat);
+    const vehicle = transitAnim.isPlane ? "✈️" : "🚙";
+    transitSvg = `
+      <style>
+        @keyframes moveTransitMap {
+          0% { transform: translate(${pStart[0]}px, ${pStart[1]}px); }
+          100% { transform: translate(${pEnd[0]}px, ${pEnd[1]}px); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .transit-map-anim { animation: none !important; transform: translate(${pEnd[0]}px, ${pEnd[1]}px); }
+        }
+      </style>
+      <path d="M${pStart[0]},${pStart[1]} L${pEnd[0]},${pEnd[1]}" stroke="rgba(88,166,255,0.6)" stroke-width="2" stroke-dasharray="4 4" fill="none" />
+      <g class="transit-map-anim" style="animation: moveTransitMap 2.5s forwards ease-in-out;">
+        <circle r="12" fill="rgba(0,0,0,0.6)" />
+        <text x="0" y="4" font-size="14" text-anchor="middle">${vehicle}</text>
+      </g>
+    `;
+  }
 
   let roadsSvg = "";
   if (layout.roads) {
@@ -175,6 +204,7 @@ function renderCityMiniMap(cityName, currentVenueId = null) {
         <rect width="${width}" height="${height}" fill="#0d1117"/>
         ${roadsSvg}
         ${venuesSvg}
+        ${transitSvg}
       </svg>
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">
         ${layout.venues.map(v => `
@@ -398,24 +428,85 @@ function getTransitAnimation(fromCity, toCity, coords) {
   const isPlane = distanceKm > 250;
   const modeIcon = isPlane ? "✈️ Flight" : "🚗 Road Corridor";
 
+  const encounters = [
+    "You share a row with a chapbook vendor reading contemporary Nigerian verse.",
+    "A fellow poet heading to a slam strike up a conversation about rhythm.",
+    "The journey is quiet, allowing you to reflect on your drafts.",
+    "You spot a traveling open-mic host reviewing their setlist.",
+    "A local griot shares a proverb that inspires your next piece."
+  ];
+  const hash = fromCity.length + toCity.length;
+  const encounter = encounters[hash % encounters.length];
+
   return {
     isPlane,
     distanceKm,
     modeIcon,
     fromCity,
     toCity,
+    fromCoords: from,
+    toCoords: to,
     transitHtml: `
-      <div class="transit-animation-banner" style="background:rgba(47,111,235,0.15);border:1px solid #2f6feb;border-radius:8px;padding:12px 16px;margin:12px 0;display:flex;align-items:center;justify-content:space-between;animation:fadeIn 0.3s ease;">
+      <div class="transit-animation-banner" style="background:rgba(47,111,235,0.15);border:1px solid #2f6feb;border-radius:8px;padding:12px 16px;margin:12px 0;display:flex;flex-direction:column;gap:8px;animation:fadeIn 0.3s ease;">
         <div>
           <strong style="color:#58a6ff;font-size:15px;">${modeIcon} in Transit:</strong>
           <span style="color:#e6edf3;font-size:14px;margin-left:6px;">${fromCity} ➔ ${toCity} (${distanceKm} km)</span>
         </div>
-        <div class="transit-vehicle-anim" style="font-size:24px;animation:transitMove 1.5s infinite alternate ease-in-out;">
-          ${isPlane ? '✈️' : '🚙'}
+        <div style="font-size:13px;color:#a5d6ff;background:rgba(0,0,0,0.2);padding:8px;border-radius:4px;">
+          <em>Travel Encounter:</em> ${encounter}
         </div>
       </div>
     `
   };
+}
+
+let audioCtx = null;
+let osc = null;
+let gainNode = null;
+
+function toggleAudio(buttonEl) {
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) {
+    if(buttonEl) buttonEl.textContent = 'Audio Not Supported';
+    return;
+  }
+
+  if (!audioCtx) {
+    audioCtx = new AudioContext();
+    osc = audioCtx.createOscillator();
+    gainNode = audioCtx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(110, audioCtx.currentTime); // Subtle low hum
+    gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+    osc.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    osc.start();
+  }
+
+  if (audioCtx.state === 'suspended' || gainNode.gain.value === 0) {
+    audioCtx.resume().then(() => {
+      gainNode.gain.setTargetAtTime(0.02, audioCtx.currentTime, 0.5);
+      if (buttonEl) buttonEl.textContent = 'Audio On';
+    }).catch(e => console.warn('Audio resume rejected', e));
+  } else {
+    gainNode.gain.setTargetAtTime(0, audioCtx.currentTime, 0.5);
+    setTimeout(() => { if (audioCtx) audioCtx.suspend(); }, 500);
+    if (buttonEl) buttonEl.textContent = 'Audio Off';
+  }
+}
+
+function stopAudio() {
+  if (audioCtx && audioCtx.state !== 'suspended') {
+    gainNode.gain.setTargetAtTime(0, audioCtx.currentTime, 0.5);
+    setTimeout(() => { if (audioCtx) audioCtx.suspend(); }, 500);
+    const btn = document.querySelector('#a-toggle');
+    if (btn) btn.textContent = 'Audio Off';
+  }
+}
+
+if (typeof window !== 'undefined' && !window._poeticsAudioBound) {
+  window.addEventListener('hashchange', stopAudio);
+  window._poeticsAudioBound = true;
 }
 
 const api = {
@@ -427,7 +518,9 @@ const api = {
   renderCityMiniMap,
   renderVenueVignette,
   venueArchivalData,
-  getTransitAnimation
+  getTransitAnimation,
+  toggleAudio,
+  stopAudio
 };
 
 if (typeof module !== 'undefined') module.exports = api;

@@ -19,6 +19,10 @@
     "file": "world.1efd030f1f57.js",
     "sha256": "1efd030f1f57d9120326436a27b350c104f8cfa47735e651215275f6b66c2055"
   },
+  "near-me-radar.js": {
+    "file": "near-me-radar.8eb179859d84.js",
+    "sha256": "8eb179859d844ff017713c8e5d79523345133cef455dc9827d60891110ebb2cd"
+  },
   "contribute.js": {
     "file": "contribute.06f83730cc32.js",
     "sha256": "06f83730cc3221ed705a11a8c016673bc99041858e4f7a7503e6861adbacc367"
@@ -68,8 +72,8 @@
     "sha256": "e2442663bda6ffc1ae486ef139da39571766ff8897b62ec09de2141bbec1a70d"
   },
   "entry-status.js": {
-    "file": "entry-status.5f0dd8b074d2.js",
-    "sha256": "5f0dd8b074d2b9365883619edf8e7546d444524057d1f109eb4b6e5f3f86885d"
+    "file": "entry-status.a5ff344d63dc.js",
+    "sha256": "a5ff344d63dc2f9226d0b478cc4309c549c5635c93408b0851572af264f61681"
   },
   "entry-schema.js": {
     "file": "entry-schema.3ff31624aa0d.js",
@@ -84,20 +88,20 @@
     "sha256": "847d43cdb944d8b0025a6dd9c2bc9b18972dd68642b7f34363a655faddc8bac9"
   },
   "directory.js": {
-    "file": "directory.2a296c7677bc.js",
-    "sha256": "2a296c7677bcf9fdbb98297c72e989bf4424aa3965d640b8575e26820dbacadd"
+    "file": "directory.c59ad5812b7c.js",
+    "sha256": "c59ad5812b7cc7605aef2d8f26c7dcff8fb6cf2f2017876e475cbe6fc11d20de"
   },
   "atlas-ui-guard.js": {
     "file": "atlas-ui-guard.94d3156d05db.js",
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
   "game-assets.js": {
-    "file": "game-assets.ad3b8eddec89.js",
-    "sha256": "ad3b8eddec8970d8f13f842e385aebc9d4167f568b812d1184576342db8aad99"
+    "file": "game-assets.17cf8d384919.js",
+    "sha256": "17cf8d384919ca74c86b33b818d480d58f4950114b0cae54fa03b2569d118a16"
   },
   "game-loader.js": {
-    "file": "game-loader.e60e7eadd08d.js",
-    "sha256": "e60e7eadd08dfa6701b92920c1b608d2c1a90d58e26a65a864cfebb5b408a3a8"
+    "file": "game-loader.561d3f2a7abb.js",
+    "sha256": "561d3f2a7abbff528dc4ad786bd1a1a2d0d959f276202ccff00f4f1055e33bd4"
   },
   "app.js": {
     "file": "app.8901b823bae6.js",

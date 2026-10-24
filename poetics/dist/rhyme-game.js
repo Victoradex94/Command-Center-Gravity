@@ -75,6 +75,7 @@ class RhymeSprintSession {
     this.prompt = getRhymeSprintPrompt();
     this.active = false;
     this.timerId = null;
+    this.lastSubmitTime = null;
   }
 
   start(onTick, onEnd) {
@@ -84,6 +85,7 @@ class RhymeSprintSession {
     this.wordsMatched = [];
     this.timeLeft = this.duration;
     this.prompt = getRhymeSprintPrompt();
+    this.lastSubmitTime = Date.now();
 
     if (this.timerId) clearInterval(this.timerId);
     this.timerId = setInterval(() => {
@@ -103,14 +105,26 @@ class RhymeSprintSession {
       return { ok: false, message: "Word already submitted this round!" };
     }
     const res = evaluateRhyme(this.prompt.word, w);
+    const nowTime = Date.now();
+    const timeSinceLastSubmit = this.lastSubmitTime ? (nowTime - this.lastSubmitTime) / 1000 : 0;
+    this.lastSubmitTime = nowTime;
+
     if (!res.valid) {
       this.streak = 0;
       return { ok: false, message: res.reason, score: this.score };
     }
 
-    this.streak++;
+    // Dynamic streak timer: if more than 5 seconds between valid submissions, reset streak
+    if (timeSinceLastSubmit > 5) {
+      this.streak = 1;
+    } else {
+      this.streak++;
+    }
+
     if (this.streak > this.longestStreak) this.longestStreak = this.streak;
-    const streakMultiplier = 1 + (this.streak - 1) * 0.2;
+
+    // Cap streak multiplier at 2.0 (e.g. max 5 streak factor)
+    const streakMultiplier = Math.min(2.0, 1 + (this.streak - 1) * 0.2);
     // Speed factor: submitting faster in earlier seconds awards higher velocity points
     const speedFactor = Math.max(1, Math.min(2, 1 + (this.timeLeft / this.duration)));
     const totalWordScore = Math.round(res.score * streakMultiplier * speedFactor);
