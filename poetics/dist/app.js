@@ -418,7 +418,7 @@ function renderGamesHub() {
           <div style="display:inline-block;padding:4px 10px;border-radius:16px;background:rgba(247,127,0,0.15);border:1px solid #f77f00;color:#f77f00;font-size:12px;font-weight:700;text-transform:uppercase;margin-bottom:12px;">
             ⚡ Fast-Paced Word Game
           </div>
-          <h2 style="margin:0 0 8px;font-size:24px;color:#fff;">The Rhyme Sprint</h2>
+          <h2 style="margin:0 0 8px;font-size:24px;color:#1f2937;">The Rhyme Sprint</h2>
           <p class="caption" style="font-size:14px;line-height:1.5;margin-bottom:16px;">
             Race against the countdown clock! Rhyme against poetic prompt words. Scoring scales dynamically with <strong>word length</strong>, <strong>rapidity</strong>, and consecutive rhyming streaks.
           </p>
@@ -440,7 +440,7 @@ function renderGamesHub() {
           <div style="display:inline-block;padding:4px 10px;border-radius:16px;background:rgba(47,111,235,0.2);border:1px solid #2f6feb;color:#58a6ff;font-size:12px;font-weight:700;text-transform:uppercase;margin-bottom:12px;">
             🌍 Literary World Simulation
           </div>
-          <h2 style="margin:0 0 8px;font-size:24px;color:#fff;">The Living Poetics Simulation</h2>
+          <h2 style="margin:0 0 8px;font-size:24px;color:#1f2937;">The Living Poetics Simulation</h2>
           <p class="caption" style="font-size:14px;line-height:1.5;margin-bottom:16px;">
             Immerse yourself in a living Nigerian spoken word circuit. Explore interactive city mini-maps with real Atlas venues, animate road and flight transit between coordinates, meet travelling established poets, and convene at major national festivals.
           </p>
