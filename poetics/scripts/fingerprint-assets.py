@@ -6,7 +6,7 @@ dist=root/'dist';index=dist/'index.html';html=index.read_text(encoding='utf-8');
 # Compact executable delivery copies, retaining readable canonical sources.
 # Formatting and local identifier shortening only; no compression transforms,
 # property mangling, public API renaming or data mutation.
-compact_names=['directory.js','ecosystem-switcher.js','state-city-map.js','app.js','state-urban-map.js','nigeria-states-map.js','atlas-navigation.js','supabase-atlas.js']
+compact_names=['game-loader.js','entry-status.js','near-me-radar.js','directory.js','ecosystem-switcher.js','state-city-map.js','app.js','state-urban-map.js','nigeria-states-map.js','atlas-navigation.js','supabase-atlas.js']
 compact_input={name:(dist/name).read_text(encoding='utf-8') for name in compact_names}
 compact=json.loads(subprocess.check_output(['node',str(root/'scripts/minify-delivery.cjs')],input=json.dumps(compact_input),text=True,encoding='utf-8'))
 # Rebuild the display-only derivative on every release; never edit the snapshot.
@@ -40,7 +40,7 @@ def asset(match):
 game_names=['engine.js','opportunities.js','gamemap.js','city3d.js','world.js']
 for name in game_names:
     asset(re.match(r'(src)="([^"]+)"','src="'+name+'"'))
-lazy_assets={'contribute':asset(re.match(r'(src)="([^"]+)"','src="contribute.js"')).split('\"')[1]}
+lazy_assets={'near-me':asset(re.match(r'(src)="([^"]+)"','src="near-me-radar.js"')).split('\"')[1],'contribute':asset(re.match(r'(src)="([^"]+)"','src="contribute.js"')).split('\"')[1]}
 (dist/'game-assets.js').write_text('window.PoeticsGameAssets='+json.dumps([mapping[n]['file'] for n in game_names],separators=(',',':'))+';window.PoeticsLazyAssets='+json.dumps(lazy_assets,separators=(',',':'))+';\n',encoding='utf-8',newline='\n')
 # Bundle only immutable data. Executable modules retain their dependency order.
 import runpy
