@@ -7,17 +7,29 @@
     "file": "opportunities.ecc28cd9dc5b.js",
     "sha256": "ecc28cd9dc5b21b6a234aa57f9f521e6b029875aaec130bee82de0fa2aec4e0b"
   },
+  "living-sim.js": {
+    "file": "living-sim.6e5def3cfd4d.js",
+    "sha256": "6e5def3cfd4df65e29eeb676c2863f3ca47fbe27a3b9ade8312dca4a1d4c405d"
+  },
+  "rhyme-game.js": {
+    "file": "rhyme-game.215332f14775.js",
+    "sha256": "215332f147750188aa451184d80a24bc3c0e43f67d0a44862b5d2fab123313a0"
+  },
   "gamemap.js": {
     "file": "gamemap.fd49ab76d308.js",
     "sha256": "fd49ab76d308e24d40577b528227806b7d1dc1f1d3fe73f041e58427ccc7d706"
   },
   "city3d.js": {
-    "file": "city3d.6507f6ce6a29.js",
-    "sha256": "6507f6ce6a2924f43400d800b70ee408e53509610a0562c50fc0bf06ad591dde"
+    "file": "city3d.ffa33fc0049f.js",
+    "sha256": "ffa33fc0049f4a7e0318896965275facdf7435da9a7455c4ea573456092ffa89"
   },
   "world.js": {
     "file": "world.1efd030f1f57.js",
     "sha256": "1efd030f1f57d9120326436a27b350c104f8cfa47735e651215275f6b66c2055"
+  },
+  "near-me-radar.js": {
+    "file": "near-me-radar.8eb179859d84.js",
+    "sha256": "8eb179859d844ff017713c8e5d79523345133cef455dc9827d60891110ebb2cd"
   },
   "contribute.js": {
     "file": "contribute.06f83730cc32.js",
@@ -68,8 +80,8 @@
     "sha256": "e2442663bda6ffc1ae486ef139da39571766ff8897b62ec09de2141bbec1a70d"
   },
   "entry-status.js": {
-    "file": "entry-status.5f0dd8b074d2.js",
-    "sha256": "5f0dd8b074d2b9365883619edf8e7546d444524057d1f109eb4b6e5f3f86885d"
+    "file": "entry-status.a5ff344d63dc.js",
+    "sha256": "a5ff344d63dc2f9226d0b478cc4309c549c5635c93408b0851572af264f61681"
   },
   "entry-schema.js": {
     "file": "entry-schema.3ff31624aa0d.js",
@@ -84,23 +96,23 @@
     "sha256": "847d43cdb944d8b0025a6dd9c2bc9b18972dd68642b7f34363a655faddc8bac9"
   },
   "directory.js": {
-    "file": "directory.b2f0c96eb742.js",
-    "sha256": "b2f0c96eb742bd868215f2c8ec1d7742795aa42ba320474a075a41af05687054"
+    "file": "directory.c59ad5812b7c.js",
+    "sha256": "c59ad5812b7cc7605aef2d8f26c7dcff8fb6cf2f2017876e475cbe6fc11d20de"
   },
   "atlas-ui-guard.js": {
     "file": "atlas-ui-guard.94d3156d05db.js",
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
   "game-assets.js": {
-    "file": "game-assets.ad3b8eddec89.js",
-    "sha256": "ad3b8eddec8970d8f13f842e385aebc9d4167f568b812d1184576342db8aad99"
+    "file": "game-assets.02762c624487.js",
+    "sha256": "02762c62448713020658a4511cd59be86b2827fab6dda58d9a4dfebc2cf3984d"
   },
   "game-loader.js": {
-    "file": "game-loader.e60e7eadd08d.js",
-    "sha256": "e60e7eadd08dfa6701b92920c1b608d2c1a90d58e26a65a864cfebb5b408a3a8"
+    "file": "game-loader.561d3f2a7abb.js",
+    "sha256": "561d3f2a7abbff528dc4ad786bd1a1a2d0d959f276202ccff00f4f1055e33bd4"
   },
   "app.js": {
-    "file": "app.8901b823bae6.js",
-    "sha256": "8901b823bae67eb41144480f4f411989b38ca46c9427c7c313f853ecdb4fe7ce"
+    "file": "app.d59a8ce06936.js",
+    "sha256": "d59a8ce069368e0064fdc1928e24da48b11c0c1b2316867ec26e196de24b6300"
   }
 }

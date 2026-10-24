@@ -3,7 +3,7 @@ const index=fs.readFileSync('dist/index.html','utf8');
 const previous=fs.readFileSync('dist/atlas-preview-59.html','utf8');
 const names=h=>[...h.matchAll(/<script src="([^"]+)"([^>]*)>/g)];
 const plain=s=>s.replace(/\.[a-f0-9]{12}(?=\.js$)/,'');
-const deferredGames=['engine.js','opportunities.js','gamemap.js','city3d.js','world.js'];
+const deferredGames=['engine.js','opportunities.js','living-sim.js','rhyme-game.js','gamemap.js','city3d.js','world.js'];
 const lazyRoutes=['contribute.js'];
 const expected=names(previous).map(m=>plain(m[1])).filter(n=>!deferredGames.includes(n)&&!lazyRoutes.includes(n)).map(n=>n==='canonical-research.js'?'canonical-research-runtime.js':n);
 expected.splice(expected.indexOf('directory.js'),0,'supabase-atlas.js');

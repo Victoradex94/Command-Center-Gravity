@@ -134,11 +134,11 @@ function getPoetLocation(poet, day) {
 }
 
 // 4. City mini-map rendering
-function renderCityMiniMap(cityName, currentVenueId = null) {
+function renderCityMiniMap(cityName, currentVenueId = null, transitAnim = null) {
   const layout = cityLayouts[cityName] || cityLayouts["Ogbomoso"];
   const width = 460;
   const height = 300;
-  const [minLon, minLat, maxLon, maxLat] = layout.bounds;
+  const [minLon, minLat, maxLon, maxLat] = transitBounds(layout,transitAnim);
 
   const project = (lon, lat) => [
     Math.round(((lon - minLon) / (maxLon - minLon)) * (width - 60) + 30),
@@ -175,6 +175,7 @@ function renderCityMiniMap(cityName, currentVenueId = null) {
         <rect width="${width}" height="${height}" fill="#0d1117"/>
         ${roadsSvg}
         ${venuesSvg}
+        ${transitMarkup(transitAnim,project)}
       </svg>
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">
         ${layout.venues.map(v => `
@@ -340,7 +341,7 @@ const venueArchivalData = {
   }
 };
 
-function renderVenueVignette(venueId) {
+function renderVenueVignette(venueId,day=sceneDay) {
   const data = venueArchivalData[venueId] || {
     name: "Documented Poetry Venue",
     era: "Historic Atlas Record",
@@ -350,8 +351,9 @@ function renderVenueVignette(venueId) {
     poetsPresent: []
   };
 
-  return `
-    <div class="venue-vignette-card" style="background:#161b22;border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:16px;margin:16px 0;animation:fadeIn 0.25s ease;">
+  const phase=scenePhase(day);
+  return `<style>${sceneStyles}</style>
+    <div class="venue-vignette-card" data-sim-phase="${phase.name}" style="--sim-filter:${phase.filter};--sim-window-glow:${phase.glow};background:#161b22;border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:16px;margin:16px 0;animation:fadeIn 0.25s ease;">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
         <div>
           <span style="font-size:11px;font-weight:700;color:#e63946;text-transform:uppercase;letter-spacing:1px;">Archival Waypoint · GTA Polygon Facade</span>
@@ -359,16 +361,16 @@ function renderVenueVignette(venueId) {
           <span style="font-size:12px;color:#8b949e;">${data.era}</span>
         </div>
         <span style="background:rgba(42,157,143,0.15);border:1px solid #2a9d8f;color:#52b788;font-size:11px;padding:4px 8px;border-radius:4px;font-weight:600;">
-          Atlas Grounded
+          Atlas Grounded · <span data-sim-phase-label>${phase.label} · simulation</span>
         </span>
       </div>
 
       <div class="venue-svg-wrapper" style="border:1px solid rgba(255,255,255,0.12);border-radius:6px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.5);">
-        ${data.svgTexture}
+        ${venueTexture(venueId,data.svgTexture)}
       </div>
 
       <p style="margin:12px 0 8px 0;color:#c9d1d9;font-size:14px;line-height:1.5;">${data.desc}</p>
-      
+
       <div style="background:rgba(255,255,255,0.03);border-left:3px solid #ffd166;padding:8px 12px;margin:10px 0;border-radius:0 4px 4px 0;">
         <strong style="font-size:12px;color:#ffd166;display:block;margin-bottom:2px;">Scene Atmosphere:</strong>
         <em style="font-size:13px;color:#e6edf3;">"${data.atmosphere}"</em>
@@ -385,38 +387,98 @@ function renderVenueVignette(venueId) {
 }
 
 // 5. Transit Animation (Plane for flight corridors, Car for regional roads)
-function getTransitAnimation(fromCity, toCity, coords) {
-  const from = (coords && coords[fromCity]) || { lat: 8.13, lon: 4.24 };
-  const to = (coords && coords[toCity]) || { lat: 6.45, lon: 3.39 };
-
-  // Calculate distance in km roughly
-  const dLat = (to.lat - from.lat) * 111;
-  const dLon = (to.lon - from.lon) * 111 * Math.cos(from.lat * Math.PI / 180);
-  const distanceKm = Math.round(Math.sqrt(dLat * dLat + dLon * dLon));
-
-  // Determine mode: distance > 250km uses Plane, otherwise Car
-  const isPlane = distanceKm > 250;
-  const modeIcon = isPlane ? "✈️ Flight" : "🚗 Road Corridor";
-
-  return {
-    isPlane,
-    distanceKm,
-    modeIcon,
-    fromCity,
-    toCity,
-    transitHtml: `
-      <div class="transit-animation-banner" style="background:rgba(47,111,235,0.15);border:1px solid #2f6feb;border-radius:8px;padding:12px 16px;margin:12px 0;display:flex;align-items:center;justify-content:space-between;animation:fadeIn 0.3s ease;">
-        <div>
-          <strong style="color:#58a6ff;font-size:15px;">${modeIcon} in Transit:</strong>
-          <span style="color:#e6edf3;font-size:14px;margin-left:6px;">${fromCity} ➔ ${toCity} (${distanceKm} km)</span>
-        </div>
-        <div class="transit-vehicle-anim" style="font-size:24px;animation:transitMove 1.5s infinite alternate ease-in-out;">
-          ${isPlane ? '✈️' : '🚙'}
-        </div>
-      </div>
-    `
-  };
+// Decorative materials are deterministic and cached, never archival evidence.
+const venueTextureCache=new Map();
+let sceneDay=1,returnToCircuit=false;
+const sceneEscape=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const sceneStyles=`@keyframes simSceneArrival{from{filter:brightness(1)}to{filter:var(--sim-filter)}}
+@keyframes simTravel{from{transform:translate(var(--from-x),var(--from-y))}to{transform:translate(var(--to-x),var(--to-y))}}
+.sim-transit-vehicle{animation:simTravel 3s linear forwards}.venue-svg-wrapper{filter:var(--sim-filter);animation:simSceneArrival 1.4s ease both}
+@media(prefers-reduced-motion:reduce){.sim-transit-vehicle{animation:none;transform:translate(var(--to-x),var(--to-y))}.venue-svg-wrapper,.venue-vignette-card{animation:none!important;transition:none!important}}`;
+function scenePhase(day){return [
+ {name:'day',label:'Day',filter:'brightness(1) saturate(1)',glow:.12},
+ {name:'dusk',label:'Dusk',filter:'sepia(.22) saturate(1.15) brightness(.88)',glow:.6},
+ {name:'night',label:'Night',filter:'brightness(.58) saturate(.8)',glow:1}
+][((Math.trunc(Number(day)||0)%3)+3)%3];}
+function venueTexture(id,svg){
+ if(venueTextureCache.has(id))return venueTextureCache.get(id);
+ const materials={
+  'freedom-park':{wall:'url(#brick-pattern)',color:'#4a2e2b',banner:'#0b5f78'},
+  sifax:{wall:'#d9cfba',color:'#d9cfba',roof:'#807055',banner:'#e63946'},
+  'lautech-gate':{wall:'#ece3cf',color:'#ece3cf',banner:'#0b5f78'},
+  'under-g':{wall:'#c7b594',color:'#c7b594',banner:'#2a9d8f'},
+  muson:{wall:'#f8f9fa',color:'#f8f9fa',roof:'#e9ecef',banner:'#0b5f78'},
+  'merit-house':{wall:'#e3ded3',color:'#e3ded3',banner:'#2b580c'},
+  'alliance-jos':{wall:'#8d99ae',color:'#8d99ae',roof:'#d90429'}
+ };
+ const m=materials[id];if(!m)return svg;
+ const prefix='scene-'+id,seed=[...id].reduce((n,c)=>(n*31+c.charCodeAt(0))>>>0,17),ridge=4+seed%4;
+ // Rename pre-existing definitions too, so two different venues never share IDs.
+ let result=svg.replace(/id="([^"]+)"/g,(_,name)=>`id="${prefix}-old-${name}"`).replace(/url\(#([^)]+)\)/g,(_,name)=>`url(#${prefix}-old-${name})`);
+ const wall=m.wall.startsWith('url(')?m.wall.replace('#','#'+prefix+'-old-'):m.wall;
+ const defs=`<defs><pattern id="${prefix}-brick-pattern" width="32" height="24" patternUnits="userSpaceOnUse"><rect width="32" height="24" fill="${m.color}"/><path d="M0 12H32M16 0V12M0 12V24M32 12V24" stroke="#242b30" stroke-opacity=".22"/><rect x="${4+seed%3}" y="4" width="6" height="6" rx="1" fill="#ffd890" style="opacity:var(--sim-window-glow,.12)"/></pattern><pattern id="${prefix}-zinc" width="${ridge*2}" height="12" patternUnits="userSpaceOnUse"><rect width="100%" height="100%" fill="${m.roof||'#807055'}"/><path d="M0 0V12M${ridge} 0V12" stroke="#fff" stroke-opacity=".24"/></pattern><pattern id="${prefix}-banner" width="24" height="24" patternUnits="userSpaceOnUse"><rect width="24" height="24" fill="${m.banner||'#0b5f78'}"/><path d="M-6 24L24-6M6 30L30 6" stroke="#fff" stroke-opacity=".08" stroke-width="4"/></pattern></defs>`;
+ result=result.replace(/<svg[^>]*>/,s=>s+defs).replaceAll(`fill="${wall}"`,`fill="url(#${prefix}-brick-pattern)"`);
+ if(m.roof)result=result.replaceAll(`fill="${m.roof}"`,`fill="url(#${prefix}-zinc)"`);
+ if(m.banner)result=result.replaceAll(`fill="${m.banner}"`,`fill="url(#${prefix}-banner)"`);
+ venueTextureCache.set(id,result);return result;
 }
+function transitMarkup(anim,project){
+ if(!anim?.fromCoords||!anim?.toCoords)return '';
+ const a=project(anim.fromCoords.lon,anim.fromCoords.lat),b=project(anim.toCoords.lon,anim.toCoords.lat);
+ return `<style>${sceneStyles}</style><path class="sim-transit-route" d="M${a[0]} ${a[1]}L${b[0]} ${b[1]}" stroke="#ffd166" stroke-width="2" stroke-dasharray="5 4" fill="none"/><text x="${a[0]}" y="${a[1]-17}" fill="#fff" font-size="10">${sceneEscape(anim.fromCity)}</text><text x="${b[0]}" y="${b[1]-17}" fill="#fff" font-size="10" text-anchor="end">${sceneEscape(anim.toCity)}</text><g class="sim-transit-vehicle" style="--from-x:${a[0]}px;--from-y:${a[1]}px;--to-x:${b[0]}px;--to-y:${b[1]}px"><circle r="11" fill="#132d35"/><text y="5" text-anchor="middle" font-size="17">${anim.vehicle}</text></g>`;
+}
+function transitBounds(layout,anim){
+ if(!anim?.fromCoords||!anim?.toCoords)return layout.bounds;
+ const xs=[layout.bounds[0],layout.bounds[2],anim.fromCoords.lon,anim.toCoords.lon],ys=[layout.bounds[1],layout.bounds[3],anim.fromCoords.lat,anim.toCoords.lat];
+ const dx=Math.max(.03,Math.max(...xs)-Math.min(...xs))*.12,dy=Math.max(.03,Math.max(...ys)-Math.min(...ys))*.12;
+ return [Math.min(...xs)-dx,Math.min(...ys)-dy,Math.max(...xs)+dx,Math.max(...ys)+dy];
+}
+function transitAnimation(fromCity,toCity,coords={}){
+ const valid=p=>p&&Number.isFinite(p.lat)&&Number.isFinite(p.lon)&&Math.abs(p.lat)<=90&&Math.abs(p.lon)<=180;
+ const from=coords[fromCity],to=coords[toCity],known=valid(from)&&valid(to);
+ let distanceKm=null;
+ if(known){const rad=Math.PI/180,dlat=(to.lat-from.lat)*rad,dlon=(to.lon-from.lon)*rad,a=Math.sin(dlat/2)**2+Math.cos(from.lat*rad)*Math.cos(to.lat*rad)*Math.sin(dlon/2)**2;distanceKm=Math.round(6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(Math.max(0,1-a))));}
+ const isPlane=known&&distanceKm>250,vehicle=isPlane?'✈️':known&&distanceKm>80?'🚌':'🚗',modeIcon=isPlane?'✈️ Flight corridor':'🚌 Road corridor';
+ const encounters=['A fellow traveller exchanges a few lines of verse.','A chapbook vendor shares a reading recommendation.','The quiet journey gives you time to revise a draft.','An open-mic host talks about preparing a set.'];
+ const seed=[...String(fromCity)+'/'+String(toCity)].reduce((n,c)=>(n*31+c.charCodeAt(0))>>>0,7),encounter=encounters[seed%encounters.length];
+ return {isPlane,distanceKm,modeIcon,vehicle,fromCity,toCity,fromCoords:known?from:null,toCoords:known?to:null,encounter,transitHtml:`<div class="transit-animation-banner" role="status"><strong>${modeIcon}</strong> · ${sceneEscape(fromCity)} → ${sceneEscape(toCity)}${known?' · '+distanceKm+' km':' · recorded coordinates unavailable'}<p>Fictional travel encounter: ${encounter}</p><small>Illustrative simulation route, not navigation directions.</small></div>`};
+}
+function animateTravel(rootEl,from,to,coords){
+ const anim=transitAnimation(from,to,coords),map=rootEl.querySelector('#sim-mini-map-view'),banner=rootEl.querySelector('#sim-transit-banner');
+ if(map)map.innerHTML=renderCityMiniMap(from,null,anim);
+ if(banner)banner.innerHTML=anim.transitHtml;
+ return new Promise(resolve=>{let timer,settled=false;const finish=cancelled=>{if(settled)return;settled=true;clearTimeout(timer);if(typeof root.removeEventListener==='function')root.removeEventListener('hashchange',cancel);returnToCircuit=!cancelled;resolve();};const cancel=()=>finish(true);if(typeof root.addEventListener==='function')root.addEventListener('hashchange',cancel);const reduced=typeof root.matchMedia==='function'&&root.matchMedia('(prefers-reduced-motion: reduce)').matches;timer=setTimeout(()=>finish(false),reduced?0:3000);});
+}
+let ambientContext=null,ambientGain=null,ambientNodes=[],ambientWanted=false,ambientGeneration=0;
+function audioLabel(button,text){if(button){button.textContent=text;button.setAttribute('aria-pressed',String(ambientWanted));}}
+function stopAudio(){
+ ambientGeneration++;ambientWanted=false;
+ const ctx=ambientContext;ambientContext=null;
+ if(ambientGain)ambientGain.gain.setValueAtTime(0,ctx?.currentTime||0);
+ for(const node of ambientNodes){try{node.stop();node.disconnect();}catch{}}
+ ambientNodes=[];ambientGain=null;if(ctx)Promise.resolve(ctx.close()).catch(()=>{});
+ audioLabel(root.document?.querySelector('#audio-toggle'),'Ambient sound off');
+}
+async function toggleAudio(button){
+ if(ambientWanted){stopAudio();return;}
+ const Context=root.AudioContext||root.webkitAudioContext;
+ if(!Context){audioLabel(button,'Ambient sound unavailable');return;}
+ ambientWanted=true;const generation=++ambientGeneration;audioLabel(button,'Starting ambient sound');
+ try{
+  if(!ambientContext){const ctx=ambientContext=new Context();ambientGain=ctx.createGain();ambientGain.gain.setValueAtTime(0,ctx.currentTime);ambientGain.connect(ctx.destination);for(const frequency of [110,220]){const node=ctx.createOscillator();node.type='triangle';node.frequency.setValueAtTime(frequency,ctx.currentTime);node.connect(ambientGain);node.start();ambientNodes.push(node);}}
+  const ctx=ambientContext;await ctx.resume();
+  if(generation!==ambientGeneration||!ambientWanted||ctx!==ambientContext)return;
+  ambientGain.gain.setTargetAtTime(.008,ctx.currentTime,.25);audioLabel(button,'Ambient sound on');
+ }catch{if(generation===ambientGeneration){stopAudio();audioLabel(button,'Ambient sound unavailable');}}
+}
+function enhanceScene(rootEl,day){
+ sceneDay=day;const phase=scenePhase(day);
+ for(const card of rootEl.querySelectorAll('[data-sim-phase]')){card.dataset.simPhase=phase.name;card.style.setProperty('--sim-filter',phase.filter);card.style.setProperty('--sim-window-glow',String(phase.glow));const label=card.querySelector('[data-sim-phase-label]');if(label)label.textContent=phase.label+' · simulation';}
+ const toggle=rootEl.querySelector('#world-toggle');
+ if(toggle&&root.document){let button=rootEl.querySelector('#audio-toggle');if(!button){button=root.document.createElement('button');button.id='audio-toggle';button.type='button';toggle.parentElement.insertBefore(button,toggle);}audioLabel(button,ambientWanted?'Ambient sound on':'Ambient sound off');button.onclick=()=>toggleAudio(button);}
+ if(returnToCircuit){returnToCircuit=false;rootEl.querySelector('[data-tab="tab-circuit"]')?.click();}
+}
+if(typeof root.addEventListener==='function')root.addEventListener('hashchange',stopAudio);
 
 const api = {
   cityLayouts,
@@ -427,7 +489,8 @@ const api = {
   renderCityMiniMap,
   renderVenueVignette,
   venueArchivalData,
-  getTransitAnimation
+  getTransitAnimation:transitAnimation,
+  animateTravel,enhanceScene,toggleAudio,stopAudio,getScenePhase:()=>scenePhase(sceneDay)
 };
 
 if (typeof module !== 'undefined') module.exports = api;

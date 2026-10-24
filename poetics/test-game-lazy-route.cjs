@@ -12,12 +12,13 @@ function harness(){
 }
 async function run(){
  const h=harness();await h.route("#/atlas");assert.equal(h.scripts.length,0);assert.deepEqual(h.counts(),{storageReads:0,atlasRenders:1,gameRenders:0});
- const pending=h.route('#/games');assert.equal(h.scripts.length,5);assert(h.main.innerHTML.includes('Loading your poetry world'));
+ assert.equal(h.window.PoeticsGameAssets.length,7);assert(h.window.PoeticsGameAssets.some(x=>x.startsWith('living-sim.')));assert(h.window.PoeticsGameAssets.some(x=>x.startsWith('rhyme-game.')));
+ const pending=h.route('#/games');assert.equal(h.scripts.length,7);assert(h.main.innerHTML.includes('Loading your poetry world'));
  h.route('#/atlas');for(const s of h.scripts)h.finish(s);await pending;assert.equal(h.counts().gameRenders,0);assert.equal(h.counts().storageReads,0);
- await h.route('#/games');assert.equal(h.counts().gameRenders,1);assert.equal(h.counts().storageReads,1);assert.equal(h.scripts.length,5);
- await h.route('#/atlas');await h.route('#/games');assert.equal(h.scripts.length,5);assert.equal(h.counts().storageReads,1);
+ await h.route('#/games');assert.equal(h.counts().gameRenders,1);assert.equal(h.counts().storageReads,1);assert.equal(h.scripts.length,7);
+ await h.route('#/atlas');await h.route('#/games');assert.equal(h.scripts.length,7);assert.equal(h.counts().storageReads,1);
  const fail=harness(),attempt=fail.route('#/games');fail.scripts[0].onerror();for(const s of fail.scripts.slice(1))fail.finish(s);await attempt;assert(fail.main.innerHTML.includes('The Games could not load'));assert.equal(fail.counts().storageReads,0);
- const retry=fail.controls.retry.onclick();assert.equal(fail.scripts.length,6);assert.equal(fail.scripts[5].src,fail.scripts[0].src);fail.finish(fail.scripts[5]);await retry;assert.equal(fail.counts().gameRenders,1);assert.equal(fail.counts().storageReads,1);
+ const retry=fail.controls.retry.onclick();assert.equal(fail.scripts.length,8);assert.equal(fail.scripts[7].src,fail.scripts[0].src);fail.finish(fail.scripts[7]);await retry;assert.equal(fail.counts().gameRenders,1);assert.equal(fail.counts().storageReads,1);
  const submit=harness(),contribute=submit.window.PoeticsLazyAssets.contribute;assert(contribute);const submitPending=submit.route('#/submit');assert.equal(submit.scripts.length,1);assert.equal(submit.scripts[0].src,contribute);submit.finish(submit.scripts[0]);submit.window.renderContribute=()=>{submit.main.innerHTML='SUBMIT READY';};await submitPending;assert.equal(submit.main.innerHTML,'SUBMIT READY');
  console.log('PASS real lazy-loader/app routes in VM: zero Games or Submit requests/save reads on Atlas, route-only contribution loading, parallel ordered game assets, pending navigation cancellation, one-time save restoration, warm return, load error and narrow retry. Not a browser test.');
 }

@@ -1,5 +1,5 @@
 """Exercise entrypoint asset fingerprinting and minification."""
-import json, os, subprocess, sys, tempfile, unittest
+import json, os, shutil, subprocess, sys, tempfile, unittest
 from pathlib import Path
 
 class FingerprintAssets(unittest.TestCase):
@@ -17,6 +17,8 @@ class FingerprintAssets(unittest.TestCase):
         target_script_path = Path(__file__).parent / 'scripts/fingerprint-assets.py'
         target_script = target_script_path.read_text(encoding='utf-8')
         (self.scripts / 'fingerprint-assets.py').write_text(target_script, encoding='utf-8')
+        shutil.copy2(target_script_path.with_name('minify-delivery.cjs'), self.scripts / 'minify-delivery.cjs')
+        shutil.copytree(target_script_path.parent / 'vendor', self.scripts / 'vendor')
 
         # Mock dependencies
         (self.scripts / 'prepare-browser-data.py').write_text("pass", encoding='utf-8')
@@ -27,9 +29,10 @@ class FingerprintAssets(unittest.TestCase):
         (self.dist / 'index.html').write_text(self.html, encoding='utf-8')
 
         # Create dummy assets
-        self.dummy_assets = ['app.js', 'engine.js', 'opportunities.js', 'gamemap.js', 'city3d.js', 'world.js', 'atlas-input.js']
+        self.dummy_assets = ['app.js', 'engine.js', 'opportunities.js', 'living-sim.js', 'rhyme-game.js', 'gamemap.js', 'city3d.js', 'world.js', 'atlas-input.js', 'directory.js', 'ecosystem-switcher.js', 'state-city-map.js', 'state-urban-map.js', 'nigeria-states-map.js', 'atlas-navigation.js', 'supabase-atlas.js', 'game-loader.js', 'entry-status.js', 'near-me-radar.js', 'contribute.js']
         for asset in self.dummy_assets:
             (self.dist / asset).write_text(f'// {asset} content\n', encoding='utf-8')
+        (self.dist / 'app.js').write_text('window.fixtureApp=1;\n', encoding='utf-8')
 
     def tearDown(self):
         self.temp.cleanup()
@@ -58,7 +61,7 @@ class FingerprintAssets(unittest.TestCase):
 
         fingerprinted_file = self.dist / manifest['app.js']['file']
         self.assertTrue(fingerprinted_file.exists())
-        self.assertEqual(fingerprinted_file.read_text(encoding='utf-8'), '// app.js content\n')
+        self.assertEqual(fingerprinted_file.read_text(encoding='utf-8'), 'window.fixtureApp=1;\n')
 
     def test_compacts_json_assignment(self):
         (self.dist / 'data.js').write_text('window.my_data = {\n  "key": "value",\n  "arr": [\n    1,\n    2\n  ]\n}; \n', encoding='utf-8')
@@ -92,18 +95,21 @@ class FingerprintAssets(unittest.TestCase):
         content = game_assets_path.read_text(encoding='utf-8')
 
         self.assertTrue(content.startswith('window.PoeticsGameAssets=['))
-        self.assertTrue(content.endswith('];\n'))
+        self.assertTrue(content.endswith(';\n'))
 
         manifest = json.loads((self.research / 'release-assets.json').read_text(encoding='utf-8'))
-        expected_names = [manifest[n]['file'] for n in ['engine.js','opportunities.js','gamemap.js','city3d.js','world.js']]
-        parsed_array = json.loads(content[content.index('['):content.rindex(']')+1])
+        expected_names = [manifest[n]['file'] for n in ['engine.js','opportunities.js','living-sim.js','rhyme-game.js','gamemap.js','city3d.js','world.js']]
+        game_part, lazy_part = content.rstrip().rstrip(';').split(';window.PoeticsLazyAssets=')
+        parsed_array = json.loads(game_part.removeprefix('window.PoeticsGameAssets='))
+        lazy_assets = json.loads(lazy_part)
+        self.assertEqual(lazy_assets, {key: manifest[name]['file'] for key, name in [('contribute', 'contribute.js'), ('near-me', 'near-me-radar.js')]})
         self.assertEqual(parsed_array, expected_names)
 
     def test_strips_existing_fingerprints_during_resolution(self):
         self.run_fingerprint()
         html1 = (self.dist / 'index.html').read_text(encoding='utf-8')
 
-        (self.dist / 'app.js').write_text('// updated app.js content\n', encoding='utf-8')
+        (self.dist / 'app.js').write_text('window.fixtureApp=2;\n', encoding='utf-8')
 
         self.run_fingerprint()
 
@@ -112,7 +118,7 @@ class FingerprintAssets(unittest.TestCase):
 
         manifest = json.loads((self.research / 'release-assets.json').read_text(encoding='utf-8'))
         fingerprinted_file = self.dist / manifest['app.js']['file']
-        self.assertEqual(fingerprinted_file.read_text(encoding='utf-8'), '// updated app.js content\n')
+        self.assertEqual(fingerprinted_file.read_text(encoding='utf-8'), 'window.fixtureApp=2;\n')
 
         app_matches = [m for m in html2.split('<script') if 'app.' in m]
         self.assertEqual(len(app_matches), 1)

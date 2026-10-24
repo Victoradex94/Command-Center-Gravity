@@ -5,7 +5,7 @@ import argparse, contextlib, datetime, json, os, re, shutil, subprocess, sys, te
 EXTENSIONS = {'.js', '.css', '.html', '.json', '.geojson', '.png', '.jpg', '.jpeg', '.svg', '.webp', '.woff', '.woff2'}
 TEXT = {'.js', '.css', '.html', '.json', '.geojson', '.svg'}
 SECRET = re.compile(rb'sb_secret_[A-Za-z0-9_-]+|(?:ghp_|github_pat_)[A-Za-z0-9_]+|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|eyJ[A-Za-z0-9_-]+\.eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+')
-CHECKS = ['atlas-navigation', 'state-urban-integration', 'directory', 'delivery', 'engine', 'rhyme', 'contribute', 'nigeria-gis', 'category-performance', 'fast-startup', 'game-lazy-route', 'supabase-snapshot']
+CHECKS = ['atlas-navigation', 'state-urban-integration', 'directory', 'map-first', 'security', 'near-me', 'near-me-integration', 'delivery', 'engine', 'rhyme', 'contribute', 'nigeria-gis', 'category-performance', 'fast-startup', 'game-lazy-route', 'game-travel', 'sim-polish', 'rhyme-polish', 'supabase-snapshot', 'osm-state-city-map', 'state-urban-rollout']
 
 def command(args, cwd, capture=False):
     result = subprocess.run([str(a) for a in args], cwd=cwd, check=True, text=True, encoding='utf-8', stdout=subprocess.PIPE if capture else sys.stdout, stderr=sys.stderr)
