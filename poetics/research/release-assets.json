@@ -20,8 +20,8 @@
     "sha256": "1efd030f1f57d9120326436a27b350c104f8cfa47735e651215275f6b66c2055"
   },
   "near-me-radar.js": {
-    "file": "near-me-radar.898f4d923e53.js",
-    "sha256": "898f4d923e534f7ac5963accd5913f9bc49cb43441f08dee633c28a105aa82c1"
+    "file": "near-me-radar.8eb179859d84.js",
+    "sha256": "8eb179859d844ff017713c8e5d79523345133cef455dc9827d60891110ebb2cd"
   },
   "contribute.js": {
     "file": "contribute.06f83730cc32.js",
@@ -96,8 +96,8 @@
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
   "game-assets.js": {
-    "file": "game-assets.40c7312aebea.js",
-    "sha256": "40c7312aebea0cb9ccb8682404edfa9e132718eef1a883a13999701e5645401d"
+    "file": "game-assets.17cf8d384919.js",
+    "sha256": "17cf8d384919ca74c86b33b818d480d58f4950114b0cae54fa03b2569d118a16"
   },
   "game-loader.js": {
     "file": "game-loader.561d3f2a7abb.js",

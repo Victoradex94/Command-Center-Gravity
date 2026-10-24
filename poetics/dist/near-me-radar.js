@@ -11,7 +11,7 @@ function haversine(lat1, lon1, lat2, lon2) {
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-const C = ['Lagos', 'Abuja', 'Port Harcourt', 'Kano', 'Enugu', 'Ibadan'];
+const C = ['Lagos', 'Ibadan', 'Ogbomoso', 'Abuja', 'Jos', 'Enugu', 'Port Harcourt', 'Kano'];
 
 let onFocus = null;
 let reqId = 0;
@@ -31,6 +31,7 @@ function injectStyles() {
 .nm-results{padding:16px;overflow-y:auto;flex:1}
 .nm-item{display:flex;justify-content:space-between;width:100%;text-align:left;padding:12px;margin-bottom:8px;background:#fcfcfc;border:1px solid #e5ddd3;border-radius:8px;cursor:pointer}
 .nm-item:hover{background:#edf3f0}
+.nm-item{align-items:flex-start;gap:10px}.nm-item-copy{display:grid;gap:4px}.nm-item-copy small{display:block;color:#5d6266;font-size:12px}.nm-distance{white-space:nowrap;color:#0f5163}.nm-note{padding:0 16px;font-size:12px;color:#5d6266}
 .nm-empty{text-align:center;color:#666;font-style:italic}
 .nm-fallback-cities{display:flex;flex-wrap:wrap;gap:8px;padding:16px}
 .nm-city-btn{background:#edf3f0;border:1px solid #dce4df;border-radius:8px;padding:8px 16px;cursor:pointer}
@@ -59,13 +60,28 @@ function recordedPoint(r) {
   return Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a)<=90&&Math.abs(b)<=180 ? {lat:a,lon:b,approx:!/venue|site|address|exact/i.test(c?.precision||r.coordinatePrecision||'')} : null;
 }
 
+function recordedConnections() {
+  const data=window.PoeticsDirectoryData||{}, byId=new Map((data.rows||[]).map(r=>[r.id,r])), links=new Map();
+  for (const e of data.edges||[]) {
+    if (e.association || !/^https?:/i.test(e.url||'')) continue;
+    for (const [from,to] of [[e.a,e.b],[e.b,e.a]]) {
+      const peer=byId.get(to); if (!peer || !['People','Platforms'].includes(peer.category)) continue;
+      const text=peer.name+(e.label?' · '+e.label:'');
+      if (!links.has(from)) links.set(from,[]);
+      if (!links.get(from).includes(text)) links.get(from).push(text);
+    }
+  }
+  return id=>{const a=links.get(id)||[];return a.length?'Recorded connections: '+a.slice(0,3).join('; ')+(a.length>3?' · +'+(a.length-3)+' more in profile':''):'No reviewed connections recorded.';};
+}
+
 function renderRadar(container, lat, lon, fallback, getRows) {
   const id = ++reqId;
   const coords = A.placeCoordinates || {};
   const entries = [];
+  const connectionText=recordedConnections();
   
   for (const r of getRows()) {
-    if (!['Places', 'Platforms'].includes(r.category) || r.placeType==='City') continue;
+    if ((!['Places', 'Platforms'].includes(r.category) && !(r.category==='Prizes' && r.format==='Spoken-word competition')) || r.placeType==='City') continue;
     const point=recordedPoint(r);
     if (point) { entries.push({r,d:haversine(lat,lon,point.lat,point.lon),approx:point.approx}); continue; }
     if (!r.city) continue;
@@ -102,7 +118,7 @@ function renderRadar(container, lat, lon, fallback, getRows) {
     const f = entries.filter(e => e.d <= max);
     const html = f.length === 0 
       ? '<p class="nm-empty">No events or platforms found within this radius.</p>' 
-      : f.map(e => `<button class="nm-item" data-node="${esc(e.r.id)}"><strong>${esc(e.r.name)}</strong><span>${e.d < 1 ? '<1' : Math.round(e.d)} km${e.approx ? ' (approx)' : ''}</span></button>`).join('');
+      : f.map(e => `<button class="nm-item" data-node="${esc(e.r.id)}" aria-label="Focus ${esc(e.r.name)} on the Atlas"><span class="nm-item-copy"><strong>${esc(e.r.name)}</strong><small>${esc(e.r.city||'Recorded coordinates; city unrecorded')}</small><small>${esc(e.r.yearLabel||'Date unverified')} · ${esc(e.r.activityStatus?.label||e.r.phase?.label||e.r.availability||'Current activity unconfirmed')}</small><small>${esc(connectionText(e.r.id))}</small></span><span class="nm-distance">${e.d < 10 ? e.d.toFixed(1) : Math.round(e.d)} km${e.approx ? ' (approx)' : ''}</span></button>`).join('');
     
     container.querySelector('.nm-results').innerHTML = html;
     container.querySelectorAll('.nm-item').forEach(b => {
@@ -122,6 +138,7 @@ function renderRadar(container, lat, lon, fallback, getRows) {
         <label>Radius:</label>
         <button class="nm-dist-btn">${dLabel(dists[distIdx])}</button>
       </div>
+      <p class="nm-note">Distances use recorded locations; city-centre estimates are approximate. Historical records do not confirm an upcoming event.</p>
       <div class="nm-results" tabindex="0"></div>
     </div>
   `;
