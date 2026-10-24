@@ -29,7 +29,7 @@ class FingerprintAssets(unittest.TestCase):
         (self.dist / 'index.html').write_text(self.html, encoding='utf-8')
 
         # Create dummy assets
-        self.dummy_assets = ['app.js', 'engine.js', 'opportunities.js', 'gamemap.js', 'city3d.js', 'world.js', 'atlas-input.js', 'directory.js', 'ecosystem-switcher.js', 'state-city-map.js', 'state-urban-map.js', 'nigeria-states-map.js', 'atlas-navigation.js', 'supabase-atlas.js', 'game-loader.js', 'entry-status.js', 'near-me-radar.js', 'contribute.js']
+        self.dummy_assets = ['app.js', 'engine.js', 'opportunities.js', 'living-sim.js', 'rhyme-game.js', 'gamemap.js', 'city3d.js', 'world.js', 'atlas-input.js', 'directory.js', 'ecosystem-switcher.js', 'state-city-map.js', 'state-urban-map.js', 'nigeria-states-map.js', 'atlas-navigation.js', 'supabase-atlas.js', 'game-loader.js', 'entry-status.js', 'near-me-radar.js', 'contribute.js']
         for asset in self.dummy_assets:
             (self.dist / asset).write_text(f'// {asset} content\n', encoding='utf-8')
         (self.dist / 'app.js').write_text('window.fixtureApp=1;\n', encoding='utf-8')
@@ -98,7 +98,7 @@ class FingerprintAssets(unittest.TestCase):
         self.assertTrue(content.endswith(';\n'))
 
         manifest = json.loads((self.research / 'release-assets.json').read_text(encoding='utf-8'))
-        expected_names = [manifest[n]['file'] for n in ['engine.js','opportunities.js','gamemap.js','city3d.js','world.js']]
+        expected_names = [manifest[n]['file'] for n in ['engine.js','opportunities.js','living-sim.js','rhyme-game.js','gamemap.js','city3d.js','world.js']]
         game_part, lazy_part = content.rstrip().rstrip(';').split(';window.PoeticsLazyAssets=')
         parsed_array = json.loads(game_part.removeprefix('window.PoeticsGameAssets='))
         lazy_assets = json.loads(lazy_part)

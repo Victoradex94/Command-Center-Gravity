@@ -7,13 +7,21 @@
     "file": "opportunities.ecc28cd9dc5b.js",
     "sha256": "ecc28cd9dc5b21b6a234aa57f9f521e6b029875aaec130bee82de0fa2aec4e0b"
   },
+  "living-sim.js": {
+    "file": "living-sim.6e5def3cfd4d.js",
+    "sha256": "6e5def3cfd4df65e29eeb676c2863f3ca47fbe27a3b9ade8312dca4a1d4c405d"
+  },
+  "rhyme-game.js": {
+    "file": "rhyme-game.215332f14775.js",
+    "sha256": "215332f147750188aa451184d80a24bc3c0e43f67d0a44862b5d2fab123313a0"
+  },
   "gamemap.js": {
     "file": "gamemap.fd49ab76d308.js",
     "sha256": "fd49ab76d308e24d40577b528227806b7d1dc1f1d3fe73f041e58427ccc7d706"
   },
   "city3d.js": {
-    "file": "city3d.6507f6ce6a29.js",
-    "sha256": "6507f6ce6a2924f43400d800b70ee408e53509610a0562c50fc0bf06ad591dde"
+    "file": "city3d.ffa33fc0049f.js",
+    "sha256": "ffa33fc0049f4a7e0318896965275facdf7435da9a7455c4ea573456092ffa89"
   },
   "world.js": {
     "file": "world.1efd030f1f57.js",
@@ -96,15 +104,15 @@
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
   "game-assets.js": {
-    "file": "game-assets.17cf8d384919.js",
-    "sha256": "17cf8d384919ca74c86b33b818d480d58f4950114b0cae54fa03b2569d118a16"
+    "file": "game-assets.02762c624487.js",
+    "sha256": "02762c62448713020658a4511cd59be86b2827fab6dda58d9a4dfebc2cf3984d"
   },
   "game-loader.js": {
     "file": "game-loader.561d3f2a7abb.js",
     "sha256": "561d3f2a7abbff528dc4ad786bd1a1a2d0d959f276202ccff00f4f1055e33bd4"
   },
   "app.js": {
-    "file": "app.8901b823bae6.js",
-    "sha256": "8901b823bae67eb41144480f4f411989b38ca46c9427c7c313f853ecdb4fe7ce"
+    "file": "app.d59a8ce06936.js",
+    "sha256": "d59a8ce069368e0064fdc1928e24da48b11c0c1b2316867ec26e196de24b6300"
   }
 }

@@ -37,7 +37,7 @@ def asset(match):
     return attr+'="'+stem+'"'
 # Games are requested only when their route opens, but retain content-addressed
 # delivery and the original dependency order.
-game_names=['engine.js','opportunities.js','gamemap.js','city3d.js','world.js']
+game_names=['engine.js','opportunities.js','living-sim.js','rhyme-game.js','gamemap.js','city3d.js','world.js']
 for name in game_names:
     asset(re.match(r'(src)="([^"]+)"','src="'+name+'"'))
 lazy_assets={'near-me':asset(re.match(r'(src)="([^"]+)"','src="near-me-radar.js"')).split('\"')[1],'contribute':asset(re.match(r'(src)="([^"]+)"','src="contribute.js"')).split('\"')[1]}
