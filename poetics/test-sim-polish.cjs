@@ -7,6 +7,7 @@ function harness(){
  return {S:window.PoeticsLivingSim,window,button,timeouts,setReduced:v=>reduced=v,route(){for(const f of [...(listeners.get('hashchange')||[])])f()},finish(){for(const [id,t] of [...timeouts]){timeouts.delete(id);t.f()}}};
 }
 async function run(){
+ const app=fs.readFileSync('dist/app.js','utf8');assert(!/\u00c3\u00a2|\u00c3\u201a|\u00c3\u00b0|\u00c3\u0192/.test(app),'in-game copy contains corrupted UTF-8');assert(app.includes('₦450'));assert(app.includes('Vic’Adex concept'));assert(app.includes('Loading Atlas data from Supabase…'));
  const h=harness(),S=h.S,baseline=JSON.stringify([S.cityLayouts,S.venueArchivalData,S.simulatedPoets,S.conveningCalendar]);
  const ids=['freedom-park','sifax','lautech-gate','under-g','muson','merit-house','alliance-jos'];
  const svgIds=new Set();

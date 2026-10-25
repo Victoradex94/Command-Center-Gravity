@@ -21,7 +21,7 @@ const gameContext={window:{}};vm.runInNewContext(fs.readFileSync('dist/game-asse
 assert.deepEqual(Array.from(gameContext.window.PoeticsGameAssets,plain),deferredGames);
 const releaseAssets=JSON.parse(fs.readFileSync('research/release-assets.json','utf8'));
 assert.equal(gameContext.window.PoeticsLazyAssets.contribute,releaseAssets['contribute.js'].file);
-assert(fs.existsSync('dist/'+gameContext.window.PoeticsLazyAssets.contribute));
+assert(fs.existsSync('dist/'+gameContext.window.PoeticsLazyAssets.contribute));assert(gameContext.window.PoeticsLazyAssets['connection-mindmap']===releaseAssets['connection-mindmap.css'].file);assert(fs.existsSync('dist/'+gameContext.window.PoeticsLazyAssets['connection-mindmap']));
 for(const file of gameContext.window.PoeticsGameAssets)assert.equal(fs.readFileSync('dist/'+file,'utf8'),fs.readFileSync('dist/'+plain(file),'utf8'));
 const bytes=h=>[...h.matchAll(/(?:src|href)="([^"#]+\.(?:js|css))"/g)].reduce((n,m)=>n+fs.statSync('dist/'+m[1]).size,0);
 assert(bytes(index)<bytes(previous));

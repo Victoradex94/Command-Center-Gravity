@@ -40,7 +40,7 @@ def asset(match):
 game_names=['engine.js','opportunities.js','living-sim.js','rhyme-game.js','gamemap.js','city3d.js','world.js']
 for name in game_names:
     asset(re.match(r'(src)="([^"]+)"','src="'+name+'"'))
-lazy_assets={'near-me':asset(re.match(r'(src)="([^"]+)"','src="near-me-radar.js"')).split('\"')[1],'contribute':asset(re.match(r'(src)="([^"]+)"','src="contribute.js"')).split('\"')[1]}
+lazy_assets={'near-me':asset(re.match(r'(src)="([^"]+)"','src="near-me-radar.js"')).split('\"')[1],'contribute':asset(re.match(r'(src)="([^"]+)"','src="contribute.js"')).split('\"')[1],'atlas-fallback':asset(re.match(r'(src)="([^"]+)"','src="atlas-fallback.js"')).split('\"')[1],'connection-mindmap':asset(re.match(r'(href)="([^"]+)"','href="connection-mindmap.css"')).split('\"')[1]}
 (dist/'game-assets.js').write_text('window.PoeticsGameAssets='+json.dumps([mapping[n]['file'] for n in game_names],separators=(',',':'))+';window.PoeticsLazyAssets='+json.dumps(lazy_assets,separators=(',',':'))+';\n',encoding='utf-8',newline='\n')
 # Bundle only immutable data. Executable modules retain their dependency order.
 import runpy

@@ -5,3 +5,4 @@ dist/*.html text eol=lf
 scripts/*.py text eol=lf
 *.cjs text eol=lf
 research/release-assets.json text eol=lf
+dist/geography/*.json text eol=lf
