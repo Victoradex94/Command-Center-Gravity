@@ -1,6 +1,7 @@
 const fs=require('fs'),vm=require('vm'),crypto=require('crypto'),assert=require('assert/strict');
 const raw=fs.readFileSync('research/geography/kaduna-zaria-osm-export.geojson');
-assert.equal(crypto.createHash('sha256').update(raw).digest('hex'),'5f2797b380b1660221c7e385a1b6b17f86c0d51bc9417cb5611705fc0216223f');
+const canonical=raw.toString('utf8').replace(/\r\n/g,'\n');
+assert.equal(crypto.createHash('sha256').update(canonical).digest('hex'),'b99ab84a9e53e11bd94ce47854423664364aade90104afaf444edf69c3faa151');
 const exportData=JSON.parse(raw),window={};for(const f of ['nigeria-states','nigeria-states-map','osm-state-locators','state-city-map'])vm.runInNewContext(fs.readFileSync('dist/'+f+'.js','utf8'),{window});
 const m=window.PoeticsStateCityMap,d=m.data;assert.equal(d.stateObject,'relation/3709353');assert.equal(d.stateSourceDate,'2013');assert.equal(d.exportTimestamp,'2026-10-14T20:35:21Z');assert.equal(d.cities.length,2);
 assert.equal(JSON.stringify(d.geometry),JSON.stringify(exportData.features.find(f=>f.id===d.stateObject).geometry));
