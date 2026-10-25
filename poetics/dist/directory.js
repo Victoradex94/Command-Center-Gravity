@@ -131,6 +131,7 @@ function graph(r){
 }
 let browsing=Boolean(incomingBrowsing),zoom=1,mapFocusState=selected&&rows.some(r=>r.id===selected&&recordStates(r).includes(incomingFocusState))&&window.PoeticsStateMap.states.some(s=>s.name===incomingFocusState)?incomingFocusState:'';
 function draw(replaceHistory=false){
+if(mode==='Mind map')loadMindmapStyles();
 refreshFilterCounts();
 if(navigation){navigation.commit({mode,query,selected,state,zone,geo,year,activity,enabled:[...enabled],browsing,stateMapMode,focusState:mapFocusState},firstNavigationDraw||replaceHistory);firstNavigationDraw=false;}
 
