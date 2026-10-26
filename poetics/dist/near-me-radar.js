@@ -36,6 +36,14 @@ function injectStyles() {
 .nm-fallback-cities{display:flex;flex-wrap:wrap;gap:8px;padding:16px}
 .nm-city-btn{background:#edf3f0;border:1px solid #dce4df;border-radius:8px;padding:8px 16px;cursor:pointer}
 .nm-msg{padding:16px 16px 0;color:#a3375a}
+.nm-guidance{padding:0 16px;margin:8px 0;color:#30383a;line-height:1.5}
+.nm-city-form{padding:0 16px 12px;display:grid;gap:8px}
+.nm-city-form label{font-weight:600}
+.nm-city-entry{display:flex;gap:8px}
+.nm-city-input{min-width:0;flex:1;padding:10px 12px;border:1px solid #879397;border-radius:8px;font:inherit}
+.nm-city-submit{padding:10px 14px;border:0;border-radius:8px;background:#0f5163;color:#fffaf4;font:inherit;font-weight:600;cursor:pointer}
+.nm-city-help,.nm-city-feedback{margin:0;font-size:12px;line-height:1.45;color:#5d6266}
+.nm-city-feedback{color:#a3375a;min-height:1em}
 .nm-loading{padding:32px;text-align:center;color:#fff;display:flex;flex-direction:column;align-items:center;gap:16px}
 .map-city-toolbar #near-me-btn{min-height:48px;padding:10px 18px;border:1px solid #0f5163;border-radius:0 12px 12px 0;background:#edf3f0;color:#0f5163;font-weight:600;white-space:nowrap;margin-left:-1px}
 .map-city-toolbar #near-me-btn:hover{background:#dce4df}
@@ -170,14 +178,27 @@ function renderFallback(container, msg, getRows) {
 
   const c = A.placeCoordinates || {};
   const hubs = C.filter(x => c[x]);
+  const normCity = value => String(value || '').trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s*,\s*nigeria\s*$/i, '').toLocaleLowerCase();
+  const chooseCity = value => hubs.find(x => normCity(x) === normCity(value));
 
   container.innerHTML = `
     <div class="nm-dialog" role="dialog" aria-label="Location Fallback">
       <div class="nm-header">
-        <h2>Location Unavailable</h2>
+        <h2>Choose your location</h2>
         <button class="nm-close" aria-label="Close">×</button>
       </div>
-      <p class="nm-msg">${esc(msg)}</p>
+      <p class="nm-msg">We couldn’t access your current location${msg ? ` (${esc(msg)})` : ''}.</p>
+      <p class="nm-guidance">Choose a suggested city, or type a supported Nigerian city to see nearby Atlas places and platforms.</p>
+      <form class="nm-city-form" aria-label="Search by city">
+        <label for="nm-city-input">Or type a city</label>
+        <div class="nm-city-entry">
+          <input class="nm-city-input" id="nm-city-input" name="city" type="search" list="nm-city-options" autocomplete="address-level2" placeholder="e.g. Ogbomoso" aria-describedby="nm-city-help nm-city-feedback">
+          <datalist id="nm-city-options">${hubs.map(x => `<option value="${esc(x)}"></option>`).join('')}</datalist>
+          <button class="nm-city-submit" type="submit">Find places</button>
+        </div>
+        <p class="nm-city-help" id="nm-city-help">Suggestions use approximate city-centre locations, not your exact position.</p>
+        <p class="nm-city-feedback" id="nm-city-feedback" role="status" aria-live="polite"></p>
+      </form>
       <div class="nm-fallback-cities">
         ${hubs.map(x => `<button class="nm-city-btn" data-city="${esc(x)}">${esc(x)}</button>`).join('')}
       </div>
@@ -185,6 +206,21 @@ function renderFallback(container, msg, getRows) {
   `;
   
   container.querySelector('.nm-close').onclick = close;
+  const input = container.querySelector('#nm-city-input');
+  const feedback = container.querySelector('#nm-city-feedback');
+  input.oninput = () => { feedback.textContent = ''; };
+  container.querySelector('.nm-city-form').onsubmit = e => {
+    e.preventDefault();
+    if (id !== reqId) return;
+    const city = chooseCity(input.value);
+    if (!city) {
+      feedback.textContent = 'Choose or type one of the suggested cities so we can use a supported location estimate.';
+      input.focus();
+      return;
+    }
+    document.removeEventListener('keydown', container._key);
+    renderRadar(container, c[city].lat, c[city].lon, city, getRows);
+  };
   container.querySelectorAll('.nm-city-btn').forEach(b => {
     b.onclick = () => {
       if (id !== reqId) return;

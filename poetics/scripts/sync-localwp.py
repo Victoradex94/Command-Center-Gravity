@@ -5,7 +5,15 @@ import argparse, contextlib, datetime, json, os, re, shutil, subprocess, sys, te
 EXTENSIONS = {'.js', '.css', '.html', '.json', '.geojson', '.png', '.jpg', '.jpeg', '.svg', '.webp', '.woff', '.woff2'}
 TEXT = {'.js', '.css', '.html', '.json', '.geojson', '.svg'}
 SECRET = re.compile(rb'sb_secret_[A-Za-z0-9_-]+|(?:ghp_|github_pat_)[A-Za-z0-9_]+|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|eyJ[A-Za-z0-9_-]+\.eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+')
-CHECKS = ['atlas-navigation', 'state-urban-integration', 'directory', 'map-first', 'security', 'near-me', 'near-me-integration', 'delivery', 'engine', 'rhyme', 'contribute', 'nigeria-gis', 'category-performance', 'fast-startup', 'game-lazy-route', 'game-travel', 'sim-polish', 'rhyme-polish', 'supabase-snapshot', 'osm-state-city-map', 'state-urban-rollout']
+CHECKS = ['atlas-navigation', 'state-urban-integration', 'directory', 'map-first', 'security', 'near-me', 'near-me-integration', 'delivery', 'engine', 'rhyme', 'contribute', 'nigeria-gis', 'category-performance', 'fast-startup', 'game-lazy-route', 'game-travel', 'sim-polish', 'rhyme-polish', 'supabase-snapshot', 'osm-state-city-map', 'state-urban-rollout', 'ogbomoso-map']
+REVIEW_FILES = {
+    'poetics/dist/game-assets.js', 'poetics/dist/gamemap.js', 'poetics/dist/index.html',
+    'poetics/dist/living-sim.js', 'poetics/research/release-assets.json',
+    'poetics/scripts/sync-localwp.py', 'poetics/test-ogbomoso-map.cjs', 'poetics/test-sync-localwp.py',
+    'poetics/dist/near-me-radar.js', 'poetics/test-near-me.cjs',
+    'poetics/research/geography/ogbomoso-mvp-map-notes-2026-10-26.md',
+}
+REVIEW_HASHED_ASSET = re.compile(r'poetics/dist/(?:game-assets|gamemap|living-sim|near-me-radar)\.[a-f0-9]{12}\.js$')
 
 def command(args, cwd, capture=False):
     result = subprocess.run([str(a) for a in args], cwd=cwd, check=True, text=True, encoding='utf-8', stdout=subprocess.PIPE if capture else sys.stdout, stderr=sys.stderr)
@@ -55,6 +63,17 @@ def verify(app, node):
     for name in CHECKS: command([node, 'test-' + name + '.cjs'], app)
     assets(app / 'dist')
 
+def validate_review_branch(repo, expected_branch):
+    branch = command(['git', 'branch', '--show-current'], repo, True)
+    if not expected_branch or branch != expected_branch or branch == 'main':
+        raise ValueError('Review sync requires the exact named, non-main branch.')
+    status = command(['git', 'status', '--porcelain', '--untracked-files=all'], repo, True)
+    for line in status.splitlines():
+        name = line[3:].strip('"')
+        if name not in REVIEW_FILES and not REVIEW_HASHED_ASSET.fullmatch(name):
+            raise ValueError('Review sync found an out-of-scope change: ' + name)
+    return branch
+
 @contextlib.contextmanager
 def checkout(repo, ref):
     with tempfile.TemporaryDirectory(prefix='poetics-sync-') as scratch:
@@ -95,9 +114,10 @@ def publish(app, destination, backup_root):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     modes = parser.add_mutually_exclusive_group(required=True)
-    for flag in ('--from-github', '--to-github', '--verify-only'): modes.add_argument(flag, action='store_true')
+    for flag in ('--from-github', '--from-review-branch', '--to-github', '--verify-only'): modes.add_argument(flag, action='store_true')
     parser.add_argument('--repo-path', type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument('--localwp-path', type=Path)
+    parser.add_argument('--expected-branch')
     parser.add_argument('--import-files', nargs='+')
     parser.add_argument('--node', default='node')
     parser.add_argument('--log-file', type=Path)
@@ -115,7 +135,20 @@ def main():
         verify(app, args.node)
         return
     if args.localwp_path is None: raise ValueError('An explicit LocalWP destination is required.')
-    if args.from_github:
+    if args.from_review_branch:
+        if app != repo / 'poetics': raise ValueError('Review sync requires the repository poetics folder as its source.')
+        branch = validate_review_branch(repo, args.expected_branch)
+        commit = command(['git', 'rev-parse', 'HEAD'], repo, True)
+        verify(app, args.node)
+        validate_review_branch(repo, branch)
+        if command(['git', 'rev-parse', 'HEAD'], repo, True) != commit:
+            raise ValueError('Review branch HEAD changed during validation.')
+        result = publish(app, args.localwp_path, repo.parent / 'poetics-sync-backups')
+        record = {'branch': branch, 'commit': commit, 'completedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(), **result}
+        safe_branch = re.sub(r'[^A-Za-z0-9._-]+', '-', branch).strip('-')
+        (repo.parent / f'poetics-sync-status-{safe_branch}.json').write_text(json.dumps(record, indent=2), encoding='utf-8')
+        print(json.dumps(record))
+    elif args.from_github:
         remote = command(['git', 'remote', 'get-url', 'origin'], repo, True)
         if remote.removesuffix('.git') not in ('https://github.com/Victoradex94/Command-Center-Gravity', 'git@github.com:Victoradex94/Command-Center-Gravity'):
             raise ValueError('Origin is not the approved repository.')

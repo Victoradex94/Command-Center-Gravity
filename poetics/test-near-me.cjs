@@ -25,7 +25,7 @@ function harness(supported=true){
  }
  const trigger=new Element('button');ids.set('near-me-btn',trigger);
  const doc={getElementById:id=>ids.get(id)||null,createElement:tag=>new Element(tag),head:new Element(),body:new Element(),addEventListener:(type,f)=>{if(type==='keydown')keys.add(f);},removeEventListener:(type,f)=>{if(type==='keydown')keys.delete(f);}};
- const w={PoeticsAtlas:{placeCoordinates:{Lagos:{lat:6.454066,lon:3.394673,precision:'City-centre locator'},Abuja:{lat:9.05785,lon:7.49508,precision:'City-centre locator'}}}};
+ const w={PoeticsAtlas:{placeCoordinates:{Lagos:{lat:6.454066,lon:3.394673,precision:'City-centre locator'},Abuja:{lat:9.05785,lon:7.49508,precision:'City-centre locator'},Ogbomoso:{lat:8.133,lon:4.243,precision:'City-centre locator'}}}};
  w.PoeticsDirectoryData={rows:[...rows,{id:'poet-link',name:'Visiting Poet',category:'People'}],edges:[{a:'close',b:'poet-link',label:'advertised performance at',url:'https://example.test/evidence'}]};
  const nav=supported?{geolocation:{getCurrentPosition:(success,error,options)=>requests.push({success,error,options})}}:{};
  const context={window:w,document:doc,navigator:nav};vm.runInNewContext(boundary,context);vm.runInNewContext(code,context);
@@ -37,6 +37,7 @@ const rows=[
  {id:'far',name:'Far venue',category:'Places',latitude:6.8,longitude:3.4,coordinatePrecision:'Venue address'},
  {id:'close',name:'<img src=x onerror=alert(1)>',category:'Platforms',latitude:6.46,longitude:3.4,coordinatePrecision:'Exact venue'},
  {id:'city',name:'City estimate',category:'Places',city:'Lagos'},
+ {id:'ogbo',name:'Ogbomoso place',category:'Places',city:'Ogbomoso'},
  {id:'unknown',name:'Unlocated',category:'Platforms',city:'Unknown'},
  {id:'person',name:'Person',category:'People',city:'Lagos'},
  {id:'locator',name:'City locator',category:'Places',placeType:'City',city:'Lagos'}
@@ -57,8 +58,16 @@ for(const outcome of ['success','error']){
 for(const errorCode of [1,2,3]){
  const h=harness();h.w.PoeticsNearMe.init(()=>{},()=>rows);h.requests[0].error({code:errorCode});
  assert(h.container().innerHTML.includes(['','Permission denied.','Location unavailable.','Timed out.'][errorCode]));
- assert.equal(h.keys.size,1);const cities=h.container().querySelectorAll('.nm-city-btn');assert.equal(cities.length,2,'only recorded fallback hubs');
+ assert.equal(h.keys.size,1);const cities=h.container().querySelectorAll('.nm-city-btn');assert.equal(cities.length,3,'only recorded fallback hubs');
  cities.find(b=>b.dataset.city==='Lagos').onclick();assert(h.container().querySelector('.nm-results').innerHTML.includes('City estimate'));
+}
+{
+ const h=harness();h.w.PoeticsNearMe.init(()=>{},()=>rows);h.requests[0].error({code:1});
+ const panel=h.container();assert(panel.innerHTML.includes('Choose your location'));assert(panel.innerHTML.includes('Choose a suggested city'));assert(panel.innerHTML.includes('type="search"'));assert(panel.innerHTML.includes('Find places'));
+ const input=panel.querySelector('#nm-city-input'),feedback=panel.querySelector('#nm-city-feedback'),form=panel.querySelector('.nm-city-form');let prevented=false;
+ input.value='Somewhere else';form.onsubmit({preventDefault(){prevented=true;}});assert(prevented);assert(feedback.textContent.includes('suggested cities'),'unsupported typed locations get a useful prompt');
+ input.value='ogbomoso, Nigeria';input.oninput();assert.equal(feedback.textContent,'');form.onsubmit({preventDefault(){}});
+ assert(panel.innerHTML.includes('Near Me (Ogbomoso)'));assert(panel.querySelector('.nm-results').innerHTML.includes('Ogbomoso place'),'typed city opens nearby results');
 }
 {
  const h=harness(false);h.w.PoeticsNearMe.init(()=>{},()=>rows);assert(h.container().innerHTML.includes('Geolocation unsupported'));assert.equal(h.keys.size,1);

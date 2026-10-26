@@ -8,16 +8,16 @@
     "sha256": "ecc28cd9dc5b21b6a234aa57f9f521e6b029875aaec130bee82de0fa2aec4e0b"
   },
   "living-sim.js": {
-    "file": "living-sim.6e5def3cfd4d.js",
-    "sha256": "6e5def3cfd4df65e29eeb676c2863f3ca47fbe27a3b9ade8312dca4a1d4c405d"
+    "file": "living-sim.06ea266495a5.js",
+    "sha256": "06ea266495a55453d4bc36c2a81fb54703a6c377cb48868e2b34a4347ef764b3"
   },
   "rhyme-game.js": {
     "file": "rhyme-game.215332f14775.js",
     "sha256": "215332f147750188aa451184d80a24bc3c0e43f67d0a44862b5d2fab123313a0"
   },
   "gamemap.js": {
-    "file": "gamemap.fd49ab76d308.js",
-    "sha256": "fd49ab76d308e24d40577b528227806b7d1dc1f1d3fe73f041e58427ccc7d706"
+    "file": "gamemap.a4afdd498a52.js",
+    "sha256": "a4afdd498a5257df8039ffc0608befc6dca84d2648b19cd8c8a269b763538b57"
   },
   "city3d.js": {
     "file": "city3d.ffa33fc0049f.js",
@@ -28,8 +28,8 @@
     "sha256": "1efd030f1f57d9120326436a27b350c104f8cfa47735e651215275f6b66c2055"
   },
   "near-me-radar.js": {
-    "file": "near-me-radar.8eb179859d84.js",
-    "sha256": "8eb179859d844ff017713c8e5d79523345133cef455dc9827d60891110ebb2cd"
+    "file": "near-me-radar.9d6313efd417.js",
+    "sha256": "9d6313efd41773eacaea1ab547ba37f79cc5e17dddc2ec7e72e8e9b08890a13f"
   },
   "contribute.js": {
     "file": "contribute.06f83730cc32.js",
@@ -112,8 +112,8 @@
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
   "game-assets.js": {
-    "file": "game-assets.7c63893605a5.js",
-    "sha256": "7c63893605a5db6b5834c7c54416391dca4c8c83704ebbc13adcaa89dfae7583"
+    "file": "game-assets.6e855361305e.js",
+    "sha256": "6e855361305e6e3a204718b6f16bb72b6e254534c09f64ed6b5d5a5d3224527d"
   },
   "game-loader.js": {
     "file": "game-loader.561d3f2a7abb.js",

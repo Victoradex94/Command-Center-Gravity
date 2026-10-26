@@ -4,16 +4,17 @@
 // 1. City mini-map coordinates and layout based on documented Atlas places
 const cityLayouts = {
   "Ogbomoso": {
-    bounds: [4.23, 8.12, 4.28, 8.18],
+    bounds: [4.19, 8.09, 4.29, 8.19], // City-scale transit framing only; not venue coordinates.
+    schematic: true,
     venues: [
-      { id: "sifax", name: "Sifax Hall", type: "Venue", lat: 8.156, lon: 4.263, desc: "Historic home of Words on Rampage gatherings" },
-      { id: "lautech-gate", name: "LAUTECH Main Gate", type: "Place", lat: 8.166, lon: 4.268, desc: "Entrance on Old Ogbomoso-Ilorin Road" },
-      { id: "under-g", name: "Under-G Gate & Court", type: "Place", lat: 8.148, lon: 4.249, desc: "Vibrant student avenue & acoustic hub" },
-      { id: "kuye", name: "Kuye District", type: "Place", lat: 8.140, lon: 4.242, desc: "Documented student residential quarter" }
+      { id: "sifax", recordId: "sifax", name: "Sifax Hall", type: "Venue", sourceId: "omo-page", desc: "Documented Words on Rampage venue in 2015; exact location and current operation are unverified." },
+      { id: "lautech-gate", recordId: "main-gate", name: "LAUTECH Main Gate", type: "Place", diagram: [104, 112], sourceId: "campus", desc: "University source places the first entrance on Old Ogbomoso–Ilorin Road; no venue-level coordinates." },
+      { id: "under-g", recordId: "under-g", name: "Under-G Gate", type: "Place", diagram: [310, 205], sourceId: "campus", desc: "University source identifies the second entrance, also called Under G gate; no venue-level coordinates." },
+      { id: "kuye", recordId: "kuye", name: "Kuye", type: "Place", diagram: [370, 206], sourceId: "campus", desc: "Named as an area reached from the second gate; no boundary or exact coordinates." }
     ],
     roads: [
-      [[4.268, 8.175], [4.268, 8.150]], // Old Ogbomoso-Ilorin Road
-      [[4.249, 8.148], [4.268, 8.166]]  // Under-G Link
+      { name: "Old Ogbomoso–Ilorin Road", sourceId: "campus", sourceUrl: "https://www.lautech.edu.ng/de/node/115", evidence: "The university identifies this road at the first campus entrance; alignment is schematic." },
+      { name: "Stadium Road", sourceId: "osm-name-index", sourceUrl: "https://nigeria-streets.openalfa.com/streets/stadium-rd-ogbomosho-north-oyo", evidence: "OSM tag listing reports a residential way named Stadium Road; the displayed stroke is original and not its mapped alignment." },
     ]
   },
   "Lagos": {
@@ -134,10 +135,56 @@ function getPoetLocation(poet, day) {
 }
 
 // 4. City mini-map rendering
+const OGBOMOSO_MAP_STYLES = `<style>
+.district-map-dialog:has(.ogb-map-card) #expanded-map{box-sizing:border-box;display:block;height:auto;min-height:0;max-height:none;overflow:visible;background:transparent;perspective:none;border-radius:0}
+.ogb-map-card{box-sizing:border-box;width:100%;max-height:none;overflow:visible;padding:12px;background:#fffdf8;color:#202720;border-radius:8px;font:13px/1.45 system-ui,sans-serif}
+.ogb-map-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.ogb-map-heading span{font-size:10px;letter-spacing:.08em;color:#53665a}
+.ogb-place-map{display:block;width:100%;height:auto;max-height:none}
+.ogb-map-area-label{font:600 10px system-ui,sans-serif;fill:#465849}
+.ogb-map-road-label{font:600 10px system-ui,sans-serif;fill:#303a31;paint-order:stroke;stroke:#f0eee5;stroke-width:3px;stroke-linejoin:round}
+.ogb-map-place text{font:600 10px system-ui,sans-serif;fill:#17251d;paint-order:stroke;stroke:#fffdf8;stroke-width:3px;stroke-linejoin:round}
+.ogb-map-note{margin:7px 0;color:#37443a;font-size:11px}
+.ogb-map-sources a{color:#075a78;text-underline-offset:2px}
+.ogb-map-venue-control{margin-top:8px}
+.ogb-map-venue-control button{min-height:38px;background:#e5ece4;color:#193128}
+</style>`;
+function renderOgbomosoSchematic(currentVenueId = null, interactive = true) {
+  const layout = cityLayouts.Ogbomoso;
+  const markers = layout.venues.filter(place => Array.isArray(place.diagram)).map(place => {
+    const [x, y] = place.diagram;
+    const label = sceneEscape(root.PoeticsAtlas?.records?.find(item => item.id === place.recordId)?.name || place.name);
+    const circle = `<circle r="8" fill="#286f78" stroke="#fff" stroke-width="2"/>`;
+    return `<g class="ogb-map-place is-landmark" data-atlas-place="${sceneEscape(place.recordId)}" aria-label="${label}; schematic placement, not surveyed" transform="translate(${x} ${y})">${circle}<text x="0" y="-13" text-anchor="middle">${label}</text></g>`;
+  }).join('');
+  const sifax = layout.venues.find(place => place.id === 'sifax');
+  const sifaxName = sceneEscape(root.PoeticsAtlas?.records?.find(item => item.id === sifax.recordId)?.name || sifax.name);
+  const links = layout.roads.filter(road => road.sourceUrl).map(road => `<a href="${sceneEscape(road.sourceUrl)}" target="_blank" rel="noopener">${sceneEscape(road.name)}</a>`).join(' · ');
+  return `${OGBOMOSO_MAP_STYLES}<div class="ogb-map-card" data-map-source="atlas+osm">
+    <div class="ogb-map-heading"><strong>Ogbomoso · documented places</strong><span>SCHEMATIC / NOT TO SCALE</span></div>
+    <svg class="ogb-place-map" viewBox="0 0 460 300" role="img" aria-label="Schematic, not-to-scale map of LAUTECH-area places. Names and relationships are sourced; marker positions are approximate.">
+      <rect width="460" height="300" rx="8" fill="#f0eee5"/>
+      <rect x="128" y="72" width="304" height="158" rx="14" fill="#e3e9dd" stroke="#899984" stroke-dasharray="4 5"/>
+      <text x="280" y="88" class="ogb-map-area-label" text-anchor="middle">LAUTECH CAMPUS AREA · GROUPING ONLY</text>
+      <path d="M44 12V287" stroke="#8e9690" stroke-width="16"/><path d="M44 12V287" stroke="#faf8f0" stroke-width="2" stroke-dasharray="8 7"/>
+      <text x="25" y="154" transform="rotate(-90 25 154)" class="ogb-map-road-label" text-anchor="middle">Old Ogbomoso–Ilorin Road</text>
+      <path d="M164 185C235 171 326 173 425 148" stroke="#9aa19a" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <path d="M164 185C235 171 326 173 425 148" stroke="#faf8f0" stroke-width="2" fill="none" stroke-dasharray="7 6"/>
+      <text x="294" y="159" class="ogb-map-road-label" text-anchor="middle">Stadium Road</text>
+      <path d="M54 112L104 112M310 205L370 206" stroke="#54766f" stroke-width="2" fill="none" stroke-dasharray="4 5"/>
+      <text x="230" y="265" class="ogb-map-note" text-anchor="middle">Dashed links show source-supported access / relationships, not measured routes.</text>
+      ${markers}
+    </svg>
+    <p class="ogb-map-note">Place names and access relationships come from the Atlas and cited sources. Campus markers are schematic groupings, not surveyed coordinates. ${sifaxName} is documented as a 2015 event venue; its location is not plotted.</p>
+    <p class="ogb-map-sources">${links}<br>Map data: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors · ODbL</a> · <a href="https://vicadex.com/portfolio/open-mic-ogbomoso/" target="_blank" rel="noopener">2015 Sifax Hall source</a></p>
+    ${interactive ? `<div class="ogb-map-venue-control"><button class="venue-select-btn ${currentVenueId === 'sifax' ? 'active-venue' : ''}" data-venue-btn="sifax">${sifaxName} · 2015 venue record (location not mapped)</button></div>` : `<p class="ogb-map-note">${sifaxName}: 2015 event venue record; location not mapped.</p>`}
+  </div>`;
+}
 function renderCityMiniMap(cityName, currentVenueId = null, transitAnim = null) {
   const layout = cityLayouts[cityName] || cityLayouts["Ogbomoso"];
   const width = 460;
   const height = 300;
+  if (layout.schematic && !transitAnim) return renderOgbomosoSchematic(currentVenueId);
   const [minLon, minLat, maxLon, maxLat] = transitBounds(layout,transitAnim);
 
   const project = (lon, lat) => [
@@ -147,14 +194,14 @@ function renderCityMiniMap(cityName, currentVenueId = null, transitAnim = null) 
 
   let roadsSvg = "";
   if (layout.roads) {
-    roadsSvg = layout.roads.map(rd => {
+    roadsSvg = layout.roads.filter(rd => Array.isArray(rd) && rd.length === 2 && rd.every(point => Array.isArray(point) && point.length === 2 && point.every(Number.isFinite))).map(rd => {
       const p1 = project(rd[0][0], rd[0][1]);
       const p2 = project(rd[1][0], rd[1][1]);
       return `<line x1="${p1[0]}" y1="${p1[1]}" x2="${p2[0]}" y2="${p2[1]}" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-linecap="round"/><line x1="${p1[0]}" y1="${p1[1]}" x2="${p2[0]}" y2="${p2[1]}" stroke="#ffd166" stroke-width="1.5" stroke-dasharray="6 4"/>`;
     }).join('');
   }
 
-  const venuesSvg = layout.venues.map(v => {
+  const venuesSvg = layout.venues.filter(v => Number.isFinite(v.lon) && Number.isFinite(v.lat)).map(v => {
     const [x, y] = project(v.lon, v.lat);
     const isSelected = v.id === currentVenueId;
     return `
@@ -486,6 +533,7 @@ const api = {
   conveningCalendar,
   getActiveConvening,
   getPoetLocation,
+  renderOgbomosoSchematic,
   renderCityMiniMap,
   renderVenueVignette,
   venueArchivalData,
