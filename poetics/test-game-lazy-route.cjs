@@ -15,8 +15,9 @@ async function run(){
  assert.equal(h.window.PoeticsGameAssets.length,7);assert(h.window.PoeticsGameAssets.some(x=>x.startsWith('living-sim.')));assert(h.window.PoeticsGameAssets.some(x=>x.startsWith('rhyme-game.')));
  const pending=h.route('#/games');assert.equal(h.scripts.length,7);assert(h.main.innerHTML.includes('Loading your poetry world'));
  h.route('#/atlas');for(const s of h.scripts)h.finish(s);await pending;assert.equal(h.counts().gameRenders,0);assert.equal(h.counts().storageReads,0);
- await h.route('#/games');assert.equal(h.counts().gameRenders,1);assert.equal(h.counts().storageReads,1);assert.equal(h.scripts.length,7);
- await h.route('#/atlas');await h.route('#/games');assert.equal(h.scripts.length,7);assert.equal(h.counts().storageReads,1);
+ await h.route('#/games');assert.equal(h.counts().gameRenders,1);assert.equal(h.counts().storageReads,1);assert.equal(h.scripts.length,7);assert(!h.scripts.some(s=>s.src===h.window.PoeticsLazyAssets['rhyme-lexicon']));
+ const lexiconPending=h.window.PoeticsLoadAsset('rhyme-lexicon');assert.equal(h.scripts.length,8);assert.equal(h.scripts.at(-1).src,h.window.PoeticsLazyAssets['rhyme-lexicon']);h.finish(h.scripts.at(-1));await lexiconPending;
+ await h.route('#/atlas');await h.route('#/games');assert.equal(h.scripts.length,8);assert.equal(h.counts().storageReads,1);
  const fail=harness(),attempt=fail.route('#/games');fail.scripts[0].onerror();for(const s of fail.scripts.slice(1))fail.finish(s);await attempt;assert(fail.main.innerHTML.includes('The Games could not load'));assert.equal(fail.counts().storageReads,0);
  const beforeRetry=fail.scripts.length,retry=fail.controls.retry.onclick();assert.equal(fail.scripts.length,beforeRetry+1);assert.equal(fail.scripts.at(-1).src,fail.scripts[0].src);fail.finish(fail.scripts.at(-1));await retry;assert.equal(fail.counts().gameRenders,1);assert.equal(fail.counts().storageReads,1);
  const submit=harness(),contribute=submit.window.PoeticsLazyAssets.contribute;assert(contribute);const submitPending=submit.route('#/submit');assert.equal(submit.scripts.length,1);assert.equal(submit.scripts[0].src,contribute);submit.finish(submit.scripts[0]);submit.window.renderContribute=()=>{submit.main.innerHTML='SUBMIT READY';};await submitPending;assert.equal(submit.main.innerHTML,'SUBMIT READY');

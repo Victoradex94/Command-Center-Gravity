@@ -11,6 +11,8 @@ compact_input={name:(dist/name).read_text(encoding='utf-8') for name in compact_
 compact=json.loads(subprocess.check_output(['node',str(root/'scripts/minify-delivery.cjs')],input=json.dumps(compact_input),text=True,encoding='utf-8'))
 # Rebuild the display-only derivative on every release; never edit the snapshot.
 subprocess.run([sys.executable, str(root/'scripts/prepare-browser-data.py')], check=True)
+# Build the pronunciation index from the pinned, credited source before it is fingerprinted.
+subprocess.run([sys.executable, str(root/'scripts/build-rhyme-lexicon.py')], check=True)
 # Also resolves a prior fingerprint so the helper can run after source edits.
 def asset(match):
     attr,old=match.groups();name=old.split('?')[0]
@@ -40,7 +42,7 @@ def asset(match):
 game_names=['engine.js','opportunities.js','living-sim.js','rhyme-game.js','gamemap.js','city3d.js','world.js']
 for name in game_names:
     asset(re.match(r'(src)="([^"]+)"','src="'+name+'"'))
-lazy_assets={'near-me':asset(re.match(r'(src)="([^"]+)"','src="near-me-radar.js"')).split('\"')[1],'contribute':asset(re.match(r'(src)="([^"]+)"','src="contribute.js"')).split('\"')[1],'atlas-fallback':asset(re.match(r'(src)="([^"]+)"','src="atlas-fallback.js"')).split('\"')[1],'connection-mindmap':asset(re.match(r'(href)="([^"]+)"','href="connection-mindmap.css"')).split('\"')[1]}
+lazy_assets={'near-me':asset(re.match(r'(src)="([^"]+)"','src="near-me-radar.js"')).split('\"')[1],'contribute':asset(re.match(r'(src)="([^"]+)"','src="contribute.js"')).split('\"')[1],'atlas-fallback':asset(re.match(r'(src)="([^"]+)"','src="atlas-fallback.js"')).split('\"')[1],'connection-mindmap':asset(re.match(r'(href)="([^"]+)"','href="connection-mindmap.css"')).split('\"')[1],'rhyme-lexicon':asset(re.match(r'(src)="([^"]+)"','src="rhyme-lexicon.js"')).split('\"')[1]}
 (dist/'game-assets.js').write_text('window.PoeticsGameAssets='+json.dumps([mapping[n]['file'] for n in game_names],separators=(',',':'))+';window.PoeticsLazyAssets='+json.dumps(lazy_assets,separators=(',',':'))+';\n',encoding='utf-8',newline='\n')
 # Bundle only immutable data. Executable modules retain their dependency order.
 import runpy

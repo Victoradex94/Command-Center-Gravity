@@ -34,22 +34,33 @@ function getRhymeSprintPrompt() {
   };
 }
 
+function normalizeWord(value) {
+  return String(value ?? '').trim().toLowerCase().replace(/[’‘]/g, "'");
+}
+
+function pronunciationRimes(word) {
+  const lexicon = root.PoeticsRhymeLexicon;
+  const keys = lexicon?.wordRimes?.[normalizeWord(word)];
+  return Array.isArray(keys) ? keys : [];
+}
+
 function evaluateRhyme(promptWord, candidateWord) {
-  const p = String(promptWord??'').trim().toLowerCase();
-  const c = String(candidateWord??'').trim().toLowerCase();
+  const p = normalizeWord(promptWord);
+  const c = normalizeWord(candidateWord);
   if(c.length>64||!/^\p{L}[\p{L}\p{M}]*(?:['’-][\p{L}\p{M}]+)*$/u.test(c))return {valid:false,reason:"Enter one word using letters"};
   if (!c || c === p) return { valid: false, reason: "Same word or empty" };
   if (c.length < 2) return { valid: false, reason: "Too short" };
 
   const known = rhymeDictionary[p] || [];
-  const isKnown = known.includes(c);
-
-  // Phonetic/suffix check: ending match of 2-3 characters or known dictionary match
-  const suffixMatch = (c.length >= 3 && p.length >= 3 && c.slice(-3) === p.slice(-3)) ||
-                      (c.slice(-2) === p.slice(-2) && (c.slice(-3, -2) !== p.slice(-3, -2) || isKnown));
-
-  const valid = isKnown || suffixMatch;
-  if (!valid) return { valid: false, reason: "Does not rhyme" };
+  const candidateRimes = pronunciationRimes(c);
+  const isCuratedNearRhyme = known.includes(c) && candidateRimes.length > 0;
+  const promptRimes = pronunciationRimes(p);
+  if (!root.PoeticsRhymeLexicon?.wordRimes) return { valid: false, reason: "The pronunciation dictionary is not loaded yet" };
+  if (!candidateRimes.length && !isCuratedNearRhyme) return { valid: false, reason: "Word not found in the pronunciation dictionary" };
+  const rimeSet = new Set(promptRimes);
+  const phoneticMatch = candidateRimes.some(rime => rimeSet.has(rime));
+  const valid = isCuratedNearRhyme || phoneticMatch;
+  if (!valid) return { valid: false, reason: "The word is recognised, but its pronunciation does not rhyme with the prompt" };
 
   // Length scoring: longer words give bonus points
   const lengthBonus = Math.max(0, c.length - 3) * 15;
@@ -131,11 +142,93 @@ class RhymeSprintSession {
   }
 }
 
+let screenGeneration = 0;
+let activeScreenSession = null;
+
+async function renderScreen(main, onBack, isCurrent = () => true) {
+  const generation = ++screenGeneration;
+  activeScreenSession?.stop();
+  activeScreenSession = null;
+  main.innerHTML = `<section class="page-top"><button id="rhyme-load-back" class="btn">← Back to Games</button><h1>Rhyme Sprint</h1><p class="caption" role="status">Loading the pronunciation dictionary…</p></section>`;
+  const backButton = main.querySelector('#rhyme-load-back');
+  backButton.onclick = () => { screenGeneration++; onBack?.(); };
+
+  try {
+    await root.PoeticsLoadAsset('rhyme-lexicon');
+    if (!root.PoeticsRhymeLexicon?.wordRimes) throw new Error('Pronunciation dictionary unavailable');
+  } catch {
+    if (generation !== screenGeneration || !isCurrent()) return null;
+    main.innerHTML = `<section class="page-top"><h1>Rhyme Sprint could not load its word list.</h1><p>Check your connection and retry. Your game progress is unchanged.</p><button id="rhyme-load-retry" class="primary">Try again</button><button id="rhyme-load-back" class="btn">Back to Games</button></section>`;
+    main.querySelector('#rhyme-load-retry').onclick = () => renderScreen(main, onBack, isCurrent);
+    main.querySelector('#rhyme-load-back').onclick = () => { screenGeneration++; onBack?.(); };
+    return null;
+  }
+  if (generation !== screenGeneration || !isCurrent()) return null;
+
+  const session = new RhymeSprintSession(30);
+  activeScreenSession = session;
+  main.innerHTML = `
+    <div class="page-top">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+        <button id="btn-back-hub" class="btn" style="padding:4px 10px;font-size:12px;">← Back to Games</button>
+        <span class="stage-badge" style="background:#f77f00;border-color:#f77f00;color:#fff;">Rhyme Sprint</span>
+      </div>
+      <h1>The Rhyme Sprint</h1>
+      <p>Submit real words that rhyme with the prompt before the timer expires. Rhymes are checked by pronunciation, not just spelling.</p>
+    </div>
+    <section class="panel" style="max-width:680px;margin:20px auto;padding:24px;text-align:center;">
+      <div style="display:flex;justify-content:space-around;align-items:center;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px;margin-bottom:20px;">
+        <div><span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Time Remaining</span><div id="rhyme-timer" style="font-size:32px;font-weight:800;color:#58a6ff;">30s</div></div>
+        <div><span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Score</span><div id="rhyme-score" style="font-size:32px;font-weight:800;color:#f77f00;">0</div></div>
+        <div><span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Current Streak</span><div id="rhyme-streak" style="font-size:32px;font-weight:800;color:#2a9d8f;">0🔥</div></div>
+      </div>
+      <div id="rhyme-prompt-box" style="background:rgba(255,255,255,0.04);border:2px dashed rgba(255,255,255,0.2);border-radius:10px;padding:24px;margin-bottom:20px;">
+        <span style="font-size:13px;color:#8b949e;text-transform:uppercase;letter-spacing:1px;">Rhyme Against Prompt</span>
+        <h2 id="rhyme-prompt-word" style="font-size:42px;margin:8px 0;color:#fff;letter-spacing:1px;">${session.prompt.word.toUpperCase()}</h2>
+        <p class="caption" style="margin:0;">Spelling clue only: <strong>${session.prompt.targetEndings.join(', ')}</strong></p>
+      </div>
+      <form id="rhyme-input-form" style="display:flex;gap:10px;max-width:480px;margin:0 auto 16px;">
+        <input id="rhyme-word-input" autocomplete="off" placeholder="Type a real rhyming word…" required style="flex:1;padding:12px 16px;font-size:16px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background:rgba(0,0,0,0.4);color:#fff;">
+        <button type="submit" class="primary" style="padding:12px 20px;font-size:16px;cursor:pointer;">Submit</button>
+      </form>
+      <div id="rhyme-feedback" role="status" aria-live="polite" style="min-height:24px;font-size:14px;font-weight:600;margin-bottom:16px;"></div>
+      <div style="text-align:left;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;border:1px solid rgba(255,255,255,0.06);">
+        <strong style="font-size:12px;color:#8b949e;text-transform:uppercase;">Matched Words This Round:</strong>
+        <div id="rhyme-matches-list" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><span style="font-size:13px;color:#6e7681;font-style:italic;">No matches yet…</span></div>
+      </div>
+      <p class="caption">Pronunciations: CMUdict, North American English. Local pronunciation additions are reviewed separately. <a href="https://github.com/cmusphinx/cmudict" target="_blank" rel="noopener">Source and credits</a>.</p>
+      <div id="rhyme-gameover-dialog" style="display:none;margin-top:20px;padding:20px;background:rgba(47,111,235,0.15);border:1px solid #2f6feb;border-radius:8px;">
+        <h3 style="margin:0 0 6px;color:#fff;">Sprint Finished!</h3><p id="rhyme-final-summary" style="font-size:16px;margin:0 0 16px;color:#e6edf3;"></p><button id="btn-replay-rhyme" class="primary" style="padding:10px 20px;font-size:15px;cursor:pointer;">Play Again</button>
+      </div>
+    </section>`;
+
+  const query = selector => main.querySelector(selector);
+  const timer = query('#rhyme-timer'), score = query('#rhyme-score'), streak = query('#rhyme-streak');
+  const feedback = query('#rhyme-feedback'), matches = query('#rhyme-matches-list'), input = query('#rhyme-word-input');
+  query('#btn-back-hub').onclick = () => { session.stop(); activeScreenSession = null; onBack?.(); };
+  session.start(seconds => { timer.textContent = seconds + 's'; if (seconds <= 5) timer.style.color = '#e63946'; }, finished => {
+    timer.textContent = '0s'; query('#rhyme-input-form').style.display = 'none'; query('#rhyme-gameover-dialog').style.display = 'block';
+    query('#rhyme-final-summary').innerHTML = `Final Score: <strong>${finished.score}</strong> points across <strong>${finished.wordsMatched.length}</strong> rhyming words! Longest Streak: <strong>${finished.longestStreak}</strong>🔥`;
+  });
+  query('#rhyme-input-form').onsubmit = event => {
+    event.preventDefault(); const result = session.submitWord(input.value); input.value = '';
+    streak.textContent = session.streak + '🔥'; feedback.style.color = result.ok ? '#2a9d8f' : '#e63946';
+    feedback.textContent = result.ok ? `✓ '${result.word}' matched! (+${result.scoreGained} pts, length ${result.length})` : `✗ ${result.message}`;
+    if (result.ok) { score.textContent = result.totalScore; matches.innerHTML = session.wordsMatched.map(word => `<span style="background:rgba(42,157,143,0.2);border:1px solid #2a9d8f;color:#e6edf3;padding:3px 8px;border-radius:4px;font-size:12px;">${word} (${word.length})</span>`).join(''); }
+    input.focus();
+  };
+  query('#btn-replay-rhyme').onclick = () => renderScreen(main, onBack, isCurrent);
+  input.focus();
+  return session;
+}
+
 const api = {
   rhymeDictionary,
   getRhymeSprintPrompt,
   evaluateRhyme,
-  RhymeSprintSession
+  RhymeSprintSession,
+  pronunciationRimes,
+  renderScreen
 };
 
 if (typeof module !== 'undefined') module.exports = api;

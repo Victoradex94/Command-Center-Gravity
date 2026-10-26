@@ -12,8 +12,8 @@
     "sha256": "06ea266495a55453d4bc36c2a81fb54703a6c377cb48868e2b34a4347ef764b3"
   },
   "rhyme-game.js": {
-    "file": "rhyme-game.215332f14775.js",
-    "sha256": "215332f147750188aa451184d80a24bc3c0e43f67d0a44862b5d2fab123313a0"
+    "file": "rhyme-game.c37a0ac48e59.js",
+    "sha256": "c37a0ac48e5941fa2bbd750eb3997e7e803452697429cb06918f750e7432edf5"
   },
   "gamemap.js": {
     "file": "gamemap.a4afdd498a52.js",
@@ -42,6 +42,10 @@
   "connection-mindmap.css": {
     "file": "connection-mindmap.6fa17f23c984.css",
     "sha256": "6fa17f23c984e0b36273103eb50133a16c1c1cd07904b7639d9e7cb896dfe8a9"
+  },
+  "rhyme-lexicon.js": {
+    "file": "rhyme-lexicon.2edecbdf06e4.js",
+    "sha256": "2edecbdf06e4a3caf7e9cf8e0eadd12f38f109fc0e50321c11b2211c9b17ebff"
   },
   "style.css": {
     "file": "style.bb6dfd57125c.css",
@@ -112,15 +116,15 @@
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
   "game-assets.js": {
-    "file": "game-assets.6e855361305e.js",
-    "sha256": "6e855361305e6e3a204718b6f16bb72b6e254534c09f64ed6b5d5a5d3224527d"
+    "file": "game-assets.4a0be0226d02.js",
+    "sha256": "4a0be0226d02012a1a526e207374515f83cda7e84aa9cc5c91cddc5823c0680e"
   },
   "game-loader.js": {
     "file": "game-loader.561d3f2a7abb.js",
     "sha256": "561d3f2a7abbff528dc4ad786bd1a1a2d0d959f276202ccff00f4f1055e33bd4"
   },
   "app.js": {
-    "file": "app.e67036f6d62f.js",
-    "sha256": "e67036f6d62faba4d6405030e6b0accb9daf6ec1ac61d286fa92b6927db560e2"
+    "file": "app.16e8223043cb.js",
+    "sha256": "16e8223043cb3e742d776450b3d05d7467e62df94a3f4854966627559c6338c2"
   }
 }
