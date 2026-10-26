@@ -1,4 +1,5 @@
 const assert = require('node:assert/strict');
+require('./dist/rhyme-lexicon.js');
 const R = require('./dist/rhyme-game.js');
 
 console.log('Testing Rhyme Game...');

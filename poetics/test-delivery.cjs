@@ -1,5 +1,6 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
 const index=fs.readFileSync('dist/index.html','utf8');
+assert(!index.includes('rhyme-lexicon'),'pronunciation index must not be part of initial page scripts');
 const previous=fs.readFileSync('dist/atlas-preview-59.html','utf8');
 const names=h=>[...h.matchAll(/<script src="([^"]+)"([^>]*)>/g)];
 const plain=s=>s.replace(/\.[a-f0-9]{12}(?=\.js$)/,'');

@@ -4,10 +4,14 @@ const bar={style:{}},note={},progress={setAttribute(k,v){this[k]=v}},streak={},c
 streak.parentElement={appendChild(){}};
 const window={document:{querySelector:s=>s==='#rhyme-streak'?streak:s==='#rhyme-streak-clock'?clock:null},matchMedia:()=>({matches:true}),addEventListener(k,f){listeners.add(f)},removeEventListener(k,f){listeners.delete(f)}};
 const context=vm.createContext({window,Date:{now:()=>now},setInterval(f){timers.set(++next,f);return next},clearInterval(id){timers.delete(id)}});
-vm.runInContext(fs.readFileSync('dist/rhyme-game.js','utf8'),context);const R=window.PoeticsRhymeGame;
+vm.runInContext(fs.readFileSync('dist/rhyme-lexicon.js','utf8'),context);vm.runInContext(fs.readFileSync('dist/rhyme-game.js','utf8'),context);const R=window.PoeticsRhymeGame;
 let ends=0;const s=new R.RhymeSprintSession(30);s.prompt={word:'night'};s.start(null,()=>ends++);assert.equal(s.prompt.word,'night','start changed the displayed prompt');
 for(const input of ['<img src=x onerror=alert(1)>night','<b>light','a'.repeat(65)+'ight',null])assert.equal(R.evaluateRhyme('night',input).valid,false);
 assert.equal(R.evaluateRhyme('night','bright').valid,true);
+assert.equal(R.evaluateRhyme('night','flarnight').valid,false,'spelling suffix must not invent a word or rhyme');
+assert.equal(R.evaluateRhyme('sun','one').valid,true,'different spellings with the same rime should rhyme');
+assert.equal(R.evaluateRhyme('night','elephant').valid,false,'recognized non-rhymes must be rejected');
+assert.equal(R.evaluateRhyme('voice','poise').valid,true,'explicit curated near-rhyme exception should remain');
 const first=s.submitWord('light');assert(first.ok);assert.equal(first.streakMultiplier,1);assert(first.lengthMultiplier>1);assert.equal(bar.style.transition,'none');assert.equal(progress['aria-valuenow'],'100');assert(note.textContent.includes('Length ×'));
 const score=s.score;assert.equal(s.submitWord('light').ok,false);assert.equal(s.score,score);assert.equal(s.streak,1);
 s.nextPrompt();s.prompt={word:'night'};assert.equal(s.submitWord('light').ok,false,'changing prompt must not reset duplicate protection');

@@ -9,27 +9,32 @@ class FingerprintAssets(unittest.TestCase):
         self.dist = self.base / 'dist'
         self.scripts = self.base / 'scripts'
         self.research = self.base / 'research'
+        self.lexical = self.research / 'lexical'
         self.dist.mkdir()
         self.scripts.mkdir()
         self.research.mkdir()
+        self.lexical.mkdir()
 
         # Copy the target script
         target_script_path = Path(__file__).parent / 'scripts/fingerprint-assets.py'
         target_script = target_script_path.read_text(encoding='utf-8')
         (self.scripts / 'fingerprint-assets.py').write_text(target_script, encoding='utf-8')
         shutil.copy2(target_script_path.with_name('minify-delivery.cjs'), self.scripts / 'minify-delivery.cjs')
+        shutil.copy2(target_script_path.with_name('build-rhyme-lexicon.py'), self.scripts / 'build-rhyme-lexicon.py')
         shutil.copytree(target_script_path.parent / 'vendor', self.scripts / 'vendor')
 
         # Mock dependencies
         (self.scripts / 'prepare-browser-data.py').write_text("pass", encoding='utf-8')
         (self.scripts / 'prepare-atlas-input.py').write_text("def prepare(d): return ['atlas-data.js', 'other-data.js']\n", encoding='utf-8')
+        (self.lexical / 'cmudict.dict').write_text('NIGHT N AY1 T\nLIGHT L AY1 T\n', encoding='utf-8')
+        (self.lexical / 'local-pronunciations.json').write_text('{"schema":1,"entries":{}}\n', encoding='utf-8')
 
         # Setup base HTML and game assets required by the script
         self.html = '<script src="app.js"></script><script src="engine.js"></script><script src="opportunities.js"></script><script src="gamemap.js"></script><script src="city3d.js"></script><script src="world.js"></script>'
         (self.dist / 'index.html').write_text(self.html, encoding='utf-8')
 
         # Create dummy assets
-        self.dummy_assets = ['app.js', 'engine.js', 'opportunities.js', 'living-sim.js', 'rhyme-game.js', 'gamemap.js', 'city3d.js', 'world.js', 'atlas-input.js', 'directory.js', 'ecosystem-switcher.js', 'state-city-map.js', 'state-urban-map.js', 'nigeria-states-map.js', 'atlas-navigation.js', 'supabase-atlas.js', 'game-loader.js', 'entry-status.js', 'near-me-radar.js', 'contribute.js', 'atlas-fallback.js', 'connection-mindmap.css']
+        self.dummy_assets = ['app.js', 'engine.js', 'opportunities.js', 'living-sim.js', 'rhyme-game.js', 'gamemap.js', 'city3d.js', 'world.js', 'atlas-input.js', 'directory.js', 'ecosystem-switcher.js', 'state-city-map.js', 'state-urban-map.js', 'nigeria-states-map.js', 'atlas-navigation.js', 'supabase-atlas.js', 'game-loader.js', 'entry-status.js', 'near-me-radar.js', 'contribute.js', 'atlas-fallback.js', 'connection-mindmap.css', 'rhyme-lexicon.js']
         for asset in self.dummy_assets:
             (self.dist / asset).write_text(f'// {asset} content\n', encoding='utf-8')
         (self.dist / 'app.js').write_text('window.fixtureApp=1;\n', encoding='utf-8')
@@ -102,8 +107,22 @@ class FingerprintAssets(unittest.TestCase):
         game_part, lazy_part = content.rstrip().rstrip(';').split(';window.PoeticsLazyAssets=')
         parsed_array = json.loads(game_part.removeprefix('window.PoeticsGameAssets='))
         lazy_assets = json.loads(lazy_part)
-        self.assertEqual(lazy_assets, {key: manifest[name]['file'] for key, name in [('contribute', 'contribute.js'), ('near-me', 'near-me-radar.js'), ('atlas-fallback', 'atlas-fallback.js'), ('connection-mindmap', 'connection-mindmap.css')]})
+        self.assertEqual(lazy_assets, {key: manifest[name]['file'] for key, name in [('contribute', 'contribute.js'), ('near-me', 'near-me-radar.js'), ('atlas-fallback', 'atlas-fallback.js'), ('connection-mindmap', 'connection-mindmap.css'), ('rhyme-lexicon', 'rhyme-lexicon.js')]})
         self.assertEqual(parsed_array, expected_names)
+
+    def test_builds_pronunciation_asset_with_reviewed_local_entries(self):
+        (self.lexical / 'local-pronunciations.json').write_text(
+            '{"schema":1,"entries":{"poise":{"source":"Reviewed local pronunciation note","pronunciations":["P OY1 Z"]}}}\n',
+            encoding='utf-8',
+        )
+        self.run_fingerprint()
+        manifest = json.loads((self.research / 'release-assets.json').read_text(encoding='utf-8'))
+        payload = (self.dist / manifest['rhyme-lexicon.js']['file']).read_text(encoding='utf-8')
+        encoded = payload.split('root.PoeticsRhymeLexicon=', 1)[1].split(';})(typeof window', 1)[0]
+        lexicon = json.loads(encoded)
+        self.assertEqual(lexicon['wordRimes']['night'], ['AY T'])
+        self.assertEqual(lexicon['wordRimes']['light'], ['AY T'])
+        self.assertEqual(lexicon['wordRimes']['poise'], ['OY Z'])
 
     def test_strips_existing_fingerprints_during_resolution(self):
         self.run_fingerprint()

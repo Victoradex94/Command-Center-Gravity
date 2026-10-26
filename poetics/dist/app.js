@@ -398,7 +398,6 @@ function showLoginPortal(){
 
 // Games Hub UI and Rhyme Sprint UI
 
-let rhymeSession = null;
 
 function renderGamesHub() {
   stopWorld();
@@ -466,118 +465,9 @@ function renderGamesHub() {
 function renderRhymeSprintScreen() {
   stopWorld();
   if (!window.PoeticsRhymeGame) {
-    main.innerHTML = `<p class="caption">Rhyme game engine loading...</p>`;
+    main.innerHTML = `<p class="caption" role="status">Rhyme Sprint is still loading. Return to Games and try again.</p>`;
     return;
   }
-
-  const R = window.PoeticsRhymeGame;
-  rhymeSession = new R.RhymeSprintSession(30);
-
-  main.innerHTML = `
-    <div class="page-top">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
-        <button id="btn-back-hub" class="btn" style="padding:4px 10px;font-size:12px;">← Back to Games</button>
-        <span class="stage-badge" style="background:#f77f00;border-color:#f77f00;color:#fff;">Rhyme Sprint</span>
-      </div>
-      <h1>The Rhyme Sprint</h1>
-      <p>Submit words that rhyme with the prompt before the timer expires! Long words and fast answers score higher.</p>
-    </div>
-
-    <section class="panel" style="max-width:680px;margin:20px auto;padding:24px;text-align:center;">
-      <div style="display:flex;justify-content:space-around;align-items:center;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px;margin-bottom:20px;">
-        <div>
-          <span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Time Remaining</span>
-          <div id="rhyme-timer" style="font-size:32px;font-weight:800;color:#58a6ff;">30s</div>
-        </div>
-        <div>
-          <span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Score</span>
-          <div id="rhyme-score" style="font-size:32px;font-weight:800;color:#f77f00;">0</div>
-        </div>
-        <div>
-          <span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Current Streak</span>
-          <div id="rhyme-streak" style="font-size:32px;font-weight:800;color:#2a9d8f;">0🔥</div>
-        </div>
-      </div>
-
-      <div id="rhyme-prompt-box" style="background:rgba(255,255,255,0.04);border:2px dashed rgba(255,255,255,0.2);border-radius:10px;padding:24px;margin-bottom:20px;">
-        <span style="font-size:13px;color:#8b949e;text-transform:uppercase;letter-spacing:1px;">Rhyme Against Prompt</span>
-        <h2 id="rhyme-prompt-word" style="font-size:42px;margin:8px 0;color:#fff;letter-spacing:1px;">${rhymeSession.prompt.word.toUpperCase()}</h2>
-        <p class="caption" style="margin:0;">Target rhyme endings: <strong>${rhymeSession.prompt.targetEndings.join(', ')}</strong></p>
-      </div>
-
-      <form id="rhyme-input-form" style="display:flex;gap:10px;max-width:480px;margin:0 auto 16px;">
-        <input id="rhyme-word-input" autocomplete="off" placeholder="Type your rhyming word..." required style="flex:1;padding:12px 16px;font-size:16px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background:rgba(0,0,0,0.4);color:#fff;">
-        <button type="submit" class="primary" style="padding:12px 20px;font-size:16px;cursor:pointer;">Submit</button>
-      </form>
-
-      <div id="rhyme-feedback" style="min-height:24px;font-size:14px;font-weight:600;margin-bottom:16px;"></div>
-
-      <div style="text-align:left;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;border:1px solid rgba(255,255,255,0.06);">
-        <strong style="font-size:12px;color:#8b949e;text-transform:uppercase;">Matched Words This Round:</strong>
-        <div id="rhyme-matches-list" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
-          <span style="font-size:13px;color:#6e7681;font-style:italic;">No matches yet...</span>
-        </div>
-      </div>
-
-      <div id="rhyme-gameover-dialog" style="display:none;margin-top:20px;padding:20px;background:rgba(47,111,235,0.15);border:1px solid #2f6feb;border-radius:8px;">
-        <h3 style="margin:0 0 6px;color:#fff;">Sprint Finished!</h3>
-        <p id="rhyme-final-summary" style="font-size:16px;margin:0 0 16px;color:#e6edf3;"></p>
-        <button id="btn-replay-rhyme" class="primary" style="padding:10px 20px;font-size:15px;cursor:pointer;">Play Again</button>
-      </div>
-    </section>
-  `;
-
-  $('#btn-back-hub').onclick = () => {
-    rhymeSession.stop();
-    renderGamesHub();
-  };
-
-  const timerEl = $('#rhyme-timer');
-  const scoreEl = $('#rhyme-score');
-  const streakEl = $('#rhyme-streak');
-  const feedbackEl = $('#rhyme-feedback');
-  const matchesList = $('#rhyme-matches-list');
-  const inputEl = $('#rhyme-word-input');
-
-  rhymeSession.start(
-    (left) => {
-      timerEl.textContent = left + 's';
-      if (left <= 5) timerEl.style.color = '#e63946';
-    },
-    (session) => {
-      timerEl.textContent = '0s';
-      $('#rhyme-input-form').style.display = 'none';
-      $('#rhyme-gameover-dialog').style.display = 'block';
-      $('#rhyme-final-summary').innerHTML = `Final Score: <strong>${session.score}</strong> points across <strong>${session.wordsMatched.length}</strong> rhyming words! Longest Streak: <strong>${session.longestStreak}</strong>🔥`;
-    }
-  );
-
-  $('#rhyme-input-form').onsubmit = (e) => {
-    e.preventDefault();
-    const val = inputEl.value;
-    inputEl.value = '';
-    const res = rhymeSession.submitWord(val);
-
-    if (res.ok) {
-      scoreEl.textContent = res.totalScore;
-      streakEl.textContent = res.streak + '🔥';
-      feedbackEl.style.color = '#2a9d8f';
-      feedbackEl.textContent = `✓ '${res.word}' matched! (+${res.scoreGained} pts, length ${res.length})`;
-
-      matchesList.innerHTML = rhymeSession.wordsMatched.map(w => `
-        <span style="background:rgba(42,157,143,0.2);border:1px solid #2a9d8f;color:#e6edf3;padding:3px 8px;border-radius:4px;font-size:12px;">
-          ${w} (${w.length})
-        </span>
-      `).join('');
-    } else {
-      streakEl.textContent = rhymeSession.streak + '🔥';
-      feedbackEl.style.color = '#e63946';
-      feedbackEl.textContent = `✗ ${res.message}`;
-    }
-    inputEl.focus();
-  };
-
-  $('#btn-replay-rhyme').onclick = () => renderRhymeSprintScreen();
-  inputEl.focus();
+  return window.PoeticsRhymeGame.renderScreen(main, renderGamesHub, () => location.hash.replace('#/', '').split('?')[0] === 'games');
 }
 
