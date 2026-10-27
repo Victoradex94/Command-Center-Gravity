@@ -1,4 +1,9 @@
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+
+global.window = global;
+vm.runInThisContext(fs.readFileSync('./dist/atlas-input.js', 'utf8'), { filename: 'atlas-input.js' });
 const Sim = require('./dist/living-sim.js');
 
 console.log('Testing Living Simulation module...');

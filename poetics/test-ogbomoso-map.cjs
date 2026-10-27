@@ -1,4 +1,5 @@
 const fs = require('node:fs');
+const crypto = require('node:crypto');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 
@@ -31,7 +32,7 @@ assert(!schematic.includes('unnamed residential connector'));
 assert(!layout.roads.some(road => String(road.sourceId).startsWith('osm-way-')));
 assert(schematic.includes('© OpenStreetMap contributors · ODbL'));
 assert(!schematic.includes('NaN') && !schematic.includes('undefined'));
-assert(!schematic.includes('data-atlas-place="sifax"'));
+assert(!schematic.includes('<g class="ogb-map-place is-landmark" data-atlas-place="sifax"'), 'Sifax is listed but not plotted without an exact location source');
 
 window.PoeticsAtlas.records = window.PoeticsAtlas.records.map(record =>
   record.id === 'main-gate' ? { ...record, name: '<img src=x onerror=alert(1)>' } : record
@@ -49,7 +50,18 @@ const transitMap = sim.renderCityMiniMap('Ogbomoso', null, transit);
 assert(transitMap.includes('sim-transit-route'));
 assert(transitMap.includes('sim-transit-vehicle'));
 assert(!/NaN|Infinity|undefined/.test(transitMap));
-assert(sim.renderCityMiniMap('Lagos').includes('data-venue="freedom-park"'));
+assert(sim.renderCityMiniMap('Lagos').includes('data-atlas-place="freedom-park"'));
+assert(sim.renderCityMiniMap('Lagos').includes('SCHEMATIC / NOT TO SCALE'));
+assert(!sim.renderCityMiniMap('Lagos').includes('sim-venue-node'), 'unverified venue coordinates are not drawn as pins');
+for (const city of [...new Set(window.PoeticsAtlas.records.map(record => record.city).filter(Boolean))].filter(city => city !== 'Online')) {
+  const cityPlaces = window.PoeticsAtlas.records.filter(record => record.city === city && ['Place', 'Venue', 'Event', 'Event series'].includes(record.type));
+  if (!cityPlaces.length) continue;
+  const cityMap = sim.renderCityMiniMap(city);
+  for (const place of cityPlaces) assert(cityMap.includes(`data-atlas-place="${place.id}"`), `${place.name} appears in the ${city} map`);
+  assert(cityMap.includes('not geographic') || cityMap.includes('not a surveyed') || cityMap.includes('not mapped'), `${city} map explains placement limits`);
+}
+assert(sim.renderCityMiniMap('Maiduguri').includes('Mogcolis'), 'database cities without a hand-drawn layout still receive a place map');
+assert(sim.renderCityMiniMap('Aba').includes('MAP RESEARCH NEEDED'), 'cities without mapped Atlas places are not assigned the Ogbomoso map');
 
 function control(id, pressed = null) {
   const node = {
@@ -97,12 +109,23 @@ window.document = document;
 window.Poetics3D = { position: () => ({ x: 0, z: 0, angle: 0, target: null }) };
 context.document = document;
 vm.runInContext(fs.readFileSync('dist/gamemap.js', 'utf8'), context, { filename: 'gamemap.js' });
+const gameAssets = fs.readFileSync('dist/game-assets.js', 'utf8');
+const worldAsset = gameAssets.match(/world\.[a-f0-9]{12}\.js/);
+assert(worldAsset, 'the city-world module is listed as a lazy game asset');
+const worldSource = fs.readFileSync(`dist/${worldAsset[0]}`);
+assert.equal(crypto.createHash('sha256').update(worldSource).digest('hex').slice(0, 12), worldAsset[0].match(/[a-f0-9]{12}/)[0], 'the lazy world asset filename matches its contents');
+vm.runInContext(worldSource.toString('utf8'), context, { filename: worldAsset[0] });
 
 assert.equal(window.PoeticsLivingSim, sim, 'the map module must not replace the complete simulation API');
 assert.equal(typeof sim.enhanceScene, 'function', 'scene enhancement remains available after all lazy game modules load');
 assert.equal(typeof window.PoeticsMap.open, 'function', 'the district map keeps its separate map API');
 assert(window.PoeticsLivingSim.renderCityMiniMap('Ogbomoso').includes('SCHEMATIC / NOT TO SCALE'));
+assert(window.PoeticsWorld('Maiduguri').includes('Mogcolis'), 'the playable city scene uses its Atlas place map');
+assert(!window.PoeticsWorld('Maiduguri').includes('awaiting local map research'));
+assert(window.PoeticsWorld('Ogbomoso').includes('id="city-canvas"'), 'Ogbomoso keeps its existing explorable scene');
 window.PoeticsMap.open();
+assert(dialog.innerHTML.includes('href="https://www.openstreetmap.org/#map=13/8.1515/4.26"'), 'the online area reference has a direct fallback outside the iframe');
+assert(dialog.innerHTML.includes('href="https://www.openstreetmap.org/copyright"'), 'contributor credit and ODbL notice remain available if the iframe fails');
 const buttons = selector => dialog.querySelector(selector);
 buttons('#show-places-map').onclick();
 assert(expanded.innerHTML.includes('SCHEMATIC / NOT TO SCALE'));
@@ -119,4 +142,4 @@ assert.equal(buttons('#show-game-map').attrs['aria-pressed'], 'true');
 buttons('#close-district-map').onclick();
 assert.equal(dialog.removed, true);
 
-console.log('PASS Ogbomoso Atlas anchors, unlocated Sifax record, schematic provenance/ODbL, escaped labels, transit fallback, unchanged Lagos renderer and accessible Game/Places/OSM view switching. UI checks use a DOM stub, not browser visual QA.');
+console.log('PASS Ogbomoso Atlas anchors, all-city Atlas Place/Venue/Event coverage, unlocated Sifax record, escaped labels, transit fallback and accessible Game/Places/OSM view switching. UI checks use a DOM stub, not browser visual QA.');

@@ -142,12 +142,15 @@ const OGBOMOSO_MAP_STYLES = `<style>
 .ogb-map-heading span{font-size:10px;letter-spacing:.08em;color:#53665a}
 .ogb-place-map{display:block;width:100%;height:auto;max-height:none}
 .ogb-map-area-label{font:600 10px system-ui,sans-serif;fill:#465849}
-.ogb-map-road-label{font:600 10px system-ui,sans-serif;fill:#303a31;paint-order:stroke;stroke:#f0eee5;stroke-width:3px;stroke-linejoin:round}
-.ogb-map-place text{font:600 10px system-ui,sans-serif;fill:#17251d;paint-order:stroke;stroke:#fffdf8;stroke-width:3px;stroke-linejoin:round}
+.ogb-map-road-label{font:600 14px system-ui,sans-serif;fill:#303a31;paint-order:stroke;stroke:#f0eee5;stroke-width:3px;stroke-linejoin:round}
+.ogb-map-place text{font:600 16px system-ui,sans-serif;fill:#17251d;paint-order:stroke;stroke:#fffdf8;stroke-width:3px;stroke-linejoin:round}
+.atlas-place-name{font:600 10px system-ui,sans-serif;fill:#17251d}
+.atlas-place-type{font:9px system-ui,sans-serif;fill:#53665a}
 .ogb-map-note{margin:7px 0;color:#37443a;font-size:11px}
 .ogb-map-sources a{color:#075a78;text-underline-offset:2px}
 .ogb-map-venue-control{margin-top:8px}
 .ogb-map-venue-control button{min-height:38px;background:#e5ece4;color:#193128}
+@media(max-width:540px){.ogb-map-note{font-size:13px}}
 </style>`;
 function renderOgbomosoSchematic(currentVenueId = null, interactive = true) {
   const layout = cityLayouts.Ogbomoso;
@@ -155,11 +158,17 @@ function renderOgbomosoSchematic(currentVenueId = null, interactive = true) {
     const [x, y] = place.diagram;
     const label = sceneEscape(root.PoeticsAtlas?.records?.find(item => item.id === place.recordId)?.name || place.name);
     const circle = `<circle r="8" fill="#286f78" stroke="#fff" stroke-width="2"/>`;
-    return `<g class="ogb-map-place is-landmark" data-atlas-place="${sceneEscape(place.recordId)}" aria-label="${label}; schematic placement, not surveyed" transform="translate(${x} ${y})">${circle}<text x="0" y="-13" text-anchor="middle">${label}</text></g>`;
+    const labelX = place.recordId === 'under-g' ? -14 : place.recordId === 'kuye' ? 8 : 0;
+    const labelY = place.recordId === 'main-gate' ? 26 : -18;
+    const anchor = place.recordId === 'main-gate' ? 'start' : 'middle';
+    return `<g class="ogb-map-place is-landmark" data-atlas-place="${sceneEscape(place.recordId)}" aria-label="${label}; schematic placement, not surveyed" transform="translate(${x} ${y})">${circle}<text x="${labelX}" y="${labelY}" text-anchor="${anchor}">${label}</text></g>`;
   }).join('');
   const sifax = layout.venues.find(place => place.id === 'sifax');
   const sifaxName = sceneEscape(root.PoeticsAtlas?.records?.find(item => item.id === sifax.recordId)?.name || sifax.name);
   const links = layout.roads.filter(road => road.sourceUrl).map(road => `<a href="${sceneEscape(road.sourceUrl)}" target="_blank" rel="noopener">${sceneEscape(road.name)}</a>`).join(' · ');
+  const locationRecords = (root.PoeticsAtlas?.records || []).filter(item => item.city === 'Ogbomoso' && ['Place', 'Venue', 'Event', 'Event series'].includes(item.type));
+  const knownMapRecords = new Set(layout.venues.filter(place => Array.isArray(place.diagram)).map(place => place.recordId));
+  const notPlaced = locationRecords.filter(item => !knownMapRecords.has(item.id)).map(item => `<li data-atlas-place="${sceneEscape(item.id)}"><strong>${sceneEscape(item.name)}</strong><span> Associated with Ogbomoso in the Atlas; no address-level position is confirmed.</span></li>`).join('');
   return `${OGBOMOSO_MAP_STYLES}<div class="ogb-map-card" data-map-source="atlas+osm">
     <div class="ogb-map-heading"><strong>Ogbomoso · documented places</strong><span>SCHEMATIC / NOT TO SCALE</span></div>
     <svg class="ogb-place-map" viewBox="0 0 460 300" role="img" aria-label="Schematic, not-to-scale map of LAUTECH-area places. Names and relationships are sourced; marker positions are approximate.">
@@ -172,19 +181,61 @@ function renderOgbomosoSchematic(currentVenueId = null, interactive = true) {
       <path d="M164 185C235 171 326 173 425 148" stroke="#faf8f0" stroke-width="2" fill="none" stroke-dasharray="7 6"/>
       <text x="294" y="159" class="ogb-map-road-label" text-anchor="middle">Stadium Road</text>
       <path d="M54 112L104 112M310 205L370 206" stroke="#54766f" stroke-width="2" fill="none" stroke-dasharray="4 5"/>
-      <text x="230" y="265" class="ogb-map-note" text-anchor="middle">Dashed links show source-supported access / relationships, not measured routes.</text>
       ${markers}
     </svg>
+    <p class="ogb-map-note">Dashed links show source-supported access / relationships, not measured routes.</p>
     <p class="ogb-map-note">Place names and access relationships come from the Atlas and cited sources. Campus markers are schematic groupings, not surveyed coordinates. ${sifaxName} is documented as a 2015 event venue; its location is not plotted.</p>
+    ${notPlaced ? `<details class="ogb-map-records"><summary>Other Ogbomoso place and event records · ${locationRecords.length} records</summary><ul>${notPlaced}</ul></details>` : ''}
     <p class="ogb-map-sources">${links}<br>Map data: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors · ODbL</a> · <a href="https://vicadex.com/portfolio/open-mic-ogbomoso/" target="_blank" rel="noopener">2015 Sifax Hall source</a></p>
     ${interactive ? `<div class="ogb-map-venue-control"><button class="venue-select-btn ${currentVenueId === 'sifax' ? 'active-venue' : ''}" data-venue-btn="sifax">${sifaxName} · 2015 venue record (location not mapped)</button></div>` : `<p class="ogb-map-note">${sifaxName}: 2015 event venue record; location not mapped.</p>`}
   </div>`;
 }
+function renderAtlasCitySchematic(cityName, currentVenueId = null) {
+  const records = (root.PoeticsAtlas?.records || []).filter(item => item.city === cityName && ['Place', 'Venue', 'Event', 'Event series'].includes(item.type));
+  if (!records.length) return '';
+  const width = 460, cardWidth = 124, cardHeight = 48, gapX = 18, gapY = 22, columns = Math.min(3, records.length);
+  const rows = Math.ceil(records.length / columns), height = 76 + rows * (cardHeight + gapY) + 24;
+  const totalWidth = columns * cardWidth + (columns - 1) * gapX, startX = Math.round((width - totalWidth) / 2);
+  const nodes = records.map((item, index) => {
+    const column = index % columns, row = Math.floor(index / columns), x = startX + column * (cardWidth + gapX), y = 70 + row * (cardHeight + gapY);
+    const cx = x + cardWidth / 2, cy = y + cardHeight / 2, selected = item.id === currentVenueId;
+    const name = sceneEscape(item.name), type = sceneEscape(item.type), recordId = sceneEscape(item.id);
+    const label = name.length > 25 ? name.slice(0, 24) + '…' : name;
+    return `<g class="atlas-place-node ${selected ? 'is-selected' : ''}" data-atlas-place="${recordId}" aria-label="${name}, ${type}; city-level record, not a surveyed map point"><rect x="${x}" y="${y}" width="${cardWidth}" height="${cardHeight}" rx="8" fill="${selected ? '#f2d891' : '#fffdf8'}" stroke="${selected ? '#9a6416' : '#789083'}"/><text x="${cx}" y="${y + 20}" text-anchor="middle" class="atlas-place-name">${label}</text><text x="${cx}" y="${y + 36}" text-anchor="middle" class="atlas-place-type">${type}</text></g>`;
+  }).join('');
+  const point = root.PoeticsAtlas?.placeCoordinates?.[cityName];
+  const osmLink = point && Number.isFinite(point.lat) && Number.isFinite(point.lon)
+    ? `https://www.openstreetmap.org/#map=13/${point.lat}/${point.lon}`
+    : `https://www.openstreetmap.org/search?query=${encodeURIComponent(cityName + ', Nigeria')}`;
+  return `${OGBOMOSO_MAP_STYLES}<div class="ogb-map-card atlas-city-map" data-city-map="${sceneEscape(cityName)}">
+    <div class="ogb-map-heading"><strong>${sceneEscape(cityName)} · Atlas locations</strong><span>SCHEMATIC / NOT TO SCALE</span></div>
+    <svg class="ogb-place-map" viewBox="0 0 ${width} ${height}" role="img" aria-label="${sceneEscape(cityName)} place network diagram. Names are grouped by database city; positions are not geographic.">
+      <rect width="${width}" height="${height}" rx="8" fill="#f0eee5"/>
+      <text x="${width / 2}" y="34" text-anchor="middle" class="ogb-map-area-label">DATABASE-CITY GROUPING · NO VENUE COORDINATES CLAIMED</text>
+      ${nodes}
+    </svg>
+    <p class="ogb-map-note">All ${records.length} Atlas Place, Venue, Event and Event series records for ${sceneEscape(cityName)} are shown by city association. Card positions are arranged for readability, not location; an event or venue with no address is not pinned. Add street names and place-level markers only after checking a reusable source.</p>
+    <p class="ogb-map-sources"><a href="${sceneEscape(osmLink)}" target="_blank" rel="noopener">OpenStreetMap city reference</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributor and ODbL information</a></p>
+  </div>`;
+}
+function renderTransitMapFrame(cityName, transitAnim) {
+  const localMap = cityName === 'Ogbomoso'
+    ? renderOgbomosoSchematic()
+    : renderAtlasCitySchematic(cityName) || `<div class="ogb-map-card"><strong>${sceneEscape(cityName)} · City reference</strong><p class="ogb-map-note">No Place or Venue records for this city are available in the Atlas.</p></div>`;
+  return `${localMap}<div class="transit-animation-banner sim-transit-route" role="status"><strong>${sceneEscape(transitAnim.modeIcon)}</strong> · ${sceneEscape(transitAnim.fromCity)} → ${sceneEscape(transitAnim.toCity)}${transitAnim.distanceKm === null ? ' · city coordinates unavailable' : ` · about ${transitAnim.distanceKm} km between city-centre locators`}<span class="sim-transit-vehicle" aria-hidden="true">${sceneEscape(transitAnim.vehicle)}</span><p>Illustrative travel animation; city-centre distance is not a road route or navigation direction.</p></div><style>@keyframes simTransitCard{from{transform:translateX(-12px)}to{transform:translateX(12px)}}.sim-transit-vehicle{display:inline-block;margin-inline:14px;animation:simTransitCard 1.4s ease-in-out infinite alternate}@media(prefers-reduced-motion:reduce){.sim-transit-vehicle{animation:none}}</style>`;
+}
 function renderCityMiniMap(cityName, currentVenueId = null, transitAnim = null) {
-  const layout = cityLayouts[cityName] || cityLayouts["Ogbomoso"];
+  const layout = cityLayouts[cityName];
   const width = 460;
   const height = 300;
-  if (layout.schematic && !transitAnim) return renderOgbomosoSchematic(currentVenueId);
+  if (transitAnim) return renderTransitMapFrame(cityName, transitAnim);
+  if (!transitAnim && cityName === 'Ogbomoso') return renderOgbomosoSchematic(currentVenueId);
+  if (!transitAnim) {
+    const citySchematic = renderAtlasCitySchematic(cityName, currentVenueId);
+    if (citySchematic) return citySchematic;
+    return `<div class="ogb-map-card"><div class="ogb-map-heading"><strong>${sceneEscape(cityName)} · Places</strong><span>MAP RESEARCH NEEDED</span></div><p class="ogb-map-note">The Atlas has no Place or Venue records for this city yet. The game scene remains fictional.</p></div>`;
+  }
+  if (!layout) return renderAtlasCitySchematic(cityName, currentVenueId) || '';
   const [minLon, minLat, maxLon, maxLat] = transitBounds(layout,transitAnim);
 
   const project = (lon, lat) => [
