@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poetics Atlas — Editorial Curation Deck</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="vicadex-theme.css">
+  <style>
+    :root {
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --accent-gold: #e5a93c;
+      --accent-green: #2ecc71;
+      --accent-red: #e74c3c;
+      --text-muted: #8e9aaf;
+    }
+    body {
+      background: #0d1117;
+      color: #f0f6fc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header.curate-header {
+      padding: 24px 32px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(13, 17, 23, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .curate-header h1 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .curate-header h1 span.badge {
+      font-size: 11px;
+      background: var(--accent-gold);
+      color: #000;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .nav-links a {
+      color: #58a6ff;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    main.curate-container {
+      max-width: 1200px;
+      margin: 32px auto;
+      padding: 0 24px;
+    }
+    .tabs-bar {
+      display: flex;
+      gap: 16px;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 24px;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 15px;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      font-weight: 500;
+    }
+    .tab-btn.active {
+      color: #fff;
+      border-bottom-color: var(--accent-gold);
+      font-weight: 600;
+    }
+    .feed-stats {
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .candidate-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 16px;
+      transition: border-color 0.15s ease;
+    }
+    .candidate-card:hover {
+      border-color: rgba(229, 169, 60, 0.4);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 6px 0;
+      color: #fff;
+    }
+    .pill {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .pill-People { background: rgba(56, 139, 253, 0.15); color: #58a6ff; border: 1px solid rgba(56, 139, 253, 0.3); }
+    .pill-Platforms { background: rgba(210, 153, 34, 0.15); color: #d29922; border: 1px solid rgba(210, 153, 34, 0.3); }
+    .pill-Publications { background: rgba(187, 128, 179, 0.15); color: #bc8cff; border: 1px solid rgba(187, 128, 179, 0.3); }
+    .pill-Events { background: rgba(63, 185, 80, 0.15); color: #3fb950; border: 1px solid rgba(63, 185, 80, 0.3); }
+    .pill-Places { background: rgba(248, 81, 73, 0.15); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.3); }
+    
+    .evidence-block {
+      background: rgba(0, 0, 0, 0.25);
+      border-left: 3px solid var(--accent-gold);
+      padding: 10px 14px;
+      border-radius: 4px;
+      margin: 12px 0;
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+    .uncertainty-note {
+      font-size: 12.5px;
+      color: #f0883e;
+      margin-top: 6px;
+    }
+    .source-link {
+      font-size: 12.5px;
+      color: #58a6ff;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .source-link:hover { text-decoration: underline; }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 14px;
+    }
+    .btn {
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-approve {
+      background: #238636;
+      color: #fff;
+    }
+    .btn-approve:hover { background: #2ea043; }
+    .btn-skip {
+      background: rgba(255, 255, 255, 0.08);
+      color: #c9d1d9;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+    .btn-skip:hover { background: rgba(255, 255, 255, 0.14); }
+    .status-toast {
+      padding: 12px 18px;
+      border-radius: 8px;
+      background: #1f6feb;
+      color: #fff;
+      margin-bottom: 20px;
+      display: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="curate-header">
+    <h1>Poetics Atlas <span class="badge">Editorial Curation Deck</span></h1>
+    <div class="nav-links">
+      <a href="index.html#/atlas">Explore Atlas</a>
+      <a href="index.html#/research">Research Archive</a>
+      <a href="index.html#/submit">Public Submit Form</a>
+    </div>
+  </header>
+
+  <main class="curate-container">
+    <div id="toast-banner" class="status-toast"></div>
+
+    <div class="tabs-bar">
+      <button class="tab-btn active" id="tab-pass3" onclick="switchTab('pass3')">Pass 3/3 Candidates for Human Clearance</button>
+      <button class="tab-btn" id="tab-submissions" onclick="switchTab('submissions')">Public Community Submissions</button>
+    </div>
+
+    <div id="feed-stats" class="feed-stats">Loading pending curation queue...</div>
+
+    <div id="candidate-list">
+      <!-- Dynamically populated candidate cards -->
+    </div>
+  </main>
+
+  <script src="curate.js"></script>
+</body>
+</html>
