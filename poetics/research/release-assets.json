@@ -32,8 +32,8 @@
     "sha256": "9d6313efd41773eacaea1ab547ba37f79cc5e17dddc2ec7e72e8e9b08890a13f"
   },
   "contribute.js": {
-    "file": "contribute.06f83730cc32.js",
-    "sha256": "06f83730cc3221ed705a11a8c016673bc99041858e4f7a7503e6861adbacc367"
+    "file": "contribute.22ce5e6de59d.js",
+    "sha256": "22ce5e6de59d5b86615bbb48e6ddf2ef405b5c9b6e0dccf739d3d222553ec141"
   },
   "atlas-fallback.js": {
     "file": "atlas-fallback.51c63713a4a3.js",
@@ -108,16 +108,16 @@
     "sha256": "847d43cdb944d8b0025a6dd9c2bc9b18972dd68642b7f34363a655faddc8bac9"
   },
   "directory.js": {
-    "file": "directory.7d3b3484043b.js",
-    "sha256": "7d3b3484043bdea41d943ae73ec2108cc819e3ed0d0963c957637e06207b162b"
+    "file": "directory.886115d073fc.js",
+    "sha256": "886115d073fc9ccfc0ddf044099bfd6af774bff42c26cd40ae9de45b809bf962"
   },
   "atlas-ui-guard.js": {
     "file": "atlas-ui-guard.94d3156d05db.js",
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
   "game-assets.js": {
-    "file": "game-assets.d56f2008b872.js",
-    "sha256": "d56f2008b872d451ab67380320d83bea5cafbdf0361ae9aced62c0f9b8cd12a2"
+    "file": "game-assets.5265528eb3eb.js",
+    "sha256": "5265528eb3ebfcfcdc76364375b9c323b08e5307bfc957107d9370de74442ab6"
   },
   "game-loader.js": {
     "file": "game-loader.561d3f2a7abb.js",
