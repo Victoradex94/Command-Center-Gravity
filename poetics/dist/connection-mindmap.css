@@ -1,17 +1,21 @@
-.connection-mindmap{display:grid;grid-template-columns:minmax(170px,.72fr) minmax(0,2fr);gap:28px;align-items:stretch;padding:24px;border:1px solid #39362e;border-radius:20px;background:#171613}
-.mindmap-root{display:flex;flex-direction:column;justify-content:center;gap:10px;position:relative}
-.mindmap-root>span,.mindmap-node-category{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#c8b79a}
-.mindmap-root:after{content:"";position:absolute;right:-29px;top:50%;width:29px;border-top:1px solid #78674c}
-.mindmap-branches{position:relative;display:grid;align-content:center;gap:12px;padding-left:28px}
-.mindmap-branches:before{content:"";position:absolute;left:0;top:32px;bottom:32px;border-left:1px solid #78674c}
-.mindmap-branch{position:relative;display:grid;grid-template-columns:minmax(140px,.9fr) minmax(190px,1.1fr);gap:14px;align-items:center}
-.mindmap-connector{position:absolute;left:-28px;top:50%;width:28px;border-top:1px solid #78674c}
-.mindmap-relations{display:flex;flex-wrap:wrap;gap:6px}
-.mindmap-relation{display:block;padding:7px 10px;border:1px solid #514838;border-radius:9px;background:#211f1a;color:#e6d6b8;font-size:11px;line-height:1.45}
-.mindmap-node{display:grid;gap:5px;width:100%;padding:14px 16px;border:1px solid #555047;border-radius:12px;background:#20201c;text-align:left;color:#f2ecdf}
-.mindmap-node:hover{border-color:#e6bd82;background:#29261f}
-.mindmap-node:focus-visible{outline:2px solid #e6bd82;outline-offset:3px}
-.mindmap-node strong{font:17px/1.25 Georgia,serif}
-.mindmap-node small{font-size:11px;line-height:1.45;color:#c6c0b4}
-.mindmap-root .mindmap-node{border-color:#e6bd82;background:#29241b}
-@media(max-width:700px){.connection-mindmap{grid-template-columns:1fr;gap:20px;padding:16px}.mindmap-root:after{display:none}.mindmap-branches{padding:18px 0 0}.mindmap-branches:before{left:16px;right:16px;top:0;bottom:auto;border-left:0;border-top:1px solid #78674c}.mindmap-branch{grid-template-columns:1fr;gap:7px;padding-left:24px}.mindmap-connector{left:0;top:15px;width:16px}.mindmap-relations{padding-left:4px}.mindmap-node{padding:12px}}
+/* Vic’Adex cream, teal and orange; Poetics shared typography. */
+.network-view.with-results{grid-template-columns:minmax(0,1fr)}
+.network-view .map-results{max-height:none}
+.connection-mindmap{height:620px;max-height:75vh;overflow:auto;position:relative;border:1px solid #e8e1d8;border-radius:24px;background:radial-gradient(circle,#fde9dc 1px,transparent 1px) 0 0/22px 22px,#fffaf3;overscroll-behavior:contain}
+.mindmap-canvas{position:relative;isolation:isolate}
+.mindmap-wires{position:absolute;inset:0;pointer-events:none;stroke:#0b5f78;stroke-width:2;opacity:.5}
+.mindmap-root,.mindmap-branch{position:absolute;transform:translate(-50%,-50%);width:206px;z-index:1}
+.mindmap-root{width:230px;text-align:center}
+.mindmap-root>span,.mindmap-node-category{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#0b5f78;margin-bottom:6px}
+.mindmap-node{display:grid;gap:7px;width:100%;min-height:100px;padding:16px;border:1px solid #0b5f78;border-radius:20px;background:#fffdf9;text-align:center;color:#171717;box-shadow:0 6px 18px #0b5f7810}
+.mindmap-node strong{font-family:Comfortaa,sans-serif;font-size:15px;line-height:1.4}
+.mindmap-node small{font-family:Afacad,sans-serif;font-size:13px;line-height:1.35;color:#555}
+.mindmap-root .mindmap-node{border:3px solid #e94f27;background:#fde9dc;border-radius:50%;min-height:190px;padding:25px}
+.mindmap-root .mindmap-node strong{font-size:19px}
+.mindmap-node:hover{background:#fde9dc;border-color:#e94f27}
+.mindmap-node:focus-visible,.connection-mindmap:focus-visible{outline:3px solid #0b5f78;outline-offset:4px}
+.mindmap-connector,.mindmap-branches:before,.mindmap-root:after{display:none}
+.network-evidence{margin-top:18px;border:1px solid #e8e1d8;border-radius:16px;padding:16px;background:#fffdf9}
+.network-evidence summary{cursor:pointer;color:#0b5f78;font-weight:700}
+@media(max-width:700px){.connection-mindmap{height:520px}.mindmap-node{padding:12px}.network-view .map-results{width:100%}}
+.map-atlas .mindmap-root .mindmap-node{border-radius:50%}.network-view .map-results{position:static;overflow:visible;max-height:none}

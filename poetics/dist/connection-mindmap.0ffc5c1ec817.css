@@ -1,0 +1,21 @@
+ 
+.network-view.with-results{grid-template-columns:minmax(0,1fr)}
+.network-view .map-results{max-height:none}
+.connection-mindmap{height:620px;max-height:75vh;overflow:auto;position:relative;border:1px solid #e8e1d8;border-radius:24px;background:radial-gradient(circle,#fde9dc 1px,transparent 1px) 0 0/22px 22px,#fffaf3;overscroll-behavior:contain}
+.mindmap-canvas{position:relative;isolation:isolate}
+.mindmap-wires{position:absolute;inset:0;pointer-events:none;stroke:#0b5f78;stroke-width:2;opacity:.5}
+.mindmap-root,.mindmap-branch{position:absolute;transform:translate(-50%,-50%);width:206px;z-index:1}
+.mindmap-root{width:230px;text-align:center}
+.mindmap-root>span,.mindmap-node-category{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#0b5f78;margin-bottom:6px}
+.mindmap-node{display:grid;gap:7px;width:100%;min-height:100px;padding:16px;border:1px solid #0b5f78;border-radius:20px;background:#fffdf9;text-align:center;color:#171717;box-shadow:0 6px 18px #0b5f7810}
+.mindmap-node strong{font-family:Comfortaa,sans-serif;font-size:15px;line-height:1.4}
+.mindmap-node small{font-family:Afacad,sans-serif;font-size:13px;line-height:1.35;color:#555}
+.mindmap-root .mindmap-node{border:3px solid #e94f27;background:#fde9dc;border-radius:50%;min-height:190px;padding:25px}
+.mindmap-root .mindmap-node strong{font-size:19px}
+.mindmap-node:hover{background:#fde9dc;border-color:#e94f27}
+.mindmap-node:focus-visible,.connection-mindmap:focus-visible{outline:3px solid #0b5f78;outline-offset:4px}
+.mindmap-connector,.mindmap-branches:before,.mindmap-root:after{display:none}
+.network-evidence{margin-top:18px;border:1px solid #e8e1d8;border-radius:16px;padding:16px;background:#fffdf9}
+.network-evidence summary{cursor:pointer;color:#0b5f78;font-weight:700}
+@media(max-width:700px){.connection-mindmap{height:520px}.mindmap-node{padding:12px}.network-view .map-results{width:100%}}
+.map-atlas .mindmap-root .mindmap-node{border-radius:50%}.network-view .map-results{position:static;overflow:visible;max-height:none}
