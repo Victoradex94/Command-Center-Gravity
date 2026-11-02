@@ -22,6 +22,14 @@ async function run(){
  const fail=harness(),attempt=fail.route('#/games');fail.scripts[0].onerror();for(const s of fail.scripts.slice(1))fail.finish(s);await attempt;assert(fail.main.innerHTML.includes('The Games could not load'));assert.equal(fail.counts().storageReads,0);
  const beforeRetry=fail.scripts.length,retry=fail.controls.retry.onclick();assert.equal(fail.scripts.length,beforeRetry+1);assert.equal(fail.scripts.at(-1).src,fail.scripts[0].src);fail.finish(fail.scripts.at(-1));await retry;assert.equal(fail.counts().gameRenders,1);assert.equal(fail.counts().storageReads,1);
  const submit=harness(),contribute=submit.window.PoeticsLazyAssets.contribute;assert(contribute);const submitPending=submit.route('#/submit');assert.equal(submit.scripts.length,1);assert.equal(submit.scripts[0].src,contribute);submit.finish(submit.scripts[0]);submit.window.renderContribute=()=>{submit.main.innerHTML='SUBMIT READY';};await submitPending;assert.equal(submit.main.innerHTML,'SUBMIT READY');
- console.log('PASS real lazy-loader/app routes in VM: live Atlas data required; offline and empty responses display errors without bundled fallback; zero Games or Submit requests/save reads on Atlas; route-only contribution loading; parallel ordered game assets; pending navigation cancellation; one-time save restoration; warm return; load error and narrow retry. Not a browser test.');
+ for(const hash of ['#/about','#/archive','#/research']){
+  const fresh=harness();delete fresh.window.renderPoeticsAbout;
+  const loading=fresh.route(hash);assert.equal(fresh.scripts.length,1);assert.equal(fresh.scripts[0].src,fresh.window.PoeticsLazyAssets.contribute);
+  assert(fresh.main.innerHTML.includes('Loading project information'));
+  fresh.finish(fresh.scripts[0]);fresh.window.renderPoeticsAbout=()=>{fresh.main.innerHTML='ABOUT READY';};await loading;
+  assert.equal(fresh.main.innerHTML,'ABOUT READY');assert.equal(fresh.counts().storageReads,0);
+ }
+ const stale=harness(),waiting=stale.route('#/about');await stale.route('#/atlas');stale.finish(stale.scripts[0]);stale.window.renderPoeticsAbout=()=>{throw Error('stale route rendered');};await waiting;
+ console.log('PASS lazy routes including fresh About/Archive/Research, dependency loading and cancellation.');
 }
 run().catch(e=>{console.error(e);process.exitCode=1});

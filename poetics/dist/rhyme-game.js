@@ -171,34 +171,34 @@ async function renderScreen(main, onBack, isCurrent = () => true) {
     <div class="page-top">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
         <button id="btn-back-hub" class="btn" style="padding:4px 10px;font-size:12px;">← Back to Games</button>
-        <span class="stage-badge" style="background:#f77f00;border-color:#f77f00;color:#fff;">Rhyme Sprint</span>
+        <span class="stage-badge" style="background:#f77f00;border-color:#9a4700;color:#173c43;">Rhyme Sprint</span>
       </div>
       <h1>The Rhyme Sprint</h1>
       <p>Submit real words that rhyme with the prompt before the timer expires. Rhymes are checked by pronunciation, not just spelling.</p>
     </div>
-    <section class="panel" style="max-width:680px;margin:20px auto;padding:24px;text-align:center;">
-      <div style="display:flex;justify-content:space-around;align-items:center;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px;margin-bottom:20px;">
-        <div><span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Time Remaining</span><div id="rhyme-timer" style="font-size:32px;font-weight:800;color:#58a6ff;">30s</div></div>
-        <div><span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Score</span><div id="rhyme-score" style="font-size:32px;font-weight:800;color:#f77f00;">0</div></div>
-        <div><span style="font-size:12px;color:#8b949e;text-transform:uppercase;">Current Streak</span><div id="rhyme-streak" style="font-size:32px;font-weight:800;color:#2a9d8f;">0🔥</div></div>
+    <section class="panel rhyme-sprint" style="max-width:680px;margin:20px auto;padding:24px;text-align:center;">
+      <div style="display:flex;justify-content:space-around;align-items:center;background:#edf2ef;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px;margin-bottom:20px;">
+        <div><span style="font-size:12px;color:#46545b;text-transform:uppercase;">Time Remaining</span><div id="rhyme-timer" style="font-size:32px;font-weight:800;color:#135e79;">30s</div></div>
+        <div><span style="font-size:12px;color:#46545b;text-transform:uppercase;">Score</span><div id="rhyme-score" style="font-size:32px;font-weight:800;color:#9a4700;">0</div></div>
+        <div><span style="font-size:12px;color:#46545b;text-transform:uppercase;">Current Streak</span><div id="rhyme-streak" style="font-size:32px;font-weight:800;color:#17675d;">0🔥</div></div>
       </div>
       <div id="rhyme-prompt-box" style="background:rgba(255,255,255,0.04);border:2px dashed rgba(255,255,255,0.2);border-radius:10px;padding:24px;margin-bottom:20px;">
-        <span style="font-size:13px;color:#8b949e;text-transform:uppercase;letter-spacing:1px;">Rhyme Against Prompt</span>
-        <h2 id="rhyme-prompt-word" style="font-size:42px;margin:8px 0;color:#fff;letter-spacing:1px;">${session.prompt.word.toUpperCase()}</h2>
+        <span style="font-size:13px;color:#46545b;text-transform:uppercase;letter-spacing:1px;">Rhyme Against Prompt</span>
+        <h2 id="rhyme-prompt-word" style="font-size:42px;margin:8px 0;color:#173c43;letter-spacing:1px;">${session.prompt.word.toUpperCase()}</h2>
         <p class="caption" style="margin:0;">Spelling clue only: <strong>${session.prompt.targetEndings.join(', ')}</strong></p>
       </div>
       <form id="rhyme-input-form" style="display:flex;gap:10px;max-width:480px;margin:0 auto 16px;">
-        <input id="rhyme-word-input" autocomplete="off" placeholder="Type a real rhyming word…" required style="flex:1;padding:12px 16px;font-size:16px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background:rgba(0,0,0,0.4);color:#fff;">
+        <input id="rhyme-word-input" autocomplete="off" placeholder="Type a real rhyming word…" required style="flex:1;padding:12px 16px;font-size:16px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background:#fffdf9;color:#173c43;">
         <button type="submit" class="primary" style="padding:12px 20px;font-size:16px;cursor:pointer;">Submit</button>
       </form>
       <div id="rhyme-feedback" role="status" aria-live="polite" style="min-height:24px;font-size:14px;font-weight:600;margin-bottom:16px;"></div>
-      <div style="text-align:left;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;border:1px solid rgba(255,255,255,0.06);">
-        <strong style="font-size:12px;color:#8b949e;text-transform:uppercase;">Matched Words This Round:</strong>
-        <div id="rhyme-matches-list" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><span style="font-size:13px;color:#6e7681;font-style:italic;">No matches yet…</span></div>
+      <div style="text-align:left;background:#edf2ef;border-radius:6px;padding:12px;border:1px solid rgba(255,255,255,0.06);">
+        <strong style="font-size:12px;color:#46545b;text-transform:uppercase;">Matched Words This Round:</strong>
+        <div id="rhyme-matches-list" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><span style="font-size:13px;color:#46545b;font-style:italic;">No matches yet…</span></div>
       </div>
       <p class="caption">Pronunciations: CMUdict, North American English. Local pronunciation additions are reviewed separately. <a href="https://github.com/cmusphinx/cmudict" target="_blank" rel="noopener">Source and credits</a>.</p>
       <div id="rhyme-gameover-dialog" style="display:none;margin-top:20px;padding:20px;background:rgba(47,111,235,0.15);border:1px solid #2f6feb;border-radius:8px;">
-        <h3 style="margin:0 0 6px;color:#fff;">Sprint Finished!</h3><p id="rhyme-final-summary" style="font-size:16px;margin:0 0 16px;color:#e6edf3;"></p><button id="btn-replay-rhyme" class="primary" style="padding:10px 20px;font-size:15px;cursor:pointer;">Play Again</button>
+        <h3 style="margin:0 0 6px;color:#173c43;">Sprint Finished!</h3><p id="rhyme-final-summary" style="font-size:16px;margin:0 0 16px;color:#173c43;"></p><button id="btn-replay-rhyme" class="primary" style="padding:10px 20px;font-size:15px;cursor:pointer;">Play Again</button>
       </div>
     </section>`;
 
@@ -214,11 +214,12 @@ async function renderScreen(main, onBack, isCurrent = () => true) {
     event.preventDefault(); const result = session.submitWord(input.value); input.value = '';
     streak.textContent = session.streak + '🔥'; feedback.style.color = result.ok ? '#2a9d8f' : '#e63946';
     feedback.textContent = result.ok ? `✓ '${result.word}' matched! (+${result.scoreGained} pts, length ${result.length})` : `✗ ${result.message}`;
-    if (result.ok) { score.textContent = result.totalScore; matches.innerHTML = session.wordsMatched.map(word => `<span style="background:rgba(42,157,143,0.2);border:1px solid #2a9d8f;color:#e6edf3;padding:3px 8px;border-radius:4px;font-size:12px;">${word} (${word.length})</span>`).join(''); }
-    input.focus();
+    if (result.ok) { score.textContent = result.totalScore; matches.innerHTML = session.wordsMatched.map(word => `<span style="background:rgba(42,157,143,0.2);border:1px solid #2a9d8f;color:#173c43;padding:3px 8px;border-radius:4px;font-size:12px;">${word} (${word.length})</span>`).join(''); }
+    input.focus({preventScroll:true});
   };
   query('#btn-replay-rhyme').onclick = () => renderScreen(main, onBack, isCurrent);
-  input.focus();
+  input.focus({preventScroll:true});
+  root.scrollTo?.(0,0);
   return session;
 }
 

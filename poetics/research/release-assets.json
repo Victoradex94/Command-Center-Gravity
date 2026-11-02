@@ -12,8 +12,8 @@
     "sha256": "25a7618d03dc8f7d67051d30aa6d929f8c4cfda1d8a6530657a8cca7d6d902a9"
   },
   "rhyme-game.js": {
-    "file": "rhyme-game.c37a0ac48e59.js",
-    "sha256": "c37a0ac48e5941fa2bbd750eb3997e7e803452697429cb06918f750e7432edf5"
+    "file": "rhyme-game.0b632d2c0092.js",
+    "sha256": "0b632d2c0092e5df36af9eb7bec60436a4573b22922458dc12dba51e2109771e"
   },
   "gamemap.js": {
     "file": "gamemap.98c94cae83a8.js",
@@ -32,8 +32,8 @@
     "sha256": "9d6313efd41773eacaea1ab547ba37f79cc5e17dddc2ec7e72e8e9b08890a13f"
   },
   "contribute.js": {
-    "file": "contribute.22ce5e6de59d.js",
-    "sha256": "22ce5e6de59d5b86615bbb48e6ddf2ef405b5c9b6e0dccf739d3d222553ec141"
+    "file": "contribute.467faf629c71.js",
+    "sha256": "467faf629c71d3c98cd6ea812997f01f648d4752c805802d0f7f26894d5f4232"
   },
   "atlas-fallback.js": {
     "file": "atlas-fallback.51c63713a4a3.js",
@@ -52,8 +52,8 @@
     "sha256": "bb6dfd57125c5fdd8490f0814a1ae4e9232e9fcc67ba0ea5e09857c8acdb474f"
   },
   "vicadex-theme.css": {
-    "file": "vicadex-theme.e7d3f55441cb.css",
-    "sha256": "e7d3f55441cbd8340861cce413553b0179bc3d3aa0d37ee3315708dd52c8a1f9"
+    "file": "vicadex-theme.c340a0d4661c.css",
+    "sha256": "c340a0d4661cbf2e19bef6a6329a71a716526c44b2a47d4d98ca65d8dc69081f"
   },
   "ecosystem-switcher.css": {
     "file": "ecosystem-switcher.48d69d8b6341.css",
@@ -116,15 +116,15 @@
     "sha256": "94d3156d05dbda8c5ea13f4faee46b6b14a23774ebb4866daeeec2c6081e8844"
   },
   "game-assets.js": {
-    "file": "game-assets.5265528eb3eb.js",
-    "sha256": "5265528eb3ebfcfcdc76364375b9c323b08e5307bfc957107d9370de74442ab6"
+    "file": "game-assets.6e87fd784520.js",
+    "sha256": "6e87fd7845209be2448fd87994889c47d55147fae41fde0d5e5456b0f0b275f9"
   },
   "game-loader.js": {
     "file": "game-loader.561d3f2a7abb.js",
     "sha256": "561d3f2a7abbff528dc4ad786bd1a1a2d0d959f276202ccff00f4f1055e33bd4"
   },
   "app.js": {
-    "file": "app.b12c9296babb.js",
-    "sha256": "b12c9296babb6eb152cb8efbf08eb0df5d2c3bfd4c38272edb64cd9cdc79a864"
+    "file": "app.15bd4f0b4ef4.js",
+    "sha256": "15bd4f0b4ef4c888b0b0396827fcfeb595d70e4cf987decd66059a8f398c084d"
   }
 }
