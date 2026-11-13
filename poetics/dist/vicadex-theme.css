@@ -834,3 +834,20 @@ body>footer .poetics-image-credits{font-size:13px}
 .map-atlas .map-source-notes,.map-atlas .map-source-notes p,.map-atlas .map-source-notes a{font-size:15px}
 .map-atlas .atlas-suggest-callout p{font-size:17px}
 @media(max-width:600px){.project-page .confidence-definitions dd{margin-left:0}.rhyme-sprint{padding:16px!important}.rhyme-sprint #rhyme-input-form{flex-wrap:wrap}.rhyme-sprint #rhyme-input-form input{flex-basis:180px}}
+
+.map-atlas .selected-map-layout .selected-map-controls,
+.map-atlas .selected-map-layout .selected-map-notes {grid-column:1/-1;min-width:0;padding:12px clamp(12px,2vw,28px)}
+.map-atlas .selected-map-layout .selected-map-controls {border-bottom:1px solid #d2dcd5}
+.map-atlas .selected-map-layout .map-results {border-inline-start:3px solid #236963;background:#fffaf3}
+.map-atlas .selected-map-layout .atlas-profile h2 {font:normal clamp(28px,3vw,45px)/1.08 Georgia,serif;color:#173b39;margin:12px 0;overflow-wrap:anywhere}
+.atlas-profile .profile-lead {font-size:17px;line-height:1.55}
+.map-atlas .selected-map-layout .map-stage {min-width:0;align-self:start}
+.map-atlas .selected-map-layout .map-results-heading {background:#fffaf3}
+@media(min-width:901px){
+  .map-atlas .map-body.selected-map-layout {display:grid;grid-template-columns:minmax(0,1.65fr) minmax(310px,1fr)}
+}
+@media(max-width:900px){
+  .map-atlas .map-body.selected-map-layout {display:grid;grid-template-columns:minmax(0,1fr)}
+  .map-atlas .map-body.selected-map-layout > .map-results {contain:none;height:auto;max-height:none;overflow:visible;border-inline-start:0;border-top:3px solid #236963;scroll-margin-top:110px}
+  .map-atlas .selected-map-layout .map-results-heading {position:static}
+}

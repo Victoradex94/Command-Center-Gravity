@@ -23,6 +23,9 @@ def asset(match):
     if source.suffix=='.css':
         # Remove ordinary comments only; retain quoted text and /*! notices.
         payload=re.sub(r'''("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')|/\*(?!\!)[\s\S]*?\*/''',lambda m:m[1] if m[1] is not None else ' ',payload.decode('utf-8')).encode('utf-8')
+        # Preserve strings and licence notices when removing delimiter whitespace.
+        css_tokens = r"""("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|/\*![\s\S]*?\*/)|\s*([{};])\s*"""
+        payload = re.sub(css_tokens, lambda m: m[1] or m[2], payload.decode('utf-8')).encode('utf-8')
     # Compact pure JSON assignments for delivery; retain readable canonical sources.
     if source.suffix=='.js':
         data=re.fullmatch(r'(window\.\w+\s*=)\s*([\s\S]*?);?\s*',source.read_text(encoding='utf-8'))

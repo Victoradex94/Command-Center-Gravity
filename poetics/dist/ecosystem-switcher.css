@@ -88,3 +88,33 @@ body.vx-site-atlas>header.vx-local-nav nav{display:flex;flex:1;max-width:none;mi
  body.vx-site-atlas>header.vx-local-nav{padding-left:16px!important;padding-right:16px!important;gap:10px}
  body.vx-site-atlas>header.vx-local-nav nav{flex:1 0 100%;width:100%;max-width:none;gap:10px}
 }
+
+/* Keep Poetics navigation together under the ecosystem strip. */
+body.vx-site-atlas > header.vx-local-nav {
+  justify-content: flex-start;
+  gap: clamp(24px,4vw,64px);
+  min-height: 56px;
+  padding-block: 4px;
+  border-bottom: 1px solid #adc0b8;
+}
+body.vx-site-atlas > header.vx-local-nav nav {
+  flex: 0 1 auto;
+  justify-content: flex-start;
+  gap: clamp(12px,2.4vw,36px);
+}
+body.vx-site-atlas > header.vx-local-nav nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border-bottom: 3px solid transparent;
+}
+body.vx-site-atlas > header.vx-local-nav nav a[aria-current="page"] {
+  color: #104f58;
+  border-bottom-color: currentColor;
+}
+@media(max-width:620px) {
+  body.vx-site-atlas > header.vx-local-nav {gap:0; padding-block:3px 0}
+  body.vx-site-atlas > header.vx-local-nav .brand {font-size:24px;line-height:1.2}
+  body.vx-site-atlas > header.vx-local-nav nav {flex:1 0 100%;gap:6px 14px}
+  body.vx-site-atlas > header.vx-local-nav nav a {font-size:clamp(12px,3.4vw,15px)}
+}
